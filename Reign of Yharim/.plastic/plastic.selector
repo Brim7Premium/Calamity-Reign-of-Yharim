@@ -1,0 +1,4 @@
+repository "Reign of Yharim@Reign_of_Yharim_team@cloud"
+  path "/"
+    br "/main"
+    co "/main"
