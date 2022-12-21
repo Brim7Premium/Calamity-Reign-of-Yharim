@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5bb3a78258c05ad43a3794dfeaaf8c03
+guid: 7a75da32c6e69914a88e197afc4d8686
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6cd35e06c993404b80d11389a084881
-      internalID: -742304778
+      spriteID: 9658a0c5550f4d54f8ad8b49858ba5eb
+      internalID: -124589541
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ab73c6487a343428962d4f7b229857
-      internalID: 1982558924
+      spriteID: 5375cdf1e099cc9409139b2155ea1365
+      internalID: -2042280942
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72e88fc15ca91054288cc86e93696a61
-      internalID: 1789572077
+      spriteID: 420d331529f369147a6cdf1828721c4e
+      internalID: 1259552279
       vertices: []
       indices: 
       edges: []
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caa75a06d4d83524b8c8e6d0998f999f
-      internalID: -842448601
+      spriteID: 05ba50ddcd87a4046a36ee521bb92555
+      internalID: -1386559485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BloodyMeteor
+      name: Bloody
       rect:
         serializedVersion: 2
         x: 69
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d40151e6164a23e4eaf3d7ad07a4ab23
-      internalID: -581163650
+      spriteID: 5c1abfa72bb7f9145bc5469abd0fdd26
+      internalID: 620201953
       vertices: []
       indices: 
       edges: []
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 709d7eac30886264f8146980fcda4c2c
-      internalID: -389173948
+      spriteID: f527dbecbefb39f4abdf24ed0f472d3c
+      internalID: -616450934
       vertices: []
       indices: 
       edges: []
@@ -245,8 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d545e0f4435fb948a53e5ba954a8f7d
-      internalID: 404323114
+      spriteID: 1434fa406b727fc46bc375993c0a994c
+      internalID: 25819958
       vertices: []
       indices: 
       edges: []
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6c9a63f6ed2cf740a506eca0f05110b
-      internalID: -946848035
+      spriteID: 670b899dc8a178c478d288ca763e83fb
+      internalID: -1430505714
       vertices: []
       indices: 
       edges: []
@@ -287,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9feccaf26f2cd8743a89d5143ce4b010
-      internalID: 1919999047
+      spriteID: e57edf8ba938c4a488380d2ce1dfc525
+      internalID: 2116050122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SulSea
+      name: Sulfur
       rect:
         serializedVersion: 2
         x: 52
@@ -308,8 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed7ce6ae4c9b40d4a9075ec48f179b93
-      internalID: 2009419512
+      spriteID: c77d1c6b05c34d346b546b3f87820a08
+      internalID: 1695900010
       vertices: []
       indices: 
       edges: []
@@ -329,8 +329,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d8a2fe136e7e4449b92f33460275b07
-      internalID: 1050254609
+      spriteID: a3d44285831b40042abe84c6d8c86187
+      internalID: 657495789
       vertices: []
       indices: 
       edges: []
@@ -350,8 +350,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d56da25885fea469755bbbe60257af
-      internalID: -1261496679
+      spriteID: 9fa022699630f7f419a162f8cad9e64b
+      internalID: -1794726715
       vertices: []
       indices: 
       edges: []
@@ -371,8 +371,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1105ebe24309a7f479742194946ac64c
-      internalID: -1367557357
+      spriteID: 92f9f57d098ab1644aa050c9b4e4ae91
+      internalID: -282853910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jungle
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd63475b8e80aab40b07a8ea42400937
+      internalID: -471284953
       vertices: []
       indices: 
       edges: []
@@ -388,19 +409,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tundra: 1982558924
-      Ocean: -389173948
-      Blight: -842448601
-      Forest: -742304778
-      Desert: 1789572077
-      Astral: -1367557357
-      Sky: -946848035
-      Light: 404323114
-      Space: 1050254609
-      Underworld: 1919999047
-      Crags: -1261496679
-      SulSea: 2009419512
-      BloodyMeteor: -581163650
+      Tundra: -2042280942
+      Ocean: -616450934
+      Blight: -1386559485
+      Bloody: 620201953
+      Forest: -124589541
+      Desert: 1259552279
+      Astral: -282853910
+      Sky: -1430505714
+      Light: 25819958
+      Space: 657495789
+      Underworld: 2116050122
+      Crags: -1794726715
+      Jungle: -471284953
+      Sulfur: 1695900010
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
