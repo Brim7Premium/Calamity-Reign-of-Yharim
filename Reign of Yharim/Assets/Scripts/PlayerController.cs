@@ -35,8 +35,6 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);//sets the speed of the player along the x coordinate to 1 * speed or -1 * speed, allowing the player to move horizontally based on input
 
-        Debug.Log(rb.velocity);
-
         GetTile();
     }
     private void OnCollisionStay2D(Collision2D collision)
