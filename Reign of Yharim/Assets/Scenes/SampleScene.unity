@@ -851,6 +851,7 @@ MonoBehaviour:
   tileAtPlayer: {x: 0, y: 0, z: 0}
   tileSprite: {fileID: 0}
   currentTileName: 
+  animator: {fileID: 1250109783}
 --- !u!82 &1250109782
 AudioSource:
   m_ObjectHideFlags: 0

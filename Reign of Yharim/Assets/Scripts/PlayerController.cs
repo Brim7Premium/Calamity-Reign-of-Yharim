@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private string tileSpriteName;
     public string currentTileName;
 
+    [SerializeField] private Animator animator;
+
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal"); //sets horizontal to -1 or 1 based on the player's input
@@ -34,6 +36,15 @@ public class PlayerController : MonoBehaviour
         }
 
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);//sets the speed of the player along the x coordinate to 1 * speed or -1 * speed, allowing the player to move horizontally based on input
+
+        if (horizontal > 0 || horizontal < 0)
+        {
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+        }
 
         GetTile();
     }
