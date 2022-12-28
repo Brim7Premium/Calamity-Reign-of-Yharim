@@ -34,6 +34,14 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetBool("Attacking", true);
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            animator.SetBool("Attacking", false);
+        }
 
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);//sets the speed of the player along the x coordinate to 1 * speed or -1 * speed, allowing the player to move horizontally based on input
 
