@@ -45,13 +45,21 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);//sets the speed of the player along the x coordinate to 1 * speed or -1 * speed, allowing the player to move horizontally based on input
 
-        if (horizontal > 0 || horizontal < 0)
+        if (horizontal > 0 || horizontal < 0) //left or right
         {
             animator.SetBool("Moving", true);
         }
         else
         {
             animator.SetBool("Moving", false);
+        }
+        if (horizontal > 0) //right
+        {
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+        if (horizontal < 0) //left
+        {
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
 
         GetTile();
