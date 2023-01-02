@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 870
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 76
+  controlID: 22
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 363.19995
     height: 820
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 290.4
     height: 469.6
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 77
+  controlID: 23
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 78
+  controlID: 24
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -467,13 +467,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Brimston Premium\Desktop\Unity\Calamity-Reign-of-Yharim\Reign
     of Yharim
@@ -481,9 +481,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 69}
-    m_SelectedIDs: 50620000
-    m_LastClickedID: 25168
-    m_ExpandedIDs: 000000003a6200005462000000ca9a3bffffff7f
+    m_SelectedIDs: 66620000
+    m_LastClickedID: 25190
+    m_ExpandedIDs: 00000000666200009c62000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -511,7 +511,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003a620000
+    m_ExpandedIDs: 0000000066620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -639,9 +639,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c4d6ffff
-      m_LastClickedID: -10556
-      m_ExpandedIDs: d4caffff7eceffffc4d6ffff0efbffff4a610000
+      m_SelectedIDs: 64610000
+      m_LastClickedID: 24932
+      m_ExpandedIDs: a2f8ffffc2f8ffffd8f8ffff0efbffff3c6100004261000064610000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -657,7 +657,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 11}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -940,14 +940,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 22.135378, y: 12.206255, z: -0.45387298}
+    m_Target: {x: 1.3091367, y: 3.492176, z: 0.048338175}
     speed: 2
-    m_Value: {x: 22.135378, y: 12.206255, z: -0.45387298}
+    m_Value: {x: 1.3091367, y: 3.492176, z: 0.048338175}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -994,17 +994,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.052781526, y: 0.4198811, z: -0.024467843, w: -0.905719}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.052781224, y: 0.4198787, z: -0.024467703, w: -0.9057138}
   m_Size:
-    m_Target: 6.874056
+    m_Target: 1.0368242
     speed: 2
-    m_Value: 6.874056
+    m_Value: 1.0368242
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -1018,7 +1018,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0.009588244, y: -0.62555736, z: -0.0076885098, w: -0.7800865}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -1127,18 +1127,18 @@ MonoBehaviour:
       y: 21
       width: 880.4
       height: 427.6
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 440.2, y: 212.40642}
+    m_Scale: {x: 0.9898148, y: 0.9898148}
+    m_Translation: {x: 440.2, y: 213.8}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -440.2
-      y: -212.40642
-      width: 880.4
-      height: 427.6
+      x: -444.72968
+      y: -216
+      width: 889.45935
+      height: 432
     m_MinimalGUI: 1
   m_defaultScale: 0.9898148
   m_LastWindowPixelSize: {x: 2201, y: 1121.5}
