@@ -14,13 +14,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private bool isGrounded = false;
 
-    public Tilemap tiles;
-    public Vector3Int tileAtPlayer;
-    public Sprite tileSprite;
-    private string tileSpriteName;
-    public string currentTileName;
-
     [SerializeField] private Animator animator;
+
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HealthBar healthBar;
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 
     void Update()
     {
@@ -61,8 +65,13 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
-
-        GetTile();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Dummy")
+        {
+            TakeDamage(5);
+        }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -85,31 +94,10 @@ public class PlayerController : MonoBehaviour
         return isGrounded;
     }
 
-    void GetTile()
+    void TakeDamage(int damage)
     {
-        Vector3 mp = transform.position; //creates a vector3 named mp that is the player's coordinates 
-        tileAtPlayer = tiles.WorldToCell(mp); //sets the vector3int location to the tile at the player's coordinates
-        tileSprite = tiles.GetSprite(tileAtPlayer); //gets the sprite of the tile at the player's location and assigns it to the tilesprite variable
-        if (tileSprite != null) //if the sprite exists (if the player is behind a background tile)
-        {
-            tileSpriteName = tileSprite.name; //set the variable tilespritename to the name of the tilesprite
-        }
+        currentHealth -= damage;
 
-
-        if (tiles.GetTile(tileAtPlayer)) //if there is a tile behind the player
-        {
-            if (tileSpriteName != currentTileName) //if the name of the sprite is not equal to the current tile name
-            {
-                currentTileName = tileSpriteName; //set the current tile name to the name of the sprite
-                if (tileSpriteName == "Astral") //if the tile's name is astral
-                {
-                    GetComponent<AudioSource>().Play(); //plays the audiosource
-                }
-                else
-                {
-                    GetComponent<AudioSource>().Stop(); //stops the audiosource if the tile's name is not astral
-                }
-            }
-        }
+        healthBar.SetHealth(currentHealth);
     }
 }
