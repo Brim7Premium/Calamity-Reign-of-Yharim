@@ -66,18 +66,15 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.name == "Dummy")
-        {
-            TakeDamage(5);
-        }
-    }
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             isGrounded = true;
+        }
+        if (collision.gameObject.name == "Dummy")
+        {
+            TakeDamage(5);
         }
     }
 
