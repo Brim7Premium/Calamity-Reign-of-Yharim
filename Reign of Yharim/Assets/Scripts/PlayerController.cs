@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
+    public int iFrames = 2;
+    private bool immune;
 
     private void Start()
     {
@@ -72,9 +74,10 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
-        if (collision.gameObject.name == "Dummy")
+        if (collision.gameObject.name == "Dummy" && immune == false)
         {
-            TakeDamage(5);
+            TakeDamage(5); //damage the player for 5 damage
+            StartCoroutine(Immunity()); //when the player is damaged, start courotine
         }
     }
 
@@ -96,5 +99,12 @@ public class PlayerController : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+    }
+
+    IEnumerator Immunity()
+    {
+        immune = true; //once courotine is started, set immune to true
+        yield return new WaitForSeconds(iFrames); //wait iFrames seconds
+        immune = false; //set immune to false, allowing for the player to be damaged
     }
 }
