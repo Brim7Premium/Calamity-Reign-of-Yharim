@@ -1354,7 +1354,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.927
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1455,8 +1455,15 @@ MonoBehaviour:
   tileSprite: {fileID: 0}
   currentTileName: 
   audioSource: {fileID: 1606627886}
-  Desert: {fileID: 8300000, guid: 04a5da68827a0d94d8f6c617c221bc75, type: 3}
+  Desert: {fileID: 8300000, guid: f8f4ff1ca42eb494db62166e72ff2b4f, type: 3}
   Astral: {fileID: 8300000, guid: 05699387cb8c7884dba8b62367f86c8b, type: 3}
+  Blight: {fileID: 8300000, guid: 039a80e8f69c0da4f9b8f967bfebfdb2, type: 3}
+  Tundra: {fileID: 8300000, guid: ac1c09406dff3fa45b98d19284120712, type: 3}
+  Bloody: {fileID: 8300000, guid: a1339846b5e85a54c9d9cc0718769bf5, type: 3}
+  Ocean: {fileID: 8300000, guid: 4a8f08f4e707f5343ba50d10e4c07b14, type: 3}
+  Light: {fileID: 8300000, guid: bcf258a746c5fa841b6d4dc19a17c2d9, type: 3}
+  Sulfur: {fileID: 8300000, guid: fdeba461d1f3e9948968364446f09265, type: 3}
+  Jungle: {fileID: 8300000, guid: a25c46c4296194347b18eb21a8fcb252, type: 3}
 --- !u!1 &1325952401
 GameObject:
   m_ObjectHideFlags: 0

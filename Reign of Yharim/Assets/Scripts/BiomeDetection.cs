@@ -13,6 +13,13 @@ public class BiomeDetection : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip Desert;
     public AudioClip Astral;
+    public AudioClip Blight;
+    public AudioClip Tundra;
+    public AudioClip Bloody;
+    public AudioClip Ocean;
+    public AudioClip Light;
+    public AudioClip Sulfur;
+    public AudioClip Jungle;
 
     void Update()
     {
@@ -37,13 +44,47 @@ public class BiomeDetection : MonoBehaviour
                 currentTileName = tileSpriteName; //set the current tile name to the name of the sprite
                 if (tileSpriteName == "Astral") //if the tile's name is astral
                 {
-                    //GetComponent<AudioSource>().Play(); //plays the audiosource
                     audioSource.clip = Astral;
                     audioSource.Play();
                 }
-                if(tileSpriteName == "Desert")
+                if (tileSpriteName == "Desert")
                 {
                     audioSource.clip = Desert;
+                    audioSource.Play();
+                }
+                if (tileSpriteName == "Blight")
+                {
+                    audioSource.clip = Blight;
+                    audioSource.Play();
+                }
+                if (tileSpriteName == "Bloody")
+                {
+                    audioSource.clip = Bloody;
+                    audioSource.Play();
+                }
+                if (tileSpriteName == "Ocean")
+                {
+                    audioSource.clip = Ocean;
+                    audioSource.Play();
+                }
+                if (tileSpriteName == "Light")
+                {
+                    audioSource.clip = Light;
+                    audioSource.Play();
+                }
+                if (tileSpriteName == "Sulfur")
+                {
+                    audioSource.clip = Sulfur;
+                    audioSource.Play();
+                }
+                if (tileSpriteName == "Jungle")
+                {
+                    audioSource.clip = Jungle;
+                    audioSource.Play();
+                }
+                if (tileSpriteName == "Tundra")
+                {
+                    audioSource.clip = Tundra;
                     audioSource.Play();
                 }
             }
