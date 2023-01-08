@@ -10,6 +10,9 @@ public class BiomeDetection : MonoBehaviour
     public Sprite tileSprite;
     private string tileSpriteName;
     public string currentTileName;
+    public AudioSource audioSource;
+    public AudioClip Desert;
+    public AudioClip Astral;
 
     void Update()
     {
@@ -34,11 +37,14 @@ public class BiomeDetection : MonoBehaviour
                 currentTileName = tileSpriteName; //set the current tile name to the name of the sprite
                 if (tileSpriteName == "Astral") //if the tile's name is astral
                 {
-                    GetComponent<AudioSource>().Play(); //plays the audiosource
+                    //GetComponent<AudioSource>().Play(); //plays the audiosource
+                    audioSource.clip = Astral;
+                    audioSource.Play();
                 }
-                else
+                if(tileSpriteName == "Desert")
                 {
-                    GetComponent<AudioSource>().Stop(); //stops the audiosource if the tile's name is not astral
+                    audioSource.clip = Desert;
+                    audioSource.Play();
                 }
             }
         }
