@@ -7,8 +7,10 @@ public class EnemyController : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
-    public int iFrames = 2;
-    [SerializeField] private bool immune;
+    public float enemyIFrames = 1f;
+    [SerializeField] private bool enemyImmune;
+
+    [SerializeField] private Animator playerAnimator;
 
     private void Start()
     {
@@ -16,15 +18,17 @@ public class EnemyController : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Item" && immune == false)
+        if (collision.gameObject.name == "Item" && enemyImmune == false)
         {
-            TakeDamage(5); //damage the player for 5 damage
-            StartCoroutine(Immunity()); //when the player is damaged, start courotine
+            if (playerAnimator.GetBool("Attacking") == true)
+            {
+                TakeDamage(5); //damage the player for 5 damage
+                StartCoroutine(EnemyImmunity()); //when the player is damaged, start courotine
+            }
         }
     }
-
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -32,10 +36,10 @@ public class EnemyController : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    IEnumerator Immunity()
+    IEnumerator EnemyImmunity()
     {
-        immune = true; //once courotine is started, set immune to true
-        yield return new WaitForSeconds(iFrames); //wait iFrames seconds
-        immune = false; //set immune to false, allowing for the player to be damaged
+        enemyImmune = true; //once courotine is started, set immune to true
+        yield return new WaitForSeconds(enemyIFrames); //wait iFrames seconds
+        enemyImmune = false; //set immune to false, allowing for the player to be damaged
     }
 }

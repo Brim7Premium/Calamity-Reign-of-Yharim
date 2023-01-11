@@ -77385,8 +77385,9 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 795786419}
-  iFrames: 2
-  immune: 0
+  enemyIFrames: 0.5
+  enemyImmune: 0
+  playerAnimator: {fileID: 1250109783}
 --- !u!1 &2005344489
 GameObject:
   m_ObjectHideFlags: 0
