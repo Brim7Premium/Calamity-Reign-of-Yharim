@@ -301,7 +301,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1153,7 +1153,7 @@ Transform:
   - {fileID: 1550992435}
   - {fileID: 1583872067}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1250109776
 GameObject:
@@ -1297,7 +1297,7 @@ Transform:
   - {fileID: 369497066}
   - {fileID: 1606627885}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1250109781
 MonoBehaviour:
@@ -1461,9 +1461,7 @@ MonoBehaviour:
   Tundra: {fileID: 8300000, guid: ac1c09406dff3fa45b98d19284120712, type: 3}
   Bloody: {fileID: 8300000, guid: a1339846b5e85a54c9d9cc0718769bf5, type: 3}
   Ocean: {fileID: 8300000, guid: 4a8f08f4e707f5343ba50d10e4c07b14, type: 3}
-  Light: {fileID: 8300000, guid: bcf258a746c5fa841b6d4dc19a17c2d9, type: 3}
   Sulfur: {fileID: 8300000, guid: fdeba461d1f3e9948968364446f09265, type: 3}
-  Jungle: {fileID: 8300000, guid: a25c46c4296194347b18eb21a8fcb252, type: 3}
 --- !u!1 &1325952401
 GameObject:
   m_ObjectHideFlags: 0
@@ -77385,7 +77383,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 795786419}
-  enemyIFrames: 0.5
+  enemyIFrames: 1
   enemyImmune: 0
   playerAnimator: {fileID: 1250109783}
 --- !u!1 &2005344489
@@ -77400,7 +77398,7 @@ GameObject:
   - component: {fileID: 2005344490}
   - component: {fileID: 2005344492}
   m_Layer: 0
-  m_Name: CM vcam1
+  m_Name: CamController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77428,7 +77426,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1250109780}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -77458,7 +77456,7 @@ Transform:
   m_Children:
   - {fileID: 365578261}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2005344492
 MonoBehaviour:

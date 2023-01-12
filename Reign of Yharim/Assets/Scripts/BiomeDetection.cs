@@ -17,9 +17,7 @@ public class BiomeDetection : MonoBehaviour
     public AudioClip Tundra;
     public AudioClip Bloody;
     public AudioClip Ocean;
-    public AudioClip Light;
     public AudioClip Sulfur;
-    public AudioClip Jungle;
 
     void Update()
     {
@@ -67,19 +65,9 @@ public class BiomeDetection : MonoBehaviour
                     audioSource.clip = Ocean;
                     audioSource.Play();
                 }
-                if (tileSpriteName == "Light")
-                {
-                    audioSource.clip = Light;
-                    audioSource.Play();
-                }
                 if (tileSpriteName == "Sulfur")
                 {
                     audioSource.clip = Sulfur;
-                    audioSource.Play();
-                }
-                if (tileSpriteName == "Jungle")
-                {
-                    audioSource.clip = Jungle;
                     audioSource.Play();
                 }
                 if (tileSpriteName == "Tundra")
