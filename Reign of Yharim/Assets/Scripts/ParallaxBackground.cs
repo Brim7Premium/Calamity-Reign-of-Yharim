@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class ParallaxBackground : MonoBehaviour
 {
-    [SerializeField] private Vector2 parallaxEffectMultiplier;
-
-    private Transform cameraTransform;
-    private Vector3 lastCameraPos;
+    private float startPos;
+    private Vector3 length;
+    [SerializeField] private GameObject cam;
+    [SerializeField] private float parallaxEffect;
 
     private void Start()
     {
-        cameraTransform = Camera.main.transform;
-        lastCameraPos = cameraTransform.position;
+        startPos = transform.position.x;
+        length = GetComponent<SpriteRenderer>().bounds.size;
     }
-
-    private void LateUpdate()
+    private void FixedUpdate()
     {
-        Vector3 deltaMovement = cameraTransform.position - lastCameraPos;
-        transform.position += new Vector3(deltaMovement.x * parallaxEffectMultiplier.x, deltaMovement.y * parallaxEffectMultiplier.y);
-        lastCameraPos = cameraTransform.position;
+        float dist = (cam.transform.position.x * parallaxEffect);
+        transform.position = new Vector3(startPos + dist, transform.position.x);
     }
 }
