@@ -85,6 +85,18 @@ public class BiomeDetection : MonoBehaviour
                     audioSource.clip = Tundra;
                     audioSource.Play();
                 }
+                if (tileSpriteName == "Forest")
+                {
+                    mainCam.backgroundColor = new Color(0.5622642f, 0.9691256f, 1f);
+                }
+                if (tileSpriteName == "Light")
+                {
+                    mainCam.backgroundColor = new Color(1f, 1f, 1f);
+                }
+                if (tileSpriteName == "Jungle")
+                {
+                    mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f);
+                }
             }
         }
     }
