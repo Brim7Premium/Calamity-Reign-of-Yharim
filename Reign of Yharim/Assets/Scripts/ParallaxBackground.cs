@@ -8,7 +8,6 @@ public class ParallaxBackground : MonoBehaviour
     private Vector3 length;
     [SerializeField] private GameObject cam;
     [SerializeField] private float parallaxEffect;
-
     private void Start()
     {
         startPos = transform.position.x;
@@ -16,7 +15,7 @@ public class ParallaxBackground : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        float dist = (cam.transform.position.x * parallaxEffect);
-        transform.position = new Vector3(startPos + dist, transform.position.x);
+        float dist = cam.transform.position.x * parallaxEffect;
+        transform.position = new Vector3(startPos + dist, transform.position.y, transform.position.z);
     }
 }
