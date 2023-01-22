@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Physics2D.IgnoreLayerCollision(3, 6);
         horizontal = Input.GetAxis("Horizontal"); //sets horizontal to -1 or 1 based on the player's input
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
@@ -48,9 +49,9 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("Attacking", false);
         }
-
+        
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);//sets the speed of the player along the x coordinate to 1 * speed or -1 * speed, allowing the player to move horizontally based on input
-
+        //rb.velocity.y
         if (horizontal > 0 || horizontal < 0) //left or right
         {
             animator.SetBool("Moving", true);
@@ -74,7 +75,7 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
-        if (collision.gameObject.name == "Dummy" && immune == false)
+        if (collision.gameObject.layer == 3 && immune == false)
         {
             TakeDamage(5); //damage the player for 5 damage
             StartCoroutine(Immunity()); //when the player is damaged, start courotine
