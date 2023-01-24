@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class AureusAI : NPC
 {
+    public static string Name => "AstrumAureus";
+    public static int Damage => 100;
     public override void SetDefaults()
     {
         lifeMax = 20000;
@@ -11,7 +13,6 @@ public class AureusAI : NPC
     }
     public override void AI()
     {
-        target = GameObject.Find("Player");
         if (ai[0] == 0.0f)
         {
             MoveTowards(0.1f, 0.1f);

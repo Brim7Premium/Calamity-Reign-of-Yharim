@@ -7,19 +7,21 @@ public abstract class NPC : MonoBehaviour
     public GameObject target;
     public int life;
     public bool active;
+    public bool collide;
     public int lifeMax;
     public float IFrames = 1f;
     public HealthBar healthBar;
     public Rigidbody2D rb;
     public float[] ai = new float[4];
     [SerializeField] private bool immune;
-    [SerializeField] private Animator playerAnimator;
+    private Animator playerAnimator;
     void Start()
     {
         active = true;
-        for(int i = 0; i < ai.Length; i++)
+        for (int i = 0; i < ai.Length; i++)
             ai[i] = 0.0f;
         SetDefaults();
+        playerAnimator = GameObject.Find("Player").GetComponent<Animator>();
     }
     void Update() => UpdateNPC();
     public void UpdateVelocity() => transform.position += (Vector3)velocity;
@@ -27,22 +29,24 @@ public abstract class NPC : MonoBehaviour
     {
         if (!active)
             return;
+        target = GameObject.Find("Player");
         UpdateVelocity();
         AI();
-
-        Die();
+        if(life <= 0)
+            Die();
     }
     public void MoveTowards(float speedX, float speedY)
     {
-        if(transform.position.x < target.transform.position.x)
+        if (transform.position.x < target.transform.position.x)
             velocity.x = speedX;
         else
             velocity.x = -speedX;
-        if(transform.position.y < target.transform.position.y)
+        if (transform.position.y < target.transform.position.y)
             velocity.y = speedY;
         else
             velocity.y = -speedY;
     }
+    public int GetTargetDirectionX() => transform.position.x < target.transform.position.x ? 1 : -1;
     public void TakeDamage(int damage)
     {
         life -= damage;
@@ -50,16 +54,17 @@ public abstract class NPC : MonoBehaviour
     }
     public void Die()
     {
-        if (life <= 0)
-        {
-            gameObject.SetActive(false);
-            active = false;
-        }
+        OnKill();
+        gameObject.SetActive(false);
+        active = false;
     }
     public virtual void SetDefaults()
     {
     }
     public virtual void AI()
+    {
+    }
+    public virtual void OnKill()
     {
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -75,8 +80,8 @@ public abstract class NPC : MonoBehaviour
     }
     IEnumerator EnemyImmunity()
     {
-        immune = true; 
-        yield return new WaitForSeconds(IFrames); 
-        immune = false; 
+        immune = true;
+        yield return new WaitForSeconds(IFrames);
+        immune = false;
     }
 }
