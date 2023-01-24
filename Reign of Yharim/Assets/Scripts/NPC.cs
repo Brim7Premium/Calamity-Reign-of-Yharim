@@ -56,6 +56,7 @@ public abstract class NPC : MonoBehaviour
     {
         OnKill();
         gameObject.SetActive(false);
+        //gameObject.Destroy
         active = false;
     }
     public virtual void SetDefaults()

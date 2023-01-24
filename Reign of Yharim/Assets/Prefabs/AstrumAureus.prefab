@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8920216709944567402}
   - component: {fileID: 8920216709944567403}
   - component: {fileID: 8920216709944567400}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: AureusGUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 8920216710213449521}
   - component: {fileID: 8920216710213449523}
   - component: {fileID: 8920216710213449520}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: AureusHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 8920216710389022876}
   - component: {fileID: 8920216710389022879}
   - component: {fileID: 8920216710389022873}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: AstrumAureus
   m_TagString: AstrumAureus
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 8920216711486176258}
   - component: {fileID: 8920216711486176268}
   - component: {fileID: 8920216711486176269}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 8920216711502495508}
   - component: {fileID: 8920216711502495510}
   - component: {fileID: 8920216711502495511}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: BarBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

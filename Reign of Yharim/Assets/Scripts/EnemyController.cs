@@ -19,11 +19,16 @@ public class EnemyController : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
+    private void Update()
+    {
+        Physics2D.IgnoreLayerCollision(3, 3);
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Item" && enemyImmune == false)
         {
-            if (playerAnimator.GetCurrentAnimatorStateInfo(1).IsName("Swing") == true)
+            if (playerAnimator.GetCurrentAnimatorStateInfo(1).IsName("Swing") == true)//if player is swinging sword
             {
                 TakeDamage(5); //damage the player for 5 damage
                 StartCoroutine(EnemyImmunity()); //when the player is damaged, start courotine

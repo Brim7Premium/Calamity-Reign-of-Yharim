@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Physics2D.IgnoreLayerCollision(10, 6);
+        Physics2D.IgnoreLayerCollision(3, 6);
+
         horizontal = Input.GetAxis("Horizontal"); //sets horizontal to -1 or 1 based on the player's input
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -69,22 +70,21 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        int damage = 0;
-        if(collision.gameObject.name == AureusAI.Name)
-            damage = AureusAI.Damage;
-        if(collision.gameObject.name == GreenSlimeAI.Name)
-            damage = GreenSlimeAI.Damage;
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        int damage = 0; //creates damage int variable and resets it to 0
+        if(collision.gameObject.name == AureusAI.Name) //if colliding with the gameobject named after the name variable from the aureusai class
+            damage = AureusAI.Damage; //sets damage to the damage variable in the aureusai class
+        if(collision.gameObject.name == GreenSlimeAI.Name) //if colliding with the gameobject named after the name variable from the greenslimeai class
+            damage = GreenSlimeAI.Damage; //set damage to the damage variable in the greenslimeai class
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) //if colliding with the ground layer
         {
-            isGrounded = true;
+            isGrounded = true; //set the isgrounded variable to true
         }
-        if (collision.gameObject.layer == 3 && immune == false)
+        if (collision.gameObject.layer == 3 && immune == false) //if colliding with the layerID 3 (NPCs) and the player is not immune
         {
-            TakeDamage(damage); //damage the player for 5 damage
+            TakeDamage(damage); //damage the player for the damage variable in damage
             StartCoroutine(Immunity()); //when the player is damaged, start courotine
         }
     }
-
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
