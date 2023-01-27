@@ -2,7 +2,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Entity
 {
     private float horizontal;
     private float speed = 8f;
@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Physics2D.IgnoreLayerCollision(3, 6);
-
         horizontal = Input.GetAxis("Horizontal"); //sets horizontal to -1 or 1 based on the player's input
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -83,6 +82,14 @@ public class PlayerController : MonoBehaviour
         {
             TakeDamage(damage); //damage the player for the damage variable in damage
             StartCoroutine(Immunity()); //when the player is damaged, start courotine
+        }
+    }
+    private void Die()
+    {
+        if(currentHealth <= 0)
+        {
+            rb.velocity = Vector2.zero;
+            
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

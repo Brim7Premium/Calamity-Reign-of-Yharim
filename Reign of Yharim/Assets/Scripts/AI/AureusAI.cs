@@ -15,7 +15,7 @@ public class AureusAI : NPC
     {
         if (ai[0] == 0.0f)
         {
-            MoveTowards(0.1f, 0.1f);
+            velocity = DirectionTo(target.transform.position) * 0.2f;
             ai[1]++;
             if (ai[1] >= 180.0f)
             {

@@ -1,12 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public abstract class NPC : MonoBehaviour
+public abstract class NPC : Entity
 {
-    public Vector2 velocity;
     public GameObject target;
     public int life;
-    public bool active;
     public bool collide;
     public int lifeMax;
     public float IFrames = 1f;
@@ -56,7 +54,6 @@ public abstract class NPC : MonoBehaviour
     {
         OnKill();
         gameObject.SetActive(false);
-        //gameObject.Destroy
         active = false;
     }
     public virtual void SetDefaults()
