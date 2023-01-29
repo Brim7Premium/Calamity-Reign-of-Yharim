@@ -10,7 +10,7 @@ public class DoGHeadAI : NPC
     {
         lifeMax = 1706400;
         life = lifeMax;
-        //healthBar.SetMaxHealth(lifeMax);
+        healthBar.SetMaxHealth(lifeMax);
     }
     public override void AI()
     {

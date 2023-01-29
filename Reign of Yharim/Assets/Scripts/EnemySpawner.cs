@@ -4,12 +4,12 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject player;
-    public GameObject greenSlime;
+    public GameObject enemyToSpawn;
 
     public float regularSlimeSpawnRate = 45.0f;
     void Start()
     {
-         StartCoroutine(spawnEnemy(regularSlimeSpawnRate, greenSlime));
+         StartCoroutine(spawnEnemy(regularSlimeSpawnRate, enemyToSpawn));
     }
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
