@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public abstract class NPC : Entity
     public float IFrames = 1f;
     public HealthBar healthBar;
     public Rigidbody2D rb;
+    public AudioClip HitSound;
     public float[] ai = new float[4];
     [SerializeField] private bool immune;
     private Animator playerAnimator;
@@ -30,7 +32,7 @@ public abstract class NPC : Entity
         target = GameObject.Find("Player");
         UpdateVelocity();
         AI();
-        if(life <= 0)
+        if (life <= 0)
             Die();
     }
     public void MoveTowards(float speedX, float speedY)
@@ -62,15 +64,20 @@ public abstract class NPC : Entity
     public virtual void AI()
     {
     }
+    public virtual void OnHit()
+    {
+    }
     public virtual void OnKill()
     {
     }
+    public Vector2 ToRotationVector2(float f) => new((float)Math.Cos(f), (float)Math.Sin(f));
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Item" && immune == false)
         {
             if (playerAnimator.GetCurrentAnimatorStateInfo(1).IsName("Swing") == true)
             {
+                OnHit();
                 TakeDamage(5);
                 StartCoroutine(EnemyImmunity());
             }
