@@ -12,7 +12,7 @@ public class GreenSlimeAI : NPC
     }
     public override void AI()
     {
-        ai[0]++;//increment ai[0] by 1 every frame.
+        ai[0]++;//increment ai[0] by 1 every frame.(the framerate is capped at 60)
         velocity *= 0.95f;//this is for smoothing the movement.
         if (ai[0] == 90.0f) //if it has been 90 frames, jump.
         {

@@ -46,10 +46,8 @@ public class PlayerController : Entity
         if (Input.GetMouseButtonUp(0))
         {
             animator.SetBool("Attacking", false);
-        }
-        
+        }       
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);//sets the speed of the player along the x coordinate to 1 * speed or -1 * speed, allowing the player to move horizontally based on input
-        //rb.velocity.y
         if (horizontal > 0 || horizontal < 0) //left or right
         {
             animator.SetBool("Moving", true);
@@ -67,7 +65,7 @@ public class PlayerController : Entity
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
     }
-    private void OnCollisionStay2D(Collision2D collision)
+    public void OnCollisionStay2D(Collision2D collision)
     {
         int damage = 0; //creates damage int variable and resets it to 0
         if(collision.gameObject.name == AureusAI.Name) //if colliding with the gameobject named after the name variable from the aureusai class
@@ -75,16 +73,14 @@ public class PlayerController : Entity
         if(collision.gameObject.name == GreenSlimeAI.Name) //if colliding with the gameobject named after the name variable from the greenslimeai class
             damage = GreenSlimeAI.Damage; //set damage to the damage variable in the greenslimeai class
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) //if colliding with the ground layer
-        {
             isGrounded = true; //set the isgrounded variable to true
-        }
         if (collision.gameObject.layer == 3 && immune == false) //if colliding with the layerID 3 (NPCs) and the player is not immune
         {
             TakeDamage(damage); //damage the player for the damage variable in damage
             StartCoroutine(Immunity()); //when the player is damaged, start courotine
         }
     }
-    private void Die()
+    private void Die()//does nothing rn
     {
         if(currentHealth <= 0)
         {

@@ -7,6 +7,8 @@ public class AureusAI : NPC
     public override void SetDefaults()
     {
         lifeMax = 20000;
+        life = lifeMax;
+        healthBar.SetMaxHealth(lifeMax);
     }
     public override void AI()
     {
