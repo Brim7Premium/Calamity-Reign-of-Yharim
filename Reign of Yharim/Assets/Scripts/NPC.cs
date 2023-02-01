@@ -34,8 +34,8 @@ public abstract class NPC : Entity
     {
         if (!active)
             return;
+        target = GameObject.Find("Player");
         Physics2D.IgnoreLayerCollision(3, 3);
-     target = GameObject.Find("Player");
         UpdateVelocity();
         AI();
         if (life <= 0)
@@ -68,8 +68,8 @@ public abstract class NPC : Entity
         }
         else
         {
-            OnKill();
             gameObject.SetActive(false);//kill the gameobject
+            OnKill();
             active = false;
         }
     }
