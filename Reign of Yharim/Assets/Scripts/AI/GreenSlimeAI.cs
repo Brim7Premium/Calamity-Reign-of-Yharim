@@ -16,8 +16,8 @@ public class GreenSlimeAI : NPC
         velocity *= 0.95f;//this is for smoothing the movement.
         if (ai[0] == 90.0f) //if it has been 90 frames, jump.
         {
-            velocity.x = GetTargetDirectionX() * 0.1f;
-            velocity.y = 0.1f;
+            velocity.x = GetTargetDirectionX() * 0.2f;
+            velocity.y = 0.2f;
         }
         if (ai[0] == 120.0f)
         {

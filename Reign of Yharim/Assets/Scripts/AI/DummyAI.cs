@@ -2,7 +2,6 @@ public class DummyAI : NPC
 {
     public static string Name => "Dummy";
     public static int Damage => 5;
-
     public override void SetDefaults()
     {
         lifeMax = 100;
