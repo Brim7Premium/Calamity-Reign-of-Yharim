@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ParallaxBackground : MonoBehaviour
 {
-    [SerializeField] private Transform[] backgrounds;
-    [SerializeField] private float[] parallaxScales;
+    [SerializeField] private Transform background;
+    [SerializeField] private float parallaxEffect;
     [SerializeField] private float smoothing = 1f;
 
     private Transform cameraTransform;
@@ -17,24 +17,21 @@ public class ParallaxBackground : MonoBehaviour
 
     private void LateUpdate()
     {
-        for (int i = 0; i < backgrounds.Length; i++)
-        {
-            float parallax = (previousCameraPosition.x - cameraTransform.position.x) * parallaxScales[i];
-            float backgroundTargetPosX = backgrounds[i].position.x - parallax;
-            Vector3 backgroundTargetPos = new Vector3(backgroundTargetPosX, backgrounds[i].position.y, backgrounds[i].position.z);
-            backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, backgroundTargetPos, smoothing * Time.deltaTime);
+            float parallax = (previousCameraPosition.x - cameraTransform.position.x) * parallaxEffect;
+            float backgroundTargetPosX = background.position.x - parallax;
+            Vector3 backgroundTargetPos = new Vector3(backgroundTargetPosX, background.position.y, background.position.z);
+            background.position = Vector3.Lerp(background.position, backgroundTargetPos, smoothing * Time.deltaTime);
 
-            if (backgrounds[i].position.x < cameraTransform.position.x - (backgrounds[i].GetComponent<SpriteRenderer>().bounds.size.x / 2))
+            if (background.position.x < cameraTransform.position.x - (background.GetComponent<SpriteRenderer>().bounds.size.x / 2))
             {
-                float offsetPositionX = (backgrounds[i].GetComponent<SpriteRenderer>().bounds.size.x - 0.01f);
-                backgrounds[i].position = new Vector3(backgrounds[i].position.x + offsetPositionX, backgrounds[i].position.y, backgrounds[i].position.z);
+                float offsetPositionX = (background.GetComponent<SpriteRenderer>().bounds.size.x - 0.01f);
+                background.position = new Vector3(background.position.x + offsetPositionX, background.position.y, background.position.z);
             }
-            else if (backgrounds[i].position.x > cameraTransform.position.x + (backgrounds[i].GetComponent<SpriteRenderer>().bounds.size.x / 2))
+            else if (background.position.x > cameraTransform.position.x + (background.GetComponent<SpriteRenderer>().bounds.size.x / 2))
             {
-                float offsetPositionX = (backgrounds[i].GetComponent<SpriteRenderer>().bounds.size.x - 0.01f);
-                backgrounds[i].position = new Vector3(backgrounds[i].position.x - offsetPositionX, backgrounds[i].position.y, backgrounds[i].position.z);
+                float offsetPositionX = (background.GetComponent<SpriteRenderer>().bounds.size.x - 0.01f);
+                background.position = new Vector3(background.position.x - offsetPositionX, background.position.y, background.position.z);
             }
-        }
 
         previousCameraPosition = cameraTransform.position;
     }
