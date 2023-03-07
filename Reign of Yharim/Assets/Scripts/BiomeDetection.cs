@@ -46,44 +46,44 @@ public class BiomeDetection : MonoBehaviour
                 if (tileSpriteName == "Astral") //if the tile's name is astral
                 {
                     mainCam.backgroundColor = new Color(0.06666667f, 0.003921569f, 0.07450981f);
-                    audioSource.clip = Astral;
-                    audioSource.Play();
+                    //audioSource.clip = Astral;
+                    //audioSource.Play();
                 }
                 if (tileSpriteName == "Desert")
                 {
                     mainCam.backgroundColor = new Color(1f, 0.9850028f, 0.8264151f);
-                    audioSource.clip = Desert;
-                    audioSource.Play();
+                    //audioSource.clip = Desert;
+                    //audioSource.Play();
                 }
                 if (tileSpriteName == "Blight")
                 {
                     mainCam.backgroundColor = new Color(0.09783139f, 0.1509434f, 0.06778213f);
-                    audioSource.clip = Blight;
-                    audioSource.Play();
+                    //audioSource.clip = Blight;
+                    //audioSource.Play();
                 }
                 if (tileSpriteName == "Bloody")
                 {
                     mainCam.backgroundColor = new Color(0.09433961f, 0.005603133f, 0f);
-                    audioSource.clip = Bloody;
-                    audioSource.Play();
+                    //audioSource.clip = Bloody;
+                    //audioSource.Play();
                 }
                 if (tileSpriteName == "Ocean")
                 {
                     mainCam.backgroundColor = new Color(0.345283f, 0.8541663f, 1f);
-                    audioSource.clip = Ocean;
-                    audioSource.Play();
+                    //audioSource.clip = Ocean;
+                    //audioSource.Play();
                 }
                 if (tileSpriteName == "Sulfur")
                 {
                     mainCam.backgroundColor = new Color(0.5457409f, 0.8962264f, 0.3179068f);
-                    audioSource.clip = Sulfur;
-                    audioSource.Play();
+                    //audioSource.clip = Sulfur;
+                    //audioSource.Play();
                 }
                 if (tileSpriteName == "Tundra")
                 {
                     mainCam.backgroundColor = new Color(0.7415094f, 1f, 0.95700063f);
-                    audioSource.clip = Tundra;
-                    audioSource.Play();
+                    //audioSource.clip = Tundra;
+                    //audioSource.Play();
                 }
                 if (tileSpriteName == "Forest")
                 {
