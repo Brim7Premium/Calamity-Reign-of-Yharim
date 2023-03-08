@@ -25,8 +25,8 @@ public abstract class NPC : Entity
         SetDefaults();
         //assign components
         playerAnimator = GameObject.Find("Player").GetComponent<Animator>();
-        audioSource = GameObject.Find("Player").GetComponent<AudioSource>();
-        audioSource.clip = HitSound;
+        //audioSource = GameObject.Find("Player").GetComponent<AudioSource>();
+        //audioSource.clip = HitSound;
     }
     void Update() => UpdateNPC();
     public void UpdateVelocity() => transform.position += (Vector3)velocity;
