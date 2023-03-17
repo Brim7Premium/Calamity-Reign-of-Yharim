@@ -1,0 +1,1331 @@
+fileFormatVersion: 2
+guid: 9b9d2c9dc7866414ba102493eeed8f58
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TEX_Astralgrass_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f6e9f8a339397408ec712149382e16
+      internalID: 193737912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a0c6fe7fdc74643bb7bf456f6b36a5
+      internalID: 1360856462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06d5504c01428d419ab54d3d1e561c4
+      internalID: -709824998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf022bdd6475a741a255a506537746a
+      internalID: 1745762855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b48c2da5930f0b4c9d7a8340e0acce3
+      internalID: 1773741969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f791f94cf82d94ea7382a2f4969154
+      internalID: -1358848015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_6
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe429594d711c44499eecbbe47dd0e0
+      internalID: -633598404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_7
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27cfb30cb9e816d44ab257bfb19ef46b
+      internalID: -2017018498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8832478a0eb9a42840608b5ec433f5
+      internalID: 48425987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379bc49f086531c4d8bfdc85c51a5ab6
+      internalID: -1940295438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_10
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c699ba2ed53bb7343b275dcbf729e92d
+      internalID: -1639658631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39427d08b291b74aa6043df74c0a08d
+      internalID: -367094513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_12
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b5d350df9257d41b79ce06ba4c6743
+      internalID: 1838024406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_13
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40af0ad5cdf0d2145bdf3053a41f5bf7
+      internalID: 1977890195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_14
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32180d9b1b9645642a628ec05fd3e904
+      internalID: -398456871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc62c493f9e15c443bab91becab0817e
+      internalID: 1315093445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ee45bab6419bb4fbe93790e826bc4f
+      internalID: -654264828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_17
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c7b271f7678464eb272fe02f4fa766
+      internalID: -2017087643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_18
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88de5f67572249447b8dfd3059364262
+      internalID: -888529693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6997d4b74a027834dbb6a8752cb0c9be
+      internalID: -486005695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_20
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33be66b71d0be04780902e77a6c4ce1
+      internalID: 1460482980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_21
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d85b57444261a46a28a3728ff76b78
+      internalID: 242575049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_22
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4281b410c72a5424e981e8fb362fe6e3
+      internalID: -1757159043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_23
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b239459dbf885640aba955829e87c17
+      internalID: -2007996844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f54694ff2e7b943b758ee1e4a21623
+      internalID: 707116741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_25
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64604993026deac40a98b63e71bffa47
+      internalID: -216314391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_26
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f2ef2490434fc4da50a36a1a0f4c99
+      internalID: -1536213441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb0e489acd3d4c4d91ad2c10529834d
+      internalID: 365429652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_28
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce57176da1f231a4da9e9aa872a7c73f
+      internalID: 1860195968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_29
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f0a6203ae803b44a6aaede4c26d009
+      internalID: 1515679421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_30
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee709e13d1cb9ce4ca21805fc2b35d07
+      internalID: 1647347947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_31
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0caa1dec640f44d8e70714ba1d4fb2
+      internalID: 1993905861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe7885d6b36b414985e4bb2ef993876
+      internalID: 988295865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_33
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d6d8b6e73dac547ac91b3ef5b90289
+      internalID: 1530730131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_34
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f718e9db3cbc74ca5dabb4834a8c6a
+      internalID: -1909260161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_35
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9990a76e3cac27c4ab5322d7774c2800
+      internalID: 499378579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_36
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3fab5643e0abd45bd5d1549f093fd8
+      internalID: -52114875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_37
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136309e5f85e4564d92747f08772a006
+      internalID: -1557075053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_38
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec517684a7cbafd418f9e28c16e43742
+      internalID: -1217738856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_39
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ab5a4062614534ea78c792e29412cf
+      internalID: 1059244869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c79c81236ab2444a6c8fac018a29f6
+      internalID: -301138707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_41
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e6c994df0508a4cb2e416a41640594
+      internalID: -1369365013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_42
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9a259ad49cd50448a709746cd422ca
+      internalID: 2028314849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_43
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac2668119be9414399e74fdef6a6965
+      internalID: -862897898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_44
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eaedcc7097bdb548bc5745f4b72eb7f
+      internalID: -575950680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_45
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615487f873ddffd479a4f2fbfe64062c
+      internalID: 2058445045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_46
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1164060d311ce246964ca642b77e258
+      internalID: -1278643965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_47
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: badbd6e98183db44f87fc192c666b013
+      internalID: -826779240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_48
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da3a724413e78a41bc26e7321d7b5d8
+      internalID: 564612281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_49
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e436f911966baf4695d2515e77df118
+      internalID: 2105542252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_50
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: 6, y: 6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -6}
+        - {x: -6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1651a2508a6b4834c95fa339b6db796e
+      internalID: -1439181166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_51
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: 6}
+        - {x: -6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc8ecf45799bc24ab52531197b00f2f
+      internalID: 1967131753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_52
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -6}
+        - {x: 6, y: 6}
+        - {x: 6, y: 6}
+        - {x: -6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693524090816eb74084317649a056483
+      internalID: -1132070425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Astralgrass_53
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -6}
+        - {x: -6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1d72865c7865b4d98e4bd40bdcabf4
+      internalID: 910521268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TEX_Astralgrass_13: 1977890195
+      TEX_Astralgrass_23: -2007996844
+      TEX_Astralgrass_38: -1217738856
+      TEX_Astralgrass_19: -486005695
+      TEX_Astralgrass_31: 1993905861
+      TEX_Astralgrass_22: -1757159043
+      TEX_Astralgrass_9: -1940295438
+      TEX_Astralgrass_11: -367094513
+      TEX_Astralgrass_21: 242575049
+      TEX_Astralgrass_43: -862897898
+      TEX_Astralgrass_15: 1315093445
+      TEX_Astralgrass_45: 2058445045
+      TEX_Astralgrass_0: 193737912
+      TEX_Astralgrass_24: 707116741
+      TEX_Astralgrass_29: 1515679421
+      TEX_Astralgrass_30: 1647347947
+      TEX_Astralgrass_10: -1639658631
+      TEX_Astralgrass_6: -633598404
+      TEX_Astralgrass_52: -1132070425
+      TEX_Astralgrass_42: 2028314849
+      TEX_Astralgrass_50: -1439181166
+      TEX_Astralgrass_18: -888529693
+      TEX_Astralgrass_36: -52114875
+      TEX_Astralgrass_27: 365429652
+      TEX_Astralgrass_4: 1773741969
+      TEX_Astralgrass_2: -709824998
+      TEX_Astralgrass_28: 1860195968
+      TEX_Astralgrass_37: -1557075053
+      TEX_Astralgrass_49: 2105542252
+      TEX_Astralgrass_40: -301138707
+      TEX_Astralgrass_7: -2017018498
+      TEX_Astralgrass_44: -575950680
+      TEX_Astralgrass_14: -398456871
+      TEX_Astralgrass_3: 1745762855
+      TEX_Astralgrass_39: 1059244869
+      TEX_Astralgrass_53: 910521268
+      TEX_Astralgrass_34: -1909260161
+      TEX_Astralgrass_33: 1530730131
+      TEX_Astralgrass_51: 1967131753
+      TEX_Astralgrass_8: 48425987
+      TEX_Astralgrass_12: 1838024406
+      TEX_Astralgrass_32: 988295865
+      TEX_Astralgrass_20: 1460482980
+      TEX_Astralgrass_5: -1358848015
+      TEX_Astralgrass_16: -654264828
+      TEX_Astralgrass_46: -1278643965
+      TEX_Astralgrass_48: 564612281
+      TEX_Astralgrass_1: 1360856462
+      TEX_Astralgrass_17: -2017087643
+      TEX_Astralgrass_26: -1536213441
+      TEX_Astralgrass_47: -826779240
+      TEX_Astralgrass_25: -216314391
+      TEX_Astralgrass_35: 499378579
+      TEX_Astralgrass_41: -1369365013
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

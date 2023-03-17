@@ -1,0 +1,1331 @@
+fileFormatVersion: 2
+guid: 0c6ff3731ff0be743a1da1329eb8eef3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d830b7d97f9f8340aa5f0d29ec4c065
+      internalID: 1926071245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9661cde7d20f04081d65d10ff38d91
+      internalID: -94654554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20af7ba88a42f07418017a69843377c2
+      internalID: 1915090887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1149b173d839e4a8e32ab6e1aef1b0
+      internalID: 1864025890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6251f02e5eeda4c879871933c590dc
+      internalID: -1877245254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1c9d88b5ca364409ab1d6a9c597a70
+      internalID: 477175295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_6
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c99156b60545874f983c9caabe98a0e
+      internalID: 456103439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_7
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1563519368bc2d24a86bdae0cf277d0d
+      internalID: 1082807341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02cf6a5ad933f394bb722866c5f2e842
+      internalID: 370877670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e19c3685cc13e499a0cf4a336b49cc
+      internalID: 959444882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_10
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d084b5bc14e5b5458d318ad98d6d430
+      internalID: -1236667700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd89d7291c2fe1949ad9ffeac21dc297
+      internalID: 1806235020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_12
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2b7bdff993cfd4a9688c5025d63a65
+      internalID: 1066901692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_13
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b99494146e2dab4d98f6a5851764a88
+      internalID: -2107247803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_14
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f05c32170e6c94994bcb2e4a5dcf13
+      internalID: -350312740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f6bf8b3f2fd784ab839fae2eed8a1d
+      internalID: 181220247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdeeb01c973bc7e44a810b8ac7ab5c86
+      internalID: 1318060594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_17
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16443d15e7486e4c9c289999f7b1d2f
+      internalID: -750166766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_18
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac1c8a7c5254f744ae211879dc38cdc
+      internalID: 1681269518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93a273420b32ed42a94e658b8ead224
+      internalID: 113729045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_20
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ab82ef48abaa443a796e4ba35bada2
+      internalID: 1151181929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_21
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8d287fdb8bf1a42afaeb0195687d79
+      internalID: -2106878110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_22
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7cb1047b4b2dca4d86f0d7b9acc7889
+      internalID: -1109589795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_23
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbca195330c8d449a8b82d2924a7d9e
+      internalID: 941764431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c474972040db8d44881692acdf233087
+      internalID: -43411123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_25
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9087ccaab89faa14498460a357554f31
+      internalID: 617293631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_26
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e75cadfee3a4c44a9c51cf6845c578c
+      internalID: -829519383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c589647a9475ca64ab10fafcd3930138
+      internalID: -1617296286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_28
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c7894ead543c04c9a3aa7a3fd1ee79
+      internalID: 1813537144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_29
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c15e9a6df514d428f99c6b824017fa
+      internalID: 1401341269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_30
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc46f59762f08ed4a8901be87ad1fe9a
+      internalID: 193134591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_31
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ce3996a73777749a79842d5c2e03dd
+      internalID: -192367557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201464bfefc36314ea7367ae3c0e68cd
+      internalID: -1699521743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_33
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fe1edfe7b11684eb908c39a4f34f08
+      internalID: 228878849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_34
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf7aa5eec6dd224bb8afd014ceb63e1
+      internalID: -2929646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_35
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b440d3e93ec4143a36c3c6244369e3
+      internalID: -1899316348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_36
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63c0cb8156d84b41a25eb70fc667c5b
+      internalID: 471009812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_37
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3888ef3c0a0b2648baaee733791c2d0
+      internalID: -1133755723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_38
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e723448541d4a6d44a958b4da419c801
+      internalID: 1599434460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_39
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc133ad998a0f64c920a0692032c727
+      internalID: -1087644423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3404d1e617055ed46a148fe8a724cc40
+      internalID: -271834462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_41
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e697d5c0f6f768468a58d3012d71b93
+      internalID: 1384823649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_42
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39938ad114eb4434ca7631d07baa3a1c
+      internalID: -657719331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_43
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6416f0ade0381c478ec9dbb09700db2
+      internalID: 1310822372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_44
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27cce642bb55f346935835d90c18cdc
+      internalID: 109501738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_45
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648d370059e3c2c4f95e2f0ee4cd957c
+      internalID: 501019918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_46
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c9439c316429846ae9172c5fdb2015
+      internalID: 82856740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_47
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fdb42167d101c42a73d3c90038215d
+      internalID: 306371377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_48
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1ef3790ec9d67419bb4c55d4f79336
+      internalID: -1327653245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_49
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8a90e3e348c0542b67a085c16a3554
+      internalID: 668355001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_50
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: 6, y: 6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -6}
+        - {x: -6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703a9388f06bcc847937b1b9e09c61d8
+      internalID: -981599815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_51
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: 6}
+        - {x: -6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25028cf5aa9780e44a43c51f4f45e117
+      internalID: 615752480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_52
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -6}
+        - {x: 6, y: 6}
+        - {x: 6, y: 6}
+        - {x: -6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb2862afddd31440a1eff7833682065
+      internalID: -564436060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Bloodygrass_53
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -6}
+        - {x: -6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42e37aa1d08bb74692237c756adba29
+      internalID: -511628567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TEX_Bloodygrass_21: -2106878110
+      TEX_Bloodygrass_15: 181220247
+      TEX_Bloodygrass_53: -511628567
+      TEX_Bloodygrass_18: 1681269518
+      TEX_Bloodygrass_38: 1599434460
+      TEX_Bloodygrass_22: -1109589795
+      TEX_Bloodygrass_6: 456103439
+      TEX_Bloodygrass_10: -1236667700
+      TEX_Bloodygrass_17: -750166766
+      TEX_Bloodygrass_43: 1310822372
+      TEX_Bloodygrass_36: 471009812
+      TEX_Bloodygrass_48: -1327653245
+      TEX_Bloodygrass_29: 1401341269
+      TEX_Bloodygrass_27: -1617296286
+      TEX_Bloodygrass_11: 1806235020
+      TEX_Bloodygrass_42: -657719331
+      TEX_Bloodygrass_39: -1087644423
+      TEX_Bloodygrass_4: -1877245254
+      TEX_Bloodygrass_26: -829519383
+      TEX_Bloodygrass_44: 109501738
+      TEX_Bloodygrass_19: 113729045
+      TEX_Bloodygrass_31: -192367557
+      TEX_Bloodygrass_25: 617293631
+      TEX_Bloodygrass_46: 82856740
+      TEX_Bloodygrass_9: 959444882
+      TEX_Bloodygrass_24: -43411123
+      TEX_Bloodygrass_8: 370877670
+      TEX_Bloodygrass_32: -1699521743
+      TEX_Bloodygrass_28: 1813537144
+      TEX_Bloodygrass_14: -350312740
+      TEX_Bloodygrass_20: 1151181929
+      TEX_Bloodygrass_37: -1133755723
+      TEX_Bloodygrass_5: 477175295
+      TEX_Bloodygrass_7: 1082807341
+      TEX_Bloodygrass_2: 1915090887
+      TEX_Bloodygrass_23: 941764431
+      TEX_Bloodygrass_30: 193134591
+      TEX_Bloodygrass_45: 501019918
+      TEX_Bloodygrass_47: 306371377
+      TEX_Bloodygrass_52: -564436060
+      TEX_Bloodygrass_3: 1864025890
+      TEX_Bloodygrass_12: 1066901692
+      TEX_Bloodygrass_35: -1899316348
+      TEX_Bloodygrass_34: -2929646
+      TEX_Bloodygrass_1: -94654554
+      TEX_Bloodygrass_40: -271834462
+      TEX_Bloodygrass_0: 1926071245
+      TEX_Bloodygrass_13: -2107247803
+      TEX_Bloodygrass_50: -981599815
+      TEX_Bloodygrass_49: 668355001
+      TEX_Bloodygrass_33: 228878849
+      TEX_Bloodygrass_16: 1318060594
+      TEX_Bloodygrass_41: 1384823649
+      TEX_Bloodygrass_51: 615752480
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
