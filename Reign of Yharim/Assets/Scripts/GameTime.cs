@@ -5,9 +5,9 @@ using UnityEngine;
 public class GameTime : MonoBehaviour
 {
     private int count = 0;
-    private int internalTime;
-    private int internalHours;
-    private int amOrPm;
+    public static int internalTime;
+    public static int internalHours;
+    public static int amOrPm;
     public static string displayTime;
     public string displayAmOrPm;
 
@@ -20,41 +20,44 @@ public class GameTime : MonoBehaviour
     }
     private void Update()
     {
-        if (count > 60)
+        if (count > 60) //if count is greater than 60
         {
-            internalTime++;
-            if (internalTime == 60)
+            internalTime++; //increase time (minutes) by 1
+            if (internalTime == 60) //if time is 60 (60 minutes)
             {
-                internalTime = 0;
-                internalHours++;
-                if (internalHours == 13)
+                internalTime = 0; //reset time to 0
+                internalHours++; //increase hours by 1
+                if (internalHours == 13) //if hours equals 13
                 {
-                    internalHours = 1;
-                    amOrPm++;
-                    if(amOrPm == 3)
+                    internalHours = 1; //reset hours to 1
+                }
+                if (internalHours == 12) //if hours equals 12
+                {
+                    amOrPm++; //set to next AM or PM (increase by one)
+                    if (amOrPm == 3) //if AM or PM equals 3
                     {
-                        amOrPm = 1;
+                        amOrPm = 1; //reset AM or PM to 1
                     }
                 }
             }
-            count = 1;
+            count = 1; //reset count to 1
         }
-        if (amOrPm == 1)
+        if (amOrPm == 1) //if Am or PM equals 1
         {
-            displayAmOrPm = "AM";
+            displayAmOrPm = "AM"; //set AM or PM display to AM
         }
         else
         {
-            displayAmOrPm = "PM";
+            displayAmOrPm = "PM"; //set AM or PM display to PM
         }
-        if (internalTime < 10)
+        if (internalTime < 10) //if internal time (minutes) is less than 10
         {
-            displayTime = internalHours + ":0" + internalTime + " " + displayAmOrPm;
+            displayTime = internalHours + ":0" + internalTime + " " + displayAmOrPm; //display time with 0
         }
         else
         {
-            displayTime = internalHours + ":" + internalTime + " " + displayAmOrPm;
+            displayTime = internalHours + ":" + internalTime + " " + displayAmOrPm; //display time without 0
         }
-        count++;
+        count++; //increase count by 1 every frame
     }
 }
