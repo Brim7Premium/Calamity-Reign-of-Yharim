@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class OrbitReset : MonoBehaviour
 {
-    [SerializeField] private Transform orbitPoint;
 
     private void Update()
     {
         if (GameTime.internalHours == 4 && GameTime.internalTime == 30 && GameTime.amOrPm == 1) //if the time is 4:30 AM (1)
         {
-            orbitPoint.transform.rotation = Quaternion.Euler(0f, 0f, -45f); //set rotation to -45
+            transform.rotation = Quaternion.Euler(0f, 0f, -45f); //set rotation to -45
         }
         if (GameTime.internalHours == 7 && GameTime.internalTime == 30 && GameTime.amOrPm == 2) //if the time is 7:30 PM (2)
         {
-            orbitPoint.transform.rotation = Quaternion.Euler(0f, 0f, -135f); //set rotation to -135
+            transform.rotation = Quaternion.Euler(0f, 0f, -135f); //set rotation to -135
         }
         if (GameTime.internalHours == 12 && GameTime.internalTime == 0 && GameTime.amOrPm == 2) //if the time is 12:00 PM (2) (Noon)
         {
-            orbitPoint.transform.rotation = Quaternion.Euler(0f, 0f, -90f); //set rotation to -90
+            transform.rotation = Quaternion.Euler(0f, 0f, -90f); //set rotation to -90
         }
         if (GameTime.internalHours == 12 && GameTime.internalTime == 0 && GameTime.amOrPm == 1) //if the time is 12:00 AM (1) (Midnight)
         {
-            orbitPoint.transform.rotation = Quaternion.Euler(0f, 0f, -180f); //set rotation to -180
+            transform.rotation = Quaternion.Euler(0f, 0f, -180f); //set rotation to -180
         }
     }
 }

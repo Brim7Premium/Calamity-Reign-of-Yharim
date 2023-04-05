@@ -10,6 +10,9 @@ public class GameTime : MonoBehaviour
     public static int amOrPm;
     public static string displayTime;
     public string displayAmOrPm;
+    [SerializeField] private Transform orbitPoint;
+    [SerializeField] private Vector3 rotation;
+    [SerializeField] private float rotationSpeed;
 
     void Start()
     {
@@ -58,6 +61,8 @@ public class GameTime : MonoBehaviour
         {
             displayTime = internalHours + ":" + internalTime + " " + displayAmOrPm; //display time without 0
         }
+
+        orbitPoint.transform.Rotate(rotation * rotationSpeed * Time.deltaTime);
         count++; //increase count by 1 every frame
     }
 }
