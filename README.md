@@ -19,5 +19,7 @@ We retain the right to our original assets, characters, concepts, designs, music
 
 # File Navigation
 
-	Npc and enemy ai:
-		- Calamity-Reign-of-Yharim/Reign of 
+	Npc, boss and enemy ai:
+		- Calamity-Reign-of-Yharim/Reign of Yharim/Assets/Scripts/AI
+		
+	
