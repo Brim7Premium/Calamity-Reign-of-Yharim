@@ -5,6 +5,6 @@ using UnityEngine;
 public class LockRotation : MonoBehaviour
 {    void LateUpdate()
     {
-        transform.rotation = Quaternion.Euler(0, 0, 0);
+        transform.rotation = Quaternion.Euler(0, 0, 0); //locks the rotation of attached objects
     }
 }

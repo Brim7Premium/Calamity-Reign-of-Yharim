@@ -30,29 +30,31 @@ public class PlayerController : Entity
     void Update()
     {
         Physics2D.IgnoreLayerCollision(3, 6);
-        horizontal = Input.GetAxis("Horizontal"); //sets horizontal to -1 or 1 based on the player's input
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+
+        //sets horizontal to -1 or 1 based on the player's input
+        horizontal = Input.GetAxis("Horizontal"); 
+        if (Input.GetButtonDown("Jump") && IsGrounded()) 
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f) 
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) 
         {
             animator.SetBool("Attacking", true);
         }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0)) 
         {
             animator.SetBool("Attacking", false);
         }       
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);//sets the speed of the player along the x coordinate to 1 * speed or -1 * speed, allowing the player to move horizontally based on input
-        if (horizontal > 0 || horizontal < 0) //left or right
-        {
+        //sets the speed of the player along the x coordinate to 1 * speed or -1 * speed, allowing the player to move horizontally based on input
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        if (horizontal > 0 || horizontal < 0) { //left or right
             animator.SetBool("Moving", true);
         }
-        else
+        else 
         {
             animator.SetBool("Moving", false);
         }
@@ -68,18 +70,39 @@ public class PlayerController : Entity
     public void OnCollisionStay2D(Collision2D collision)
     {
         int damage = 0; //creates damage int variable and resets it to 0
-        if(collision.gameObject.name == AureusAI.Name) //if colliding with the gameobject named after the name variable from the aureusai class
-            damage = AureusAI.Damage; //sets damage to the damage variable in the aureusai class
-        if(collision.gameObject.name == GreenSlimeAI.Name) //if colliding with the gameobject named after the name variable from the greenslimeai class
-            damage = GreenSlimeAI.Damage; //set damage to the damage variable in the greenslimeai class
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) //if colliding with the ground layer
-            isGrounded = true; //set the isgrounded variable to true
-        if (collision.gameObject.layer == 3 && immune == false) //if colliding with the layerID 3 (NPCs) and the player is not immune
+
+        // If colliding with Aureus
+        if(collision.gameObject.name == AureusAI.Name) 
+            // Set damage to Aureus damage value
+            damage = AureusAI.Damage; 
+
+        // If colliding with Green Slime
+        if(collision.gameObject.name == GreenSlimeAI.Name) 
+            // Set damage to Green Slime damage value
+            damage = GreenSlimeAI.Damage; 
+
+        // If colliding with the ground layer
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) 
+            //set the isgrounded variable to true
+            isGrounded = true; 
+
+        // If colliding with the layerID 3 (NPCs) and the player is not immune
+        if (collision.gameObject.layer == 3 && immune == false) 
         {
-            TakeDamage(damage); //damage the player for the damage variable in damage
-            StartCoroutine(Immunity()); //when the player is damaged, start courotine
+            TakeDamage(damage); // Take damage equal to damage variable
+            StartCoroutine(Immunity()); // When the player is damaged, start courotine
         }
     }
+    
+    /*
+    NOTE FROM JELLO:
+    I recommend that we approach the damage function from different means. It would be resource intensive
+    if we were to make the player determine what it's colliding with as we add more enemies.
+
+    It would make more sense if we have each enemy call TakeDamage() when a collision with the player
+    is detected.
+    */
+
     private void Die()//does nothing rn
     {
         if(currentHealth <= 0)
@@ -112,4 +135,30 @@ public class PlayerController : Entity
         yield return new WaitForSeconds(iFrames); //wait iFrames seconds
         immune = false; //set immune to false, allowing for the player to be damaged
     }
+    /*
+    NOTE FROM JELLO:
+        We could have the players Immunity() be called by enemies after they call TakeDamage() 
+        and modify Immunity to take an input, or use polumorphism to create another Immunity() that does
+        take an input so that we can have damage use the default iFrames amount or specify them.
+
+        Example:
+            
+            IEnumerator Immunity() { //Default call
+                immune = true;
+                yield return new WaitForSeconds(1);
+                immune = false;
+            }
+
+            IEnumerator Immunity(int frames) { //Specified call
+                immune = true;
+                yield return new WaitForSeconds(frames);
+                immune = false;
+            }
+
+            // Immunity() -> calls default 
+            // Immunity(0.05) ->  calls specified
+
+        This could also be placed in the Entity class, but exact implementation details for detecting 
+        what is colliding with what in an intuitive manner cannot be provided by me at the moment.  
+    */
 }
