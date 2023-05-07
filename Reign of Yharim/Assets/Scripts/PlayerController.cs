@@ -51,6 +51,7 @@ public class PlayerController : Entity
         }       
         //sets the speed of the player along the x coordinate to 1 * speed or -1 * speed, allowing the player to move horizontally based on input
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
         if (horizontal > 0 || horizontal < 0) { //left or right
             animator.SetBool("Moving", true);
         }
@@ -89,7 +90,7 @@ public class PlayerController : Entity
         // If colliding with the layerID 3 (NPCs) and the player is not immune
         if (collision.gameObject.layer == 3 && immune == false) 
         {
-            TakeDamage(damage); // Take damage equal to damage variable
+            DamagePlayer(damage); // Take damage equal to damage variable
             StartCoroutine(Immunity()); // When the player is damaged, start courotine
         }
     }
@@ -122,7 +123,7 @@ public class PlayerController : Entity
     {
         return isGrounded;
     }
-    void TakeDamage(int damage)
+    void DamagePlayer(int damage)
     {
         currentHealth -= damage;
 
