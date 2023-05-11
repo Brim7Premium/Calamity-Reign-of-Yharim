@@ -11,17 +11,12 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     private float speed = 8f;
     private float jumpingPower = 16f;
 
-    [SerializeField] private bool isGrounded = false;
+    [SerializeField] public static bool isGrounded = false;
     public override void SetDefaults()
     {
         lifeMax = 20;
         life = lifeMax;
         healthBar.SetMaxHealth(lifeMax);
-    }
-    public override void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
-            isGrounded = true;
     }
     public override void AI()
     {
@@ -63,13 +58,6 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         if (horizontal < 0) //left
         {
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
-        }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            isGrounded = false;
         }
     }
     private bool IsGrounded()

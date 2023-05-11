@@ -81,7 +81,8 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced (can
     }
     public Vector2 ToRotationVector2(float f) => new((float)Math.Cos(f), (float)Math.Sin(f));//converts an angle into a Vector2
 
-    public virtual void OnTriggerStay2D(Collider2D collision)
+    //Code for old damage detection system
+    /* public virtual void OnTriggerStay2D(Collider2D collision) 
     {
         if (collision.gameObject.name == "Item" && immune == false) //if not immune, and colliding with the item gameobject
         {
@@ -96,6 +97,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced (can
         {
         }
     }
+    */
     public IEnumerator EnemyImmunity()
     {
         immune = true; //set immune to true

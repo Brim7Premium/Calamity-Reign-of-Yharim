@@ -10,22 +10,6 @@ public class GreenSlimeAI : NPC
         life = lifeMax;
         healthBar.SetMaxHealth(lifeMax);
     }
-    public override void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.name == "Item" && immune == false) //if not immune, and colliding with the item gameobject
-        {
-            if (playerAnimator.GetCurrentAnimatorStateInfo(1).IsName("Swing") == true) //if the player is swinging the sword (checks though animator)
-            {
-                OnHit(); //trigger method
-                TakeDamage(PlayerAI.Damage); //takes damage
-                StartCoroutine(EnemyImmunity()); //start EnemyImmunity coroutine
-            }
-        }
-        if (collision.gameObject.name == "Player")
-        {
-            //write later
-        }
-    }
     public override void AI()
     {
         ai[0]++;//increment ai[0] by 1 every frame.(the framerate is capped at 60)
