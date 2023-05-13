@@ -111,10 +111,10 @@ public class BiomeDetection : MonoBehaviour
                     //Spawn plains/Forest
                     //mainCam.backgroundColor = new Color(0.5622642f, 0.9691256f, 1f);
                 }
-                if (tileSpriteName == "Light")
+                if (tileSpriteName == "Feral")
                 {
-                    //Light
-                    //mainCam.backgroundColor = new Color(1f, 1f, 1f);
+                    //Feral Swamplands
+                    //mainCam.backgroundColor = new Color(1f, 1f, 1f); Change this later
                 }
                 if (tileSpriteName == "Jungle")
                 {

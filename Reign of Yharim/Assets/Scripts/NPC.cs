@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public abstract class NPC : Entity
+public abstract class NPC : Entity //Must be inherited, cannot be instanced 
 {
     public GameObject target;
     public int life;
