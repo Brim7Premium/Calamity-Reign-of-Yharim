@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class DummyAI : NPC
 {
     public static string Name => "Dummy";

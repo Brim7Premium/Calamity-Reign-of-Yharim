@@ -2,39 +2,64 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public abstract class NPC : Entity //Must be inherited, cannot be instanced (cannot be attached to gameobjects basically, this script is more like a template for the AI scripts which will be attached) 
+public abstract class NPC : Entity //Must be inherited, cannot be instanced 
 {
-    public GameObject target; //Gameobject named target. Don't assign, target is automatically assigned to the player gameobject on UpdateNPC (Update)
-    public int life; //an int variable named life
-    public bool worm; //a bool variable named worm
-    public int lifeMax; //an int variable named lifeMax
-    public float IFrames = 1f; //a float variable named IFrames
-    public HealthBar healthBar; //a healthbar class called healthbar
-    public Rigidbody2D rb; //a rigidbody component called rb
-    public float[] ai = new float[4]; //creates a float array called ai with four indexes
-    public bool immune; //a bool variable called immune
-    public Animator playerAnimator; //an animator component called playerAnimator. Don't assign, playerAnimator is autonmatically assigned to the player's animator on start
+    public GameObject target;
+
+    public int life;
+
+    public bool worm;
+
+    public int lifeMax;
+
+    public float IFrames = 1f;
+
+    public HealthBar healthBar;
+
+    public Rigidbody2D rb;
+
+    public AudioClip HitSound;
+
+    public float[] ai = new float[4];
+
+    public bool immune;
+
+    public Animator playerAnimator;
+
+    public GameObject[] projectiles;
+
     void Start()
     {
         active = true; //if active
+
         for (int i = 0; i < ai.Length; i++) //will loop until it reaches ai.length (4)
             ai[i] = 0.0f; //set every ai index to 0 until ai.length (4)
+
         SetDefaults(); //call setdefaults
+
         playerAnimator = GameObject.Find("Player").GetComponent<Animator>(); //sets playerAnimator to the animator component attached to the player gameobject
     }
+
     void Update() => UpdateNPC(); //changes update to updatenpc (gives UpdateNPC the function of Update (to be called every frame))
+
     public void UpdateVelocity() => transform.position += (Vector3)velocity; //calling UpdateVelocity updates the position of the attached gameobject based on vector2 velocity. Basically, the vector2 velocity stores the movements, and UpdateVelocity turns it into actual transform movement
+
     public void UpdateNPC() //triggers every frame
     {
         if (!active) //if not active
             return; //prevents the subsequent code from running every frame until active again
+
         target = GameObject.Find("Player"); //target gameobject variable is equal to the Player gameobject
+
         Physics2D.IgnoreLayerCollision(3, 3); //NPCs (layer 3) don't collide with other NPCs (also layer 3)
+
         UpdateVelocity(); //Call updatevelocity
         AI(); //Call ai (AI method is overridden by subclasses)
+
         if (life <= 0) //If life in is less than or equal to 0
             Die(); //trigger Die method
     }
+
     public void MoveTowards(float speedX, float speedY)//moves the npc towards the player at a set speed.
     {
         if (transform.position.x < target.transform.position.x) //if the attached transform's x position is less than the target's x position
@@ -46,12 +71,15 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced (can
         else
             velocity.y = -speedY; //y of velocity equals negative speedY
     }
+
     public int GetTargetDirectionX() => transform.position.x < target.transform.position.x ? 1 : -1; //if transform.position.x is less than, then GetTargetDirectionX returns 1, if else -1
+
     public void RemoveHealth(int damage) //remove health with no Iframes
     {
         life -= damage; //Subtracts damage from life and sets life to result
         healthBar.SetHealth(life); //Set the health of the healthbar to new life value
     }
+
     public void TakeDamage(int damage)
     {
         if (immune == false)
@@ -61,6 +89,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced (can
             StartCoroutine(EnemyImmunity());
         }
     }
+
     public void Die()//kills the npc(sets gameobject.active to false) and calls onkill
     {
         if (worm)
@@ -76,6 +105,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced (can
             active = false; //Kill
         }
     }
+
     public virtual void SetDefaults()//called on start, overridden by subclasses for customization
     {
     }
