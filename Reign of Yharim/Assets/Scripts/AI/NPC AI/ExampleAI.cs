@@ -18,14 +18,14 @@ public class ExampleAI : NPC
     public override void AI()//this is were the npc's ai code goes.
     {
         ai[1]++;//increment ai[0] by 1 every frame so we can use it as a timer.
-        
+
         if (ai[0] == 0.0f)//the first attack.
         {
-            if(ai[1] % 60.0f == 0.0f)
+            if (ai[1] % 60.0f == 0.0f)
                 velocity = DirectionTo(target.transform.position) * 0.8f;//dash at the player every second.
-            
+
             velocity *= 0.9f;//lower the velocity every frame to make the dashes smoother.
-            
+
             if (ai[1] > 180.0f)//if it has been more than 3 seconds, switch phases and and reset ai[1](the timer).
             {
                 ai[0] = 1.0f;
@@ -35,9 +35,13 @@ public class ExampleAI : NPC
         if (ai[0] == 1.0f)//this is the second attack type.
         {
             velocity = DirectionTo(new Vector2(target.transform.position.x, target.transform.position.y + 4)) * 0.4f;//attempt to fly above the player.
-            
-            if (ai[1] > 120.0f)//if it has been more than 2 seconds, switch phases and and reset ai[1](the timer).
+
+            if (ai[1] > 120.0f)//if it has been more than 2 seconds, fire a projectile at the player, switch phases, and reset ai[1](the timer).
             {
+                Projectile proj = Projectile.NewProjectile(projectiles[0], transform, Quaternion.identity, 20, 240);
+
+                proj.velocity = DirectionTo(target.transform.position) * 0.1f;
+
                 ai[0] = 0.0f;
                 ai[1] = 0.0f;
             }
