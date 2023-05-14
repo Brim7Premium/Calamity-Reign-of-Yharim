@@ -5,17 +5,33 @@ using UnityEngine;
 public abstract class NPC : Entity //Must be inherited, cannot be instanced 
 {
     public GameObject target;
+
     public int life;
+
     public bool worm;
+
     public int lifeMax;
+
     public float IFrames = 1f;
+
     public HealthBar healthBar;
+
     public Rigidbody2D rb;
+
     public AudioClip HitSound;
+
     public float[] ai = new float[4];
+
     [SerializeField] private bool immune;
+
     public Animator playerAnimator;
+
     public AudioSource audioSource;
+
+    public int damage;
+
+    public GameObject[] projectiles;
+
     void Start()
     {
         active = true;
@@ -28,19 +44,27 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         //audioSource = GameObject.Find("Player").GetComponent<AudioSource>();
         //audioSource.clip = HitSound;
     }
+
     void Update() => UpdateNPC();
+
     public void UpdateVelocity() => transform.position += (Vector3)velocity;
+
     public void UpdateNPC()
     {
         if (!active)
             return;
+
         target = GameObject.Find("Player");
+
         Physics2D.IgnoreLayerCollision(3, 3);
+
         UpdateVelocity();
         AI();
+
         if (life <= 0)
             Die();
     }
+
     public void MoveTowards(float speedX, float speedY)//moves the npc towards the player at a set speed.
     {
         if (transform.position.x < target.transform.position.x)
@@ -52,12 +76,15 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         else
             velocity.y = -speedY;
     }
+
     public int GetTargetDirectionX() => transform.position.x < target.transform.position.x ? 1 : -1;
+
     public void TakeDamage(int damage)
     {
         life -= damage;
         healthBar.SetHealth(life);
     }
+
     public void Die()//kills the npc(sets gameobject.active to false) and calls onkill
     {
         if (worm)
@@ -73,19 +100,25 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
             active = false;
         }
     }
+
     public virtual void SetDefaults()//called on start
     {
     }
+
     public virtual void AI()//called every frame
     {
     }
+
     public virtual void OnHit()//called when the npc is hit
     {
     }
+
     public virtual void OnKill()//called when the npc dies
     {
     }
+
     public Vector2 ToRotationVector2(float f) => new((float)Math.Cos(f), (float)Math.Sin(f));//converts an angle into a Vector2
+
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Item" && immune == false)
@@ -93,13 +126,16 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
             if (playerAnimator.GetCurrentAnimatorStateInfo(1).IsName("Swing") == true)
             {
                 OnHit();
+
                 if (HitSound != null)
                     audioSource.Play();
+
                 TakeDamage(5);
                 StartCoroutine(EnemyImmunity());
             }
         }
     }
+
     IEnumerator EnemyImmunity()
     {
         immune = true;
