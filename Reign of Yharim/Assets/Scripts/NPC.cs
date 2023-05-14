@@ -47,10 +47,19 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced (can
             velocity.y = -speedY; //y of velocity equals negative speedY
     }
     public int GetTargetDirectionX() => transform.position.x < target.transform.position.x ? 1 : -1; //if transform.position.x is less than, then GetTargetDirectionX returns 1, if else -1
-    public void TakeDamage(int damage)
+    public void RemoveHealth(int damage) //remove health with no Iframes
     {
         life -= damage; //Subtracts damage from life and sets life to result
         healthBar.SetHealth(life); //Set the health of the healthbar to new life value
+    }
+    public void TakeDamage(int damage)
+    {
+        if (immune == false)
+        {
+            OnHit();
+            RemoveHealth(damage);
+            StartCoroutine(EnemyImmunity());
+        }
     }
     public void Die()//kills the npc(sets gameobject.active to false) and calls onkill
     {

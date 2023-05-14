@@ -14,13 +14,13 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     [SerializeField] public static bool isGrounded = false;
     public override void SetDefaults()
     {
-        lifeMax = 20;
+        lifeMax = 100;
         life = lifeMax;
         healthBar.SetMaxHealth(lifeMax);
     }
     public override void AI()
     {
-        Physics2D.IgnoreLayerCollision(3, 6);
+        Physics2D.IgnoreLayerCollision(10, 3);
 
         //sets horizontal to -1 or 1 based on the player's input
         horizontal = Input.GetAxis("Horizontal");
@@ -44,21 +44,13 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
         if (horizontal > 0 || horizontal < 0)
-        { //left or right
             playerAnimator.SetBool("Moving", true);
-        }
         else
-        {
             playerAnimator.SetBool("Moving", false);
-        }
         if (horizontal > 0) //right
-        {
             gameObject.transform.localScale = new Vector3(1, 1, 1);
-        }
-        if (horizontal < 0) //left
-        {
+        else
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
-        }
     }
     private bool IsGrounded()
     {
