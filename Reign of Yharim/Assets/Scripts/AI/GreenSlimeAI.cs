@@ -3,7 +3,7 @@ using UnityEngine;
 public class GreenSlimeAI : NPC
 {
     public static string Name => "GreenSlime(Clone)";
-    public static int Damage => 15;
+    public static int Damage => 5;
     public override void SetDefaults()
     {
         lifeMax = 20;
