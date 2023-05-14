@@ -1,3 +1,4 @@
+using UnityEngine;
 public class DummyAI : NPC
 {
     public static string Name => "Dummy";
@@ -11,5 +12,9 @@ public class DummyAI : NPC
     public override void AI()
     {
         velocity = DirectionTo(target.transform.position) * 0.05f;
+        if (1 == GetTargetDirectionX())
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        else
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
     }
 }
