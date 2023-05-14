@@ -11,6 +11,8 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     private float speed = 8f;
     private float jumpingPower = 16f;
 
+    public Animator playerAnimator;
+
     [SerializeField] public static bool isGrounded = false;
     public override void SetDefaults()
     {

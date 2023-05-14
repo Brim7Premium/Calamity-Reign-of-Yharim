@@ -7,48 +7,40 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
 
     public int timeLeft;//how long the projectile will be alive for (timeLeft = 60 would be one second, timeLeft = 120 would be 2, 180 would be 3 and so on)
 
-    public AudioClip HitSound;
-
     public float[] ai = new float[4];
-
-    public Animator playerAnimator;
-
-    public AudioSource audioSource;
 
     public int damage;
 
     void Start()
     {
-        active = true;
-        //reset ai variables
-        for (int i = 0; i < ai.Length; i++)
-            ai[i] = 0.0f;
-        SetDefaults();
-        //assign components
-        playerAnimator = GameObject.Find("Player").GetComponent<Animator>();
-        //audioSource = GameObject.Find("Player").GetComponent<AudioSource>();
-        //audioSource.clip = HitSound;
+        active = true; //if active
+
+        //reset AI variables
+        for (int i = 0; i < ai.Length; i++) //will loop until it reaches ai.length (4)
+            ai[i] = 0.0f; //set every ai index to 0 until ai.length (4)
+
+        SetDefaults(); //call setdefaults
     }
-    void Update() => UpdateProj();
+    void Update() => UpdateProj(); //changes update to updateproj (gives UpdateProj the function of Update (to be called every frame))
 
-    public void UpdateVelocity() => transform.position += (Vector3)velocity;
+    public void UpdateVelocity() => transform.position += (Vector3)velocity; //calling UpdateVelocity updates the position of the attached gameobject based on vector2 velocity. Basically, the vector2 velocity stores the movements, and UpdateVelocity turns it into actual transform movement
 
-    public void UpdateProj()
+    public void UpdateProj() //triggers every frame
     {
-        if (!active)
-            return;
+        if (!active) //if not active
+            return; //prevents the subsequent code from running every frame until active again
 
-        target = GameObject.Find("Player");
+        target = GameObject.Find("Player"); //target gameobject variable is equal to the Player gameobject
 
-        Physics2D.IgnoreLayerCollision(3, 3);
+        Physics2D.IgnoreLayerCollision(3, 3); //NPCs (layer 3) don't collide with other NPCs (also layer 3)
 
-        UpdateVelocity();
-        AI();
+        UpdateVelocity(); //Call updatevelocity
+        AI(); //Call ai (AI method is overridden by subclasses)
 
-        timeLeft--;
+        timeLeft--; //Subtract timeLeft variable by 1
 
-        if (timeLeft <= 0)
-            Destroy(gameObject);
+        if (timeLeft <= 0) //if timeleft is less than or equal to 0
+            Destroy(gameObject); //destroy this object
     }
     public static Projectile GetProjectile(GameObject gameObject)
     {
@@ -84,17 +76,17 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
 
     public void MoveTowards(float speedX, float speedY)//moves the projectile towards the player at a set speed.
     {
-        if (transform.position.x < target.transform.position.x)
-            velocity.x = speedX;
+        if (transform.position.x < target.transform.position.x) //if the attached transform's x position is less than the target's x position
+            velocity.x = speedX; //x of velocity equals float speedX parameter
         else
-            velocity.x = -speedX;
-        if (transform.position.y < target.transform.position.y)
-            velocity.y = speedY;
+            velocity.x = -speedX; //x of velocity equals negative speedX
+        if (transform.position.y < target.transform.position.y) //if the attached transform's y position is less than the target's y position
+            velocity.y = speedY; //y of velocity equals float speedY parameter
         else
-            velocity.y = -speedY;
+            velocity.y = -speedY; //y of velocity equals negative speedY
     }
 
-    public int GetTargetDirectionX() => transform.position.x < target.transform.position.x ? 1 : -1;
+    public int GetTargetDirectionX() => transform.position.x < target.transform.position.x ? 1 : -1; //if transform.position.x is less than, then GetTargetDirectionX returns 1, if else -1
 
     public virtual void SetDefaults()//called on start
     {
