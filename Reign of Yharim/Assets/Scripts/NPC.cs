@@ -18,13 +18,9 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public Rigidbody2D rb;
 
-    public AudioClip HitSound;
-
     public float[] ai = new float[4];
 
     public bool immune;
-
-    public Animator playerAnimator;
 
     public GameObject[] projectiles;
 
@@ -32,12 +28,11 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     {
         active = true; //if active
 
+        //reset AI variables
         for (int i = 0; i < ai.Length; i++) //will loop until it reaches ai.length (4)
             ai[i] = 0.0f; //set every ai index to 0 until ai.length (4)
 
         SetDefaults(); //call setdefaults
-
-        playerAnimator = GameObject.Find("Player").GetComponent<Animator>(); //sets playerAnimator to the animator component attached to the player gameobject
     }
 
     void Update() => UpdateNPC(); //changes update to updatenpc (gives UpdateNPC the function of Update (to be called every frame))
