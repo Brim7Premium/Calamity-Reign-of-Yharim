@@ -40,7 +40,7 @@ public class ExampleAI : NPC
             {
                 Projectile proj = Projectile.NewProjectile(projectiles[0], transform, Quaternion.identity, 20, 240);
 
-                proj.velocity = DirectionTo(target.transform.position) * 0.1f;
+                proj.velocity = DirectionTo(target.transform.position) * 0.3f;
 
                 ai[0] = 0.0f;
                 ai[1] = 0.0f;

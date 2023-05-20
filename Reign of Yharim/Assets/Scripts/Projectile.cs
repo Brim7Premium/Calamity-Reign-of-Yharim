@@ -42,9 +42,9 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
         if (timeLeft <= 0) //if timeleft is less than or equal to 0
             Destroy(gameObject); //destroy this object
     }
-    public static Projectile GetProjectile(GameObject gameObject)
+    public static Projectile GetProjectile(GameObject gameObject) //Getprojectile must return an instance of the projectile class
     {
-        return gameObject.GetComponent<Projectile>();
+        return gameObject.GetComponent<Projectile>(); //returns the instance of the script attached to the gameobject defined in the method
     }
 
     /*projectile info:
@@ -55,23 +55,23 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
      * if the prefab's projectile ai script modifies position, rotation, damage, timeleft, or ai[] in the SetDefaults() method it will override the values set in projectile.newprojectile
      */
 
-    public static Projectile NewProjectile(GameObject projectile, Transform transform, Quaternion quaternion, int damage, int timeleft = 0, float ai0 = 0.0f, float ai1 = 0.0f, float ai2 = 0.0f, float ai3 = 0.0f)
+    public static Projectile NewProjectile(GameObject projectile, Transform transform, Quaternion quaternion, int damage, int timeleft = 0, float ai0 = 0.0f, float ai1 = 0.0f, float ai2 = 0.0f, float ai3 = 0.0f) //newprojectile must return an instance of the projectile class
     {
-        GameObject projGameObject = Instantiate(projectile, transform.position, quaternion);
-        Projectile proj = GetProjectile(projGameObject);
+        GameObject projGameObject = Instantiate(projectile, transform.position, quaternion); //gameobject varaible called projGameObject equals an instance of the projectile parameter, at the transform parameter, rotating at the quaternion parameter
+        Projectile proj = GetProjectile(projGameObject); //projectile variable equals projectile class attached to projGameObject (Getprojectile code)
 
-        if (timeleft != 0)
+        if (timeleft != 0) //if timeleft parameter doesn't equal 0
         {
-            proj.timeLeft = timeleft;
+            proj.timeLeft = timeleft; //Varaible timeleft of the projectile class attached to projGameObject is equal to the timeleft parameter
         }
 
-        proj.damage = damage;
-        proj.ai[0] = ai0;
-        proj.ai[1] = ai1;
-        proj.ai[2] = ai2;
-        proj.ai[3] = ai3;
+        proj.damage = damage; //Varaible damage of the projectile class attached to projGameObject is equal to the damage parameter
+        proj.ai[0] = ai0; //the 0th value of the array ai of the projectile class attached to projGameObject is equal to the ai0 parameter
+        proj.ai[1] = ai1; //the 1st value of the array ai of the projectile class attached to projGameObject is equal to the ai1 parameter
+        proj.ai[2] = ai2; //the 2nd value of the array ai of the projectile class attached to projGameObject is equal to the ai2 parameter
+        proj.ai[3] = ai3; //the 3rd value of the array ai of the projectile class attached to projGameObject is equal to the ai3 parameter
 
-        return proj;
+        return proj; //return projectile class attached to projGameObject
     }
 
     public void MoveTowards(float speedX, float speedY)//moves the projectile towards the player at a set speed.
