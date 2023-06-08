@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1491682307185932738
+--- !u!114 &-2738940301035076207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Astral
+  m_Name: event:/VesseloftheUndergrowth
   m_EditorClassIdentifier: 
-  Path: event:/Astral
+  Path: event:/VesseloftheUndergrowth
   Guid:
-    Data1: 2052644389
-    Data2: 1124483548
-    Data3: -135690818
-    Data4: -1767529622
+    Data1: -2064899138
+    Data2: 1212098457
+    Data3: -974920792
+    Data4: -852639535
   Banks:
-  - {fileID: 4515058448071513695}
+  - {fileID: 302262337395820569}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 316395
+  Length: 142564
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,15 +42,36 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 9009797941508730710}
   - {fileID: 4515058448071513695}
+  - {fileID: 302262337395820569}
   EditorEvents:
-  - {fileID: -1491682307185932738}
+  - {fileID: -2738940301035076207}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4515058448071513695}
   StringsBanks:
   - {fileID: 9009797941508730710}
-  cacheTime: 638184655285549235
+  cacheTime: 638217191945513038
   cacheVersion: 131601
+--- !u!114 &302262337395820569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638217191945513038
+  FileSizes:
+  - Name: Desktop
+    Value: 1995008
+  Exists: 1
 --- !u!114 &4515058448071513695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,10 +87,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638184655285539258
+  lastModified: 638217191920982612
   FileSizes:
   - Name: Desktop
-    Value: 4527264
+    Value: 1036
   Exists: 1
 --- !u!114 &9009797941508730710
 MonoBehaviour:
@@ -86,8 +107,8 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638184655285549235
+  lastModified: 638217191921015974
   FileSizes:
   - Name: Desktop
-    Value: 756
+    Value: 818
   Exists: 1
