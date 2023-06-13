@@ -4,15 +4,13 @@ using UnityEngine;
 
 public abstract class NPC : Entity //Must be inherited, cannot be instanced 
 {
-    public GameObject target;
-
-    public int life;
-
-    public bool worm;
+    public string NPCName;
 
     public int lifeMax;
 
-    public float IFrames = 1f;
+    public int life;
+
+    public int damage;
 
     public HealthBar healthBar;
 
@@ -20,9 +18,18 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public float[] ai = new float[4];
 
-    public bool immune;
+    public float IFrames = 1f;
 
     public GameObject[] projectiles;
+
+    public GameObject target;
+
+    public bool immune;
+
+    public bool worm;
+
+    public bool respawnable;
+
 
     void Start()
     {
@@ -41,18 +48,24 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public void UpdateNPC() //triggers every frame
     {
-        if (!active) //if not active
+        if (active) //if active
+        {
+            target = GameObject.Find("Player"); //target gameobject variable is equal to the Player gameobject
+
+            Physics2D.IgnoreLayerCollision(3, 3); //NPCs (layer 3) don't collide with other NPCs (also layer 3)
+
+            UpdateVelocity(); //Call updatevelocity
+
+            AI(); //Call ai (AI method is overridden by subclasses)
+
+            if (life <= 0) //If life in is less than or equal to 0
+                Die(); //trigger Die method
+        }
+        else
+        {
+            UpdateVelocity(); //Call updatevelocity
             return; //prevents the subsequent code from running every frame until active again
-
-        target = GameObject.Find("Player"); //target gameobject variable is equal to the Player gameobject
-
-        Physics2D.IgnoreLayerCollision(3, 3); //NPCs (layer 3) don't collide with other NPCs (also layer 3)
-
-        UpdateVelocity(); //Call updatevelocity
-        AI(); //Call ai (AI method is overridden by subclasses)
-
-        if (life <= 0) //If life in is less than or equal to 0
-            Die(); //trigger Die method
+        }
     }
 
     public void MoveTowards(float speedX, float speedY)//moves the npc towards the player at a set speed.
@@ -81,7 +94,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         {
             OnHit();
             RemoveHealth(damage);
-            StartCoroutine(EnemyImmunity());
+            StartCoroutine(Immunity());
         }
     }
 
@@ -92,6 +105,10 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
             gameObject.transform.parent.gameObject.SetActive(false);//kill (Set inactive) the parent gameobject of the worm segment
             OnKill(); //Trigger OnKill
             active = false; //Kill segment
+        }
+        else if (respawnable)
+        {
+            StartCoroutine(RespawnTimer());
         }
         else
         {
@@ -132,10 +149,17 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         }
     }
     */
-    public IEnumerator EnemyImmunity()
+    public IEnumerator Immunity()
     {
         immune = true; //set immune to true
         yield return new WaitForSeconds(IFrames); //wait for IFrames seconds
         immune = false; //set Immune to false
+    }
+    public IEnumerator RespawnTimer()
+    {
+        active = false;
+        yield return new WaitForSeconds(5); //wait for 5 seconds
+        active = true;
+        SetDefaults();
     }
 }

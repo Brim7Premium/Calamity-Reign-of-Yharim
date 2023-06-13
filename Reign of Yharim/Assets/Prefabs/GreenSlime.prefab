@@ -239,7 +239,7 @@ MonoBehaviour:
   - 0
   - 0
   immune: 0
-  playerAnimator: {fileID: 0}
+  projectiles: []
 --- !u!1 &4075834575982233485
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +327,6 @@ GameObject:
   - component: {fileID: 4075834575991077573}
   - component: {fileID: 4075834575991077574}
   - component: {fileID: 4075834575991077575}
-  - component: {fileID: 4075834575991077569}
   m_Layer: 3
   m_Name: Body
   m_TagString: Hitbox
@@ -447,19 +446,6 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &4075834575991077569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4075834575991077626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &4075834576480744361
 GameObject:
   m_ObjectHideFlags: 0

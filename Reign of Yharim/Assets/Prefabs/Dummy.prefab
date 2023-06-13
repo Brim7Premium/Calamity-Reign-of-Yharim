@@ -484,7 +484,7 @@ MonoBehaviour:
   - 0
   - 0
   immune: 0
-  playerAnimator: {fileID: 0}
+  projectiles: []
 --- !u!1 &4863109946771642829
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +496,6 @@ GameObject:
   - component: {fileID: 3660269138550116926}
   - component: {fileID: 5992216680795269771}
   - component: {fileID: 6829101272883393960}
-  - component: {fileID: 8416013904495327920}
   m_Layer: 3
   m_Name: RightArm
   m_TagString: Hitbox
@@ -616,19 +615,6 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &8416013904495327920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4863109946771642829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5292520657429840353
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +626,6 @@ GameObject:
   - component: {fileID: 1804822827658597896}
   - component: {fileID: 8812837364206477442}
   - component: {fileID: 1513899626293808142}
-  - component: {fileID: 2790425889202556784}
   m_Layer: 3
   m_Name: Body
   m_TagString: Hitbox
@@ -760,19 +745,6 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &2790425889202556784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5292520657429840353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5524956346370405132
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +756,6 @@ GameObject:
   - component: {fileID: 6297891482229333917}
   - component: {fileID: 5804135765138722164}
   - component: {fileID: 7956065994440930745}
-  - component: {fileID: 1019402908197693909}
   m_Layer: 3
   m_Name: Head
   m_TagString: Hitbox
@@ -904,19 +875,6 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &1019402908197693909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5524956346370405132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6869103412648723673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,7 +990,6 @@ GameObject:
   - component: {fileID: 7170611994690667763}
   - component: {fileID: 6155036829231552929}
   - component: {fileID: 6034351637395346063}
-  - component: {fileID: 8997481545988082490}
   m_Layer: 3
   m_Name: LeftArm
   m_TagString: Hitbox
@@ -1152,19 +1109,6 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &8997481545988082490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7446131232423672372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7874208795678680491
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,7 +1120,6 @@ GameObject:
   - component: {fileID: 5463621250353679042}
   - component: {fileID: 4431478815401520889}
   - component: {fileID: 3735062811808893492}
-  - component: {fileID: 5475287248284325009}
   m_Layer: 3
   m_Name: LeftLeg
   m_TagString: Hitbox
@@ -1296,19 +1239,6 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &5475287248284325009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7874208795678680491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7928242896348679409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,7 +1250,6 @@ GameObject:
   - component: {fileID: 1441027794091466081}
   - component: {fileID: 729847323462099703}
   - component: {fileID: 8670354639304630693}
-  - component: {fileID: 3753195420831547437}
   m_Layer: 3
   m_Name: RightLeg
   m_TagString: Hitbox
@@ -1440,16 +1369,3 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &3753195420831547437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7928242896348679409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}

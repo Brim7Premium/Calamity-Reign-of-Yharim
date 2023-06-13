@@ -45,6 +45,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         lifeMax = 100;
         life = lifeMax;
         healthBar.SetMaxHealth(lifeMax);
+        respawnable = true;
 
         rb = GetComponent<Rigidbody2D>(); //PlayerAI.rb equals the rigidbody2d of the player
         playerAnimator = GetComponent<Animator>(); //playerAnimator variable equals the animator component of the player
