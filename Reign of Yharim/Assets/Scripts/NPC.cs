@@ -28,8 +28,6 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public bool worm;
 
-    public bool respawnable;
-
 
     void Start()
     {
@@ -48,24 +46,19 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public void UpdateNPC() //triggers every frame
     {
-        if (active) //if active
-        {
-            target = GameObject.Find("Player"); //target gameobject variable is equal to the Player gameobject
+        if (!active)
+            return;
 
-            Physics2D.IgnoreLayerCollision(3, 3); //NPCs (layer 3) don't collide with other NPCs (also layer 3)
+        target = GameObject.Find("Player"); //target gameobject variable is equal to the Player gameobject
 
-            UpdateVelocity(); //Call updatevelocity
+        Physics2D.IgnoreLayerCollision(3, 3); //NPCs (layer 3) don't collide with other NPCs (also layer 3)
 
-            AI(); //Call ai (AI method is overridden by subclasses)
+        UpdateVelocity(); //Call updatevelocity
 
-            if (life <= 0) //If life in is less than or equal to 0
-                Die(); //trigger Die method
-        }
-        else
-        {
-            UpdateVelocity(); //Call updatevelocity
-            return; //prevents the subsequent code from running every frame until active again
-        }
+        AI(); //Call ai (AI method is overridden by subclasses)
+
+        if (life <= 0) //If life in is less than or equal to 0
+            Die(); //trigger Die method
     }
 
     public void MoveTowards(float speedX, float speedY)//moves the npc towards the player at a set speed.
@@ -105,10 +98,6 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
             gameObject.transform.parent.gameObject.SetActive(false);//kill (Set inactive) the parent gameobject of the worm segment
             OnKill(); //Trigger OnKill
             active = false; //Kill segment
-        }
-        else if (respawnable)
-        {
-            StartCoroutine(RespawnTimer());
         }
         else
         {
@@ -154,12 +143,5 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         immune = true; //set immune to true
         yield return new WaitForSeconds(IFrames); //wait for IFrames seconds
         immune = false; //set Immune to false
-    }
-    public IEnumerator RespawnTimer()
-    {
-        active = false;
-        yield return new WaitForSeconds(5); //wait for 5 seconds
-        active = true;
-        SetDefaults();
     }
 }

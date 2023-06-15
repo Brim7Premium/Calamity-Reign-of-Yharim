@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlayerAI : NPC //basically, this script is a copy of the npc script and all of it's values. the main differences are that each value can be overriden from the base script for the new one, and this one can be attached to gameobjects.
 {
-    public static string Name => "Player";
-    public static int Damage => 5;
-
     private float xAxis;
 
     private float moveSpeed = 8f;
@@ -42,10 +39,11 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
     public override void SetDefaults()
     {
+        NPCName = "Player";
+        damage = 0; //Note to future developers/self, this can be used for times when the player does deal contact damage to enemies. armor sets are an example. right now, it's useless.
         lifeMax = 100;
         life = lifeMax;
         healthBar.SetMaxHealth(lifeMax);
-        respawnable = true;
 
         rb = GetComponent<Rigidbody2D>(); //PlayerAI.rb equals the rigidbody2d of the player
         playerAnimator = GetComponent<Animator>(); //playerAnimator variable equals the animator component of the player

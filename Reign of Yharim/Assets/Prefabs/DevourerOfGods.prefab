@@ -100,11 +100,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -112,8 +111,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258103403019}
@@ -240,11 +242,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -252,8 +253,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257812256040}
@@ -380,11 +384,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -392,8 +395,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 14
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257823115159}
@@ -520,11 +526,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -532,8 +537,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257884829221}
@@ -660,11 +668,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -672,8 +679,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258109411542}
@@ -711,10 +721,9 @@ GameObject:
   - component: {fileID: 3257676256161075833}
   - component: {fileID: 3257676256161075832}
   - component: {fileID: 3257676256161075838}
-  - component: {fileID: 3257676256161075839}
   m_Layer: 3
   m_Name: Mouth2
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -831,19 +840,6 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &3257676256161075839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676256161075834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3257676256166956863
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,11 +940,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -956,8 +951,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256443752165}
@@ -1084,11 +1082,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -1096,8 +1093,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 17
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257609864995}
@@ -1224,11 +1224,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -1236,8 +1235,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257825732104}
@@ -1364,11 +1366,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -1376,8 +1377,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 1
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256498812736}
@@ -1504,11 +1508,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -1516,8 +1519,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256770113956}
@@ -1644,11 +1650,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -1656,8 +1661,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 4
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256904768737}
@@ -1784,11 +1792,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -1796,8 +1803,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676258130235126}
@@ -1924,11 +1934,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -1936,8 +1945,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256071539058}
@@ -2064,11 +2076,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -2076,8 +2087,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256138185358}
@@ -2204,11 +2218,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -2216,8 +2229,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256755182019}
@@ -2344,11 +2360,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -2356,8 +2371,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256558915576}
@@ -2484,11 +2502,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -2496,8 +2513,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 0
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258054261435}
@@ -2624,11 +2644,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -2636,8 +2655,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 10
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257231987487}
@@ -2764,11 +2786,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -2776,8 +2797,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256660044425}
@@ -2939,11 +2963,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -2951,8 +2974,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 24
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256727461612}
@@ -3079,11 +3105,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -3091,8 +3116,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256962574816}
@@ -3219,11 +3247,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -3231,8 +3258,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 0
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676255999167367}
@@ -3359,11 +3389,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -3371,8 +3400,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257708214738}
@@ -3499,11 +3531,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -3511,8 +3542,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256859278051}
@@ -3639,11 +3673,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -3651,8 +3684,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257939242028}
@@ -3880,11 +3916,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -3892,8 +3927,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256060874947}
@@ -4133,11 +4171,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -4145,8 +4182,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 5
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256275031167}
@@ -4184,10 +4224,9 @@ GameObject:
   - component: {fileID: 3257676256726252351}
   - component: {fileID: 3257676256726252350}
   - component: {fileID: 3257676256726252348}
-  - component: {fileID: 3257676256726252349}
   m_Layer: 3
   m_Name: Mouth3
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4304,19 +4343,6 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &3257676256726252349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676256726252344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3257676256727461612
 GameObject:
   m_ObjectHideFlags: 0
@@ -4417,11 +4443,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -4429,8 +4454,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 23
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258038285537}
@@ -4557,11 +4585,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -4569,8 +4596,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257842444161}
@@ -4697,11 +4727,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -4709,8 +4738,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 8
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257554184711}
@@ -4837,11 +4869,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -4849,8 +4880,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257731097611}
@@ -4977,11 +5011,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -4989,8 +5022,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256401390731}
@@ -5117,11 +5153,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -5129,8 +5164,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256550644531}
@@ -5257,11 +5295,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -5269,8 +5306,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257218392789}
@@ -5397,11 +5437,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -5409,8 +5448,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 15
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256067046454}
@@ -5537,11 +5579,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -5549,8 +5590,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256943082922}
@@ -5677,11 +5721,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -5689,8 +5732,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 2
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257678167646}
@@ -5817,11 +5863,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -5829,8 +5874,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 2
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256252385486}
@@ -5957,11 +6005,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -5969,8 +6016,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256166956863}
@@ -6097,11 +6147,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -6109,8 +6158,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 6
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256717322635}
@@ -6313,11 +6365,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -6325,8 +6376,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 18
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256212051664}
@@ -6364,10 +6418,9 @@ GameObject:
   - component: {fileID: 3257676257116289820}
   - component: {fileID: 3257676257116289811}
   - component: {fileID: 3257676257116289809}
-  - component: {fileID: 3257676257116289810}
   m_Layer: 3
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6484,19 +6537,6 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &3257676257116289810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676257116289821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3257676257164552862
 GameObject:
   m_ObjectHideFlags: 0
@@ -6597,11 +6637,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -6609,8 +6648,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 11
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256411222896}
@@ -6737,11 +6779,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -6749,8 +6790,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256327549520}
@@ -6877,11 +6921,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -6889,8 +6932,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257174396341}
@@ -7017,11 +7063,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -7029,8 +7074,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257824392389}
@@ -7157,11 +7205,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -7169,8 +7216,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676258092565625}
@@ -7297,11 +7347,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -7309,8 +7358,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 9
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256763707555}
@@ -7437,11 +7489,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -7449,8 +7500,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256227204627}
@@ -7577,11 +7631,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -7589,8 +7642,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257902036215}
@@ -7704,10 +7760,9 @@ GameObject:
   - component: {fileID: 3257676257366606645}
   - component: {fileID: 3257676257366606644}
   - component: {fileID: 3257676257366606602}
-  - component: {fileID: 3257676257366606603}
   m_Layer: 3
   m_Name: Mouth1
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7824,19 +7879,6 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &3257676257366606603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676257366606646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3257676257368300202
 GameObject:
   m_ObjectHideFlags: 0
@@ -7937,11 +7979,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -7949,8 +7990,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256523272843}
@@ -8077,11 +8121,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -8089,8 +8132,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 21
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257663587396}
@@ -8239,11 +8285,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -8251,8 +8296,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 0
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257859343702}
@@ -8462,11 +8510,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -8474,8 +8521,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 7
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257061818871}
@@ -8647,11 +8697,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -8659,8 +8708,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 25
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256462171228}
@@ -8787,11 +8839,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -8799,8 +8850,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256304985882}
@@ -8927,11 +8981,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -8939,8 +8992,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 16
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256879111134}
@@ -9067,11 +9123,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -9079,8 +9134,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256843412256}
@@ -9207,11 +9265,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -9219,8 +9276,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256786805050}
@@ -9379,11 +9439,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -9391,8 +9450,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 12
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257164552862}
@@ -9519,11 +9581,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -9531,8 +9592,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 20
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257759158874}
@@ -9659,11 +9723,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -9671,8 +9734,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 1
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256404944685}
@@ -9799,11 +9865,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -9811,8 +9876,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257820479880}
@@ -9939,11 +10007,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -9951,8 +10018,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257621753355}
@@ -10079,11 +10149,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -10091,8 +10160,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 19
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257111619901}
@@ -10219,11 +10291,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -10231,8 +10302,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256253768108}
@@ -10359,11 +10433,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -10371,8 +10444,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257614208943}
@@ -10499,11 +10575,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -10511,8 +10586,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 13
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257638372983}
@@ -10639,11 +10717,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -10651,8 +10728,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257013393930}
@@ -10779,11 +10859,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -10791,8 +10870,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256482870138}
@@ -10919,11 +11001,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -10931,8 +11012,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257191837155}
@@ -11059,11 +11143,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -11071,8 +11154,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257368300202}
@@ -11199,11 +11285,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -11211,8 +11296,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257259632095}
@@ -11339,11 +11427,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -11351,8 +11438,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256383082104}
@@ -11479,11 +11569,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -11491,8 +11580,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257218789333}
@@ -11619,11 +11711,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -11631,8 +11722,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258055025389}
@@ -11759,11 +11853,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -11771,8 +11864,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 22
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257483039248}
@@ -11810,10 +11906,9 @@ GameObject:
   - component: {fileID: 3257676258048737413}
   - component: {fileID: 3257676258048737434}
   - component: {fileID: 3257676258048737435}
-  - component: {fileID: 3257676258048737412}
   m_Layer: 3
   m_Name: Tail
-  m_TagString: Untagged
+  m_TagString: ProjectileHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11930,19 +12025,6 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
---- !u!114 &3257676258048737412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676258048737414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc5666ea71c4eb4b91b56861da35f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3257676258054261435
 GameObject:
   m_ObjectHideFlags: 0
@@ -12045,11 +12127,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 3257676257524992124}
   rb: {fileID: 0}
   ai:
@@ -12057,8 +12138,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   MoveSpeed: 0.55
   RotationSpeed: 0.05
 --- !u!50 &3257676258054261433
@@ -12182,11 +12266,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -12194,8 +12277,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 26
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257592946975}
@@ -12322,11 +12408,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -12334,8 +12419,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256301442512}
@@ -12462,11 +12550,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -12474,8 +12561,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257266209750}
@@ -12602,11 +12692,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -12614,8 +12703,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258021730552}
@@ -12742,11 +12834,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   ai:
@@ -12754,8 +12845,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
   immune: 0
-  playerAnimator: {fileID: 0}
+  worm: 0
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257605612162}

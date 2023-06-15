@@ -3,6 +3,8 @@ using UnityEngine;
 
 public abstract class Projectile : Entity //Must be inherited, cannot be instanced 
 {
+    public string projName;
+
     public GameObject target;
 
     public int timeLeft;//how long the projectile will be alive for (timeLeft = 60 would be one second, timeLeft = 120 would be 2, 180 would be 3 and so on)

@@ -5,14 +5,16 @@ using UnityEngine;
 public class GameTime : MonoBehaviour
 {
     private int count = 0;
+
     public static int internalTime;
     public static int internalHours;
     public static int amOrPm;
     public static string displayTime;
     public string displayAmOrPm;
+    public float rotationAngle = -45;
+
     [SerializeField] private Transform orbitPoint;
     [SerializeField] private Vector3 rotation;
-    [SerializeField] private float rotationSpeed;
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class GameTime : MonoBehaviour
         if (count > 60) //if count is greater than 60
         {
             internalTime++; //increase time (minutes) by 1
+            rotationAngle += -0.1f;
             if (internalTime == 60) //if time is 60 (60 minutes)
             {
                 internalTime = 0; //reset time to 0
@@ -62,7 +65,16 @@ public class GameTime : MonoBehaviour
             displayTime = internalHours + ":" + internalTime + " " + displayAmOrPm; //display time without 0
         }
 
-        orbitPoint.transform.Rotate(rotation * rotationSpeed * Time.deltaTime);
+        orbitPoint.transform.rotation = Quaternion.Euler(0f, 0f, rotationAngle);
+
+        if (internalHours == 4 && internalTime == 30 && amOrPm == 1) //if the time is 4:30 AM (1)
+        {
+            rotationAngle = -45;
+        }
+        if (internalHours == 7 && internalTime == 30 && amOrPm == 2) //if the time is 7:30 PM (2)
+        {
+            rotationAngle = -135;
+        }
         count++; //increase count by 1 every frame
     }
 }

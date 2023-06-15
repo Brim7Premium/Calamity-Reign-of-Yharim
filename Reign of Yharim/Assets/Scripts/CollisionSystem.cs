@@ -6,7 +6,7 @@ using FMODUnity;
 public class CollisionSystem : MonoBehaviour
 {
     private Color color;
-    private string npcName;
+    private string entityName;
 
     [SerializeField] private PlayerAI playerAI;
     [SerializeField] private EventReference hitSound;
@@ -17,16 +17,31 @@ public class CollisionSystem : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("NPCs") && collision.gameObject.tag == "Hitbox")
+        if (collision.gameObject.layer == LayerMask.NameToLayer("NPCs"))
         {
-            if (playerAI.immune == false)
+            if (collision.gameObject.tag == "Hitbox")
             {
-                npcName = collision.gameObject.transform.parent.parent.name;
-                Debug.Log(npcName + "is hitting " + gameObject.name);
-                color = new Color(1f, 0f, 0f, 0.1764706f);
-                gameObject.GetComponent<SpriteRenderer>().color = color;
-                gameObject.transform.parent.parent.SendMessage("TakeDamage", collision.gameObject.transform.parent.parent.GetComponentInChildren<NPC>().damage);
-                AudioManager.instance.PlayOneShot(hitSound, transform.position);
+                if (playerAI.immune == false)
+                {
+                    entityName = collision.gameObject.transform.parent.parent.name;
+                    Debug.Log(gameObject.name + "is hitting " + entityName);
+                    color = new Color(1f, 0f, 0f, 0.1764706f);
+                    gameObject.GetComponent<SpriteRenderer>().color = color;
+                    gameObject.transform.parent.parent.SendMessage("TakeDamage", collision.gameObject.transform.parent.parent.GetComponentInChildren<NPC>().damage);
+                    AudioManager.instance.PlayOneShot(hitSound, transform.position);
+                }
+            }
+            if (collision.gameObject.tag == "ProjectileHitbox")
+            {
+                if (playerAI.immune == false)
+                {
+                    entityName = collision.gameObject.transform.parent.parent.name;
+                    Debug.Log(gameObject.name + "is hitting " + entityName);
+                    color = new Color(1f, 0f, 0f, 0.1764706f);
+                    gameObject.GetComponent<SpriteRenderer>().color = color;
+                    //gameObject.transform.parent.parent.SendMessage("TakeDamage", Projectile.GetProjectile(collision.gameObject).damage);
+                    AudioManager.instance.PlayOneShot(hitSound, transform.position);
+                }
             }
         }
     }

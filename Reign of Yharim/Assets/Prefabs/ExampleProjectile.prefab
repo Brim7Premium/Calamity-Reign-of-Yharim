@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
+  projName: 
   target: {fileID: 0}
   timeLeft: 0
   ai:
@@ -202,7 +203,7 @@ GameObject:
   - component: {fileID: 503925671487841604}
   m_Layer: 3
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: ProjectileHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

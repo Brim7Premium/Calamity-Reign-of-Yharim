@@ -110,7 +110,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -471,11 +471,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   velocity: {x: 0, y: 0}
-  target: {fileID: 0}
-  life: 0
-  worm: 0
+  NPCName: 
   lifeMax: 0
-  IFrames: 1
+  life: 0
+  damage: 0
   healthBar: {fileID: 155303620729118244}
   rb: {fileID: 2913765112091113209}
   ai:
@@ -483,8 +482,11 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  immune: 0
+  IFrames: 1
   projectiles: []
+  target: {fileID: 0}
+  immune: 0
+  worm: 0
 --- !u!1 &4863109946771642829
 GameObject:
   m_ObjectHideFlags: 0
