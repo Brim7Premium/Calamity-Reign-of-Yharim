@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class DoGBodyAI : NPC
 {
-    public static string Name => "TheDevourerofGodsBody";
-    public static int Damage => 442;
     public int SegmentIndex;
     public GameObject Head;
     public GameObject AheadSegment;
@@ -11,6 +9,8 @@ public class DoGBodyAI : NPC
     public float VelocitySmoothing;
     public override void SetDefaults()
     {
+        NPCName = "DevourerofGodsBody";
+        damage = 442;
         lifeMax = 1706400;
         life = lifeMax;
         worm = true;
@@ -29,3 +29,4 @@ public class DoGBodyAI : NPC
         }
     }
 }
+
