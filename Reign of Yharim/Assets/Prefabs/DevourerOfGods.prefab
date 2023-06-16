@@ -2514,7 +2514,8 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -5733,7 +5734,8 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -9735,7 +9737,8 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -11908,7 +11911,7 @@ GameObject:
   - component: {fileID: 3257676258048737435}
   m_Layer: 3
   m_Name: Tail
-  m_TagString: ProjectileHitbox
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12139,7 +12142,8 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0

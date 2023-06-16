@@ -81,6 +81,11 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         }
     }
 
+    public override void OnKill()
+    {
+         GameObject.Find("WorldManager").SendMessage("Respawn");
+    }
+
     private void FixedUpdate() //for physics
     {
         float extraHeight = 0.1f; //new float extraHeight equals 0.1
