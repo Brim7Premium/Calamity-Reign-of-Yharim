@@ -112,7 +112,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -121,6 +123,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676258103403019}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676255999167366
 Rigidbody2D:
   serializedVersion: 4
@@ -254,7 +257,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -263,6 +268,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257812256040}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256060874946
 Rigidbody2D:
   serializedVersion: 4
@@ -396,7 +402,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -405,6 +413,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257823115159}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256067046453
 Rigidbody2D:
   serializedVersion: 4
@@ -538,7 +547,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -547,6 +558,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257884829221}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256071539057
 Rigidbody2D:
   serializedVersion: 4
@@ -680,7 +692,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -689,6 +703,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676258109411542}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256138185357
 Rigidbody2D:
   serializedVersion: 4
@@ -952,7 +967,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -961,6 +978,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256443752165}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256166956862
 Rigidbody2D:
   serializedVersion: 4
@@ -1094,7 +1112,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -1103,6 +1123,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257609864995}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256212051671
 Rigidbody2D:
   serializedVersion: 4
@@ -1236,7 +1257,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -1245,6 +1268,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257825732104}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256227204626
 Rigidbody2D:
   serializedVersion: 4
@@ -1378,7 +1402,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -1387,6 +1413,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256498812736}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256252385485
 Rigidbody2D:
   serializedVersion: 4
@@ -1520,7 +1547,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -1529,6 +1558,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256770113956}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256253768099
 Rigidbody2D:
   serializedVersion: 4
@@ -1662,7 +1692,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -1671,6 +1703,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256904768737}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256275031166
 Rigidbody2D:
   serializedVersion: 4
@@ -1804,7 +1837,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -1813,6 +1848,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676258130235126}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256301442519
 Rigidbody2D:
   serializedVersion: 4
@@ -1946,7 +1982,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -1955,6 +1993,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256071539058}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256304985881
 Rigidbody2D:
   serializedVersion: 4
@@ -2088,7 +2127,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -2097,6 +2138,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256138185358}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256327549527
 Rigidbody2D:
   serializedVersion: 4
@@ -2230,7 +2272,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -2239,6 +2283,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256755182019}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256383082111
 Rigidbody2D:
   serializedVersion: 4
@@ -2372,7 +2417,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -2381,6 +2428,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256558915576}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256401390730
 Rigidbody2D:
   serializedVersion: 4
@@ -2516,6 +2564,7 @@ MonoBehaviour:
   IFrames: 1
   projectiles:
   - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -2524,6 +2573,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676258054261435}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256404944684
 Rigidbody2D:
   serializedVersion: 4
@@ -2657,7 +2707,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -2666,6 +2718,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257231987487}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256411222903
 Rigidbody2D:
   serializedVersion: 4
@@ -2799,7 +2852,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -2808,6 +2863,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256660044425}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256443752164
 Rigidbody2D:
   serializedVersion: 4
@@ -2976,7 +3032,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -2985,6 +3043,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256727461612}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256462171219
 Rigidbody2D:
   serializedVersion: 4
@@ -3118,7 +3177,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -3127,6 +3188,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256962574816}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256482870137
 Rigidbody2D:
   serializedVersion: 4
@@ -3260,7 +3322,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -3269,6 +3333,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676255999167367}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256498812743
 Rigidbody2D:
   serializedVersion: 4
@@ -3402,7 +3467,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -3411,6 +3478,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257708214738}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256523272842
 Rigidbody2D:
   serializedVersion: 4
@@ -3544,7 +3612,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -3553,6 +3623,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256859278051}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256550644530
 Rigidbody2D:
   serializedVersion: 4
@@ -3686,7 +3757,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -3695,6 +3768,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257939242028}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256558915583
 Rigidbody2D:
   serializedVersion: 4
@@ -3929,7 +4003,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -3938,6 +4014,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256060874947}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256660044424
 Rigidbody2D:
   serializedVersion: 4
@@ -4184,7 +4261,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -4193,6 +4272,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256275031167}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256717322634
 Rigidbody2D:
   serializedVersion: 4
@@ -4456,7 +4536,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -4465,6 +4547,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676258038285537}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256727461603
 Rigidbody2D:
   serializedVersion: 4
@@ -4598,7 +4681,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -4607,6 +4692,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257842444161}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256755182018
 Rigidbody2D:
   serializedVersion: 4
@@ -4740,7 +4826,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -4749,6 +4837,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257554184711}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256763707554
 Rigidbody2D:
   serializedVersion: 4
@@ -4882,7 +4971,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -4891,6 +4982,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257731097611}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256770113979
 Rigidbody2D:
   serializedVersion: 4
@@ -5024,7 +5116,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -5033,6 +5127,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256401390731}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256786805049
 Rigidbody2D:
   serializedVersion: 4
@@ -5166,7 +5261,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -5175,6 +5272,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256550644531}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256843412263
 Rigidbody2D:
   serializedVersion: 4
@@ -5308,7 +5406,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -5317,6 +5417,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257218392789}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256859278050
 Rigidbody2D:
   serializedVersion: 4
@@ -5450,7 +5551,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -5459,6 +5562,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256067046454}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256879111133
 Rigidbody2D:
   serializedVersion: 4
@@ -5592,7 +5696,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -5601,6 +5707,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256943082922}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256904768736
 Rigidbody2D:
   serializedVersion: 4
@@ -5736,6 +5843,7 @@ MonoBehaviour:
   IFrames: 1
   projectiles:
   - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -5744,6 +5852,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257678167646}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256943082921
 Rigidbody2D:
   serializedVersion: 4
@@ -5877,7 +5986,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -5886,6 +5997,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256252385486}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676256962574823
 Rigidbody2D:
   serializedVersion: 4
@@ -6019,7 +6131,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -6028,6 +6142,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256166956863}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257013393929
 Rigidbody2D:
   serializedVersion: 4
@@ -6161,7 +6276,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -6170,6 +6287,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256717322635}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257061818870
 Rigidbody2D:
   serializedVersion: 4
@@ -6379,7 +6497,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -6388,6 +6508,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256212051664}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257111619900
 Rigidbody2D:
   serializedVersion: 4
@@ -6651,7 +6772,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -6660,6 +6783,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256411222896}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257164552861
 Rigidbody2D:
   serializedVersion: 4
@@ -6793,7 +6917,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -6802,6 +6928,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256327549520}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257174396340
 Rigidbody2D:
   serializedVersion: 4
@@ -6935,7 +7062,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -6944,6 +7073,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257174396341}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257191837154
 Rigidbody2D:
   serializedVersion: 4
@@ -7077,7 +7207,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -7086,6 +7218,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257824392389}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257218392788
 Rigidbody2D:
   serializedVersion: 4
@@ -7219,7 +7352,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -7228,6 +7363,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676258092565625}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257218789332
 Rigidbody2D:
   serializedVersion: 4
@@ -7361,7 +7497,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -7370,6 +7508,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256763707555}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257231987486
 Rigidbody2D:
   serializedVersion: 4
@@ -7503,7 +7642,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -7512,6 +7653,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256227204627}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257259632094
 Rigidbody2D:
   serializedVersion: 4
@@ -7645,7 +7787,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -7654,6 +7798,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257902036215}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257266209749
 Rigidbody2D:
   serializedVersion: 4
@@ -7993,7 +8138,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -8002,6 +8149,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256523272843}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257368300201
 Rigidbody2D:
   serializedVersion: 4
@@ -8135,7 +8283,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -8144,6 +8294,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257663587396}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257483039255
 Rigidbody2D:
   serializedVersion: 4
@@ -8299,7 +8450,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -8308,6 +8461,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257859343702}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!1 &3257676257524992125
 GameObject:
   m_ObjectHideFlags: 0
@@ -8524,7 +8678,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -8533,6 +8689,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257061818871}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257554184710
 Rigidbody2D:
   serializedVersion: 4
@@ -8711,7 +8868,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -8720,6 +8879,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256462171228}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257592946974
 Rigidbody2D:
   serializedVersion: 4
@@ -8853,7 +9013,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -8862,6 +9024,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256304985882}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257605612161
 Rigidbody2D:
   serializedVersion: 4
@@ -8995,7 +9158,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -9004,6 +9169,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256879111134}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257609864994
 Rigidbody2D:
   serializedVersion: 4
@@ -9137,7 +9303,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -9146,6 +9314,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256843412256}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257614208942
 Rigidbody2D:
   serializedVersion: 4
@@ -9279,7 +9448,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -9288,6 +9459,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256786805050}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257621753354
 Rigidbody2D:
   serializedVersion: 4
@@ -9453,7 +9625,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -9462,6 +9636,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257164552862}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257638372982
 Rigidbody2D:
   serializedVersion: 4
@@ -9595,7 +9770,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -9604,6 +9781,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257759158874}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257663587419
 Rigidbody2D:
   serializedVersion: 4
@@ -9739,6 +9917,7 @@ MonoBehaviour:
   IFrames: 1
   projectiles:
   - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -9747,6 +9926,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256404944685}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257678167645
 Rigidbody2D:
   serializedVersion: 4
@@ -9880,7 +10060,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -9889,6 +10071,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257820479880}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257708214737
 Rigidbody2D:
   serializedVersion: 4
@@ -10022,7 +10205,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -10031,6 +10216,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257621753355}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257731097610
 Rigidbody2D:
   serializedVersion: 4
@@ -10164,7 +10350,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -10173,6 +10361,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257111619901}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257759158873
 Rigidbody2D:
   serializedVersion: 4
@@ -10306,7 +10495,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -10315,6 +10506,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256253768108}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257812256047
 Rigidbody2D:
   serializedVersion: 4
@@ -10448,7 +10640,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -10457,6 +10651,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257614208943}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257820479887
 Rigidbody2D:
   serializedVersion: 4
@@ -10590,7 +10785,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -10599,6 +10796,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257638372983}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257823115158
 Rigidbody2D:
   serializedVersion: 4
@@ -10732,7 +10930,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -10741,6 +10941,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257013393930}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257824392388
 Rigidbody2D:
   serializedVersion: 4
@@ -10874,7 +11075,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -10883,6 +11086,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256482870138}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257825732111
 Rigidbody2D:
   serializedVersion: 4
@@ -11016,7 +11220,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -11025,6 +11231,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257191837155}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257842444160
 Rigidbody2D:
   serializedVersion: 4
@@ -11158,7 +11365,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -11167,6 +11376,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257368300202}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257859343701
 Rigidbody2D:
   serializedVersion: 4
@@ -11300,7 +11510,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -11309,6 +11521,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257259632095}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257884829220
 Rigidbody2D:
   serializedVersion: 4
@@ -11442,7 +11655,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -11451,6 +11666,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256383082104}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257902036214
 Rigidbody2D:
   serializedVersion: 4
@@ -11584,7 +11800,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -11593,6 +11811,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257218789333}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676257939242019
 Rigidbody2D:
   serializedVersion: 4
@@ -11726,7 +11945,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -11735,6 +11956,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676258055025389}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676258021730559
 Rigidbody2D:
   serializedVersion: 4
@@ -11868,7 +12090,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -11877,6 +12101,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257483039248}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676258038285536
 Rigidbody2D:
   serializedVersion: 4
@@ -12144,11 +12369,13 @@ MonoBehaviour:
   IFrames: 1
   projectiles:
   - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
   MoveSpeed: 0.55
   RotationSpeed: 0.05
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676258054261433
 Rigidbody2D:
   serializedVersion: 4
@@ -12282,7 +12509,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -12291,6 +12520,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257592946975}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676258055025388
 Rigidbody2D:
   serializedVersion: 4
@@ -12424,7 +12654,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -12433,6 +12665,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676256301442512}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676258092565624
 Rigidbody2D:
   serializedVersion: 4
@@ -12566,7 +12799,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -12575,6 +12810,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257266209750}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676258103403018
 Rigidbody2D:
   serializedVersion: 4
@@ -12708,7 +12944,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -12717,6 +12955,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676258021730552}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676258109411541
 Rigidbody2D:
   serializedVersion: 4
@@ -12850,7 +13089,9 @@ MonoBehaviour:
   - 0
   - 0
   IFrames: 1
-  projectiles: []
+  projectiles:
+  - {fileID: 3419240870421711170, guid: 5f8bc0cdd5fa0b9429cc569118d3bd2c, type: 3}
+  - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
   immune: 0
   worm: 0
@@ -12859,6 +13100,7 @@ MonoBehaviour:
   AheadSegment: {fileID: 3257676257605612162}
   SegmentSize: 2
   VelocitySmoothing: 0.7
+  oldTargetPos: {x: 0, y: 0}
 --- !u!50 &3257676258130235125
 Rigidbody2D:
   serializedVersion: 4

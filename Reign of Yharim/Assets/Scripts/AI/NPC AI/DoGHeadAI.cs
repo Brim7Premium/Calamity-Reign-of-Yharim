@@ -4,6 +4,8 @@ public class DoGHeadAI : NPC
 {
     public float MoveSpeed;
     public float RotationSpeed;
+
+    public Vector2 oldTargetPos;
     public override void SetDefaults()
     {
         NPCName = "DevourerofGodsHead";
@@ -37,24 +39,38 @@ public class DoGHeadAI : NPC
             }
             if (ai[0] == 1.0f) //second phase
             {
-                Debug.Log("Devourer of gods is phase 2!");
-                velocity = Vector2.zero;
+                if (ai[1] == 0f) 
+                {
+                    Debug.Log("Devourer of gods is phase 2!");
 
+                    velocity = Vector2.zero;
+
+                    Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform, Quaternion.identity, 0, 60);
+
+                    oldTargetPos = target.transform.position;
+
+                    Vector3 direction = target.transform.position - telegraph.transform.position;
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                    telegraph.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+                    telegraph.transform.localScale = new Vector3(400f, 7f, transform.localScale.z);
+                }
                 if (ai[1] == 60f) //after one second
                 {
+
                     Projectile proj = Projectile.NewProjectile(projectiles[0], transform, Quaternion.identity, 20, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
 
-                    proj.velocity = DirectionTo(target.transform.position) * 0.5f; //the new new projectile will travel towards the player
+                    proj.velocity = DirectionTo(oldTargetPos) * 0.5f; //the new new projectile will travel towards the player
 
                     proj.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
 
                     proj.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-
-                    if (ai[1] <= 240f) //after four seconds
-                    {
-                        ai[0] = 0.0f; //set ai[0] phase to phase one
-                        ai[1] = 0.0f; //reset ai[1] timer to 0
-                    }
+;
+                }
+                if (ai[1] == 240f) //after four seconds
+                {
+                    ai[0] = 0.0f; //set ai[0] phase to phase one
+                    ai[1] = 0.0f; //reset ai[1] timer to 0
                 }
             }
         }

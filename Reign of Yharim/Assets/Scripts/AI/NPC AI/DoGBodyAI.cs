@@ -7,6 +7,9 @@ public class DoGBodyAI : NPC
     public GameObject AheadSegment;
     public float SegmentSize = 2f;
     public float VelocitySmoothing;
+    private float rng;
+
+    public Vector2 oldTargetPos;
     public override void SetDefaults()
     {
         NPCName = "DevourerofGodsBody";
@@ -14,6 +17,8 @@ public class DoGBodyAI : NPC
         lifeMax = 1706400;
         life = lifeMax;
         worm = true;
+
+        ResetRNG();
     }
     public override void AI()
     {
@@ -41,6 +46,7 @@ public class DoGBodyAI : NPC
             }
             if (ai[0] == 1.0f) //second phase
             {
+
                 if (Vector2.Distance(transform.position, AheadSegment.transform.position) >= SegmentSize)//if this segments positon >= the aheadsegment's position + SegmentsSize, move towards the ahead segment.
                     velocity = DirectionTo(AheadSegment.transform.position) * VelocitySmoothing;
                 else
@@ -51,24 +57,47 @@ public class DoGBodyAI : NPC
                     Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
                 }
+
+                if (ai[1] == 0f)
+                {
+                    if (rng == 3)
+                    {
+                        Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform, Quaternion.identity, 0, 60);
+
+                        oldTargetPos = target.transform.position;
+
+                        Vector3 direction = target.transform.position - telegraph.transform.position;
+                        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                        telegraph.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+                        telegraph.transform.localScale = new Vector3(400f, 7f, transform.localScale.z);
+                    }
+                }
                 if (ai[1] == 60f) //after one second
                 {
-                    Projectile proj = Projectile.NewProjectile(projectiles[0], transform, Quaternion.identity, 20, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
-
-                    proj.velocity = DirectionTo(target.transform.position) * 0.5f; //the new new projectile will travel towards the player
-
-                    proj.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-
-                    proj.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-
-                    if (ai[1] <= 240f) //after four seconds
+                    if (rng == 3)
                     {
-                        ai[0] = 0.0f; //set ai[0] phase to phase one
-                        ai[1] = 0.0f; //reset ai[1] timer to 0
+                        Projectile proj = Projectile.NewProjectile(projectiles[0], transform, Quaternion.identity, 20, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
+
+                        proj.velocity = DirectionTo(oldTargetPos) * 0.5f; //the new new projectile will travel towards the player
+
+                        proj.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+
+                        proj.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                     }
+                }
+                if (ai[1] == 240f) //after four seconds
+                {
+                    ai[0] = 0.0f; //set ai[0] phase to phase one
+                    ai[1] = 0.0f; //reset ai[1] timer to 0
+                    ResetRNG();
                 }
             }
         }
+    }
+    void ResetRNG()
+    {
+        rng = Random.Range(1, 6);
     }
 }
 
