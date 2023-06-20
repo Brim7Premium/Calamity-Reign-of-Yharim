@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class TelegraphAI : Projectile
 {
-    private Renderer objectRenderer;
 
     public override void SetDefaults()
     {
         projName = "TelegraphProjectile";
         damage = 0;
-
-        objectRenderer = GetComponent<Renderer>();
+        //objectRenderer = GetComponent<Renderer>();
     }
-    public override void AI()
+    /*public override void AI()
     {
         if (IsVisibleFromCamera())
         {
@@ -24,14 +22,5 @@ public class TelegraphAI : Projectile
         {
             objectRenderer.enabled = false;
         }
-    }
-
-
-    private bool IsVisibleFromCamera()
-    {
-        Plane[] frustumPlanes = GeometryUtility.CalculateFrustumPlanes(Camera.main);
-
-        // Check if the object's collider bounds intersect with any of the frustum planes
-        return GeometryUtility.TestPlanesAABB(frustumPlanes, objectRenderer.bounds);
-    }
+    }*/
 }

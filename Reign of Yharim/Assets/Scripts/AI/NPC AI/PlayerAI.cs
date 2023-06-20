@@ -41,7 +41,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     {
         NPCName = "Player";
         damage = 0; //Note to future developers/self, this can be used for times when the player does deal contact damage to enemies. armor sets are an example. right now, it's useless.
-        lifeMax = 10000;
+        lifeMax = 5000;
         life = lifeMax;
         healthBar.SetMaxHealth(lifeMax);
 
@@ -57,7 +57,8 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         if (Input.GetButtonDown("Jump")) //if the jump button is pressed
         {
-            jumpPressed = true; //set the bool jumpPressed to true
+            if (isGrounded)
+                jumpPressed = true; //set the bool jumpPressed to true
         }
         if (Input.GetButtonUp("Jump")) //if the jump button is released
         {

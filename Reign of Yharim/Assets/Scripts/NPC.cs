@@ -37,7 +37,10 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         for (int i = 0; i < ai.Length; i++) //will loop until it reaches ai.length (4)
             ai[i] = 0.0f; //set every ai index to 0 until ai.length (4)
 
+        objectRenderer = GetComponent<Renderer>();
+
         SetDefaults(); //call setdefaults
+
     }
 
     void Update() => UpdateNPC(); //changes update to updatenpc (gives UpdateNPC the function of Update (to be called every frame))
@@ -59,6 +62,17 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
         if (life <= 0) //If life in is less than or equal to 0
             Die(); //trigger Die method
+
+        if (IsVisibleFromCamera())
+        {
+            // Enable rendering if the object is visible
+            objectRenderer.enabled = true;
+        }
+        else
+        {
+            // Disable rendering if the object is outside the view frustum
+            objectRenderer.enabled = false;
+        }
     }
 
     public void MoveTowards(float speedX, float speedY)//moves the npc towards the player at a set speed.
@@ -119,25 +133,9 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     public virtual void OnKill()//called when the npc dies, overridden by subclasses for customization
     {
     }
+
     public Vector2 ToRotationVector2(float f) => new((float)Math.Cos(f), (float)Math.Sin(f));//converts an angle into a Vector2
 
-    //Code for old damage detection system
-    /* public virtual void OnTriggerStay2D(Collider2D collision) 
-    {
-        if (collision.gameObject.name == "Item" && immune == false) //if not immune, and colliding with the item gameobject
-        {
-            if (playerAnimator.GetCurrentAnimatorStateInfo(1).IsName("Swing") == true) //if the player is swinging the sword (checks though animator)
-            {
-                OnHit(); //trigger method
-                TakeDamage(PlayerAI.Damage); //takes damage
-                StartCoroutine(EnemyImmunity()); //start EnemyImmunity coroutine
-            }
-        }
-        if (collision.gameObject.name == "Player")
-        {
-        }
-    }
-    */
     public IEnumerator Immunity()
     {
         immune = true; //set immune to true

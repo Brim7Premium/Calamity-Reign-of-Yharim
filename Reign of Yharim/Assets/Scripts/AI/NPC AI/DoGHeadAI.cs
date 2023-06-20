@@ -1,4 +1,5 @@
 using UnityEngine;
+using FMOD.Studio;
 
 public class DoGHeadAI : NPC
 {
@@ -6,6 +7,8 @@ public class DoGHeadAI : NPC
     public float RotationSpeed;
 
     public Vector2 oldTargetPos;
+
+    private EventInstance DoGMusic;
     public override void SetDefaults()
     {
         NPCName = "DevourerofGodsHead";
@@ -14,9 +17,18 @@ public class DoGHeadAI : NPC
         life = lifeMax;
         worm = true;
         healthBar.SetMaxHealth(lifeMax);
+
+        DoGMusic = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoGMusic);
     }
     public override void AI()
     {
+        PLAYBACK_STATE playbackState;
+        DoGMusic.getPlaybackState(out playbackState);
+        if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+        {
+            DoGMusic.start();
+        }
+
         if (target != null)
         {
             ai[1]++;
@@ -39,13 +51,13 @@ public class DoGHeadAI : NPC
             }
             if (ai[0] == 1.0f) //second phase
             {
-                if (ai[1] == 0f) 
+                if (ai[1] == 0f)
                 {
                     Debug.Log("Devourer of gods is phase 2!");
 
                     velocity = Vector2.zero;
 
-                    Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform, Quaternion.identity, 0, 60);
+                    Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, 0, 60);
 
                     oldTargetPos = target.transform.position;
 
@@ -58,14 +70,14 @@ public class DoGHeadAI : NPC
                 if (ai[1] == 60f) //after one second
                 {
 
-                    Projectile proj = Projectile.NewProjectile(projectiles[0], transform, Quaternion.identity, 20, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
+                    Projectile proj = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, damage, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
 
                     proj.velocity = DirectionTo(oldTargetPos) * 0.5f; //the new new projectile will travel towards the player
 
                     proj.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
 
                     proj.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-;
+                    ;
                 }
                 if (ai[1] == 240f) //after four seconds
                 {
@@ -73,6 +85,11 @@ public class DoGHeadAI : NPC
                     ai[1] = 0.0f; //reset ai[1] timer to 0
                 }
             }
+        }
+        else if (target == null && !IsVisibleFromCamera())
+        {
+            DoGMusic.stop(STOP_MODE.ALLOWFADEOUT);
+            Destroy(gameObject);
         }
     }
 }

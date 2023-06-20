@@ -22,22 +22,31 @@ public class DoGBodyAI : NPC
     }
     public override void AI()
     {
+        if (GameObject.Find("DevourerofGodsHead") != null)
+        {
+            if (Vector2.Distance(transform.position, AheadSegment.transform.position) >= SegmentSize)//if this segments positon >= the aheadsegment's position + SegmentsSize, move towards the ahead segment.
+                velocity = DirectionTo(AheadSegment.transform.position) * VelocitySmoothing;
+            else
+                velocity *= VelocitySmoothing;//quickly lower the segments velocity to stop it from moving into weird positions.
+            if (velocity != Vector2.zero)//this code is copyed from this yt video https://www.youtube.com/watch?v=gs7y2b0xthU&t=366s and modified slightly.
+            {
+                Vector2 movementDirection = new(velocity.x, velocity.y);
+                Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
+            }
+        }
+        else
+        {
+            Destroy(GameObject.Find("DevourerOfGods"));
+        }
+
         if (target != null)
         {
             ai[1]++;
 
             if (ai[0] == 0.0f) //if ai[0] equals 0 (First Attack)
             {
-                if (Vector2.Distance(transform.position, AheadSegment.transform.position) >= SegmentSize)//if this segments positon >= the aheadsegment's position + SegmentsSize, move towards the ahead segment.
-                    velocity = DirectionTo(AheadSegment.transform.position) * VelocitySmoothing;
-                else
-                    velocity *= VelocitySmoothing;//quickly lower the segments velocity to stop it from moving into weird positions.
-                if (velocity != Vector2.zero)//this code is copyed from this yt video https://www.youtube.com/watch?v=gs7y2b0xthU&t=366s and modified slightly.
-                {
-                    Vector2 movementDirection = new(velocity.x, velocity.y);
-                    Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
-                    transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
-                }
+
                 if (ai[1] == 300) //after 300 frames (5 seconds)
                 {
                     ai[0] = 1.0f; //set ai[0] phase to phase one
@@ -46,23 +55,11 @@ public class DoGBodyAI : NPC
             }
             if (ai[0] == 1.0f) //second phase
             {
-
-                if (Vector2.Distance(transform.position, AheadSegment.transform.position) >= SegmentSize)//if this segments positon >= the aheadsegment's position + SegmentsSize, move towards the ahead segment.
-                    velocity = DirectionTo(AheadSegment.transform.position) * VelocitySmoothing;
-                else
-                    velocity *= VelocitySmoothing;//quickly lower the segments velocity to stop it from moving into weird positions.
-                if (velocity != Vector2.zero)//this code is copyed from this yt video https://www.youtube.com/watch?v=gs7y2b0xthU&t=366s and modified slightly.
-                {
-                    Vector2 movementDirection = new(velocity.x, velocity.y);
-                    Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
-                    transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
-                }
-
                 if (ai[1] == 0f)
                 {
                     if (rng == 3)
                     {
-                        Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform, Quaternion.identity, 0, 60);
+                        Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, 0, 60);
 
                         oldTargetPos = target.transform.position;
 
@@ -77,7 +74,7 @@ public class DoGBodyAI : NPC
                 {
                     if (rng == 3)
                     {
-                        Projectile proj = Projectile.NewProjectile(projectiles[0], transform, Quaternion.identity, 20, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
+                        Projectile proj = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, damage, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
 
                         proj.velocity = DirectionTo(oldTargetPos) * 0.5f; //the new new projectile will travel towards the player
 
@@ -100,4 +97,6 @@ public class DoGBodyAI : NPC
         rng = Random.Range(1, 6);
     }
 }
+
+
 
