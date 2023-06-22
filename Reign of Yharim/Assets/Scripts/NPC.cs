@@ -24,7 +24,11 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public GameObject target;
 
+    public string currentAnimationState;
+
     public bool immune;
+
+    public Animator animator;
 
     public bool worm;
 
@@ -38,6 +42,8 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
             ai[i] = 0.0f; //set every ai index to 0 until ai.length (4)
 
         objectRenderer = GetComponent<Renderer>();
+
+        animator = GetComponent<Animator>(); 
 
         SetDefaults(); //call setdefaults
 
@@ -70,7 +76,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         }
         else
         {
-            // Disable rendering if the object is outside the view frustum
+            // Disable rendering if the object is outside the camera's view
             objectRenderer.enabled = false;
         }
     }
@@ -88,6 +94,13 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     }
 
     public int GetTargetDirectionX() => transform.position.x < target.transform.position.x ? 1 : -1; //if transform.position.x is less than, then GetTargetDirectionX returns 1, if else -1
+
+    public float GetDistanceToPlayer() //returns the distance between the object and the target
+    {
+        return Vector2.Distance(gameObject.transform.position, target.transform.position);
+    }
+
+    public void DrawDistanceToPlayer(Color color) => Debug.DrawLine(gameObject.transform.position, target.transform.position, color); //drawdistancetoplayer will draw a line from the object to the player that is a set color
 
     public void RemoveHealth(int damage) //remove health with no Iframes
     {
@@ -135,6 +148,15 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     }
 
     public Vector2 ToRotationVector2(float f) => new((float)Math.Cos(f), (float)Math.Sin(f));//converts an angle into a Vector2
+
+    public void ChangeAnimationState(string newAnimationState)
+    {
+        if (currentAnimationState == newAnimationState) return; //if currentAnimationState equals newAnimationState, stop the method (prevents animations from interupting themselves)
+
+        animator.Play(newAnimationState); //play the newState animation
+
+        currentAnimationState = newAnimationState; //set currentAnimationState to newAnimationState
+    }
 
     public IEnumerator Immunity()
     {

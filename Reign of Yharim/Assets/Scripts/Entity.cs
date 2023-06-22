@@ -17,4 +17,5 @@ public abstract class Entity : MonoBehaviour
         // Check if the object's collider bounds intersect with any of the frustum planes
         return GeometryUtility.TestPlanesAABB(frustumPlanes, objectRenderer.bounds);
     }
+
 }

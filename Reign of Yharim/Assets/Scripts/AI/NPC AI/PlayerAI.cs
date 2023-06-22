@@ -20,15 +20,13 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
     private bool isAttacking;
 
+    private BoxCollider2D bc2d;
+
     [SerializeField] private float attackDelay = 0.3f;
 
     [SerializeField] private LayerMask groundLayer;
 
     [SerializeField] private float jumpReleaseMod = 2;
-
-    private string currentAnimationState;
-
-    public Animator playerAnimator;
 
     //constants can't be changed
     const string PlayerIdle = "Player_idle";
@@ -41,14 +39,14 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     {
         NPCName = "Player";
         damage = 0; //Note to future developers/self, this can be used for times when the player does deal contact damage to enemies. armor sets are an example. right now, it's useless.
-        lifeMax = 5000;
+        lifeMax = 100;
         life = lifeMax;
         healthBar.SetMaxHealth(lifeMax);
 
         rb = GetComponent<Rigidbody2D>(); //PlayerAI.rb equals the rigidbody2d of the player
-        playerAnimator = GetComponent<Animator>(); //playerAnimator variable equals the animator component of the player
-
+        bc2d = GetComponent<BoxCollider2D>();
     }
+
     public override void AI() //every frame (Update)
     {
         Physics2D.IgnoreLayerCollision(10, 3); //Layer 10 (WalkThroughNPCSPlayer) will ignore collisions with layer 3 (NPCS) the child gameobjects don't use layer 10, so they can still detect collisions
@@ -89,11 +87,10 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
     private void FixedUpdate() //for physics
     {
-        float extraHeight = 0.1f; //new float extraHeight equals 0.1
-        BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>(); //new BoxCollider2D variable equals the boxcollider component
+        float extraHeight = 0.2f; //new float extraHeight equals 0.1
         Color rayColor; //new color variable rayColor 
 
-        RaycastHit2D hit = Physics2D.Raycast(boxCollider2D.bounds.center, Vector2.down, boxCollider2D.bounds.extents.y + extraHeight, groundLayer); //new raycast2d called hit that starts from the center of the player rigidbody, goes down, and goes the extent of the rigidbody downwards + extraHeight. it only collides with the groundlayer variable
+        RaycastHit2D hit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeight, groundLayer); //new raycast2d called hit that starts from the center of the player rigidbody, goes down, and goes the extent of the rigidbody downwards + extraHeight. it only collides with the groundlayer variable
 
         //Debug.Log(hit.collider);
         if (hit.collider != null) //if the raycast is hitting something;
@@ -106,7 +103,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             isGrounded = false; //isgrounded is false
             rayColor = Color.red; //the raycolor is red
         }
-        Debug.DrawRay(boxCollider2D.bounds.center, Vector2.down * (boxCollider2D.bounds.extents.y + extraHeight), rayColor); //draw the ray
+        Debug.DrawRay(bc2d.bounds.center, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColor); //draw the ray 
 
         Vector2 velocity = new Vector2(0, rb.velocity.y); //create a new vector2 variable called velocty that has the values of 0 and the current y velocity
 
@@ -149,7 +146,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
                 {
                     ChangeAnimationState(PlayerAttack); //set the animation to PlayerAttack
                 }
-                attackDelay = playerAnimator.GetCurrentAnimatorStateInfo(0).length; //attackDelay variable equals the length of the animation
+                attackDelay = animator.GetCurrentAnimatorStateInfo(0).length; //attackDelay variable equals the length of the animation
                 Invoke("AttackComplete", attackDelay); //invoke attackcomplete after the animation is done
             }
 
@@ -158,15 +155,6 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     void AttackComplete()
     {
         isAttacking = false; //set isAttacking to false
-    }
-
-    void ChangeAnimationState(string newAnimationState)
-    {
-        if (currentAnimationState == newAnimationState) return; //if currentAnimationState equals newAnimationState, stop the method (prevents animations from interupting themselves)
-
-        playerAnimator.Play(newAnimationState); //play the newState animation
-
-        currentAnimationState = newAnimationState; //set currentAnimationState to newAnimationState
     }
 
 }

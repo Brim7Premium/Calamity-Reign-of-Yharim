@@ -53,7 +53,7 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
         }
         else
         {
-            // Disable rendering if the object is outside the view frustum
+            // Disable rendering if the object is outside the camera's view
             objectRenderer.enabled = false;
         }
     }
@@ -102,6 +102,13 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
     }
 
     public int GetTargetDirectionX() => transform.position.x < target.transform.position.x ? 1 : -1; //if transform.position.x is less than, then GetTargetDirectionX returns 1, if else -1
+
+    public float GetDistanceToPlayer() //returns the distance between the object and the target
+    {
+        return Vector2.Distance(gameObject.transform.position, target.transform.position);
+    }
+
+    public void DrawDistanceToPlayer(Color color) => Debug.DrawLine(gameObject.transform.position, target.transform.position, color); //drawdistancetoplayer will draw a line from the object to the player that is a set color
 
     public virtual void SetDefaults()//called on start
     {

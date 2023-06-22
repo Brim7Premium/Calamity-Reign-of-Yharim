@@ -37,7 +37,7 @@ public class DoGBodyAI : NPC
         }
         else
         {
-            Destroy(GameObject.Find("DevourerOfGods"));
+            Destroy(transform.parent.gameObject);
         }
 
         if (target != null)
