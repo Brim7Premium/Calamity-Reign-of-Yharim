@@ -69,14 +69,17 @@ public class DoGHeadAI : NPC
                 }
                 if (ai[1] == 60f) //after one second
                 {
+                    Projectile deathray = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, damage, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
 
-                    Projectile proj = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, damage, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
+                    Vector3 direction = (Vector3)oldTargetPos - deathray.transform.position;
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                    deathray.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-                    proj.velocity = DirectionTo(oldTargetPos) * 0.5f; //the new new projectile will travel towards the player
+                    deathray.velocity = DirectionTo(oldTargetPos) * 0.9f; //the new new projectile will travel towards the player
 
-                    proj.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+                    deathray.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
 
-                    proj.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+                    deathray.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                     ;
                 }
                 if (ai[1] == 240f) //after four seconds
@@ -86,10 +89,18 @@ public class DoGHeadAI : NPC
                 }
             }
         }
-        else if (target == null && !IsVisibleFromCamera())
+        else if (target == null)
         {
-            DoGMusic.stop(STOP_MODE.ALLOWFADEOUT);
-            Destroy(gameObject);
+            Vector2 movementDirection = new(velocity.x, velocity.y);
+            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
+            velocity = new Vector2(-1, 1) * 0.5f;
+
+            if (GetDistanceToPlayer() > 240f)
+            {
+                DoGMusic.stop(STOP_MODE.ALLOWFADEOUT);
+                Destroy(gameObject);
+            }
         }
     }
 }

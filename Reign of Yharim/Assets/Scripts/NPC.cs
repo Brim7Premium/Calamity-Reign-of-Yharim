@@ -24,6 +24,8 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public GameObject target;
 
+    public Vector2 targetPos;
+
     public string currentAnimationState;
 
     public bool immune;
@@ -59,6 +61,8 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
             return;
 
         target = GameObject.Find("Player"); //target gameobject variable is equal to the Player gameobject
+        if(target != null)
+            targetPos = target.transform.position;
 
         Physics2D.IgnoreLayerCollision(3, 3); //NPCs (layer 3) don't collide with other NPCs (also layer 3)
 
@@ -97,10 +101,10 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public float GetDistanceToPlayer() //returns the distance between the object and the target
     {
-        return Vector2.Distance(gameObject.transform.position, target.transform.position);
+        return Vector2.Distance(gameObject.transform.position, targetPos);
     }
 
-    public void DrawDistanceToPlayer(Color color) => Debug.DrawLine(gameObject.transform.position, target.transform.position, color); //drawdistancetoplayer will draw a line from the object to the player that is a set color
+    public void DrawDistanceToPlayer(Color color) => Debug.DrawLine(gameObject.transform.position, targetPos, color); //drawdistancetoplayer will draw a line from the object to the player that is a set color
 
     public void RemoveHealth(int damage) //remove health with no Iframes
     {
