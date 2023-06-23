@@ -161,7 +161,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8333333, y: 6}
+    oldSize: {x: 6, y: 0.8333333}
     newSize: {x: 0.8333333, y: 6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 684556995687990891}
   m_Layer: 3
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: ProjectileHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,8 +217,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8605567056781042244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.324, z: -59.60475}
-  m_LocalScale: {x: 0.988, y: 3.648, z: 1}
+  m_LocalPosition: {x: 1.735, y: 0, z: -59.60475}
+  m_LocalScale: {x: 2.8302932, y: 0.7596088, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8630381004984749893}
