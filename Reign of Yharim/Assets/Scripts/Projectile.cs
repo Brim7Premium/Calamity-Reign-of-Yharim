@@ -21,6 +21,8 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
         for (int i = 0; i < ai.Length; i++) //will loop until it reaches ai.length (4)
             ai[i] = 0.0f; //set every ai index to 0 until ai.length (4)
 
+        objectRenderer = GetComponent<Renderer>();
+
         SetDefaults(); //call setdefaults
     }
     void Update() => UpdateProj(); //changes update to updateproj (gives UpdateProj the function of Update (to be called every frame))
@@ -43,6 +45,17 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
 
         if (timeLeft <= 0) //if timeleft is less than or equal to 0
             Destroy(gameObject); //destroy this object
+
+        if (IsVisibleFromCamera())
+        {
+            // Enable rendering if the object is visible
+            objectRenderer.enabled = true;
+        }
+        else
+        {
+            // Disable rendering if the object is outside the camera's view
+            objectRenderer.enabled = false;
+        }
     }
     public static Projectile GetProjectile(GameObject gameObject) //Getprojectile must return an instance of the projectile class
     {
@@ -57,9 +70,9 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
      * if the prefab's projectile ai script modifies position, rotation, damage, timeleft, or ai[] in the SetDefaults() method it will override the values set in projectile.newprojectile
      */
 
-    public static Projectile NewProjectile(GameObject projectile, Transform transform, Quaternion quaternion, int damage, int timeleft = 0, float ai0 = 0.0f, float ai1 = 0.0f, float ai2 = 0.0f, float ai3 = 0.0f) //newprojectile must return an instance of the projectile class
+    public static Projectile NewProjectile(GameObject projectile, Vector2 position, Quaternion quaternion, int damage, int timeleft = 0, float ai0 = 0.0f, float ai1 = 0.0f, float ai2 = 0.0f, float ai3 = 0.0f) //newprojectile must return an instance of the projectile class
     {
-        GameObject projGameObject = Instantiate(projectile, transform.position, quaternion); //gameobject varaible called projGameObject equals an instance of the projectile parameter, at the transform parameter, rotating at the quaternion parameter
+        GameObject projGameObject = Instantiate(projectile, position, quaternion); //gameobject varaible called projGameObject equals an instance of the projectile parameter, at the transform parameter, rotating at the quaternion parameter
         Projectile proj = GetProjectile(projGameObject); //projectile variable equals projectile class attached to projGameObject (Getprojectile code)
 
         if (timeleft != 0) //if timeleft parameter doesn't equal 0
@@ -89,6 +102,13 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
     }
 
     public int GetTargetDirectionX() => transform.position.x < target.transform.position.x ? 1 : -1; //if transform.position.x is less than, then GetTargetDirectionX returns 1, if else -1
+
+    public float GetDistanceToPlayer() //returns the distance between the object and the target
+    {
+        return Vector2.Distance(gameObject.transform.position, target.transform.position);
+    }
+
+    public void DrawDistanceToPlayer(Color color) => Debug.DrawLine(gameObject.transform.position, target.transform.position, color); //drawdistancetoplayer will draw a line from the object to the player that is a set color
 
     public virtual void SetDefaults()//called on start
     {

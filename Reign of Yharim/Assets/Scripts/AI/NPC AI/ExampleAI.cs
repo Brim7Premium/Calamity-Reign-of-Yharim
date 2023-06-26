@@ -40,9 +40,11 @@ public class ExampleAI : NPC
 
                 if (ai[1] > 120.0f)//if it has been more than 2 seconds, fire a projectile at the player, switch phases, and reset ai[1](the timer).
                 {
-                    Projectile proj = Projectile.NewProjectile(projectiles[0], transform, Quaternion.identity, 20, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
+                    Projectile proj = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, 20, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
 
                     proj.velocity = DirectionTo(target.transform.position) * 0.3f; //the new new projectile will travel towards the player
+
+
 
                     ai[0] = 0.0f; //set ai[0] phase to phase one
                     ai[1] = 0.0f; //reset ai[1] timer to 0

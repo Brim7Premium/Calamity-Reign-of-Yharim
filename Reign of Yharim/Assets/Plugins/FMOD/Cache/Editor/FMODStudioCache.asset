@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638222706031460292
+  lastModified: 638228453906064684
   FileSizes:
   - Name: Desktop
     Value: 12576
@@ -94,12 +94,13 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -2738940301035076207}
   - {fileID: -8736444740492071759}
+  - {fileID: 5261235036570084378}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4515058448071513695}
   StringsBanks:
   - {fileID: 9009797941508730710}
-  cacheTime: 638222706031460292
+  cacheTime: 638228453906064684
   cacheVersion: 131601
 --- !u!114 &302262337395820569
 MonoBehaviour:
@@ -116,10 +117,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638222706030797218
+  lastModified: 638228453905677373
   FileSizes:
   - Name: Desktop
-    Value: 1995008
+    Value: 5152512
   Exists: 1
 --- !u!114 &4515058448071513695
 MonoBehaviour:
@@ -136,11 +137,38 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638222706030423175
+  lastModified: 638228453869439344
   FileSizes:
   - Name: Desktop
     Value: 1036
   Exists: 1
+--- !u!114 &5261235036570084378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ScourgeoftheUniverse
+  m_EditorClassIdentifier: 
+  Path: event:/ScourgeoftheUniverse
+  Guid:
+    Data1: -1937256212
+    Data2: 1127564151
+    Data3: -389255775
+    Data4: 1059554773
+  Banks:
+  - {fileID: 302262337395820569}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 229894
 --- !u!114 &9009797941508730710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,8 +184,8 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638222706030443110
+  lastModified: 638228453869479209
   FileSizes:
   - Name: Desktop
-    Value: 918
+    Value: 968
   Exists: 1
