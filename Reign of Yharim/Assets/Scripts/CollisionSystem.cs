@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FMODUnity;
 
 public class CollisionSystem : MonoBehaviour
 {
@@ -9,7 +8,6 @@ public class CollisionSystem : MonoBehaviour
     private string entityName;
 
     [SerializeField] private PlayerAI playerAI;
-    [SerializeField] private EventReference hitSound;
 
     private void Start()
     {
@@ -28,7 +26,7 @@ public class CollisionSystem : MonoBehaviour
                     color = new Color(1f, 0f, 0f, 0.1764706f);
                     gameObject.GetComponent<SpriteRenderer>().color = color;
                     gameObject.transform.parent.parent.SendMessage("TakeDamage", collision.gameObject.transform.parent.parent.GetComponentInChildren<NPC>().damage);
-                    AudioManager.instance.PlayOneShot(hitSound, transform.position);
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.hitSound, transform.position);
                 }
             }
             if (collision.gameObject.tag == "ProjectileHitbox")
@@ -39,8 +37,9 @@ public class CollisionSystem : MonoBehaviour
                     Debug.Log(gameObject.name + "is hitting " + entityName);
                     color = new Color(1f, 0f, 0f, 0.1764706f);
                     gameObject.GetComponent<SpriteRenderer>().color = color;
-                    //gameObject.transform.parent.parent.SendMessage("TakeDamage", Projectile.GetProjectile(collision.gameObject).damage);
-                    AudioManager.instance.PlayOneShot(hitSound, transform.position);
+
+                    gameObject.transform.parent.parent.SendMessage("TakeDamage", collision.gameObject.transform.parent.parent.gameObject.GetComponent<Projectile>().damage);
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.hitSound, transform.position);
                 }
             }
         }

@@ -16,6 +16,10 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public Rigidbody2D rb;
 
+    public BoxCollider2D bc2d;
+
+    public LayerMask groundLayer;
+
     public float[] ai = new float[4];
 
     public float IFrames = 1f;
@@ -24,7 +28,13 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public GameObject target;
 
+    public Vector2 targetPos;
+
+    public string currentAnimationState;
+
     public bool immune;
+
+    public Animator animator;
 
     public bool worm;
 
@@ -37,7 +47,12 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         for (int i = 0; i < ai.Length; i++) //will loop until it reaches ai.length (4)
             ai[i] = 0.0f; //set every ai index to 0 until ai.length (4)
 
+        objectRenderer = GetComponent<Renderer>();
+
+        animator = GetComponent<Animator>();
+
         SetDefaults(); //call setdefaults
+
     }
 
     void Update() => UpdateNPC(); //changes update to updatenpc (gives UpdateNPC the function of Update (to be called every frame))
@@ -50,6 +65,8 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
             return;
 
         target = GameObject.Find("Player"); //target gameobject variable is equal to the Player gameobject
+        if(target != null)
+            targetPos = target.transform.position;
 
         Physics2D.IgnoreLayerCollision(3, 3); //NPCs (layer 3) don't collide with other NPCs (also layer 3)
 
@@ -59,6 +76,17 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
         if (life <= 0) //If life in is less than or equal to 0
             Die(); //trigger Die method
+
+        if (IsVisibleFromCamera())
+        {
+            // Enable rendering if the object is visible
+            objectRenderer.enabled = true;
+        }
+        else
+        {
+            // Disable rendering if the object is outside the camera's view
+            objectRenderer.enabled = false;
+        }
     }
 
     public void MoveTowards(float speedX, float speedY)//moves the npc towards the player at a set speed.
@@ -74,6 +102,13 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     }
 
     public int GetTargetDirectionX() => transform.position.x < target.transform.position.x ? 1 : -1; //if transform.position.x is less than, then GetTargetDirectionX returns 1, if else -1
+
+    public float GetDistanceToPlayer() //returns the distance between the object and the target
+    {
+        return Vector2.Distance(gameObject.transform.position, targetPos);
+    }
+
+    public void DrawDistanceToPlayer(Color color) => Debug.DrawLine(gameObject.transform.position, targetPos, color); //drawdistancetoplayer will draw a line from the object to the player that is a set color
 
     public void RemoveHealth(int damage) //remove health with no Iframes
     {
@@ -119,25 +154,18 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     public virtual void OnKill()//called when the npc dies, overridden by subclasses for customization
     {
     }
+
     public Vector2 ToRotationVector2(float f) => new((float)Math.Cos(f), (float)Math.Sin(f));//converts an angle into a Vector2
 
-    //Code for old damage detection system
-    /* public virtual void OnTriggerStay2D(Collider2D collision) 
+    public void ChangeAnimationState(string newAnimationState)
     {
-        if (collision.gameObject.name == "Item" && immune == false) //if not immune, and colliding with the item gameobject
-        {
-            if (playerAnimator.GetCurrentAnimatorStateInfo(1).IsName("Swing") == true) //if the player is swinging the sword (checks though animator)
-            {
-                OnHit(); //trigger method
-                TakeDamage(PlayerAI.Damage); //takes damage
-                StartCoroutine(EnemyImmunity()); //start EnemyImmunity coroutine
-            }
-        }
-        if (collision.gameObject.name == "Player")
-        {
-        }
+        if (currentAnimationState == newAnimationState) return; //if currentAnimationState equals newAnimationState, stop the method (prevents animations from interupting themselves)
+
+        animator.Play(newAnimationState); //play the newState animation
+
+        currentAnimationState = newAnimationState; //set currentAnimationState to newAnimationState
     }
-    */
+
     public IEnumerator Immunity()
     {
         immune = true; //set immune to true

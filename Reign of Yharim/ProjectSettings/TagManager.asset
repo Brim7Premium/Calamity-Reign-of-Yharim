@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - AstrumAureus
   - Hitbox
+  - ProjectileHitbox
   layers:
   - Default
   - TransparentFX
