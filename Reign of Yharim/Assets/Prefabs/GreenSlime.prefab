@@ -234,6 +234,10 @@ MonoBehaviour:
   damage: 0
   healthBar: {fileID: 4075834576899381061}
   rb: {fileID: 0}
+  bc2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
   ai:
   - 0
   - 0
@@ -242,6 +246,7 @@ MonoBehaviour:
   IFrames: 1
   projectiles: []
   target: {fileID: 0}
+  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}

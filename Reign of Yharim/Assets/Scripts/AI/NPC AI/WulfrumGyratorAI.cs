@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class WulfrumGyratorAI : NPC
 {
+    private bool isGrounded = false;
     private bool spotted;
+    private Color color;
 
     const string GyratorSpin = "WulfrumGyrator_spin";
     const string ChargeGyratorSpin = "WulfrumGyrator_chargespin";
@@ -16,6 +18,8 @@ public class WulfrumGyratorAI : NPC
         life = lifeMax;
         healthBar.SetMaxHealth(lifeMax);
         spotted = false;
+
+        bc2d = GetComponent<BoxCollider2D>();
     }
     public override void AI()
     {
@@ -23,7 +27,6 @@ public class WulfrumGyratorAI : NPC
         {
             animator.speed = 0.8f;
             ChangeAnimationState(GyratorSpin);
-            Color color;
 
             ai[0]++;//increment ai[0] by 1 every frame.(the framerate is capped at 60)
             velocity *= 0.97f;//this is for smoothing the movement.
@@ -40,9 +43,12 @@ public class WulfrumGyratorAI : NPC
             }
             else
             {
-                spotted = true;
-                color = Color.red;
-                velocity.x = DirectionTo(target.transform.position).x * 0.12f; //speed of 
+                if (isGrounded)
+                {
+                    spotted = true;
+                    color = Color.red;
+                    velocity.x = DirectionTo(target.transform.position).x * 0.12f; //speed of 
+                }
             }
 
             if (!IsVisibleFromCamera())
@@ -53,10 +59,30 @@ public class WulfrumGyratorAI : NPC
 
             DrawDistanceToPlayer(color);
 
-            if (GetDistanceToPlayer() > 60f && spotted == false) 
+            if (GetDistanceToPlayer() > 60f && spotted == false)
             {
                 Destroy(gameObject); //despawn the object
             }
         }
+    }
+    private void FixedUpdate()
+    {
+        float extraHeight = 0.4f; //new float extraHeight equals 0.1
+        Color rayColor; //new color variable rayColor 
+
+        RaycastHit2D hit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeight, groundLayer); //new raycast2d called hit that starts from the center of the player rigidbody, goes down, and goes the extent of the rigidbody downwards + extraHeight. it only collides with the groundlayer variable
+
+        //Debug.Log(hit.collider);
+        if (hit.collider != null) //if the raycast is hitting something;
+        {
+            isGrounded = true; //isgrounded is true
+            rayColor = Color.green; //the raycolor is green
+        }
+        else
+        {
+            isGrounded = false; //isgrounded is false
+            rayColor = Color.red; //the raycolor is red
+        }
+        Debug.DrawRay(bc2d.bounds.center, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColor); //draw the ray 
     }
 }

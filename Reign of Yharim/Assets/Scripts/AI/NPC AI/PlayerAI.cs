@@ -5,28 +5,26 @@ using UnityEngine;
 public class PlayerAI : NPC //basically, this script is a copy of the npc script and all of it's values. the main differences are that each value can be overriden from the base script for the new one, and this one can be attached to gameobjects.
 {
     private float xAxis;
-
-    private float moveSpeed = 8f;
-
     private float jumpingPower = 16f;
-
-    private bool isGrounded = false;
-
-    private bool jumpPressed;
-
-    private bool jumpReleased;
-
-    private bool attackPressed;
-
-    private bool isAttacking;
-
-    private BoxCollider2D bc2d;
+    private float hitAngle;
 
     [SerializeField] private float attackDelay = 0.3f;
-
-    [SerializeField] private LayerMask groundLayer;
-
     [SerializeField] private float jumpReleaseMod = 2;
+    [SerializeField] private float moveSpeed = 8f;
+
+    private bool isGrounded = false;
+    private bool isOnSlope;
+    private bool oldIsOnSlope;
+    private bool jumpPressed;
+    private bool jumpReleased;
+    private bool attackPressed;
+    private bool isAttacking;
+
+    private string isFacing;
+    private string slopeStatus;
+
+
+    [SerializeField] private Transform raycastFront;
 
     //constants can't be changed
     const string PlayerIdle = "Player_idle";
@@ -66,61 +64,90 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         {
             attackPressed = true; //set the bool attackPressed to true
         }
-
-        if (jumpPressed && isGrounded) //if the jump is pressed and the player is touching the ground
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower); //change the y velocty to jumpingPower
-            jumpPressed = false; //set jumpPressed to false
-            ChangeAnimationState(PlayerJump); //set the animation to PlayerJump
-        }
-        if (jumpReleased && rb.velocity.y > 0) //if jump is released and y velocity is greater than 0
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y/jumpReleaseMod); //change the y velocity to the current y velocty divided by jumpReleaseMod
-            jumpReleased = false; //set jumpReleased to false
-        }
     }
 
     public override void OnKill()
     {
-         GameObject.Find("WorldManager").SendMessage("Respawn");
+        GameObject.Find("WorldManager").SendMessage("Respawn"); //tell the worldmanager to respawn the player
     }
 
-    private void FixedUpdate() //for physics
+    private void SlopeCheckUp()
     {
-        float extraHeight = 0.2f; //new float extraHeight equals 0.1
-        Color rayColor; //new color variable rayColor 
+        RaycastHit2D raycastHit = Physics2D.Raycast(raycastFront.position, Vector2.down, 0.5f, groundLayer); //shoot a ray down from the position of the raycastFront transform. it only collides with the ground layer
 
-        RaycastHit2D hit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeight, groundLayer); //new raycast2d called hit that starts from the center of the player rigidbody, goes down, and goes the extent of the rigidbody downwards + extraHeight. it only collides with the groundlayer variable
+        oldIsOnSlope = isOnSlope; //set oldisonslope to isonslope after everything is done
 
-        //Debug.Log(hit.collider);
-        if (hit.collider != null) //if the raycast is hitting something;
+        if (isFacing == "Right") //facing right
         {
-            isGrounded = true; //isgrounded is true
-            rayColor = Color.green; //the raycolor is green
+            Debug.DrawRay(raycastFront.position, raycastHit.normal, Color.yellow); //will draw a yellow line angled away from the collision
         }
-        else
+        if (isFacing == "Left")//facing left
         {
-            isGrounded = false; //isgrounded is false
-            rayColor = Color.red; //the raycolor is red
+            Debug.DrawRay(raycastFront.position, raycastHit.normal, Color.magenta); //will draw a magenta line angled away from the collision
         }
-        Debug.DrawRay(bc2d.bounds.center, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColor); //draw the ray 
 
+        if (raycastHit) //if the ray hits
+        {
+            Debug.DrawRay(raycastFront.position, Vector2.down, Color.cyan); //draw a cyan line down from the transform position
+            hitAngle = raycastHit.normal.y;
+            isOnSlope = true; //mark isonslope as true
+        }
+        else //if the slope doesn't hit 
+        { 
+            hitAngle = raycastHit.normal.y;
+            isOnSlope = false; //mark isonslope as false
+        }
+        //Debug.Log(isOnSlope);
+        if (isOnSlope == false && oldIsOnSlope == true && hitAngle != 1.0f)
+        {
+            slopeStatus = "Exiting";
+        }
+        else if (isOnSlope == true && oldIsOnSlope == false && hitAngle != 1.0f)
+        {
+            slopeStatus = "Entering";
+        }
+        else if (isOnSlope == false && oldIsOnSlope == false)
+        {
+            slopeStatus = "None";
+        }
+
+        Debug.Log(hitAngle);
+    }
+
+    private void Movement()
+    {
         Vector2 velocity = new Vector2(0, rb.velocity.y); //create a new vector2 variable called velocty that has the values of 0 and the current y velocity
 
-        if (xAxis < 0) //if the xAxis variable is less than 0
+        if (!isOnSlope) //if not on a slope
         {
-            velocity.x = -moveSpeed; //the velocity equals negative speed
-            transform.localScale = new Vector2(-1, 1); //reverse the direction of the player
+            velocity.x = moveSpeed * xAxis; //move the movespeed either left or right depending on input
         }
-        else if (xAxis > 0) //if the xAxis variable is greater than 0
+        else if (isOnSlope && isFacing == "Right") //if on a slope and facing right
         {
-            velocity.x = moveSpeed; //the velocity equals speed
-            transform.localScale = new Vector2(1, 1); //reverse the diretion of the player
+            velocity = new Vector2(moveSpeed * xAxis, moveSpeed * xAxis); //moves the player diagonally right
         }
-        else
+        else if (isOnSlope && isFacing == "Left") //if on a slope and facing left
         {
-            velocity.x = 0; //the velocity equals 0
+            velocity = new Vector2(moveSpeed * xAxis, moveSpeed * -xAxis); //moves the player diagonally left
         }
+
+        if (slopeStatus == "Exiting")
+        {
+            velocity = Vector2.zero;
+        }
+
+        if (xAxis == 1)
+        {
+            isFacing = "Right";
+            transform.localScale = new Vector2(1, 1); //facing right
+        }
+        if (xAxis == -1)
+        {
+            isFacing = "Left";
+            transform.localScale = new Vector2(-1, 1); //facing left
+        }
+
+        rb.velocity = velocity; //the velocity of the rigidbody equals the velocity variable
 
         if (isGrounded && !isAttacking) //if the player is grounded and isn't attacking
         {
@@ -134,8 +161,9 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             }
         }
 
-        rb.velocity = velocity; //the velocity of the rigidbody equals the velocity variable
-
+    }
+    private void Attacking()
+    {
         if (attackPressed) //if the attack is pressed
         {
             attackPressed = false; //set attackPressed to false
@@ -149,12 +177,50 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
                 attackDelay = animator.GetCurrentAnimatorStateInfo(0).length; //attackDelay variable equals the length of the animation
                 Invoke("AttackComplete", attackDelay); //invoke attackcomplete after the animation is done
             }
-
         }
+    }
+
+    private void Jumping()
+    {
+        if (jumpPressed && isGrounded) //if the jump is pressed and the player is touching the ground
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower); //change the y velocty to jumpingPower
+            jumpPressed = false; //set jumpPressed to false
+            ChangeAnimationState(PlayerJump); //set the animation to PlayerJump
+        }
+        if (jumpReleased && rb.velocity.y > 0) //if jump is released and y velocity is greater than 0
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / jumpReleaseMod); //change the y velocity to the current y velocty divided by jumpReleaseMod
+            jumpReleased = false; //set jumpReleased to false
+        }
+    }
+
+    private void FixedUpdate() //for physics
+    {
+        float extraHeight = 0.2f; //new float extraHeight equals 0.1
+        Color rayColor; //new color variable rayColor 
+
+        RaycastHit2D hit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeight, groundLayer); //new raycast2d called hit that starts from the center of the player rigidbody, goes down, and goes the extent of the rigidbody downwards + extraHeight. it only collides with the groundlayer variable
+
+        if (hit.collider != null) //if the raycast is hitting something;
+        {
+            isGrounded = true; //isgrounded is true
+            rayColor = Color.green; //the raycolor is green
+        }
+        else
+        {
+            isGrounded = false; //isgrounded is false
+            rayColor = Color.red; //the raycolor is red
+        }
+        Debug.DrawRay(bc2d.bounds.center, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColor); //draw the ray 
+
+        Attacking();
+        SlopeCheckUp();
+        Movement();
+        Jumping();
     }
     void AttackComplete()
     {
         isAttacking = false; //set isAttacking to false
     }
-
 }

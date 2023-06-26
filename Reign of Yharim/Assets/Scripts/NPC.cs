@@ -16,6 +16,10 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public Rigidbody2D rb;
 
+    public BoxCollider2D bc2d;
+
+    public LayerMask groundLayer;
+
     public float[] ai = new float[4];
 
     public float IFrames = 1f;
@@ -45,7 +49,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
         objectRenderer = GetComponent<Renderer>();
 
-        animator = GetComponent<Animator>(); 
+        animator = GetComponent<Animator>();
 
         SetDefaults(); //call setdefaults
 
