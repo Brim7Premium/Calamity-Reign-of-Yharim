@@ -6,13 +6,11 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 {
     private float xAxis;
     private float jumpingPower = 16f;
-    private float hitAngle;
 
     [SerializeField] private float attackDelay = 0.3f;
     [SerializeField] private float jumpReleaseMod = 2;
     [SerializeField] private float moveSpeed = 8f;
 
-    private bool isGrounded = false;
     private bool isOnSlope;
     private bool oldIsOnSlope;
     private bool jumpPressed;
@@ -21,10 +19,12 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     private bool isAttacking;
 
     private string isFacing;
+    private bool isGrounded;
     private string slopeStatus;
 
-
     [SerializeField] private Transform raycastFront;
+    [SerializeField] private Transform footRight;
+    [SerializeField] private Transform footLeft;
 
     //constants can't be changed
     const string PlayerIdle = "Player_idle";
@@ -44,7 +44,6 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         rb = GetComponent<Rigidbody2D>(); //PlayerAI.rb equals the rigidbody2d of the player
         bc2d = GetComponent<BoxCollider2D>();
     }
-
     public override void AI() //every frame (Update)
     {
         Physics2D.IgnoreLayerCollision(10, 3); //Layer 10 (WalkThroughNPCSPlayer) will ignore collisions with layer 3 (NPCS) the child gameobjects don't use layer 10, so they can still detect collisions
@@ -65,44 +64,42 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             attackPressed = true; //set the bool attackPressed to true
         }
     }
-
     public override void OnKill()
     {
         GameObject.Find("WorldManager").SendMessage("Respawn"); //tell the worldmanager to respawn the player
     }
-
     private void SlopeCheckUp()
     {
         RaycastHit2D raycastHit = Physics2D.Raycast(raycastFront.position, Vector2.down, 0.5f, groundLayer); //shoot a ray down from the position of the raycastFront transform. it only collides with the ground layer
 
         oldIsOnSlope = isOnSlope; //set oldisonslope to isonslope after everything is done
 
-        if (isFacing == "Right") //facing right
+        if (raycastHit && raycastHit.normal.y != 1.0f) //if the ray hits and the ray isn't hitting a wall
         {
-            Debug.DrawRay(raycastFront.position, raycastHit.normal, Color.yellow); //will draw a yellow line angled away from the collision
-        }
-        if (isFacing == "Left")//facing left
-        {
-            Debug.DrawRay(raycastFront.position, raycastHit.normal, Color.magenta); //will draw a magenta line angled away from the collision
-        }
+            if (isFacing == "Right") //facing right
+            {
+                Debug.DrawRay(raycastFront.position, raycastHit.normal, Color.yellow); //will draw a yellow line angled away from the collision
+            }
+            if (isFacing == "Left")//facing left
+            {
+                Debug.DrawRay(raycastFront.position, raycastHit.normal, Color.magenta); //will draw a magenta line angled away from the collision
+            }
 
-        if (raycastHit) //if the ray hits
-        {
             Debug.DrawRay(raycastFront.position, Vector2.down, Color.cyan); //draw a cyan line down from the transform position
-            hitAngle = raycastHit.normal.y;
             isOnSlope = true; //mark isonslope as true
         }
-        else //if the slope doesn't hit 
-        { 
-            hitAngle = raycastHit.normal.y;
+        else if (!raycastHit || raycastHit.normal.y == 1.0f)//if the slope doesn't hit or the ray is hitting a wall
+        {
             isOnSlope = false; //mark isonslope as false
         }
-        //Debug.Log(isOnSlope);
-        if (isOnSlope == false && oldIsOnSlope == true && hitAngle != 1.0f)
+
+        Debug.Log(isOnSlope);
+
+        if (isOnSlope == false && oldIsOnSlope == true)
         {
             slopeStatus = "Exiting";
         }
-        else if (isOnSlope == true && oldIsOnSlope == false && hitAngle != 1.0f)
+        else if (isOnSlope == true && oldIsOnSlope == false)
         {
             slopeStatus = "Entering";
         }
@@ -111,9 +108,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             slopeStatus = "None";
         }
 
-        Debug.Log(hitAngle);
     }
-
     private void Movement()
     {
         Vector2 velocity = new Vector2(0, rb.velocity.y); //create a new vector2 variable called velocty that has the values of 0 and the current y velocity
@@ -131,10 +126,10 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             velocity = new Vector2(moveSpeed * xAxis, moveSpeed * -xAxis); //moves the player diagonally left
         }
 
-        if (slopeStatus == "Exiting")
+        /*if (slopeStatus == "Exiting")
         {
             velocity = Vector2.zero;
-        }
+        }*/
 
         if (xAxis == 1)
         {
@@ -179,7 +174,6 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             }
         }
     }
-
     private void Jumping()
     {
         if (jumpPressed && isGrounded) //if the jump is pressed and the player is touching the ground
@@ -194,25 +188,39 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             jumpReleased = false; //set jumpReleased to false
         }
     }
-
     private void FixedUpdate() //for physics
     {
         float extraHeight = 0.2f; //new float extraHeight equals 0.1
-        Color rayColor; //new color variable rayColor 
+        Color rayColorFront; //new color variable rayColor 
+        Color rayColorBack;
 
-        RaycastHit2D hit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeight, groundLayer); //new raycast2d called hit that starts from the center of the player rigidbody, goes down, and goes the extent of the rigidbody downwards + extraHeight. it only collides with the groundlayer variable
+        RaycastHit2D frontFootHit = Physics2D.Raycast(footRight.position, Vector2.down, bc2d.bounds.extents.y + extraHeight, groundLayer);
+        RaycastHit2D backFootHit = Physics2D.Raycast(footLeft.position, Vector2.down, bc2d.bounds.extents.y + extraHeight, groundLayer);
 
-        if (hit.collider != null) //if the raycast is hitting something;
+        if (frontFootHit) //if the raycast is hitting something;
         {
             isGrounded = true; //isgrounded is true
-            rayColor = Color.green; //the raycolor is green
+            rayColorFront = Color.green; //the raycolor is green
+            Debug.DrawRay(footRight.position, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColorFront);
         }
-        else
+        else if (!backFootHit)
         {
             isGrounded = false; //isgrounded is false
-            rayColor = Color.red; //the raycolor is red
+            rayColorFront = Color.red; //the raycolor is red
+            Debug.DrawRay(footRight.position, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColorFront);
         }
-        Debug.DrawRay(bc2d.bounds.center, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColor); //draw the ray 
+        if (backFootHit)
+        {
+            isGrounded = true; //isgrounded is true
+            rayColorBack = Color.green; //the raycolor is green
+            Debug.DrawRay(footLeft.position, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColorBack);
+        }
+        else if (!frontFootHit)
+        {
+            isGrounded = false; //isgrounded is false
+            rayColorBack = Color.red; //the raycolor is red
+            Debug.DrawRay(footLeft.position, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColorBack);
+        }
 
         Attacking();
         SlopeCheckUp();
