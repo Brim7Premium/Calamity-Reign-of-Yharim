@@ -10,6 +10,12 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header ("Boss Music")]
     [field: SerializeField] public EventReference DoGMusic { get; private set; }
+
+    [field: Header("Biome Music")]
+    [field: SerializeField] public EventReference Day1 { get; private set; }
+    [field: SerializeField] public EventReference Day2 { get; private set; }
+    [field: SerializeField] public EventReference Day3 { get; private set; }
+    [field: SerializeField] public EventReference Day4 { get; private set; }
     public static FMODEvents instance { get; private set; }
 
     private void Awake()
