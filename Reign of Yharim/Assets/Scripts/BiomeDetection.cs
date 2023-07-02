@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using FMOD.Studio;
 
 public class BiomeDetection : MonoBehaviour
 {
@@ -12,15 +13,6 @@ public class BiomeDetection : MonoBehaviour
     public string currentTileName;
 
     public Camera mainCam;
-
-    public AudioSource audioSource;
-    public AudioClip Desert;
-    public AudioClip Astral;
-    public AudioClip Blight;
-    public AudioClip Tundra;
-    public AudioClip Bloody;
-    public AudioClip Ocean;
-    public AudioClip Sulfur;
 
     void Update()
     {
@@ -109,7 +101,7 @@ public class BiomeDetection : MonoBehaviour
                 if (tileSpriteName == "Forest")
                 {
                     //Spawn plains/Forest
-                    //mainCam.backgroundColor = new Color(0.5622642f, 0.9691256f, 1f);
+                    mainCam.backgroundColor = new Color(0.5622642f, 0.9691256f, 1f);
                 }
                 if (tileSpriteName == "Feral")
                 {

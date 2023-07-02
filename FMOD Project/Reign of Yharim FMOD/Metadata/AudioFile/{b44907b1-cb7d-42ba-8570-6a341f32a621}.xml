@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b44907b1-cb7d-42ba-8570-6a341f32a621}">
+		<property name="assetPath">
+			<value>A Legend's Strife Dawn.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>180.71344671201814</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8c1e4af2-c3d0-4a5d-a972-951e7a00ae7e}</destination>
+		</relationship>
+	</object>
+</objects>
