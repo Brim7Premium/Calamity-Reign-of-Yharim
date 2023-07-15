@@ -29,25 +29,25 @@ public class GreenSlimeAI : NPC
             velocity *= 0.95f;//this is for smoothing the movement.
             if (ai[0] == 90.0f) //if it has been 90 frames, jump.
             {
-                curTargetPos = GetTargetDirectionX();
+                curTargetPos = GetTargetDirectionX(); //curent target position variable equals get target direction (-1 or 1 based on which direction the player is to the enemy)
 
-                ChangeAnimationState(SlimeIdle);
-                velocity.x = curTargetPos * 0.2f;
-                velocity.y = 0.2f;
+                ChangeAnimationState(SlimeIdle); //set the animation to idle
+                velocity.x = curTargetPos * 0.2f; //jump towards the player
+                velocity.y = 0.2f; //at the same time jump up
             }
-            if (ai[0] > 90.0f && !isGrounded)
+            if (ai[0] > 90.0f && !isGrounded) //while the slime isn't grounded
             {
-                velocity.x = curTargetPos * 0.1f;
+                velocity.x = curTargetPos * 0.1f; //continue going horizontally
             }
-            if (ai[0] > 100.0f && isGrounded)
+            if (ai[0] > 100.0f && isGrounded) //if ai[0] is greater than 100.0f (if this wasnt here, the slime would constantly reset when touching ground) and if the slime is grounded
             {
-                ChangeAnimationState(SlimeBounce);
-                velocity = Vector2.zero;//set velocity to 0.
+                ChangeAnimationState(SlimeBounce); //set the animation state to bounce
+                velocity = Vector2.zero; //stop the slime from moving
                 ai[0] = 0.0f;//reset ai[0] so we can jump again.
             }
-            if (GetDistanceToPlayer() > 60f)
+            if (GetDistanceToPlayer() > 60f) //if the player is too far away
             {
-                Destroy(gameObject); //despawn the object
+                Destroy(gameObject); //despawn the slime
             }
         }
         

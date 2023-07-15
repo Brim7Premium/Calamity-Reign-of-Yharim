@@ -20,17 +20,20 @@ public class GUIController : MonoBehaviour
     {
         timeText.text = GameTime.displayTime;
 
-        healthText.text = "Health: " + playerAI.life + "/" + playerAI.lifeMax;
+        if (playerAI.life >= 0)
+            healthText.text = "Health: " + playerAI.life + "/" + playerAI.lifeMax;
+        else
+            healthText.text = "Health: 0/" + playerAI.lifeMax;
 
         if (playerAI.life == playerAI.lifeMax)
         {
             ChangeAnimationState(HeartFull);
         }
-        if (playerAI.life != playerAI.lifeMax && playerAI.life != 0f)
+        if (playerAI.life != playerAI.lifeMax && playerAI.life > 0f)
         {
             ChangeAnimationState(HeartNormal);
         }
-        if (playerAI.life == 0f)
+        if (playerAI.life <= 0f)
         {
             ChangeAnimationState(HeartDeath);
         }
