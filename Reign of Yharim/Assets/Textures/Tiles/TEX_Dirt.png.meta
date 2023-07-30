@@ -1019,7 +1019,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 6, y: 6}
+        - {x: -6, y: -6}
+        - {x: -6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: 6}
       tessellationDetail: 0
       bones: []
       spriteID: 2f7b6d74e4cfb114e95b9dcedf47ebd1
@@ -1040,7 +1045,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -6}
+        - {x: -6, y: 6}
       tessellationDetail: 0
       bones: []
       spriteID: de484d0e67edf5245ac022b681e24e68
@@ -1053,8 +1063,8 @@ TextureImporter:
       name: TEX_Dirt_45
       rect:
         serializedVersion: 2
-        x: 66
-        y: 14
+        x: 1
+        y: 1
         width: 12
         height: 12
       alignment: 0
@@ -1074,8 +1084,8 @@ TextureImporter:
       name: TEX_Dirt_46
       rect:
         serializedVersion: 2
-        x: 79
-        y: 14
+        x: 14
+        y: 1
         width: 12
         height: 12
       alignment: 0
@@ -1095,7 +1105,7 @@ TextureImporter:
       name: TEX_Dirt_47
       rect:
         serializedVersion: 2
-        x: 1
+        x: 27
         y: 1
         width: 12
         height: 12
@@ -1116,48 +1126,6 @@ TextureImporter:
       name: TEX_Dirt_48
       rect:
         serializedVersion: 2
-        x: 14
-        y: 1
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea325d976a710b7458150d0aa6a49606
-      internalID: -1276602021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TEX_Dirt_49
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 1
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2abf281e583602248905e696b8d71742
-      internalID: 647143332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TEX_Dirt_50
-      rect:
-        serializedVersion: 2
         x: 40
         y: 1
         width: 12
@@ -1172,20 +1140,16 @@ TextureImporter:
         - {x: 6, y: -6}
         - {x: 6, y: -6}
         - {x: 6, y: 6}
-      - - {x: 6, y: -6}
-        - {x: 6, y: -6}
-        - {x: 6, y: -6}
-        - {x: 6, y: -6}
       tessellationDetail: 0
       bones: []
-      spriteID: 34f19088ed960724a9debce05f0b442a
-      internalID: -321653370
+      spriteID: ea325d976a710b7458150d0aa6a49606
+      internalID: -1276602021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TEX_Dirt_51
+      name: TEX_Dirt_49
       rect:
         serializedVersion: 2
         x: 53
@@ -1197,32 +1161,6 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 6, y: 6}
-        - {x: -6, y: -6}
-        - {x: -6, y: -6}
-        - {x: 6, y: -6}
-        - {x: 6, y: 6}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c76bb2f276c84249bf24f79c84e545b
-      internalID: -1604134090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TEX_Dirt_52
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 1
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
       - - {x: -6, y: 6}
         - {x: -6, y: -6}
         - {x: -6, y: -6}
@@ -1230,34 +1168,8 @@ TextureImporter:
         - {x: 6, y: 6}
       tessellationDetail: 0
       bones: []
-      spriteID: 309e273dbb7b9a34288ec377de766e0c
-      internalID: 639427067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TEX_Dirt_53
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 1
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -6, y: 6}
-        - {x: -6, y: -6}
-        - {x: 6, y: -6}
-        - {x: 6, y: -6}
-        - {x: -6, y: 6}
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2758ee21e91df7468dc335679eff1f4
-      internalID: 466819108
+      spriteID: 2abf281e583602248905e696b8d71742
+      internalID: 647143332
       vertices: []
       indices: 
       edges: []
@@ -1273,60 +1185,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Dirt_25: 1640821763
-      TEX_Dirt_8: 1530479220
-      TEX_Dirt_37: 915909233
-      TEX_Dirt_48: -1276602021
-      TEX_Dirt_42: 1998382914
-      TEX_Dirt_15: -1159589822
-      TEX_Dirt_23: -9821072
-      TEX_Dirt_6: 1171068143
-      TEX_Dirt_44: 2023570886
-      TEX_Dirt_36: -1687120792
-      TEX_Dirt_16: -976891595
-      TEX_Dirt_19: 1887171623
-      TEX_Dirt_34: 27001872
-      TEX_Dirt_31: -258249597
-      TEX_Dirt_33: 256308064
-      TEX_Dirt_1: -712859694
-      TEX_Dirt_52: 639427067
-      TEX_Dirt_30: -2027526646
-      TEX_Dirt_20: 1493878756
-      TEX_Dirt_10: 1657565640
-      TEX_Dirt_22: -660717498
-      TEX_Dirt_14: 1529766631
       TEX_Dirt_0: 2132521946
-      TEX_Dirt_24: -554066079
-      TEX_Dirt_51: -1604134090
-      TEX_Dirt_46: 1469112841
-      TEX_Dirt_9: -1023458969
-      TEX_Dirt_2: -1811190832
-      TEX_Dirt_29: -1777323381
-      TEX_Dirt_27: -897356205
-      TEX_Dirt_40: 1414013681
-      TEX_Dirt_45: -642152582
-      TEX_Dirt_47: -1783267048
-      TEX_Dirt_13: -1658154182
-      TEX_Dirt_43: 482654303
-      TEX_Dirt_50: -321653370
-      TEX_Dirt_18: 1626782014
-      TEX_Dirt_7: -312296453
-      TEX_Dirt_21: 1738972642
-      TEX_Dirt_26: 79140621
-      TEX_Dirt_49: 647143332
+      TEX_Dirt_1: -712859694
+      TEX_Dirt_10: 1657565640
       TEX_Dirt_11: 712144850
-      TEX_Dirt_35: -1320910834
-      TEX_Dirt_17: 472301707
-      TEX_Dirt_41: 1498441977
-      TEX_Dirt_28: -1754131310
-      TEX_Dirt_5: 1016366422
-      TEX_Dirt_4: 704436148
-      TEX_Dirt_53: 466819108
       TEX_Dirt_12: 741757658
-      TEX_Dirt_38: -1563108624
+      TEX_Dirt_13: -1658154182
+      TEX_Dirt_14: 1529766631
+      TEX_Dirt_15: -1159589822
+      TEX_Dirt_16: -976891595
+      TEX_Dirt_17: 472301707
+      TEX_Dirt_18: 1626782014
+      TEX_Dirt_19: 1887171623
+      TEX_Dirt_2: -1811190832
+      TEX_Dirt_20: 1493878756
+      TEX_Dirt_21: 1738972642
+      TEX_Dirt_22: -660717498
+      TEX_Dirt_23: -9821072
+      TEX_Dirt_24: -554066079
+      TEX_Dirt_25: 1640821763
+      TEX_Dirt_26: 79140621
+      TEX_Dirt_27: -897356205
+      TEX_Dirt_28: -1754131310
+      TEX_Dirt_29: -1777323381
       TEX_Dirt_3: -1721505336
+      TEX_Dirt_30: -2027526646
+      TEX_Dirt_31: -258249597
       TEX_Dirt_32: 1125344290
+      TEX_Dirt_33: 256308064
+      TEX_Dirt_34: 27001872
+      TEX_Dirt_35: -1320910834
+      TEX_Dirt_36: -1687120792
+      TEX_Dirt_37: 915909233
+      TEX_Dirt_38: -1563108624
       TEX_Dirt_39: -108037003
+      TEX_Dirt_4: 704436148
+      TEX_Dirt_40: 1414013681
+      TEX_Dirt_41: 1498441977
+      TEX_Dirt_42: 1998382914
+      TEX_Dirt_43: 482654303
+      TEX_Dirt_44: 2023570886
+      TEX_Dirt_45: -642152582
+      TEX_Dirt_46: 1469112841
+      TEX_Dirt_47: -1783267048
+      TEX_Dirt_48: -1276602021
+      TEX_Dirt_49: 647143332
+      TEX_Dirt_5: 1016366422
+      TEX_Dirt_6: 1171068143
+      TEX_Dirt_7: -312296453
+      TEX_Dirt_8: 1530479220
+      TEX_Dirt_9: -1023458969
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

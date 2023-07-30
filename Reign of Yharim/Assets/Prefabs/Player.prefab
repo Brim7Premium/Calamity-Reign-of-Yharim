@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 2160703249615966327}
   - component: {fileID: 2160703249615966330}
   - component: {fileID: 2160703249615966329}
-  - component: {fileID: 3744296059015969998}
+  - component: {fileID: 6691831411640443563}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -427,14 +427,14 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 3
+  m_AngularDrag: 0.05
+  m_GravityScale: 2.5
   m_Material: {fileID: 0}
-  m_Interpolate: 1
-  m_SleepingMode: 0
-  m_CollisionDetection: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!95 &2160703249615966327
 Animator:
@@ -487,7 +487,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  IFrames: 1
+  IFrames: 0.6
   projectiles: []
   target: {fileID: 0}
   targetPos: {x: 0, y: 0}
@@ -495,9 +495,17 @@ MonoBehaviour:
   immune: 0
   animator: {fileID: 0}
   worm: 0
-  attackDelay: 0.3
-  jumpReleaseMod: 2
-  moveSpeed: 8
+  moveSpeed: 10
+  acceleration: 12
+  deacceleration: 12
+  velPower: 0.9
+  jumpingPower: 16
+  jumpBufferTime: 0.1
+  jumpCoyoteTime: 0.15
+  jumpReleaseMod: 0.5
+  rayHeight: 1.5
+  hoverHeight: 1.71
+  cc2d: {fileID: 0}
 --- !u!114 &2160703249615966329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,8 +523,8 @@ MonoBehaviour:
   tileSprite: {fileID: 0}
   currentTileName: 
   mainCam: {fileID: 0}
---- !u!61 &3744296059015969998
-BoxCollider2D:
+--- !u!70 &6691831411640443563
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -524,23 +532,13 @@ BoxCollider2D:
   m_GameObject: {fileID: 2160703249615966320}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 59314772d0e03a94b8c20c92fe9c2ec9, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07909775, y: -0.20565414}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5833334, y: 3}
-    newSize: {x: 1.5833334, y: 3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7607174, y: 2.5886917}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.08275509, y: 0.42199975}
+  m_Size: {x: 0.5902729, y: 1.5805458}
+  m_Direction: 0
 --- !u!1 &2160703249668494348
 GameObject:
   m_ObjectHideFlags: 0
