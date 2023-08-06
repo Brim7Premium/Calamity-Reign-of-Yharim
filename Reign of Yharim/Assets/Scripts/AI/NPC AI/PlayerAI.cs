@@ -20,9 +20,12 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
     [Header("Ground Detection")]
     [SerializeField] private float rayHeight;
+    [SerializeField] private float desiredHeight;
     [SerializeField] private float hoverHeight;
     [SerializeField] private CapsuleCollider2D cc2d;
+    [SerializeField] private SpriteRenderer spr;
     private Vector2 bottomPoint;
+    private Vector2 feetPoint;
     private bool isGrounded;
     private bool isTouchingWall;
     private float facingDirection;
@@ -45,8 +48,11 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         rb = GetComponent<Rigidbody2D>(); //PlayerAI.rb equals the rigidbody2d of the player
         cc2d = GetComponent<CapsuleCollider2D>();
+        spr = GetComponent<SpriteRenderer>();
 
         rayHeight = 1.5f;
+
+        desiredHeight = Vector2.Distance(new Vector2(spr.bounds.center.x, spr.bounds.min.y), new Vector2(cc2d.bounds.center.x, cc2d.bounds.center.y));
     }
     public override void AI() //every frame (Update)
     {
@@ -56,30 +62,34 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         if (Input.GetButtonDown("Jump")) //if the jump button is being pressed...
         {
-            if (isGrounded) //and the player is grounded...
+            /*if (isGrounded) //and the player is grounded...
             {
                 StartCoroutine(JumpWithDelay()); //start the JumpWithDelay coroutine
             }
+            */
         }
 
         if (Input.GetButtonUp("Jump")) //if the jump button is released...
         {
-            OnJumpUp(); //trigger the OnJumpUp method
+            //OnJumpUp(); //trigger the OnJumpUp method
         }
 
         bottomPoint = new Vector2(cc2d.bounds.center.x, cc2d.bounds.min.y); //the bottompoint variable equals the bottommost y point and center x point of the capsule collider
+
+        feetPoint = new Vector2(spr.bounds.center.x, spr.bounds.min.y);
 
         //Debug.Log("IsJumping: " + isJumping + " IsFalling: " + isFalling);
 
         //Debug.Log(rb.velocity.y);
 
-        if (isGrounded)
+        /* if (isGrounded)
             isFalling = false;
 
         if (rb.velocity.y < -3f)
         {
             isFalling = true;
         }
+        */
     }
     public override void OnKill()
     {
@@ -95,8 +105,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
 
-        if (!isTouchingWall)
-            rb.AddForce(movement * Vector2.right);
+        rb.AddForce(movement * Vector2.right);
 
         animator.speed = Mathf.Abs(targetSpeed / 10);
 
@@ -122,7 +131,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             facingDirection = -1f;
         }
     }
-    private void Jump()
+    /*private void Jump()
     {
         rb.AddForce(Vector2.up * jumpingPower, ForceMode2D.Impulse); //the jumping script
         isJumping = true; //set isjumping to true
@@ -134,13 +143,13 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             rb.AddForce(Vector2.down * rb.velocity.y * (1 - jumpReleaseMod), ForceMode2D.Impulse); //apply downward force to cut the player's jump
         }
     }
+    */
     private void FixedUpdate() //for physics
     {
         #region GroundDetection
         Color rayCol;
         Color wallCol;
         RaycastHit2D hit = Physics2D.Raycast(bottomPoint, Vector2.down, rayHeight, groundLayer);
-        RaycastHit2D wallDetect = Physics2D.Raycast(bottomPoint, Vector2.right * facingDirection, 0.5f, groundLayer);
 
         if (hit)
         {
@@ -148,32 +157,22 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             isGrounded = true;
             rb.gravityScale = 0f;
             transform.position = new Vector2(transform.position.x, hit.point.y + hoverHeight);
-            Debug.Log(hit.point.y);
+            Debug.Log(feetPoint.y);
         }
         else
         {
             rayCol = Color.red;
-            isGrounded = false;
             rb.gravityScale = 2.5f;
+            isGrounded = false;
         }
-
-        if (wallDetect)
-        {
-            wallCol = Color.green;
-            isTouchingWall = true;
-        }
-        else
-        {
-            wallCol = Color.red;
-            isTouchingWall = false;
-        }
-        Debug.DrawLine(bottomPoint, bottomPoint + Vector2.down * rayHeight, rayCol);
-        Debug.DrawLine(bottomPoint, bottomPoint + Vector2.right * facingDirection * 1f, wallCol);
+      
+        //Debug.DrawLine(bottomPoint, bottomPoint + Vector2.down * rayHeight, rayCol);
+        Debug.DrawLine(new Vector2(spr.bounds.center.x, spr.bounds.min.y), new Vector2(cc2d.bounds.center.x, cc2d.bounds.center.y), Color.blue); //draws a line from the center of the capsule collider to the player's sprite's feet
         #endregion
 
         Movement();
     }
-    private IEnumerator JumpWithDelay() //this entire thing just triggers jump and waits until the player is falling to change the variable
+    /*private IEnumerator JumpWithDelay() //this entire thing just triggers jump and waits until the player is falling to change the variable
     {
         Jump(); //trigger the jump method
 
@@ -184,4 +183,5 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         isJumping = false; //set isjumping to false (doesn't trigger until the above loop is done)
     }
+    */
 }

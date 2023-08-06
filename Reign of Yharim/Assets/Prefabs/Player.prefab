@@ -500,12 +500,11 @@ MonoBehaviour:
   deacceleration: 12
   velPower: 0.9
   jumpingPower: 16
-  jumpBufferTime: 0.1
-  jumpCoyoteTime: 0.15
   jumpReleaseMod: 0.5
   rayHeight: 1.5
   hoverHeight: 1.71
   cc2d: {fileID: 0}
+  spr: {fileID: 0}
 --- !u!114 &2160703249615966329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,8 +535,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.08275509, y: 0.42199975}
-  m_Size: {x: 0.5902729, y: 1.5805458}
+  m_Offset: {x: -0.08275509, y: 0.5159848}
+  m_Size: {x: 0.5902729, y: 1.3925757}
   m_Direction: 0
 --- !u!1 &2160703249668494348
 GameObject:
