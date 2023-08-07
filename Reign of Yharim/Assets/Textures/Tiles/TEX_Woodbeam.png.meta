@@ -1,0 +1,1331 @@
+fileFormatVersion: 2
+guid: 378f3aa228064a04fbb0cbc41ba8ea06
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TEX_Woodbeam_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619d142cc6613564098ecd4c5558941f
+      internalID: 382372295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7414dfa5112770d459bc95c7555b9ea7
+      internalID: 1825133566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83eff23f049583443bf7e38bd028552a
+      internalID: 1423796738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26e07b1bd573f74db15756a8ca3816c
+      internalID: -196307344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095b88e47e63acf4ab8629dc0242f96e
+      internalID: 14399517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1e682ebffb12147a6407c8635f4df4
+      internalID: 1740479636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_6
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588f1bb085ab9de41b0efad9c6c73ee4
+      internalID: -723205752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_7
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b052932b377eae4383bc385e02a875e
+      internalID: -2053621757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170d59a8181defc47a8f21999e196c02
+      internalID: 12525126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f911aaf2e4742ad4184ccd0049fe9fa1
+      internalID: 945926988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_10
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7bc2549549b4643b8fa5267076c28c
+      internalID: 2026520447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7681a2f25d4a6ed419390e318ed968a0
+      internalID: -102438605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_12
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998e75372c95f244a824c9b61cfe3950
+      internalID: -1889605412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_13
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf942eef914605543ba0d0caf87b40d7
+      internalID: 419675893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_14
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b87a03aac0452409b2cea44ce9e124
+      internalID: 1843556725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14cddce8426f8c8409bd40e0d9312646
+      internalID: -2007097828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe1d715df679db4ea50bfd73586a45b
+      internalID: -1573367514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_17
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1673798d1e8e274ca96e543b0c9edd7
+      internalID: -1833098507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_18
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559aa01e8b382d542a96863d41026b08
+      internalID: 983212191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1709154def3aacf46bc961ae476fd7ca
+      internalID: -982440855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_20
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a75fdbbff8ea04caa8f308adc0f883
+      internalID: -425137041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_21
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089a888a483d8974b8eb31e0af5d0116
+      internalID: -1877447223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_22
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ba0d4d420d09547a7e8cefc3d84f27
+      internalID: -1593305113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_23
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7285efe70e1ff3045b45829033a22af9
+      internalID: 1912824273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9174d24a60904ea4299400a40266da18
+      internalID: -44144431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_25
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52aa64615d8eb7346b7a82dc400ebb8d
+      internalID: 1701885806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_26
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213dbc11eba1b2d43ace0027bfc53d7f
+      internalID: 1543121088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2132cffb48bc8734484d57869e05e364
+      internalID: 1093753347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_28
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b22169b938ce942ab498a9fe272687
+      internalID: -1092624918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_29
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7292ab0c821b0479148f3ec2aabc3c
+      internalID: -1201903196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_30
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e405d403b43723a469c879cfb3beea8b
+      internalID: 909659896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_31
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904f1ddc52624a94e8234d1a9a3b71d0
+      internalID: -1368853969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9087b67d89e025046bd0ad5be85473e0
+      internalID: -1110721347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_33
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba477ac91a42ea46adb7e17cca90aca
+      internalID: -1215471280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_34
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2110b1c6725e3144a97d36004db618f0
+      internalID: 2104132739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_35
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d937849cff5074c9c188a64dd29607
+      internalID: 699828300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_36
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3aa381e12b3ed4a9c93fc7b89aa8c1
+      internalID: -37465963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_37
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49849fca32b1954418dc1efdcd29d64a
+      internalID: 1250972910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_38
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfd477d48e8799438f094837a41a295
+      internalID: -1908928568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_39
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232e9e3856ea5a743931f4f7b32a8ce9
+      internalID: 1357065291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1244ef3399cd75479e01a5b090c133b
+      internalID: -129361441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_41
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459f92d492f8e464bb11f086e8ce476a
+      internalID: 715249796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_42
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63baaf998756081419fe755f9d79ea97
+      internalID: -370633654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_43
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b04597bf7d88b448762f5dee859fb3
+      internalID: 1310673979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_44
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ff6327b82ed1742b5c2f88c6dd45fd
+      internalID: 1024137899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_45
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77db9546c0185e49bde1ce1a0920da4
+      internalID: -1195269965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_46
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de4528d801c2e4489afb724a535f69a
+      internalID: 401101742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_47
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbc1b85a1b4a3c4790fbd6eed416596
+      internalID: -1167282392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_48
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463cc1e8944c86d45bf88a4b89977579
+      internalID: -956149884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_49
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e62fd606a86a74f9a251ebdf380b33
+      internalID: 1129867438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_50
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: 6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47808278e00550b4db96f3bfebb9977d
+      internalID: 1091352813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_51
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: 6}
+        - {x: -6, y: -6}
+        - {x: -6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae333853218c5948bf7984fe60ed006
+      internalID: 339706554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_52
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -6}
+        - {x: -6, y: -6}
+        - {x: 6, y: 6}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e25282591decb340ab73cc3da4067f5
+      internalID: -1202837579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Woodbeam_53
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -6}
+        - {x: -6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1104be9d4647b2c4e984540823ba134b
+      internalID: -1412786163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TEX_Woodbeam_0: 382372295
+      TEX_Woodbeam_1: 1825133566
+      TEX_Woodbeam_10: 2026520447
+      TEX_Woodbeam_11: -102438605
+      TEX_Woodbeam_12: -1889605412
+      TEX_Woodbeam_13: 419675893
+      TEX_Woodbeam_14: 1843556725
+      TEX_Woodbeam_15: -2007097828
+      TEX_Woodbeam_16: -1573367514
+      TEX_Woodbeam_17: -1833098507
+      TEX_Woodbeam_18: 983212191
+      TEX_Woodbeam_19: -982440855
+      TEX_Woodbeam_2: 1423796738
+      TEX_Woodbeam_20: -425137041
+      TEX_Woodbeam_21: -1877447223
+      TEX_Woodbeam_22: -1593305113
+      TEX_Woodbeam_23: 1912824273
+      TEX_Woodbeam_24: -44144431
+      TEX_Woodbeam_25: 1701885806
+      TEX_Woodbeam_26: 1543121088
+      TEX_Woodbeam_27: 1093753347
+      TEX_Woodbeam_28: -1092624918
+      TEX_Woodbeam_29: -1201903196
+      TEX_Woodbeam_3: -196307344
+      TEX_Woodbeam_30: 909659896
+      TEX_Woodbeam_31: -1368853969
+      TEX_Woodbeam_32: -1110721347
+      TEX_Woodbeam_33: -1215471280
+      TEX_Woodbeam_34: 2104132739
+      TEX_Woodbeam_35: 699828300
+      TEX_Woodbeam_36: -37465963
+      TEX_Woodbeam_37: 1250972910
+      TEX_Woodbeam_38: -1908928568
+      TEX_Woodbeam_39: 1357065291
+      TEX_Woodbeam_4: 14399517
+      TEX_Woodbeam_40: -129361441
+      TEX_Woodbeam_41: 715249796
+      TEX_Woodbeam_42: -370633654
+      TEX_Woodbeam_43: 1310673979
+      TEX_Woodbeam_44: 1024137899
+      TEX_Woodbeam_45: -1195269965
+      TEX_Woodbeam_46: 401101742
+      TEX_Woodbeam_47: -1167282392
+      TEX_Woodbeam_48: -956149884
+      TEX_Woodbeam_49: 1129867438
+      TEX_Woodbeam_5: 1740479636
+      TEX_Woodbeam_50: 1091352813
+      TEX_Woodbeam_51: 339706554
+      TEX_Woodbeam_52: -1202837579
+      TEX_Woodbeam_53: -1412786163
+      TEX_Woodbeam_6: -723205752
+      TEX_Woodbeam_7: -2053621757
+      TEX_Woodbeam_8: 12525126
+      TEX_Woodbeam_9: 945926988
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

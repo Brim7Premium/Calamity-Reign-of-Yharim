@@ -1,0 +1,1331 @@
+fileFormatVersion: 2
+guid: 8f81a3dd3958aa349b57019ce1d02d09
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TEX_Redshingles_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09e888f3eb6f2a4b8a9fdd5f63021c9
+      internalID: -1772470976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e662191df10ea42bfe469f1d304e5b
+      internalID: 33588890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18991a8747ec854b8ee09d14f6c41a6
+      internalID: -2087168006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2fb84689828b3458bf37f8d215c89b
+      internalID: -1538286631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210f884f9f0dd684c903449452d2bc83
+      internalID: -1891146422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dcd9767021e7164ab92a1ac3cd53de0
+      internalID: -1783400484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_6
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7d10b698fccb349bd5497af7874357
+      internalID: 752119526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_7
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e6c42b0763c1f4b8f2ebdc2e34ea59
+      internalID: -31268477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c25158a7daa2da8409183af10602db87
+      internalID: 1596457225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2234de94d875744be5962b17553bf6
+      internalID: 609018766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_10
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66d7c1fea1b7584f843fd44ff39d5f7
+      internalID: -209222629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4c7b291270f4b48bc281293af961df
+      internalID: -1544331148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_12
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f874ef98c76350f498c5decdebbe91da
+      internalID: -125562420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_13
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e9e6bda919c2f469d17e3bd78e1df7
+      internalID: -1445322198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_14
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469f951c0a27a4f43a0bb448b0e66e97
+      internalID: -613105584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f434427ebe4ff741acf2cc1c67ab9d0
+      internalID: 2100961537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ec33c6687b46e4eb2603014b0ea5a9
+      internalID: -1131753662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_17
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afb47d84765dd8408a764029a572d92
+      internalID: 1372440579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_18
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb80872f3c99ca4c803edd2d6f127a6
+      internalID: 1924331367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c4d4dfdc29b6046816c8e8652760f8
+      internalID: 985267936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_20
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84988786cc6d30d4c92b7b9d71296535
+      internalID: -97619969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_21
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8412a7c1aba3c7b4a817d766b620ae40
+      internalID: 980037259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_22
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784b1069104d1484da1469b493f5f67a
+      internalID: -1456219766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_23
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14e53a191b5b5d45b68d3bf746ae700
+      internalID: 665358092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc925e4c50870ca43a30c576242fbc38
+      internalID: 1775200715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_25
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9974a4975c0b6e41b521b51a777e120
+      internalID: 1111170374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_26
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13575152f67485549b874d0bfd56db8a
+      internalID: -1505875480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9859595ed72ef3646b233561d5489d33
+      internalID: -1190122213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_28
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cfffa18d9ba51d4481e5034e55a4698
+      internalID: 925801993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_29
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609e140d2397c6a44af1c51cb122ac57
+      internalID: -1208346157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_30
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21b91082f525af43984f65f4e451f75
+      internalID: 2083100357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_31
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 40
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02ae7ff3481aa444a814c9b14a94af6
+      internalID: -76430247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9957cb0acbd9fd141b31fe892ba63b6a
+      internalID: -1641218762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_33
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5e94ccd6ec28645adc0558edf803e7
+      internalID: 1685703037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_34
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5af8fb3e6d3804f99a86fadc32dcdf
+      internalID: 191135886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_35
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a1aea3cda4b9b43a53388cbaab4f6a
+      internalID: 1419761770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_36
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf859501d5d45141bcfc8ea4ddfd53c
+      internalID: 963293718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_37
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48989c4230f71d14691ca84779b1adaf
+      internalID: 1351814062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_38
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93da8f4857c940d4188872d766860ab9
+      internalID: 150833915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_39
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 27
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7cb4055634487f4ebf216692ba9885e
+      internalID: -564319999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215676ac525a0444d9e5bda1c678584e
+      internalID: 2138368618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_41
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5338ea92a172bf843a20c4ecf8366746
+      internalID: -1239288045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_42
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f5cbd98eee1394aaa0cb44b9eb0e7e
+      internalID: 1172252930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_43
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b2842b618887b44b764fd5ad995edb
+      internalID: -10060491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_44
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ceaba4763f7cd445a17fa3963121978
+      internalID: -886115277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_45
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807b30e6badefc448a24c39dd0cdef6c
+      internalID: -2062555378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_46
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c164108404c58748b0e52e9957e7f13
+      internalID: 46997951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_47
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4abe078b39413c94c8fb6abf1afa5813
+      internalID: 326630922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_48
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8ea7b4cc80f1646a0efdf23c03f354
+      internalID: 1495476150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_49
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bf49f3067c4134d9ca9882368d3a7b
+      internalID: -287976981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_50
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: 6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270c568a4a3016a43ba531e895c0121b
+      internalID: -12954568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_51
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: 6}
+        - {x: -6, y: -6}
+        - {x: -6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7848f0ec00bdb4b8294fce22be58f9
+      internalID: -1553720281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_52
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -6}
+        - {x: -6, y: -6}
+        - {x: 6, y: 6}
+        - {x: 6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0283c6457d4664e41b9788cb37cf0dec
+      internalID: -59290239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_Redshingles_53
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -6}
+        - {x: -6, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490d3c5152cd5b24fa5680a3c5ab58af
+      internalID: 587876422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TEX_Redshingles_0: -1772470976
+      TEX_Redshingles_1: 33588890
+      TEX_Redshingles_10: -209222629
+      TEX_Redshingles_11: -1544331148
+      TEX_Redshingles_12: -125562420
+      TEX_Redshingles_13: -1445322198
+      TEX_Redshingles_14: -613105584
+      TEX_Redshingles_15: 2100961537
+      TEX_Redshingles_16: -1131753662
+      TEX_Redshingles_17: 1372440579
+      TEX_Redshingles_18: 1924331367
+      TEX_Redshingles_19: 985267936
+      TEX_Redshingles_2: -2087168006
+      TEX_Redshingles_20: -97619969
+      TEX_Redshingles_21: 980037259
+      TEX_Redshingles_22: -1456219766
+      TEX_Redshingles_23: 665358092
+      TEX_Redshingles_24: 1775200715
+      TEX_Redshingles_25: 1111170374
+      TEX_Redshingles_26: -1505875480
+      TEX_Redshingles_27: -1190122213
+      TEX_Redshingles_28: 925801993
+      TEX_Redshingles_29: -1208346157
+      TEX_Redshingles_3: -1538286631
+      TEX_Redshingles_30: 2083100357
+      TEX_Redshingles_31: -76430247
+      TEX_Redshingles_32: -1641218762
+      TEX_Redshingles_33: 1685703037
+      TEX_Redshingles_34: 191135886
+      TEX_Redshingles_35: 1419761770
+      TEX_Redshingles_36: 963293718
+      TEX_Redshingles_37: 1351814062
+      TEX_Redshingles_38: 150833915
+      TEX_Redshingles_39: -564319999
+      TEX_Redshingles_4: -1891146422
+      TEX_Redshingles_40: 2138368618
+      TEX_Redshingles_41: -1239288045
+      TEX_Redshingles_42: 1172252930
+      TEX_Redshingles_43: -10060491
+      TEX_Redshingles_44: -886115277
+      TEX_Redshingles_45: -2062555378
+      TEX_Redshingles_46: 46997951
+      TEX_Redshingles_47: 326630922
+      TEX_Redshingles_48: 1495476150
+      TEX_Redshingles_49: -287976981
+      TEX_Redshingles_5: -1783400484
+      TEX_Redshingles_50: -12954568
+      TEX_Redshingles_51: -1553720281
+      TEX_Redshingles_52: -59290239
+      TEX_Redshingles_53: 587876422
+      TEX_Redshingles_6: 752119526
+      TEX_Redshingles_7: -31268477
+      TEX_Redshingles_8: 1596457225
+      TEX_Redshingles_9: 609018766
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

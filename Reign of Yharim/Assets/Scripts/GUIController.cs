@@ -5,7 +5,8 @@ using TMPro;
 
 public class GUIController : MonoBehaviour
 {
-    public TMP_Text guiText;
+    public TMP_Text timeText;
+    public TMP_Text healthText;
     public Animator guiHeartAnimator;
     public PlayerAI playerAI;
 
@@ -17,16 +18,22 @@ public class GUIController : MonoBehaviour
 
     void Update()
     {
-        guiText.text = GameTime.displayTime;
+        timeText.text = GameTime.displayTime;
+
+        if (playerAI.life >= 0)
+            healthText.text = "Health: " + playerAI.life + "/" + playerAI.lifeMax;
+        else
+            healthText.text = "Health: 0/" + playerAI.lifeMax;
+
         if (playerAI.life == playerAI.lifeMax)
         {
             ChangeAnimationState(HeartFull);
         }
-        if (playerAI.life != playerAI.lifeMax && playerAI.life != 0f)
+        if (playerAI.life != playerAI.lifeMax && playerAI.life > 0f)
         {
             ChangeAnimationState(HeartNormal);
         }
-        if (playerAI.life == 0f)
+        if (playerAI.life <= 0f)
         {
             ChangeAnimationState(HeartDeath);
         }
