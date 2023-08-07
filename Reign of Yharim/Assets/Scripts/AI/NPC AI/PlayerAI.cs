@@ -1,30 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PlayerAI : NPC //basically, this script is a copy of the npc script and all of it's values. the main differences are that each value can be overriden from the base script for the new one, and this one can be attached to gameobjects.
 {
-    private float xAxis;
-    private float jumpingPower = 16f;
-
-    [SerializeField] private float attackDelay = 0.3f;
-    [SerializeField] private float jumpReleaseMod = 2;
+    [Header("Movement")]
     [SerializeField] private float moveSpeed = 8f;
+    [SerializeField] private float acceleration;
+    [SerializeField] private float deacceleration;
+    [SerializeField] private float velPower;
+    private float xAxis;
 
-    private bool isOnSlope;
-    private bool oldIsOnSlope;
-    private bool jumpPressed;
-    private bool jumpReleased;
-    private bool attackPressed;
-    private bool isAttacking;
+    [Header("Jumping")]
+    [SerializeField] private float jumpingPower = 16f;
+    [SerializeField] private float jumpReleaseMod;
+    private bool isJumping;
+    private bool isFalling;
 
-    private string isFacing;
+    [Header("Ground Detection")]
+    [SerializeField] private float rayHeight;
+    [SerializeField] private float desiredHeight;
+    [SerializeField] private float hoverHeight;
+    [SerializeField] private CapsuleCollider2D cc2d;
+    [SerializeField] private SpriteRenderer spr;
+    private Vector2 bottomPoint;
+    private Vector2 feetPoint;
     private bool isGrounded;
-    private string slopeStatus;
-
-    [SerializeField] private Transform raycastFront;
-    [SerializeField] private Transform footRight;
-    [SerializeField] private Transform footLeft;
+    private bool isTouchingWall;
+    private float facingDirection;
 
     //constants can't be changed
     const string PlayerIdle = "Player_idle";
@@ -32,6 +36,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     const string PlayerJump = "Player_jump";
     const string PlayerRun = "Player_run";
     const string PlayerAttack = "Player_attack";
+
 
     public override void SetDefaults()
     {
@@ -42,109 +47,69 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         healthBar.SetMaxHealth(lifeMax);
 
         rb = GetComponent<Rigidbody2D>(); //PlayerAI.rb equals the rigidbody2d of the player
-        bc2d = GetComponent<BoxCollider2D>();
+        cc2d = GetComponent<CapsuleCollider2D>();
+        spr = GetComponent<SpriteRenderer>();
+
+        rayHeight = 1.5f;
+
+        desiredHeight = Vector2.Distance(new Vector2(spr.bounds.center.x, spr.bounds.min.y), new Vector2(cc2d.bounds.center.x, cc2d.bounds.center.y));
     }
     public override void AI() //every frame (Update)
     {
         Physics2D.IgnoreLayerCollision(10, 3); //Layer 10 (WalkThroughNPCSPlayer) will ignore collisions with layer 3 (NPCS) the child gameobjects don't use layer 10, so they can still detect collisions
 
-        xAxis = Input.GetAxisRaw("Horizontal"); //sets horizontal to -1 or 1 based on the player's input
+        xAxis = Input.GetAxis("Horizontal"); //sets horizontal to -1 or 1 based on the player's input
 
-        if (Input.GetButtonDown("Jump")) //if the jump button is pressed
+        if (Input.GetButtonDown("Jump")) //if the jump button is being pressed...
         {
-            if (isGrounded)
-                jumpPressed = true; //set the bool jumpPressed to true
+            /*if (isGrounded) //and the player is grounded...
+            {
+                StartCoroutine(JumpWithDelay()); //start the JumpWithDelay coroutine
+            }
+            */
         }
-        if (Input.GetButtonUp("Jump")) //if the jump button is released
+
+        if (Input.GetButtonUp("Jump")) //if the jump button is released...
         {
-            jumpReleased = true; //set the bool jumpReleased to true
+            //OnJumpUp(); //trigger the OnJumpUp method
         }
-        if (Input.GetButtonDown("Fire1")) //if the Fire1 button is pressed
+
+        bottomPoint = new Vector2(cc2d.bounds.center.x, cc2d.bounds.min.y); //the bottompoint variable equals the bottommost y point and center x point of the capsule collider
+
+        feetPoint = new Vector2(spr.bounds.center.x, spr.bounds.min.y);
+
+        //Debug.Log("IsJumping: " + isJumping + " IsFalling: " + isFalling);
+
+        //Debug.Log(rb.velocity.y);
+
+        /* if (isGrounded)
+            isFalling = false;
+
+        if (rb.velocity.y < -3f)
         {
-            attackPressed = true; //set the bool attackPressed to true
+            isFalling = true;
         }
+        */
     }
     public override void OnKill()
     {
         GameObject.Find("WorldManager").SendMessage("Respawn"); //tell the worldmanager to respawn the player
     }
-    private void SlopeCheckUp()
-    {
-        RaycastHit2D raycastHit = Physics2D.Raycast(raycastFront.position, Vector2.down, 0.5f, groundLayer); //shoot a ray down from the position of the raycastFront transform. it only collides with the ground layer
-
-        oldIsOnSlope = isOnSlope; //set oldisonslope to isonslope after everything is done
-
-        if (raycastHit && raycastHit.normal.y != 1.0f) //if the ray hits and the ray isn't hitting a wall
-        {
-            if (isFacing == "Right") //facing right
-            {
-                Debug.DrawRay(raycastFront.position, raycastHit.normal, Color.yellow); //will draw a yellow line angled away from the collision
-            }
-            if (isFacing == "Left")//facing left
-            {
-                Debug.DrawRay(raycastFront.position, raycastHit.normal, Color.magenta); //will draw a magenta line angled away from the collision
-            }
-
-            Debug.DrawRay(raycastFront.position, Vector2.down, Color.cyan); //draw a cyan line down from the transform position
-            isOnSlope = true; //mark isonslope as true
-        }
-        else if (!raycastHit || raycastHit.normal.y == 1.0f)//if the slope doesn't hit or the ray is hitting a wall
-        {
-            isOnSlope = false; //mark isonslope as false
-        }
-
-        Debug.Log(isOnSlope);
-
-        if (isOnSlope == false && oldIsOnSlope == true)
-        {
-            slopeStatus = "Exiting";
-        }
-        else if (isOnSlope == true && oldIsOnSlope == false)
-        {
-            slopeStatus = "Entering";
-        }
-        else if (isOnSlope == false && oldIsOnSlope == false)
-        {
-            slopeStatus = "None";
-        }
-
-    }
     private void Movement()
     {
-        Vector2 velocity = new Vector2(0, rb.velocity.y); //create a new vector2 variable called velocty that has the values of 0 and the current y velocity
+        float targetSpeed = xAxis * moveSpeed;
 
-        if (!isOnSlope) //if not on a slope
-        {
-            velocity.x = moveSpeed * xAxis; //move the movespeed either left or right depending on input
-        }
-        else if (isOnSlope && isFacing == "Right") //if on a slope and facing right
-        {
-            velocity = new Vector2(moveSpeed * xAxis, moveSpeed * xAxis); //moves the player diagonally right
-        }
-        else if (isOnSlope && isFacing == "Left") //if on a slope and facing left
-        {
-            velocity = new Vector2(moveSpeed * xAxis, moveSpeed * -xAxis); //moves the player diagonally left
-        }
+        float speedDif = targetSpeed - rb.velocity.x;
 
-        /*if (slopeStatus == "Exiting")
-        {
-            velocity = Vector2.zero;
-        }*/
+        float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : deacceleration;
 
-        if (xAxis == 1)
-        {
-            isFacing = "Right";
-            transform.localScale = new Vector2(1, 1); //facing right
-        }
-        if (xAxis == -1)
-        {
-            isFacing = "Left";
-            transform.localScale = new Vector2(-1, 1); //facing left
-        }
+        float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
 
-        rb.velocity = velocity; //the velocity of the rigidbody equals the velocity variable
+        rb.AddForce(movement * Vector2.right);
 
-        if (isGrounded && !isAttacking) //if the player is grounded and isn't attacking
+        animator.speed = Mathf.Abs(targetSpeed / 10);
+
+        if (isGrounded) //if the player is grounded and isn't attacking
         {
             if (xAxis != 0) //if the player isn't still
             {
@@ -155,80 +120,68 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
                 ChangeAnimationState(PlayerIdle); //set the animation to idle
             }
         }
-
+        if (xAxis > 0)
+        {
+            transform.localScale = new Vector2(1, 1); //facing right
+            facingDirection = 1f;
+        }
+        if (xAxis < 0)
+        {
+            transform.localScale = new Vector2(-1, 1); //facing left
+            facingDirection = -1f;
+        }
     }
-    private void Attacking()
+    /*private void Jump()
     {
-        if (attackPressed) //if the attack is pressed
-        {
-            attackPressed = false; //set attackPressed to false
-            if (!isAttacking) //if isAttacking isn't true
-            {
-                isAttacking = true; //set isAttacking to true
-                if (isGrounded) //if the player is grounded
-                {
-                    ChangeAnimationState(PlayerAttack); //set the animation to PlayerAttack
-                }
-                attackDelay = animator.GetCurrentAnimatorStateInfo(0).length; //attackDelay variable equals the length of the animation
-                Invoke("AttackComplete", attackDelay); //invoke attackcomplete after the animation is done
-            }
-        }
+        rb.AddForce(Vector2.up * jumpingPower, ForceMode2D.Impulse); //the jumping script
+        isJumping = true; //set isjumping to true
     }
-    private void Jumping()
+    public void OnJumpUp()
     {
-        if (jumpPressed && isGrounded) //if the jump is pressed and the player is touching the ground
+        if (isJumping) //if the player is jumping
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower); //change the y velocty to jumpingPower
-            jumpPressed = false; //set jumpPressed to false
-            ChangeAnimationState(PlayerJump); //set the animation to PlayerJump
-        }
-        if (jumpReleased && rb.velocity.y > 0) //if jump is released and y velocity is greater than 0
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / jumpReleaseMod); //change the y velocity to the current y velocty divided by jumpReleaseMod
-            jumpReleased = false; //set jumpReleased to false
+            rb.AddForce(Vector2.down * rb.velocity.y * (1 - jumpReleaseMod), ForceMode2D.Impulse); //apply downward force to cut the player's jump
         }
     }
+    */
     private void FixedUpdate() //for physics
     {
-        float extraHeight = 0.2f; //new float extraHeight equals 0.1
-        Color rayColorFront; //new color variable rayColor 
-        Color rayColorBack;
+        #region GroundDetection
+        Color rayCol;
+        Color wallCol;
+        RaycastHit2D hit = Physics2D.Raycast(bottomPoint, Vector2.down, rayHeight, groundLayer);
 
-        RaycastHit2D frontFootHit = Physics2D.Raycast(footRight.position, Vector2.down, bc2d.bounds.extents.y + extraHeight, groundLayer);
-        RaycastHit2D backFootHit = Physics2D.Raycast(footLeft.position, Vector2.down, bc2d.bounds.extents.y + extraHeight, groundLayer);
+        if (hit)
+        {
+            rayCol = Color.green;
+            isGrounded = true;
+            rb.gravityScale = 0f;
+            transform.position = new Vector2(transform.position.x, hit.point.y + hoverHeight);
+            Debug.Log(feetPoint.y);
+        }
+        else
+        {
+            rayCol = Color.red;
+            rb.gravityScale = 2.5f;
+            isGrounded = false;
+        }
+      
+        //Debug.DrawLine(bottomPoint, bottomPoint + Vector2.down * rayHeight, rayCol);
+        Debug.DrawLine(new Vector2(spr.bounds.center.x, spr.bounds.min.y), new Vector2(cc2d.bounds.center.x, cc2d.bounds.center.y), Color.blue); //draws a line from the center of the capsule collider to the player's sprite's feet
+        #endregion
 
-        if (frontFootHit) //if the raycast is hitting something;
-        {
-            isGrounded = true; //isgrounded is true
-            rayColorFront = Color.green; //the raycolor is green
-            Debug.DrawRay(footRight.position, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColorFront);
-        }
-        else if (!backFootHit)
-        {
-            isGrounded = false; //isgrounded is false
-            rayColorFront = Color.red; //the raycolor is red
-            Debug.DrawRay(footRight.position, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColorFront);
-        }
-        if (backFootHit)
-        {
-            isGrounded = true; //isgrounded is true
-            rayColorBack = Color.green; //the raycolor is green
-            Debug.DrawRay(footLeft.position, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColorBack);
-        }
-        else if (!frontFootHit)
-        {
-            isGrounded = false; //isgrounded is false
-            rayColorBack = Color.red; //the raycolor is red
-            Debug.DrawRay(footLeft.position, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColorBack);
-        }
-
-        Attacking();
-        SlopeCheckUp();
         Movement();
-        Jumping();
     }
-    void AttackComplete()
+    /*private IEnumerator JumpWithDelay() //this entire thing just triggers jump and waits until the player is falling to change the variable
     {
-        isAttacking = false; //set isAttacking to false
+        Jump(); //trigger the jump method
+
+        while (rb.velocity.y > 0) //while the player is still going up
+        {
+            yield return null; //return null (creates a loop until rb.velocity is less than ot equal to zero
+        }
+
+        isJumping = false; //set isjumping to false (doesn't trigger until the above loop is done)
     }
+    */
 }
