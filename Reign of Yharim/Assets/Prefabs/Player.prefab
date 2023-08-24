@@ -501,10 +501,10 @@ MonoBehaviour:
   velPower: 0.9
   jumpingPower: 16
   jumpReleaseMod: 0.5
-  rayHeight: 1.5
-  hoverHeight: 1.71
   cc2d: {fileID: 0}
   spr: {fileID: 0}
+  groundRayLength: 1
+  hoverOffset: 6
 --- !u!114 &2160703249615966329
 MonoBehaviour:
   m_ObjectHideFlags: 0

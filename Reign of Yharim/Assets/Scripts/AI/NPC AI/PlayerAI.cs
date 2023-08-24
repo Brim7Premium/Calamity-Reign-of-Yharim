@@ -19,15 +19,13 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     private bool isFalling;
 
     [Header("Ground Detection")]
-    [SerializeField] private float rayHeight;
-    [SerializeField] private float desiredHeight;
-    [SerializeField] private float hoverHeight;
     [SerializeField] private CapsuleCollider2D cc2d;
     [SerializeField] private SpriteRenderer spr;
+    [SerializeField] private float rayHeight;
+    [SerializeField] private float hoverHeight;
     private Vector2 bottomPoint;
     private Vector2 feetPoint;
     private bool isGrounded;
-    private bool isTouchingWall;
     private float facingDirection;
 
     //constants can't be changed
@@ -49,10 +47,6 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         rb = GetComponent<Rigidbody2D>(); //PlayerAI.rb equals the rigidbody2d of the player
         cc2d = GetComponent<CapsuleCollider2D>();
         spr = GetComponent<SpriteRenderer>();
-
-        rayHeight = 1.5f;
-
-        desiredHeight = Vector2.Distance(new Vector2(spr.bounds.center.x, spr.bounds.min.y), new Vector2(cc2d.bounds.center.x, cc2d.bounds.center.y));
     }
     public override void AI() //every frame (Update)
     {
@@ -148,7 +142,6 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     {
         #region GroundDetection
         Color rayCol;
-        Color wallCol;
         RaycastHit2D hit = Physics2D.Raycast(bottomPoint, Vector2.down, rayHeight, groundLayer);
 
         if (hit)
@@ -157,17 +150,13 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             isGrounded = true;
             rb.gravityScale = 0f;
             transform.position = new Vector2(transform.position.x, hit.point.y + hoverHeight);
-            Debug.Log(feetPoint.y);
         }
         else
         {
             rayCol = Color.red;
-            rb.gravityScale = 2.5f;
             isGrounded = false;
+            rb.gravityScale = 2.5f;
         }
-      
-        //Debug.DrawLine(bottomPoint, bottomPoint + Vector2.down * rayHeight, rayCol);
-        Debug.DrawLine(new Vector2(spr.bounds.center.x, spr.bounds.min.y), new Vector2(cc2d.bounds.center.x, cc2d.bounds.center.y), Color.blue); //draws a line from the center of the capsule collider to the player's sprite's feet
         #endregion
 
         Movement();
