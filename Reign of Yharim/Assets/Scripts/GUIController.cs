@@ -9,12 +9,20 @@ public class GUIController : MonoBehaviour
     public TMP_Text healthText;
     public Animator guiHeartAnimator;
     public PlayerAI playerAI;
+    public GameObject inventory;
 
     public string currentAnimationState;
+
+    private bool inventoryOpened;
 
     const string HeartNormal = "Heart_normal";
     const string HeartDeath = "Heart_death";
     const string HeartFull = "Heart_full";
+
+    private void Start()
+    {
+        inventoryOpened = false;
+    }
 
     void Update()
     {
@@ -36,6 +44,24 @@ public class GUIController : MonoBehaviour
         if (playerAI.life <= 0f)
         {
             ChangeAnimationState(HeartDeath);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return) && inventoryOpened == false)
+        {
+            inventoryOpened = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Return) && inventoryOpened == true)
+        {
+            inventoryOpened = false;
+        }
+
+        if (inventoryOpened == true)
+        {
+            inventory.SetActive(true);
+        }
+        else
+        {
+            inventory.SetActive(false);
         }
     }
 

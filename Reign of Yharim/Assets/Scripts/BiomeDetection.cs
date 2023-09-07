@@ -101,7 +101,7 @@ public class BiomeDetection : MonoBehaviour
                 if (tileSpriteName == "Forest")
                 {
                     //Spawn plains/Forest
-                    mainCam.backgroundColor = new Color(0.5622642f, 0.9691256f, 1f);
+                    mainCam.backgroundColor = new Color(0.701f, 0.9691256f, 1f);
                 }
                 if (tileSpriteName == "Feral")
                 {
