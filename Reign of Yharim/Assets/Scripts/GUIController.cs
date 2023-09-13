@@ -14,6 +14,10 @@ public class GUIController : MonoBehaviour
     public string currentAnimationState;
 
     private bool inventoryOpened;
+    public InvSlot[] slots;
+    public GameObject itemPrefab;
+
+    public Item[] itemsToPickup;
 
     const string HeartNormal = "Heart_normal";
     const string HeartDeath = "Heart_death";
@@ -72,5 +76,29 @@ public class GUIController : MonoBehaviour
         guiHeartAnimator.Play(newAnimationState); //play the newState animation
 
         currentAnimationState = newAnimationState; //set currentAnimationState to newAnimationState
+    }
+
+    public void AddItem(Item item)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            InvSlot slot = slots[i];
+            InvItem itemInSlot = slot.GetComponentInChildren<InvItem>();
+            if (itemInSlot == null)
+            {
+                SpawnNewItem(item, slot);
+                return;
+            }
+        }
+    }
+    public void SpawnNewItem(Item item, InvSlot slot)
+    {
+        GameObject itemGameObject = Instantiate(itemPrefab, slot.transform);
+        InvItem invItem = itemGameObject.GetComponent<InvItem>();
+        invItem.InitItem(item);
+    }
+    public void PickUpItem()
+    {
+        AddItem(itemsToPickup[Random.Range(0, itemsToPickup.Length)]);
     }
 }
