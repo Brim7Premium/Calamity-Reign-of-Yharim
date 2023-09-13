@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{b44907b1-cb7d-42ba-8570-6a341f32a621}">
 		<property name="assetPath">
-			<value>A Legend's Strife Dawn.wav</value>
+			<value>MUS_Day1.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
