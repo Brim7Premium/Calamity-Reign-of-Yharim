@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{5b410bc8-a7f8-4e6f-8a99-76664a9eceb6}">
 		<property name="assetPath">
-			<value>Scourge of the Universe.wav</value>
+			<value>MUS_DoG1.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
