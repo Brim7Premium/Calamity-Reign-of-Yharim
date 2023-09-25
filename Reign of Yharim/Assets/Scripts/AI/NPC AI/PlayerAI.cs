@@ -99,7 +99,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     {
         
         //Upward slope
-        float isSlope = (Physics2D.Raycast(bottomPoint - new Vector2(0, 1.45f), new Vector2(facingDirection, 0), slopeDetectorLength, 1 << 8).normal.y ==  Mathf.Cos(45*Mathf.Deg2Rad) ? 1 : -1);
+        float isSlope = (Physics2D.Raycast(bottomPoint - new Vector2(0, 1.45f), new Vector2(facingDirection, 0), slopeDetectorLength, 1 << LayerMask.NameToLayer("Ground")).normal.y ==  Mathf.Cos(45*Mathf.Deg2Rad) ? 1 : -1);
 
         if(isGrounded && !isJumping)
         {
