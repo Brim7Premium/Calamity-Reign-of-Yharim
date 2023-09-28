@@ -56,7 +56,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         healthBar.SetMaxHealth(lifeMax);
 
         rb = GetComponent<Rigidbody2D>(); //PlayerAI.rb equals the rigidbody2d of the player
-        cc2d = GetComponent<CapsuleCollider2D>();
+        cc2d = GetComponentInChildren<CapsuleCollider2D>();
         spr = GetComponent<SpriteRenderer>();
 
         rb.velocity = new Vector2(rb.velocity.x, Vector2.zero.y);
@@ -99,13 +99,18 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     {
         
         //Upward slope
-        float isSlope = (Physics2D.Raycast(bottomPoint - new Vector2(0, 1.45f), new Vector2(facingDirection, 0), slopeDetectorLength, 1 << LayerMask.NameToLayer("Ground")).normal.y ==  Mathf.Cos(45*Mathf.Deg2Rad) ? 1 : -1);
+        Vector2 normal = Physics2D.Raycast(bottomPoint, new Vector2(facingDirection, 0), slopeDetectorLength, 1 << LayerMask.NameToLayer("Ground")).normal;
 
-        if(isGrounded && !isJumping)
+        if(isGrounded && !isJumping && normal.x != 0)
         {
-            
-            velY = moveSpeed * isSlope * (isSlope == 1 ? Mathf.Abs(rb.velocity.x/moveSpeed) : 1);
+            velY = moveSpeed * Mathf.Abs(normal.y/normal.x * rb.velocity.x/moveSpeed);
         } 
+
+        else if(isGrounded && !isJumping)
+        {
+            velY = -moveSpeed;
+        }
+
         else{velY = rb.velocity.y;}
 
         float targetSpeed = xAxis * moveSpeed;
