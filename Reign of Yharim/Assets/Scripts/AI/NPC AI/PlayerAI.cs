@@ -5,10 +5,9 @@ using UnityEngine.Tilemaps;
 
 public class PlayerAI : NPC //basically, this script is a copy of the npc script and all of it's values. the main differences are that each value can be overriden from the base script for the new one, and this one can be attached to gameobjects.
 {
-    [Header("Movement")]
-    
+    [Header("Movement")]    
     [SerializeField] private float moveSpeed = 8f;
-    [SerializeField] private float acceleration;
+    [SerializeField] [Range(0, 1)] private float acceleration;
     [SerializeField] private float slopeDetectorLength;
     private float velY;
     private float xAxis;
@@ -79,7 +78,12 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         for(int i = 0; i<flightTime; i++)//flight
         {
-            if(Input.GetKey(KeyCode.Space)){rb.velocity = Vector2.SmoothDamp(rb.velocity, new Vector2(rb.velocity.x, wingSpeed), ref placeHolder, wingAcceleration);}
+            if(Input.GetKey(KeyCode.Space))
+            {
+                rb.velocity = Vector2.SmoothDamp(rb.velocity, new Vector2(rb.velocity.x, wingSpeed), ref placeHolder, wingAcceleration); 
+
+                rb.AddForce(Vector2.up * 2.5f * 9.81f);//Remove gravity. It just works
+            }
 
             else{i -= 1;}//flightTime is not spend
 
@@ -148,6 +152,8 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         Color rayCol;
         RaycastHit2D hit = Physics2D.Raycast(bottomPoint, Vector2.down, rayHeight, groundLayer);
 
+        Debug.DrawRay(bottomPoint, Vector2.down * rayHeight);
+
         if (hit)
         {
             rayCol = Color.green;
@@ -180,6 +186,26 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         //Debug.Log("IsJumping: " + isJumping + " IsFalling: " + isFalling);
 
         //Debug.Log(rb.velocity.y);
+
+        /* if (isGrounded)
+            isFalling = false;
+
+        if (rb.velocity.y < -3f)
+        {
+            isFalling = true;
+        }
+        */
+
+
+        /* if (isGrounded)
+            isFalling = false;
+
+        if (rb.velocity.y < -3f)
+        {
+            isFalling = true;
+        }
+        */
+
 
         /* if (isGrounded)
             isFalling = false;
