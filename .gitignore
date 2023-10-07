@@ -76,3 +76,9 @@ crashlytics-build.properties
 # Log files can be ignored.
 fmod_editor.log
 
+Reign of Yharim/.vscode/extensions.json
+Reign of Yharim/.vscode/launch.json
+Reign of Yharim/.vscode/settings.json
+Reign of Yharim/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
+Reign of Yharim/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll.meta
+Reign of Yharim/Assets/Scripts/.vscode/launch.json

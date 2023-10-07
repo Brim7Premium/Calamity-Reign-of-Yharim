@@ -11,6 +11,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     [SerializeField] private float deacceleration;
     [SerializeField] private float velPower;
     private float xAxis;
+    private float force = 0;
 
     [Header("Jumping")]
     [SerializeField] private float jumpingPower = 16f;
@@ -20,14 +21,18 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
     [Header("Ground Detection")]
     [SerializeField] private CapsuleCollider2D cc2d;
+    [SerializeField] private PolygonCollider2D leg;
     [SerializeField] private SpriteRenderer spr;
     [SerializeField] private float rayHeight;
     [SerializeField] private float rideHeight;
     [SerializeField] private float rideSpringStrength;
     [SerializeField] private float rideSpringDamper;
+    private float height;
     private Vector2 bottomPoint;
     private bool isGrounded;
     private float facingDirection;
+
+    [SerializeField] [Range(1, 180)]private int framerate;
 
     //constants can't be changed
     const string PlayerIdle = "Player_idle";
@@ -47,6 +52,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         rb = GetComponent<Rigidbody2D>(); //PlayerAI.rb equals the rigidbody2d of the player
         cc2d = GetComponent<CapsuleCollider2D>();
+        height = cc2d.bounds.min.y - leg.bounds.min.y;
         spr = GetComponent<SpriteRenderer>();
 
         rb.velocity = new Vector2(rb.velocity.x, Vector2.zero.y);
@@ -142,26 +148,30 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     }
     private void FixedUpdate() //for physics
     {
+        
+        Application.targetFrameRate = framerate;
         #region GroundDetection
         Color rayCol;
-        RaycastHit2D hit = Physics2D.Raycast(bottomPoint, Vector2.down, rayHeight, groundLayer);
+        RaycastHit2D hit = Physics2D.Raycast(bottomPoint, Vector2.down, height + 0.1f, groundLayer); //
 
-        if (hit)
+        if (!isJumping && hit)
         {
-            if (!isJumping)
-            {
-                float rayDirVel = Vector2.Dot(Vector2.down, rb.velocity); //math stuff
-                float otherDirVel = Vector2.Dot(Vector2.down, Vector2.zero);
-                float relVel = rayDirVel - otherDirVel;
-                float x = hit.distance - rideHeight;
-                float force = (x * rideSpringStrength) - (relVel * rideSpringDamper);
-
-                rb.AddForce(Vector2.down * force);
-            }
+            transform.position = new Vector2(transform.position.x, hit.point.y + height);
+            rb.AddForce(2.5f * 9.81f * Vector2.up);
+            rb.velocity = new Vector2(rb.velocity.x, 0);
 
             rayCol = Color.green;
             isGrounded = true;
         }
+
+        else if(!isJumping && Physics2D.Raycast(bottomPoint, Vector2.down, rayHeight, groundLayer))
+        {
+            rb.AddForce(50 * Vector2.down);
+
+            rayCol = Color.green;
+            isGrounded = true;
+        }
+        
         else
         {
             rayCol = Color.red;
