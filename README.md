@@ -5,7 +5,7 @@ Calamity: Reign of Yharim is a fangame based on the Calamity Mod, focused on sev
 	
 	-Immersive combat with less focus on sandbox
 	
-	-Calamity lore, during the reign of Yharim
+	-Calamity lore, slightly modified to fit our changes
 	
 
 # Disclaimer
