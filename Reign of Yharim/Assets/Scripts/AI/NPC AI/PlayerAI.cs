@@ -5,27 +5,19 @@ using UnityEngine.Tilemaps;
 
 public class PlayerAI : NPC //basically, this script is a copy of the npc script and all of it's values. the main differences are that each value can be overriden from the base script for the new one, and this one can be attached to gameobjects.
 {
-    [Header("Movement")]    
+    [Header("Movement")]
     [SerializeField] private float moveSpeed = 8f;
-    [SerializeField] [Range(0, 1)] private float acceleration;
-    [SerializeField] private float slopeDetectorLength;
-    private float velY;
+    [SerializeField] private float acceleration;
+    [SerializeField] private float deacceleration;
+    [SerializeField] private float velPower;
     private float xAxis;
     private float force = 0;
 
     [Header("Jumping")]
-    [SerializeField] private float jumpingSpeed = 9f;
-    [SerializeField] private int jumpingTime = 8;
+    [SerializeField] private float jumpingPower = 16f;
     [SerializeField] private float jumpReleaseMod;
     private bool isJumping;
     private bool isFalling;
-
-    [Header("Flying")]
-    [SerializeField] private float wingAcceleration;
-    [SerializeField] private float wingSpeed;
-    [SerializeField] private float flightTime;
-
-    private bool isFlying;
 
     [Header("Ground Detection")]
     [SerializeField] private CapsuleCollider2D cc2d;
@@ -65,125 +57,23 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         rb.velocity = new Vector2(rb.velocity.x, Vector2.zero.y);
     }
-
-    IEnumerator Jump()
-    {
-        isJumping = true;
-
-        for(int i = 0; i<jumpingTime; i++)//jump
-        {
-            if(Input.GetKey(KeyCode.Space)){rb.velocity = new Vector2(rb.velocity.x, jumpingSpeed);}
-
-            yield return new WaitForFixedUpdate();
-        }
-
-        isJumping = false;
-
-        isFlying = true;
-
-        for(int i = 0; i<flightTime; i++)//flight
-        {
-            if(Input.GetKey(KeyCode.Space))
-            {
-                rb.velocity = Vector2.SmoothDamp(rb.velocity, new Vector2(rb.velocity.x, wingSpeed), ref placeHolder, wingAcceleration); 
-
-                rb.AddForce(Vector2.up * 2.5f * 9.81f);//Remove gravity. It just works
-            }
-
-            else{i -= 1;}//flightTime is not spend
-
-            if(isGrounded){break;}
-
-            yield return new WaitForFixedUpdate();
-        }
-
-        isFlying = false;
-    }
-
-    public override void OnKill()
-    {
-        GameObject.Find("WorldManager").SendMessage("Respawn");
-    }
-    private void Movement()
-    {
-        
-        //Upward slope
-        Vector2 normal = Physics2D.Raycast(bottomPoint, new Vector2(facingDirection, 0), slopeDetectorLength, 1 << LayerMask.NameToLayer("Ground")).normal;
-
-        if(isGrounded && !isJumping && normal.x != 0)
-        {
-            velY = moveSpeed * Mathf.Abs(normal.y/normal.x * rb.velocity.x/moveSpeed);
-        } 
-
-        else if(isGrounded && !isJumping)
-        {
-            velY = -moveSpeed;
-        }
-
-        else{velY = rb.velocity.y;}
-
-        float targetSpeed = xAxis * moveSpeed;
-
-        rb.velocity = new Vector2(targetSpeed,  velY);
-
-        animator.speed = Mathf.Abs(targetSpeed / 10);
-
-        if (isGrounded)
-        {
-            if (xAxis != 0) //if the player isn't still
-            {
-                ChangeAnimationState(PlayerWalk);
-            }
-            else
-            {
-                ChangeAnimationState(PlayerIdle);
-            }
-        }
-        if (xAxis > 0)
-        {
-            transform.localScale = new Vector2(1, 1); //facing right
-            facingDirection = 1f;
-        }
-        if (xAxis < 0)
-        {
-            transform.localScale = new Vector2(-1, 1); //facing left
-            facingDirection = -1f;
-        }
-    }
-   
-    private void FixedUpdate() //for physics
-    {
-        #region GroundDetection
-        Color rayCol;
-        RaycastHit2D hit = Physics2D.Raycast(bottomPoint, Vector2.down, rayHeight, groundLayer);
-
-        Debug.DrawRay(bottomPoint, Vector2.down * rayHeight);
-
-        if (hit)
-        {
-            rayCol = Color.green;
-            isGrounded = true;
-        }
-        else
-        {
-            rayCol = Color.red;
-            isGrounded = false;
-        }
-        #endregion
-
-        Movement();
-    }
-
     public override void AI() //every frame (Update)
     {
+        Physics2D.IgnoreLayerCollision(10, 3); //Layer 10 (WalkThroughNPCSPlayer) will ignore collisions with layer 3 (NPCS) the child gameobjects don't use layer 10, so they can still detect collisions
 
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("WalkThroughNPCPlayer"), LayerMask.NameToLayer("NPCs")); //notice that child objects don't use the same layer
+        xAxis = Input.GetAxis("Horizontal"); //sets horizontal to -1 or 1 based on the player's input
 
-        xAxis = Mathf.MoveTowards(xAxis, Input.GetAxis("Horizontal"), acceleration);
-
-        if (Input.GetButtonDown("Jump") && !isJumping && !isFlying && isGrounded)
+        if (Input.GetButtonDown("Jump")) //if the jump button is being pressed...
         {
-            StartCoroutine(Jump());
+            if (isGrounded) //and the player is grounded...
+            {
+                StartCoroutine(JumpWithDelay()); //start the JumpWithDelay coroutine
+            }
+        }
+
+        if (Input.GetButtonUp("Jump")) //if the jump button is released...
+        {
+            OnJumpUp(); //trigger the OnJumpUp method
         }
 
         bottomPoint = new Vector2(cc2d.bounds.center.x, cc2d.bounds.min.y); //the bottompoint variable equals the bottommost y point and center x point of the capsule collider
@@ -200,16 +90,41 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             isFalling = true;
         }
         */
+    }
+    public override void OnKill()
+    {
+        GameObject.Find("WorldManager").SendMessage("Respawn"); //tell the worldmanager to respawn the player
+    }
+    private void Movement()
+    {
+        float targetSpeed = xAxis * moveSpeed;
 
+        float speedDif = targetSpeed - rb.velocity.x;
 
-        /* if (isGrounded)
-            isFalling = false;
+        float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : deacceleration;
 
-        if (rb.velocity.y < -3f)
+        float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
+
+        rb.AddForce(movement * Vector2.right);
+
+        animator.speed = Mathf.Abs(targetSpeed / 10);
+
+        if (isGrounded) //if the player is grounded and isn't attacking
         {
-            isFalling = true;
+            if (xAxis != 0) //if the player isn't still
+            {
+                ChangeAnimationState(PlayerWalk); //set the animation to walking
+            }
+            else
+            {
+                ChangeAnimationState(PlayerIdle); //set the animation to idle
+            }
         }
-        */
+        if (xAxis > 0)
+        {
+            transform.localScale = new Vector2(1, 1); //facing right
+            facingDirection = 1f;
+        }
         if (xAxis < 0)
         {
             transform.localScale = new Vector2(-1, 1); //facing left
