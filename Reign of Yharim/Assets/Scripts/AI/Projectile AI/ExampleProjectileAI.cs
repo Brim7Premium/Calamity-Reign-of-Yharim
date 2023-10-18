@@ -6,6 +6,9 @@ public class ExampleProjectileAI : Projectile
 {
     public override void SetDefaults()
     {
-        projName = "ExampleProjectile";
+        gameObject.name = "ExampleProjectile";
+        target = GameObject.Find("Player");
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
     }
 }
