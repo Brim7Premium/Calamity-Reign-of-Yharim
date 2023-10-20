@@ -44,16 +44,18 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
     public override void SetDefaults()
     {
+        base.SetDefaults();
+
         NPCName = "Player";
         damage = 0; //Note to future developers/self, this can be used for times when the player does deal contact damage to enemies. armor sets are an example. right now, it's useless.
         lifeMax = 100;
         life = lifeMax;
         healthBar.SetMaxHealth(lifeMax);
 
-        rb = GetComponent<Rigidbody2D>(); //PlayerAI.rb equals the rigidbody2d of the player
         cc2d = GetComponent<CapsuleCollider2D>();
+        leg = GameObject.Find("LeftLeg").GetComponent<PolygonCollider2D>();
         height = cc2d.bounds.min.y - leg.bounds.min.y;
-        spr = GetComponent<SpriteRenderer>();
+        
 
         rb.velocity = new Vector2(rb.velocity.x, Vector2.zero.y);
     }
@@ -91,7 +93,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         }
         */
     }
-    public override void OnKill()
+    public void OnDestroy()
     {
         GameObject.Find("WorldManager").SendMessage("Respawn"); //tell the worldmanager to respawn the player
     }
