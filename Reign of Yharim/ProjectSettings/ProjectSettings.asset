@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: BrimstonPremium
+  companyName: The Reign of Yharim Development Team
   productName: 'Calamity: Reign of Yharim'
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -273,7 +273,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 7c542d6264c3fa84aa811f7784b0c65c, type: 3}
+      m_Icon: {fileID: 2800000, guid: 69255c71951dead4f8d9df6a2c2ba85d, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
