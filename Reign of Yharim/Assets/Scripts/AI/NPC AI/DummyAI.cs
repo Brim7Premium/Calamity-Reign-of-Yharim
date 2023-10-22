@@ -18,7 +18,7 @@ public class DummyAI : NPC
     {
         if (target != null)
         {
-            rb.velocity = new Vector2(DirectionTo(target.transform.position).x * 0.05f, rb.velocity.y);
+            velocity = new Vector2(DirectionTo(target.transform.position).x * 0.05f, velocity.y);
 
             if (1 == GetTargetDirectionX()) //for looking at player
                 gameObject.transform.localScale = new Vector3(1, 1, 1);

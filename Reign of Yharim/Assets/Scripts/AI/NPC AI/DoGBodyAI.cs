@@ -16,8 +16,7 @@ public class DoGBodyAI : NPC
 
         NPCName = "DevourerofGodsBody";
         damage = 442;
-        lifeMax = 1706400;
-        life = lifeMax;
+
         worm = true;
 
         Physics2D.IgnoreLayerCollision(3, 3);
@@ -27,15 +26,16 @@ public class DoGBodyAI : NPC
     }
     public override void AI()
     {
+        UpdateVelocity();
         if (GameObject.Find("DevourerofGodsHead") != null)
         {
             if (Vector2.Distance(transform.position, AheadSegment.transform.position) >= SegmentSize)//if this segments positon >= the aheadsegment's position + SegmentsSize, move towards the ahead segment.
-                rb.velocity = DirectionTo(AheadSegment.transform.position) * VelocitySmoothing;
+                velocity = DirectionTo(AheadSegment.transform.position) * VelocitySmoothing;
             else
-                rb.velocity *= VelocitySmoothing;//quickly lower the segments velocity to stop it from moving into weird positions.
-            if (rb.velocity != Vector2.zero)//this code is copyed from this yt video https://www.youtube.com/watch?v=gs7y2b0xthU&t=366s and modified slightly.
+                velocity *= VelocitySmoothing;//quickly lower the segments velocity to stop it from moving into weird positions.
+            if (velocity != Vector2.zero)//this code is copyed from this yt video https://www.youtube.com/watch?v=gs7y2b0xthU&t=366s and modified slightly.
             {
-                Vector2 movementDirection = rb.velocity;
+                Vector2 movementDirection = new(velocity.x, velocity.y);
                 Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
             }
@@ -64,12 +64,7 @@ public class DoGBodyAI : NPC
                 {
                     if (rng == 3)
                     {
-                        Vector2 _vel = new Vector2(3, 3);
-                        int _damage = 5;
-                        float _knockback = 0;
-                        float _timeLeft = 1;
-
-                        Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, _vel, _damage, _knockback, _timeLeft);
+                        Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, damage, _timeLeft:4);
 
                         oldTargetPos = target.transform.position;
 
@@ -84,17 +79,18 @@ public class DoGBodyAI : NPC
                 {
                     if (rng == 3)
                     {
-                        Projectile deathray = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, damage, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
+                        Vector2 _vel = DirectionTo(oldTargetPos) * 25;
+                        int _damage = 5;
+                        float _knockback = 0;
+                        float _timeLeft = 1;
+
+                        Projectile deathray = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, _vel, _damage, _knockback, _timeLeft);
 
                         Vector3 direction = (Vector3)oldTargetPos - deathray.transform.position;
                         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                         deathray.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-                        deathray.rb.velocity = DirectionTo(oldTargetPos) * 0.9f; //the new new projectile will travel towards the player
-
                         deathray.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-
-                        deathray.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                     }
                 }
                 if (ai[1] == 240f) //after four seconds

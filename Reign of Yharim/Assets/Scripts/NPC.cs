@@ -15,7 +15,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         {
             _life = value;
             healthBar.SetHealth(_life);
-            if (_life <=0){Destroy(gameObject);}
+            if (_life <=0){gameObject.SetActive(false);}
         }
         get {return _life;}
     }
@@ -36,15 +36,14 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     public LayerMask groundLayer;
 
     public float[] ai = new float[4];
+    private const string indulgencesHolders = "WulfrumGyrator, DevourerofGodsBody, DevourerofGodsHead, Dummy";
 
     public float IFrames = 1f;
 
     public GameObject[] projectiles;
 
     public GameObject target;
-
-    public Vector2 targetPos;
-
+    
     public string currentAnimationState;
 
     public bool immune;
@@ -52,6 +51,8 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     public Animator animator;
 
     public bool worm;
+
+    public Vector2 velocity;
 
 
     public override void SetDefaults()
@@ -61,6 +62,13 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         rb = GetComponent<Rigidbody2D>();
         c2d = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
+    }
+
+    public void UpdateVelocity(){
+        if(indulgencesHolders.Contains(NPCName))
+            transform.position += (Vector3)velocity;
+        else Debug.LogError(NPCName + ":Use Rigidbody2D instead of UpdateVelocity");
+
     }
     public void Update()
     {

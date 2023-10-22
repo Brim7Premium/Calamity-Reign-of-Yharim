@@ -7,7 +7,9 @@ public class TelegraphAI : Projectile
 
     public override void SetDefaults()
     {
+        base.SetDefaults();
         projName = "TelegraphProjectile";
+        rb.gravityScale = 0;
         damage = 0;
         //objectRenderer = GetComponent<Renderer>();
     }

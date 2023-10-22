@@ -32,22 +32,22 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
     public float velocity = -1;
     public Rigidbody2D rb;
 
-    private IEnumerator Death()
+    IEnumerator Death()
     {
         //Just in case if we ever need to extend projectile livespan
-        if(timeLeft > 1)
+        while(timeLeft > 1)
         {
             yield return new WaitForSeconds(1); 
             timeLeft -= 1;
         }
-        else 
-        {
-            yield return new WaitForSeconds(timeLeft);
-            Destroy(gameObject);
-        }
+
+        yield return new WaitForSeconds(timeLeft);
+        Destroy(gameObject);
     }
     public override void SetDefaults()
     {
+        base.SetDefaults();
+        StartCoroutine(Death());
         rb = GetComponent<Rigidbody2D>();
     }
     public void Update()
@@ -58,7 +58,10 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
     //-1 will set parametres to their default value in class. 
     public static Projectile NewProjectile(GameObject _projectile, Vector2 _position, Quaternion _rotation, float _velocity = -1, int _damage = -1, float _knockback = -1, float _timeLeft = -1, float _ai0 = 0, float _ai1 = 0, float _ai2 = 0, float _ai3 = 0, string _parent = "")
     {   
-        GameObject projGameObject = Instantiate(_projectile, _position, _rotation, GameObject.Find(_parent).transform); 
+        GameObject projGameObject;
+
+        if(_parent != ""){projGameObject = Instantiate(_projectile, _position, _rotation, GameObject.Find(_parent).transform);}
+        else{projGameObject = Instantiate(_projectile, _position, _rotation);}
 
         Projectile proj = projGameObject.GetComponent<Projectile>();
 

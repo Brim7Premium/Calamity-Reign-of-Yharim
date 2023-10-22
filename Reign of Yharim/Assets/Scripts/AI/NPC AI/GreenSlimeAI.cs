@@ -34,7 +34,7 @@ public class GreenSlimeAI : NPC
                 curTargetPos = GetTargetDirectionX();
 
                 ChangeAnimationState(SlimeIdle);
-                rb.velocity = new Vector2(curTargetPos * 3.13f, 6.26f);
+                rb.velocity = new Vector2(curTargetPos * 2.735f, 5.47f); //Match original as much as possible
             }
             else if (ai[0] > 100.0f && isGrounded) 
             {
@@ -51,7 +51,7 @@ public class GreenSlimeAI : NPC
     }
     void OnDestroy()
     {
-        print(targetPos);
+        
     }
     private void FixedUpdate()
     {

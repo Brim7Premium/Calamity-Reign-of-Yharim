@@ -20,9 +20,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     private bool isFalling;
 
     [Header("Ground Detection")]
-    [SerializeField] private CapsuleCollider2D cc2d;
     [SerializeField] private PolygonCollider2D leg;
-    [SerializeField] private SpriteRenderer spr;
     [SerializeField] private float rayHeight;
     [SerializeField] private float rideHeight;
     [SerializeField] private float rideSpringStrength;
@@ -51,18 +49,15 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         lifeMax = 100;
         life = lifeMax;
         healthBar.SetMaxHealth(lifeMax);
-
-        cc2d = GetComponent<CapsuleCollider2D>();
+ 
         leg = GameObject.Find("LeftLeg").GetComponent<PolygonCollider2D>();
-        height = cc2d.bounds.min.y - leg.bounds.min.y;
+        height = c2d.bounds.min.y - leg.bounds.min.y;
         
 
         rb.velocity = new Vector2(rb.velocity.x, Vector2.zero.y);
     }
     public override void AI() //every frame (Update)
     {
-        Physics2D.IgnoreLayerCollision(10, 3); //Layer 10 (WalkThroughNPCSPlayer) will ignore collisions with layer 3 (NPCS) the child gameobjects don't use layer 10, so they can still detect collisions
-
         xAxis = Input.GetAxis("Horizontal"); //sets horizontal to -1 or 1 based on the player's input
 
         if (Input.GetButtonDown("Jump")) //if the jump button is being pressed...
@@ -78,7 +73,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             OnJumpUp(); //trigger the OnJumpUp method
         }
 
-        bottomPoint = new Vector2(cc2d.bounds.center.x, cc2d.bounds.min.y); //the bottompoint variable equals the bottommost y point and center x point of the capsule collider
+        bottomPoint = new Vector2(c2d.bounds.center.x, c2d.bounds.min.y); //the bottompoint variable equals the bottommost y point and center x point of the capsule collider
 
         //Debug.Log("IsJumping: " + isJumping + " IsFalling: " + isFalling);
 
@@ -93,7 +88,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         }
         */
     }
-    public void OnDestroy()
+    public void OnDisable()
     {
         GameObject.Find("WorldManager").SendMessage("Respawn"); //tell the worldmanager to respawn the player
     }

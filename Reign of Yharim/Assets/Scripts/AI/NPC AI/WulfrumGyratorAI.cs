@@ -31,18 +31,18 @@ public class WulfrumGyratorAI : NPC
             ChangeAnimationState(GyratorSpin);
 
             ai[0]++;//increment ai[0] by 1 every frame.(the framerate is capped at 60)
-            rb.velocity *= 0.97f;//this is for smoothing the movement.
+            velocity *= 0.97f;//this is for smoothing the movement.
 
             if (GetDistanceToPlayer() > 20f && spotted == false) //if the player isn't close and the bool spotted equals false
             {
                 color = Color.green; //set color variable to green
 
                 if (ai[0] == 70.0f) //if it has been 70 frames, jump.
-                    rb.velocity = new Vector2(rb.velocity.x, 0.5f); //jump up vertically
+                    velocity = new Vector2(velocity.x, 0.5f); //jump up vertically
 
                 if (ai[0] > 100.0f && isGrounded)
                 {
-                    rb.velocity = Vector2.zero; //stop the slime from moving
+                    velocity = Vector2.zero; //stop the slime from moving
                     ai[0] = 0.0f;//reset ai[0] so we can jump again.
                 }
             }
@@ -55,7 +55,7 @@ public class WulfrumGyratorAI : NPC
                     color = Color.red;
                     if (ai[0] == 0.0f)
                     {
-                        rb.velocity = new Vector2(DirectionTo(target.transform.position).x * 0.12f, rb.velocity.y); //speed of 
+                        velocity = new Vector2(DirectionTo(target.transform.position).x * 0.12f, velocity.y); //speed of 
                     }
 
                     /*if (//placeholder)
