@@ -14,17 +14,13 @@ public class RespawnPlayer : MonoBehaviour
     {
         playerAI = player.GetComponent<PlayerAI>();
     }
-    public void Respawn()
-    {
-        StartCoroutine(RespawnLoop());
-    }
 
-    IEnumerator RespawnLoop()
+    IEnumerator Respawn()
     {
         yield return new WaitForSeconds(respawnSeconds);
-        playerAI.active = true;
-        playerAI.Invoke("SetDefaults", 0);
         player.SetActive(true);
+        playerAI.enabled = true;
+        playerAI.SetDefaults();
         playerAI.StartCoroutine(playerAI.Immunity());
     }
 }

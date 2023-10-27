@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8630381004984749893}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8404481093250783343}
   - component: {fileID: 4265403811770985587}
   - component: {fileID: 1247338717935529426}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: DoGDeathRay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,18 +132,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d527a0fcf62410b4ea66e9f40f9f1dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   projName: 
   target: {fileID: 0}
-  timeLeft: 0
   ai:
   - 0
   - 0
   - 0
   - 0
-  damage: 0
+  velocity: -1
+  rb: {fileID: 0}
 --- !u!61 &4265403811770985587
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -154,7 +152,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -202,7 +200,7 @@ GameObject:
   - component: {fileID: 831536914357231481}
   - component: {fileID: 7096755319210200469}
   - component: {fileID: 684556995687990891}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: Projectile
   m_TagString: ProjectileHitbox
   m_Icon: {fileID: 0}
@@ -286,7 +284,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
