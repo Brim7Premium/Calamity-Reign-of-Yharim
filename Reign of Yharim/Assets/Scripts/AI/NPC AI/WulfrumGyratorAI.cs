@@ -19,12 +19,14 @@ public class WulfrumGyratorAI : NPC
         damage = 15;
         lifeMax = 18;
         life = lifeMax;
-        healthBar.SetMaxHealth(lifeMax);
+        target = GameObject.Find("Player");
+
         spotted = false;
 
     }
     public override void AI()
     {
+        UpdateVelocity();
         if (target != null)
         {
             animator.speed = 0.8f;

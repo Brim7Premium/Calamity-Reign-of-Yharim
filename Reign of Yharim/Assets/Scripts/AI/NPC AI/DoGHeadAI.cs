@@ -18,7 +18,7 @@ public class DoGHeadAI : NPC
         lifeMax = 1706400;
         life = lifeMax;
         worm = true;
-        healthBar.SetMaxHealth(lifeMax);
+
         target = GameObject.Find("Player");
 
         DoGMusic = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoGMusic);
@@ -61,7 +61,7 @@ public class DoGHeadAI : NPC
 
                     velocity = Vector2.zero;
 
-                    Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, damage, _timeLeft:4);
+                    Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, 0, 0, 0, 4);
 
                     oldTargetPos = target.transform.position;
 
@@ -73,8 +73,8 @@ public class DoGHeadAI : NPC
                 }
                 if (ai[1] == 60f) //after one second
                 {
-                    Vector2 _vel = DirectionTo(oldTargetPos) * 5;
-                    int _damage = 5;
+                    Vector2 _vel = DirectionTo(oldTargetPos) * 25;
+                    int _damage = damage;
                     float _knockback = 0;
                     float _timeLeft = 1;
 

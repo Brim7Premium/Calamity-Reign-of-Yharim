@@ -149,16 +149,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c4513ae11bb5d47ba7d57fec365132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
   lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 1798507309908875635}
   rb: {fileID: 0}
-  bc2d: {fileID: 0}
+  c2d: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -170,11 +166,11 @@ MonoBehaviour:
   IFrames: 1
   projectiles: []
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
 --- !u!95 &7931671408226638637
 Animator:
   serializedVersion: 5

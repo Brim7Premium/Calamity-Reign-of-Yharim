@@ -9,22 +9,32 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     public int lifeMax;
 
     private int _life;
+    public int TargetDirection
+    {
+        get => transform.position.x < target.transform.position.x ? 1 : -1;
+    }
     public int life
     {
         set
         {
             _life = value;
-            healthBar.SetHealth(_life);
-            if (_life <=0){gameObject.SetActive(false);}
+            if (_life <=0){gameObject.SetActive(false); return;}
+            try{ healthBar.SetHealth(_life);}
+            catch(NullReferenceException){Debug.LogError(NPCName + " doesn't have healthbar");}
         }
+
         get {return _life;}
     }
 
     private int _damage;
     public int damage
     {
+        set { 
+            if(value < 0) Debug.LogError(NPCName + " can't deal negative damage"); //I think it's very unlikely that we gonna use negative values here. 
+            else _damage = value;
+        }
+
         get { return _damage;}
-        set { _damage = value < 0 ? _damage : value;} //I think it's very unlikely that we gonna use negative values here. 
     }
 
     public HealthBar healthBar;
@@ -36,14 +46,14 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     public LayerMask groundLayer;
 
     public float[] ai = new float[4];
-    private const string indulgencesHolders = "WulfrumGyrator, DevourerofGodsBody, DevourerofGodsHead, Dummy";
+    private const string indulgencesHolders = "WulfrumGyrator, DevourerofGodsBody, DevourerofGodsHead, Dummy, ExampleNPC";//This ones need to be remade at some point
 
     public float IFrames = 1f;
 
     public GameObject[] projectiles;
 
     public GameObject target;
-    
+
     public string currentAnimationState;
 
     public bool immune;
@@ -59,6 +69,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     {
         base.SetDefaults();
 
+        groundLayer = 1 << LayerMask.NameToLayer("Ground");
         rb = GetComponent<Rigidbody2D>();
         c2d = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
@@ -67,7 +78,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     public void UpdateVelocity(){
         if(indulgencesHolders.Contains(NPCName))
             transform.position += (Vector3)velocity;
-        else Debug.LogError(NPCName + ":Use Rigidbody2D instead of UpdateVelocity");
+        else Debug.LogError(NPCName + ": Use Rigidbody2D instead of UpdateVelocity");
 
     }
     public void Update()
@@ -75,8 +86,6 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         AI();
         objectRenderer.enabled = IsVisibleFromCamera();
     }
-
-    public int GetTargetDirectionX() => transform.position.x < target.transform.position.x ? 1 : -1;
 
     public float GetDistanceToPlayer()
     {

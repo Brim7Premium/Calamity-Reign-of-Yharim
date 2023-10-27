@@ -28,19 +28,19 @@ public class GreenSlimeAI : NPC
         {
             animator.speed = 0.8f;
 
-            ai[0]++;
-            if (ai[0] == 90.0f)
+            ai[1]++;
+            if (ai[1] == 90.0f)
             {
-                curTargetPos = GetTargetDirectionX();
+                curTargetPos = TargetDirection;
 
                 ChangeAnimationState(SlimeIdle);
                 rb.velocity = new Vector2(curTargetPos * 2.735f, 5.47f); //Match original as much as possible
             }
-            else if (ai[0] > 100.0f && isGrounded) 
+            else if (ai[1] > 150.0f && isGrounded) 
             {
                 ChangeAnimationState(SlimeBounce);
                 rb.velocity = Vector2.zero; 
-                ai[0] = 0.0f;
+                ai[1] = 0.0f;
             }
             if (GetDistanceToPlayer() > 60f)
             {

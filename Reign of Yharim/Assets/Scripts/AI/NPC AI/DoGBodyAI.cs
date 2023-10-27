@@ -16,10 +16,10 @@ public class DoGBodyAI : NPC
 
         NPCName = "DevourerofGodsBody";
         damage = 442;
-
+        lifeMax = 1706400;
+        life = lifeMax;
         worm = true;
 
-        Physics2D.IgnoreLayerCollision(3, 3);
         target = GameObject.Find("Player");
 
         ResetRNG();
@@ -64,7 +64,7 @@ public class DoGBodyAI : NPC
                 {
                     if (rng == 3)
                     {
-                        Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, damage, _timeLeft:4);
+                        Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, 0, 0, 0, 4);
 
                         oldTargetPos = target.transform.position;
 
@@ -80,7 +80,7 @@ public class DoGBodyAI : NPC
                     if (rng == 3)
                     {
                         Vector2 _vel = DirectionTo(oldTargetPos) * 25;
-                        int _damage = 5;
+                        int _damage = damage;
                         float _knockback = 0;
                         float _timeLeft = 1;
 
