@@ -15,14 +15,16 @@ public class EnemySpawner : MonoBehaviour
 
             Vector2 SpawnPosition = new Vector2(Random.Range(player.transform.position.x - 24f, player.transform.position.x + 24f), Random.Range(player.transform.position.y - 12f, player.transform.position.y + 12f));          
 
-            while (!Physics2D.Raycast(SpawnPosition, Vector2.down, enemyToSpawn.GetComponent<Collider2D>().bounds.min.y + 0.5f) || (Physics2D.OverlapBox(SpawnPosition, enemyToSpawn.GetComponent<Collider2D>().bounds.size, 0, 1<<8) != null))
+            //I can't make enemies not to spawn in blocks in general, but this will reduce chances of this happening by a lot
+            while (!(Physics2D.Raycast(SpawnPosition, Vector2.down, 1, 1<<8) && !Physics2D.Raycast(SpawnPosition, Vector2.down, 0, 1<<8)))
             {
                 for(int i = 0; i<10; i++)//The game will not stop working when there is no space to spawn an enemy
                 {
-                    if(!Physics2D.Raycast(SpawnPosition, Vector2.down, enemyToSpawn.transform.localScale.y + 0.5f) || (Physics2D.OverlapBox(SpawnPosition, (Vector2)enemyToSpawn.transform.localScale, 0, 1<<8) != null))
+                    if(!(Physics2D.Raycast(SpawnPosition, Vector2.down, 1, 1<<8) && !Physics2D.Raycast(SpawnPosition, Vector2.down, 0, 1<<8)))
                     {
                         SpawnPosition = new Vector2(Random.Range(player.transform.position.x - 24f, player.transform.position.x + 24f), Random.Range(player.transform.position.y - 12f, player.transform.position.y + 12f));
                     }
+                    else break;
                 }
 
                 yield return new WaitForFixedUpdate();

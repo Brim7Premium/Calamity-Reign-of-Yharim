@@ -48,7 +48,6 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         damage = 0; //Note to future developers/self, this can be used for times when the player does deal contact damage to enemies. armor sets are an example. right now, it's useless.
         lifeMax = 100;
         life = lifeMax;
-        healthBar.SetMaxHealth(lifeMax);
  
         leg = GameObject.Find("LeftLeg").GetComponent<PolygonCollider2D>();
         height = c2d.bounds.min.y - leg.bounds.min.y;
