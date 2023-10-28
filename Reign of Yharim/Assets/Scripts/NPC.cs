@@ -6,7 +6,19 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 {
     public string NPCName;
 
-    public int lifeMax;
+    private int _lifeMax;
+    public int lifeMax
+    {
+        set
+        {
+            if(value < 0){ Debug.LogError(NPCName + " can't have negative health"); return;}
+            _lifeMax = value;
+
+            try{healthBar.SetMaxHealth(_lifeMax);}
+            catch(NullReferenceException){Debug.LogError(NPCName + " doesn't have healthbar");}
+        }
+        get => _lifeMax;
+    }
 
     private int _life;
     public int TargetDirection
@@ -18,7 +30,13 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         set
         {
             _life = value;
-            if (_life <=0){gameObject.SetActive(false); return;}
+            if (_life <=0)
+            {
+                if(NPCName != "Player") Destroy(gameObject);
+                else gameObject.SetActive(false); 
+                return;
+            }
+
             try{ healthBar.SetHealth(_life);}
             catch(NullReferenceException){Debug.LogError(NPCName + " doesn't have healthbar");}
         }
@@ -97,9 +115,8 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         if (immune == false)
         {
             OnHit();
-            life -= damage;
             StartCoroutine(Immunity());
-            
+            life -= damage;            
         }
     }
 

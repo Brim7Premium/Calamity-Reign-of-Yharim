@@ -19,7 +19,6 @@ public class RespawnPlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(respawnSeconds);
         player.SetActive(true);
-        playerAI.enabled = true;
         playerAI.SetDefaults();
         playerAI.StartCoroutine(playerAI.Immunity());
     }

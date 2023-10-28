@@ -16,7 +16,7 @@ public class GreenSlimeAI : NPC
         damage = 5;
         lifeMax = 20;
         life = lifeMax;
-        healthBar.SetMaxHealth(lifeMax);
+
         target = GameObject.Find("Player");
 
     }
@@ -29,7 +29,7 @@ public class GreenSlimeAI : NPC
             animator.speed = 0.8f;
 
             ai[1]++;
-            if (ai[1] == 90.0f)
+            if (ai[1] == 90.0f && isGrounded)
             {
                 curTargetPos = TargetDirection;
 
