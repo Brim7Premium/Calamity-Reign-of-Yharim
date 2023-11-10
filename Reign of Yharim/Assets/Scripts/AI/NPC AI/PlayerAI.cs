@@ -21,9 +21,12 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
     [Header("Ground Detection")]
     [SerializeField] private PolygonCollider2D leg;
-    [SerializeField] private float circleRadius;
-    [SerializeField] private float circleCastCorrectionValue;
-    [SerializeField] private float raycastCorrectionValue;
+    [SerializeField] private float rayHeight;
+    [SerializeField] private float rideHeight;
+    [SerializeField] private float rideSpringStrength;
+    [SerializeField] private float rideSpringDamper;
+    private float height;
+    private Vector2 bottomPoint;
     private bool isGrounded;
     private float facingDirection;
 
@@ -47,13 +50,14 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         life = lifeMax;
  
         leg = GameObject.Find("LeftLeg").GetComponent<PolygonCollider2D>();
+        height = c2d.bounds.min.y - leg.bounds.min.y;
         
 
         rb.velocity = new Vector2(rb.velocity.x, Vector2.zero.y);
     }
     public override void AI() //every frame (Update)
     {
-        xAxis = Mathf.SmoothDamp(xAxis, Input.GetAxis("Horizontal"), ref xAxis, acceleration); //sets horizontal to -1 or 1 based on the player's input
+        xAxis = Input.GetAxis("Horizontal"); //sets horizontal to -1 or 1 based on the player's input
 
         if (Input.GetButtonDown("Jump")) //if the jump button is being pressed...
         {
@@ -67,6 +71,8 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         {
             OnJumpUp(); //trigger the OnJumpUp method
         }
+
+        bottomPoint = new Vector2(c2d.bounds.center.x, c2d.bounds.min.y); //the bottompoint variable equals the bottommost y point and center x point of the capsule collider
 
         //Debug.Log("IsJumping: " + isJumping + " IsFalling: " + isFalling);
 
@@ -87,37 +93,21 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     }
     private void Movement()
     {
-        Bounds bounds = c2d.bounds;
-
-        RaycastHit2D cast = Physics2D.CircleCast(bounds.center, circleRadius, Vector2.down, bounds.extents.y + circleCastCorrectionValue, groundLayer);
-
-        isGrounded = Physics2D.Raycast(bounds.center, Vector2.down, bounds.extents.y + raycastCorrectionValue, groundLayer);
-
         float targetSpeed = xAxis * moveSpeed;
 
-        Debug.DrawRay(cast.point, cast.normal);
+        float speedDif = targetSpeed - rb.velocity.x;
 
-        if(Mathf.Abs(cast.normal.y) > 0.01f && isGrounded && !isJumping )
-        {    
-            Vector2 normal = cast.normal;
+        float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : deacceleration;
 
-            rb.velocity = targetSpeed * -Vector2.Perpendicular(normal);
+        float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
 
-            rb.AddForce(2.5f * 9.81f * -normal);
-        }
-        else
-        {
-            rb.velocity = new Vector2(targetSpeed, rb.velocity.y);
-
-            rb.AddForce(2.5f * 9.81f * Vector2.down);
-        }
-
+        rb.AddForce(movement * Vector2.right);
 
         animator.speed = Mathf.Abs(targetSpeed / 10);
 
         if (isGrounded) //if the player is grounded and isn't attacking
         {
-            if (Mathf.Abs(xAxis) > 0.01f) //if the player isn't still
+            if (xAxis != 0) //if the player isn't still
             {
                 ChangeAnimationState(PlayerWalk); //set the animation to walking
             }
@@ -156,6 +146,34 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     {
         
         Application.targetFrameRate = framerate;
+        #region GroundDetection
+        Color rayCol;
+        RaycastHit2D hit = Physics2D.Raycast(bottomPoint, Vector2.down, height + 0.1f, groundLayer); //
+
+        if (!isJumping && hit)
+        {
+            transform.position = new Vector2(transform.position.x, hit.point.y + height);
+            rb.AddForce(2.5f * 9.81f * Vector2.up);
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+
+            rayCol = Color.green;
+            isGrounded = true;
+        }
+
+        else if(!isJumping && Physics2D.Raycast(bottomPoint, Vector2.down, rayHeight, groundLayer))
+        {
+            rb.AddForce(50 * Vector2.down);
+
+            rayCol = Color.green;
+            isGrounded = true;
+        }
+        
+        else
+        {
+            rayCol = Color.red;
+            isGrounded = false;
+        }
+        #endregion
 
         Movement();
     }
