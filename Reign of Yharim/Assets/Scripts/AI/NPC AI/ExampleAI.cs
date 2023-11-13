@@ -12,10 +12,6 @@ public class ExampleAI : NPC
         lifeMax = 100;
         life = lifeMax;
 
-        bottomPoint = new Vector2(c2d.bounds.center.x, c2d.bounds.min.y);
-
-        isGrounded = Physics2D.Raycast(bottomPoint, Vector2.down, 0.1f, groundLayer);
-
         target = GameObject.Find("Player");
     }
     //for this examplenpc, I will make a simple "state machine" for switching between different attacks.
@@ -32,7 +28,6 @@ public class ExampleAI : NPC
             if (ai[0] == 0.0f)
             {
                 if (ai[1] % 120 == 0 && isGrounded){
-                    print(DirectionTo(target.transform.position));
                     rb.velocity = new Vector2(TargetDirection * 2.735f, 5.47f)*1.5f;
                 }
 
@@ -50,7 +45,42 @@ public class ExampleAI : NPC
 
                 if (ai[1] > 120.0f)
                 {
-                    Vector2 _velocity = new Vector2(target.GetComponent<Rigidbody2D>().velocity.x * 1.5f, -3);
+                    //I don't remember how I got this but basically it shoots in player, while he moves in a straight line, at such speed that they will intersect. Kind of prediction of player movement.
+                    Vector2 bulletPos = transform.position - target.transform.position;
+
+                    Vector2 targetVel = target.GetComponent<Rigidbody2D>().velocity;
+
+                    int speed = 15;
+
+                    float a = speed*speed - targetVel.sqrMagnitude;
+
+                    float b = targetVel.x*bulletPos.x+targetVel.y*bulletPos.y;
+
+                    float c = -bulletPos.sqrMagnitude;
+
+                    float D = b*b - a*c;
+
+                    if(D<0){
+                        D = 0;
+                    }
+
+                    float z = (-b-Mathf.Sqrt(D))/a;
+
+                    if(z<0){
+                    
+                        z = (-b+Mathf.Sqrt(D))/a;
+
+                        if(z<0){
+                            z = 1;
+                        }
+                    }
+
+                    float velX = (float)(-bulletPos.x/z+targetVel.x);
+
+                    float velY = (float)(-bulletPos.y/z+targetVel.y);
+
+
+                    Vector2 _velocity = new Vector2(velX, velY);
                     int _damage = 20;
                     float _knockback = 0;
                     int _timeLeft = 4;
