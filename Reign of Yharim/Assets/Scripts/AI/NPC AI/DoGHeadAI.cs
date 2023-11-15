@@ -43,7 +43,7 @@ public class DoGHeadAI : NPC
                 velocity = velocity.RotateTowards(AngleTo(target.transform.position), RotationSpeed, true) * MoveSpeed;//this makes the worms velocity rotate towards the player.
                 if (velocity != Vector2.zero)//this code is copyed from this yt video https://www.youtube.com/watch?v=gs7y2b0xthU&t=366s and modified slightly.
                 {
-                    Vector2 movementDirection = velocity;
+                    Vector2 movementDirection = new(velocity.x, velocity.y);
                     Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
                 }
@@ -95,7 +95,7 @@ public class DoGHeadAI : NPC
         }
         else if (target == null)
         {
-            Vector2 movementDirection = velocity;
+            Vector2 movementDirection = new(velocity.x, velocity.y);
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
             velocity = new Vector2(-1, 1) * 0.5f;
