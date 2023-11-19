@@ -24,7 +24,7 @@ public class ExampleAI : NPC
             if (ai[0] == 0.0f) //if ai[0] equals 0 (First Attack)
             {
                 if (ai[1] % 60.0f == 0.0f) //if ai[1] divided by 60's remainder equals 0 (If ai[1] equals a number that evenly divides by 60) It will essentially trigger three times (when ai[1] is 60, 120, and 180)
-                    velocity = DirectionTo(target.transform.position) * 0.8f;//dash at the player every second. velocity = DirectionTo basically allows the NPC to move anywhere, and multiplying it changes the speed
+                    velocity = DirectionTo(transform.position, target.transform.position) * 0.8f;//dash at the player every second. velocity = DirectionTo basically allows the NPC to move anywhere, and multiplying it changes the speed
 
                 velocity *= 0.9f;//lower the velocity every frame to make the dashes smoother. It sets velocity to velocity times 0.9.
 
@@ -36,13 +36,13 @@ public class ExampleAI : NPC
             }
             if (ai[0] == 1.0f)//this is the second attack type.
             {
-                velocity = DirectionTo(new Vector2(target.transform.position.x, target.transform.position.y + 4)) * 0.4f;//attempt to fly above the player.
+                velocity = DirectionTo(transform.position, new Vector2(target.transform.position.x, target.transform.position.y + 4)) * 0.4f;//attempt to fly above the player.
 
                 if (ai[1] > 120.0f)//if it has been more than 2 seconds, fire a projectile at the player, switch phases, and reset ai[1](the timer).
                 {
                     Projectile proj = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, 20, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
 
-                    proj.velocity = DirectionTo(target.transform.position) * 0.3f; //the new new projectile will travel towards the player
+                    proj.velocity = DirectionTo(transform.position, target.transform.position) * 0.3f; //the new new projectile will travel towards the player
 
 
 

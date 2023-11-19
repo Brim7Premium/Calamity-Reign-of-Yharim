@@ -75,7 +75,7 @@ public class DoGHeadAI : NPC
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                     deathray.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-                    deathray.velocity = DirectionTo(oldTargetPos) * 0.9f; //the new new projectile will travel towards the player
+                    deathray.velocity = DirectionTo(transform.position, oldTargetPos) * 0.9f; //the new new projectile will travel towards the player
 
                     deathray.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
 

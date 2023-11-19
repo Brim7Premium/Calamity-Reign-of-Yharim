@@ -54,7 +54,7 @@ public class WulfrumGyratorAI : NPC
                     color = Color.red;
                     if (ai[0] == 0.0f)
                     {
-                        velocity.x = DirectionTo(target.transform.position).x * 0.12f; //speed of 
+                        velocity.x = DirectionTo(transform.position, target.transform.position).x * 0.12f; //speed of 
                     }
 
                     /*if (//placeholder)
