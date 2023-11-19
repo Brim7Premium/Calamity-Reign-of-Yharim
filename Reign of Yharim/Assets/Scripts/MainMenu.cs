@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log(menuScreens);
     }
-
+   
     public void ChangeMenuScreen(float menuID)
     {
         if (menuID == 1)
