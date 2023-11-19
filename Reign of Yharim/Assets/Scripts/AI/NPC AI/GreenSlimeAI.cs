@@ -13,9 +13,9 @@ public class GreenSlimeAI : NPC
         base.SetDefaults();
 
         NPCName = "GreenSlime";
-        damage = 5;
-        lifeMax = 20;
-        life = lifeMax;
+        Damage = 5;
+        LifeMax = 20;
+        Life = LifeMax;
 
         target = GameObject.Find("Player");
 

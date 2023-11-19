@@ -14,9 +14,9 @@ public class DoGHeadAI : NPC
         base.SetDefaults();
         
         NPCName = "DevourerofGodsHead";
-        damage = 600;
-        lifeMax = 1706400;
-        life = lifeMax;
+        Damage = 600;
+        LifeMax = 1706400;
+        Life = LifeMax;
         worm = true;
 
         target = GameObject.Find("Player");
@@ -74,7 +74,7 @@ public class DoGHeadAI : NPC
                 if (ai[1] == 60f) //after one second
                 {
                     Vector2 _vel = DirectionTo(transform.position, oldTargetPos) * 25;
-                    int _damage = damage;
+                    int _damage = Damage;
                     float _knockback = 0;
                     float _timeLeft = 1;
 

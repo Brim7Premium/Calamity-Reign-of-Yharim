@@ -25,12 +25,11 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     [SerializeField] private float rideSpringDamper;
     private Vector2 bottomPoint;
     private bool isGrounded;
-    private float facingDirection;
 
     [Header("Misc")]
     [SerializeField] private GameObject targetTestObject;
 
-    [SerializeField] [Range(1, 180)]private int framerate;
+    [SerializeField] [Range(1, 180)]private int framerate; //create int with range of 1 to 180, used for setting framerate. Why this is in the player's AI  script will remain unknown for eternity
 
     //constants can't be changed
     const string PlayerIdle = "Player_idle";
@@ -40,14 +39,14 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     const string PlayerAttack = "Player_attack";
 
 
-    public override void SetDefaults()
+    public override void SetDefaults() //awake
     {
-        base.SetDefaults();
+        base.SetDefaults(); //do whatever base npcs use as defaults plus stuff below
 
         NPCName = "Player";
-        damage = 0; //Note to future developers/self, this can be used for times when the player does deal contact damage to enemies. armor sets are an example. right now, it's useless.
-        lifeMax = 100;
-        life = lifeMax;        
+        Damage = 0; //Note to future developers/self, this can be used for times when the player does deal contact damage to enemies. armor sets are an example. right now, it's useless.
+        LifeMax = 100;
+        Life = LifeMax;        
 
         rb.velocity = new Vector2(rb.velocity.x, Vector2.zero.y);
     }
@@ -88,7 +87,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     }
     public override void Kill()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false); //deactivate the object
         GameObject.Find("WorldManager").SendMessage("Respawn"); //tell the worldmanager to respawn the player
     }
     private void Movement()
@@ -119,12 +118,10 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         if (xAxis > 0)
         {
             transform.localScale = new Vector2(1, 1); //facing right
-            facingDirection = 1f;
         }
         if (xAxis < 0)
         {
             transform.localScale = new Vector2(-1, 1); //facing left
-            facingDirection = -1f;
         }
     }
     private void Jump()
@@ -145,7 +142,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     private void FixedUpdate() //for physics
     {
         
-        Application.targetFrameRate = framerate;
+        Application.targetFrameRate = framerate; //target framerate equals the set number
         #region GroundDetection
         Color rayCol;
         RaycastHit2D hit = Physics2D.Raycast(bottomPoint, Vector2.down, rayHeight, groundLayer);
@@ -181,7 +178,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         while (rb.velocity.y > 0) //while the player is still going up
         {
-            yield return null; //return null (creates a loop until rb.velocity is less than ot equal to zero
+            yield return null; //return null (creates a loop until rb.velocity is less than or equal to zero
         }
 
         isJumping = false; //set isjumping to false (doesn't trigger until the above loop is done)

@@ -15,9 +15,9 @@ public class DoGBodyAI : NPC
         base.SetDefaults();
 
         NPCName = "DevourerofGodsBody";
-        damage = 442;
-        lifeMax = 1706400;
-        life = lifeMax;
+        Damage = 442;
+        LifeMax = 1706400;
+        Life = LifeMax;
         worm = true;
 
         target = GameObject.Find("Player");
@@ -80,7 +80,7 @@ public class DoGBodyAI : NPC
                     if (rng == 3)
                     {
                         Vector2 _vel = DirectionTo(transform.position, oldTargetPos) * 25;
-                        int _damage = damage;
+                        int _damage = Damage;
                         float _knockback = 0;
                         float _timeLeft = 1;
 

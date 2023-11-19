@@ -8,9 +8,9 @@ public class ExampleAI : NPC
     {
         base.SetDefaults();
         NPCName = "ExampleNPC";
-        damage = 7;
-        lifeMax = 100;
-        life = lifeMax;
+        Damage = 7;
+        LifeMax = 100;
+        Life = LifeMax;
 
         target = GameObject.Find("Player");
     }

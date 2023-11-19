@@ -5,10 +5,10 @@ public class DummyAI : NPC
     {
         base.SetDefaults();
 
-        damage = 10;
+        Damage = 10;
         NPCName = "Dummy";
-        lifeMax = 100;
-        life = lifeMax;
+        LifeMax = 100;
+        Life = LifeMax;
         
         target = GameObject.Find("Player");
     }

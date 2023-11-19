@@ -25,7 +25,7 @@ public class CollisionSystem : MonoBehaviour
                     Debug.Log(gameObject.name + "is hitting " + entityName);
                     color = new Color(1f, 0f, 0f, 0.1764706f);
                     gameObject.GetComponent<SpriteRenderer>().color = color;
-                    gameObject.transform.parent.parent.SendMessage("TakeDamage", collision.gameObject.transform.parent.parent.GetComponentInChildren<NPC>().damage);
+                    gameObject.transform.parent.parent.SendMessage("TakeDamage", collision.gameObject.transform.parent.parent.GetComponentInChildren<NPC>().Damage);
                     AudioManager.instance.PlayOneShot(FMODEvents.instance.hitSound, transform.position);
                 }
             }
