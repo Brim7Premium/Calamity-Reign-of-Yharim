@@ -40,7 +40,7 @@ public class DoGHeadAI : NPC
             if (ai[0] == 0.0f) //if ai[0] equals 0 (First Attack)
             {
                 Debug.Log("Devourer of gods is phase 1!");
-                velocity = velocity.RotateTowards(AngleTo(target.transform.position), RotationSpeed, true) * MoveSpeed;//this makes the worms velocity rotate towards the player.
+                velocity = velocity.RotateTowards(AngleTo(transform.position, target.transform.position), RotationSpeed, true) * MoveSpeed;//this makes the worms velocity rotate towards the player.
                 if (velocity != Vector2.zero)//this code is copyed from this yt video https://www.youtube.com/watch?v=gs7y2b0xthU&t=366s and modified slightly.
                 {
                     Vector2 movementDirection = new(velocity.x, velocity.y);
@@ -73,7 +73,7 @@ public class DoGHeadAI : NPC
                 }
                 if (ai[1] == 60f) //after one second
                 {
-                    Vector2 _vel = DirectionTo(oldTargetPos) * 25;
+                    Vector2 _vel = DirectionTo(transform.position, oldTargetPos) * 25;
                     int _damage = damage;
                     float _knockback = 0;
                     float _timeLeft = 1;

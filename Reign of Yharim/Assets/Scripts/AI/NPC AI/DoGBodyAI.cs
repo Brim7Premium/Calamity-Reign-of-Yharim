@@ -30,7 +30,7 @@ public class DoGBodyAI : NPC
         if (GameObject.Find("DevourerofGodsHead") != null)
         {
             if (Vector2.Distance(transform.position, AheadSegment.transform.position) >= SegmentSize)//if this segments positon >= the aheadsegment's position + SegmentsSize, move towards the ahead segment.
-                velocity = DirectionTo(AheadSegment.transform.position) * VelocitySmoothing;
+                velocity = DirectionTo(transform.position, AheadSegment.transform.position) * VelocitySmoothing;
             else
                 velocity *= VelocitySmoothing;//quickly lower the segments velocity to stop it from moving into weird positions.
             if (velocity != Vector2.zero)//this code is copyed from this yt video https://www.youtube.com/watch?v=gs7y2b0xthU&t=366s and modified slightly.
@@ -79,7 +79,7 @@ public class DoGBodyAI : NPC
                 {
                     if (rng == 3)
                     {
-                        Vector2 _vel = DirectionTo(oldTargetPos) * 25;
+                        Vector2 _vel = DirectionTo(transform.position, oldTargetPos) * 25;
                         int _damage = damage;
                         float _knockback = 0;
                         float _timeLeft = 1;
