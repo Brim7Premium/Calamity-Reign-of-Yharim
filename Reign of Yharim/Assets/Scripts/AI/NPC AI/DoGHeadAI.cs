@@ -11,17 +11,21 @@ public class DoGHeadAI : NPC
     private EventInstance DoGMusic;
     public override void SetDefaults()
     {
+        base.SetDefaults();
+        
         NPCName = "DevourerofGodsHead";
         damage = 600;
         lifeMax = 1706400;
         life = lifeMax;
         worm = true;
-        healthBar.SetMaxHealth(lifeMax);
+
+        target = GameObject.Find("Player");
 
         DoGMusic = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoGMusic);
     }
     public override void AI()
     {
+        UpdateVelocity();
         PLAYBACK_STATE playbackState;
         DoGMusic.getPlaybackState(out playbackState);
         if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
@@ -57,7 +61,7 @@ public class DoGHeadAI : NPC
 
                     velocity = Vector2.zero;
 
-                    Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, 0, 60);
+                    Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, 0, 0, 0, 4);
 
                     oldTargetPos = target.transform.position;
 
@@ -69,18 +73,18 @@ public class DoGHeadAI : NPC
                 }
                 if (ai[1] == 60f) //after one second
                 {
-                    Projectile deathray = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, damage, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
+                    Vector2 _vel = DirectionTo(oldTargetPos) * 25;
+                    int _damage = damage;
+                    float _knockback = 0;
+                    float _timeLeft = 1;
+
+                    Projectile deathray = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, _vel, _damage, _knockback, _timeLeft);
 
                     Vector3 direction = (Vector3)oldTargetPos - deathray.transform.position;
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                     deathray.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-                    deathray.velocity = DirectionTo(oldTargetPos) * 0.9f; //the new new projectile will travel towards the player
-
                     deathray.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-
-                    deathray.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-                    ;
                 }
                 if (ai[1] == 240f) //after four seconds
                 {
@@ -95,7 +99,6 @@ public class DoGHeadAI : NPC
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
             velocity = new Vector2(-1, 1) * 0.5f;
-
             if (GetDistanceToPlayer() > 240f)
             {
                 DoGMusic.stop(STOP_MODE.ALLOWFADEOUT);
