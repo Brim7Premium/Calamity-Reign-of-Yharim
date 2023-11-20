@@ -8,9 +8,9 @@ public class ExampleAI : NPC
     {
         base.SetDefaults();
         NPCName = "ExampleNPC";
-        damage = 7;
-        lifeMax = 100;
-        life = lifeMax;
+        Damage = 7;
+        LifeMax = 100;
+        Life = LifeMax;
 
         target = GameObject.Find("Player");
     }
@@ -41,7 +41,7 @@ public class ExampleAI : NPC
             
             else if (ai[0] == 1.0f)
             {
-                rb.velocity = DirectionTo(new Vector2(target.transform.position.x, target.transform.position.y + 4)) * 24;//attempt to fly above the player.
+                rb.velocity = DirectionTo(transform.position, new Vector2(target.transform.position.x, target.transform.position.y + 4)) * 24;//attempt to fly above the player.
 
                 if (ai[1] > 120.0f)
                 {

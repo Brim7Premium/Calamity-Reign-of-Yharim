@@ -6,8 +6,6 @@ using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-    public TMP_Text textToSet;
-    public TMP_InputField textToUse;
     public MainMenuScreens menuScreens;
 
     public void EnterWorld()
@@ -21,12 +19,9 @@ public class MainMenu : MonoBehaviour
     }
     private void Update()
     {
-        if (textToUse != null)
-        {
-            textToSet.text = textToUse.text;
-        }
         Debug.Log(menuScreens);
     }
+   
     public void ChangeMenuScreen(float menuID)
     {
         if (menuID == 1)
@@ -35,11 +30,11 @@ public class MainMenu : MonoBehaviour
         }
         if (menuID == 2)
         {
-            menuScreens = MainMenuScreens.SinglePlay;
+            menuScreens = MainMenuScreens.SinglePlayer;
         }
         if (menuID == 3)
         {
-            menuScreens = MainMenuScreens.SinglePlaySave;
+            menuScreens = MainMenuScreens.SinglePlayerSave;
         }
         if (menuID == 4)
         {
@@ -50,12 +45,17 @@ public class MainMenu : MonoBehaviour
             menuScreens = MainMenuScreens.OptionsAudio;
         }
     }
+    /* Set the variables using unity's built in button system
+     * for each button, assign the id of the next screen/the screen that the button would send you to
+     * for back buttons, assign the id of the previous screen
+     * these variables are going to be how we control the mechanic of each screen
+     */
 
     public enum MainMenuScreens
     {
         Main,
-        SinglePlay,
-        SinglePlaySave,
+        SinglePlayer,
+        SinglePlayerSave,
         Options,
         OptionsAudio
     }
