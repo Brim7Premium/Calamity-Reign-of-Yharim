@@ -99,7 +99,7 @@ public class DoGHeadAI : NPC
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
             velocity = new Vector2(-1, 1) * 0.5f;
-            if (GetDistanceToPlayer() > 240f)
+            if (DistanceBetween(transform.position, target.transform.position) > 240f)
             {
                 DoGMusic.stop(STOP_MODE.ALLOWFADEOUT);
                 Destroy(gameObject);

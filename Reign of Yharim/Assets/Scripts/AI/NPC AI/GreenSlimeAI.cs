@@ -18,7 +18,6 @@ public class GreenSlimeAI : NPC
         Life = LifeMax;
 
         target = GameObject.Find("Player");
-
     }
 
     public override void AI()
@@ -34,7 +33,11 @@ public class GreenSlimeAI : NPC
                 curTargetPos = TargetDirection;
 
                 ChangeAnimationState(SlimeIdle);
-                rb.velocity = new Vector2(curTargetPos * 2.735f, 5.47f); //Match original as much as possible
+                //velocity.x = curTargetPos * 0.2f; //jump towards the player
+                //velocity.y = 0.2f; //at the same time jump up
+
+
+                rb.velocity = new Vector2(curTargetPos * 0.2f, 0.2f); //Match original as much as possible
             }
             else if (ai[1] > 150.0f && isGrounded) 
             {
@@ -42,7 +45,7 @@ public class GreenSlimeAI : NPC
                 rb.velocity = Vector2.zero; 
                 ai[1] = 0.0f;
             }
-            if (GetDistanceToPlayer() > 60f)
+            if (DistanceBetween(transform.position, target.transform.position) > 60f)
             {
                 Destroy(gameObject);
             }
