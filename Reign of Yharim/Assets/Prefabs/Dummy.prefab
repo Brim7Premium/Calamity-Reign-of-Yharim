@@ -1005,6 +1005,7 @@ MonoBehaviour:
   - {fileID: 1042123391, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
   - {fileID: 1578461337, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
   - {fileID: 2136895022, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
+  - {fileID: -1140954370, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
   - {fileID: 2069189042, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
   - {fileID: 468832762, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
   - {fileID: -925272832, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
@@ -1417,7 +1418,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5000001, z: 0}
   m_ShapePathHash: 1568416211
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43834
+  m_InstanceId: 51100
   m_LocalBounds:
     m_Center: {x: -0.000000059604645, y: -0.000000059604645, z: 0}
     m_Extent: {x: 0.5, y: 0.50000006, z: 0}
@@ -1433,16 +1434,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3281d2fb7095145bc04f4db4e522d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 772765633742338996}
   rb: {fileID: 7027615230118020448}
-  bc2d: {fileID: 0}
+  c2d: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -1454,8 +1450,8 @@ MonoBehaviour:
   IFrames: 1
   projectiles: []
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
