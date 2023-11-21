@@ -301,6 +301,7 @@ MonoBehaviour:
   - {fileID: 1042123391, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
   - {fileID: 1578461337, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
   - {fileID: 2136895022, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
+  - {fileID: -1140954370, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
   - {fileID: 2069189042, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
   - {fileID: 468832762, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
   - {fileID: -925272832, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
@@ -729,7 +730,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
   c2d: {fileID: 0}
