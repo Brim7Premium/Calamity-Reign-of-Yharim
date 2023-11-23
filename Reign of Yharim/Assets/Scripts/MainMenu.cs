@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     {
         EventInstance TitleTheme = FMODUnity.RuntimeManager.CreateInstance(Music.Title);
         TitleTheme.start();
+        Debug.Log("Main");
     }
 
     public void EnterWorld()
@@ -33,7 +34,6 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(menuScreens);
     }
    
     public void ChangeMenuScreen(float menuID)
@@ -59,6 +59,7 @@ public class MainMenu : MonoBehaviour
         {
             menuScreens = MainMenuScreens.OptionsAudio;
         }
+        Debug.Log(menuScreens);
     }
     /* Set the variables using unity's built in button system
      * for each button, assign the id of the next screen/the screen that the button would send you to
