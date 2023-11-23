@@ -3,20 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using FMOD.Studio;
 
 public class MainMenu : MonoBehaviour
 {
     public MainMenuScreens menuScreens;
 
+    private EventInstance TitleTheme;
+
+    public void Awake()
+    {
+        EventInstance TitleTheme = FMODUnity.RuntimeManager.CreateInstance(Music.Title);
+        TitleTheme.start();
+    }
+
     public void EnterWorld()
     {
+        TitleTheme.stop(STOP_MODE.IMMEDIATE);
+        TitleTheme.release();
         SceneManager.LoadScene("Surface");
     }
+
     public void LeaveGame()
     {
+        TitleTheme.stop(STOP_MODE.IMMEDIATE);
+        TitleTheme.release();
         Debug.Log("The game has quit");
-        Application.Quit();
     }
+
     private void Update()
     {
         Debug.Log(menuScreens);
@@ -24,6 +38,7 @@ public class MainMenu : MonoBehaviour
    
     public void ChangeMenuScreen(float menuID)
     {
+        FMODUnity.RuntimeManager.PlayOneShot(SFX.ExoTwinsIcon);
         if (menuID == 1)
         {
             menuScreens = MainMenuScreens.Main;
