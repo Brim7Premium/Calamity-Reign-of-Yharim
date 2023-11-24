@@ -8,6 +8,9 @@ public class FMODEvents : MonoBehaviour
 	[field: Header("Player SFX")]
 	[field: SerializeField] public EventReference Playerhit { get; private set; }
 
+	[field: Header("Boss SFX")]
+	[field: SerializeField] public EventReference AureusStomp { get; private set; }
+
 	[field: Header("Menu SFX")]
 	[field: SerializeField] public EventReference ExoTwinsHoverIcon { get; private set; }
 

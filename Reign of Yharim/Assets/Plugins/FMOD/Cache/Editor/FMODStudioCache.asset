@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638364107275529383
+  lastModified: 638364129225303227
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -116,10 +116,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638364107277355626
+  lastModified: 638364130474420627
   FileSizes:
   - Name: Desktop
-    Value: 18528
+    Value: 25120
   Exists: 1
 --- !u!114 &-3842488243127547396
 MonoBehaviour:
@@ -254,12 +254,13 @@ MonoBehaviour:
   - {fileID: 2639243575317120306}
   - {fileID: -9109763362631571093}
   - {fileID: 549684967293634785}
+  - {fileID: 677652623195588801}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8797449028552549377}
   StringsBanks:
   - {fileID: 276639227055529703}
-  cacheTime: 638364107277355626
+  cacheTime: 638364130474420627
   cacheVersion: 131609
 --- !u!114 &276639227055529703
 MonoBehaviour:
@@ -276,10 +277,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638364107275549412
+  lastModified: 638364129225328740
   FileSizes:
   - Name: Desktop
-    Value: 1260
+    Value: 1316
   Exists: 1
 --- !u!114 &549684967293634785
 MonoBehaviour:
@@ -299,6 +300,33 @@ MonoBehaviour:
     Data2: 1123115900
     Data3: -1383411011
     Data4: 1523751751
+  Banks:
+  - {fileID: -4585573814524308878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &677652623195588801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/AstrumAureusStomp
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/AstrumAureusStomp
+  Guid:
+    Data1: -413663715
+    Data2: 1130816096
+    Data3: -610521666
+    Data4: -1742206654
   Banks:
   - {fileID: -4585573814524308878}
   IsStream: 0

@@ -18,6 +18,11 @@ public class MainMenu : MonoBehaviour
 		Debug.Log("Main");
 	}
 
+	public void HoverSound()
+	{
+		AudioManager.instance.PlayOneShot(FMODEvents.instance.AureusStomp);
+	}
+
 	public void EnterWorld()
 	{
 		SceneManager.LoadScene("Surface");
