@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
         eventInstances = new List<EventInstance>();
     }
 
-    public void PlayOneShot(EventReference sound, Vector3 worldPos)
+    public void PlayOneShot(EventReference sound, Vector3 worldPos = new Vector3())
     {
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
