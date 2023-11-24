@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9109763362631571093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/DefenseHit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/DefenseHit
+  Guid:
+    Data1: 937102872
+    Data2: 1263561464
+    Data3: -366506562
+    Data4: -1189691460
+  Banks:
+  - {fileID: -4585573814524308878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-9059427233717359220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LegendStrife4
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LegendStrife4
+  Guid:
+    Data1: 1565099933
+    Data2: 1173932179
+    Data3: -398274924
+    Data4: -805342098
+  Banks:
+  - {fileID: -1246897534701598436}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 184545
 --- !u!114 &-8797449028552549377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,38 +69,11 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638363663169143709
+  lastModified: 638364107275529383
   FileSizes:
   - Name: Desktop
     Value: 1036
   Exists: 1
---- !u!114 &-6090511966529901194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife2
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife2
-  Guid:
-    Data1: -553919349
-    Data2: 1322195297
-    Data3: 1252561074
-    Data4: -768810406
-  Banks:
-  - {fileID: -1246897534701598436}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 269439
 --- !u!114 &-5677388323839993875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +116,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638363663241883812
+  lastModified: 638364107277355626
   FileSizes:
   - Name: Desktop
     Value: 18528
@@ -134,33 +161,6 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12576
   Exists: 1
---- !u!114 &-1983794455799354667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/DefenseHit
-  m_EditorClassIdentifier: 
-  Path: event:/DefenseHit
-  Guid:
-    Data1: 937102872
-    Data2: 1263561464
-    Data3: -366506562
-    Data4: -1189691460
-  Banks:
-  - {fileID: -4585573814524308878}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-1427979402525925453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,65 +196,11 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638363666381924369
+  lastModified: 638364107276920420
   FileSizes:
   - Name: Desktop
     Value: 16957952
   Exists: 1
---- !u!114 &-1163773809481104980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife4
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife4
-  Guid:
-    Data1: 1565099933
-    Data2: 1173932179
-    Data3: -398274924
-    Data4: -805342098
-  Banks:
-  - {fileID: -1246897534701598436}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 184545
---- !u!114 &-825544209830790889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/TaleofaCruelWorld
-  m_EditorClassIdentifier: 
-  Path: event:/TaleofaCruelWorld
-  Guid:
-    Data1: 2000118566
-    Data2: 1304468088
-    Data3: 90891170
-    Data4: 1274298878
-  Banks:
-  - {fileID: -1246897534701598436}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 176730
 --- !u!114 &-457915596625687168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,33 +228,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 142564
---- !u!114 &-39695387696048348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife1
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife1
-  Guid:
-    Data1: -2049955358
-    Data2: 1341340651
-    Data3: 447516320
-    Data4: -1521750869
-  Banks:
-  - {fileID: -1246897534701598436}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 180713
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,20 +246,20 @@ MonoBehaviour:
   - {fileID: -1246897534701598436}
   - {fileID: -4585573814524308878}
   EditorEvents:
-  - {fileID: 3451143524135306336}
-  - {fileID: -6090511966529901194}
-  - {fileID: -1163773809481104980}
-  - {fileID: -39695387696048348}
-  - {fileID: 4648736365112083984}
-  - {fileID: -1983794455799354667}
-  - {fileID: -825544209830790889}
-  - {fileID: 6383940191027679777}
+  - {fileID: 3988853311855828750}
+  - {fileID: 6999813700155449044}
+  - {fileID: 1373791514654810451}
+  - {fileID: -9059427233717359220}
+  - {fileID: 9174697575767334748}
+  - {fileID: 2639243575317120306}
+  - {fileID: -9109763362631571093}
+  - {fileID: 549684967293634785}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8797449028552549377}
   StringsBanks:
   - {fileID: 276639227055529703}
-  cacheTime: 638363666381924369
+  cacheTime: 638364107277355626
   cacheVersion: 131609
 --- !u!114 &276639227055529703
 MonoBehaviour:
@@ -357,11 +276,65 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638363663169165716
+  lastModified: 638364107275549412
   FileSizes:
   - Name: Desktop
-    Value: 1164
+    Value: 1260
   Exists: 1
+--- !u!114 &549684967293634785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menus/DraedonMechSelect/ExoTwinsIconHover
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menus/DraedonMechSelect/ExoTwinsIconHover
+  Guid:
+    Data1: 1506071997
+    Data2: 1123115900
+    Data3: -1383411011
+    Data4: 1523751751
+  Banks:
+  - {fileID: -4585573814524308878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1373791514654810451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LegendStrife2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LegendStrife2
+  Guid:
+    Data1: -553919349
+    Data2: 1322195297
+    Data3: 1252561074
+    Data4: -768810406
+  Banks:
+  - {fileID: -1246897534701598436}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 269439
 --- !u!114 &2082539738636856865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,7 +382,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 180713
---- !u!114 &3451143524135306336
+--- !u!114 &2639243575317120306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -419,23 +392,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife3
+  m_Name: event:/Music/Bosses/ScourgeoftheUniverse
   m_EditorClassIdentifier: 
-  Path: event:/LegendStrife3
+  Path: event:/Music/Bosses/ScourgeoftheUniverse
   Guid:
-    Data1: 1867195453
-    Data2: 1260542070
-    Data3: -1039887729
-    Data4: -2116126500
+    Data1: -1937256212
+    Data2: 1127564151
+    Data3: -389255775
+    Data4: 1059554773
   Banks:
   - {fileID: -1246897534701598436}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 273962
+  Length: 229894
 --- !u!114 &3906553482818088002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,6 +436,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 174944
+--- !u!114 &3988853311855828750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Other/TaleofaCruelWorld
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Other/TaleofaCruelWorld
+  Guid:
+    Data1: 2000118566
+    Data2: 1304468088
+    Data3: 90891170
+    Data4: 1274298878
+  Banks:
+  - {fileID: -1246897534701598436}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 176730
 --- !u!114 &3991882158755470496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,7 +517,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 269439
---- !u!114 &4648736365112083984
+--- !u!114 &6999813700155449044
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -527,50 +527,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ScourgeoftheUniverse
+  m_Name: event:/Music/Biomes/LegendStrife3
   m_EditorClassIdentifier: 
-  Path: event:/ScourgeoftheUniverse
+  Path: event:/Music/Biomes/LegendStrife3
   Guid:
-    Data1: -1937256212
-    Data2: 1127564151
-    Data3: -389255775
-    Data4: 1059554773
+    Data1: 1867195453
+    Data2: 1260542070
+    Data3: -1039887729
+    Data4: -2116126500
   Banks:
   - {fileID: -1246897534701598436}
   IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 229894
---- !u!114 &6383940191027679777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ExoTwinsIconHover
-  m_EditorClassIdentifier: 
-  Path: event:/ExoTwinsIconHover
-  Guid:
-    Data1: 1506071997
-    Data2: 1123115900
-    Data3: -1383411011
-    Data4: 1523751751
-  Banks:
-  - {fileID: -4585573814524308878}
-  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 273962
 --- !u!114 &8180960476378426996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,3 +598,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &9174697575767334748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LegendStrife1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LegendStrife1
+  Guid:
+    Data1: -2049955358
+    Data2: 1341340651
+    Data3: 447516320
+    Data4: -1521750869
+  Banks:
+  - {fileID: -1246897534701598436}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 180713

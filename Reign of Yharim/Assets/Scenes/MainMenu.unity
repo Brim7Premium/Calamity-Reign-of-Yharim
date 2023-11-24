@@ -10491,56 +10491,56 @@ MonoBehaviour:
       Data2: 1263561464
       Data3: -366506562
       Data4: -1189691460
-    Path: event:/DefenseHit
+    Path: event:/SFX/Player/DefenseHit
   <ExoTwinsHoverIcon>k__BackingField:
     Guid:
       Data1: 1506071997
       Data2: 1123115900
       Data3: -1383411011
       Data4: 1523751751
-    Path: event:/ExoTwinsIconHover
+    Path: event:/SFX/Menus/DraedonMechSelect/ExoTwinsIconHover
   <DoG1>k__BackingField:
     Guid:
       Data1: -1937256212
       Data2: 1127564151
       Data3: -389255775
       Data4: 1059554773
-    Path: event:/ScourgeoftheUniverse
+    Path: event:/Music/Bosses/ScourgeoftheUniverse
   <Day1>k__BackingField:
     Guid:
       Data1: -2049955358
       Data2: 1341340651
       Data3: 447516320
       Data4: -1521750869
-    Path: event:/LegendStrife1
+    Path: event:/Music/Biomes/LegendStrife1
   <Day2>k__BackingField:
     Guid:
       Data1: -553919349
       Data2: 1322195297
       Data3: 1252561074
       Data4: -768810406
-    Path: event:/LegendStrife2
+    Path: event:/Music/Biomes/LegendStrife2
   <Day3>k__BackingField:
     Guid:
       Data1: 1867195453
       Data2: 1260542070
       Data3: -1039887729
       Data4: -2116126500
-    Path: event:/LegendStrife3
+    Path: event:/Music/Biomes/LegendStrife3
   <Day4>k__BackingField:
     Guid:
       Data1: 1565099933
       Data2: 1173932179
       Data3: -398274924
       Data4: -805342098
-    Path: event:/LegendStrife4
+    Path: event:/Music/Biomes/LegendStrife4
   <Title>k__BackingField:
     Guid:
       Data1: 2000118566
       Data2: 1304468088
       Data3: 90891170
       Data4: 1274298878
-    Path: event:/TaleofaCruelWorld
+    Path: event:/Music/Other/TaleofaCruelWorld
 --- !u!1 &1679021432
 GameObject:
   m_ObjectHideFlags: 0
@@ -13773,20 +13773,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuScreens: 0
-  ThemeMusic:
-    Guid:
-      Data1: 2000118566
-      Data2: 1304468088
-      Data3: 90891170
-      Data4: 1274298878
-    Path: event:/TaleofaCruelWorld
-  ButtonSound:
-    Guid:
-      Data1: 1506071997
-      Data2: 1123115900
-      Data3: -1383411011
-      Data4: 1523751751
-    Path: event:/ExoTwinsIconHover
 --- !u!4 &2086259028
 Transform:
   m_ObjectHideFlags: 0
