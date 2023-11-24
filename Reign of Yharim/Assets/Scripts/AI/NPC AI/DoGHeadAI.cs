@@ -21,7 +21,7 @@ public class DoGHeadAI : NPC
 
         target = GameObject.Find("Player");
 
-        DoGMusic = FMODUnity.RuntimeManager.CreateInstance(Music.DoG1);
+        DoGMusic = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoGMusic);
     }
     public override void AI()
     {
@@ -102,7 +102,6 @@ public class DoGHeadAI : NPC
             if (DistanceBetween(transform.position, target.transform.position) > 240f)
             {
                 DoGMusic.stop(STOP_MODE.ALLOWFADEOUT);
-                DoGMusic.release();
                 Destroy(gameObject);
             }
         }

@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using FMOD.Studio;
 
 public class CollisionSystem : MonoBehaviour
 {
@@ -28,7 +26,7 @@ public class CollisionSystem : MonoBehaviour
                     color = new Color(1f, 0f, 0f, 0.1764706f);
                     gameObject.GetComponent<SpriteRenderer>().color = color;
                     gameObject.transform.parent.parent.SendMessage("TakeDamage", collision.gameObject.transform.parent.parent.GetComponentInChildren<NPC>().Damage);
-                    FMODUnity.RuntimeManager.PlayOneShot(SFX.PlayerHit, transform.position);
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.hitSound, transform.position);
                 }
             }
             if (collision.gameObject.tag == "ProjectileHitbox")
@@ -41,7 +39,7 @@ public class CollisionSystem : MonoBehaviour
                     gameObject.GetComponent<SpriteRenderer>().color = color;
 
                     gameObject.transform.parent.parent.SendMessage("TakeDamage", collision.gameObject.transform.parent.parent.gameObject.GetComponent<Projectile>().damage);
-                    FMODUnity.RuntimeManager.PlayOneShot(SFX.PlayerHit, transform.position);
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.hitSound, transform.position);
                 }
             }
         }
