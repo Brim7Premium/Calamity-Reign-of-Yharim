@@ -14,8 +14,10 @@ public class GUIController : MonoBehaviour
     public string currentAnimationState;
 
     private bool inventoryOpened;
+    public int maxStackedItems = 999;
     public InvSlot[] slots;
     public GameObject itemPrefab;
+    int selectedSlot = -1;
 
     public Item[] itemsToPickup;
 
@@ -26,6 +28,7 @@ public class GUIController : MonoBehaviour
     private void Start()
     {
         inventoryOpened = false;
+        ChangeSelectedSlot(0);
     }
 
     void Update()
@@ -67,6 +70,14 @@ public class GUIController : MonoBehaviour
         {
             inventory.SetActive(false);
         }
+        if (Input.inputString != null)
+        {
+            bool isNumber = int.TryParse(Input.inputString, out int number);
+            if (isNumber && number > 0 && number < 10)
+            {
+                ChangeSelectedSlot(number - 1);
+            }
+        }
     }
 
     public void ChangeAnimationState(string newAnimationState)
@@ -78,8 +89,30 @@ public class GUIController : MonoBehaviour
         currentAnimationState = newAnimationState; //set currentAnimationState to newAnimationState
     }
 
-    public void AddItem(Item item)
+    void ChangeSelectedSlot(int value)
     {
+        if (selectedSlot >= 0)
+        {
+            slots[selectedSlot].Deselect();
+        }
+        slots[value].Select();
+        selectedSlot = value;
+    }
+
+    public bool AddItem(Item item)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            InvSlot slot = slots[i];
+            InvItem itemInSlot = slot.GetComponentInChildren<InvItem>();
+            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < maxStackedItems && itemInSlot.item.stackable == true)
+            {
+                itemInSlot.count++;
+                itemInSlot.ReCount();
+                return true;
+            }
+        }
+
         for (int i = 0; i < slots.Length; i++)
         {
             InvSlot slot = slots[i];
@@ -87,9 +120,11 @@ public class GUIController : MonoBehaviour
             if (itemInSlot == null)
             {
                 SpawnNewItem(item, slot);
-                return;
+                return true;
             }
         }
+
+        return false;
     }
     public void SpawnNewItem(Item item, InvSlot slot)
     {
@@ -97,8 +132,36 @@ public class GUIController : MonoBehaviour
         InvItem invItem = itemGameObject.GetComponent<InvItem>();
         invItem.InitItem(item);
     }
+
+    public Item GetSelectedItem(bool use) //without bool use, method will get the selected item, with bool use, method will get and remove one of selected item
+    {
+        InvSlot slot = slots[selectedSlot];
+        InvItem itemInSlot = slot.GetComponentInChildren<InvItem>();
+        if (itemInSlot != null)
+        {
+            Item item = itemInSlot.item;
+            if (use == true)
+            {
+                itemInSlot.count--;
+                if (itemInSlot.count <= 0)
+                {
+                    Destroy(itemInSlot.gameObject);
+                }
+                else
+                    itemInSlot.ReCount();
+            }
+            return item;
+        }
+        else
+            return null;
+    }
+    //demo script
     public void PickUpItem()
     {
-        AddItem(itemsToPickup[Random.Range(0, itemsToPickup.Length)]);
+        bool result = AddItem(itemsToPickup[Random.Range(0, itemsToPickup.Length)]);
+        if (result == true)
+            Debug.Log("Item added");
+        else
+            Debug.LogWarning("Item could not be added");
     }
 }
