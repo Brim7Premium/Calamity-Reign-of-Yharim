@@ -10,6 +10,13 @@ public class WorldItem : MonoBehaviour
 
     // Update is called once per frame
 
+    private void Start()
+    {
+        if (GameObject.Find("GUIManager") != null)
+            gUIController = GameObject.Find("GUIManager").GetComponent<GUIController>();
+        else
+            Debug.LogError("No GUI Manager");
+    }
     public void SpawnCooldown(float seconds)
     {
         StartCoroutine(Wait(seconds));
