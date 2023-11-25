@@ -19,6 +19,7 @@ public class GUIController : MonoBehaviour
     public GameObject itemPrefab;
     int selectedSlot = -1;
     public GameObject worldItem;
+    public GameObject player;
 
     public Item[] itemsToPickup;
 
@@ -71,9 +72,13 @@ public class GUIController : MonoBehaviour
 
             if (GetSelectedItem(false))
             {
-                GameObject worldClone = Instantiate(worldItem, new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y), Quaternion.identity);
-                worldClone.GetComponent<SpriteRenderer>().sprite = droppedItem.image;
+                GameObject worldClone = Instantiate(worldItem, player.transform.position, Quaternion.identity);
+                worldClone.GetComponent<WorldItem>().SpawnCooldown(2f);
+                SpriteRenderer spriteRenderer = worldClone.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = droppedItem.image;
+                worldClone.GetComponent<WorldItem>().myDroppedItem = droppedItem;
                 GetSelectedItem(true);
+                worldClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(200f * playerAI.isFacing, 200f));
             }
         }
     }
