@@ -11,6 +11,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     [SerializeField] private float deacceleration;
     [SerializeField] private float velPower;
     private float xAxis;
+    public float isFacing;
 
     [Header("Jumping")]
     [SerializeField] private float jumpingPower = 16f;
@@ -118,10 +119,12 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         if (xAxis > 0)
         {
             transform.localScale = new Vector2(1, 1); //facing right
+            isFacing = 1;
         }
         if (xAxis < 0)
         {
             transform.localScale = new Vector2(-1, 1); //facing left
+            isFacing = -1;
         }
     }
     private void Jump()

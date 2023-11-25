@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8797449028552549377
+--- !u!114 &-6445225701807895539
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,71 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
-  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638239905202640939
+  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638364221575562100
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 18528
   Exists: 1
---- !u!114 &-6249058572505248891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VesseloftheUndergrowth
-  m_EditorClassIdentifier: 
-  Path: event:/VesseloftheUndergrowth
-  Guid:
-    Data1: -2064899138
-    Data2: 1212098457
-    Data3: -974920792
-    Data4: -852639535
-  Banks:
-  - {fileID: -1246897534701598436}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 142564
---- !u!114 &-6090511966529901194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife2
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife2
-  Guid:
-    Data1: -553919349
-    Data2: 1322195297
-    Data3: 1252561074
-    Data4: -768810406
-  Banks:
-  - {fileID: -1246897534701598436}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 269439
---- !u!114 &-5677388323839993875
+--- !u!114 &-5980862713247359700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +39,7 @@ MonoBehaviour:
     Data3: -389255775
     Data4: 1059554773
   Banks:
-  - {fileID: -3842488243127547396}
+  - {fileID: -4096417543823526847}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -101,27 +47,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 229894
---- !u!114 &-4585573814524308878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638239905235528399
-  FileSizes:
-  - Name: Desktop
-    Value: 12576
-  Exists: 1
---- !u!114 &-3842488243127547396
+--- !u!114 &-4096417543823526847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,12 +62,12 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638239905235117165
+  lastModified: 638364221575324733
   FileSizes:
   - Name: Desktop
-    Value: 19321248
+    Value: 16957984
   Exists: 1
---- !u!114 &-3521052429915360321
+--- !u!114 &-3954721914961821655
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,18 +76,111 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LegendStrife4
   m_EditorClassIdentifier: 
-  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638239905235528399
-  FileSizes:
-  - Name: Desktop
-    Value: 12576
-  Exists: 1
---- !u!114 &-2108759428265518704
+  Path: event:/LegendStrife4
+  Guid:
+    Data1: 1565099933
+    Data2: 1173932179
+    Data3: -398274924
+    Data4: -805342098
+  Banks:
+  - {fileID: -4096417543823526847}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 184545
+--- !u!114 &-2960293740902055510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DefenseHit
+  m_EditorClassIdentifier: 
+  Path: event:/DefenseHit
+  Guid:
+    Data1: 937102872
+    Data2: 1263561464
+    Data3: -366506562
+    Data4: -1189691460
+  Banks:
+  - {fileID: -6445225701807895539}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 9009797941508730710}
+  - {fileID: 4515058448071513695}
+  - {fileID: -4096417543823526847}
+  - {fileID: -6445225701807895539}
+  EditorEvents:
+  - {fileID: 4525603931818442595}
+  - {fileID: 2418649021099983583}
+  - {fileID: -3954721914961821655}
+  - {fileID: 2792660176169675003}
+  - {fileID: -5980862713247359700}
+  - {fileID: -2960293740902055510}
+  - {fileID: 7535126814343872631}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 4515058448071513695}
+  StringsBanks:
+  - {fileID: 9009797941508730710}
+  cacheTime: 638364230978653381
+  cacheVersion: 131601
+--- !u!114 &2418649021099983583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LegendStrife2
+  m_EditorClassIdentifier: 
+  Path: event:/LegendStrife2
+  Guid:
+    Data1: -553919349
+    Data2: 1322195297
+    Data3: 1252561074
+    Data4: -768810406
+  Banks:
+  - {fileID: -4096417543823526847}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 269439
+--- !u!114 &2792660176169675003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +199,7 @@ MonoBehaviour:
     Data3: -731164524
     Data4: -125008248
   Banks:
-  - {fileID: -1246897534701598436}
+  - {fileID: -4096417543823526847}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -214,8 +233,83 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+  Length: 180713
+--- !u!114 &4515058448071513695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638364221574031307
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
+  Exists: 1
+--- !u!114 &4525603931818442595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LegendStrife3
+  m_EditorClassIdentifier: 
+  Path: event:/LegendStrife3
+  Guid:
+    Data1: 1867195453
+    Data2: 1260542070
+    Data3: -1039887729
+    Data4: -2116126500
+  Banks:
+  - {fileID: -4096417543823526847}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 273962
+--- !u!114 &7535126814343872631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: 
+  Guid:
+    Data1: 1506071997
+    Data2: 1123115900
+    Data3: -1383411011
+    Data4: 1523751751
+  Banks:
+  - {fileID: -4096417543823526847}
+  - {fileID: -6445225701807895539}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
   Length: 0
---- !u!114 &-1427979402525925453
+--- !u!114 &9009797941508730710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,10 +324,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638239905202684616
+  lastModified: 638364230978653381
   FileSizes:
   - Name: Desktop
-    Value: 1166
+    Value: 1068
   Exists: 1
 --- !u!114 &-1246897534701598436
 MonoBehaviour:

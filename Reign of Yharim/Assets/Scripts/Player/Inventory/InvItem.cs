@@ -3,27 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Image image;
+    public TMP_Text countText;
 
-    [HideInInspector]public Item item;
+    [HideInInspector] public Item item;
+    [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag;
 
     public void InitItem(Item newItem)
     {
         item = newItem;
         image.sprite = newItem.image;
+        ReCount();
+    }
+
+    public void ReCount()
+    {
+        countText.text = count.ToString();
+        bool textActive = count > 1;
+        countText.gameObject.SetActive(textActive);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begin Drag");
-        parentAfterDrag = transform.parent;
-        transform.SetParent(transform.root);
-        transform.SetAsLastSibling();
-        image.raycastTarget = false;
+        parentAfterDrag = transform.parent; //format stuff
+        transform.SetParent(transform.root); //format stuff
+        transform.SetAsLastSibling(); //format stuff
+        image.raycastTarget = false; //allows for us to check if there is a slot underneath
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -34,7 +45,7 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("End Drag");
-        transform.SetParent(parentAfterDrag);
+        transform.SetParent(parentAfterDrag); //format stuff
         image.raycastTarget = true;
     }
 }
