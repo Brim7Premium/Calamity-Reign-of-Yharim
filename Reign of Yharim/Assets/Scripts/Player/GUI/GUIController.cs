@@ -18,6 +18,7 @@ public class GUIController : MonoBehaviour
     public InvSlot[] slots;
     public GameObject itemPrefab;
     int selectedSlot = -1;
+    public GameObject worldItem;
 
     public Item[] itemsToPickup;
 
@@ -41,41 +42,38 @@ public class GUIController : MonoBehaviour
             healthText.text = "Health: 0/" + playerAI.LifeMax;
 
         if (playerAI.Life == playerAI.LifeMax)
-        {
             ChangeAnimationState(HeartFull);
-        }
         if (playerAI.Life != playerAI.LifeMax && playerAI.Life > 0f)
-        {
             ChangeAnimationState(HeartNormal);
-        }
         if (playerAI.Life <= 0f)
-        {
             ChangeAnimationState(HeartDeath);
-        }
 
         if (Input.GetKeyDown(KeyCode.Return) && inventoryOpened == false)
-        {
             inventoryOpened = true;
-        }
         else if (Input.GetKeyDown(KeyCode.Return) && inventoryOpened == true)
-        {
             inventoryOpened = false;
-        }
 
         if (inventoryOpened == true)
-        {
             inventory.SetActive(true);
-        }
         else
-        {
             inventory.SetActive(false);
-        }
         if (Input.inputString != null)
         {
             bool isNumber = int.TryParse(Input.inputString, out int number);
             if (isNumber && number > 0 && number < 10)
             {
                 ChangeSelectedSlot(number - 1);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            Item droppedItem = GetSelectedItem(false);
+
+            if (GetSelectedItem(false))
+            {
+                GameObject worldClone = Instantiate(worldItem, new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y), Quaternion.identity);
+                worldClone.GetComponent<SpriteRenderer>().sprite = droppedItem.image;
+                GetSelectedItem(true);
             }
         }
     }
@@ -92,9 +90,7 @@ public class GUIController : MonoBehaviour
     void ChangeSelectedSlot(int value)
     {
         if (selectedSlot >= 0)
-        {
             slots[selectedSlot].Deselect();
-        }
         slots[value].Select();
         selectedSlot = value;
     }

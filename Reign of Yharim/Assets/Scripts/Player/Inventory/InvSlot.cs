@@ -23,7 +23,7 @@ public class InvSlot : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
-        if (transform.childCount == 0)
+        if (transform.childCount == 0) //if the slot is not already occupied
         {
             GameObject dropped = eventData.pointerDrag;
             InvItem draggableItem = dropped.GetComponent<InvItem>();
