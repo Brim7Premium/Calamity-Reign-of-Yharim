@@ -15,5 +15,6 @@ MonoBehaviour:
   type: 1
   actionType: 0
   stackable: 0
+  displayName: Wind Blade
   image: {fileID: 21300000, guid: 2be3e64873540c64ea2e527b6f0c3bc4, type: 3}
   ID: 0

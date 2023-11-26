@@ -15,5 +15,6 @@ MonoBehaviour:
   type: 2
   actionType: 3
   stackable: 0
+  displayName: Galeforce
   image: {fileID: 21300000, guid: 1aa1379f4b7a7e04fbd34cd77a82de2b, type: 3}
   ID: 1

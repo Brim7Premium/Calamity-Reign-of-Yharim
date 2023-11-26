@@ -20,6 +20,8 @@ public class GUIController : MonoBehaviour
     int selectedSlot = -1;
     public GameObject worldItem;
     public GameObject player;
+    public GameObject heldItemObject;
+    public TMP_Text itemText;
 
     public Item[] itemsToPickup;
 
@@ -66,17 +68,23 @@ public class GUIController : MonoBehaviour
                 ChangeSelectedSlot(number - 1);
             }
         }
+        Item heldItem = GetSelectedItem(false);
+
+        if (GetSelectedItem(false))
+            itemText.text = heldItem.displayName;
+        else
+            itemText.text = ("Empty Slot");
+
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            Item droppedItem = GetSelectedItem(false);
 
             if (GetSelectedItem(false))
             {
                 GameObject worldClone = Instantiate(worldItem, player.transform.position, Quaternion.identity);
                 worldClone.GetComponent<WorldItem>().SpawnCooldown(2f);
                 SpriteRenderer spriteRenderer = worldClone.GetComponent<SpriteRenderer>();
-                spriteRenderer.sprite = droppedItem.image;
-                worldClone.GetComponent<WorldItem>().myDroppedItem = droppedItem;
+                spriteRenderer.sprite = heldItem.image;
+                worldClone.GetComponent<WorldItem>().myDroppedItem = heldItem;
                 GetSelectedItem(true);
                 worldClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(200f * playerAI.isFacing, 200f));
             }
