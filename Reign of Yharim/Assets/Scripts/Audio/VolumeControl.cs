@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class VolumeControl : MonoBehaviour
 {
@@ -44,6 +45,7 @@ public class VolumeControl : MonoBehaviour
 				settingsobj.GetComponent<bracketSettingsbracket>().SFXVolume = volumeSlider.value;
 				break;
 		}
-		
+		var indicator = volumeSlider.GetComponent<TextMeshProUGUI>();
+		indicator.text = ((int)(volumeSlider.value * 100)).ToString();
 	}
 }
