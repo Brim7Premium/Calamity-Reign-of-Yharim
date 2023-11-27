@@ -6,44 +6,71 @@ using FMOD.Studio;
 
 public class AudioManager : MonoBehaviour
 {
-    private List<EventInstance> eventInstances;
-    public static AudioManager instance { get; private set; }
+	private List<EventInstance> eventInstances;
+	public static AudioManager instance { get; private set; }
 
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogError("Found more than one Audio Manager in the scene");
-        }
-        instance = this;
+	[Header("Volume")]
+	[Range(0, 1)]
+	public float musicVolume = 1;
+	[Range(0, 1)]
+	public float SFXVolume = 1;
 
-        eventInstances = new List<EventInstance>();
-    }
+	private Bus musicBus;
+	private Bus SFXBus;
 
-    public void PlayOneShot(EventReference sound, Vector3 worldPos = new Vector3())
-    {
-        RuntimeManager.PlayOneShot(sound, worldPos);
-    }
+	private GameObject settingsobj;
 
-    public EventInstance CreateEventInstance(EventReference eventReference)
-    {
-        EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
-        eventInstances.Add(eventInstance);
+	private void Awake()
+	{
+		if (instance != null)
+		{
+			Debug.LogError("Found more than one Audio Manager in the scene");
+		}
+		instance = this;
 
-        return eventInstance;
-    }
+		eventInstances = new List<EventInstance>();
 
-    private void CleanUp()
-    {
-        foreach (EventInstance eventInstance in eventInstances)
-        {
-            eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            eventInstance.release();
-        }
-    }
+		musicBus = RuntimeManager.GetBus("bus:/Music");
+		SFXBus = RuntimeManager.GetBus("bus:/SFX");
 
-    private void OnDestroy()
-    {
-        CleanUp();
-    }
+		settingsobj = GameObject.Find("[Settings]");
+		if (settingsobj != null) 
+		{
+			musicVolume = settingsobj.GetComponent<bracketSettingsbracket>().musicVolume;
+			SFXVolume = settingsobj.GetComponent<bracketSettingsbracket>().SFXVolume;
+		}
+	}
+
+	private void Update()
+	{
+		musicBus.setVolume(musicVolume);
+		SFXBus.setVolume(SFXVolume);
+	}
+
+	public void PlayOneShot(EventReference sound, Vector3 worldPos = new Vector3())
+	{
+		RuntimeManager.PlayOneShot(sound, worldPos);
+	}
+
+	public EventInstance CreateEventInstance(EventReference eventReference)
+	{
+		EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+		eventInstances.Add(eventInstance);
+
+		return eventInstance;
+	}
+
+	private void CleanUp()
+	{
+		foreach (EventInstance eventInstance in eventInstances)
+		{
+			eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+			eventInstance.release();
+		}
+	}
+
+	private void OnDestroy()
+	{
+		CleanUp();
+	}
 }

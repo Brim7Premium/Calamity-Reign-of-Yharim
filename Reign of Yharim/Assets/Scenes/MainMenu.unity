@@ -1502,6 +1502,7 @@ GameObject:
   - component: {fileID: 268930546}
   - component: {fileID: 268930548}
   - component: {fileID: 268930547}
+  - component: {fileID: 268930549}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -1626,6 +1627,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268930545}
   m_CullTransparentMesh: 1
+--- !u!114 &268930549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268930545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724963cce2ee8dd43aa5f572a4767013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 0
 --- !u!1 &280647957
 GameObject:
   m_ObjectHideFlags: 0
@@ -9829,6 +9843,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c692914b82cbb6541afdd33a09562369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicVolume: 1
+  SFXVolume: 1
 --- !u!4 &1616260226
 Transform:
   m_ObjectHideFlags: 0
@@ -10058,10 +10074,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 268930549}
+        m_TargetAssemblyTypeName: VolumeControl, Assembly-CSharp
+        m_MethodName: SliderValueChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1661238983
 GameObject:
   m_ObjectHideFlags: 0
@@ -11090,6 +11118,7 @@ GameObject:
   - component: {fileID: 1689257005}
   - component: {fileID: 1689257007}
   - component: {fileID: 1689257006}
+  - component: {fileID: 1689257008}
   m_Layer: 5
   m_Name: SFX
   m_TagString: Untagged
@@ -11214,6 +11243,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689257004}
   m_CullTransparentMesh: 1
+--- !u!114 &1689257008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689257004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724963cce2ee8dd43aa5f572a4767013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 1
 --- !u!1 &1695536506
 GameObject:
   m_ObjectHideFlags: 0
@@ -12256,10 +12298,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1689257008}
+        m_TargetAssemblyTypeName: VolumeControl, Assembly-CSharp
+        m_MethodName: SliderValueChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1858242424
 GameObject:
   m_ObjectHideFlags: 0
