@@ -27,7 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-9059427233717359220
+--- !u!114 &-8934697354499893503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,23 +37,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Biomes/LegendStrife4
+  m_Name: event:/Music/Biomes/LegendStrife3
   m_EditorClassIdentifier: 
-  Path: event:/Music/Biomes/LegendStrife4
+  Path: event:/Music/Biomes/LegendStrife3
   Guid:
-    Data1: 1565099933
-    Data2: 1173932179
-    Data3: -398274924
-    Data4: -805342098
+    Data1: -1690346599
+    Data2: 1327267307
+    Data3: 1164810390
+    Data4: 376066204
   Banks:
   - {fileID: -1246897534701598436}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 184545
+  Length: 273962
 --- !u!114 &-8797449028552549377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638364144825383822
+  lastModified: 638366792796754381
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -101,6 +101,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 229894
+--- !u!114 &-5208909741182848723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LazeoftheSky
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LazeoftheSky
+  Guid:
+    Data1: 743056841
+    Data2: 1327956284
+    Data3: -2037665389
+    Data4: -1323342609
+  Banks:
+  - {fileID: -1246897534701598436}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 261329
+--- !u!114 &-4780627273014368426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LegendStrife2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LegendStrife2
+  Guid:
+    Data1: 1773737711
+    Data2: 1261301897
+    Data3: 2002425774
+    Data4: -110733215
+  Banks:
+  - {fileID: -1246897534701598436}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 269439
 --- !u!114 &-4585573814524308878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,10 +170,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638364144827091828
+  lastModified: 638366822180724433
   FileSizes:
   - Name: Desktop
-    Value: 25120
+    Value: 66304
   Exists: 1
 --- !u!114 &-3842488243127547396
 MonoBehaviour:
@@ -196,11 +250,38 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638364144826849226
+  lastModified: 638366822179460411
   FileSizes:
   - Name: Desktop
-    Value: 16957952
+    Value: 20040576
   Exists: 1
+--- !u!114 &-1195015562103751265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/055Roar
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/055Roar
+  Guid:
+    Data1: 76780108
+    Data2: 1231301446
+    Data3: 2049251469
+    Data4: -1564337529
+  Banks:
+  - {fileID: -4585573814524308878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-457915596625687168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,20 +328,23 @@ MonoBehaviour:
   - {fileID: -4585573814524308878}
   EditorEvents:
   - {fileID: 3988853311855828750}
-  - {fileID: 6999813700155449044}
-  - {fileID: 1373791514654810451}
-  - {fileID: -9059427233717359220}
-  - {fileID: 9174697575767334748}
   - {fileID: 2639243575317120306}
   - {fileID: -9109763362631571093}
   - {fileID: 549684967293634785}
   - {fileID: 677652623195588801}
+  - {fileID: 8311888672357250749}
+  - {fileID: -1195015562103751265}
+  - {fileID: -8934697354499893503}
+  - {fileID: 1814764560024944302}
+  - {fileID: -5208909741182848723}
+  - {fileID: 2127008278115446352}
+  - {fileID: -4780627273014368426}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8797449028552549377}
   StringsBanks:
   - {fileID: 276639227055529703}
-  cacheTime: 638364144827091828
+  cacheTime: 638366822180724433
   cacheVersion: 131609
 --- !u!114 &276639227055529703
 MonoBehaviour:
@@ -277,10 +361,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638364144825421162
+  lastModified: 638366792796785502
   FileSizes:
   - Name: Desktop
-    Value: 1386
+    Value: 1546
   Exists: 1
 --- !u!114 &549684967293634785
 MonoBehaviour:
@@ -336,7 +420,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1373791514654810451
+--- !u!114 &1814764560024944302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -346,23 +430,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Biomes/LegendStrife2
+  m_Name: event:/Music/Biomes/LegendStrife4
   m_EditorClassIdentifier: 
-  Path: event:/Music/Biomes/LegendStrife2
+  Path: event:/Music/Biomes/LegendStrife4
   Guid:
-    Data1: -553919349
-    Data2: 1322195297
-    Data3: 1252561074
-    Data4: -768810406
+    Data1: -579076166
+    Data2: 1202230493
+    Data3: -1062187635
+    Data4: 145595881
   Banks:
   - {fileID: -1246897534701598436}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 269439
+  Length: 184545
 --- !u!114 &2082539738636856865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,6 +467,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1036
   Exists: 1
+--- !u!114 &2127008278115446352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LegendStrife1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LegendStrife1
+  Guid:
+    Data1: -2049955358
+    Data2: 1341340651
+    Data3: 447516320
+    Data4: -1521750869
+  Banks:
+  - {fileID: -1246897534701598436}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 180713
 --- !u!114 &2355033272763427521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,33 +656,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 269439
---- !u!114 &6999813700155449044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Biomes/LegendStrife3
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Biomes/LegendStrife3
-  Guid:
-    Data1: 1867195453
-    Data2: 1260542070
-    Data3: -1039887729
-    Data4: -2116126500
-  Banks:
-  - {fileID: -1246897534701598436}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 273962
 --- !u!114 &8180960476378426996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,6 +683,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 184545
+--- !u!114 &8311888672357250749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/DemonshadeEnrage
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/DemonshadeEnrage
+  Guid:
+    Data1: -974640213
+    Data2: 1268750061
+    Data3: -1599287114
+    Data4: -2051474363
+  Banks:
+  - {fileID: -4585573814524308878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8333916429127384479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,30 +737,3 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &9174697575767334748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Biomes/LegendStrife1
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Biomes/LegendStrife1
-  Guid:
-    Data1: -2049955358
-    Data2: 1341340651
-    Data3: 447516320
-    Data4: -1521750869
-  Banks:
-  - {fileID: -1246897534701598436}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 180713

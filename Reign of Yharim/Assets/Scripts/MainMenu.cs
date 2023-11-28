@@ -25,6 +25,7 @@ public class MainMenu : MonoBehaviour
 
 	public void EnterWorld()
 	{
+		AudioManager.instance.PlayOneShot(FMODEvents.instance._055Roar);
 		SceneManager.LoadScene("Surface");
 	}
 	public void LeaveGame()
