@@ -7,8 +7,8 @@ using UnityEngine.Tilemaps;
 public class Item : ScriptableObject
 {
     [Header("In-Game Data")]
-    public ItemType type;
-    public ActionType actionType;
+    public ItemType2 type;
+    public ActionType2 actionType;
     public bool consumable;
 
     [Header("UI Data")]
@@ -20,7 +20,7 @@ public class Item : ScriptableObject
     public float ID;
 }
 
-public enum ItemType
+public enum ItemType2
 {
     Tool, 
     MeleeWeapon, 
@@ -30,7 +30,7 @@ public enum ItemType
     RogueWeapon,
     Generic
 }
-public enum ActionType
+public enum ActionType2
 {
     Attack,
     Use,
