@@ -1,6 +1,100 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6445225701807895539
+--- !u!114 &-8318490375417971401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638364221574031307
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
+  Exists: 1
+--- !u!114 &-7521128537220704206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638364902940020637
+  FileSizes:
+  - Name: Desktop
+    Value: 1068
+  Exists: 1
+--- !u!114 &-3780739642329459884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LegendStrife3
+  m_EditorClassIdentifier: 
+  Path: event:/LegendStrife3
+  Guid:
+    Data1: 1867195453
+    Data2: 1260542070
+    Data3: -1039887729
+    Data4: -2116126500
+  Banks:
+  - {fileID: 6508125878859936682}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 273962
+--- !u!114 &-3212855650846500838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LegendStrife2
+  m_EditorClassIdentifier: 
+  Path: event:/LegendStrife2
+  Guid:
+    Data1: -553919349
+    Data2: 1322195297
+    Data3: 1252561074
+    Data4: -768810406
+  Banks:
+  - {fileID: 6508125878859936682}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 269439
+--- !u!114 &-659448453282794206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,81 +114,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 18528
   Exists: 1
---- !u!114 &-5980862713247359700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ScourgeoftheUniverse
-  m_EditorClassIdentifier: 
-  Path: event:/ScourgeoftheUniverse
-  Guid:
-    Data1: -1937256212
-    Data2: 1127564151
-    Data3: -389255775
-    Data4: 1059554773
-  Banks:
-  - {fileID: -4096417543823526847}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 229894
---- !u!114 &-4096417543823526847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638364221575324733
-  FileSizes:
-  - Name: Desktop
-    Value: 16957984
-  Exists: 1
---- !u!114 &-3954721914961821655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife4
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife4
-  Guid:
-    Data1: 1565099933
-    Data2: 1173932179
-    Data3: -398274924
-    Data4: -805342098
-  Banks:
-  - {fileID: -4096417543823526847}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 184545
---- !u!114 &-2960293740902055510
+--- !u!114 &-227684218330206018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,7 +133,7 @@ MonoBehaviour:
     Data3: -366506562
     Data4: -1189691460
   Banks:
-  - {fileID: -6445225701807895539}
+  - {fileID: -659448453282794206}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -134,53 +154,26 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 9009797941508730710}
-  - {fileID: 4515058448071513695}
-  - {fileID: -4096417543823526847}
-  - {fileID: -6445225701807895539}
+  - {fileID: -7521128537220704206}
+  - {fileID: -8318490375417971401}
+  - {fileID: 6508125878859936682}
+  - {fileID: -659448453282794206}
   EditorEvents:
-  - {fileID: 4525603931818442595}
-  - {fileID: 2418649021099983583}
-  - {fileID: -3954721914961821655}
-  - {fileID: 2792660176169675003}
-  - {fileID: -5980862713247359700}
-  - {fileID: -2960293740902055510}
-  - {fileID: 7535126814343872631}
+  - {fileID: 712141768028622207}
+  - {fileID: -3780739642329459884}
+  - {fileID: -3212855650846500838}
+  - {fileID: 2634195276217884495}
+  - {fileID: 459583904248737711}
+  - {fileID: 7460672679731319672}
+  - {fileID: -227684218330206018}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4515058448071513695}
+  - {fileID: -8318490375417971401}
   StringsBanks:
-  - {fileID: 9009797941508730710}
-  cacheTime: 638364230978653381
+  - {fileID: -7521128537220704206}
+  cacheTime: 638364902940020637
   cacheVersion: 131601
---- !u!114 &2418649021099983583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife2
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife2
-  Guid:
-    Data1: -553919349
-    Data2: 1322195297
-    Data3: 1252561074
-    Data4: -768810406
-  Banks:
-  - {fileID: -4096417543823526847}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 269439
---- !u!114 &2792660176169675003
+--- !u!114 &459583904248737711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,7 +192,7 @@ MonoBehaviour:
     Data3: -731164524
     Data4: -125008248
   Banks:
-  - {fileID: -4096417543823526847}
+  - {fileID: 6508125878859936682}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -234,54 +227,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 180713
---- !u!114 &4515058448071513695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638364221574031307
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
-  Exists: 1
---- !u!114 &4525603931818442595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife3
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife3
-  Guid:
-    Data1: 1867195453
-    Data2: 1260542070
-    Data3: -1039887729
-    Data4: -2116126500
-  Banks:
-  - {fileID: -4096417543823526847}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 273962
---- !u!114 &7535126814343872631
+--- !u!114 &712141768028622207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,8 +246,8 @@ MonoBehaviour:
     Data3: -1383411011
     Data4: 1523751751
   Banks:
-  - {fileID: -4096417543823526847}
-  - {fileID: -6445225701807895539}
+  - {fileID: 6508125878859936682}
+  - {fileID: -659448453282794206}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -309,47 +255,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &9009797941508730710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638364230978653381
-  FileSizes:
-  - Name: Desktop
-    Value: 1068
-  Exists: 1
---- !u!114 &-1246897534701598436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638239905235117165
-  FileSizes:
-  - Name: Desktop
-    Value: 19321248
-  Exists: 1
---- !u!114 &-1163773809481104980
+--- !u!114 &2634195276217884495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -368,7 +274,7 @@ MonoBehaviour:
     Data3: -398274924
     Data4: -805342098
   Banks:
-  - {fileID: -1246897534701598436}
+  - {fileID: 6508125878859936682}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -376,94 +282,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 184545
---- !u!114 &-457915596625687168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VesseloftheUndergrowth
-  m_EditorClassIdentifier: 
-  Path: event:/VesseloftheUndergrowth
-  Guid:
-    Data1: -2064899138
-    Data2: 1212098457
-    Data3: -974920792
-    Data4: -852639535
-  Banks:
-  - {fileID: -3842488243127547396}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 142564
---- !u!114 &-39695387696048348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife1
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife1
-  Guid:
-    Data1: -2049955358
-    Data2: 1341340651
-    Data3: 447516320
-    Data4: -1521750869
-  Banks:
-  - {fileID: -1246897534701598436}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 180713
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 276639227055529703}
-  - {fileID: -8797449028552549377}
-  - {fileID: -1246897534701598436}
-  - {fileID: -4585573814524308878}
-  EditorEvents:
-  - {fileID: 3451143524135306336}
-  - {fileID: -6090511966529901194}
-  - {fileID: -1163773809481104980}
-  - {fileID: -6249058572505248891}
-  - {fileID: -2108759428265518704}
-  - {fileID: -39695387696048348}
-  - {fileID: 4648736365112083984}
-  - {fileID: -1983794455799354667}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -8797449028552549377}
-  StringsBanks:
-  - {fileID: 276639227055529703}
-  cacheTime: 638239905235528399
-  cacheVersion: 131609
---- !u!114 &276639227055529703
+--- !u!114 &6508125878859936682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -473,172 +292,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Music.bank
   m_EditorClassIdentifier: 
-  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638239905202684616
+  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638364221575324733
   FileSizes:
   - Name: Desktop
-    Value: 1166
+    Value: 16957984
   Exists: 1
---- !u!114 &2082539738636856865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638239905202640939
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
-  Exists: 1
---- !u!114 &2355033272763427521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife1
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife1
-  Guid:
-    Data1: -2049955358
-    Data2: 1341340651
-    Data3: 447516320
-    Data4: -1521750869
-  Banks:
-  - {fileID: -3842488243127547396}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 180713
---- !u!114 &3451143524135306336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife3
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife3
-  Guid:
-    Data1: 1867195453
-    Data2: 1260542070
-    Data3: -1039887729
-    Data4: -2116126500
-  Banks:
-  - {fileID: -1246897534701598436}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 273962
---- !u!114 &3906553482818088002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/TheFabrication
-  m_EditorClassIdentifier: 
-  Path: event:/TheFabrication
-  Guid:
-    Data1: -1756016678
-    Data2: 1225552790
-    Data3: -731164524
-    Data4: -125008248
-  Banks:
-  - {fileID: -3842488243127547396}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 174944
---- !u!114 &3991882158755470496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife3
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife3
-  Guid:
-    Data1: 1867195453
-    Data2: 1260542070
-    Data3: -1039887729
-    Data4: -2116126500
-  Banks:
-  - {fileID: -3842488243127547396}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 273962
---- !u!114 &4414910399783677208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife2
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife2
-  Guid:
-    Data1: -553919349
-    Data2: 1322195297
-    Data3: 1252561074
-    Data4: -768810406
-  Banks:
-  - {fileID: -3842488243127547396}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 269439
---- !u!114 &4648736365112083984
+--- !u!114 &7460672679731319672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -657,7 +321,7 @@ MonoBehaviour:
     Data3: -389255775
     Data4: 1059554773
   Banks:
-  - {fileID: -1246897534701598436}
+  - {fileID: 6508125878859936682}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -665,57 +329,3 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 229894
---- !u!114 &8180960476378426996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LegendStrife4
-  m_EditorClassIdentifier: 
-  Path: event:/LegendStrife4
-  Guid:
-    Data1: 1565099933
-    Data2: 1173932179
-    Data3: -398274924
-    Data4: -805342098
-  Banks:
-  - {fileID: -3842488243127547396}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 184545
---- !u!114 &8333916429127384479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/DefenseHit
-  m_EditorClassIdentifier: 
-  Path: event:/DefenseHit
-  Guid:
-    Data1: 937102872
-    Data2: 1263561464
-    Data3: -366506562
-    Data4: -1189691460
-  Banks:
-  - {fileID: -3521052429915360321}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0

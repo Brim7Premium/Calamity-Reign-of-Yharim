@@ -103,7 +103,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         rb.AddForce(movement * Vector2.right);
 
-        animator.speed = Mathf.Abs(targetSpeed / 10);
+        animator.speed = Mathf.Abs(targetSpeed / 9);
 
         if (isGrounded) //if the player is grounded and isn't attacking
         {
