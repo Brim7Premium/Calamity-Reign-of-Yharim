@@ -41,29 +41,34 @@ public class BiomeDetection : MonoBehaviour
 			tileSpriteName = tileSprite.name; //set the variable tilespritename to the name of the tilesprite
 		}
 
-		if (tileSpriteName == "Forest" && (count >= (4.5*60)+1 && count < 19.5*60))
+		if (tileSpriteName == "Forest" && (count >= 4.5*60 && count < 19.5*60))
 		{
 			var newdaythemenum = daythemenum;
+			var eventref = FMODEvents.instance.FullDay;
 			if (count >= 4.5*60 && count < 7.5*60)
 			{
 				daythemenum = 1;
+				eventref = FMODEvents.instance.Day1;
 			}
 			else if (count >= 7.5*60 && count < 12*60)
 			{
 				daythemenum = 2;
+				eventref = FMODEvents.instance.Day2;
 			}
 			else if (count >= 12*60 && count < 16.5*60)
 			{
 				daythemenum = 3;
+				eventref = FMODEvents.instance.Day3;
 			}
 			else
 			{
 				daythemenum = 4;
+				eventref = FMODEvents.instance.Day4;
 			}
 			if (daythemenum != newdaythemenum)
 			{
 				biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-				biometheme = AudioManager.instance.CreateEventInstance(FMODUnity.EventReference.Find("event:/Music/Biomes/LegendStrife" + daythemenum.ToString()));
+				biometheme = AudioManager.instance.CreateEventInstance(eventref);
 				biometheme.start();
 				stopit = false;
 			}
