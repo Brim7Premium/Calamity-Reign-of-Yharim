@@ -67,7 +67,8 @@ public class BiomeDetection : MonoBehaviour
 			if (daythemenum != newdaythemenum)
 			{
 				biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-				biometheme = AudioManager.instance.CreateEventInstance(FMODUnity.EventReference.Find("event:/Music/Biomes/LegendStrife" + daythemenum.ToString()));
+				var eventreference = FMODUnity.EventReference.Find("event:/Music/Biomes/LegendStrife" + daythemenum.ToString());
+				biometheme = AudioManager.instance.CreateEventInstance(eventreference);
 				biometheme.start();
 				stopit = false;
 			}
