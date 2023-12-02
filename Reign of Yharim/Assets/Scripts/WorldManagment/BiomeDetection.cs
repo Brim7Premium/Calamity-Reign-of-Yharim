@@ -23,10 +23,6 @@ public class BiomeDetection : MonoBehaviour
 
 	private int count;
 
-	void Start()
-	{
-	}
-
 	void Update()
 	{
 		GetTile();
@@ -173,7 +169,7 @@ public class BiomeDetection : MonoBehaviour
 				if (tileSpriteName == "Sky")
 				{
 					//Sky
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
+					//mainCam.backgroundColor = Color.black; Change this later
 				}
 				if (tileSpriteName == "Underworld")
 				{
