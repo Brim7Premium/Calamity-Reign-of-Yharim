@@ -20,6 +20,7 @@ public class FMODEvents : MonoBehaviour
 	[field: SerializeField] public EventReference DoG1 { get; private set; }
 
 	[field: Header("Biome Music")]
+	[field: SerializeField] public EventReference FullDay { get; private set; }
 	[field: SerializeField] public EventReference Day1 { get; private set; }
 	[field: SerializeField] public EventReference Day2 { get; private set; }
 	[field: SerializeField] public EventReference Day3 { get; private set; }

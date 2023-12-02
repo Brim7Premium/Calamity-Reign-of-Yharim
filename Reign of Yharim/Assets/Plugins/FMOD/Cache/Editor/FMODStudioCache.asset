@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638366792796754381
+  lastModified: 638370194530552916
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -250,10 +250,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638366822179460411
+  lastModified: 638370694465307213
   FileSizes:
   - Name: Desktop
-    Value: 20040576
+    Value: 20042112
   Exists: 1
 --- !u!114 &-1195015562103751265
 MonoBehaviour:
@@ -339,12 +339,13 @@ MonoBehaviour:
   - {fileID: -5208909741182848723}
   - {fileID: 2127008278115446352}
   - {fileID: -4780627273014368426}
+  - {fileID: 4977991144621902328}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8797449028552549377}
   StringsBanks:
   - {fileID: 276639227055529703}
-  cacheTime: 638366822180724433
+  cacheTime: 638370694465307213
   cacheVersion: 131609
 --- !u!114 &276639227055529703
 MonoBehaviour:
@@ -361,10 +362,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638366792796785502
+  lastModified: 638370194530578066
   FileSizes:
   - Name: Desktop
-    Value: 1546
+    Value: 1582
   Exists: 1
 --- !u!114 &549684967293634785
 MonoBehaviour:
@@ -656,6 +657,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 269439
+--- !u!114 &4977991144621902328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LegendStrifeFull
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LegendStrifeFull
+  Guid:
+    Data1: -398687929
+    Data2: 1257171541
+    Data3: 2024989350
+    Data4: 1698125847
+  Banks:
+  - {fileID: -1246897534701598436}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 908661
 --- !u!114 &8180960476378426996
 MonoBehaviour:
   m_ObjectHideFlags: 0

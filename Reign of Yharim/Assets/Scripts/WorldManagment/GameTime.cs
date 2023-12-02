@@ -9,14 +9,11 @@ using FMOD.Studio;
 
 public class GameTime : MonoBehaviour
 {
-	private int count = 12*60;
+	public int count = 12*60;
 	public static string displayTime;
 
 	[SerializeField] private Transform orbitPoint;
 	[SerializeField] private Vector3 rotation;
-
-	private EventInstance currentTheme;
-	//private bool playing = false;
 
 	IEnumerator Start()
 	{
@@ -28,30 +25,6 @@ public class GameTime : MonoBehaviour
 
 			yield return new WaitForSeconds(1);
 			count++;
-			/* if (true) // impliment biomes later
-			{
-				if (count >= 7.5*60 && count < 19.5*60)
-				{
-					if (!playing) 
-					{
-						try
-						{
-							currentTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-						}
-						catch{}
-						currentTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Day3);
-						playing	= true;
-					}
-				}
-				if (count >= 19.5*60)
-				{
-					if (!playing)
-					{
-						playing = true;					
-						currentTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Night);
-					}
-				}
-			} */
 		}
 	}
 
@@ -60,13 +33,5 @@ public class GameTime : MonoBehaviour
 		orbitPoint.rotation = Quaternion.Euler(0, 0, count/-4f);
 		try{orbitPoint.position = GameObject.Find("Player").transform.position;
 		orbitPoint.position -= new Vector3(0, 20, 0);}catch{}
-		if (count >= 19.5*60)
-		{
-			GameObject.Find("Pixel Perfect Camera").GetComponent<Camera>().backgroundColor = Color.black;
-		}
-		if (count >= 7.5*60 && count < 19.5*60)
-		{
-			GameObject.Find("Pixel Perfect Camera").GetComponent<Camera>().backgroundColor = new Color(0.701f, 0.9691256f, 1f, 1f);
-		}
 	}
 }
