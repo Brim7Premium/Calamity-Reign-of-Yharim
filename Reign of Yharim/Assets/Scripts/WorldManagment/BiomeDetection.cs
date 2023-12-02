@@ -18,7 +18,8 @@ public class BiomeDetection : MonoBehaviour
 
 	private EventInstance biometheme;
 	private bool day = true;
-	private bool wasday = false;
+	private bool wasday = true;
+	private int daythemenum = 0;
 
 	private int count;
 
@@ -33,6 +34,7 @@ public class BiomeDetection : MonoBehaviour
 
 	void GetTile()
 	{
+		var stopit = true;
 		count = GameObject.Find("WorldManager").GetComponent<GameTime>().count;
 		day = (count >= 7.5*60 && count < 19.5*60);
 		Vector3 mp = transform.position; //creates a vector3 named mp that is the player's coordinates 
@@ -43,13 +45,43 @@ public class BiomeDetection : MonoBehaviour
 			tileSpriteName = tileSprite.name; //set the variable tilespritename to the name of the tilesprite
 		}
 
+		if (tileSpriteName == "Forest" && (count >= 4.5*60 && count < 19.5*60))
+		{
+			var newdaythemenum = daythemenum;
+			if (count >= 4.5*60 && count < 7.5*60)
+			{
+				daythemenum = 1;
+			}
+			else if (count >= 7.5*60 && count < 12*60)
+			{
+				daythemenum = 2;
+			}
+			else if (count >= 12*60 && count < 16.5*60)
+			{
+				daythemenum = 3;
+			}
+			else
+			{
+				daythemenum = 4;
+			}
+			if (daythemenum != newdaythemenum)
+			{
+				biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+				biometheme = AudioManager.instance.CreateEventInstance(FMODUnity.EventReference.Find("event:/Music/Biomes/LegendStrife" + daythemenum.ToString()));
+				biometheme.start();
+				stopit = false;
+			}
+		}
 
 		if (tiles.GetTile(tileAtPlayer)) //if there is a tile behind the player
 		{
 			if (tileSpriteName != currentTileName||wasday != day) //if the name of the sprite is not equal to the current tile name
 			{
 				wasday = day; // if it becomes night, check the biome again
-				biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+				if (stopit)
+				{
+					biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+				}
 				currentTileName = tileSpriteName; //set the current tile name to the name of the sprite
 				if (tileSpriteName == "Astral") //if the tile's name is astral
 				{
@@ -117,11 +149,9 @@ public class BiomeDetection : MonoBehaviour
 				if (tileSpriteName == "Forest")
 				{
 					//Spawn plains/Forest
-					if (count >= 7.5*60 && count < 19.5*60)
+					if (count >= 4.5*60 && count < 19.5*60)
 					{
 						mainCam.backgroundColor = new Color(0.701f, 0.9691256f, 1f);
-						biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.FullDay);
-						biometheme.start();
 					}
 					else
 					{

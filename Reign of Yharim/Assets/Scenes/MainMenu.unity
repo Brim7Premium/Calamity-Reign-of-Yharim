@@ -10773,6 +10773,13 @@ MonoBehaviour:
       Data3: -389255775
       Data4: 1059554773
     Path: event:/Music/Bosses/ScourgeoftheUniverse
+  <FullDay>k__BackingField:
+    Guid:
+      Data1: -398687929
+      Data2: 1257171541
+      Data3: 2024989350
+      Data4: 1698125847
+    Path: event:/Music/Biomes/LegendStrifeFull
   <Day1>k__BackingField:
     Guid:
       Data1: -2049955358
@@ -10796,18 +10803,18 @@ MonoBehaviour:
     Path: event:/Music/Biomes/LegendStrife3
   <Day4>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -579076166
+      Data2: 1202230493
+      Data3: -1062187635
+      Data4: 145595881
+    Path: event:/Music/Biomes/LegendStrife4
   <Night>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 743056841
+      Data2: 1327956284
+      Data3: -2037665389
+      Data4: -1323342609
+    Path: event:/Music/Biomes/LazeoftheSky
   <Title>k__BackingField:
     Guid:
       Data1: 2000118566
