@@ -9,7 +9,7 @@ using FMOD.Studio;
 
 public class GameTime : MonoBehaviour
 {
-	public int count = 12*60;
+	public int count;
 	public static string displayTime;
 
 	[SerializeField] private Transform orbitPoint;
