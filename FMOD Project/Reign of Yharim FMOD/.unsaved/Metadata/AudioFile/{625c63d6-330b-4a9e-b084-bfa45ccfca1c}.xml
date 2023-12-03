@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{625c63d6-330b-4a9e-b084-bfa45ccfca1c}">
+		<property name="assetPath">
+			<value>MUS_Blight.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>141</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8c1e4af2-c3d0-4a5d-a972-951e7a00ae7e}</destination>
+		</relationship>
+	</object>
+</objects>
