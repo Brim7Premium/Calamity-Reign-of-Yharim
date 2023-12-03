@@ -17,7 +17,7 @@ public class WulfrumGyratorAI : NPC
 
         NPCName = "WulfrumGyrator";
         Damage = 15;
-        LifeMax = 18;
+        LifeMax = 28;
         Life = LifeMax;
         target = GameObject.Find("Player");
 

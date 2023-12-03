@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GreenSlimeAI : NPC
 {
-    private bool isGrounded = false;
+    public bool isGrounded = false;
     private int curTargetPos;
 
     const string SlimeBounce = "Slime_bounce";

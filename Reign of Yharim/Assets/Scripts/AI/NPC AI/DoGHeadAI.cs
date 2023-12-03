@@ -1,4 +1,6 @@
+using System.IO;
 using UnityEngine;
+using FMODUnity;
 using FMOD.Studio;
 
 public class DoGHeadAI : NPC
@@ -21,7 +23,7 @@ public class DoGHeadAI : NPC
 
         target = GameObject.Find("Player");
 
-        DoGMusic = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoGMusic);
+        DoGMusic = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoG1);
     }
     public override void AI()
     {
@@ -101,7 +103,7 @@ public class DoGHeadAI : NPC
             velocity = new Vector2(-1, 1) * 0.5f;
             if (DistanceBetween(transform.position, target.transform.position) > 240f)
             {
-                DoGMusic.stop(STOP_MODE.ALLOWFADEOUT);
+                DoGMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 Destroy(gameObject);
             }
         }
