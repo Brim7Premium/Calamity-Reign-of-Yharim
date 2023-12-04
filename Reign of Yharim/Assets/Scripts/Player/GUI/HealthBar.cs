@@ -4,17 +4,23 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Image barImage;
-    [SerializeField] private Sprite[] barSprites = new Sprite[52];
+    [SerializeField] private RectTransform rectTransform;
     public int maxHealth;
     public int curHealth;
+    [SerializeField][Range(0, 100)]private int barStep = 52;
 
-    private void Start() //on start
+    private void Start()
     {
-        barImage = GetComponent<Image>(); //the image variable is equal to the attached image component
+        barImage = GetComponent<Image>();
+        rectTransform = GetComponent<RectTransform>();
     }
-    private void Update() //every frame
+    private void Update()
     {
-        barImage.sprite = barSprites[(int)(Mathf.Clamp01(curHealth/(float)maxHealth)*51+0.5f)]; 
+        //HelthProcent * BarSpriteSize.x * ReferencePixelsPerUnit
+        //(int)(x*barStep)/(float)(barStep) will divide healthBar in discrete sprites like it was before
+        //expected that the limiter and the bar are the same width and height
+        Sprite bar = barImage.sprite;
+        rectTransform.localPosition = new Vector2(((int)((Mathf.Clamp01(curHealth/(float)maxHealth)-1)*barStep))/(float)(barStep) * bar.bounds.size.x * 100f , 0);
     }
     public void SetMaxHealth(int health)
     {
