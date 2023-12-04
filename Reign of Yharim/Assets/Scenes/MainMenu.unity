@@ -10215,13 +10215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11496f807542cc44ba6f8057318df93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Playerhit>k__BackingField:
-    Guid:
-      Data1: 937102872
-      Data2: 1263561464
-      Data3: -366506562
-      Data4: -1189691460
-    Path: event:/SFX/Player/DefenseHit
   <DemonshadeEnrage>k__BackingField:
     Guid:
       Data1: -974640213
@@ -10229,13 +10222,13 @@ MonoBehaviour:
       Data3: -1599287114
       Data4: -2051474363
     Path: event:/SFX/Player/DemonshadeEnrage
-  <AureusStomp>k__BackingField:
+  <Playerhit>k__BackingField:
     Guid:
-      Data1: -413663715
-      Data2: 1130816096
-      Data3: -610521666
-      Data4: -1742206654
-    Path: event:/SFX/Enemies/AstrumAureusStomp
+      Data1: 937102872
+      Data2: 1263561464
+      Data3: -366506562
+      Data4: -1189691460
+    Path: event:/SFX/Player/DefenseHit
   <_055Roar>k__BackingField:
     Guid:
       Data1: 76780108
@@ -10243,6 +10236,20 @@ MonoBehaviour:
       Data3: 2049251469
       Data4: -1564337529
     Path: event:/SFX/Enemies/055Roar
+  <AureusStomp>k__BackingField:
+    Guid:
+      Data1: -413663715
+      Data2: 1130816096
+      Data3: -610521666
+      Data4: -1742206654
+    Path: event:/SFX/Enemies/AstrumAureusStomp
+  <DeusSummonOrb>k__BackingField:
+    Guid:
+      Data1: -1256295763
+      Data2: 1157306181
+      Data3: -972796777
+      Data4: -2113311574
+    Path: event:/SFX/Enemies/AstralBeaconOrb
   <ExoTwinsHoverIcon>k__BackingField:
     Guid:
       Data1: 1506071997
@@ -10250,6 +10257,20 @@ MonoBehaviour:
       Data3: -1383411011
       Data4: 1523751751
     Path: event:/SFX/Menus/DraedonMechSelect/ExoTwinsIconHover
+  <AncientHorror>k__BackingField:
+    Guid:
+      Data1: -1751748804
+      Data2: 1083491011
+      Data3: 1032401060
+      Data4: -1697862860
+    Path: event:/Music/Bosses/AncientAmbush
+  <BlightTerror>k__BackingField:
+    Guid:
+      Data1: -2079045250
+      Data2: 1202591186
+      Data3: -1446176895
+      Data4: -1390242753
+    Path: event:/Music/Bosses/Vessel from the Undergrowth
   <DoG1>k__BackingField:
     Guid:
       Data1: -1937256212
@@ -10257,13 +10278,27 @@ MonoBehaviour:
       Data3: -389255775
       Data4: 1059554773
     Path: event:/Music/Bosses/ScourgeoftheUniverse
-  <FullDay>k__BackingField:
+  <ObsScourge>k__BackingField:
     Guid:
-      Data1: -398687929
-      Data2: 1257171541
-      Data3: 2024989350
-      Data4: 1698125847
-    Path: event:/Music/Biomes/LegendStrifeFull
+      Data1: -387589503
+      Data2: 1097833278
+      Data3: -1823140980
+      Data4: 160802050
+    Path: event:/Music/Bosses/TerroroftheFireySeas
+  <WulfrumMother>k__BackingField:
+    Guid:
+      Data1: -942517861
+      Data2: 1222658169
+      Data3: -95524704
+      Data4: 1515967891
+    Path: event:/Music/Bosses/TheFabrication
+  <Blight>k__BackingField:
+    Guid:
+      Data1: -1367554278
+      Data2: 1230754682
+      Data3: -1164535392
+      Data4: -1456485207
+    Path: event:/Music/Biomes/Defiled
   <Day1>k__BackingField:
     Guid:
       Data1: -2049955358
@@ -10292,6 +10327,13 @@ MonoBehaviour:
       Data3: -1062187635
       Data4: 145595881
     Path: event:/Music/Biomes/LegendStrife4
+  <FullDay>k__BackingField:
+    Guid:
+      Data1: -398687929
+      Data2: 1257171541
+      Data3: 2024989350
+      Data4: 1698125847
+    Path: event:/Music/Biomes/LegendStrifeFull
   <Night>k__BackingField:
     Guid:
       Data1: 743056841
@@ -10306,6 +10348,13 @@ MonoBehaviour:
       Data3: 90891170
       Data4: 1274298878
     Path: event:/Music/Other/TaleofaCruelWorld
+  <WulfrumArmy>k__BackingField:
+    Guid:
+      Data1: -1465020877
+      Data2: 1271326305
+      Data3: 495798192
+      Data4: -1542258567
+    Path: event:/Music/Other/WulfrumArmy
 --- !u!1 &1679021432
 GameObject:
   m_ObjectHideFlags: 0

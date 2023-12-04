@@ -348,6 +348,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-924276925605942971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/AstralBeaconOrb
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/AstralBeaconOrb
+  Guid:
+    Data1: -1256295763
+    Data2: 1157306181
+    Data3: -972796777
+    Data4: -2113311574
+  Banks:
+  - {fileID: 9053651687472754888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-457915596625687168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,12 +438,13 @@ MonoBehaviour:
   - {fileID: -5860676467647411616}
   - {fileID: -5205692964549589750}
   - {fileID: -4977493739205621509}
+  - {fileID: -924276925605942971}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7205803638166217611}
   StringsBanks:
   - {fileID: 276639227055529703}
-  cacheTime: 638372185229781127
+  cacheTime: 638372170452981758
   cacheVersion: 131609
 --- !u!114 &276639227055529703
 MonoBehaviour:
@@ -433,10 +461,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638372185174507175
+  lastModified: 638372170452162683
   FileSizes:
   - Name: Desktop
-    Value: 1906
+    Value: 1960
   Exists: 1
 --- !u!114 &549684967293634785
 MonoBehaviour:
@@ -913,7 +941,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638372185174487112
+  lastModified: 638372170452123910
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -933,7 +961,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638372185229249370
+  lastModified: 638372162000984236
   FileSizes:
   - Name: Desktop
     Value: 34279648
@@ -1089,8 +1117,8 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638372185229781127
+  lastModified: 638372170452981758
   FileSizes:
   - Name: Desktop
-    Value: 66304
+    Value: 70688
   Exists: 1

@@ -52,9 +52,14 @@ public class GUIController : MonoBehaviour
             ChangeAnimationState(HeartDeath);
 
         if (Input.GetKeyDown(KeyCode.Return) && inventoryOpened == false)
+        {
+            // AudioManager.instance.
             inventoryOpened = true;
+        }
         else if (Input.GetKeyDown(KeyCode.Return) && inventoryOpened == true)
+        {
             inventoryOpened = false;
+        }
 
         if (inventoryOpened == true)
             inventory.SetActive(true);
