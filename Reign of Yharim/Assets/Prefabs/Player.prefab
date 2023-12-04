@@ -754,7 +754,7 @@ MonoBehaviour:
   rideSpringStrength: 2000
   rideSpringDamper: 40
   targetTestObject: {fileID: 0}
-  framerate: 60
+  framerate: 0
 --- !u!114 &2160703249615966329
 MonoBehaviour:
   m_ObjectHideFlags: 0
