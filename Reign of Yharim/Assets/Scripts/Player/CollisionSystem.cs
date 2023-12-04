@@ -22,11 +22,11 @@ public class CollisionSystem : MonoBehaviour
                 if (playerAI.immune == false)
                 {
                     entityName = collision.gameObject.transform.parent.parent.name;
-                    Debug.Log(gameObject.name + "is hitting " + entityName);
+                    Debug.Log(gameObject.name + " is hitting " + entityName);
                     color = new Color(1f, 0f, 0f, 0.1764706f);
                     gameObject.GetComponent<SpriteRenderer>().color = color;
                     gameObject.transform.parent.parent.SendMessage("TakeDamage", collision.gameObject.transform.parent.parent.GetComponentInChildren<NPC>().Damage);
-                    AudioManager.instance.PlayOneShot(FMODEvents.instance.hitSound, transform.position);
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.Playerhit);
                 }
             }
             if (collision.gameObject.tag == "ProjectileHitbox")
@@ -34,12 +34,12 @@ public class CollisionSystem : MonoBehaviour
                 if (playerAI.immune == false)
                 {
                     entityName = collision.gameObject.transform.parent.parent.name;
-                    Debug.Log(gameObject.name + "is hitting " + entityName);
+                    Debug.Log(gameObject.name + " is hitting " + entityName);
                     color = new Color(1f, 0f, 0f, 0.1764706f);
                     gameObject.GetComponent<SpriteRenderer>().color = color;
 
                     gameObject.transform.parent.parent.SendMessage("TakeDamage", collision.gameObject.transform.parent.parent.gameObject.GetComponent<Projectile>().damage);
-                    AudioManager.instance.PlayOneShot(FMODEvents.instance.hitSound, transform.position);
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.Playerhit);
                 }
             }
         }

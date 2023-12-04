@@ -22,7 +22,7 @@ namespace FMODUnity
         // This is used to find the platform that implements the current Unity build target.
         private Dictionary<BuildTarget, Platform> PlatformForBuildTarget = new Dictionary<BuildTarget, Platform>();
 
-        private static string FMODFolderFull => $"Assets/{RuntimeUtils.PluginBasePath}";
+        private static string FMODFolderFull => RuntimeUtils.PluginBasePath;
 
         private const string CacheFolderName = "Cache";
         private static string CacheFolderRelative => $"{RuntimeUtils.PluginBasePath}/{CacheFolderName}";
@@ -521,7 +521,12 @@ namespace FMODUnity
             CleanTemporaryFiles();
 
             BuildTargetGroup buildTargetGroup = BuildPipeline.GetBuildTargetGroup(target);
+#if UNITY_2021_2_OR_NEWER
+            NamedBuildTarget namedBuildTarget = NamedBuildTarget.FromBuildTargetGroup(buildTargetGroup);
+            ScriptingImplementation scriptingBackend = PlayerSettings.GetScriptingBackend(namedBuildTarget);
+#else
             ScriptingImplementation scriptingBackend = PlayerSettings.GetScriptingBackend(buildTargetGroup);
+#endif
 
             if (platform.StaticPlugins.Count > 0)
             {
@@ -641,12 +646,27 @@ namespace FMODUnity
                     throw new BuildFailedException(error);
                 }
 
+                bool androidPatchBuildPrevious = Settings.Instance.AndroidPatchBuild;
+                if ((report.summary.options & BuildOptions.PatchPackage) == BuildOptions.PatchPackage)
+                {
+                    Settings.Instance.AndroidPatchBuild = true;
+                }
+                else
+                {
+                    Settings.Instance.AndroidPatchBuild = false;
+                }
+                if (androidPatchBuildPrevious != Settings.Instance.AndroidPatchBuild)
+                {
+                    EditorUtility.SetDirty(Settings.Instance);
+                }
+
                 EditorSettings.Instance.PreprocessBuild(report.summary.platform, binaryType);
             }
 
             public void OnPostprocessBuild(BuildReport report)
             {
                 Instance.PostprocessBuild(report.summary.platform);
+                Settings.Instance.AndroidPatchBuild = false;
             }
         }
 
@@ -659,7 +679,7 @@ namespace FMODUnity
                 : Platform.BinaryType.Release;
 
             string error;
-            if (!Settings.EditorSettings.CanBuildTarget(EditorUserBuildSettings.activeBuildTarget, binaryType, out error))
+            if (!CanBuildTarget(EditorUserBuildSettings.activeBuildTarget, binaryType, out error))
             {
                 RuntimeUtils.DebugLogWarning(error);
 

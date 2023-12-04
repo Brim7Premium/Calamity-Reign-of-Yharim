@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GreenSlimeAI : NPC
 {
-    private bool isGrounded = false;
+    public bool isGrounded = false;
     private int curTargetPos;
 
     const string SlimeBounce = "Slime_bounce";
@@ -22,7 +22,6 @@ public class GreenSlimeAI : NPC
 
     public override void AI()
     {
-        
         if (target != null)
         {
             animator.speed = 0.8f;
@@ -37,7 +36,7 @@ public class GreenSlimeAI : NPC
                 //velocity.y = 0.2f; //at the same time jump up
 
 
-                rb.velocity = new Vector2(curTargetPos * 0.2f, 0.2f); //Match original as much as possible
+                rb.velocity = new Vector2(curTargetPos * 2.735f, 5.47f); //Match original as much as possible
             }
             else if (ai[1] > 150.0f && isGrounded) 
             {

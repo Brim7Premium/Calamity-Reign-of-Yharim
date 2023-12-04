@@ -6,13 +6,13 @@ public class EnemySpawner : MonoBehaviour
     public GameObject player;
     public GameObject enemyToSpawn;
 
-    public float regularSlimeSpawnRate;
+    public float EnemySpawnRate;
     IEnumerator Start()
     {
         int ground = 1 << LayerMask.NameToLayer("Ground");
         while(true)
         {
-            yield return new WaitForSeconds(regularSlimeSpawnRate);
+            yield return new WaitForSeconds(EnemySpawnRate);
 
             Vector2 SpawnPosition = new Vector2(Random.Range(player.transform.position.x - 24f, player.transform.position.x + 24f), Random.Range(player.transform.position.y - 12f, player.transform.position.y + 12f));          
 
@@ -35,7 +35,7 @@ public class EnemySpawner : MonoBehaviour
             }
 
             GameObject newEnemy = Instantiate(enemyToSpawn, SpawnPosition, Quaternion.identity);
-
+            // newEnemy.GetComponent("Script").healthBar = 
             newEnemy.SetActive(true);
         }
     }
