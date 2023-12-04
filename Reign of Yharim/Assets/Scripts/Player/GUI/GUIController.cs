@@ -52,15 +52,9 @@ public class GUIController : MonoBehaviour
             ChangeAnimationState(HeartDeath);
 
         if (Input.GetKeyDown(KeyCode.Return) && inventoryOpened == false)
-        {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AstralBeaconOrbs);
             inventoryOpened = true;
-        }            
         else if (Input.GetKeyDown(KeyCode.Return) && inventoryOpened == true)
-        {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AstralBeaconOrbs);
             inventoryOpened = false;
-        }
 
         if (inventoryOpened == true)
             inventory.SetActive(true);
