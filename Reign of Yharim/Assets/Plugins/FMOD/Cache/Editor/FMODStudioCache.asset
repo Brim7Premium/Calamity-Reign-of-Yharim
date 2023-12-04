@@ -20,7 +20,7 @@ MonoBehaviour:
     Data4: -1189691460
   Banks:
   - {fileID: -4585573814524308878}
-  - {fileID: 9053651687472754888}
+  - {fileID: -2901175074714412371}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -48,7 +48,7 @@ MonoBehaviour:
     Data4: 376066204
   Banks:
   - {fileID: -1246897534701598436}
-  - {fileID: 7797237908484172213}
+  - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -76,6 +76,87 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1340
   Exists: 1
+--- !u!114 &-8692745688998851974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/TerroroftheFireySeas
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/TerroroftheFireySeas
+  Guid:
+    Data1: -387589503
+    Data2: 1097833278
+    Data3: -1823140980
+    Data4: 160802050
+  Banks:
+  - {fileID: -3531899622800020655}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 332595
+--- !u!114 &-8314435055044465897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/AstralBeaconOrb
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/AstralBeaconOrb
+  Guid:
+    Data1: -1256295763
+    Data2: 1157306181
+    Data3: -972796777
+    Data4: -2113311574
+  Banks:
+  - {fileID: -2901175074714412371}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7421225757783386573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/TheFabrication
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/TheFabrication
+  Guid:
+    Data1: -942517861
+    Data2: 1222658169
+    Data3: -95524704
+    Data4: 1515967891
+  Banks:
+  - {fileID: -3531899622800020655}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 166624
 --- !u!114 &-5677388323839993875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +204,7 @@ MonoBehaviour:
     Data4: -1323342609
   Banks:
   - {fileID: -1246897534701598436}
-  - {fileID: 7797237908484172213}
+  - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -151,7 +232,7 @@ MonoBehaviour:
     Data4: -110733215
   Banks:
   - {fileID: -1246897534701598436}
-  - {fileID: 7797237908484172213}
+  - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -199,6 +280,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 19321248
   Exists: 1
+--- !u!114 &-3531899622800020655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638372209326320117
+  FileSizes:
+  - Name: Desktop
+    Value: 34279648
+  Exists: 1
 --- !u!114 &-3521052429915360321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +320,53 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12576
   Exists: 1
+--- !u!114 &-2901175074714412371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638372209329414758
+  FileSizes:
+  - Name: Desktop
+    Value: 70688
+  Exists: 1
+--- !u!114 &-2543123285895140186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/AncientAmbush
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/AncientAmbush
+  Guid:
+    Data1: -1751748804
+    Data2: 1083491011
+    Data3: 1032401060
+    Data4: -1697862860
+  Banks:
+  - {fileID: -3531899622800020655}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 160748
 --- !u!114 &-1427979402525925453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +407,7 @@ MonoBehaviour:
     Data4: -1564337529
   Banks:
   - {fileID: -4585573814524308878}
-  - {fileID: 9053651687472754888}
+  - {fileID: -2901175074714412371}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -267,6 +415,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-928291376192492317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/Vessel from the Undergrowth
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/Vessel from the Undergrowth
+  Guid:
+    Data1: -2079045250
+    Data2: 1202591186
+    Data3: -1446176895
+    Data4: -1390242753
+  Banks:
+  - {fileID: -3531899622800020655}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 142745
 --- !u!114 &-924276925605942971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,8 +510,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 7205803638166217611}
-  - {fileID: 9053651687472754888}
-  - {fileID: 7797237908484172213}
+  - {fileID: -3531899622800020655}
+  - {fileID: -2901175074714412371}
   EditorEvents:
   - {fileID: 3988853311855828750}
   - {fileID: 2639243575317120306}
@@ -351,6 +526,13 @@ MonoBehaviour:
   - {fileID: 2127008278115446352}
   - {fileID: -4780627273014368426}
   - {fileID: 4977991144621902328}
+  - {fileID: 2072491207619704737}
+  - {fileID: 935960524053674810}
+  - {fileID: -2543123285895140186}
+  - {fileID: -928291376192492317}
+  - {fileID: -8692745688998851974}
+  - {fileID: -7421225757783386573}
+  - {fileID: -8314435055044465897}
   - {fileID: 8624680195422545403}
   - {fileID: 5874495882896469293}
   - {fileID: 7053953190938738466}
@@ -380,7 +562,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638372170452162683
+  lastModified: 638370194530578066
   FileSizes:
   - Name: Desktop
     Value: 1960
@@ -405,7 +587,7 @@ MonoBehaviour:
     Data4: 1523751751
   Banks:
   - {fileID: -4585573814524308878}
-  - {fileID: 9053651687472754888}
+  - {fileID: -2901175074714412371}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -433,7 +615,7 @@ MonoBehaviour:
     Data4: -1742206654
   Banks:
   - {fileID: -4585573814524308878}
-  - {fileID: 9053651687472754888}
+  - {fileID: -2901175074714412371}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -441,6 +623,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &935960524053674810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Other/WulfrumArmy
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Other/WulfrumArmy
+  Guid:
+    Data1: -1465020877
+    Data2: 1271326305
+    Data3: 495798192
+    Data4: -1542258567
+  Banks:
+  - {fileID: -3531899622800020655}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 132515
 --- !u!114 &1814764560024944302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,7 +670,7 @@ MonoBehaviour:
     Data4: 145595881
   Banks:
   - {fileID: -1246897534701598436}
-  - {fileID: 7797237908484172213}
+  - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -469,6 +678,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 184545
+--- !u!114 &2072491207619704737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/Defiled
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/Defiled
+  Guid:
+    Data1: -1367554278
+    Data2: 1230754682
+    Data3: -1164535392
+    Data4: -1456485207
+  Banks:
+  - {fileID: -3531899622800020655}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 275399
 --- !u!114 &2082539738636856865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,7 +745,7 @@ MonoBehaviour:
     Data4: -1521750869
   Banks:
   - {fileID: -1246897534701598436}
-  - {fileID: 7797237908484172213}
+  - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -565,7 +801,7 @@ MonoBehaviour:
     Data4: 1059554773
   Banks:
   - {fileID: -1246897534701598436}
-  - {fileID: 7797237908484172213}
+  - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -674,14 +910,14 @@ MonoBehaviour:
     Data4: 1274298878
   Banks:
   - {fileID: -1246897534701598436}
-  - {fileID: 7797237908484172213}
+  - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 176730
+  Length: 173094
 --- !u!114 &3991882158755470496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,7 +1019,7 @@ MonoBehaviour:
     Data4: 1698125847
   Banks:
   - {fileID: -1246897534701598436}
-  - {fileID: 7797237908484172213}
+  - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -878,7 +1114,7 @@ MonoBehaviour:
     Data4: -2051474363
   Banks:
   - {fileID: -4585573814524308878}
-  - {fileID: 9053651687472754888}
+  - {fileID: -2901175074714412371}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
