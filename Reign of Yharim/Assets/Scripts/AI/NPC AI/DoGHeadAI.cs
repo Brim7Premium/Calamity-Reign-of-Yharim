@@ -27,6 +27,8 @@ public class DoGHeadAI : NPC
     }
     public override void AI()
     {
+        if (target != null)
+        target.GetComponent<BiomeDetection>().BossAlive = true;
         UpdateVelocity();
         PLAYBACK_STATE playbackState;
         DoGMusic.getPlaybackState(out playbackState);
@@ -105,6 +107,7 @@ public class DoGHeadAI : NPC
             {
                 DoGMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 Destroy(gameObject);
+                target.GetComponent<BiomeDetection>().BossAlive = false;
             }
         }
     }
