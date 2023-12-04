@@ -98,9 +98,11 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         c2d = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
 
-        /*if(healthBar == null){healthBar = GetComponent<HealthBar>();} Health bar shouldn't be found, it should be assigned manually
-        //if(healthBar == null){healthBar = GetComponentInChildren<HealthBar>();}
-        if(healthBar == null){Debug.LogWarning(NPCName + " doesn't have healthBar");} LifeMax already does this*/
+        if(healthBar == null){healthBar = GetComponent<HealthBar>();}
+        if(healthBar == null){healthBar = GetComponentInChildren<HealthBar>();}
+
+        //LifeMax already does this
+        //if(healthBar == null){Debug.LogWarning(NPCName + " doesn't have healthBar");} 
     }
 
     public void UpdateVelocity(){
