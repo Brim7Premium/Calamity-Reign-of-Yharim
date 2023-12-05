@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
 	public void HoverSound()
 	{
-		AudioManager.instance.PlayOneShot(FMODEvents.instance.AureusStomp);
+		AudioManager.instance.PlayOneShot(FMODEvents.instance.TargetSelection);
 	}
 
 	public void EnterWorld()
