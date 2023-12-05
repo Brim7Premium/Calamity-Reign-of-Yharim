@@ -21,11 +21,17 @@ public class BiomeDetection : MonoBehaviour
 	private bool wasday = true;
 	private int daythemenum = 0;
 
+	private bool juststarted = true;
+
 	private int count;
 
 	void Update()
 	{
-		GetTile();
+		if (!juststarted)
+		{
+			GetTile();
+		}
+		juststarted = false;
 	}
 
 	void GetTile()

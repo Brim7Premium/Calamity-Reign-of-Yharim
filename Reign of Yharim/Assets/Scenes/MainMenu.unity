@@ -3976,8 +3976,8 @@ GameObject:
   - component: {fileID: 675130427}
   - component: {fileID: 675130426}
   - component: {fileID: 675130425}
-  - component: {fileID: 675130428}
   - component: {fileID: 675130429}
+  - component: {fileID: 675130430}
   m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
@@ -4159,21 +4159,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675130423}
   m_CullTransparentMesh: 1
---- !u!114 &675130428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675130423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c859f3b5b694642957587018026caf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toggles: {fileID: 936726105}
-  SaveMenu: {fileID: 1028472363}
-  NameInput: {fileID: 92543952}
 --- !u!114 &675130429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4203,6 +4188,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &675130430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675130423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e47550374e7fbe479c7e56ec7ecaf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggles: {fileID: 936726105}
+  SaveMenu: {fileID: 1028472363}
+  NameInput: {fileID: 92543952}
 --- !u!1 &679355612
 GameObject:
   m_ObjectHideFlags: 0
@@ -8554,146 +8554,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11496f807542cc44ba6f8057318df93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <DemonshadeEnrage>k__BackingField:
-    Guid:
-      Data1: -974640213
-      Data2: 1268750061
-      Data3: -1599287114
-      Data4: -2051474363
-    Path: event:/SFX/Player/DemonshadeEnrage
-  <Playerhit>k__BackingField:
-    Guid:
-      Data1: 937102872
-      Data2: 1263561464
-      Data3: -366506562
-      Data4: -1189691460
-    Path: event:/SFX/Player/DefenseHit
-  <_055Roar>k__BackingField:
-    Guid:
-      Data1: 76780108
-      Data2: 1231301446
-      Data3: 2049251469
-      Data4: -1564337529
-    Path: event:/SFX/Enemies/055Roar
-  <AureusStomp>k__BackingField:
-    Guid:
-      Data1: -413663715
-      Data2: 1130816096
-      Data3: -610521666
-      Data4: -1742206654
-    Path: event:/SFX/Enemies/AstrumAureusStomp
-  <DeusSummonOrb>k__BackingField:
-    Guid:
-      Data1: -1256295763
-      Data2: 1157306181
-      Data3: -972796777
-      Data4: -2113311574
-    Path: event:/SFX/Enemies/AstralBeaconOrb
-  <ExoTwinsHoverIcon>k__BackingField:
-    Guid:
-      Data1: 1506071997
-      Data2: 1123115900
-      Data3: -1383411011
-      Data4: 1523751751
-    Path: event:/SFX/Menus/DraedonMechSelect/ExoTwinsIconHover
-  <AncientHorror>k__BackingField:
-    Guid:
-      Data1: -1751748804
-      Data2: 1083491011
-      Data3: 1032401060
-      Data4: -1697862860
-    Path: event:/Music/Bosses/AncientAmbush
-  <BlightTerror>k__BackingField:
-    Guid:
-      Data1: -2079045250
-      Data2: 1202591186
-      Data3: -1446176895
-      Data4: -1390242753
-    Path: event:/Music/Bosses/Vessel from the Undergrowth
-  <DoG1>k__BackingField:
-    Guid:
-      Data1: -1937256212
-      Data2: 1127564151
-      Data3: -389255775
-      Data4: 1059554773
-    Path: event:/Music/Bosses/ScourgeoftheUniverse
-  <ObsScourge>k__BackingField:
-    Guid:
-      Data1: -387589503
-      Data2: 1097833278
-      Data3: -1823140980
-      Data4: 160802050
-    Path: event:/Music/Bosses/TerroroftheFireySeas
-  <WulfrumMother>k__BackingField:
-    Guid:
-      Data1: -942517861
-      Data2: 1222658169
-      Data3: -95524704
-      Data4: 1515967891
-    Path: event:/Music/Bosses/TheFabrication
-  <Blight>k__BackingField:
-    Guid:
-      Data1: -1367554278
-      Data2: 1230754682
-      Data3: -1164535392
-      Data4: -1456485207
-    Path: event:/Music/Biomes/Defiled
-  <Day1>k__BackingField:
-    Guid:
-      Data1: -2049955358
-      Data2: 1341340651
-      Data3: 447516320
-      Data4: -1521750869
-    Path: event:/Music/Biomes/LegendStrife1
-  <Day2>k__BackingField:
-    Guid:
-      Data1: 1773737711
-      Data2: 1261301897
-      Data3: 2002425774
-      Data4: -110733215
-    Path: event:/Music/Biomes/LegendStrife2
-  <Day3>k__BackingField:
-    Guid:
-      Data1: -1690346599
-      Data2: 1327267307
-      Data3: 1164810390
-      Data4: 376066204
-    Path: event:/Music/Biomes/LegendStrife3
-  <Day4>k__BackingField:
-    Guid:
-      Data1: -579076166
-      Data2: 1202230493
-      Data3: -1062187635
-      Data4: 145595881
-    Path: event:/Music/Biomes/LegendStrife4
-  <FullDay>k__BackingField:
-    Guid:
-      Data1: -398687929
-      Data2: 1257171541
-      Data3: 2024989350
-      Data4: 1698125847
-    Path: event:/Music/Biomes/LegendStrifeFull
-  <Night>k__BackingField:
-    Guid:
-      Data1: 743056841
-      Data2: 1327956284
-      Data3: -2037665389
-      Data4: -1323342609
-    Path: event:/Music/Biomes/LazeoftheSky
-  <Title>k__BackingField:
-    Guid:
-      Data1: 2000118566
-      Data2: 1304468088
-      Data3: 90891170
-      Data4: 1274298878
-    Path: event:/Music/Other/TaleofaCruelWorld
-  <WulfrumArmy>k__BackingField:
-    Guid:
-      Data1: -1465020877
-      Data2: 1271326305
-      Data3: 495798192
-      Data4: -1542258567
-    Path: event:/Music/Other/WulfrumArmy
+  DemonshadeEnrage: event:/SFX/Player/DemonshadeEnrage
+  Playerhit: event:/SFX/Player/DefenseHit
+  _055Roar: event:/SFX/Enemies/055Roar
+  AureusStomp: event:/SFX/Enemies/AstrumAureusStomp
+  DeusSummonOrb: event:/SFX/Enemies/AstralBeaconOrb
+  TwinsTarget: event:/SFX/Enemies/TwinTarget
+  ExoTwinsHoverIcon: event:/SFX/Menus/DraedonMechSelect/ExoTwinsIconHover
+  AncientHorror: event:/Music/Bosses/AncientAmbush
+  BlightTerror: event:/Music/Bosses/VesselfromtheUndergrowth
+  DoG1: event:/Music/Bosses/ScourgeoftheUniverse
+  ObsScourge: event:/Music/Bosses/TerroroftheFireySeas
+  WulfrumMother: event:/Music/Bosses/TheFabrication
+  Blight: event:/Music/Biomes/Defiled
+  Day1: event:/Music/Biomes/LegendStrife1
+  Day2: event:/Music/Biomes/LegendStrife2
+  Day3: event:/Music/Biomes/LegendStrife3
+  Day4: event:/Music/Biomes/LegendStrife4
+  FullDay: event:/Music/Biomes/LegendStrifeFull
+  Night: event:/Music/Biomes/LazeoftheSky
+  Title: event:/Music/Other/TaleofaCruelWorld
+  WulfrumArmy: event:/Music/Other/WulfrumArmy
 --- !u!1 &1338355671
 GameObject:
   m_ObjectHideFlags: 0

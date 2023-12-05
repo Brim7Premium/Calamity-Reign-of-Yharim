@@ -545,7 +545,7 @@ MonoBehaviour:
   - {fileID: 7205803638166217611}
   StringsBanks:
   - {fileID: 276639227055529703}
-  cacheTime: 638373168289487128
+  cacheTime: 638373246661721721
   cacheVersion: 131609
 --- !u!114 &276639227055529703
 MonoBehaviour:
@@ -562,10 +562,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638373168287407176
+  lastModified: 638373246534603167
   FileSizes:
   - Name: Desktop
-    Value: 2008
+    Value: 1998
   Exists: 1
 --- !u!114 &549684967293634785
 MonoBehaviour:
@@ -772,7 +772,6 @@ MonoBehaviour:
     Data3: -1383411011
     Data4: 1523751751
   Banks:
-  - {fileID: -4132531612053143621}
   - {fileID: 9053651687472754888}
   IsStream: 0
   Is3D: 0
@@ -827,8 +826,7 @@ MonoBehaviour:
     Data2: 1173932179
     Data3: -398274924
     Data4: -805342098
-  Banks:
-  - {fileID: -4132531612053143621}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -854,8 +852,7 @@ MonoBehaviour:
     Data2: 1322195297
     Data3: 1252561074
     Data4: -768810406
-  Banks:
-  - {fileID: -4132531612053143621}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -990,8 +987,7 @@ MonoBehaviour:
     Data2: 1260542070
     Data3: -1039887729
     Data4: -2116126500
-  Banks:
-  - {fileID: -4132531612053143621}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1042,7 +1038,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638373168287362102
+  lastModified: 638373246534564449
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -1167,8 +1163,7 @@ MonoBehaviour:
     Data2: 1127564151
     Data3: -389255775
     Data4: 1059554773
-  Banks:
-  - {fileID: -4132531612053143621}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
