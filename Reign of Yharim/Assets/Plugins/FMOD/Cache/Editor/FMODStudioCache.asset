@@ -47,7 +47,7 @@ MonoBehaviour:
     Data3: 1164810390
     Data4: 376066204
   Banks:
-  - {fileID: -1246897534701598436}
+  - {fileID: 0}
   - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
     Data3: -2037665389
     Data4: -1323342609
   Banks:
-  - {fileID: -1246897534701598436}
+  - {fileID: 0}
   - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
     Data3: 2002425774
     Data4: -110733215
   Banks:
-  - {fileID: -1246897534701598436}
+  - {fileID: 0}
   - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
@@ -533,19 +533,19 @@ MonoBehaviour:
   - {fileID: -8692745688998851974}
   - {fileID: -7421225757783386573}
   - {fileID: -8314435055044465897}
-  - {fileID: 8624680195422545403}
-  - {fileID: 5874495882896469293}
-  - {fileID: 7053953190938738466}
-  - {fileID: -5860676467647411616}
-  - {fileID: -5205692964549589750}
-  - {fileID: -4977493739205621509}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: -924276925605942971}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7205803638166217611}
   StringsBanks:
   - {fileID: 276639227055529703}
-  cacheTime: 638373023858265766
+  cacheTime: 638372996676442650
   cacheVersion: 131609
 --- !u!114 &276639227055529703
 MonoBehaviour:
@@ -562,7 +562,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638373023795656802
+  lastModified: 638372979425383080
   FileSizes:
   - Name: Desktop
     Value: 1960
@@ -669,7 +669,7 @@ MonoBehaviour:
     Data3: -1062187635
     Data4: 145595881
   Banks:
-  - {fileID: -1246897534701598436}
+  - {fileID: 0}
   - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
@@ -744,7 +744,7 @@ MonoBehaviour:
     Data3: 447516320
     Data4: -1521750869
   Banks:
-  - {fileID: -1246897534701598436}
+  - {fileID: 0}
   - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
@@ -800,7 +800,7 @@ MonoBehaviour:
     Data3: -389255775
     Data4: 1059554773
   Banks:
-  - {fileID: -1246897534701598436}
+  - {fileID: 0}
   - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
@@ -909,7 +909,7 @@ MonoBehaviour:
     Data3: 90891170
     Data4: 1274298878
   Banks:
-  - {fileID: -1246897534701598436}
+  - {fileID: 0}
   - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
@@ -1018,7 +1018,7 @@ MonoBehaviour:
     Data3: 2024989350
     Data4: 1698125847
   Banks:
-  - {fileID: -1246897534701598436}
+  - {fileID: 0}
   - {fileID: -3531899622800020655}
   IsStream: 1
   Is3D: 0
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638373023795594753
+  lastModified: 638372979425358150
   FileSizes:
   - Name: Desktop
     Value: 1340
