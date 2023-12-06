@@ -47,14 +47,14 @@ public class AudioManager : MonoBehaviour
 		SFXBus.setVolume(SFXVolume);
 	}
 
-	public void PlayOneShot(string sound, Vector3 worldPos = new Vector3())
+	public void PlayOneShot(EventReference sound, Vector3 worldPos = new Vector3())
 	{
-		RuntimeManager.PlayOneShot(EventReference.Find(sound), worldPos);
+		RuntimeManager.PlayOneShot(sound, worldPos);
 	}
 
-	public EventInstance CreateEventInstance(string eventReference)
+	public EventInstance CreateEventInstance(EventReference eventReference)
 	{
-		EventInstance eventInstance = RuntimeManager.CreateInstance(EventReference.Find(eventReference));
+		EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
 		eventInstances.Add(eventInstance);
 
 		return eventInstance;

@@ -11,9 +11,8 @@ public class MainMenu : MonoBehaviour
 	public MainMenuScreens menuScreens;
 
 	private EventInstance TitleTheme;
-	IEnumerator Start()
+	public void Awake()
 	{
-		yield return new WaitForSeconds(1);
 		TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Title);
 		TitleTheme.start();
 		Debug.Log("Main");
@@ -22,7 +21,6 @@ public class MainMenu : MonoBehaviour
 	public void HoverSound()
 	{
 		AudioManager.instance.PlayOneShot(FMODEvents.instance.AureusStomp);
-		//AudioManager.instance.PlayOneShot(FMODEvents.instance.TwinsTarget);
 	}
 
 	public void EnterWorld()
