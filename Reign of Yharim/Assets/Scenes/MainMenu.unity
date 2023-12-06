@@ -4168,7 +4168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 675130423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c859f3b5b694642957587018026caf, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e47550374e7fbe479c7e56ec7ecaf30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toggles: {fileID: 936726105}
@@ -8589,6 +8589,13 @@ MonoBehaviour:
       Data3: -972796777
       Data4: -2113311574
     Path: event:/SFX/Enemies/AstralBeaconOrb
+  <TwinTowers>k__BackingField:
+    Guid:
+      Data1: 338205923
+      Data2: 1223673908
+      Data3: 1757109393
+      Data4: 1128342642
+    Path: event:/SFX/Enemies/TwinsTarget
   <ExoTwinsHoverIcon>k__BackingField:
     Guid:
       Data1: 1506071997
