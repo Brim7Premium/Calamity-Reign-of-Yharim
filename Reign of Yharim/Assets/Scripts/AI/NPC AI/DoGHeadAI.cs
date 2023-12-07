@@ -14,9 +14,9 @@ public class DoGHeadAI : NPC
         base.SetDefaults();
         
         NPCName = "DevourerofGodsHead";
-        damage = 600;
-        lifeMax = 1706400;
-        life = lifeMax;
+        Damage = 600;
+        LifeMax = 1706400;
+        Life = LifeMax;
         worm = true;
 
         target = GameObject.Find("Player");
@@ -40,7 +40,7 @@ public class DoGHeadAI : NPC
             if (ai[0] == 0.0f) //if ai[0] equals 0 (First Attack)
             {
                 Debug.Log("Devourer of gods is phase 1!");
-                velocity = velocity.RotateTowards(AngleTo(target.transform.position), RotationSpeed, true) * MoveSpeed;//this makes the worms velocity rotate towards the player.
+                velocity = velocity.RotateTowards(AngleTo(transform.position, target.transform.position), RotationSpeed, true) * MoveSpeed;//this makes the worms velocity rotate towards the player.
                 if (velocity != Vector2.zero)//this code is copyed from this yt video https://www.youtube.com/watch?v=gs7y2b0xthU&t=366s and modified slightly.
                 {
                     Vector2 movementDirection = new(velocity.x, velocity.y);
@@ -73,8 +73,8 @@ public class DoGHeadAI : NPC
                 }
                 if (ai[1] == 60f) //after one second
                 {
-                    Vector2 _vel = DirectionTo(oldTargetPos) * 25;
-                    int _damage = damage;
+                    Vector2 _vel = DirectionTo(transform.position, oldTargetPos) * 25;
+                    int _damage = Damage;
                     float _knockback = 0;
                     float _timeLeft = 1;
 
@@ -99,7 +99,7 @@ public class DoGHeadAI : NPC
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
             velocity = new Vector2(-1, 1) * 0.5f;
-            if (GetDistanceToPlayer() > 240f)
+            if (DistanceBetween(transform.position, target.transform.position) > 240f)
             {
                 DoGMusic.stop(STOP_MODE.ALLOWFADEOUT);
                 Destroy(gameObject);

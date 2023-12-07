@@ -6,56 +6,59 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 {
     public string NPCName;
 
-    private int _lifeMax;
-    public int lifeMax
+    private int _lifeMax; //lifemax property value field
+    public int LifeMax //property, which can be called as set or get in the other code. Whatever the other code sets this as will return to the set as value, and get will just directly return _lifeMax
     {
-        set
+        set 
         {
-            if(value < 0){ Debug.LogError(NPCName + " can't have negative health"); return;}
+            //just a simple note, but return will stop this part of code and prevent subsequent code from running (for brim because he forgets stuff all the time)
+            if (value < 0) { Debug.LogError(NPCName + " can't have negative health"); return; }
             _lifeMax = value;
-
-            try{healthBar.SetMaxHealth(_lifeMax);}
-            catch(NullReferenceException){}
+            //try to set the healthbar's max health to whatever the new _lifeMax value is.
+            try {healthBar.SetMaxHealth(_lifeMax);}
+            //as long as it actually has a healthbar. If it doesn't, mark a custom error
+            catch (NullReferenceException) { Debug.LogError(NPCName + " couldn't set health bar's max health. Maybe it doesn't exist or isn't set?"); }
         }
-        get => _lifeMax;
+        get => _lifeMax; //directly returns _lifeMax
     }
 
-    private int _life;
-    public int TargetDirection
-    {
-        get => transform.position.x < target.transform.position.x ? 1 : -1;
-    }
-    public int life
+    private int _life; 
+    public int Life 
     {
         set
         {
-            _life = value;
-            if(value > lifeMax)
+            _life = value; 
+            if(value > LifeMax) 
             {
-                _life = lifeMax;
-                Debug.LogWarning(NPCName + " can't have more hp then max hp");
+                _life = LifeMax; 
+                Debug.LogWarning(NPCName + " can't have more hp than max hp"); 
             }
-            if (_life <=0)
-            {
+            if (_life <=0) 
                 Kill();
-            }
 
-            try{ healthBar.SetHealth(_life);}
-            catch(NullReferenceException){}
+            try {healthBar.SetHealth(_life);}
+            catch (NullReferenceException) { Debug.LogError(NPCName + " couldn't change health of the healthbar. Maybe it doesn't exist or isn't set?"); }
         }
 
-        get {return _life;}
+        get => _life;
     }
 
     private int _damage;
-    public int damage
+    public int Damage
     {
-        set { 
-            if(value < 0) Debug.LogError(NPCName + " can't deal negative damage"); //I think it's very unlikely that we gonna use negative values here. 
-            else _damage = value;
+        set 
+        { 
+            if(value < 0) 
+                Debug.LogError(NPCName + " can't deal negative damage"); //I think it's very unlikely that we gonna use negative values here. 
+            else _damage = value; 
         }
 
-        get { return _damage;}
+        get => _damage;
+    }
+    public int TargetDirection //read-only
+    {
+        //if NPC's x position is less than the target's x position, return get as 1, else return get as -1
+        get => transform.position.x < target.transform.position.x ? 1 : -1; 
     }
 
     public HealthBar healthBar;
@@ -88,7 +91,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public override void SetDefaults()
     {
-        base.SetDefaults();
+        base.SetDefaults(); //first run the base code from entity
 
         groundLayer = 1 << LayerMask.NameToLayer("Ground");
         rb = GetComponent<Rigidbody2D>();
@@ -97,7 +100,9 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
         if(healthBar == null){healthBar = GetComponent<HealthBar>();}
         if(healthBar == null){healthBar = GetComponentInChildren<HealthBar>();}
-        if(healthBar == null){Debug.LogWarning(NPCName + " doesn't have healthBar");}
+
+        //LifeMax already does this
+        //if(healthBar == null){Debug.LogWarning(NPCName + " doesn't have healthBar");} 
     }
 
     public void UpdateVelocity(){
@@ -112,27 +117,21 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         objectRenderer.enabled = IsVisibleFromCamera();
     }
 
-    public float GetDistanceToPlayer()
-    {
-        return Vector2.Distance(gameObject.transform.position, target.transform.position);
-    }
-
     public void TakeDamage(int damage)
     {
         if (immune == false)
         {
             OnHit();
             StartCoroutine(Immunity());
-            life -= damage;            
+            Life -= damage;            
         }
     }
 
     public virtual void AI(){}
     public virtual void OnHit(){}
-    public override void Kill() => Destroy(gameObject);
+    public override void Kill() => Destroy(gameObject); //specific NPCs can still override 
 
-    public Vector2 ToRotationVector2(float f) => new((float)Math.Cos(f), (float)Math.Sin(f));
-    public void DrawDistanceToPlayer(Color color) => Debug.DrawLine(gameObject.transform.position, target.transform.position, color);
+    public Vector2 ToRotationVector2(float f) => new((float)Math.Cos(f), (float)Math.Sin(f)); //converts the float rotation that is output by methods like AngleTo into a vector2 rotation
 
     public void ChangeAnimationState(string newAnimationState)
     {

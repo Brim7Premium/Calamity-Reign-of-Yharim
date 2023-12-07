@@ -16,9 +16,9 @@ public class WulfrumGyratorAI : NPC
         base.SetDefaults();
 
         NPCName = "WulfrumGyrator";
-        damage = 15;
-        lifeMax = 18;
-        life = lifeMax;
+        Damage = 15;
+        LifeMax = 18;
+        Life = LifeMax;
         target = GameObject.Find("Player");
 
         spotted = false;
@@ -35,7 +35,7 @@ public class WulfrumGyratorAI : NPC
             ai[0]++;//increment ai[0] by 1 every frame.(the framerate is capped at 60)
             velocity *= 0.97f;//this is for smoothing the movement.
 
-            if (GetDistanceToPlayer() > 20f && spotted == false) //if the player isn't close and the bool spotted equals false
+            if (Vector2.Distance(transform.position, target.transform.position) > 20f && spotted == false) //if the player isn't close and the bool spotted equals false
             {
                 color = Color.green; //set color variable to green
 
@@ -57,7 +57,7 @@ public class WulfrumGyratorAI : NPC
                     color = Color.red;
                     if (ai[0] == 0.0f)
                     {
-                        velocity = new Vector2(DirectionTo(target.transform.position).x * 0.12f, velocity.y); //speed of 
+                        velocity = new Vector2(DirectionTo(transform.position, target.transform.position).x * 0.12f, velocity.y); //speed of 
                     }
 
                     /*if (//placeholder)
@@ -90,9 +90,9 @@ public class WulfrumGyratorAI : NPC
                 ai[0] = 0.0f;
             }
 
-            DrawDistanceToPlayer(color);
+            DrawDistance(transform.position, target.transform.position, color);
 
-            if (GetDistanceToPlayer() > 60f && spotted == false)
+            if (DistanceBetween(transform.position, target.transform.position) > 60f && spotted == false)
             {
                 Destroy(gameObject); //despawn the object
             }
