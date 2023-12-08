@@ -15,5 +15,6 @@ MonoBehaviour:
   type: 3
   actionType: 3
   stackable: 0
+  displayName: Tradewinds
   image: {fileID: 21300000, guid: 15e6866d20cfc154ab4cddcbacaa09aa, type: 3}
   ID: 2

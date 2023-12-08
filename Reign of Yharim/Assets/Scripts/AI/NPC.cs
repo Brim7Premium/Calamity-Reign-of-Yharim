@@ -17,7 +17,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
             //try to set the healthbar's max health to whatever the new _lifeMax value is.
             try {healthBar.SetMaxHealth(_lifeMax);}
             //as long as it actually has a healthbar. If it doesn't, mark a custom error
-            catch (NullReferenceException) { Debug.LogError(NPCName + " couldn't set health bar's max health. Maybe it doesn't exist or isn't set?"); }
+            catch (NullReferenceException) { Debug.LogWarning(NPCName + " couldn't set health bar's max health. Maybe it doesn't exist or isn't set?"); }
         }
         get => _lifeMax; //directly returns _lifeMax
     }
@@ -37,7 +37,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
                 Kill();
 
             try {healthBar.SetHealth(_life);}
-            catch (NullReferenceException) { Debug.LogError(NPCName + " couldn't change health of the healthbar. Maybe it doesn't exist or isn't set?"); }
+            catch (NullReferenceException) { Debug.LogWarning(NPCName + " couldn't change health of the healthbar. Maybe it doesn't exist or isn't set?"); }
         }
 
         get => _life;

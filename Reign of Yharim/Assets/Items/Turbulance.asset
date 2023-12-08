@@ -15,5 +15,6 @@ MonoBehaviour:
   type: 5
   actionType: 2
   stackable: 0
+  displayName: Turbulance
   image: {fileID: 21300000, guid: ef6f5c0e6f424ef428b58ff99da8e93b, type: 3}
   ID: 4

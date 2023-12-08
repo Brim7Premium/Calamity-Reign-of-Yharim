@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3231461a-1476-4667-bdac-3e04019c3973}">
+		<property name="assetPath">
+			<value>MUS_Night.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>261.32900000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8c1e4af2-c3d0-4a5d-a972-951e7a00ae7e}</destination>
+		</relationship>
+	</object>
+</objects>

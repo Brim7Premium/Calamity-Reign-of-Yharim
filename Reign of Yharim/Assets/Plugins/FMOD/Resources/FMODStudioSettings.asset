@@ -90,7 +90,7 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Overlay:
-      Value: 1
+      Value: 0
       HasValue: 1
     Logging:
       Value: 0
@@ -649,15 +649,16 @@ MonoBehaviour:
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
   AndroidUseOBB: 0
+  AndroidPatchBuild: 0
   MeterChannelOrdering: 0
   StopEventsOutsideMaxDistance: 0
   BoltUnitOptionsBuildPending: 0
   EnableErrorCallback: 0
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
-  CurrentVersion: 131601
+  CurrentVersion: 131609
   HideSetupWizard: 1
-  LastEventReferenceScanVersion: 131601
+  LastEventReferenceScanVersion: 131609
   Platforms:
   - {fileID: -7796442090285580750}
   - {fileID: 5576954034755616060}
