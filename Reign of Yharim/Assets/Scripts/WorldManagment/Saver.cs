@@ -32,5 +32,6 @@ public class Saver : MonoBehaviour
         
         SaveBack.transform.Find("DifficultyIcon").Find("Icon").GetComponent<Image>().sprite = toggles.ActiveToggles().FirstOrDefault().image.sprite;
         SaveBack.transform.Find("SaveName").GetComponent<TMP_Text>().text = NameInput.text;
+        GameObject.Find("MenuManager").GetComponent<MainMenu>().ClickSound();
     }
 }
