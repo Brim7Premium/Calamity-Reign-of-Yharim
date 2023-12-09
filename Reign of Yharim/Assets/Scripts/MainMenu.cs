@@ -13,14 +13,14 @@ public class MainMenu : MonoBehaviour
 	private EventInstance TitleTheme;
 	public void Awake()
 	{
-		EventInstance TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Title);
+		TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Title);
 		TitleTheme.start();
 		Debug.Log("Main");
 	}
 
 	public void HoverSound()
 	{
-		AudioManager.instance.PlayOneShot(FMODEvents.instance.AureusStomp);
+		AudioManager.instance.PlayOneShot(FMODEvents.instance.TwinTargetSelect);
 	}
 
 	public void EnterWorld()
@@ -33,13 +33,15 @@ public class MainMenu : MonoBehaviour
 		Debug.Log("The game has been quit");
 		Application.Quit();
 	}
-	private void Update()
+
+	public void ClickSound()
 	{
+		AudioManager.instance.PlayOneShot(FMODEvents.instance.ExoTwinsHoverIcon);
 	}
 
 	public void ChangeMenuScreen(float menuID)
 	{
-		AudioManager.instance.PlayOneShot(FMODEvents.instance.ExoTwinsHoverIcon);
+		ClickSound();
 		if (menuID == 1)
 		{
 			menuScreens = MainMenuScreens.Main;
