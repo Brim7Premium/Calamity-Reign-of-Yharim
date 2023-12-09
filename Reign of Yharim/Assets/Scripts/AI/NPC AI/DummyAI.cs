@@ -3,19 +3,23 @@ public class DummyAI : NPC
 {
     public override void SetDefaults()
     {
-        damage = 10;
+        base.SetDefaults();
+
+        Damage = 10;
         NPCName = "Dummy";
-        lifeMax = 100;
-        life = lifeMax;
-        healthBar.SetMaxHealth(lifeMax);
+        LifeMax = 100;
+        Life = LifeMax;
+        
+        target = GameObject.Find("Player");
     }
     public override void AI()
     {
+        UpdateVelocity();
         if (target != null)
         {
-            velocity.x = DirectionTo(target.transform.position).x * 0.05f;
+            velocity = new Vector2(DirectionTo(transform.position, target.transform.position).x * 0.05f, velocity.y);
 
-            if (1 == GetTargetDirectionX()) //for looking at player
+            if (1 == TargetDirection) //for looking at player
                 gameObject.transform.localScale = new Vector3(1, 1, 1);
             else
                 gameObject.transform.localScale = new Vector3(-1, 1, 1);

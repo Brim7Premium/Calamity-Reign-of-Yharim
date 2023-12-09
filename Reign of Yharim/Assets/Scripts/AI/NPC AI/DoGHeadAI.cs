@@ -1,4 +1,6 @@
+using System.IO;
 using UnityEngine;
+using FMODUnity;
 using FMOD.Studio;
 
 public class DoGHeadAI : NPC
@@ -11,17 +13,21 @@ public class DoGHeadAI : NPC
     private EventInstance DoGMusic;
     public override void SetDefaults()
     {
+        base.SetDefaults();
+        
         NPCName = "DevourerofGodsHead";
-        damage = 600;
-        lifeMax = 1706400;
-        life = lifeMax;
+        Damage = 600;
+        LifeMax = 1706400;
+        Life = LifeMax;
         worm = true;
-        healthBar.SetMaxHealth(lifeMax);
 
-        DoGMusic = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoGMusic);
+        target = GameObject.Find("Player");
+
+        DoGMusic = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoG1);
     }
     public override void AI()
     {
+        UpdateVelocity();
         PLAYBACK_STATE playbackState;
         DoGMusic.getPlaybackState(out playbackState);
         if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
@@ -36,7 +42,7 @@ public class DoGHeadAI : NPC
             if (ai[0] == 0.0f) //if ai[0] equals 0 (First Attack)
             {
                 Debug.Log("Devourer of gods is phase 1!");
-                velocity = velocity.RotateTowards(AngleTo(target.transform.position), RotationSpeed, true) * MoveSpeed;//this makes the worms velocity rotate towards the player.
+                velocity = velocity.RotateTowards(AngleTo(transform.position, target.transform.position), RotationSpeed, true) * MoveSpeed;//this makes the worms velocity rotate towards the player.
                 if (velocity != Vector2.zero)//this code is copyed from this yt video https://www.youtube.com/watch?v=gs7y2b0xthU&t=366s and modified slightly.
                 {
                     Vector2 movementDirection = new(velocity.x, velocity.y);
@@ -57,7 +63,7 @@ public class DoGHeadAI : NPC
 
                     velocity = Vector2.zero;
 
-                    Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, 0, 60);
+                    Projectile telegraph = Projectile.NewProjectile(projectiles[1], transform.position, Quaternion.identity, 0, 0, 0, 4);
 
                     oldTargetPos = target.transform.position;
 
@@ -69,18 +75,18 @@ public class DoGHeadAI : NPC
                 }
                 if (ai[1] == 60f) //after one second
                 {
-                    Projectile deathray = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, damage, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
+                    Vector2 _vel = DirectionTo(transform.position, oldTargetPos) * 25;
+                    int _damage = Damage;
+                    float _knockback = 0;
+                    float _timeLeft = 1;
+
+                    Projectile deathray = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, _vel, _damage, _knockback, _timeLeft);
 
                     Vector3 direction = (Vector3)oldTargetPos - deathray.transform.position;
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                     deathray.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-                    deathray.velocity = DirectionTo(oldTargetPos) * 0.9f; //the new new projectile will travel towards the player
-
                     deathray.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-
-                    deathray.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-                    ;
                 }
                 if (ai[1] == 240f) //after four seconds
                 {
@@ -95,10 +101,9 @@ public class DoGHeadAI : NPC
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
             velocity = new Vector2(-1, 1) * 0.5f;
-
-            if (GetDistanceToPlayer() > 240f)
+            if (DistanceBetween(transform.position, target.transform.position) > 240f)
             {
-                DoGMusic.stop(STOP_MODE.ALLOWFADEOUT);
+                DoGMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 Destroy(gameObject);
             }
         }

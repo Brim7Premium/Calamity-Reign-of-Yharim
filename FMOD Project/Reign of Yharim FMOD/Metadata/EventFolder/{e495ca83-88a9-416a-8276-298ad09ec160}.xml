@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{e495ca83-88a9-416a-8276-298ad09ec160}">
+		<property name="name">
+			<value>DraedonMechSelect</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ac5550d5-e1b4-4f94-8326-895372ec4949}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -6,6 +6,9 @@ public class ExampleProjectileAI : Projectile
 {
     public override void SetDefaults()
     {
-        projName = "ExampleProjectile";
+        base.SetDefaults();
+        gameObject.name = "ExampleProjectile";
+        target = GameObject.Find("Player");
+        rb.gravityScale = 0;
     }
 }

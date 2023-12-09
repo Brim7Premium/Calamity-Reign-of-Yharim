@@ -2,54 +2,101 @@ using UnityEngine;
 
 public class ExampleAI : NPC
 {
-    public override void SetDefaults()//this is were we set the npcs max life, healthbar, and other variables.
+    bool isGrounded;
+    Vector2 bottomPoint;
+    public override void SetDefaults()
     {
+        base.SetDefaults();
         NPCName = "ExampleNPC";
-        damage = 7;
-        lifeMax = 100;
-        life = lifeMax;
-        healthBar.SetMaxHealth(lifeMax);
+        Damage = 7;
+        LifeMax = 100;
+        Life = LifeMax;
+
+        target = GameObject.Find("Player");
     }
     //for this examplenpc, I will make a simple "state machine" for switching between different attacks.
     //ai[] usage:
     //ai[0]: the current attack state the npc is in.
     //ai[1]: this is used as a timer.
     //ai[2/3]: can be used for random things.
-    public override void AI()//this is were the npc's ai code goes.
+    public override void AI()
     {
         if (target != null)
         {
-            ai[1]++; //increment ai[1] by 1
+            ai[1]++;
 
-            if (ai[0] == 0.0f) //if ai[0] equals 0 (First Attack)
+            if (ai[0] == 0.0f)
             {
-                if (ai[1] % 60.0f == 0.0f) //if ai[1] divided by 60's remainder equals 0 (If ai[1] equals a number that evenly divides by 60) It will essentially trigger three times (when ai[1] is 60, 120, and 180)
-                    velocity = DirectionTo(target.transform.position) * 0.8f;//dash at the player every second. velocity = DirectionTo basically allows the NPC to move anywhere, and multiplying it changes the speed
+                if (ai[1] % 120 == 0 && isGrounded){
+                    rb.velocity = new Vector2(TargetDirection * 2.735f, 5.47f)*1.5f;
+                }
 
-                velocity *= 0.9f;//lower the velocity every frame to make the dashes smoother. It sets velocity to velocity times 0.9.
-
-                if (ai[1] > 180.0f)//if it has been more than 3 seconds, switch phases and and reset ai[1](the timer).
+                if (ai[1] > 360.0f)
                 {
-                    ai[0] = 1.0f; //set ai[0] phase to phase one
-                    ai[1] = 0.0f; //reset ai[1] timer to 0
+                    ai[0] = 1.0f;
+                    ai[1] = 0.0f;
                 }
             }
-            if (ai[0] == 1.0f)//this is the second attack type.
+
+            
+            else if (ai[0] == 1.0f)
             {
-                velocity = DirectionTo(new Vector2(target.transform.position.x, target.transform.position.y + 4)) * 0.4f;//attempt to fly above the player.
+                rb.velocity = DirectionTo(transform.position, new Vector2(target.transform.position.x, target.transform.position.y + 4)) * 24;//attempt to fly above the player.
 
-                if (ai[1] > 120.0f)//if it has been more than 2 seconds, fire a projectile at the player, switch phases, and reset ai[1](the timer).
+                if (ai[1] > 120.0f)
                 {
-                    Projectile proj = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, 20, 240); //create a new projectile called proj (remember class variables must equal an instance of that class. in this example, the variable equals the new projectile)
+                    //I don't remember how I got this but basically it shoots in player, while he moves in a straight line, at such speed that they will intersect. Kind of prediction of player movement.
+                    Vector2 bulletPos = transform.position - target.transform.position;
 
-                    proj.velocity = DirectionTo(target.transform.position) * 0.3f; //the new new projectile will travel towards the player
+                    Vector2 targetVel = target.GetComponent<Rigidbody2D>().velocity;
+
+                    int speed = 15;
+
+                    float a = speed*speed - targetVel.sqrMagnitude;
+
+                    float b = targetVel.x*bulletPos.x+targetVel.y*bulletPos.y;
+
+                    float c = -bulletPos.sqrMagnitude;
+
+                    float D = b*b - a*c;
+
+                    if(D<0){
+                        D = 0;
+                    }
+
+                    float z = (-b-Mathf.Sqrt(D))/a;
+
+                    if(z<0){
+                    
+                        z = (-b+Mathf.Sqrt(D))/a;
+
+                        if(z<0){
+                            z = 1;
+                        }
+                    }
+
+                    float velX = (float)(-bulletPos.x/z+targetVel.x);
+
+                    float velY = (float)(-bulletPos.y/z+targetVel.y);
 
 
+                    Vector2 _velocity = new Vector2(velX, velY);
+                    int _damage = 20;
+                    float _knockback = 0;
+                    int _timeLeft = 4;
 
-                    ai[0] = 0.0f; //set ai[0] phase to phase one
-                    ai[1] = 0.0f; //reset ai[1] timer to 0
+                    Projectile proj = Projectile.NewProjectile(projectiles[0], transform.position, Quaternion.identity, _velocity, _damage, _knockback, _timeLeft);
+
+                    ai[0] = 0.0f;
+                    ai[1] = 0.0f;
                 }
             }
         }
+    }
+
+    public void FixedUpdate()
+    {
+        bottomPoint = new Vector2(c2d.bounds.center.x, c2d.bounds.min.y);
+        isGrounded = Physics2D.Raycast(bottomPoint, Vector2.down, 0.1f, groundLayer);
     }
 }

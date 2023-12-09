@@ -1,5 +1,118 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1472033186041027349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3492044620860774715}
+  - component: {fileID: 5124874515487726269}
+  - component: {fileID: 1661286164268806317}
+  m_Layer: 3
+  m_Name: BarBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3492044620860774715
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472033186041027349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1351542732868072322}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 500, y: 241.66667}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5124874515487726269
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472033186041027349}
+  m_CullTransparentMesh: 1
+--- !u!114 &1661286164268806317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472033186041027349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 10e8ac7a0aac1d2428e3da928ddbc296, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1926606389655881436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1351542732868072322}
+  m_Layer: 3
+  m_Name: HealthBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1351542732868072322
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926606389655881436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3492044620860774715}
+  - {fileID: 7854044424358672608}
+  - {fileID: 389757327620713714}
+  m_Father: {fileID: 3257676256572543647}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 306}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &3257676255999167367
 GameObject:
   m_ObjectHideFlags: 0
@@ -26,13 +139,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676255999167367}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676255999167364
 SpriteRenderer:
@@ -98,15 +211,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -117,11 +229,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258103403019}
@@ -145,6 +257,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -175,13 +293,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256060874947}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256060874944
 SpriteRenderer:
@@ -247,15 +365,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -266,11 +383,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257812256040}
@@ -294,6 +411,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -324,13 +447,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256067046454}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256067046411
 SpriteRenderer:
@@ -396,15 +519,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -415,11 +537,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 14
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257823115159}
@@ -443,6 +565,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -473,13 +601,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256071539058}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256071539063
 SpriteRenderer:
@@ -545,15 +673,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -564,11 +691,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257884829221}
@@ -592,6 +719,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -622,13 +755,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256138185358}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256138185347
 SpriteRenderer:
@@ -694,15 +827,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -713,11 +845,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258109411542}
@@ -741,6 +873,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -770,13 +908,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256161075834}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.25, y: 0.186, z: 0}
   m_LocalScale: {x: 0.28056768, y: 0.8058182, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256451367964}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256161075832
 SpriteRenderer:
@@ -840,6 +978,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -875,6 +1032,7 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
+  m_UseDelaunayMesh: 0
 --- !u!1 &3257676256166956863
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,13 +1059,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256166956863}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256166956860
 SpriteRenderer:
@@ -973,15 +1131,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -992,11 +1149,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256443752165}
@@ -1020,6 +1177,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1050,13 +1213,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256212051664}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256212051669
 SpriteRenderer:
@@ -1122,15 +1285,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -1141,11 +1303,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 17
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257609864995}
@@ -1169,6 +1331,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1199,13 +1367,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256227204627}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256227204624
 SpriteRenderer:
@@ -1271,15 +1439,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -1290,11 +1457,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257825732104}
@@ -1318,6 +1485,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1348,13 +1521,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256252385486}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256252385475
 SpriteRenderer:
@@ -1420,15 +1593,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -1439,11 +1611,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 1
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256498812736}
@@ -1467,6 +1639,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1497,13 +1675,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256253768108}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256253768097
 SpriteRenderer:
@@ -1569,15 +1747,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -1588,11 +1765,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256770113956}
@@ -1616,6 +1793,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1646,13 +1829,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256275031167}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256275031164
 SpriteRenderer:
@@ -1718,15 +1901,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -1737,11 +1919,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 4
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256904768737}
@@ -1765,6 +1947,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1795,13 +1983,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256301442512}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256301442517
 SpriteRenderer:
@@ -1867,15 +2055,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -1886,11 +2073,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676258130235126}
@@ -1914,6 +2101,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1944,13 +2137,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256304985882}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256304985887
 SpriteRenderer:
@@ -2016,15 +2209,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -2035,11 +2227,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256071539058}
@@ -2063,6 +2255,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2093,13 +2291,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256327549520}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256327549525
 SpriteRenderer:
@@ -2165,15 +2363,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -2184,11 +2381,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256138185358}
@@ -2212,6 +2409,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2242,13 +2445,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256383082104}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256383082109
 SpriteRenderer:
@@ -2314,15 +2517,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -2333,11 +2535,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256755182019}
@@ -2361,6 +2563,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2391,13 +2599,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256401390731}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256401390728
 SpriteRenderer:
@@ -2463,15 +2671,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -2482,11 +2689,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256558915576}
@@ -2510,6 +2717,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2540,13 +2753,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256404944685}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256404944674
 SpriteRenderer:
@@ -2612,15 +2825,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -2631,11 +2843,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 0
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258054261435}
@@ -2659,6 +2871,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2689,13 +2907,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256411222896}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256411222901
 SpriteRenderer:
@@ -2761,15 +2979,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -2780,11 +2997,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 10
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257231987487}
@@ -2808,6 +3025,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2838,13 +3061,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256443752165}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256443752186
 SpriteRenderer:
@@ -2910,15 +3133,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -2929,11 +3151,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256660044425}
@@ -2957,6 +3179,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2984,6 +3212,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256451367965}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -2994,7 +3223,6 @@ Transform:
   - {fileID: 3257676256726252351}
   - {fileID: 3257676257116289820}
   m_Father: {fileID: 3257676258054261438}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3257676256462171228
 GameObject:
@@ -3022,13 +3250,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256462171228}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256462171217
 SpriteRenderer:
@@ -3094,15 +3322,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -3113,11 +3340,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 24
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256727461612}
@@ -3141,6 +3368,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -3171,13 +3404,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256482870138}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256482870143
 SpriteRenderer:
@@ -3243,15 +3476,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -3262,11 +3494,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256962574816}
@@ -3290,6 +3522,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -3320,13 +3558,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256498812736}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256498812741
 SpriteRenderer:
@@ -3392,15 +3630,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -3411,11 +3648,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 0
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676255999167367}
@@ -3439,6 +3676,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -3469,13 +3712,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256523272843}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256523272840
 SpriteRenderer:
@@ -3541,15 +3784,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -3560,11 +3802,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257708214738}
@@ -3588,6 +3830,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -3618,13 +3866,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256550644531}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256550644528
 SpriteRenderer:
@@ -3690,15 +3938,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -3709,11 +3956,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256859278051}
@@ -3737,6 +3984,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -3767,13 +4020,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256558915576}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256558915581
 SpriteRenderer:
@@ -3839,15 +4092,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -3858,11 +4110,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257939242028}
@@ -3886,6 +4138,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -3921,9 +4179,8 @@ RectTransform:
   m_LocalScale: {x: 0.0025925925, y: 0.0025925925, z: 0.0025925925}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3257676257524992114}
+  - {fileID: 1351542732868072322}
   m_Father: {fileID: 3257676257561395464}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3947,7 +4204,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_TargetDisplay: 0
@@ -4017,13 +4276,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256660044425}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256660044430
 SpriteRenderer:
@@ -4089,15 +4348,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -4108,11 +4366,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256060874947}
@@ -4136,6 +4394,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -4163,6 +4427,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256668278759}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.985167, y: -3.1167357, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
@@ -4251,7 +4516,6 @@ Transform:
   - {fileID: 3257676257859340970}
   - {fileID: 3257676257491852543}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3257676256717322635
 GameObject:
@@ -4279,13 +4543,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256717322635}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256717322632
 SpriteRenderer:
@@ -4351,15 +4615,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -4370,11 +4633,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 5
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256275031167}
@@ -4398,6 +4661,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -4427,13 +4696,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256726252344}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.0724, z: 0}
   m_LocalScale: {x: 0.42180112, y: 0.38653696, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256451367964}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256726252350
 SpriteRenderer:
@@ -4497,6 +4766,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4532,6 +4820,7 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
+  m_UseDelaunayMesh: 0
 --- !u!1 &3257676256727461612
 GameObject:
   m_ObjectHideFlags: 0
@@ -4558,13 +4847,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256727461612}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256727461601
 SpriteRenderer:
@@ -4630,15 +4919,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -4649,11 +4937,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 23
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258038285537}
@@ -4677,6 +4965,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -4707,13 +5001,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256755182019}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256755182016
 SpriteRenderer:
@@ -4779,15 +5073,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -4798,11 +5091,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257842444161}
@@ -4826,6 +5119,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -4856,13 +5155,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256763707555}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256763707552
 SpriteRenderer:
@@ -4928,15 +5227,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -4947,11 +5245,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 8
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257554184711}
@@ -4975,6 +5273,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -5005,13 +5309,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256770113956}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256770113977
 SpriteRenderer:
@@ -5077,15 +5381,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -5096,11 +5399,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257731097611}
@@ -5124,6 +5427,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -5154,13 +5463,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256786805050}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256786805055
 SpriteRenderer:
@@ -5226,15 +5535,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -5245,11 +5553,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256401390731}
@@ -5273,6 +5581,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -5303,13 +5617,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256843412256}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256843412261
 SpriteRenderer:
@@ -5375,15 +5689,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -5394,11 +5707,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256550644531}
@@ -5422,6 +5735,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -5452,13 +5771,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256859278051}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256859278048
 SpriteRenderer:
@@ -5524,15 +5843,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -5543,11 +5861,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257218392789}
@@ -5571,6 +5889,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -5601,13 +5925,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256879111134}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256879111123
 SpriteRenderer:
@@ -5673,15 +5997,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -5692,11 +6015,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 15
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256067046454}
@@ -5720,6 +6043,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -5750,13 +6079,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256904768737}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256904768742
 SpriteRenderer:
@@ -5822,15 +6151,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -5841,11 +6169,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256943082922}
@@ -5869,6 +6197,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -5899,13 +6233,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256943082922}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256943082927
 SpriteRenderer:
@@ -5971,15 +6305,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -5990,11 +6323,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 2
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257678167646}
@@ -6018,6 +6351,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -6048,13 +6387,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676256962574816}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676256962574821
 SpriteRenderer:
@@ -6120,15 +6459,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -6139,11 +6477,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 2
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256252385486}
@@ -6167,6 +6505,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -6197,13 +6541,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257013393930}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257013393935
 SpriteRenderer:
@@ -6269,15 +6613,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -6288,11 +6631,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256166956863}
@@ -6316,6 +6659,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -6346,13 +6695,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257061818871}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257061818868
 SpriteRenderer:
@@ -6418,15 +6767,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -6437,11 +6785,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 6
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256717322635}
@@ -6465,86 +6813,16 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &3257676257078392889
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3257676257078392888}
-  - component: {fileID: 3257676257078392894}
-  - component: {fileID: 3257676257078392895}
-  m_Layer: 3
-  m_Name: BarBorder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3257676257078392888
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676257078392889}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3257676257524992114}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.24996948, y: -0.5623932}
-  m_SizeDelta: {x: 0.5, y: 1.1248}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3257676257078392894
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676257078392889}
-  m_CullTransparentMesh: 1
---- !u!114 &3257676257078392895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676257078392889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: da812d38b3450e84cbf9faf459eaf156, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &3257676257111619901
 GameObject:
   m_ObjectHideFlags: 0
@@ -6571,13 +6849,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257111619901}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257111619890
 SpriteRenderer:
@@ -6643,15 +6921,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -6662,11 +6939,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 18
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256212051664}
@@ -6690,6 +6967,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -6719,13 +7002,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257116289821}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0026, y: -0.3861, z: 0}
   m_LocalScale: {x: 0.43504566, y: 0.43067947, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256451367964}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257116289811
 SpriteRenderer:
@@ -6789,6 +7072,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -6824,6 +7126,7 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
+  m_UseDelaunayMesh: 0
 --- !u!1 &3257676257164552862
 GameObject:
   m_ObjectHideFlags: 0
@@ -6850,13 +7153,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257164552862}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257164552851
 SpriteRenderer:
@@ -6922,15 +7225,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -6941,11 +7243,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 11
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256411222896}
@@ -6969,6 +7271,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -6999,13 +7307,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257174396341}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257174396298
 SpriteRenderer:
@@ -7071,15 +7379,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -7090,11 +7397,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256327549520}
@@ -7118,6 +7425,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -7148,13 +7461,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257191837155}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257191837152
 SpriteRenderer:
@@ -7220,15 +7533,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -7239,11 +7551,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257174396341}
@@ -7267,6 +7579,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -7297,13 +7615,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257218392789}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257218392618
 SpriteRenderer:
@@ -7369,15 +7687,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -7388,11 +7705,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257824392389}
@@ -7416,6 +7733,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -7446,13 +7769,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257218789333}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257218789162
 SpriteRenderer:
@@ -7518,15 +7841,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -7537,11 +7859,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676258092565625}
@@ -7565,6 +7887,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -7595,13 +7923,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257231987487}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257231987484
 SpriteRenderer:
@@ -7667,15 +7995,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -7686,11 +8013,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 9
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256763707555}
@@ -7714,6 +8041,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -7744,13 +8077,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257259632095}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257259632092
 SpriteRenderer:
@@ -7816,15 +8149,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -7835,11 +8167,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256227204627}
@@ -7863,6 +8195,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -7893,13 +8231,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257266209750}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257266209579
 SpriteRenderer:
@@ -7965,15 +8303,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -7984,11 +8321,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257902036215}
@@ -8012,86 +8349,16 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &3257676257324375560
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3257676257324375567}
-  - component: {fileID: 3257676257324375565}
-  - component: {fileID: 3257676257324375566}
-  m_Layer: 3
-  m_Name: Fill
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3257676257324375567
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676257324375560}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3257676257524992114}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3257676257324375565
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676257324375560}
-  m_CullTransparentMesh: 1
---- !u!114 &3257676257324375566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676257324375560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.7075472, g: 0.047984637, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &3257676257366606646
 GameObject:
   m_ObjectHideFlags: 0
@@ -8117,13 +8384,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257366606646}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0.186, z: 0}
   m_LocalScale: {x: 0.28056768, y: 0.8058182, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256451367964}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257366606644
 SpriteRenderer:
@@ -8187,6 +8454,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -8222,6 +8508,7 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
+  m_UseDelaunayMesh: 0
 --- !u!1 &3257676257368300202
 GameObject:
   m_ObjectHideFlags: 0
@@ -8248,13 +8535,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257368300202}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257368300207
 SpriteRenderer:
@@ -8320,15 +8607,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -8339,11 +8625,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256523272843}
@@ -8367,6 +8653,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -8397,13 +8689,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257483039248}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257483039253
 SpriteRenderer:
@@ -8469,15 +8761,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -8488,11 +8779,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 21
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257663587396}
@@ -8516,6 +8807,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -8546,6 +8843,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257491852536}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -8553,7 +8851,6 @@ Transform:
   m_Children:
   - {fileID: 3257676257630721158}
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257491852540
 SpriteRenderer:
@@ -8624,6 +8921,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -8640,15 +8943,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -8659,121 +8961,17 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 0
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257859343702}
   SegmentSize: 2
   VelocitySmoothing: 0.7
   oldTargetPos: {x: 0, y: 0}
---- !u!1 &3257676257524992125
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3257676257524992114}
-  - component: {fileID: 3257676257524992115}
-  - component: {fileID: 3257676257524992124}
-  m_Layer: 3
-  m_Name: HealthBar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3257676257524992114
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676257524992125}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3257676257324375567}
-  - {fileID: 3257676257078392888}
-  m_Father: {fileID: 3257676256572543647}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 142.27}
-  m_SizeDelta: {x: 253.84, y: 42.94}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3257676257524992115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676257524992125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 0
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 0
-  m_TargetGraphic: {fileID: 0}
-  m_FillRect: {fileID: 3257676257324375567}
-  m_HandleRect: {fileID: 0}
-  m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 100
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &3257676257524992124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257676257524992125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32c596d1fe956914b85317e8b59e642b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 3257676257524992115}
 --- !u!1 &3257676257554184711
 GameObject:
   m_ObjectHideFlags: 0
@@ -8800,13 +8998,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257554184711}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257554184708
 SpriteRenderer:
@@ -8872,15 +9070,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -8891,11 +9088,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 7
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257061818871}
@@ -8919,6 +9116,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -8947,6 +9150,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257561395465}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -8954,7 +9158,6 @@ Transform:
   m_Children:
   - {fileID: 3257676256572543647}
   m_Father: {fileID: 3257676258054261438}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3257676257561395471
 MonoBehaviour:
@@ -8994,13 +9197,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257592946975}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257592946972
 SpriteRenderer:
@@ -9066,15 +9269,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -9085,11 +9287,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 25
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256462171228}
@@ -9113,6 +9315,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -9143,13 +9351,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257605612162}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257605612167
 SpriteRenderer:
@@ -9215,15 +9423,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -9234,11 +9441,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256304985882}
@@ -9262,6 +9469,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -9292,13 +9505,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257609864995}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257609864992
 SpriteRenderer:
@@ -9364,15 +9577,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -9383,11 +9595,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 16
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256879111134}
@@ -9411,6 +9623,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -9441,13 +9659,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257614208943}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 75
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257614208940
 SpriteRenderer:
@@ -9513,15 +9731,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -9532,11 +9749,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256843412256}
@@ -9560,6 +9777,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -9590,13 +9813,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257621753355}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257621753352
 SpriteRenderer:
@@ -9662,15 +9885,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -9681,11 +9903,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256786805050}
@@ -9709,6 +9931,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -9736,6 +9964,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257630721159}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -9743,7 +9972,6 @@ Transform:
   m_Children:
   - {fileID: 3257676258048737413}
   m_Father: {fileID: 3257676257491852543}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3257676257638372983
 GameObject:
@@ -9771,13 +9999,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257638372983}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257638372980
 SpriteRenderer:
@@ -9843,15 +10071,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -9862,11 +10089,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 12
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257164552862}
@@ -9890,6 +10117,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -9920,13 +10153,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257663587396}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257663587417
 SpriteRenderer:
@@ -9992,15 +10225,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -10011,11 +10243,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 20
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257759158874}
@@ -10039,6 +10271,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -10069,13 +10307,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257678167646}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257678167635
 SpriteRenderer:
@@ -10141,15 +10379,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -10160,11 +10397,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 1
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256404944685}
@@ -10188,6 +10425,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -10218,13 +10461,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257708214738}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257708214743
 SpriteRenderer:
@@ -10290,15 +10533,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -10309,11 +10551,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257820479880}
@@ -10337,6 +10579,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -10367,13 +10615,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257731097611}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257731097608
 SpriteRenderer:
@@ -10439,15 +10687,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -10458,11 +10705,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257621753355}
@@ -10486,6 +10733,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -10516,13 +10769,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257759158874}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257759158879
 SpriteRenderer:
@@ -10588,15 +10841,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -10607,11 +10859,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 19
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257111619901}
@@ -10635,6 +10887,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -10665,13 +10923,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257812256040}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257812256045
 SpriteRenderer:
@@ -10737,15 +10995,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -10756,11 +11013,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256253768108}
@@ -10784,6 +11041,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -10814,13 +11077,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257820479880}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257820479885
 SpriteRenderer:
@@ -10886,15 +11149,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -10905,11 +11167,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257614208943}
@@ -10933,6 +11195,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -10963,13 +11231,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257823115159}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257823115156
 SpriteRenderer:
@@ -11035,15 +11303,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -11054,11 +11321,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 13
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257638372983}
@@ -11082,6 +11349,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -11112,13 +11385,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257824392389}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257824392410
 SpriteRenderer:
@@ -11184,15 +11457,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -11203,11 +11475,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257013393930}
@@ -11231,6 +11503,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -11261,13 +11539,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257825732104}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257825732109
 SpriteRenderer:
@@ -11333,15 +11611,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -11352,11 +11629,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256482870138}
@@ -11380,6 +11657,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -11410,13 +11693,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257842444161}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257842444166
 SpriteRenderer:
@@ -11482,15 +11765,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -11501,11 +11783,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257191837155}
@@ -11529,6 +11811,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -11559,13 +11847,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257859343702}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257859340971
 SpriteRenderer:
@@ -11631,15 +11919,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -11650,11 +11937,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257368300202}
@@ -11678,6 +11965,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -11708,13 +12001,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257884829221}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257884829242
 SpriteRenderer:
@@ -11780,15 +12073,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -11799,11 +12091,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257259632095}
@@ -11827,6 +12119,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -11857,13 +12155,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257902036215}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257902036212
 SpriteRenderer:
@@ -11929,15 +12227,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -11948,11 +12245,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676256383082104}
@@ -11976,6 +12273,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -12006,13 +12309,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676257939242028}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676257939242017
 SpriteRenderer:
@@ -12078,15 +12381,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -12097,11 +12399,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257218789333}
@@ -12125,6 +12427,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -12155,13 +12463,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676258021730552}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676258021730557
 SpriteRenderer:
@@ -12227,15 +12535,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -12246,11 +12553,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258055025389}
@@ -12274,6 +12581,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -12304,13 +12617,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676258038285537}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676258038285542
 SpriteRenderer:
@@ -12376,15 +12689,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -12395,11 +12707,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 22
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257483039248}
@@ -12423,6 +12735,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -12452,13 +12770,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676258048737414}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5317019, y: 0.71903616, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676257630721158}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676258048737434
 SpriteRenderer:
@@ -12522,6 +12840,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -12557,6 +12894,7 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
+  m_UseDelaunayMesh: 0
 --- !u!1 &3257676258054261435
 GameObject:
   m_ObjectHideFlags: 0
@@ -12583,6 +12921,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676258054261435}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -12591,7 +12930,6 @@ Transform:
   - {fileID: 3257676257561395464}
   - {fileID: 3257676256451367964}
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676258054261439
 SpriteRenderer:
@@ -12657,15 +12995,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a661f44dc8dca1a4585f092caa808463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
-  healthBar: {fileID: 3257676257524992124}
+  healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -12676,11 +13013,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   MoveSpeed: 0.55
   RotationSpeed: 0.05
   oldTargetPos: {x: 0, y: 0}
@@ -12701,6 +13038,12 @@ Rigidbody2D:
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
@@ -12731,13 +13074,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676258055025389}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676258055025378
 SpriteRenderer:
@@ -12803,15 +13146,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -12822,11 +13164,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 26
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257592946975}
@@ -12850,6 +13192,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -12880,13 +13228,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676258092565625}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676258092565630
 SpriteRenderer:
@@ -12952,15 +13300,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -12971,11 +13318,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676256301442512}
@@ -12999,6 +13346,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -13029,13 +13382,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676258103403019}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676258103403016
 SpriteRenderer:
@@ -13101,15 +13454,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -13120,11 +13472,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676257266209750}
@@ -13148,6 +13500,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -13178,13 +13536,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676258109411542}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676258109411371
 SpriteRenderer:
@@ -13250,15 +13608,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -13269,11 +13626,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 3257676258054261435}
   AheadSegment: {fileID: 3257676258021730552}
@@ -13297,6 +13654,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -13327,13 +13690,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257676258130235126}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3257676256668278758}
-  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3257676258130235083
 SpriteRenderer:
@@ -13399,15 +13762,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fef52a9b9ee446953659c04543f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  velocity: {x: 0, y: 0}
   objectRenderer: {fileID: 0}
   NPCName: 
-  lifeMax: 0
-  life: 0
-  damage: 0
   healthBar: {fileID: 0}
   rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   ai:
   - 0
   - 0
@@ -13418,11 +13780,11 @@ MonoBehaviour:
   - {fileID: 7288276809978938504, guid: fbf1b64c83231474e8dca5db0f737e66, type: 3}
   - {fileID: 5318222026241589140, guid: 2089f015136c7d54481607a106984adb, type: 3}
   target: {fileID: 0}
-  targetPos: {x: 0, y: 0}
   currentAnimationState: 
   immune: 0
   animator: {fileID: 0}
   worm: 0
+  velocity: {x: 0, y: 0}
   SegmentIndex: 3
   Head: {fileID: 0}
   AheadSegment: {fileID: 3257676257605612162}
@@ -13446,7 +13808,232 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &3920719314144015955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 389757327620713714}
+  - component: {fileID: 787419190653416756}
+  m_Layer: 3
+  m_Name: BarLimiter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &389757327620713714
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920719314144015955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2963971564234138922}
+  m_Father: {fileID: 1351542732868072322}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 433.3333, y: 58.33334}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &787419190653416756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920719314144015955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding: {x: 0, y: 0, z: 0, w: 0}
+  m_Softness: {x: 0, y: 0}
+--- !u!1 &4359882394998854958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2963971564234138922}
+  - component: {fileID: 2734177980147612247}
+  - component: {fileID: 4854308689146410236}
+  - component: {fileID: 4427254605366716256}
+  m_Layer: 3
+  m_Name: Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2963971564234138922
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359882394998854958}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 389757327620713714}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 433.33334, y: 58.333336}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2734177980147612247
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359882394998854958}
+  m_CullTransparentMesh: 1
+--- !u!114 &4854308689146410236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359882394998854958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3e2896f3c3a9c984d88df9e8bb6ef3ed, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4427254605366716256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359882394998854958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c596d1fe956914b85317e8b59e642b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barImage: {fileID: 0}
+  rectTransform: {fileID: 0}
+  maxHealth: 0
+  curHealth: 0
+  barStep: 52
+--- !u!1 &6166330672861479406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7854044424358672608}
+  - component: {fileID: 5836310936150034527}
+  - component: {fileID: 5100195257557743248}
+  m_Layer: 3
+  m_Name: BarBorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7854044424358672608
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166330672861479406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1351542732868072322}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 466.6667, y: 91.66667}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5836310936150034527
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166330672861479406}
+  m_CullTransparentMesh: 1
+--- !u!114 &5100195257557743248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166330672861479406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2796b5431db79de45a5d2ad4b4e07931, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1

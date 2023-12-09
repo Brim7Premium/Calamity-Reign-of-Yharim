@@ -6,6 +6,8 @@ public class DoGDeathRayAI : Projectile
 {
     public override void SetDefaults()
     {
+        base.SetDefaults();
         projName = "DoGDeathRay";
+        rb.gravityScale = 0;
     }
 }

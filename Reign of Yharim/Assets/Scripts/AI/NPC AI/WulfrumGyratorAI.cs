@@ -13,17 +13,20 @@ public class WulfrumGyratorAI : NPC
     const string ChargeGyratorSpin = "WulfrumGyrator_chargespin";
     public override void SetDefaults()
     {
+        base.SetDefaults();
+
         NPCName = "WulfrumGyrator";
-        damage = 15;
-        lifeMax = 18;
-        life = lifeMax;
-        healthBar.SetMaxHealth(lifeMax);
+        Damage = 15;
+        LifeMax = 28;
+        Life = LifeMax;
+        target = GameObject.Find("Player");
+
         spotted = false;
 
-        bc2d = GetComponent<BoxCollider2D>();
     }
     public override void AI()
     {
+        UpdateVelocity();
         if (target != null)
         {
             animator.speed = 0.8f;
@@ -32,12 +35,12 @@ public class WulfrumGyratorAI : NPC
             ai[0]++;//increment ai[0] by 1 every frame.(the framerate is capped at 60)
             velocity *= 0.97f;//this is for smoothing the movement.
 
-            if (GetDistanceToPlayer() > 20f && spotted == false) //if the player isn't close and the bool spotted equals false
+            if (Vector2.Distance(transform.position, target.transform.position) > 20f && spotted == false) //if the player isn't close and the bool spotted equals false
             {
                 color = Color.green; //set color variable to green
 
                 if (ai[0] == 70.0f) //if it has been 70 frames, jump.
-                    velocity.y = 0.5f; //jump up vertically
+                    velocity = new Vector2(velocity.x, 0.5f); //jump up vertically
 
                 if (ai[0] > 100.0f && isGrounded)
                 {
@@ -54,7 +57,7 @@ public class WulfrumGyratorAI : NPC
                     color = Color.red;
                     if (ai[0] == 0.0f)
                     {
-                        velocity.x = DirectionTo(target.transform.position).x * 0.12f; //speed of 
+                        velocity = new Vector2(DirectionTo(transform.position, target.transform.position).x * 0.12f, velocity.y); //speed of 
                     }
 
                     /*if (//placeholder)
@@ -87,9 +90,9 @@ public class WulfrumGyratorAI : NPC
                 ai[0] = 0.0f;
             }
 
-            DrawDistanceToPlayer(color);
+            DrawDistance(transform.position, target.transform.position, color);
 
-            if (GetDistanceToPlayer() > 60f && spotted == false)
+            if (DistanceBetween(transform.position, target.transform.position) > 60f && spotted == false)
             {
                 Destroy(gameObject); //despawn the object
             }
@@ -100,7 +103,7 @@ public class WulfrumGyratorAI : NPC
         float extraHeight = 0.4f; //new float extraHeight equals 0.1
         Color rayColor; //new color variable rayColor 
 
-        RaycastHit2D hit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeight, groundLayer); //new raycast2d called hit that starts from the center of the player rigidbody, goes down, and goes the extent of the rigidbody downwards + extraHeight. it only collides with the groundlayer variable
+        RaycastHit2D hit = Physics2D.Raycast(c2d.bounds.center, Vector2.down, c2d.bounds.extents.y + extraHeight, groundLayer); //new raycast2d called hit that starts from the center of the player rigidbody, goes down, and goes the extent of the rigidbody downwards + extraHeight. it only collides with the groundlayer variable
 
         //Debug.Log(hit.collider);
         if (hit.collider != null) //if the raycast is hitting something;
@@ -113,6 +116,6 @@ public class WulfrumGyratorAI : NPC
             isGrounded = false; //isgrounded is false
             rayColor = Color.red; //the raycolor is red
         }
-        Debug.DrawRay(bc2d.bounds.center, Vector2.down * (bc2d.bounds.extents.y + extraHeight), rayColor); //draw the ray 
+        Debug.DrawRay(c2d.bounds.center, Vector2.down * (c2d.bounds.extents.y + extraHeight), rayColor); //draw the ray 
     }
 }

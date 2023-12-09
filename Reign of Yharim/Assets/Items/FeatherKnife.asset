@@ -15,5 +15,6 @@ MonoBehaviour:
   type: 5
   actionType: 2
   stackable: 1
+  displayName: Feather Knife
   image: {fileID: 21300000, guid: c244cea5412666742aae7b7fada30393, type: 3}
   ID: 3

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f9a7a8fe-0533-48cc-bdf3-6b49093fdbcf}">
+		<property name="assetPath">
+			<value>SFX_AureusStomp.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.47020408163265304</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8c1e4af2-c3d0-4a5d-a972-951e7a00ae7e}</destination>
+		</relationship>
+	</object>
+</objects>
