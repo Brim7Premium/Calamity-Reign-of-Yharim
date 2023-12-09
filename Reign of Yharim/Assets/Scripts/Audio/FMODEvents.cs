@@ -13,7 +13,7 @@ public class FMODEvents : MonoBehaviour
 	[field: SerializeField] public EventReference _055Roar { get; private set; }
 	[field: SerializeField] public EventReference AureusStomp { get; private set; }
 	[field: SerializeField] public EventReference DeusSummonOrb { get; private set; }
-	[field: SerializeField] public EventReference TwinTowers { get; private set; }
+	[field: SerializeField] public EventReference TwinTargetSelect { get; private set; }
 
 	[field: Header("Menu SFX")]
 	[field: SerializeField] public EventReference ExoTwinsHoverIcon { get; private set; }

@@ -8589,13 +8589,13 @@ MonoBehaviour:
       Data3: -972796777
       Data4: -2113311574
     Path: event:/SFX/Enemies/AstralBeaconOrb
-  <TwinTowers>k__BackingField:
+  <TwinTargetSelect>k__BackingField:
     Guid:
-      Data1: 338205923
-      Data2: 1223673908
-      Data3: 1757109393
-      Data4: 1128342642
-    Path: event:/SFX/Enemies/TwinsTarget
+      Data1: 149728487
+      Data2: 1079383838
+      Data3: -1873039223
+      Data4: 1323766124
+    Path: event:/SFX/Enemies/TwinTargetSelect
   <ExoTwinsHoverIcon>k__BackingField:
     Guid:
       Data1: 1506071997

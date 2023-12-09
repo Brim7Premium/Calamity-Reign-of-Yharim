@@ -96,10 +96,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638374222060180173
+  lastModified: 638376641123390918
   FileSizes:
   - Name: Desktop
-    Value: 34280992
+    Value: 34279648
   Exists: 1
 --- !u!114 &-5747669573329378049
 MonoBehaviour:
@@ -123,7 +123,7 @@ MonoBehaviour:
   - {fileID: -6535506106352113786}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -170,11 +170,38 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638374220281629215
+  lastModified: 638376641124144143
   FileSizes:
   - Name: Desktop
     Value: 74624
   Exists: 1
+--- !u!114 &-5186571345946301138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/TwinTargetSelect
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/TwinTargetSelect
+  Guid:
+    Data1: 149728487
+    Data2: 1079383838
+    Data3: -1873039223
+    Data4: 1323766124
+  Banks:
+  - {fileID: -5292075882630960488}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4170539417413964853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +217,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638374220277805191
+  lastModified: 638376641119427252
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -326,7 +353,6 @@ MonoBehaviour:
   - {fileID: 7522937815894589954}
   - {fileID: -4058086645386944992}
   - {fileID: -5671402594081748042}
-  - {fileID: 3506072128741889044}
   - {fileID: -8558259867063426384}
   - {fileID: 3610690552074381917}
   - {fileID: -7602206552463849614}
@@ -341,13 +367,14 @@ MonoBehaviour:
   - {fileID: 3603296176374218588}
   - {fileID: -6862432211833057066}
   - {fileID: -1128507309006236389}
-  - {fileID: 9114318529245386611}
+  - {fileID: 2680447877723253403}
+  - {fileID: -5186571345946301138}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4170539417413964853}
   StringsBanks:
   - {fileID: 3073424228063723645}
-  cacheTime: 638374222060180173
+  cacheTime: 638376641124144143
   cacheVersion: 131609
 --- !u!114 &766712132310867268
 MonoBehaviour:
@@ -425,11 +452,38 @@ MonoBehaviour:
   - {fileID: -6535506106352113786}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 184545
+--- !u!114 &2680447877723253403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/Vessel from the Undergrowth
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/Vessel from the Undergrowth
+  Guid:
+    Data1: -2079045250
+    Data2: 1202591186
+    Data3: -1446176895
+    Data4: -1390242753
+  Banks:
+  - {fileID: -6535506106352113786}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 142745
 --- !u!114 &3073424228063723645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,38 +499,11 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638374220277830569
+  lastModified: 638376641119477694
   FileSizes:
   - Name: Desktop
-    Value: 2000
+    Value: 2008
   Exists: 1
---- !u!114 &3506072128741889044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Bosses/VesselfromtheUndergrowth
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Bosses/VesselfromtheUndergrowth
-  Guid:
-    Data1: -2079045250
-    Data2: 1202591186
-    Data3: -1446176895
-    Data4: -1390242753
-  Banks:
-  - {fileID: -6535506106352113786}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 142745
 --- !u!114 &3603296176374218588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,7 +553,7 @@ MonoBehaviour:
   - {fileID: -6535506106352113786}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -553,7 +580,7 @@ MonoBehaviour:
   - {fileID: -6535506106352113786}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -584,7 +611,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 269711
+  Length: 275399
 --- !u!114 &7085199293938770406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,30 +693,3 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 132515
---- !u!114 &9114318529245386611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Enemies/TwinsTarget
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Enemies/TwinsTarget
-  Guid:
-    Data1: 338205923
-    Data2: 1223673908
-    Data3: 1757109393
-    Data4: 1128342642
-  Banks:
-  - {fileID: -5292075882630960488}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
