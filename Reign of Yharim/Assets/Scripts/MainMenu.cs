@@ -33,6 +33,9 @@ public class MainMenu : MonoBehaviour
 		Debug.Log("The game has been quit");
 		Application.Quit();
 	}
+	private void Update()
+	{
+	}
 
 	public void ChangeMenuScreen(float menuID)
 	{

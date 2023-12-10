@@ -21,8 +21,6 @@ public class BiomeDetection : MonoBehaviour
 	private bool wasday = true;
 	private int daythemenum = 0;
 
-	public bool BossAlive = false;
-
 	private int count;
 
 	void Update()
@@ -43,7 +41,7 @@ public class BiomeDetection : MonoBehaviour
 			tileSpriteName = tileSprite.name; //set the variable tilespritename to the name of the tilesprite
 		}
 
-		if (tileSpriteName == "Forest" && (count >= 4.5*60 && count < 19.5*60) && !BossAlive)
+		if (tileSpriteName == "Forest" && (count >= 4.5*60 && count < 19.5*60))
 		{
 			var newdaythemenum = daythemenum;
 			var eventref = FMODEvents.instance.FullDay;
@@ -78,7 +76,7 @@ public class BiomeDetection : MonoBehaviour
 
 		if (tiles.GetTile(tileAtPlayer)) //if there is a tile behind the player
 		{
-			if ((tileSpriteName != currentTileName || wasday != day) && !BossAlive) //if the name of the sprite is not equal to the current tile name
+			if (tileSpriteName != currentTileName||wasday != day) //if the name of the sprite is not equal to the current tile name
 			{
 				wasday = day; // if it becomes night, check the biome again
 				if (stopit)
