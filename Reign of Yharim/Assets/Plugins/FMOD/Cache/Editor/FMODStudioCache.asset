@@ -150,7 +150,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638376540669925724
+  lastModified: 638378088616261912
   FileSizes:
   - Name: Desktop
     Value: 74624
@@ -226,7 +226,7 @@ MonoBehaviour:
   - {fileID: 3028886396130634377}
   StringsBanks:
   - {fileID: 902356820115119347}
-  cacheTime: 638376540669925724
+  cacheTime: 638378088616261912
   cacheVersion: 131609
 --- !u!114 &546284754107875172
 MonoBehaviour:
@@ -277,7 +277,7 @@ MonoBehaviour:
   - {fileID: 2691093139799092262}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -297,7 +297,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638376540574992913
+  lastModified: 638378088523838799
   FileSizes:
   - Name: Desktop
     Value: 2008
@@ -371,10 +371,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638376540667096190
+  lastModified: 638378088613869065
   FileSizes:
   - Name: Desktop
-    Value: 34279648
+    Value: 34280768
   Exists: 1
 --- !u!114 &2881846437759727473
 MonoBehaviour:
@@ -418,7 +418,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638376540574964642
+  lastModified: 638378088523811174
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -526,7 +526,7 @@ MonoBehaviour:
   - {fileID: 2691093139799092262}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -553,7 +553,7 @@ MonoBehaviour:
   - {fileID: 2691093139799092262}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -580,7 +580,7 @@ MonoBehaviour:
   - {fileID: 2691093139799092262}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20

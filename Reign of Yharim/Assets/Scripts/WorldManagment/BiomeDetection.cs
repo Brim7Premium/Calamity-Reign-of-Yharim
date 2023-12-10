@@ -18,7 +18,7 @@ public class BiomeDetection : MonoBehaviour
 
 	private EventInstance biometheme;
 	private bool day = true;
-	private bool wasday = true;
+	private bool wasday = false;
 	private int daythemenum = 0;
 
 	private int count;
@@ -32,7 +32,7 @@ public class BiomeDetection : MonoBehaviour
 	{
 		var stopit = true;
 		count = GameObject.Find("WorldManager").GetComponent<GameTime>().count;
-		day = (count >= 7.5*60 && count < 19.5*60);
+		day = (count >= 4.5*60 && count < 19.5*60);
 		Vector3 mp = transform.position; //creates a vector3 named mp that is the player's coordinates 
 		tileAtPlayer = tiles.WorldToCell(mp); //sets the vector3int location to the tile at the player's coordinates
 		tileSprite = tiles.GetSprite(tileAtPlayer); //gets the sprite of the tile at the player's location and assigns it to the tilesprite variable
@@ -41,7 +41,7 @@ public class BiomeDetection : MonoBehaviour
 			tileSpriteName = tileSprite.name; //set the variable tilespritename to the name of the tilesprite
 		}
 
-		if (tileSpriteName == "Forest" && (count >= 4.5*60 && count < 19.5*60))
+		if (tileSpriteName == "Forest" && day)
 		{
 			var newdaythemenum = daythemenum;
 			var eventref = FMODEvents.instance.FullDay;
@@ -150,7 +150,7 @@ public class BiomeDetection : MonoBehaviour
 				if (tileSpriteName == "Forest")
 				{
 					//Spawn plains/Forest
-					if (count >= 4.5*60 && count < 19.5*60)
+					if (day)
 					{
 						mainCam.backgroundColor = new Color(0.701f, 0.9691256f, 1f);
 					}

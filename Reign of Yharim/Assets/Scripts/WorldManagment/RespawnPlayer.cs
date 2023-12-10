@@ -17,7 +17,13 @@ public class RespawnPlayer : MonoBehaviour
 
     IEnumerator Respawn()
     {
-        yield return new WaitForSeconds(respawnSeconds);
+        var seconds = respawnSeconds;
+        while (0 != seconds)
+        {
+            seconds -= 1;
+            // you can show a respawn timer later
+            yield return new WaitForSeconds(1);
+        }
         player.SetActive(true);
         playerAI.SetDefaults();
         playerAI.StartCoroutine(playerAI.Immunity());
