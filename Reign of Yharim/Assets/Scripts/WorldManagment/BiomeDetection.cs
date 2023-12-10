@@ -23,6 +23,9 @@ public class BiomeDetection : MonoBehaviour
 
 	private int count;
 
+	private Color daybg = Color.black;
+	private Color nightbg = new Color(0.11f, 0.17f, 0.28f);
+
 	void Update()
 	{
 		GetTile();
@@ -43,15 +46,6 @@ public class BiomeDetection : MonoBehaviour
 
 		if (tileSpriteName == "Forest" && day)
 		{
-			if (count >= 472 && count < 19.5*60)
-			{
-				mainCam.backgroundColor = new Color(0.701f, 0.9691256f, 1f);
-			}
-
-			else
-			{
-				mainCam.backgroundColor = new Color(0.11f, 0.17f, 0.28f);
-			}
 			var newdaythemenum = daythemenum;
 			var eventref = FMODEvents.instance.FullDay;
 			if (count >= 4.5*60 && count < 7.5*60)
@@ -87,136 +81,124 @@ public class BiomeDetection : MonoBehaviour
 		{
 			if (tileSpriteName != currentTileName||wasday != day) //if the name of the sprite is not equal to the current tile name
 			{
+				
+				daybg = Color.black;
+				nightbg = new Color(0.11f, 0.17f, 0.28f);
 				wasday = day; // if it becomes night, check the biome again
 				if (stopit)
 				{
 					biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 				}
 				currentTileName = tileSpriteName; //set the current tile name to the name of the sprite
-				if (tileSpriteName == "Astral") //if the tile's name is astral
+				if (tileSpriteName == "Astral")
 				{
-					/*
-					Astral Infection
-					mainCam.backgroundColor = new Color(0.06666667f, 0.003921569f, 0.07450981f);
-					audioSource.clip = Astral;
-					audioSource.Play(); 
-					*/
+					// Astral Infection
+					daybg = new Color(0.06666667f, 0.003921569f, 0.07450981f);
+					nightbg = daybg;
 				}
 				if (tileSpriteName == "Desert")
 				{
-					/*
-					Desert
-					mainCam.backgroundColor = new Color(1f, 0.9850028f, 0.8264151f);
-					audioSource.clip = Desert;
-					audioSource.Play(); 
-					*/
+					// Desert
+					daybg = new Color(1f, 0.9850028f, 0.8264151f);
 				}
 				if (tileSpriteName == "Blight")
 				{
-					/*
-					Blight
-					mainCam.backgroundColor = new Color(0.09783139f, 0.1509434f, 0.06778213f);
-					audioSource.clip = Blight;
-					audioSource.Play();
-					*/
+					// Blight
+					daybg = new Color(0.09783139f, 0.1509434f, 0.06778213f);
 				}
 				if (tileSpriteName == "Bloody")
 				{
-					/*
-					Bloody Meteor
-					mainCam.backgroundColor = new Color(0.09433961f, 0.005603133f, 0f);
-					audioSource.clip = Bloody;
-					audioSource.Play();
-					*/
+					// Bloody Meteor
+					daybg = new Color(0.09433961f, 0.005603133f, 0f);
 				}
 				if (tileSpriteName == "Ocean")
 				{
-					/*
-					Ocean
-					mainCam.backgroundColor = new Color(0.345283f, 0.8541663f, 1f);
-					audioSource.clip = Ocean;
-					audioSource.Play();
-					*/
+					// Ocean
+					daybg = new Color(0.345283f, 0.8541663f, 1f);
 				}
 				if (tileSpriteName == "Sulfur")
 				{
-					/*
-					Sulphurous Sea
-					mainCam.backgroundColor = new Color(0.5457409f, 0.8962264f, 0.3179068f);
-					audioSource.clip = Sulfur;
-					audioSource.Play();
-					*/
+					// Sulphurous Sea
+					daybg = new Color(0.5457409f, 0.8962264f, 0.3179068f);
 				}
 				if (tileSpriteName == "Tundra")
 				{
-					/*
-					Tundra
-					mainCam.backgroundColor = new Color(0.7415094f, 1f, 0.95700063f);
-					audioSource.clip = Tundra;
-					audioSource.Play();
-					*/
+					// Tundra
+					daybg = new Color(0.7415094f, 1f, 0.95700063f);
 				}
 				if (tileSpriteName == "Forest")
 				{
-					//Spawn plains/Forest
+					// Spawn plains/Forest
+					daybg = new Color(0.701f, 0.9691256f, 1f);
 					if (!day)
 					{
-						mainCam.backgroundColor = new Color(0.11f, 0.17f, 0.28f);
 						biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Night);
 						biometheme.start();
 					}
 				}
 				if (tileSpriteName == "Feral")
 				{
-					//Feral Swamplands
-					//mainCam.backgroundColor = new Color(1f, 1f, 1f); Change this later
+					// Feral Swamplands
+					daybg = new Color(1f, 1f, 1f); // Change this later
 				}
 				if (tileSpriteName == "Jungle")
 				{
-					//Jungle
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f);
+					// Jungle
+					daybg = new Color(0.5254902f, 1f, 0.8364275f);
 				}
-				if (tileSpriteName == "Sky")
+				if (tileSpriteName == "Planetoids")
 				{
-					//Sky
-					//mainCam.backgroundColor = Color.black; Change this later
+					// Planetoids
+					daybg = new Color(0.701f, 0.9691256f, 1f);
 				}
 				if (tileSpriteName == "Underworld")
 				{
-					//Underworld
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
+					// Underworld
+					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
+					nightbg = daybg;
 				}
 				if (tileSpriteName == "Space")
 				{
-					//Space
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
+					// Space
 				}
 				if (tileSpriteName == "Crags")
 				{
-					//Brimstone Crags/Azafure
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
+					// Brimstone Crags/Azafure
+					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
+					nightbg = daybg;
 				}
 				if (tileSpriteName == "Abyss2")
 				{
-					//Abyss tier 1
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
+					// Abyss tier 1
 				}
 				if (tileSpriteName == "SunkenSea")
 				{
-					//Sunken Sea
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
+					// Sunken Sea
+					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
+					nightbg = daybg;
 				}
 				if (tileSpriteName == "Obsidian")
 				{
-					//Obsidian Cliffs
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
+					// Obsidian Cliffs
+					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				}
 				if (tileSpriteName == "Garden")
 				{
-					//Profaned Garden
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
+					// Profaned Garden
+					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
+					nightbg = daybg;
 				}
 			}
+		}
+
+		if (count >= 472 && count < 19.5*60)
+		{
+			mainCam.backgroundColor = daybg;
+		}
+
+		else
+		{
+			mainCam.backgroundColor = nightbg;
 		}
 	}
 }
