@@ -152,7 +152,14 @@ public class BiomeDetection : MonoBehaviour
 					//Spawn plains/Forest
 					if (day)
 					{
-						mainCam.backgroundColor = new Color(0.701f, 0.9691256f, 1f);
+						if (count >= 472 && count < 19.5*60)
+						{
+							mainCam.backgroundColor = new Color(0.701f, 0.9691256f, 1f);
+						}
+						else
+						{
+							mainCam.backgroundColor = new Color(0.11f, 0.17f, 0.28f);
+						}
 					}
 					else
 					{
