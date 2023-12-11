@@ -167,9 +167,9 @@ public class BiomeDetection : MonoBehaviour
 					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 					nightbg = daybg;
 				}
-				if (tileSpriteName == "Abyss2")
+				if (tileSpriteName == "Abyss1")
 				{
-					// Abyss tier 1
+					// Sulphuric depths
 				}
 				if (tileSpriteName == "SunkenSea")
 				{
@@ -191,14 +191,24 @@ public class BiomeDetection : MonoBehaviour
 			}
 		}
 
-		if (count >= 472 && count < 19.5*60)
+		if (count >= 472 && count < 18.5*60 && day)
 		{
 			mainCam.backgroundColor = daybg;
 		}
 
-		else
+		if (!day)
 		{
 			mainCam.backgroundColor = nightbg;
+		}
+
+		if (count > 18.5 && day)
+		{
+			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, (float)((count-18.5*60)/(19.5*60-18.5*60)));
+		}
+
+		if (count < 472 && day)
+		{
+			mainCam.backgroundColor = Color.Lerp(nightbg, daybg, (float)((count-4.5*60)/(472-4.5*60)));
 		}
 	}
 }

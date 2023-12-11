@@ -10,7 +10,7 @@ public class RespawnPlayer : MonoBehaviour
     private PlayerAI playerAI;
     private GameObject timerobj;
 
-    [SerializeField] private int respawnSeconds = 5;
+    [SerializeField] private int respawnSeconds;
 
     private void Start()
     {
@@ -25,9 +25,9 @@ public class RespawnPlayer : MonoBehaviour
         timerobj.SetActive(true);
         while (0 != seconds)
         {
+            timerobj.GetComponent<TextMeshProUGUI>().text = $"{seconds}";
             yield return new WaitForSeconds(1);
             seconds -= 1;
-            timerobj.GetComponent<TextMeshProUGUI>().text = $"{seconds}";
         }
         seconds = respawnSeconds;
         player.SetActive(true);

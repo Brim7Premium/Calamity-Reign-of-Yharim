@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5639068219935851250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/StainedBrutalGreif
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/StainedBrutalGreif
+  Guid:
+    Data1: -891976496
+    Data2: 1149579231
+    Data3: -1808334660
+    Data4: 577480736
+  Banks:
+  - {fileID: 2691093139799092262}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 346648
 --- !u!114 &-4060277785661746388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,12 +248,16 @@ MonoBehaviour:
   - {fileID: -4060277785661746388}
   - {fileID: 3370157378572948695}
   - {fileID: 7840615993407800932}
+  - {fileID: 4058139507458691062}
+  - {fileID: 1702753003359183674}
+  - {fileID: -5639068219935851250}
+  - {fileID: 2010485684554415442}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3028886396130634377}
   StringsBanks:
   - {fileID: 902356820115119347}
-  cacheTime: 638378088616261912
+  cacheTime: 638378308747666270
   cacheVersion: 131609
 --- !u!114 &546284754107875172
 MonoBehaviour:
@@ -297,10 +328,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638378088523838799
+  lastModified: 638378304863213267
   FileSizes:
   - Name: Desktop
-    Value: 2008
+    Value: 2196
   Exists: 1
 --- !u!114 &946936322358597608
 MonoBehaviour:
@@ -356,6 +387,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 166624
+--- !u!114 &1702753003359183674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/StainedBrutalAcceptance
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/StainedBrutalAcceptance
+  Guid:
+    Data1: 879341152
+    Data2: 1335275791
+    Data3: 2001994926
+    Data4: 1233124685
+  Banks:
+  - {fileID: 2691093139799092262}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 63996
+--- !u!114 &2010485684554415442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/StainedBrutalLament
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/StainedBrutalLament
+  Guid:
+    Data1: -268930851
+    Data2: 1163703115
+    Data3: -2097549435
+    Data4: -95034399
+  Banks:
+  - {fileID: 2691093139799092262}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 143992
 --- !u!114 &2691093139799092262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,10 +456,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638378088613869065
+  lastModified: 638378308747666270
   FileSizes:
   - Name: Desktop
-    Value: 34280768
+    Value: 45650304
   Exists: 1
 --- !u!114 &2881846437759727473
 MonoBehaviour:
@@ -418,7 +503,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638378088523811174
+  lastModified: 638378304863180012
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -450,6 +535,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4058139507458691062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/StainedBrutalEpiphany
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/StainedBrutalEpiphany
+  Guid:
+    Data1: 1342152276
+    Data2: 1217035737
+    Data3: -51546996
+    Data4: -75886101
+  Banks:
+  - {fileID: 2691093139799092262}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 265333
 --- !u!114 &4476949046128260815
 MonoBehaviour:
   m_ObjectHideFlags: 0
