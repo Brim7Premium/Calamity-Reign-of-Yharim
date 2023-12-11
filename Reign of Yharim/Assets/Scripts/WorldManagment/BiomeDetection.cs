@@ -191,7 +191,7 @@ public class BiomeDetection : MonoBehaviour
 			}
 		}
 
-		if (count >= 472 && count < 18.5*60 && day)
+		if (count >= 472 && count < 1000 && day)
 		{
 			mainCam.backgroundColor = daybg;
 		}
@@ -201,9 +201,9 @@ public class BiomeDetection : MonoBehaviour
 			mainCam.backgroundColor = nightbg;
 		}
 
-		if (count > 18.5 && day)
+		if (count > 1000 && day)
 		{
-			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, (float)((count-18.5*60)/(19.5*60-18.5*60)));
+			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, (float)((count-1000)/(19.5*60-1000)));
 		}
 
 		if (count < 472 && day)
