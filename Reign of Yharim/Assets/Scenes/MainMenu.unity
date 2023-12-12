@@ -8667,6 +8667,34 @@ MonoBehaviour:
       Data3: -1823140980
       Data4: 160802050
     Path: event:/Music/Bosses/TerroroftheFireySeas
+  <SCal1>k__BackingField:
+    Guid:
+      Data1: -891976496
+      Data2: 1149579231
+      Data3: -1808334660
+      Data4: 577480736
+    Path: event:/Music/Bosses/StainedBrutalGreif
+  <SCal2>k__BackingField:
+    Guid:
+      Data1: -268930851
+      Data2: 1163703115
+      Data3: -2097549435
+      Data4: -95034399
+    Path: event:/Music/Bosses/StainedBrutalLament
+  <SCal3>k__BackingField:
+    Guid:
+      Data1: 1342152276
+      Data2: 1217035737
+      Data3: -51546996
+      Data4: -75886101
+    Path: event:/Music/Bosses/StainedBrutalEpiphany
+  <SCal4>k__BackingField:
+    Guid:
+      Data1: 879341152
+      Data2: 1335275791
+      Data3: 2001994926
+      Data4: 1233124685
+    Path: event:/Music/Bosses/StainedBrutalAcceptance
   <WulfrumMother>k__BackingField:
     Guid:
       Data1: -942517861

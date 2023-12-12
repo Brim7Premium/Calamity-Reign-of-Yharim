@@ -23,6 +23,10 @@ public class FMODEvents : MonoBehaviour
 	[field: SerializeField] public EventReference BlightTerror { get; private set; }
 	[field: SerializeField] public EventReference DoG1 { get; private set; }
 	[field: SerializeField] public EventReference ObsScourge { get; private set; }
+	[field: SerializeField] public EventReference SCal1 { get; private set; }
+	[field: SerializeField] public EventReference SCal2 { get; private set; }
+	[field: SerializeField] public EventReference SCal3 { get; private set; }
+	[field: SerializeField] public EventReference SCal4 { get; private set; }
 	[field: SerializeField] public EventReference WulfrumMother { get; private set; }
 
 	[field: Header("Biome Music")]
