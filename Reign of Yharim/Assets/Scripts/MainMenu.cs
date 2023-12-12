@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 using FMODUnity;
 using FMOD.Studio;
@@ -10,9 +11,18 @@ public class MainMenu : MonoBehaviour
 {
 	public MainMenuScreens menuScreens;
 
+	private GameObject settingsobj;
+
 	private EventInstance TitleTheme;
 	public void Awake()
 	{
+		settingsobj = GameObject.Find("[Settings]");
+		if (settingsobj == null)
+		{
+			settingsobj = new GameObject { name = "[Settings]" };
+			settingsobj.AddComponent<bracketSettingsbracket>();
+			DontDestroyOnLoad(settingsobj);
+		}
 		TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Title);
 		TitleTheme.start();
 		Debug.Log("Main");
@@ -39,6 +49,15 @@ public class MainMenu : MonoBehaviour
 		AudioManager.instance.PlayOneShot(FMODEvents.instance.ExoTwinsHoverIcon);
 	}
 
+	public void setrespawntime()
+	{
+		var obj = GameObject.Find("RespawnTimeSlider");
+		var timeSlider = obj.GetComponent<Slider>();
+		var indicator = obj.GetComponent<TextMeshProUGUI>();
+		indicator.text = ((int)timeSlider.value).ToString();
+		settingsobj.GetComponent<bracketSettingsbracket>().respawntime = (int)timeSlider.value;
+	}
+
 	public void ChangeMenuScreen(float menuID)
 	{
 		ClickSound();
@@ -62,8 +81,12 @@ public class MainMenu : MonoBehaviour
 		{
 			menuScreens = MainMenuScreens.OptionsAudio;
 		}
+		if (menuID == 6)
+		{
+			menuScreens = MainMenuScreens.OptionsGeneral;
+		}
 		Debug.Log(menuScreens);
-	}
+	} 
 	/* Set the variables using unity's built in button system
 	* for each button, assign the id of the next screen/the screen that the button would send you to
 	* for back buttons, assign the id of the previous screen
@@ -76,6 +99,7 @@ public class MainMenu : MonoBehaviour
 		SinglePlayer,
 		SinglePlayerSave,
 		Options,
-		OptionsAudio
+		OptionsAudio,
+		OptionsGeneral
 	}
 }

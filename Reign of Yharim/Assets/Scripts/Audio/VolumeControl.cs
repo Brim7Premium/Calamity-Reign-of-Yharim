@@ -21,15 +21,14 @@ public class VolumeControl : MonoBehaviour
 
 	private void Awake()
 	{
-		volumeSlider = this.GetComponentInChildren<Slider>();
-
 		settingsobj = GameObject.Find("[Settings]");
-		if (settingsobj == null) 
+		if (settingsobj == null)
 		{
 			settingsobj = new GameObject { name = "[Settings]" };
 			settingsobj.AddComponent<bracketSettingsbracket>();
 			DontDestroyOnLoad(settingsobj);
 		}
+		volumeSlider = this.GetComponentInChildren<Slider>();
 	}
 
 	public void SliderValueChange()

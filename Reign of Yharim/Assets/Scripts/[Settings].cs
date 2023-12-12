@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class bracketSettingsbracket : MonoBehaviour
 {
+	[Header("General")]
+	[Range(5, 45)]
+	public int respawntime = 5;
+
 	[Header("Audio")]
 	[Range(0, 1)]
 	public float musicVolume = 1;

@@ -10,8 +10,6 @@ public class RespawnPlayer : MonoBehaviour
     private PlayerAI playerAI;
     private GameObject timerobj;
 
-    [SerializeField] private int respawnSeconds;
-
     private void Start()
     {
         playerAI = player.GetComponent<PlayerAI>();
@@ -21,6 +19,14 @@ public class RespawnPlayer : MonoBehaviour
 
     IEnumerator Respawn()
     {
+		var settingsobj = GameObject.Find("[Settings]");
+		if (settingsobj == null)
+		{
+			settingsobj = new GameObject { name = "[Settings]" };
+			settingsobj.AddComponent<bracketSettingsbracket>();
+			DontDestroyOnLoad(settingsobj);
+		}
+        var respawnSeconds = settingsobj.GetComponent<bracketSettingsbracket>().respawntime;
         var seconds = respawnSeconds;
         timerobj.SetActive(true);
         while (0 != seconds)
