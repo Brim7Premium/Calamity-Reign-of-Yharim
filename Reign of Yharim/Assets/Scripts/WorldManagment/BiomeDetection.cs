@@ -34,6 +34,7 @@ public class BiomeDetection : MonoBehaviour
 	void GetTile()
 	{
 		var stopit = true;
+		var nosunset = true;
 		count = GameObject.Find("WorldManager").GetComponent<GameTime>().count;
 		day = (count >= 4.5*60 && count < 19.5*60);
 		Vector3 mp = transform.position; //creates a vector3 named mp that is the player's coordinates 
@@ -95,36 +96,43 @@ public class BiomeDetection : MonoBehaviour
 					// Astral Infection
 					daybg = new Color(0.06666667f, 0.003921569f, 0.07450981f);
 					nightbg = daybg;
+					nosunset = true;
 				}
 				if (tileSpriteName == "Desert")
 				{
 					// Desert
 					daybg = new Color(1f, 0.9850028f, 0.8264151f);
+					nosunset = true;
 				}
 				if (tileSpriteName == "Blight")
 				{
 					// Blight
 					daybg = new Color(0.09783139f, 0.1509434f, 0.06778213f);
+					nosunset = true;
 				}
 				if (tileSpriteName == "Bloody")
 				{
 					// Bloody Meteor
 					daybg = new Color(0.09433961f, 0.005603133f, 0f);
+					nosunset = true;
 				}
 				if (tileSpriteName == "Ocean")
 				{
 					// Ocean
 					daybg = new Color(0.345283f, 0.8541663f, 1f);
+					nosunset = true;
 				}
 				if (tileSpriteName == "Sulfur")
 				{
 					// Sulphurous Sea
 					daybg = new Color(0.5457409f, 0.8962264f, 0.3179068f);
+					nosunset = true;
 				}
 				if (tileSpriteName == "Tundra")
 				{
 					// Tundra
 					daybg = new Color(0.7415094f, 1f, 0.95700063f);
+					nosunset = true;
 				}
 				if (tileSpriteName == "Forest")
 				{
@@ -135,65 +143,71 @@ public class BiomeDetection : MonoBehaviour
 						biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Night);
 						biometheme.start();
 					}
+					nosunset = true;
 				}
 				if (tileSpriteName == "Feral")
 				{
 					// Feral Swamplands
 					daybg = new Color(1f, 1f, 1f); // Change this later
+					nosunset = true;
 				}
 				if (tileSpriteName == "Jungle")
 				{
 					// Jungle
 					daybg = new Color(0.5254902f, 1f, 0.8364275f);
+					nosunset = true;
 				}
 				if (tileSpriteName == "Planetoids")
 				{
 					// Planetoids
 					daybg = new Color(0.701f, 0.9691256f, 1f);
+					nosunset = true;
 				}
 				if (tileSpriteName == "Underworld")
 				{
 					// Underworld
 					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 					nightbg = daybg;
+					nosunset = true;
 				}
 				if (tileSpriteName == "Space")
 				{
 					// Space
+					nosunset = true;
 				}
 				if (tileSpriteName == "Crags")
 				{
 					// Brimstone Crags/Azafure
 					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 					nightbg = daybg;
+					nosunset = true;
 				}
 				if (tileSpriteName == "Abyss1")
 				{
 					// Sulphuric depths
+					nosunset = true;
 				}
 				if (tileSpriteName == "SunkenSea")
 				{
 					// Sunken Sea
 					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 					nightbg = daybg;
+					nosunset = true;
 				}
 				if (tileSpriteName == "Obsidian")
 				{
 					// Obsidian Cliffs
 					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
+					nosunset = true;
 				}
 				if (tileSpriteName == "Garden")
 				{
 					// Profaned Garden
 					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 					nightbg = daybg;
+					nosunset = true;
 				}
 			}
-		}
-
-		if (count >= 472 && count < 1000 && day)
-		{
-			mainCam.backgroundColor = daybg;
 		}
 
 		if (!day)
@@ -201,15 +215,82 @@ public class BiomeDetection : MonoBehaviour
 			mainCam.backgroundColor = nightbg;
 		}
 
-		if (count > 1000 && day)
+		if (!nosunset && day)
 		{
-			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, (float)((count-1000)/(19.5*60-1000)));
+			var sunsetcolour = new Color(0.84f, 0.3f, 0.36f);
+
+			// formula is (count-start)/(end-start)
+
+			if (count >= 270 && count < 472)
+			{
+				mainCam.backgroundColor = Color.Lerp(nightbg, sunsetcolour, (float)((count-270)/(472-270)));
+			}
+
+			else if (count >= 472 && count < 522)
+			{
+				mainCam.backgroundColor = sunsetcolour;
+			}
+
+			else if (count >= 522 && count < 600)
+			{
+				mainCam.backgroundColor = Color.Lerp(sunsetcolour, daybg, (float)((count-522)/(600-522)));
+			}
+
+			else if (count >= 600 && count < 848)
+			{
+				mainCam.backgroundColor = daybg;
+			}
+
+			else if (count >= 848 && count < 888)
+			{
+				mainCam.backgroundColor = Color.Lerp(daybg, sunsetcolour, (float)((count-848)/(888-848)));
+			}
+			
+			else if (count >= 888 && count < 976)
+			{
+				mainCam.backgroundColor = sunsetcolour;
+			}
+			
+			else if (count >= 976 && count < 1170)
+			{
+				mainCam.backgroundColor = Color.Lerp(sunsetcolour, nightbg, (float)((count-976)/(1170-976)));
+			}
 		}
 
-		if (count < 472 && day)
+		if (nosunset && day)
 		{
-			mainCam.backgroundColor = Color.Lerp(nightbg, daybg, (float)((count-4.5*60)/(472-4.5*60)));
+			if (count < 472 && day)
+			{
+				mainCam.backgroundColor = Color.Lerp(nightbg, daybg, (float)((count-270)/(472-270)));
+			}
+
+			else if (count >= 1000 && day)
+			{
+				mainCam.backgroundColor = Color.Lerp(daybg, nightbg, (float)((count-1000)/(1170-1000)));
+			}
+
+			else
+			{
+				mainCam.backgroundColor = daybg;
+			}
 		}
+
+		/*
+		Notes
+
+		Fade into sunrise at 270
+		Start sunrise at 472, end at 552
+		Fade into day (600)
+
+		Fade into sunset at 848
+		Start sunset at 888, end at 976
+		Fade into night (1170)
+
+		If nosunset
+
+		Fade into "sunrise" (472) at day (270)
+		Fade into night (1170) at "sunset" (1000)
+		*/
 	}
 }
 
