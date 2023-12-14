@@ -27,6 +27,10 @@ public class MainMenu : MonoBehaviour
 		TitleTheme.start();
 		Debug.Log("Main");
 	}
+	IEnumerator wait()
+	{
+		yield return new WaitForSeconds(1);
+	}
 
 	public void HoverSound()
 	{
@@ -36,6 +40,8 @@ public class MainMenu : MonoBehaviour
 	public void EnterWorld()
 	{
 		AudioManager.instance.PlayOneShot(FMODEvents.instance._055Roar);
+		TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		StartCoroutine(wait());
 		SceneManager.LoadScene("Surface");
 	}
 	public void LeaveGame()
@@ -55,7 +61,7 @@ public class MainMenu : MonoBehaviour
 		var timeSlider = obj.GetComponent<Slider>();
 		var indicator = obj.GetComponent<TextMeshProUGUI>();
 		indicator.text = ((int)timeSlider.value).ToString();
-		settingsobj.GetComponent<bracketSettingsbracket>().respawntime = (int)timeSlider.value;
+		settingsobj.GetComponent<bracketSettingsbracket>().respawnTime = (int)timeSlider.value;
 	}
 
 	public void ChangeMenuScreen(float menuID)

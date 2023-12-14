@@ -26,7 +26,7 @@ public class RespawnPlayer : MonoBehaviour
 			settingsobj.AddComponent<bracketSettingsbracket>();
 			DontDestroyOnLoad(settingsobj);
 		}
-        var respawnSeconds = settingsobj.GetComponent<bracketSettingsbracket>().respawntime;
+        var respawnSeconds = settingsobj.GetComponent<bracketSettingsbracket>().respawnTime;
         var seconds = respawnSeconds;
         timerobj.SetActive(true);
         while (0 != seconds)

@@ -6,7 +6,7 @@ public class bracketSettingsbracket : MonoBehaviour
 {
 	[Header("General")]
 	[Range(5, 45)]
-	public int respawntime = 5;
+	public int respawnTime = 5;
 
 	[Header("Audio")]
 	[Range(0, 1)]

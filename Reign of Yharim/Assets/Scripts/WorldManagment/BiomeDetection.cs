@@ -44,7 +44,7 @@ public class BiomeDetection : MonoBehaviour
 			tileSpriteName = tileSprite.name; //set the variable tilespritename to the name of the tilesprite
 		}
 
-		if (tileSpriteName == "Forest" && day)
+		if (tileSpriteName == "Forest" && day) // dedicated forest day time system
 		{
 			var newdaythemenum = daythemenum;
 			var eventref = FMODEvents.instance.FullDay;
