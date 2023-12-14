@@ -27,10 +27,6 @@ public class MainMenu : MonoBehaviour
 		TitleTheme.start();
 		Debug.Log("Main");
 	}
-	IEnumerator wait()
-	{
-		yield return new WaitForSeconds(1);
-	}
 
 	public void HoverSound()
 	{
@@ -41,9 +37,9 @@ public class MainMenu : MonoBehaviour
 	{
 		AudioManager.instance.PlayOneShot(FMODEvents.instance._055Roar);
 		TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-		StartCoroutine(wait());
 		SceneManager.LoadScene("Surface");
 	}
+
 	public void LeaveGame()
 	{
 		Debug.Log("The game has been quit");
@@ -62,6 +58,12 @@ public class MainMenu : MonoBehaviour
 		var indicator = obj.GetComponent<TextMeshProUGUI>();
 		indicator.text = ((int)timeSlider.value).ToString();
 		settingsobj.GetComponent<bracketSettingsbracket>().respawnTime = (int)timeSlider.value;
+	}
+
+	public void setmilitarytime()
+	{
+		var obj = GameObject.Find("MilitaryToggle");
+		settingsobj.GetComponent<bracketSettingsbracket>().militaryTime = obj.GetComponent<Toggle>().isOn;
 	}
 
 	public void ChangeMenuScreen(float menuID)
@@ -91,6 +93,10 @@ public class MainMenu : MonoBehaviour
 		{
 			menuScreens = MainMenuScreens.OptionsGeneral;
 		}
+		if (menuID == 7)
+		{
+			menuScreens = MainMenuScreens.OptionsVideo;
+		}
 		Debug.Log(menuScreens);
 	} 
 	/* Set the variables using unity's built in button system
@@ -106,6 +112,7 @@ public class MainMenu : MonoBehaviour
 		SinglePlayerSave,
 		Options,
 		OptionsAudio,
-		OptionsGeneral
+		OptionsGeneral,
+		OptionsVideo
 	}
 }

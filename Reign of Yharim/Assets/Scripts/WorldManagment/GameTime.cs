@@ -15,13 +15,56 @@ public class GameTime : MonoBehaviour
 	[SerializeField] private Transform orbitPoint;
 	[SerializeField] private Vector3 rotation;
 
+	private GameObject settingsobj;
+
 	IEnumerator Start()
 	{
+		
+		settingsobj = GameObject.Find("[Settings]");
+		if (settingsobj == null)
+		{
+			settingsobj = new GameObject { name = "[Settings]" };
+			settingsobj.AddComponent<bracketSettingsbracket>();
+			DontDestroyOnLoad(settingsobj);
+		}
+		var miltime = settingsobj.GetComponent<bracketSettingsbracket>().militaryTime;
 		while (true)
 		{
 			if(count == 24*60){count = 0;}
 
-			displayTime = $"{count/60:d2} : {count%60:d2}";
+			if (miltime)
+			{
+				displayTime = $"{count/60:d2} : {count%60:d2}";
+			}
+			else
+			{
+				var min = $"{count%60:d2}";
+				var hour = count/60;
+				var am = true;
+				if (hour == 12)
+				{
+					am = false;
+				}
+				else if (hour > 12)
+				{
+					hour -= 12;
+					am = false;
+				}
+				else if (hour == 0)
+				{
+					hour = 12;
+				}
+				var tim = $"{hour:d2} : {min} ";
+				if (am)
+				{
+					tim += "AM";
+				}
+				else
+				{
+					tim += "PM";
+				}
+				displayTime = tim;
+			}
 
 			yield return new WaitForSeconds(1);
 			count++;

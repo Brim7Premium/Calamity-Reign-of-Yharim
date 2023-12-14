@@ -8,6 +8,9 @@ public class bracketSettingsbracket : MonoBehaviour
 	[Range(5, 45)]
 	public int respawnTime = 5;
 
+	[Header("Video")]
+	public bool militaryTime = false;
+
 	[Header("Audio")]
 	[Range(0, 1)]
 	public float musicVolume = 1;
