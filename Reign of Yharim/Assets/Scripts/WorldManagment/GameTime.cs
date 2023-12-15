@@ -66,7 +66,7 @@ public class GameTime : MonoBehaviour
 				displayTime = tim;
 			}
 
-			yield return new WaitForSeconds(0);
+			yield return new WaitForSeconds(1);
 			count++;
 		}
 	}
