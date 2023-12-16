@@ -54,16 +54,14 @@ public class GameTime : MonoBehaviour
 				{
 					hour = 12;
 				}
-				var tim = $"{hour:d2} : {min} ";
 				if (am)
 				{
-					tim += "AM";
+					displayTime = $"{hour:d2} : {min}  AM";
 				}
 				else
 				{
-					tim += "PM";
+					displayTime = $"{hour:d2} : {min}  PM";
 				}
-				displayTime = tim;
 			}
 
 			yield return new WaitForSeconds(1);

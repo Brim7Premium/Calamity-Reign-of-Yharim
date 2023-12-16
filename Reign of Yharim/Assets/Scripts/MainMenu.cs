@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
 
 	public void HoverSound()
 	{
-		AudioManager.instance.PlayOneShot(FMODEvents.instance.TwinTargetSelect);
+		AudioManager.instance.PlayOneShot(FMODEvents.instance.TitleHover);
 	}
 
 	public void EnterWorld()
@@ -48,7 +48,7 @@ public class MainMenu : MonoBehaviour
 
 	public void ClickSound()
 	{
-		AudioManager.instance.PlayOneShot(FMODEvents.instance.ExoTwinsHoverIcon);
+		AudioManager.instance.PlayOneShot(FMODEvents.instance.TitleClick);
 	}
 
 	public void setrespawntime()
