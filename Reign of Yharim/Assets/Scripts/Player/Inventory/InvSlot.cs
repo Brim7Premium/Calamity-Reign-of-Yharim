@@ -8,6 +8,8 @@ public class InvSlot : MonoBehaviour, IDropHandler
 {
     public Image image;
     public Sprite selectedSprite, notSelectedSprite;
+    public int number;
+    public InventoryManager inventoryManager;
 
     private void Awake()
     {

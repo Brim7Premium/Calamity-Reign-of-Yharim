@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class GUIController : MonoBehaviour
 {
     public TMP_Text timeText;
@@ -15,15 +16,15 @@ public class GUIController : MonoBehaviour
 
     private bool inventoryOpened;
     public int maxStackedItems = 999;
-    public InvSlot[] slots;
     public GameObject itemPrefab;
     int selectedSlot = -1;
     public GameObject worldItem;
     public GameObject player;
     public GameObject heldItemObject;
     public TMP_Text itemText;
+    public InventoryManager inventoryManager;
 
-    public Item[] itemsToPickup;
+    public ItemData[] itemsToPickup;
 
     const string HeartNormal = "Heart_normal";
     const string HeartDeath = "Heart_death";
@@ -61,10 +62,8 @@ public class GUIController : MonoBehaviour
             inventoryOpened = false;
         }
 
-        if (inventoryOpened == true)
-            inventory.SetActive(true);
-        else
-            inventory.SetActive(false);
+        inventory.SetActive(inventoryOpened);
+        
         if (Input.inputString != null)
         {
             bool isNumber = int.TryParse(Input.inputString, out int number);
@@ -73,7 +72,7 @@ public class GUIController : MonoBehaviour
                 ChangeSelectedSlot(number - 1);
             }
         }
-        Item heldItem = GetSelectedItem(false);
+        ItemData heldItem = GetSelectedItem(false);
 
         if (GetSelectedItem(false))
             itemText.text = heldItem.displayName;
@@ -88,7 +87,7 @@ public class GUIController : MonoBehaviour
                 GameObject worldClone = Instantiate(worldItem, player.transform.position, Quaternion.identity);
                 worldClone.GetComponent<WorldItem>().SpawnCooldown(2f);
                 SpriteRenderer spriteRenderer = worldClone.GetComponent<SpriteRenderer>();
-                spriteRenderer.sprite = heldItem.image;
+                spriteRenderer.sprite = heldItem.sprite;
                 worldClone.GetComponent<WorldItem>().myDroppedItem = heldItem;
                 GetSelectedItem(true);
                 worldClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(200f * playerAI.isFacing, 200f));
@@ -108,52 +107,18 @@ public class GUIController : MonoBehaviour
     void ChangeSelectedSlot(int value)
     {
         if (selectedSlot >= 0)
-            slots[selectedSlot].Deselect();
-        slots[value].Select();
+            inventoryManager.slots[selectedSlot].gameObject.GetComponent<InvSlot>().Deselect();
+        inventoryManager.slots[value].gameObject.GetComponent<InvSlot>().Select();
         selectedSlot = value;
     }
 
-    public bool AddItem(Item item)
+    public ItemData GetSelectedItem(bool use) //without bool use, method will get the selected item, with bool use, method will get and remove one of selected item
     {
-        for (int i = 0; i < slots.Length; i++)
-        {
-            InvSlot slot = slots[i];
-            InvItem itemInSlot = slot.GetComponentInChildren<InvItem>();
-            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < maxStackedItems && itemInSlot.item.stackable == true)
-            {
-                itemInSlot.count++;
-                itemInSlot.ReCount();
-                return true;
-            }
-        }
-
-        for (int i = 0; i < slots.Length; i++)
-        {
-            InvSlot slot = slots[i];
-            InvItem itemInSlot = slot.GetComponentInChildren<InvItem>();
-            if (itemInSlot == null)
-            {
-                SpawnNewItem(item, slot);
-                return true;
-            }
-        }
-
-        return false;
-    }
-    public void SpawnNewItem(Item item, InvSlot slot)
-    {
-        GameObject itemGameObject = Instantiate(itemPrefab, slot.transform);
-        InvItem invItem = itemGameObject.GetComponent<InvItem>();
-        invItem.InitItem(item);
-    }
-
-    public Item GetSelectedItem(bool use) //without bool use, method will get the selected item, with bool use, method will get and remove one of selected item
-    {
-        InvSlot slot = slots[selectedSlot];
+        InvSlot slot = inventoryManager.slots[selectedSlot].gameObject.GetComponent<InvSlot>();
         InvItem itemInSlot = slot.GetComponentInChildren<InvItem>();
         if (itemInSlot != null)
         {
-            Item item = itemInSlot.item;
+            ItemData item = itemInSlot.item;
             if (use == true)
             {
                 itemInSlot.count--;
@@ -172,7 +137,7 @@ public class GUIController : MonoBehaviour
     //demo script
     public void PickUpItem()
     {
-        bool result = AddItem(itemsToPickup[Random.Range(0, itemsToPickup.Length)]);
+        bool result = inventoryManager.AddItem(itemsToPickup[Random.Range(0, itemsToPickup.Length)]);
         if (result == true)
             Debug.Log("Item added");
         else
