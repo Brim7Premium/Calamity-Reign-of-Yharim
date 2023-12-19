@@ -84,9 +84,7 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            print(item.count);
             item.count -= _count;
-            print(item.count);
             InvItem newItem = Instantiate(InvItem, slots[slot]).GetComponent<InvItem>();
             newItem.InitItem(item.item, this);
             return newItem;

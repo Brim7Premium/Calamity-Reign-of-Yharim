@@ -11,6 +11,7 @@ public class ItemData : ScriptableObject
     public ActionType2 actionType;
     public bool consumable;
     public Vector2 size;
+    public string UseScript;
 
     [Header("UI Data")]
     public bool stackable = true;

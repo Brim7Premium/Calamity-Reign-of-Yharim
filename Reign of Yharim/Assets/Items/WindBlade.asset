@@ -16,7 +16,8 @@ MonoBehaviour:
   actionType: 0
   consumable: 0
   size: {x: 0, y: 0}
+  UseScript: WindBlade
   stackable: 0
-  displayName: Wind Blade
+  displayName: WindBlade
   sprite: {fileID: 21300000, guid: 2be3e64873540c64ea2e527b6f0c3bc4, type: 3}
   ID: 0

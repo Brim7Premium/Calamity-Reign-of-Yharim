@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System;
 
 public class PlayerAI : NPC //basically, this script is a copy of the npc script and all of it's values. the main differences are that each value can be overriden from the base script for the new one, and this one can be attached to gameobjects.
 {
@@ -32,6 +33,10 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
     [SerializeField] [Range(1, 180)]private int framerate; //create int with range of 1 to 180, used for setting framerate. Why this is in the player's AI  script will remain unknown for eternity
 
+    [Header("Item usage")]
+    [SerializeField] private GameObject DefaultAttackPrefab;
+    public bool IsAttacking;
+    public GUIController gUIController;
     //constants can't be changed
     const string PlayerIdle = "Player_idle";
     const string PlayerWalk = "Player_walk";
@@ -85,6 +90,13 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             isFalling = true;
         }
         */
+        ItemData item = gUIController.GetSelectedItem(false);
+        if(Input.GetKeyDown(KeyCode.Mouse0) && item && !IsAttacking)
+        {
+            GameObject attack = Instantiate(DefaultAttackPrefab, transform);
+            attack.AddComponent(Type.GetType(item.UseScript)).GetComponent<ItemUse>().item = gUIController.GetSelectedItem(item.consumable);
+            IsAttacking = true;
+        }
     }
     public override void Kill()
     {
