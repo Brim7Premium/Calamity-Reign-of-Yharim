@@ -17,8 +17,6 @@ public class FMODEvents : MonoBehaviour
 
 	[field: Header("Menu SFX")]
 	[field: SerializeField] public EventReference ExoTwinsHoverIcon { get; private set; }
-	[field: SerializeField] public EventReference TitleClick { get; private set; }
-	[field: SerializeField] public EventReference TitleHover { get; private set; }
 
 	[field: Header ("Boss Music")]
 	[field: SerializeField] public EventReference AncientHorror { get; private set; }

@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7365083437344845235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Menus/TitleHover
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Menus/TitleHover
-  Guid:
-    Data1: 221464269
-    Data2: 1217105836
-    Data3: 422054788
-    Data4: -1480107127
-  Banks:
-  - {fileID: -2004007188080043890}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-5639068219935851250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,10 +177,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638382811881524925
+  lastModified: 638378088616261912
   FileSizes:
   - Name: Desktop
-    Value: 107360
+    Value: 74624
   Exists: 1
 --- !u!114 &-732927777906129053
 MonoBehaviour:
@@ -279,14 +252,12 @@ MonoBehaviour:
   - {fileID: 1702753003359183674}
   - {fileID: -5639068219935851250}
   - {fileID: 2010485684554415442}
-  - {fileID: 2721372934816324861}
-  - {fileID: -7365083437344845235}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3028886396130634377}
   StringsBanks:
   - {fileID: 902356820115119347}
-  cacheTime: 638382811881524925
+  cacheTime: 638381523547512991
   cacheVersion: 131609
 --- !u!114 &546284754107875172
 MonoBehaviour:
@@ -357,10 +328,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638382276443333584
+  lastModified: 638378304863213267
   FileSizes:
   - Name: Desktop
-    Value: 2298
+    Value: 2196
   Exists: 1
 --- !u!114 &946936322358597608
 MonoBehaviour:
@@ -485,38 +456,11 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638382285830533946
+  lastModified: 638381523547512991
   FileSizes:
   - Name: Desktop
-    Value: 45652032
+    Value: 45650208
   Exists: 1
---- !u!114 &2721372934816324861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Menus/TitleClick
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Menus/TitleClick
-  Guid:
-    Data1: -1217707913
-    Data2: 1082782995
-    Data3: 47932601
-    Data4: 1807352293
-  Banks:
-  - {fileID: -2004007188080043890}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &2881846437759727473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,7 +503,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638382276443313585
+  lastModified: 638378304863180012
   FileSizes:
   - Name: Desktop
     Value: 1340
