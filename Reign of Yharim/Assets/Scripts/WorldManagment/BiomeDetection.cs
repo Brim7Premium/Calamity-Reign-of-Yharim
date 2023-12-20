@@ -34,7 +34,7 @@ public class BiomeDetection : MonoBehaviour
 	void GetTile()
 	{
 		var stopit = true;
-		// var nosunset = true;
+		//var nosunset = false;
 		count = GameObject.Find("WorldManager").GetComponent<GameTime>().count;
 		day = (count >= 4.5*60 && count < 19.5*60);
 		Vector3 mp = transform.position; //creates a vector3 named mp that is the player's coordinates 
@@ -82,7 +82,6 @@ public class BiomeDetection : MonoBehaviour
 		{
 			if (tileSpriteName != currentTileName||wasday != day) //if the name of the sprite is not equal to the current tile name
 			{
-				
 				daybg = Color.black;
 				nightbg = new Color(0.11f, 0.17f, 0.28f);
 				wasday = day; // if it becomes night, check the biome again
@@ -96,43 +95,43 @@ public class BiomeDetection : MonoBehaviour
 					// Astral Infection
 					daybg = new Color(0.06666667f, 0.003921569f, 0.07450981f);
 					nightbg = daybg;
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "Desert")
 				{
 					// Desert
 					daybg = new Color(1f, 0.9850028f, 0.8264151f);
-					// nosunset = false;
+	//				nosunset = false;
 				}
 				if (tileSpriteName == "Blight")
 				{
 					// Blight
 					daybg = new Color(0.09783139f, 0.1509434f, 0.06778213f);
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "Bloody")
 				{
 					// Bloody Meteor
 					daybg = new Color(0.09433961f, 0.005603133f, 0f);
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "Ocean")
 				{
 					// Ocean
 					daybg = new Color(0.345283f, 0.8541663f, 1f);
-					// nosunset = false;
+	//				nosunset = false;
 				}
 				if (tileSpriteName == "Sulfur")
 				{
 					// Sulphurous Sea
 					daybg = new Color(0.5457409f, 0.8962264f, 0.3179068f);
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "Tundra")
 				{
 					// Tundra
 					daybg = new Color(0.7415094f, 1f, 0.95700063f);
-					// nosunset = false;
+	//				nosunset = false;
 				}
 				if (tileSpriteName == "Forest")
 				{
@@ -143,69 +142,69 @@ public class BiomeDetection : MonoBehaviour
 						biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Night);
 						biometheme.start();
 					}
-					// nosunset = false;
+	//				nosunset = false;
 				}
 				if (tileSpriteName == "Feral")
 				{
 					// Feral Swamplands
 					daybg = new Color(1f, 1f, 1f); // Change this later
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "Jungle")
 				{
 					// Jungle
 					daybg = new Color(0.5254902f, 1f, 0.8364275f);
-					// nosunset = false;
+	//				nosunset = false;
 				}
 				if (tileSpriteName == "Planetoids")
 				{
 					// Planetoids
 					daybg = new Color(0.701f, 0.9691256f, 1f);
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "Underworld")
 				{
 					// Underworld
 					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 					nightbg = daybg;
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "Space")
 				{
 					// Space
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "Crags")
 				{
 					// Brimstone Crags/Azafure
 					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 					nightbg = daybg;
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "Abyss1")
 				{
 					// Sulphuric depths
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "SunkenSea")
 				{
 					// Sunken Sea
 					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 					nightbg = daybg;
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "Obsidian")
 				{
 					// Obsidian Cliffs
 					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
-					// nosunset = true;
+	//				nosunset = true;
 				}
 				if (tileSpriteName == "Garden")
 				{
 					// Profaned Garden
 					daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 					nightbg = daybg;
-					// nosunset = true;
+	//				nosunset = true;
 				}
 			}
 		}
@@ -214,6 +213,7 @@ public class BiomeDetection : MonoBehaviour
 		{
 			mainCam.backgroundColor = nightbg;
 		}
+		
 
 		if (count > 1000 && day)
 		{

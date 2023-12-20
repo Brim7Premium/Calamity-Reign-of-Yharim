@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7569908533244316430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: 
+  Guid:
+    Data1: 221464269
+    Data2: 1217105836
+    Data3: 422054788
+    Data4: -1480107127
+  Banks:
+  - {fileID: -2004007188080043890}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5639068219935851250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,10 +204,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638378088616261912
+  lastModified: 638386692653114541
   FileSizes:
   - Name: Desktop
-    Value: 74624
+    Value: 107360
   Exists: 1
 --- !u!114 &-732927777906129053
 MonoBehaviour:
@@ -252,12 +279,15 @@ MonoBehaviour:
   - {fileID: 1702753003359183674}
   - {fileID: -5639068219935851250}
   - {fileID: 2010485684554415442}
+  - {fileID: -7569908533244316430}
+  - {fileID: 3831801765672918202}
+  - {fileID: 7321732021376106250}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3028886396130634377}
   StringsBanks:
   - {fileID: 902356820115119347}
-  cacheTime: 638381523547512991
+  cacheTime: 638386692653114541
   cacheVersion: 131609
 --- !u!114 &546284754107875172
 MonoBehaviour:
@@ -328,10 +358,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638378304863213267
+  lastModified: 638386692647525913
   FileSizes:
   - Name: Desktop
-    Value: 2196
+    Value: 2298
   Exists: 1
 --- !u!114 &946936322358597608
 MonoBehaviour:
@@ -456,10 +486,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638381523547512991
+  lastModified: 638386692651161080
   FileSizes:
   - Name: Desktop
-    Value: 45650208
+    Value: 45652640
   Exists: 1
 --- !u!114 &2881846437759727473
 MonoBehaviour:
@@ -503,7 +533,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638378304863180012
+  lastModified: 638386692647490897
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -526,6 +556,33 @@ MonoBehaviour:
     Data2: 1123115900
     Data3: -1383411011
     Data4: 1523751751
+  Banks:
+  - {fileID: -2004007188080043890}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3831801765672918202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menus/TitleHover
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menus/TitleHover
+  Guid:
+    Data1: -1613839606
+    Data2: 1250169553
+    Data3: 1583251902
+    Data4: -1788466678
   Banks:
   - {fileID: -2004007188080043890}
   IsStream: 0
@@ -724,6 +781,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 173094
+--- !u!114 &7321732021376106250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menus/TitleClick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menus/TitleClick
+  Guid:
+    Data1: -781007299
+    Data2: 1103923496
+    Data3: 2126583977
+    Data4: -397680669
+  Banks:
+  - {fileID: -2004007188080043890}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7415387764424267375
 MonoBehaviour:
   m_ObjectHideFlags: 0
