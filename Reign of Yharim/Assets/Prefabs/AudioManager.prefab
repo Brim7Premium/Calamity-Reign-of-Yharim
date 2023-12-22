@@ -252,13 +252,6 @@ MonoBehaviour:
       Data3: -1062187635
       Data4: 145595881
     Path: event:/Music/Biomes/LegendStrife4
-  <FullDay>k__BackingField:
-    Guid:
-      Data1: -398687929
-      Data2: 1257171541
-      Data3: 2024989350
-      Data4: 1698125847
-    Path: event:/Music/Biomes/LegendStrifeFull
   <Night>k__BackingField:
     Guid:
       Data1: 743056841
@@ -280,3 +273,17 @@ MonoBehaviour:
       Data3: 495798192
       Data4: -1542258567
     Path: event:/Music/Other/WulfrumArmy
+  <FullDay>k__BackingField:
+    Guid:
+      Data1: -398687929
+      Data2: 1257171541
+      Data3: 2024989350
+      Data4: 1698125847
+    Path: event:/Music/Extras/LegendStrifeFull
+  <SCalFull>k__BackingField:
+    Guid:
+      Data1: -1493975308
+      Data2: 1251859411
+      Data3: 944895636
+      Data4: -1410694017
+    Path: event:/Music/Extras/StainedBrutalCalamity

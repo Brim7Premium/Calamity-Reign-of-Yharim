@@ -37,12 +37,13 @@ public class FMODEvents : MonoBehaviour
 	[field: SerializeField] public EventReference Day2 { get; private set; }
 	[field: SerializeField] public EventReference Day3 { get; private set; }
 	[field: SerializeField] public EventReference Day4 { get; private set; }
-	[field: SerializeField] public EventReference FullDay { get; private set; }
 	[field: SerializeField] public EventReference Night { get; private set; }
 
 	[field: Header("Other Music")]
 	[field: SerializeField] public EventReference Title { get; private set; }
 	[field: SerializeField] public EventReference WulfrumArmy { get; private set; }
+	[field: SerializeField] public EventReference FullDay { get; private set; }
+	[field: SerializeField] public EventReference SCalFull { get; private set; }
 	public static FMODEvents instance { get; private set; }
 
 	private void Awake()

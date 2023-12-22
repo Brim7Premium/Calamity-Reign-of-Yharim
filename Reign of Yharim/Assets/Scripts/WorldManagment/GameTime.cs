@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Tilemaps;
 using TMPro;
 using FMODUnity;
 using FMOD.Studio;
@@ -16,10 +17,10 @@ public class GameTime : MonoBehaviour
 	[SerializeField] private Vector3 rotation;
 
 	private GameObject settingsobj;
+	private GameObject detection;
 
 	IEnumerator Start()
 	{
-		
 		settingsobj = GameObject.Find("[Settings]");
 		if (settingsobj == null)
 		{

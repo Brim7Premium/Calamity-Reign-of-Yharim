@@ -1,7 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
+using FMODUnity;
+using FMOD.Studio;
 
 public class RespawnPlayer : MonoBehaviour
 {

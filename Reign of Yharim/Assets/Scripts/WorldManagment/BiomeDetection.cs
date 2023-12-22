@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using FMOD.Studio;
-using FMODUnity;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
+using FMODUnity;
+using FMOD.Studio;
 
 public class BiomeDetection : MonoBehaviour
 {
@@ -16,7 +18,11 @@ public class BiomeDetection : MonoBehaviour
 
 	public Camera mainCam;
 
+	public bool bossAlive;
+	private bool bossWasAlive = false;
+
 	private EventInstance biometheme;
+	private EventInstance foresttheme;
 	private bool day = true;
 	private bool wasday = false;
 	private int daythemenum = 0;
@@ -26,14 +32,37 @@ public class BiomeDetection : MonoBehaviour
 	private Color daybg = Color.black;
 	private Color nightbg = new Color(0.11f, 0.17f, 0.28f);
 
+	void Start()
+	{
+		DontDestroyOnLoad(this);
+		this.GetComponent<BiomeDetection>().tiles = GameObject.Find("/Grid/Biome").GetComponent<Tilemap>();
+		this.GetComponent<BiomeDetection>().mainCam = GameObject.Find("Pixel Perfect Camera").GetComponent<Camera>();
+	}
+
 	void Update()
 	{
 		GetTile();
+		
+		if (bossAlive)
+		{
+			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			foresttheme.setVolume(0f);
+		}
+
+		if (bossAlive != bossWasAlive)
+		{
+			bossWasAlive = bossAlive;
+
+			if (!bossAlive)
+			{
+				wasday = !day;
+			}
+		}
 	}
 
 	void GetTile()
 	{
-		var stopit = true;
+		var forvol = 1f;
 		//var nosunset = false;
 		count = GameObject.Find("WorldManager").GetComponent<GameTime>().count;
 		day = (count >= 4.5*60 && count < 19.5*60);
@@ -45,8 +74,14 @@ public class BiomeDetection : MonoBehaviour
 			tileSpriteName = tileSprite.name; //set the variable tilespritename to the name of the tilesprite
 		}
 
-		if (tileSpriteName == "Forest" && day) // dedicated forest day time system
-		{
+		if (tileSpriteName == "Forest" && day && !bossAlive) // dedicated forest day time system
+		{	
+			foresttheme.getVolume(out forvol);
+			if (forvol != 1f)
+			{
+				foresttheme.setVolume(forvol + .01f);
+			}
+			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 			var newdaythemenum = daythemenum;
 			var eventref = FMODEvents.instance.FullDay;
 			if (count >= 4.5*60 && count < 7.5*60)
@@ -71,24 +106,29 @@ public class BiomeDetection : MonoBehaviour
 			}
 			if (daythemenum != newdaythemenum)
 			{
-				biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-				biometheme = AudioManager.instance.CreateEventInstance(eventref);
-				biometheme.start();
-				stopit = false;
+				foresttheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+				foresttheme = AudioManager.instance.CreateEventInstance(eventref);
+				foresttheme.start();
+			}
+		}
+
+		if (tileSpriteName != "Forest" && day && !bossAlive) // makes the forest themes not stop, and instead only mute
+		{
+			foresttheme.getVolume(out forvol);
+			if (forvol != 0f)
+			{
+				foresttheme.setVolume(forvol - .01f);
 			}
 		}
 
 		if (tiles.GetTile(tileAtPlayer)) //if there is a tile behind the player
 		{
-			if (tileSpriteName != currentTileName||wasday != day) //if the name of the sprite is not equal to the current tile name
+			if ((tileSpriteName != currentTileName || wasday != day) && !bossAlive) //if the name of the sprite is not equal to the current tile name or it changes day
 			{
 				daybg = Color.black;
 				nightbg = new Color(0.11f, 0.17f, 0.28f);
 				wasday = day; // if it becomes night, check the biome again
-				if (stopit)
-				{
-					biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-				}
+				biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 				currentTileName = tileSpriteName; //set the current tile name to the name of the sprite
 				if (tileSpriteName == "Astral")
 				{

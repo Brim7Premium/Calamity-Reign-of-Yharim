@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
@@ -16,6 +17,11 @@ public class MainMenu : MonoBehaviour
 	private EventInstance TitleTheme;
 	public void Awake()
 	{
+		var detection = GameObject.Find("WorldManager");
+		if (detection != null)
+		{
+			Destroy(detection);
+		}
 		settingsobj = GameObject.Find("[Settings]");
 		if (settingsobj == null)
 		{

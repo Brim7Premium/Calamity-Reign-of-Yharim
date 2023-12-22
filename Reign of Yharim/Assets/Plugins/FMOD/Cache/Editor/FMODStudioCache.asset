@@ -81,33 +81,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3559577084203028722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Biomes/LegendStrifeFull
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Biomes/LegendStrifeFull
-  Guid:
-    Data1: -398687929
-    Data2: 1257171541
-    Data3: 2024989350
-    Data4: 1698125847
-  Banks:
-  - {fileID: 2691093139799092262}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 908661
 --- !u!114 &-2919780346125656956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +162,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 261329
+--- !u!114 &-2375207752074138177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Extras/StainedBrutalCalamity
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Extras/StainedBrutalCalamity
+  Guid:
+    Data1: -1493975308
+    Data2: 1251859411
+    Data3: 944895636
+    Data4: -1410694017
+  Banks:
+  - {fileID: 2691093139799092262}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 654640
 --- !u!114 &-2004007188080043890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +258,6 @@ MonoBehaviour:
   - {fileID: 7052553924543413460}
   - {fileID: 4476949046128260815}
   - {fileID: 7415387764424267375}
-  - {fileID: -3559577084203028722}
   - {fileID: 946936322358597608}
   - {fileID: 4871817780850409379}
   - {fileID: 5908144697183166965}
@@ -282,13 +281,42 @@ MonoBehaviour:
   - {fileID: -7569908533244316430}
   - {fileID: 3831801765672918202}
   - {fileID: 7321732021376106250}
+  - {fileID: 541770019857567228}
+  - {fileID: -2375207752074138177}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3028886396130634377}
   StringsBanks:
   - {fileID: 902356820115119347}
-  cacheTime: 638386692653114541
+  cacheTime: 638387951106754593
   cacheVersion: 131609
+--- !u!114 &541770019857567228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Extras/LegendStrifeFull
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Extras/LegendStrifeFull
+  Guid:
+    Data1: -398687929
+    Data2: 1257171541
+    Data3: 2024989350
+    Data4: 1698125847
+  Banks:
+  - {fileID: 2691093139799092262}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 908661
 --- !u!114 &546284754107875172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,10 +386,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638386692647525913
+  lastModified: 638387951106754593
   FileSizes:
   - Name: Desktop
-    Value: 2298
+    Value: 2380
   Exists: 1
 --- !u!114 &946936322358597608
 MonoBehaviour:
@@ -486,10 +514,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638386692651161080
+  lastModified: 638387920352037937
   FileSizes:
   - Name: Desktop
-    Value: 45652640
+    Value: 45654304
   Exists: 1
 --- !u!114 &2881846437759727473
 MonoBehaviour:
@@ -533,7 +561,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638386692647490897
+  lastModified: 638387951106724525
   FileSizes:
   - Name: Desktop
     Value: 1340

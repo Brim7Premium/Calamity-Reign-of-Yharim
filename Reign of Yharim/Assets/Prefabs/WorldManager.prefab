@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8259226312396589007}
   - component: {fileID: 5987774417915350164}
   - component: {fileID: 4668514122555263029}
+  - component: {fileID: -4691757716868052074}
   m_Layer: 0
   m_Name: WorldManager
   m_TagString: Untagged
@@ -62,6 +63,7 @@ MonoBehaviour:
   count: 270
   orbitPoint: {fileID: 0}
   rotation: {x: 0, y: 0, z: 0}
+  detectionprefab: {fileID: 4967842705690205018, guid: b065ffc0c6198c74b91038bbe0314505, type: 3}
 --- !u!114 &5987774417915350164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,3 +92,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+--- !u!114 &-4691757716868052074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6002345298359544163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257b62284a26b714da5d47c70e282102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles: {fileID: 0}
+  tileAtPlayer: {x: 0, y: 0, z: 0}
+  tileSprite: {fileID: 0}
+  currentTileName: 
+  mainCam: {fileID: 0}
+  bossAlive: 0
