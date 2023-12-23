@@ -15,6 +15,7 @@ public class GameTime : MonoBehaviour
 
 	[SerializeField] private Transform orbitPoint;
 	[SerializeField] private Vector3 rotation;
+	[SerializeField] private GameObject player;
 
 	private GameObject settingsobj;
 	private GameObject detection;
@@ -75,7 +76,7 @@ public class GameTime : MonoBehaviour
 	void Update()
 	{ 
 		orbitPoint.rotation = Quaternion.Euler(0, 0, count/-4f);
-		try{orbitPoint.position = GameObject.Find("Player").transform.position;
+		try{orbitPoint.position = player.transform.position;
 		orbitPoint.position -= new Vector3(0, 20, 0);}catch{}
 	}
 }

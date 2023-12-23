@@ -10,10 +10,12 @@ using FMOD.Studio;
 
 public class BiomeDetection : MonoBehaviour
 {
+	[SerializeField] private GameObject player;
+	
 	public Tilemap tiles;
 	public Vector3Int tileAtPlayer;
 	public Sprite tileSprite;
-	private string tileSpriteName;
+	public string tileSpriteName = "Forest";
 	public string currentTileName;
 
 	public Camera mainCam;
@@ -27,6 +29,8 @@ public class BiomeDetection : MonoBehaviour
 	private bool wasday = false;
 	private int daythemenum = 0;
 
+	public Tilemap[] tileMapObjs;
+
 	private int count;
 
 	private Color daybg = Color.black;
@@ -34,9 +38,7 @@ public class BiomeDetection : MonoBehaviour
 
 	void Start()
 	{
-		DontDestroyOnLoad(this);
-		this.GetComponent<BiomeDetection>().tiles = GameObject.Find("/Grid/Biome").GetComponent<Tilemap>();
-		this.GetComponent<BiomeDetection>().mainCam = GameObject.Find("Pixel Perfect Camera").GetComponent<Camera>();
+		tiles = GameObject.Find($"/Grid/{tileSpriteName}").GetComponent<Tilemap>();
 	}
 
 	void Update()
@@ -45,7 +47,7 @@ public class BiomeDetection : MonoBehaviour
 		
 		if (bossAlive)
 		{
-			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			biometheme.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 			foresttheme.setVolume(0f);
 		}
 
@@ -61,18 +63,20 @@ public class BiomeDetection : MonoBehaviour
 	}
 
 	void GetTile()
-	{
+	{	
 		var forvol = 1f;
 		//var nosunset = false;
-		count = GameObject.Find("WorldManager").GetComponent<GameTime>().count;
+		count = this.GetComponent<GameTime>().count;
 		day = (count >= 4.5*60 && count < 19.5*60);
-		Vector3 mp = transform.position; //creates a vector3 named mp that is the player's coordinates 
-		tileAtPlayer = tiles.WorldToCell(mp); //sets the vector3int location to the tile at the player's coordinates
+		tileAtPlayer = tiles.WorldToCell(player.transform.position); //sets the vector3int location to the tile at the player's coordinates
 		tileSprite = tiles.GetSprite(tileAtPlayer); //gets the sprite of the tile at the player's location and assigns it to the tilesprite variable
+		
 		if (tileSprite != null) //if the sprite exists (if the player is behind a background tile)
 		{
 			tileSpriteName = tileSprite.name; //set the variable tilespritename to the name of the tilesprite
 		}
+
+		tiles = GameObject.Find($"/Grid/{tileSpriteName}").GetComponent<Tilemap>();
 
 		if (tileSpriteName == "Forest" && day && !bossAlive) // dedicated forest day time system
 		{	

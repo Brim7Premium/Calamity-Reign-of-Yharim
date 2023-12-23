@@ -11,14 +11,13 @@ using FMOD.Studio;
 public class RespawnPlayer : MonoBehaviour
 {
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject timerobj;
 
     private PlayerAI playerAI;
-    private GameObject timerobj;
 
     private void Start()
     {
         playerAI = player.GetComponent<PlayerAI>();
-        timerobj = GameObject.Find("RespawnTimer");
         timerobj.SetActive(false);
     }
 

@@ -11,9 +11,6 @@ public class GreenSlimeAI : NPC
 	private bool isGrounded = false;
 	private int curTargetPos;
 
-	private EventInstance bosstheme;
-	public bool playing;
-
 	const string SlimeBounce = "Slime_bounce";
 	const string SlimeIdle = "Slime_idle";
 
@@ -27,21 +24,12 @@ public class GreenSlimeAI : NPC
 		Life = LifeMax;
 
 		target = GameObject.Find("Player");
-		if (!GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive)
-		{
-			bosstheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.SCal2);
-			bosstheme.start();
-			playing = true;
-		}
 	}
 
 	public override void AI()
 	{
 		if (target != null)
-		{
-			GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive = true;
-			playing = true;
-			
+		{	
 			animator.speed = 0.8f;
 
 			ai[1]++;
@@ -65,12 +53,7 @@ public class GreenSlimeAI : NPC
 		}
 		
 	}
-	void OnDestroy()
-	{
-		bosstheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-		GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive = false;
-		playing = false;
-	}
+
 	private void FixedUpdate()
 	{
 		float extraHeight = 0.4f; 

@@ -12,16 +12,14 @@ public class MainMenu : MonoBehaviour
 {
 	public MainMenuScreens menuScreens;
 
+	public Image loadingbarimg;
+
 	private GameObject settingsobj;
+	private List<AsyncOperation> scenestoload = new List<AsyncOperation>();
 
 	private EventInstance TitleTheme;
 	public void Awake()
 	{
-		var detection = GameObject.Find("WorldManager");
-		if (detection != null)
-		{
-			Destroy(detection);
-		}
 		settingsobj = GameObject.Find("[Settings]");
 		if (settingsobj == null)
 		{
@@ -39,11 +37,27 @@ public class MainMenu : MonoBehaviour
 		AudioManager.instance.PlayOneShot(FMODEvents.instance.TitleHover);
 	}
 
-	public void EnterWorld()
+	void EnterWorld()
 	{
+		scenestoload.Add(SceneManager.LoadSceneAsync("Forest"));
+		scenestoload.Add(SceneManager.LoadSceneAsync("Systems", LoadSceneMode.Additive));
+		StartCoroutine(LoadingBar());
 		AudioManager.instance.PlayOneShot(FMODEvents.instance._055Roar);
 		TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-		SceneManager.LoadScene("Surface");
+	}
+
+	IEnumerator LoadingBar()
+	{
+		float loadprogress = 0f;
+		for (int i = 0; i < scenestoload.Count; i++)
+		{
+			while (!scenestoload[i].isDone)
+			{
+				loadprogress += scenestoload[i].progress;
+				loadingbarimg.fillAmount = loadprogress / scenestoload.Count;
+				yield return null;
+			}
+		}
 	}
 
 	public void LeaveGame()
@@ -57,19 +71,19 @@ public class MainMenu : MonoBehaviour
 		AudioManager.instance.PlayOneShot(FMODEvents.instance.TitleClick);
 	}
 
+	[SerializeField] private Slider respawntimeSliderObj;
 	public void setrespawntime()
 	{
-		var obj = GameObject.Find("RespawnTimeSlider");
-		var timeSlider = obj.GetComponent<Slider>();
-		var indicator = obj.GetComponent<TextMeshProUGUI>();
+		Slider timeSlider = respawntimeSliderObj.GetComponent<Slider>();
+		TextMeshProUGUI indicator = respawntimeSliderObj.GetComponent<TextMeshProUGUI>();
 		indicator.text = ((int)timeSlider.value).ToString();
 		settingsobj.GetComponent<bracketSettingsbracket>().respawnTime = (int)timeSlider.value;
 	}
 
+	[SerializeField] private Toggle militaryTimeToggle;
 	public void setmilitarytime()
 	{
-		var obj = GameObject.Find("MilitaryToggle");
-		settingsobj.GetComponent<bracketSettingsbracket>().militaryTime = obj.GetComponent<Toggle>().isOn;
+		settingsobj.GetComponent<bracketSettingsbracket>().militaryTime = militaryTimeToggle.isOn;
 	}
 
 	public void ChangeMenuScreen(float menuID)
@@ -103,6 +117,10 @@ public class MainMenu : MonoBehaviour
 		{
 			menuScreens = MainMenuScreens.OptionsVideo;
 		}
+		if (menuID == 8)
+		{
+			menuScreens = MainMenuScreens.Loading;
+		}
 		Debug.Log(menuScreens);
 	} 
 	/* Set the variables using unity's built in button system
@@ -119,6 +137,7 @@ public class MainMenu : MonoBehaviour
 		Options,
 		OptionsAudio,
 		OptionsGeneral,
-		OptionsVideo
+		OptionsVideo,
+		Loading
 	}
 }
