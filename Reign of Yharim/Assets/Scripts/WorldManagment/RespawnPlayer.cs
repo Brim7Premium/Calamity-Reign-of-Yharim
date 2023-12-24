@@ -40,9 +40,12 @@ public class RespawnPlayer : MonoBehaviour
             seconds -= 1;
         }
         seconds = respawnSeconds;
+        SceneManager.LoadScene("MainMenu");
+        /*
         player.SetActive(true);
         timerobj.SetActive(false);
         playerAI.SetDefaults();
         playerAI.StartCoroutine(playerAI.Immunity());
+        */
     }
 }

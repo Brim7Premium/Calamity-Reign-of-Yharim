@@ -15,7 +15,6 @@ public class MainMenu : MonoBehaviour
 	public Image loadingbarimg;
 
 	private GameObject settingsobj;
-	private List<AsyncOperation> scenestoload = new List<AsyncOperation>();
 
 	private EventInstance TitleTheme;
 	public void Awake()
@@ -39,25 +38,12 @@ public class MainMenu : MonoBehaviour
 
 	void EnterWorld()
 	{
-		scenestoload.Add(SceneManager.LoadSceneAsync("Forest"));
-		scenestoload.Add(SceneManager.LoadSceneAsync("Systems", LoadSceneMode.Additive));
-		StartCoroutine(LoadingBar());
-		AudioManager.instance.PlayOneShot(FMODEvents.instance._055Roar);
 		TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-	}
-
-	IEnumerator LoadingBar()
-	{
-		float loadprogress = 0f;
-		for (int i = 0; i < scenestoload.Count; i++)
-		{
-			while (!scenestoload[i].isDone)
-			{
-				loadprogress += scenestoload[i].progress;
-				loadingbarimg.fillAmount = loadprogress / scenestoload.Count;
-				yield return null;
-			}
-		}
+		SceneManager.LoadScene("TempCam"); // So there isnt a missing camera for a second, also acts as a loading screen
+		SceneManager.LoadSceneAsync("Forest", LoadSceneMode.Additive); // biome MUST be loaded before the systems
+		SceneManager.LoadSceneAsync("Systems", LoadSceneMode.Additive);
+		SceneManager.UnloadSceneAsync("TempCam");
+		AudioManager.instance.PlayOneShot(FMODEvents.instance._055Roar);
 	}
 
 	public void LeaveGame()
@@ -117,10 +103,6 @@ public class MainMenu : MonoBehaviour
 		{
 			menuScreens = MainMenuScreens.OptionsVideo;
 		}
-		if (menuID == 8)
-		{
-			menuScreens = MainMenuScreens.Loading;
-		}
 		Debug.Log(menuScreens);
 	} 
 	/* Set the variables using unity's built in button system
@@ -138,6 +120,5 @@ public class MainMenu : MonoBehaviour
 		OptionsAudio,
 		OptionsGeneral,
 		OptionsVideo,
-		Loading
 	}
 }

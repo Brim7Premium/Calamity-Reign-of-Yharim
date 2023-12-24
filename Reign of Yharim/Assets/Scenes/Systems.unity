@@ -1823,7 +1823,7 @@ Transform:
   m_GameObject: {fileID: 392279457}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -220.5, y: 36.1, z: -9.65}
+  m_LocalPosition: {x: 41.7, y: 36.8, z: -9.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3401,11 +3401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1250109776}
-  tiles: {fileID: 0}
-  tileAtPlayer: {x: 0, y: 0, z: 0}
-  tileSprite: {fileID: 0}
-  tileSpriteName: Forest
-  currentTileName: 
+  biomeName: Forest
+  prevBiomeName: 
   mainCam: {fileID: 392279462}
   bossAlive: 0
   tileMapObjs: []
@@ -7783,7 +7780,7 @@ Transform:
   m_GameObject: {fileID: 2005344489}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -220.5, y: 36.1, z: -9.65}
+  m_LocalPosition: {x: 41.7, y: 36.8, z: -9.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8091,11 +8088,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2160703249615966324, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -220.5
+      value: 41.7
       objectReference: {fileID: 0}
     - target: {fileID: 2160703249615966324, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33
+      value: 33.7
       objectReference: {fileID: 0}
     - target: {fileID: 2160703249615966324, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalPosition.z

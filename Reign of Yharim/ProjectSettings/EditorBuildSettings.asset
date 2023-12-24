@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Systems.unity
     guid: a1c449e8bd65d934dbdf89df91fc62ef
+  - enabled: 1
+    path: Assets/Scenes/TempCam.unity
+    guid: 9649033b618eb124791a4e7c450dbea0
+  - enabled: 1
+    path: Assets/Scenes/Bloody.unity
+    guid: 02d994495282b0f479901bb5fc37af10
+  - enabled: 1
+    path: Assets/Scenes/Tundra.unity
+    guid: 14a079614cae4b946b9fd1d87dac252f
   m_configObjects: {}
