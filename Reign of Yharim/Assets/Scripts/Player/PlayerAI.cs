@@ -93,9 +93,9 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         ItemData item = gUIController.GetSelectedItem(false);
         if(Input.GetKeyDown(KeyCode.Mouse0) && item && !IsAttacking)
         {
+            IsAttacking = true;
             GameObject attack = Instantiate(DefaultAttackPrefab, transform);
             attack.AddComponent(Type.GetType(item.UseScript)).GetComponent<ItemUse>().item = gUIController.GetSelectedItem(item.consumable);
-            IsAttacking = true;
         }
     }
     public override void Kill()

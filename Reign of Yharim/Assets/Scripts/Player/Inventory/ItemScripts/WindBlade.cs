@@ -5,23 +5,24 @@ using UnityEngine;
 
 public class WindBlade : ItemUse
 {
-    // Start is called before the first frame update
-    public override IEnumerator Start()
+    public GameObject WindBladeProj;
+    public override void SetDefaults()
     {
-        StartCoroutine(base.Start());
-        gameObject.transform.localScale = Vector2.one * 0.5f;
-        gameObject.transform.localPosition = Vector2.one;
-        StartCoroutine(Swing(5));
-        yield return new WaitForFixedUpdate();
+        //sets basic variables, such as texture
+        base.SetDefaults();
+
+        //idk should be this included in ItemData
+        int AtkSpeed = 5;
+        bool DestroyOnEnd = true;
+        transform.localPosition = Vector2.one;
+        StartCoroutine(Swing(AtkSpeed, DestroyOnEnd));
+
+        
     }
 
-    // Update is called once per frame
     public override void Use()
     {
         
     }
-    public void OnDestroy()
-    {
-        transform.parent.GetComponent<PlayerAI>().IsAttacking = false;
-    }
+    
 }

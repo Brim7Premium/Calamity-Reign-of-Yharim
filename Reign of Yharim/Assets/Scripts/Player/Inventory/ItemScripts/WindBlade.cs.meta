@@ -3,7 +3,9 @@ guid: 75675a3f80d114a47bbd31be29c169f8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - item: {fileID: 11400000, guid: 50dd648746c83c4459819cf6fbc39302, type: 2}
+  - WindBladeProj: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

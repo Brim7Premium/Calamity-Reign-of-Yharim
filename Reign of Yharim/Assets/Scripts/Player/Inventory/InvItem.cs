@@ -13,7 +13,7 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     public TMP_Text countText;
 
     [HideInInspector] public ItemData item;
-    [SerializeField] private int _count;
+    [SerializeField] private int _count = 1;
     public int count
     {
         set

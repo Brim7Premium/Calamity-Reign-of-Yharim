@@ -30,8 +30,11 @@ public class GUIController : MonoBehaviour
     const string HeartDeath = "Heart_death";
     const string HeartFull = "Heart_full";
 
-    private void Start()
+    private IEnumerator Start()
     {
+        //Invetory instantiated in runtime
+        //At least one frame should pass before any actions
+        yield return new WaitForFixedUpdate();
         inventoryOpened = false;
         ChangeSelectedSlot(0);
     }
