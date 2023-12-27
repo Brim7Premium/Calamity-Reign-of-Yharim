@@ -3405,7 +3405,6 @@ MonoBehaviour:
   prevBiomeName: 
   mainCam: {fileID: 392279462}
   bossAlive: 0
-  tileMapObjs: []
 --- !u!114 &819527062
 MonoBehaviour:
   m_ObjectHideFlags: 0

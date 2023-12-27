@@ -203,7 +203,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 		{
 			if (collision.name == "Biome")
 			{
-		        Debug.Log("In Biome");
+		        Debug.Log($"In {collision.gameObject.scene.name}");
 				worldManager.GetComponent<BiomeDetection>().biomeName = collision.gameObject.scene.name;
 			}
 		}

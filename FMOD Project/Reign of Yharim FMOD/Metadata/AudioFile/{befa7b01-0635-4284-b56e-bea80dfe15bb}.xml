@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{befa7b01-0635-4284-b56e-bea80dfe15bb}">
 		<property name="assetPath">
-			<value>MUS_CalamitasDefeat.ogg</value>
+			<value>MUS_CalamitasDefeat.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
