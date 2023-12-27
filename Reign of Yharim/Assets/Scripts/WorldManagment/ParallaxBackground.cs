@@ -5,7 +5,6 @@ public class ParallaxBackground : MonoBehaviour
 	[SerializeField] private Transform background; //the transform of the attached background object
 	[SerializeField] private float parallaxEffect; 
 	[SerializeField] private float smoothing = 1f;
-	[SerializeField] private string biome;
 
 	private GameObject worldmanager;
 	private GameObject player;
@@ -32,7 +31,7 @@ public class ParallaxBackground : MonoBehaviour
 
 		if (dontcheck)
 		{
-			if (worldmanager.GetComponent<BiomeDetection>().biomeName == biome)
+			if (worldmanager.GetComponent<BiomeDetection>().biomeName == this.gameObject.scene.name)
 			{
 				this.transform.GetChild(0).gameObject.SetActive(true);
 				float parallax = (previousCameraPosition.x - cameraTransform.position.x) * parallaxEffect; //parallax variable is the x of previousCameraPosition subtracted by the transform of the main camera. this is then multiplied by the paralaxEffect variable.
