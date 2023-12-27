@@ -12,6 +12,7 @@ public class LoadingTriggers : MonoBehaviour
 {
 	[SerializeField] private string[] scenesToLoad;
 	[SerializeField] private string[] scenesToUnload;
+	[SerializeField] private string[] bossConditions; // impliment later
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
@@ -30,6 +31,7 @@ public class LoadingTriggers : MonoBehaviour
 			for (int j = 0; j < SceneManager.sceneCount; j++)
 			{
 				Scene loadedScene = SceneManager.GetSceneAt(j);
+				Debug.Log($"Loading {loadedScene.name}");
 				if (loadedScene.name == scenesToLoad[i])
 				{
 					sceneloaded = true;

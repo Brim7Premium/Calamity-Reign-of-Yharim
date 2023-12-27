@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+using FMODUnity;
+using FMOD.Studio;
 
 public class PlayerAI : NPC //basically, this script is a copy of the npc script and all of it's values. the main differences are that each value can be overriden from the base script for the new one, and this one can be attached to gameobjects.
 {
@@ -186,4 +191,21 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         isJumping = false; //set isjumping to false (doesn't trigger until the above loop is done)
     }
+
+    public GameObject worldManager;
+    void OnTriggerStay2D(Collider2D collision)
+	{
+        if (worldManager == null)
+        {
+            worldManager = GameObject.Find("WorldManager");
+        }
+		if (worldManager != null)
+		{
+			if (collision.name == "Biome")
+			{
+		        Debug.Log("In Biome");
+				worldManager.GetComponent<BiomeDetection>().biomeName = collision.gameObject.scene.name;
+			}
+		}
+	}
 }
