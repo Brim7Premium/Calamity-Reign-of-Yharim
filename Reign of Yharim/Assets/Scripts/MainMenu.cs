@@ -42,7 +42,6 @@ public class MainMenu : MonoBehaviour
 		SceneManager.LoadScene("TempCam"); // So there isnt a missing camera for a second, also acts as a loading screen
 		SceneManager.LoadSceneAsync("Forest", LoadSceneMode.Additive); // biome MUST be loaded before the systems
 		SceneManager.LoadSceneAsync("Systems", LoadSceneMode.Additive);
-		SceneManager.UnloadSceneAsync("TempCam");
 		AudioManager.instance.PlayOneShot(FMODEvents.instance._055Roar);
 	}
 

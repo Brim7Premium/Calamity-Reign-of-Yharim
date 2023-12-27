@@ -61,7 +61,7 @@ public class BiomeDetection : MonoBehaviour
 		if (biomeName == "Forest" && day && !bossAlive) // dedicated forest day time system
 		{	
 			foresttheme.getVolume(out forvol);
-			if (forvol != 1f)
+			if (forvol < 1f)
 			{
 				foresttheme.setVolume(forvol + .01f);
 			}
@@ -99,9 +99,14 @@ public class BiomeDetection : MonoBehaviour
 		if (biomeName != "Forest" && day && !bossAlive) // makes the forest themes not stop, and instead only mute
 		{
 			foresttheme.getVolume(out forvol);
-			if (forvol != 0f)
+			if (forvol > .01f)
 			{
 				foresttheme.setVolume(forvol - .01f);
+			}
+
+			else
+			{
+				foresttheme.setVolume(0f);
 			}
 		}
 

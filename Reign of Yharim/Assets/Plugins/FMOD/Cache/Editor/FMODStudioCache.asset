@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 5402814827843651135}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -370,7 +370,7 @@ MonoBehaviour:
   - {fileID: 7922514285120898230}
   StringsBanks:
   - {fileID: 7607827413165057428}
-  cacheTime: 638392242606341665
+  cacheTime: 638392247797402378
   cacheVersion: 131616
 --- !u!114 &185198468472118980
 MonoBehaviour:
@@ -475,7 +475,7 @@ MonoBehaviour:
   - {fileID: 5402814827843651135}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -583,7 +583,7 @@ MonoBehaviour:
   - {fileID: 5402814827843651135}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -711,10 +711,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638392242606341665
+  lastModified: 638392247797402378
   FileSizes:
   - Name: Desktop
-    Value: 55025184
+    Value: 55025696
   Exists: 1
 --- !u!114 &6187847011653479552
 MonoBehaviour:
@@ -819,7 +819,7 @@ MonoBehaviour:
   - {fileID: 5402814827843651135}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20

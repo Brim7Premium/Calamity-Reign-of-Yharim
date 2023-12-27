@@ -8,6 +8,7 @@ public class ParallaxBackground : MonoBehaviour
 	[SerializeField] private string biome;
 
 	private GameObject worldmanager;
+	private GameObject player;
 
 	private Transform cameraTransform; //the transform of the main camera
 	private Vector3 previousCameraPosition; //the previous camera position
@@ -20,7 +21,8 @@ public class ParallaxBackground : MonoBehaviour
 		if (!dontcheck)
 		{
 			worldmanager = GameObject.Find("WorldManager");
-			if (worldmanager != null)
+			player = GameObject.Find("Player");
+			if (worldmanager != null && player != null)
 			{
 				dontcheck = true;
 				cameraTransform = Camera.main.transform;
@@ -32,6 +34,7 @@ public class ParallaxBackground : MonoBehaviour
 		{
 			if (worldmanager.GetComponent<BiomeDetection>().biomeName == biome)
 			{
+				this.transform.GetChild(0).gameObject.SetActive(true);
 				float parallax = (previousCameraPosition.x - cameraTransform.position.x) * parallaxEffect; //parallax variable is the x of previousCameraPosition subtracted by the transform of the main camera. this is then multiplied by the paralaxEffect variable.
 				float backgroundTargetPosX = background.position.x - parallax; //backgroundtargetPosX is the x position of the background object, subtracted by the parallax variable.
 				Vector2 backgroundTargetPos = new Vector3(backgroundTargetPosX, background.position.y); //the backgroundTargetPos is a vector2 with backgroundTargetPosX for x and the y position of the background object for y)
@@ -53,7 +56,7 @@ public class ParallaxBackground : MonoBehaviour
 
 			else
 			{
-				this.transform.position = new Vector3(100000f, this.transform.position.y, 0.3500004f);
+				this.transform.GetChild(0).gameObject.SetActive(false);
 			}
 		}
 	}

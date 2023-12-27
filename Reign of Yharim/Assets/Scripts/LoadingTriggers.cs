@@ -10,14 +10,15 @@ using FMOD.Studio;
 
 public class LoadingTriggers : MonoBehaviour
 {
-	[SerializeField] private string[] scenesToLoad;
-	[SerializeField] private string[] scenesToUnload;
-	[SerializeField] private string[] bossConditions; // impliment later
+	[SerializeField] private List<string> scenesToLoad = new List<string>();
+	[SerializeField] private List<string> scenesToUnload = new List<string>();
+	[SerializeField] private List<string> bossConditions = new List<string>(); // impliment later
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.name == "Player")
 		{
+			scenesToUnload.Add("TempCam");
 			LoadScenes();
 			UnloadScenes();
 		}
@@ -25,7 +26,7 @@ public class LoadingTriggers : MonoBehaviour
 
 	private void LoadScenes()
 	{
-		for (int i = 0; i < scenesToLoad.Length; i++)
+		for (int i = 0; i < scenesToLoad.Count; i++)
 		{
 			bool sceneloaded = false;
 			for (int j = 0; j < SceneManager.sceneCount; j++)
@@ -47,7 +48,7 @@ public class LoadingTriggers : MonoBehaviour
 
 	private void UnloadScenes()
 	{
-		for (int i = 0; i < scenesToUnload.Length; i++)
+		for (int i = 0; i < scenesToUnload.Count; i++)
 		{
 			for (int j = 0; j < SceneManager.sceneCount; j++)
 			{
