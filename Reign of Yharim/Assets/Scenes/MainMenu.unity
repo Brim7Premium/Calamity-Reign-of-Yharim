@@ -16969,7 +16969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuScreens: 0
-  loadingbarimg: {fileID: 0}
+  biomeScene: Forest_Spawn
   respawntimeSliderObj: {fileID: 1794917200}
   militaryTimeToggle: {fileID: 1248321447}
 --- !u!4 &2086259028
