@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4167634143126881520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: 
+  Guid:
+    Data1: -268930851
+    Data2: 1163703115
+    Data3: -2097549435
+    Data4: -95034399
+  Banks:
+  - {fileID: 2691093139799092262}
+  - {fileID: 2691093139799092262}
+  - {fileID: 2691093139799092262}
+  - {fileID: 2691093139799092262}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 143992
 --- !u!114 &-4060277785661746388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +180,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638376540669925724
+  lastModified: 638380863437991806
   FileSizes:
   - Name: Desktop
     Value: 74624
@@ -221,12 +251,13 @@ MonoBehaviour:
   - {fileID: -4060277785661746388}
   - {fileID: 3370157378572948695}
   - {fileID: 7840615993407800932}
+  - {fileID: -4167634143126881520}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3028886396130634377}
   StringsBanks:
   - {fileID: 902356820115119347}
-  cacheTime: 638376540669925724
+  cacheTime: 638391728792312034
   cacheVersion: 131609
 --- !u!114 &546284754107875172
 MonoBehaviour:
@@ -277,7 +308,7 @@ MonoBehaviour:
   - {fileID: 2691093139799092262}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -297,7 +328,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638376540574992913
+  lastModified: 638391728792312034
   FileSizes:
   - Name: Desktop
     Value: 2008
@@ -371,10 +402,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638376540667096190
+  lastModified: 638380863437735072
   FileSizes:
   - Name: Desktop
-    Value: 34279648
+    Value: 45650304
   Exists: 1
 --- !u!114 &2881846437759727473
 MonoBehaviour:
@@ -418,7 +449,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638376540574964642
+  lastModified: 638380863435092001
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -526,7 +557,7 @@ MonoBehaviour:
   - {fileID: 2691093139799092262}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -553,7 +584,7 @@ MonoBehaviour:
   - {fileID: 2691093139799092262}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -580,7 +611,7 @@ MonoBehaviour:
   - {fileID: 2691093139799092262}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20

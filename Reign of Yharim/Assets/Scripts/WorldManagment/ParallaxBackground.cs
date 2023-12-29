@@ -3,7 +3,8 @@ using UnityEngine;
 public class ParallaxBackground : MonoBehaviour
 {
     [SerializeField] private Transform background; //the transform of the attached background object
-    [SerializeField] private float parallaxEffect; 
+    [SerializeField] private float parallaxEffectX;
+    [SerializeField] private float parallaxEffectY;
     [SerializeField] private float smoothing = 1f;
 
     private Transform cameraTransform; //the transform of the main camera
@@ -17,9 +18,11 @@ public class ParallaxBackground : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float parallax = (previousCameraPosition.x - cameraTransform.position.x) * parallaxEffect; //parallax variable is the x of previousCameraPosition subtracted by the transform of the main camera. this is then multiplied by the paralaxEffect variable.
-        float backgroundTargetPosX = background.position.x - parallax; //backgroundtargetPosX is the x position of the background object, subtracted by the parallax variable.
-        Vector2 backgroundTargetPos = new Vector3(backgroundTargetPosX, background.position.y); //the backgroundTargetPos is a vector2 with backgroundTargetPosX for x and the y position of the background object for y)
+        float parallaxX = (previousCameraPosition.x - cameraTransform.position.x) * parallaxEffectX; //parallax variable is the x of previousCameraPosition subtracted by the transform of the main camera. this is then multiplied by the paralaxEffect variable.
+        float backgroundTargetPosX = background.position.x - parallaxX; //backgroundtargetPosX is the x position of the background object, subtracted by the parallax variable.
+        float parallaxY = (previousCameraPosition.y - cameraTransform.position.y) * parallaxEffectY;
+        float backgroundTargetPosY = background.position.y - parallaxY;
+        Vector2 backgroundTargetPos = new Vector3(backgroundTargetPosX, backgroundTargetPosY); //the backgroundTargetPos is a vector2 with backgroundTargetPosX for x and the y position of the background object for y)
         background.position = Vector3.Lerp(background.position, backgroundTargetPos, smoothing * Time.deltaTime); //The position of the background object equals the point (smoothing * time.deltatime) of points a (background.position) and b (backgroundTargetPos)
 
         if (background.position.x < cameraTransform.position.x - (background.GetComponent<SpriteRenderer>().bounds.size.x / 2))
