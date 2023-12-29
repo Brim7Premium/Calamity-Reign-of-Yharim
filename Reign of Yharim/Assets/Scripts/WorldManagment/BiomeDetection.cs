@@ -33,6 +33,18 @@ public class BiomeDetection : MonoBehaviour
 
 	void Update()
 	{
+		int index = biomeName.IndexOf("_");
+		if (index >= 0)
+		{
+  			biomeName = biomeName.Substring(0, index);
+		}
+		
+		index = prevBiomeName.IndexOf("_");
+		if (index >= 0)
+		{
+  			prevBiomeName = prevBiomeName.Substring(0, index);
+		}
+
 		GetTile();
 		
 		if (bossAlive)
@@ -53,15 +65,13 @@ public class BiomeDetection : MonoBehaviour
 	}
 
 	void GetTile()
-	{	
-		var truebiomename = Regex.Replace(biomeName, @"[\d]", string.Empty);
-		var trueprevbiomename = Regex.Replace(prevBiomeName, @"[\d]", string.Empty);
+	{
 		var forvol = 1f;
 		//var nosunset = false;
 		count = this.GetComponent<GameTime>().count;
 		day = (count >= 4.5*60 && count < 19.5*60);
 
-		if (truebiomename == "Forest" && day && !bossAlive) // dedicated forest day time system
+		if (biomeName == "Forest" && day && !bossAlive) // dedicated forest day time system
 		{	
 			foresttheme.getVolume(out forvol);
 			if (forvol < 1f)
@@ -99,7 +109,7 @@ public class BiomeDetection : MonoBehaviour
 			}
 		}
 
-		if (truebiomename != "Forest" && day && !bossAlive) // makes the forest themes not stop, and instead only mute
+		if (biomeName != "Forest" && day && !bossAlive) // makes the forest themes not stop, and instead only mute
 		{
 			foresttheme.getVolume(out forvol);
 			if (forvol > .01f)
@@ -113,51 +123,51 @@ public class BiomeDetection : MonoBehaviour
 			}
 		}
 
-		if ((truebiomename != trueprevbiomename || wasday != day) && !bossAlive) //if the name of the sprite is not equal to the current tile name or it changes day
+		if ((biomeName != prevBiomeName || wasday != day) && !bossAlive) //if the name of the sprite is not equal to the current tile name or it changes day
 		{
 			daybg = Color.black;
 			nightbg = new Color(0.11f, 0.17f, 0.28f);
 			wasday = day; // if it becomes night, check the biome again
 			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 			prevBiomeName = biomeName; //set the current tile name to the name of the sprite
-			if (truebiomename == "Astral")
+			if (biomeName == "Astral")
 			{
 				// Astral Infection
 				daybg = new Color(0.06666667f, 0.003921569f, 0.07450981f);
 				nightbg = daybg;
 //				nosunset = true;
 			}
-			if (truebiomename == "Desert")
+			if (biomeName == "Desert")
 			{
 				// Desert
 				daybg = new Color(1f, 0.9850028f, 0.8264151f);
 //				nosunset = false;
 			}
-			if (truebiomename == "Blight")
+			if (biomeName == "Blight")
 			{
 				// Blight
 				daybg = new Color(0.09783139f, 0.1509434f, 0.06778213f);
 //				nosunset = true;
 			}
-			if (truebiomename == "Bloody")
+			if (biomeName == "Bloody")
 			{
 				// Bloody Meteor
 				daybg = new Color(0.09433961f, 0.005603133f, 0f);
 //				nosunset = true;
 			}
-			if (truebiomename == "Ocean")
+			if (biomeName == "Ocean")
 			{
 				// Ocean
 				daybg = new Color(0.345283f, 0.8541663f, 1f);
 //				nosunset = false;
 			}
-			if (truebiomename == "Sulfur")
+			if (biomeName == "Sulfur")
 			{
 				// Sulphurous Sea
 				daybg = new Color(0.5457409f, 0.8962264f, 0.3179068f);
 //				nosunset = true;
 			}
-			if (truebiomename == "Tundra")
+			if (biomeName == "Tundra")
 			{
 				// Tundra
 				daybg = new Color(0.7415094f, 1f, 0.95700063f);
@@ -165,7 +175,7 @@ public class BiomeDetection : MonoBehaviour
 				biometheme.start();
 //				nosunset = false;
 			}
-			if (truebiomename == "Forest")
+			if (biomeName == "Forest")
 			{
 				// Spawn plains/Forest
 				daybg = new Color(0.701f, 0.9691256f, 1f);
@@ -176,62 +186,62 @@ public class BiomeDetection : MonoBehaviour
 				}
 //				nosunset = false;
 			}
-			if (truebiomename == "Feral")
+			if (biomeName == "Feral")
 			{
 				// Feral Swamplands
 				daybg = new Color(1f, 1f, 1f); // Change this later
 //				nosunset = true;
 			}
-			if (truebiomename == "Jungle")
+			if (biomeName == "Jungle")
 			{
 				// Jungle
 				daybg = new Color(0.5254902f, 1f, 0.8364275f);
 //				nosunset = false;
 			}
-			if (truebiomename == "Planetoids")
+			if (biomeName == "Planetoids")
 			{
 				// Planetoids
 				daybg = new Color(0.701f, 0.9691256f, 1f);
 //				nosunset = true;
 			}
-			if (truebiomename == "Underworld")
+			if (biomeName == "Underworld")
 			{
 				// Underworld
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nightbg = daybg;
 //				nosunset = true;
 			}
-			if (truebiomename == "Space")
+			if (biomeName == "Space")
 			{
 				// Space
 //				nosunset = true;
 			}
-			if (truebiomename == "Crags")
+			if (biomeName == "Crags")
 			{
 				// Brimstone Crags/Azafure
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nightbg = daybg;
 //				nosunset = true;
 			}
-			if (truebiomename == "Abyss1")
+			if (biomeName == "Abyss1")
 			{
 				// Sulphuric depths
 //				nosunset = true;
 			}
-			if (truebiomename == "SunkenSea")
+			if (biomeName == "SunkenSea")
 			{
 				// Sunken Sea
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nightbg = daybg;
 //				nosunset = true;
 			}
-			if (truebiomename == "Obsidian")
+			if (biomeName == "Obsidian")
 			{
 				// Obsidian Cliffs
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 //				nosunset = true;
 			}
-			if (truebiomename == "Garden")
+			if (biomeName == "Garden")
 			{
 				// Profaned Garden
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later

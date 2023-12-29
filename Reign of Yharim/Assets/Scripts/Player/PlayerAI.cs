@@ -203,8 +203,14 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 		{
 			if (collision.name == "Biome")
 			{
+                string biomename = collision.gameObject.scene.name;
+                int index = biomename.IndexOf("_");
+                if (index >= 0)
+                {
+                    biomename = biomename.Substring(0, index);
+                }
 		        Debug.Log($"In {collision.gameObject.scene.name}");
-				worldManager.GetComponent<BiomeDetection>().biomeName = collision.gameObject.scene.name;
+                worldManager.GetComponent<BiomeDetection>().biomeName = biomename;
 			}
 		}
 	}

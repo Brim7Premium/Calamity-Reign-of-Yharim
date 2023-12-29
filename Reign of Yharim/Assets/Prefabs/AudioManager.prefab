@@ -111,7 +111,7 @@ MonoBehaviour:
       Data2: 1231301446
       Data3: 2049251469
       Data4: -1564337529
-    Path: event:/SFX/Enemies/055Roar
+    Path: event:/SFX/Menus/055Roar
   <AureusStomp>k__BackingField:
     Guid:
       Data1: -413663715

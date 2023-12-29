@@ -123,7 +123,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638392242352562449
+  lastModified: 638394495336554405
   FileSizes:
   - Name: Desktop
     Value: 107360
@@ -358,19 +358,19 @@ MonoBehaviour:
   - {fileID: 8939417419707433700}
   - {fileID: 185198468472118980}
   - {fileID: 1594852583061602461}
-  - {fileID: 4490212365410090456}
   - {fileID: 1478590330280438680}
   - {fileID: -1221707781691490098}
   - {fileID: 925629080502882180}
   - {fileID: -4615554068745817254}
   - {fileID: 9181142709631208914}
   - {fileID: 6482469123018136666}
+  - {fileID: 7642177175457304554}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7922514285120898230}
   StringsBanks:
   - {fileID: 7607827413165057428}
-  cacheTime: 638392247797402378
+  cacheTime: 638394495336554405
   cacheVersion: 131616
 --- !u!114 &185198468472118980
 MonoBehaviour:
@@ -642,33 +642,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 173094
---- !u!114 &4490212365410090456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Enemies/055Roar
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Enemies/055Roar
-  Guid:
-    Data1: 76780108
-    Data2: 1231301446
-    Data3: 2049251469
-    Data4: -1564337529
-  Banks:
-  - {fileID: -4679523449588917092}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &5203133490103899468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,11 +812,38 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638392242239761938
+  lastModified: 638394495335951936
   FileSizes:
   - Name: Desktop
     Value: 2470
   Exists: 1
+--- !u!114 &7642177175457304554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menus/055Roar
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menus/055Roar
+  Guid:
+    Data1: 76780108
+    Data2: 1231301446
+    Data3: 2049251469
+    Data4: -1564337529
+  Banks:
+  - {fileID: -4679523449588917092}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7922514285120898230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -859,7 +859,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638392242239736836
+  lastModified: 638394495335931882
   FileSizes:
   - Name: Desktop
     Value: 1340

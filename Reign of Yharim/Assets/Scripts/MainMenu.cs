@@ -12,8 +12,6 @@ public class MainMenu : MonoBehaviour
 {
 	public MainMenuScreens menuScreens;
 
-	public Image loadingbarimg;
-
 	private GameObject settingsobj;
 
 	private EventInstance TitleTheme;
@@ -40,7 +38,7 @@ public class MainMenu : MonoBehaviour
 	{
 		TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 		SceneManager.LoadScene("TempCam"); // So there isnt a missing camera for a second, also acts as a loading screen
-		SceneManager.LoadSceneAsync("Forest", LoadSceneMode.Additive); // biome MUST be loaded before the systems
+		SceneManager.LoadSceneAsync("Forest_Spawn", LoadSceneMode.Additive); // biome MUST be loaded before the systems
 		SceneManager.LoadSceneAsync("Systems", LoadSceneMode.Additive);
 		AudioManager.instance.PlayOneShot(FMODEvents.instance._055Roar);
 	}

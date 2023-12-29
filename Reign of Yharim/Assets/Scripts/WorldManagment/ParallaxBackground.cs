@@ -16,6 +16,7 @@ public class ParallaxBackground : MonoBehaviour
 
 	private bool dontcheck = false;
 	private bool dontcheckagain;
+	private string scenename;
 	private void FixedUpdate()
 	{
 		if (!dontcheck)
@@ -27,12 +28,18 @@ public class ParallaxBackground : MonoBehaviour
 				dontcheck = true;
 				cameraTransform = Camera.main.transform;
 				previousCameraPosition = cameraTransform.position;
+				scenename = this.gameObject.scene.name;
+				int index = scenename.IndexOf("_");
+				if (index >= 0)
+				{
+					scenename = scenename.Substring(0, index);
+				}
 			}
 		}
 
 		if (dontcheck)
 		{
-			if (worldmanager.GetComponent<BiomeDetection>().biomeName == this.gameObject.scene.name)
+			if (worldmanager.GetComponent<BiomeDetection>().biomeName == scenename)
 			{
 				this.transform.GetChild(0).gameObject.SetActive(true);
 				float parallaxX = (previousCameraPosition.x - cameraTransform.position.x) * parallaxEffectX; //parallax variable is the x of previousCameraPosition subtracted by the transform of the main camera. this is then multiplied by the paralaxEffect variable.

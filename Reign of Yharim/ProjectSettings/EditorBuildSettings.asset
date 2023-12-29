@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 21882bcc222c07844aebb57967745152
   - enabled: 1
-    path: Assets/Scenes/Forest.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Systems.unity
     guid: a1c449e8bd65d934dbdf89df91fc62ef
   - enabled: 1
@@ -21,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Bloody.unity
     guid: 02d994495282b0f479901bb5fc37af10
   - enabled: 1
-    path: Assets/Scenes/Tundra.unity
+    path: Assets/Scenes/Tundra_Flats.unity
     guid: 14a079614cae4b946b9fd1d87dac252f
+  - enabled: 1
+    path: Assets/Scenes/Forest_Spawn.unity
+    guid: d4fbee58896e21d419f3640b7256731d
+  - enabled: 1
+    path: Assets/Scenes/Tundra_Mountain.unity
+    guid: 290ee1c3bb0f4dd49bba8bb59a87d924
   m_configObjects: {}
