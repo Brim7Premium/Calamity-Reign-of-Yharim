@@ -95,7 +95,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         {
             IsAttacking = true;
             GameObject attack = Instantiate(DefaultAttackPrefab, transform);
-            attack.AddComponent(Type.GetType(item.UseScript)).GetComponent<ItemUse>().item = gUIController.GetSelectedItem(item.consumable);
+            attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable);
         }
     }
     public override void Kill()

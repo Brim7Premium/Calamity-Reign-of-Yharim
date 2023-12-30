@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: WindBlade
   m_EditorClassIdentifier: 
   type: 1
-  actionType: 0
+  actionType: 1
   consumable: 0
-  size: {x: 0, y: 0}
-  UseScript: WindBlade
+  damage: 1
+  knockback: 0
+  AtkSpeed: 4
+  AtkType: 0
+  size: {x: 0.5, y: 0.5}
+  Projectile: {fileID: 2108025838621159512, guid: 788b9f3007cbf9b4a8173795f87a68de, type: 3}
+  Script: Item
   stackable: 0
   displayName: WindBlade
   sprite: {fileID: 21300000, guid: 2be3e64873540c64ea2e527b6f0c3bc4, type: 3}

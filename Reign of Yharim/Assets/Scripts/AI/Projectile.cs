@@ -11,6 +11,9 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
     {
         get => transform.position.x < target.transform.position.x ? 1 : -1; 
     }
+    public Vector2 MousePos{
+        get => Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
     private int _damage;
     public int damage
     {
@@ -58,7 +61,7 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
         AI();
         objectRenderer.enabled = IsVisibleFromCamera();
     }
-    public static Projectile NewProjectile(GameObject _projectile, Vector2 _position, Quaternion _rotation, float _velocity, int _damage, float _knockback, float _timeLeft = 1, float _ai0 = 0, float _ai1 = 0, float _ai2 = 0, float _ai3 = 0, string _parent = "")
+    public static Projectile NewProjectile(GameObject _projectile, Vector2 _position, Quaternion _rotation, float _velocity, int _damage = 1, float _knockback = 0, float _timeLeft = 1, float _ai0 = 0, float _ai1 = 0, float _ai2 = 0, float _ai3 = 0, string _parent = "")
     {   
         GameObject projGameObject;
 
@@ -67,18 +70,18 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
 
         Projectile proj = projGameObject.GetComponent<Projectile>();
 
-        proj.SetDefaults();
-
         proj.damage = _damage;
         proj.knockback = _knockback;
         proj.velocity = _velocity;
         proj.ai = new float [] {_ai0, _ai1, _ai2, _ai3};
         proj.timeLeft = _timeLeft;
 
+        proj.SetDefaults();
+
         return proj;
     }
 
-    public static Projectile NewProjectile(GameObject _projectile, Vector2 _position, Quaternion _rotation, Vector2 _velocity, int _damage, float _knockback, float _timeLeft = 1, float _ai0 = 0, float _ai1 = 0, float _ai2 = 0, float _ai3 = 0, string _parent = "")
+    public static Projectile NewProjectile(GameObject _projectile, Vector2 _position, Quaternion _rotation, Vector2 _velocity, int _damage = 1, float _knockback = 0, float _timeLeft = 1, float _ai0 = 0, float _ai1 = 0, float _ai2 = 0, float _ai3 = 0, string _parent = "")
     {
         //Making sure all changes to the previous overload apply to that one as well
         Projectile proj = NewProjectile(_projectile, _position, _rotation, 0, _damage, _knockback, _timeLeft, _ai0 , _ai1, _ai2, _ai3, _parent);
