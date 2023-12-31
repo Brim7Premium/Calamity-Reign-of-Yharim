@@ -20,8 +20,8 @@ public class BiomeDetection : MonoBehaviour
 	public bool bossAlive;
 	private bool bossWasAlive = false;
 
-	private EventInstance biometheme;
-	private EventInstance foresttheme;
+	public EventInstance biometheme;
+	public EventInstance foresttheme;
 	private bool day = true;
 	private bool wasday = false;
 	private int daythemenum = 0;

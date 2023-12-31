@@ -547,6 +547,8 @@ GameObject:
   - component: {fileID: 2160703249615966330}
   - component: {fileID: 6691831411640443563}
   - component: {fileID: 4971110993629575645}
+  - component: {fileID: 8070333998630029636}
+  - component: {fileID: 7095445557774218891}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -669,7 +671,7 @@ MonoBehaviour:
   rideHeight: 1.48
   rideSpringStrength: 2000
   rideSpringDamper: 40
-  targetTestObject: {fileID: 0}
+  targetTestObject: {fileID: 2160703249615966320}
   worldManager: {fileID: 0}
   rigidbodycomp: {fileID: 0}
   framerate: 60
@@ -760,6 +762,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8070333998630029636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160703249615966320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Liquid
+  Parameter: Equalizer
+  TriggerEvent: 5
+  Value: 1
+--- !u!114 &7095445557774218891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160703249615966320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Liquid
+  Parameter: Equalizer
+  TriggerEvent: 6
+  Value: 0
 --- !u!1 &2160703249668494348
 GameObject:
   m_ObjectHideFlags: 0

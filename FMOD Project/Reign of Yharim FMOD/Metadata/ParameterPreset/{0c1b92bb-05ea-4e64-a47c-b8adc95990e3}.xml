@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{0c1b92bb-05ea-4e64-a47c-b8adc95990e3}">
+		<property name="name">
+			<value>Equalizer</value>
+		</property>
+		<relationship name="folder">
+			<destination>{1d2c8594-f5fc-411d-833d-8e038c7d239f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{2715c1a9-4855-4e19-b77c-3a80fd86f5d7}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{2715c1a9-4855-4e19-b77c-3a80fd86f5d7}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
