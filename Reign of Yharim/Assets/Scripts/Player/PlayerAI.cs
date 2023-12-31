@@ -77,7 +77,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
         //Debug.DrawRay(transform.position, ToRotationVector2(AngleTo(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition))), Color.cyan); //gets the angle to the mouse position by using AngleTo from the player's position to the mouse position converted to a world point. The output is then converted to a Vector2 so a ray can be drawn at said angle
 
-        Debug.DrawRay(transform.position, DirectionTo(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition))); //better version
+        Debug.DrawRay(transform.position, DirectionTo(transform.position, MousePos)); //better version
         //Debug.Log("IsJumping: " + isJumping + " IsFalling: " + isFalling);
 
         //Debug.Log(rb.velocity.y);
@@ -94,6 +94,8 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         if(Input.GetKeyDown(KeyCode.Mouse0) && item && !IsAttacking)
         {
             IsAttacking = true;
+            transform.localScale = new Vector2(Mathf.Sign(MousePos.x-transform.position.x), 1);
+            isFacing = transform.localScale.x;
             GameObject attack = Instantiate(DefaultAttackPrefab, transform);
             attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable);
         }
@@ -128,15 +130,18 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
                 ChangeAnimationState(PlayerIdle); //set the animation to idle
             }
         }
-        if (xAxis > 0)
+        if(!IsAttacking)
         {
-            transform.localScale = new Vector2(1, 1); //facing right
-            isFacing = 1;
-        }
-        if (xAxis < 0)
-        {
-            transform.localScale = new Vector2(-1, 1); //facing left
-            isFacing = -1;
+            if (xAxis > 0)
+            {
+                transform.localScale = new Vector2(1, 1); //facing right
+                isFacing = 1;
+            }
+            if (xAxis < 0)
+            {
+                transform.localScale = new Vector2(-1, 1); //facing left
+                isFacing = -1;
+            }
         }
     }
     private void Jump()

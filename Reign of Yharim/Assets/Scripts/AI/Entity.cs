@@ -4,6 +4,9 @@ using UnityEngine;
 public abstract class Entity : MonoBehaviour
 {
     public Renderer objectRenderer;
+    public Vector2 MousePos{
+        get => Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
     public virtual void SetDefaults() => objectRenderer = GetComponent<SpriteRenderer>();
     void Awake() => SetDefaults(); //SetDefaults BECOMES awake
     public float AngleTo(Vector2 Start, Vector2 Destination) => (float)Math.Atan2(Destination.y - Start.y, Destination.x - Start.x); //gets the angle from the starting position to the destination position as a float, can be turned into a vector2 using ToRotationVector2 from Utils.cs

@@ -11,9 +11,7 @@ public abstract class Projectile : Entity //Must be inherited, cannot be instanc
     {
         get => transform.position.x < target.transform.position.x ? 1 : -1; 
     }
-    public Vector2 MousePos{
-        get => Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    }
+    
     private int _damage;
     public int damage
     {
