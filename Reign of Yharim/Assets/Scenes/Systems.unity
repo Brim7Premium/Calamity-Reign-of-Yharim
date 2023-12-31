@@ -1714,7 +1714,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.25
+  orthographic size: 16.875
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1739,7 +1739,7 @@ Transform:
   m_GameObject: {fileID: 392279457}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.7, y: 36.8, z: -9.65}
+  m_LocalPosition: {x: -663.3, y: 8.5, z: -9.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4693,6 +4693,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640d49c80ef9f3c4abaab31357b3c6ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1250109784 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2160703249615966321, guid: 11a9cd47724de354c997feb04775b786, type: 3}
+  m_PrefabInstance: {fileID: 2160703248383047968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1309594880 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2264481302654139467, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
@@ -7695,7 +7700,7 @@ Transform:
   m_GameObject: {fileID: 2005344489}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.7, y: 36.8, z: -9.65}
+  m_LocalPosition: {x: -663.3, y: 8.5, z: -9.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8003,11 +8008,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2160703249615966324, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.7
+      value: -663.3
       objectReference: {fileID: 0}
     - target: {fileID: 2160703249615966324, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.7
+      value: 5.4
       objectReference: {fileID: 0}
     - target: {fileID: 2160703249615966324, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8074,21 +8079,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2160703249615966330, guid: 11a9cd47724de354c997feb04775b786, type: 3}
-      propertyPath: framerate
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160703249615966330, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1942650790}
+    - target: {fileID: 2160703249615966330, guid: 11a9cd47724de354c997feb04775b786, type: 3}
+      propertyPath: rigidbody
+      value: 
+      objectReference: {fileID: 1250109784}
     - target: {fileID: 2160703249615966330, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: maxVelocity
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2160703249615966330, guid: 11a9cd47724de354c997feb04775b786, type: 3}
-      propertyPath: targetTestObject
+      propertyPath: worldManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 819527060}
+    - target: {fileID: 2160703249615966330, guid: 11a9cd47724de354c997feb04775b786, type: 3}
+      propertyPath: rigidbodycomp
+      value: 
+      objectReference: {fileID: 1250109784}
     - target: {fileID: 2160703249668494349, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0

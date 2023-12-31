@@ -22,8 +22,6 @@ public class GreenSlimeAI : NPC
 		Damage = 5;
 		LifeMax = 20;
 		Life = LifeMax;
-
-		target = GameObject.Find("Player");
 	}
 
 	public override void AI()
@@ -33,7 +31,7 @@ public class GreenSlimeAI : NPC
 			animator.speed = 0.8f;
 
 			ai[1]++;
-			if (ai[1] == 90.0f && isGrounded)
+			if ((ai[1] == 90.0f && isGrounded) || inWater)
 			{
 				ChangeAnimationState(SlimeIdle);
 
@@ -43,7 +41,7 @@ public class GreenSlimeAI : NPC
 			else if (ai[1] > 150.0f && isGrounded) 
 			{
 				ChangeAnimationState(SlimeBounce);
-				rb.velocity = Vector2.zero; 
+				rb.velocity = Vector2.zero;
 				ai[1] = 0.0f;
 			}
 			if (DistanceBetween(transform.position, target.transform.position) > 60f)
@@ -51,7 +49,6 @@ public class GreenSlimeAI : NPC
 				Destroy(gameObject);
 			}
 		}
-		
 	}
 
 	private void FixedUpdate()

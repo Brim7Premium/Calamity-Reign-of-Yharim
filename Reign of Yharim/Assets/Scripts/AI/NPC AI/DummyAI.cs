@@ -9,8 +9,6 @@ public class DummyAI : NPC
         NPCName = "Dummy";
         LifeMax = 100;
         Life = LifeMax;
-        
-        target = GameObject.Find("Player");
     }
     public override void AI()
     {

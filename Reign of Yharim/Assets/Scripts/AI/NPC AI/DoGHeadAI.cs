@@ -20,8 +20,6 @@ public class DoGHeadAI : NPC
         LifeMax = 1706400;
         Life = LifeMax;
         worm = true;
-
-        target = GameObject.Find("Player");
         
         if (!GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive)
         {
