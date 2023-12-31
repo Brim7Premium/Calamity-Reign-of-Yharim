@@ -26,6 +26,7 @@ public class BiomeDetection : MonoBehaviour
 	private bool day = true;
 	private bool wasday = false;
 	private int daythemenum = 0;
+	private bool nosunlight;
 
 	public Light2D SunLight;
 
@@ -138,37 +139,37 @@ public class BiomeDetection : MonoBehaviour
 				// Astral Infection
 				daybg = new Color(0.06666667f, 0.003921569f, 0.07450981f);
 				nightbg = daybg;
-//				nosunset = true;
+				nosunlight = false;
 			}
 			if (biomeName == "Desert")
 			{
 				// Desert
 				daybg = new Color(1f, 0.9850028f, 0.8264151f);
-//				nosunset = false;
+				nosunlight = false;
 			}
 			if (biomeName == "Blight")
 			{
 				// Blight
 				daybg = new Color(0.09783139f, 0.1509434f, 0.06778213f);
-//				nosunset = true;
+				nosunlight = false;
 			}
 			if (biomeName == "Bloody")
 			{
 				// Bloody Meteor
 				daybg = new Color(0.09433961f, 0.005603133f, 0f);
-//				nosunset = true;
+				nosunlight = false;
 			}
 			if (biomeName == "Ocean")
 			{
 				// Ocean
 				daybg = new Color(0.345283f, 0.8541663f, 1f);
-//				nosunset = false;
+				nosunlight = false;
 			}
 			if (biomeName == "Sulfur")
 			{
 				// Sulphurous Sea
 				daybg = new Color(0.5457409f, 0.8962264f, 0.3179068f);
-//				nosunset = true;
+				nosunlight = false;
 			}
 			if (biomeName == "Tundra")
 			{
@@ -176,7 +177,7 @@ public class BiomeDetection : MonoBehaviour
 				daybg = new Color(0.7415094f, 1f, 0.95700063f);
 				biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Tundra);
 				biometheme.start();
-//				nosunset = false;
+				nosunlight = false;
 			}
 			if (biomeName == "Forest")
 			{
@@ -187,91 +188,96 @@ public class BiomeDetection : MonoBehaviour
 					biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Night);
 					biometheme.start();
 				}
-//				nosunset = false;
+				nosunlight = false;
 			}
 			if (biomeName == "Feral")
 			{
 				// Feral Swamplands
 				daybg = new Color(1f, 1f, 1f); // Change this later
-//				nosunset = true;
+				nosunlight = false;
 			}
 			if (biomeName == "Jungle")
 			{
 				// Jungle
 				daybg = new Color(0.5254902f, 1f, 0.8364275f);
-//				nosunset = false;
+				nosunlight = false;
 			}
 			if (biomeName == "Planetoids")
 			{
 				// Planetoids
 				daybg = new Color(0.701f, 0.9691256f, 1f);
-//				nosunset = true;
+				nosunlight = false;
 			}
 			if (biomeName == "Underworld")
 			{
 				// Underworld
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nightbg = daybg;
-//				nosunset = true;
+				nosunlight = true;
 			}
 			if (biomeName == "Space")
 			{
 				// Space
-//				nosunset = true;
+				nosunlight = true;
 			}
 			if (biomeName == "Crags")
 			{
 				// Brimstone Crags/Azafure
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nightbg = daybg;
-//				nosunset = true;
+				nosunlight = true;
 			}
 			if (biomeName == "Abyss1")
 			{
 				// Sulphuric depths
-//				nosunset = true;
+				nosunlight = true;
 			}
 			if (biomeName == "SunkenSea")
 			{
 				// Sunken Sea
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nightbg = daybg;
-//				nosunset = true;
+				nosunlight = true;
 			}
 			if (biomeName == "Obsidian")
 			{
 				// Obsidian Cliffs
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
-//				nosunset = true;
+				nosunlight = true;
 			}
 			if (biomeName == "Garden")
 			{
 				// Profaned Garden
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nightbg = daybg;
-//				nosunset = true;
+				nosunlight = true;
 			}
 		}
+
+		if (nosunlight)
+		{
+			SunLight.intensity = 1f;
+		}
 		
-		if (!day)
+		if (!day && !nosunlight)
 		{
 			mainCam.backgroundColor = nightbg;
 			SunLight.intensity = 0.1f;
 		}
 
-		if (count > 1000 && day)
+		if (count > 1000 && day && !nosunlight)
 		{
 			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, ((count-1000f)/(19.5f*60f-1000f)));
 			SunLight.intensity = ((count-1000f)/(19.5f*60f-1000f)) + 0.1f;
 		}
 
-		if (count < 472 && day)
+		if (count < 472 && day && !nosunlight)
 		{
 			mainCam.backgroundColor = Color.Lerp(nightbg, daybg, ((count-4.5f*60f)/(472f-4.5f*60f)));
 			SunLight.intensity = ((count-4.5f*60f)/(472f-4.5f*60f)) + 0.1f;
 		}
 
-		if (count < 1000 && count > 472)
+		if (count < 1000 && count > 472 && !nosunlight)
 		{
 			SunLight.intensity = 1f + 0.05f;
 		}
