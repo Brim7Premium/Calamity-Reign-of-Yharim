@@ -673,7 +673,7 @@ MonoBehaviour:
   rideSpringDamper: 40
   targetTestObject: {fileID: 2160703249615966320}
   worldManager: {fileID: 0}
-  rigidbodycomp: {fileID: 0}
+  rigidbodycomp: {fileID: 2160703249615966321}
   framerate: 60
 --- !u!70 &6691831411640443563
 CapsuleCollider2D:
@@ -707,7 +707,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.08275604, y: 0.83}
+  m_Offset: {x: -0.08275604, y: 0.29}
   m_Size: {x: 0.7809906, y: 0.0001}
   m_Direction: 0
 --- !u!212 &4971110993629575645

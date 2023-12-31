@@ -271,7 +271,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638395702078782566
+  lastModified: 638396160897827124
   FileSizes:
   - Name: Desktop
     Value: 112832
@@ -790,7 +790,7 @@ MonoBehaviour:
   - {fileID: 7922514285120898230}
   StringsBanks:
   - {fileID: 7607827413165057428}
-  cacheTime: 638395702078782566
+  cacheTime: 638396160897827124
   cacheVersion: 131616
 --- !u!114 &185198468472118980
 MonoBehaviour:
@@ -1259,7 +1259,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638395702078371702
+  lastModified: 638396160897480609
   FileSizes:
   - Name: Desktop
     Value: 55038080
@@ -1487,7 +1487,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638395702073612493
+  lastModified: 638396160894141971
   FileSizes:
   - Name: Desktop
     Value: 2520
@@ -1559,7 +1559,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638395702073587415
+  lastModified: 638396160894103973
   FileSizes:
   - Name: Desktop
     Value: 1526

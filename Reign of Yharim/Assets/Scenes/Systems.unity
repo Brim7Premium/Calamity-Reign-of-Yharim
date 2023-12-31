@@ -8094,10 +8094,6 @@ PrefabInstance:
       propertyPath: worldManager
       value: 
       objectReference: {fileID: 819527060}
-    - target: {fileID: 2160703249615966330, guid: 11a9cd47724de354c997feb04775b786, type: 3}
-      propertyPath: rigidbodycomp
-      value: 
-      objectReference: {fileID: 1250109784}
     - target: {fileID: 2160703249668494349, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
