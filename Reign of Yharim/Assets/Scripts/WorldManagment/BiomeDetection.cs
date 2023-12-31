@@ -256,19 +256,19 @@ public class BiomeDetection : MonoBehaviour
 		if (!day)
 		{
 			mainCam.backgroundColor = nightbg;
-			SunLight.intensity = 0f + 0.05f;
+			SunLight.intensity = 0.1f;
 		}
 
 		if (count > 1000 && day)
 		{
 			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, ((count-1000f)/(19.5f*60f-1000f)));
-			SunLight.intensity = ((count-1000f)/(19.5f*60f-1000f)) + 0.05f;
+			SunLight.intensity = ((count-1000f)/(19.5f*60f-1000f)) + 0.1f;
 		}
 
 		if (count < 472 && day)
 		{
 			mainCam.backgroundColor = Color.Lerp(nightbg, daybg, ((count-4.5f*60f)/(472f-4.5f*60f)));
-			SunLight.intensity = ((count-4.5f*60f)/(472f-4.5f*60f)) + 0.05f;
+			SunLight.intensity = ((count-4.5f*60f)/(472f-4.5f*60f)) + 0.1f;
 		}
 
 		if (count < 1000 && count > 472)
