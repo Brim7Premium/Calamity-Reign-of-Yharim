@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using TMPro;
 using FMODUnity;
@@ -25,6 +26,8 @@ public class BiomeDetection : MonoBehaviour
 	private bool day = true;
 	private bool wasday = false;
 	private int daythemenum = 0;
+
+	public Light2D SunLight;
 
 	private int count;
 
@@ -253,17 +256,24 @@ public class BiomeDetection : MonoBehaviour
 		if (!day)
 		{
 			mainCam.backgroundColor = nightbg;
+			SunLight.intensity = 0f + 0.05f;
 		}
-		
 
 		if (count > 1000 && day)
 		{
-			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, (float)((count-1000)/(19.5*60-1000)));
+			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, ((count-1000f)/(19.5f*60f-1000f)));
+			SunLight.intensity = ((count-1000f)/(19.5f*60f-1000f)) + 0.05f;
 		}
 
 		if (count < 472 && day)
 		{
-			mainCam.backgroundColor = Color.Lerp(nightbg, daybg, (float)((count-4.5*60)/(472-4.5*60)));
+			mainCam.backgroundColor = Color.Lerp(nightbg, daybg, ((count-4.5f*60f)/(472f-4.5f*60f)));
+			SunLight.intensity = ((count-4.5f*60f)/(472f-4.5f*60f)) + 0.05f;
+		}
+
+		if (count < 1000 && count > 472)
+		{
+			SunLight.intensity = 1f + 0.05f;
 		}
 
 		/*

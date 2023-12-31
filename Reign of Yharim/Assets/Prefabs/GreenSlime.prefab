@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 34f271e526474e74483e628b545ecc5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -176,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
+  inWater: 0
   healthBar: {fileID: 1798507309908875635}
   rb: {fileID: 0}
   c2d: {fileID: 0}

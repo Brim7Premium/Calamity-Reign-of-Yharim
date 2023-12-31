@@ -32,7 +32,7 @@ public class GameTime : MonoBehaviour
 		var miltime = settingsobj.GetComponent<bracketSettingsbracket>().militaryTime;
 		while (true)
 		{
-			if(count == 24*60){count = 0;}
+			if(count >= 24*60){count = 0;}
 
 			if (miltime)
 			{
