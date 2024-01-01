@@ -17,12 +17,21 @@ public class InventoryManager : MonoBehaviour
     {
         inventory = new InvItem[invSize];
         slots = new Transform[invSize];
-        for(int i = 0; i<invSize; i++)
+        int i = 0;
+        foreach(InvSlot script in GUI.GetComponentsInChildren<InvSlot>())
         {
-            GameObject slot = Instantiate(InvSlot, GUI);
-            slot.GetComponent<InvSlot>().number = i;
-            slot.GetComponent<InvSlot>().inventoryManager = this;
-            slots[i] = slot.GetComponent<Transform>();
+            script.number = i;
+            script.inventoryManager = this;
+            slots[i] = script.transform;
+            i += 1;
+            if(i >= invSize) break;
+        }
+        for(;i<invSize; i++)
+        {
+            InvSlot slot = Instantiate(InvSlot, GUI).GetComponent<InvSlot>();
+            slot.number = i;
+            slot.inventoryManager = this;
+            slots[i] = slot.transform;
         }
     }
     //Adds in the first availablt slot
