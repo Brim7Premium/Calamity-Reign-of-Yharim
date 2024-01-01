@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1249,63 +1254,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Spiritmud_26: -2065614770
-      TEX_Spiritmud_3: 1485603662
-      TEX_Spiritmud_38: 1046317106
       TEX_Spiritmud_0: -189941588
-      TEX_Spiritmud_17: 918056681
-      TEX_Spiritmud_39: 1982230275
-      TEX_Spiritmud_28: 890169292
-      TEX_Spiritmud_45: -730117381
-      TEX_Spiritmud_20: 1573324791
-      TEX_Spiritmud_42: 1687642442
-      TEX_Spiritmud_6: 1443927007
-      TEX_Spiritmud_30: 1424098110
-      TEX_Spiritmud_37: -1197989428
-      TEX_Spiritmud_25: -1528233003
+      TEX_Spiritmud_1: -2082662466
+      TEX_Spiritmud_10: -1082399500
+      TEX_Spiritmud_11: -465846734
+      TEX_Spiritmud_12: -158236193
+      TEX_Spiritmud_13: 1882220281
       TEX_Spiritmud_14: -276922306
       TEX_Spiritmud_15: -751907962
-      TEX_Spiritmud_32: -1371735739
-      TEX_Spiritmud_1: -2082662466
-      TEX_Spiritmud_21: 220922548
-      TEX_Spiritmud_36: -1599851656
       TEX_Spiritmud_16: 1850673392
+      TEX_Spiritmud_17: 918056681
       TEX_Spiritmud_18: -105094015
-      TEX_Spiritmud_2: -783121044
-      TEX_Spiritmud_11: -465846734
-      TEX_Spiritmud_27: -594354895
-      TEX_Spiritmud_9: -850514106
-      TEX_Spiritmud_34: 2099853992
-      TEX_Spiritmud_7: -1543589762
-      TEX_Spiritmud_12: -158236193
-      TEX_Spiritmud_23: 1666679211
-      TEX_Spiritmud_47: -74410582
-      TEX_Spiritmud_33: 1575917307
-      TEX_Spiritmud_46: -1029359332
-      TEX_Spiritmud_50: 1471186959
-      TEX_Spiritmud_13: 1882220281
-      TEX_Spiritmud_29: 83953922
-      TEX_Spiritmud_24: -1827556454
-      TEX_Spiritmud_43: -1524759472
-      TEX_Spiritmud_5: -1257237198
-      TEX_Spiritmud_22: -622489663
-      TEX_Spiritmud_52: -270074716
-      TEX_Spiritmud_35: -191023621
-      TEX_Spiritmud_41: -996497307
-      TEX_Spiritmud_8: -950326620
       TEX_Spiritmud_19: -295480858
-      TEX_Spiritmud_51: -1687792238
-      TEX_Spiritmud_49: -1742848588
-      TEX_Spiritmud_10: -1082399500
+      TEX_Spiritmud_2: -783121044
+      TEX_Spiritmud_20: 1573324791
+      TEX_Spiritmud_21: 220922548
+      TEX_Spiritmud_22: -622489663
+      TEX_Spiritmud_23: 1666679211
+      TEX_Spiritmud_24: -1827556454
+      TEX_Spiritmud_25: -1528233003
+      TEX_Spiritmud_26: -2065614770
+      TEX_Spiritmud_27: -594354895
+      TEX_Spiritmud_28: 890169292
+      TEX_Spiritmud_29: 83953922
+      TEX_Spiritmud_3: 1485603662
+      TEX_Spiritmud_30: 1424098110
       TEX_Spiritmud_31: 1996228071
-      TEX_Spiritmud_40: -547945483
-      TEX_Spiritmud_44: 529437838
+      TEX_Spiritmud_32: -1371735739
+      TEX_Spiritmud_33: 1575917307
+      TEX_Spiritmud_34: 2099853992
+      TEX_Spiritmud_35: -191023621
+      TEX_Spiritmud_36: -1599851656
+      TEX_Spiritmud_37: -1197989428
+      TEX_Spiritmud_38: 1046317106
+      TEX_Spiritmud_39: 1982230275
       TEX_Spiritmud_4: -600943850
-      TEX_Spiritmud_53: -17605265
+      TEX_Spiritmud_40: -547945483
+      TEX_Spiritmud_41: -996497307
+      TEX_Spiritmud_42: 1687642442
+      TEX_Spiritmud_43: -1524759472
+      TEX_Spiritmud_44: 529437838
+      TEX_Spiritmud_45: -730117381
+      TEX_Spiritmud_46: -1029359332
+      TEX_Spiritmud_47: -74410582
       TEX_Spiritmud_48: -1655635730
-  spritePackingTag: 
+      TEX_Spiritmud_49: -1742848588
+      TEX_Spiritmud_5: -1257237198
+      TEX_Spiritmud_50: 1471186959
+      TEX_Spiritmud_51: -1687792238
+      TEX_Spiritmud_52: -270074716
+      TEX_Spiritmud_53: -17605265
+      TEX_Spiritmud_6: 1443927007
+      TEX_Spiritmud_7: -1543589762
+      TEX_Spiritmud_8: -950326620
+      TEX_Spiritmud_9: -850514106
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

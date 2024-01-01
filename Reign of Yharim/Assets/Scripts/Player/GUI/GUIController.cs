@@ -7,7 +7,6 @@ public class GUIController : MonoBehaviour
 {
     public TMP_Text timeText;
     public TMP_Text healthText;
-    public Animator guiHeartAnimator;
     public PlayerAI playerAI;
     public GameObject inventory;
 
@@ -25,10 +24,6 @@ public class GUIController : MonoBehaviour
 
     public Item[] itemsToPickup;
 
-    const string HeartNormal = "Heart_normal";
-    const string HeartDeath = "Heart_death";
-    const string HeartFull = "Heart_full";
-
     private void Start()
     {
         inventoryOpened = false;
@@ -37,19 +32,13 @@ public class GUIController : MonoBehaviour
 
     void Update()
     {
+        float numberOfHotSlots = 5;
         timeText.text = GameTime.displayTime;
 
         if (playerAI.Life >= 0)
             healthText.text = "Health: " + playerAI.Life + "/" + playerAI.LifeMax;
         else
             healthText.text = "Health: 0/" + playerAI.LifeMax;
-
-        if (playerAI.Life == playerAI.LifeMax)
-            ChangeAnimationState(HeartFull);
-        if (playerAI.Life != playerAI.LifeMax && playerAI.Life > 0f)
-            ChangeAnimationState(HeartNormal);
-        if (playerAI.Life <= 0f)
-            ChangeAnimationState(HeartDeath);
 
         if (Input.GetKeyDown(KeyCode.Return) && inventoryOpened == false)
         {
@@ -65,10 +54,11 @@ public class GUIController : MonoBehaviour
             inventory.SetActive(true);
         else
             inventory.SetActive(false);
+
         if (Input.inputString != null)
         {
             bool isNumber = int.TryParse(Input.inputString, out int number);
-            if (isNumber && number > 0 && number < 10)
+            if (isNumber && number > 0 && number <= numberOfHotSlots)
             {
                 ChangeSelectedSlot(number - 1);
             }
@@ -94,15 +84,6 @@ public class GUIController : MonoBehaviour
                 worldClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(200f * playerAI.isFacing, 200f));
             }
         }
-    }
-
-    public void ChangeAnimationState(string newAnimationState)
-    {
-        if (currentAnimationState == newAnimationState) return; //if currentAnimationState equals newAnimationState, stop the method (prevents animations from interupting themselves)
-
-        guiHeartAnimator.Play(newAnimationState); //play the newState animation
-
-        currentAnimationState = newAnimationState; //set currentAnimationState to newAnimationState
     }
 
     void ChangeSelectedSlot(int value)

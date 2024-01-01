@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1269,63 +1274,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Junglegrass_18: -78692767
-      TEX_Junglegrass_48: 2020751356
+      TEX_Junglegrass_0: 1672434414
+      TEX_Junglegrass_1: 962372680
       TEX_Junglegrass_10: -597755231
-      TEX_Junglegrass_24: 391755894
-      TEX_Junglegrass_41: -475615588
-      TEX_Junglegrass_20: 787532055
-      TEX_Junglegrass_30: 1083279939
-      TEX_Junglegrass_43: -192767248
-      TEX_Junglegrass_50: -418053337
-      TEX_Junglegrass_46: -491909668
-      TEX_Junglegrass_16: -414528792
-      TEX_Junglegrass_47: -1717862102
-      TEX_Junglegrass_2: -464858982
-      TEX_Junglegrass_7: -316400414
-      TEX_Junglegrass_31: 1023505142
-      TEX_Junglegrass_6: 1239663511
-      TEX_Junglegrass_13: 1286170211
-      TEX_Junglegrass_22: -1215164784
-      TEX_Junglegrass_27: 755823259
-      TEX_Junglegrass_37: 278266591
-      TEX_Junglegrass_45: 1300592062
-      TEX_Junglegrass_5: -388922728
-      TEX_Junglegrass_25: -808200946
-      TEX_Junglegrass_53: 1709245402
-      TEX_Junglegrass_51: -1799851372
-      TEX_Junglegrass_38: -2100692842
-      TEX_Junglegrass_34: -1694808456
-      TEX_Junglegrass_40: -181485736
-      TEX_Junglegrass_23: -581694769
-      TEX_Junglegrass_39: 525815175
-      TEX_Junglegrass_32: -1626178153
       TEX_Junglegrass_11: -1203099379
       TEX_Junglegrass_12: -1435004534
-      TEX_Junglegrass_29: -483998443
-      TEX_Junglegrass_17: -1819341364
-      TEX_Junglegrass_49: -1065992635
-      TEX_Junglegrass_42: 516661984
-      TEX_Junglegrass_19: -1932251787
-      TEX_Junglegrass_28: -1562718854
-      TEX_Junglegrass_26: 1313233198
-      TEX_Junglegrass_15: 698897461
+      TEX_Junglegrass_13: 1286170211
       TEX_Junglegrass_14: 1287746666
-      TEX_Junglegrass_36: 1715288936
-      TEX_Junglegrass_35: -944784665
-      TEX_Junglegrass_9: 363434951
-      TEX_Junglegrass_33: 1578465014
+      TEX_Junglegrass_15: 698897461
+      TEX_Junglegrass_16: -414528792
+      TEX_Junglegrass_17: -1819341364
+      TEX_Junglegrass_18: -78692767
+      TEX_Junglegrass_19: -1932251787
+      TEX_Junglegrass_2: -464858982
+      TEX_Junglegrass_20: 787532055
       TEX_Junglegrass_21: 1129332513
-      TEX_Junglegrass_4: 1169762557
-      TEX_Junglegrass_52: 65800921
-      TEX_Junglegrass_44: 1661509451
-      TEX_Junglegrass_8: -1205351600
-      TEX_Junglegrass_1: 962372680
+      TEX_Junglegrass_22: -1215164784
+      TEX_Junglegrass_23: -581694769
+      TEX_Junglegrass_24: 391755894
+      TEX_Junglegrass_25: -808200946
+      TEX_Junglegrass_26: 1313233198
+      TEX_Junglegrass_27: 755823259
+      TEX_Junglegrass_28: -1562718854
+      TEX_Junglegrass_29: -483998443
       TEX_Junglegrass_3: 1880160092
-      TEX_Junglegrass_0: 1672434414
-  spritePackingTag: 
+      TEX_Junglegrass_30: 1083279939
+      TEX_Junglegrass_31: 1023505142
+      TEX_Junglegrass_32: -1626178153
+      TEX_Junglegrass_33: 1578465014
+      TEX_Junglegrass_34: -1694808456
+      TEX_Junglegrass_35: -944784665
+      TEX_Junglegrass_36: 1715288936
+      TEX_Junglegrass_37: 278266591
+      TEX_Junglegrass_38: -2100692842
+      TEX_Junglegrass_39: 525815175
+      TEX_Junglegrass_4: 1169762557
+      TEX_Junglegrass_40: -181485736
+      TEX_Junglegrass_41: -475615588
+      TEX_Junglegrass_42: 516661984
+      TEX_Junglegrass_43: -192767248
+      TEX_Junglegrass_44: 1661509451
+      TEX_Junglegrass_45: 1300592062
+      TEX_Junglegrass_46: -491909668
+      TEX_Junglegrass_47: -1717862102
+      TEX_Junglegrass_48: 2020751356
+      TEX_Junglegrass_49: -1065992635
+      TEX_Junglegrass_5: -388922728
+      TEX_Junglegrass_50: -418053337
+      TEX_Junglegrass_51: -1799851372
+      TEX_Junglegrass_52: 65800921
+      TEX_Junglegrass_53: 1709245402
+      TEX_Junglegrass_6: 1239663511
+      TEX_Junglegrass_7: -316400414
+      TEX_Junglegrass_8: -1205351600
+      TEX_Junglegrass_9: 363434951
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
