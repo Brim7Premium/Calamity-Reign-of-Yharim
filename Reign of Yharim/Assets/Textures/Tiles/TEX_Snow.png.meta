@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1269,63 +1274,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      TEX_Snow_0: -465811776
+      TEX_Snow_1: -246137280
+      TEX_Snow_10: -760102235
+      TEX_Snow_11: -1780156569
+      TEX_Snow_12: 1432832644
+      TEX_Snow_13: 422366529
+      TEX_Snow_14: -1387818041
+      TEX_Snow_15: 1067811581
+      TEX_Snow_16: -1485243422
+      TEX_Snow_17: 507888464
+      TEX_Snow_18: -1932694022
+      TEX_Snow_19: -17388517
       TEX_Snow_2: 1050110283
-      TEX_Snow_27: 564311545
+      TEX_Snow_20: 876579642
+      TEX_Snow_21: 200235236
+      TEX_Snow_22: 104816892
       TEX_Snow_23: 1267171145
       TEX_Snow_24: 1943519812
-      TEX_Snow_5: 1211286469
-      TEX_Snow_33: -257362290
-      TEX_Snow_20: 876579642
-      TEX_Snow_7: -1998800182
-      TEX_Snow_6: -1861104068
-      TEX_Snow_38: 1430029640
-      TEX_Snow_1: -246137280
-      TEX_Snow_16: -1485243422
       TEX_Snow_25: -2050882787
-      TEX_Snow_42: 1072064754
-      TEX_Snow_48: 1203291796
-      TEX_Snow_15: 1067811581
-      TEX_Snow_46: 925945638
-      TEX_Snow_51: 1622908480
-      TEX_Snow_35: 1334538827
-      TEX_Snow_49: -684488402
-      TEX_Snow_22: 104816892
-      TEX_Snow_13: 422366529
-      TEX_Snow_18: -1932694022
-      TEX_Snow_44: 944389720
-      TEX_Snow_17: 507888464
-      TEX_Snow_45: -1824401761
-      TEX_Snow_11: -1780156569
-      TEX_Snow_0: -465811776
-      TEX_Snow_50: 1866047849
-      TEX_Snow_21: 200235236
-      TEX_Snow_30: 675606983
-      TEX_Snow_12: 1432832644
-      TEX_Snow_28: 1474920481
-      TEX_Snow_43: 52475543
-      TEX_Snow_47: -290161875
-      TEX_Snow_39: -1010105757
-      TEX_Snow_52: -716940868
-      TEX_Snow_3: -1077833765
-      TEX_Snow_8: 2029843096
-      TEX_Snow_32: -355618184
-      TEX_Snow_34: 912231096
-      TEX_Snow_31: -370299
-      TEX_Snow_41: -1035840838
-      TEX_Snow_53: 552451787
-      TEX_Snow_40: -1660764768
-      TEX_Snow_14: -1387818041
-      TEX_Snow_29: 332414072
-      TEX_Snow_36: 1322649820
-      TEX_Snow_9: -857848789
-      TEX_Snow_10: -760102235
-      TEX_Snow_4: -164629969
-      TEX_Snow_37: 1306043334
-      TEX_Snow_19: -17388517
       TEX_Snow_26: 228678740
-  spritePackingTag: 
+      TEX_Snow_27: 564311545
+      TEX_Snow_28: 1474920481
+      TEX_Snow_29: 332414072
+      TEX_Snow_3: -1077833765
+      TEX_Snow_30: 675606983
+      TEX_Snow_31: -370299
+      TEX_Snow_32: -355618184
+      TEX_Snow_33: -257362290
+      TEX_Snow_34: 912231096
+      TEX_Snow_35: 1334538827
+      TEX_Snow_36: 1322649820
+      TEX_Snow_37: 1306043334
+      TEX_Snow_38: 1430029640
+      TEX_Snow_39: -1010105757
+      TEX_Snow_4: -164629969
+      TEX_Snow_40: -1660764768
+      TEX_Snow_41: -1035840838
+      TEX_Snow_42: 1072064754
+      TEX_Snow_43: 52475543
+      TEX_Snow_44: 944389720
+      TEX_Snow_45: -1824401761
+      TEX_Snow_46: 925945638
+      TEX_Snow_47: -290161875
+      TEX_Snow_48: 1203291796
+      TEX_Snow_49: -684488402
+      TEX_Snow_5: 1211286469
+      TEX_Snow_50: 1866047849
+      TEX_Snow_51: 1622908480
+      TEX_Snow_52: -716940868
+      TEX_Snow_53: 552451787
+      TEX_Snow_6: -1861104068
+      TEX_Snow_7: -1998800182
+      TEX_Snow_8: 2029843096
+      TEX_Snow_9: -857848789
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

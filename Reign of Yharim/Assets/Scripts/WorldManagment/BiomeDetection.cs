@@ -1,48 +1,88 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using FMOD.Studio;
-using FMODUnity;
+using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 using TMPro;
+using FMODUnity;
+using FMOD.Studio;
 
 public class BiomeDetection : MonoBehaviour
 {
-	public Tilemap tiles;
-	public Vector3Int tileAtPlayer;
-	public Sprite tileSprite;
-	private string tileSpriteName;
-	public string currentTileName;
+	[SerializeField] private GameObject player;
+	public string biomeName = "Forest";
+	public string prevBiomeName;
 
 	public Camera mainCam;
 
-	private EventInstance biometheme;
+	public bool bossAlive;
+	private bool bossWasAlive = false;
+
+	public EventInstance biometheme;
+	public EventInstance foresttheme;
 	private bool day = true;
-	private bool wasday = true;
+	private bool wasday = false;
 	private int daythemenum = 0;
+	private bool nosunlight;
+
+	public Light2D SunLight;
 
 	private int count;
 
+	private Color daybg = Color.black;
+	private Color nightbg = new Color(0.11f, 0.17f, 0.28f);
+
 	void Update()
 	{
+		int index = biomeName.IndexOf("_");
+		if (index >= 0)
+		{
+  			biomeName = biomeName.Substring(0, index);
+		}
+		
+		index = prevBiomeName.IndexOf("_");
+		if (index >= 0)
+		{
+  			prevBiomeName = prevBiomeName.Substring(0, index);
+		}
+
 		GetTile();
+		
+		if (bossAlive)
+		{
+			biometheme.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+			foresttheme.setVolume(0f);
+		}
+
+		if (bossAlive != bossWasAlive)
+		{
+			bossWasAlive = bossAlive;
+
+			if (!bossAlive)
+			{
+				wasday = !day;
+			}
+		}
 	}
 
 	void GetTile()
 	{
-		var stopit = true;
-		count = GameObject.Find("WorldManager").GetComponent<GameTime>().count;
-		day = (count >= 7.5*60 && count < 19.5*60);
-		Vector3 mp = transform.position; //creates a vector3 named mp that is the player's coordinates 
-		tileAtPlayer = tiles.WorldToCell(mp); //sets the vector3int location to the tile at the player's coordinates
-		tileSprite = tiles.GetSprite(tileAtPlayer); //gets the sprite of the tile at the player's location and assigns it to the tilesprite variable
-		if (tileSprite != null) //if the sprite exists (if the player is behind a background tile)
-		{
-			tileSpriteName = tileSprite.name; //set the variable tilespritename to the name of the tilesprite
-		}
+		var forvol = 1f;
+		//var nosunset = false;
+		count = this.GetComponent<GameTime>().count;
+		day = (count >= 4.5*60 && count < 19.5*60);
 
-		if (tileSpriteName == "Forest" && (count >= 4.5*60 && count < 19.5*60))
-		{
+		if (biomeName == "Forest" && day && !bossAlive) // dedicated forest day time system
+		{	
+			foresttheme.getVolume(out forvol);
+			if (forvol < 1f)
+			{
+				foresttheme.setVolume(forvol + .01f);
+			}
+			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 			var newdaythemenum = daythemenum;
 			var eventref = FMODEvents.instance.FullDay;
 			if (count >= 4.5*60 && count < 7.5*60)
@@ -67,152 +107,257 @@ public class BiomeDetection : MonoBehaviour
 			}
 			if (daythemenum != newdaythemenum)
 			{
-				biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-				biometheme = AudioManager.instance.CreateEventInstance(eventref);
-				biometheme.start();
-				stopit = false;
+				foresttheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+				foresttheme = AudioManager.instance.CreateEventInstance(eventref);
+				foresttheme.start();
 			}
 		}
 
-		if (tiles.GetTile(tileAtPlayer)) //if there is a tile behind the player
+		if (biomeName != "Forest" && day && !bossAlive) // makes the forest themes not stop, and instead only mute
 		{
-			if (tileSpriteName != currentTileName||wasday != day) //if the name of the sprite is not equal to the current tile name
+			foresttheme.getVolume(out forvol);
+			if (forvol > .01f)
 			{
-				wasday = day; // if it becomes night, check the biome again
-				if (stopit)
-				{
-					biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-				}
-				currentTileName = tileSpriteName; //set the current tile name to the name of the sprite
-				if (tileSpriteName == "Astral") //if the tile's name is astral
-				{
-					/*
-					Astral Infection
-					mainCam.backgroundColor = new Color(0.06666667f, 0.003921569f, 0.07450981f);
-					audioSource.clip = Astral;
-					audioSource.Play(); 
-					*/
-				}
-				if (tileSpriteName == "Desert")
-				{
-					/*
-					Desert
-					mainCam.backgroundColor = new Color(1f, 0.9850028f, 0.8264151f);
-					audioSource.clip = Desert;
-					audioSource.Play(); 
-					*/
-				}
-				if (tileSpriteName == "Blight")
-				{
-					/*
-					Blight
-					mainCam.backgroundColor = new Color(0.09783139f, 0.1509434f, 0.06778213f);
-					audioSource.clip = Blight;
-					audioSource.Play();
-					*/
-				}
-				if (tileSpriteName == "Bloody")
-				{
-					/*
-					Bloody Meteor
-					mainCam.backgroundColor = new Color(0.09433961f, 0.005603133f, 0f);
-					audioSource.clip = Bloody;
-					audioSource.Play();
-					*/
-				}
-				if (tileSpriteName == "Ocean")
-				{
-					/*
-					Ocean
-					mainCam.backgroundColor = new Color(0.345283f, 0.8541663f, 1f);
-					audioSource.clip = Ocean;
-					audioSource.Play();
-					*/
-				}
-				if (tileSpriteName == "Sulfur")
-				{
-					/*
-					Sulphurous Sea
-					mainCam.backgroundColor = new Color(0.5457409f, 0.8962264f, 0.3179068f);
-					audioSource.clip = Sulfur;
-					audioSource.Play();
-					*/
-				}
-				if (tileSpriteName == "Tundra")
-				{
-					/*
-					Tundra
-					mainCam.backgroundColor = new Color(0.7415094f, 1f, 0.95700063f);
-					audioSource.clip = Tundra;
-					audioSource.Play();
-					*/
-				}
-				if (tileSpriteName == "Forest")
-				{
-					//Spawn plains/Forest
-					if (count >= 4.5*60 && count < 19.5*60)
-					{
-						mainCam.backgroundColor = new Color(0.701f, 0.9691256f, 1f);
-					}
-					else
-					{
-						mainCam.backgroundColor = new Color(0.11f, 0.17f, 0.28f);
-						biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Night);
-						biometheme.start();
-					}
-				}
-				if (tileSpriteName == "Feral")
-				{
-					//Feral Swamplands
-					//mainCam.backgroundColor = new Color(1f, 1f, 1f); Change this later
-				}
-				if (tileSpriteName == "Jungle")
-				{
-					//Jungle
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f);
-				}
-				if (tileSpriteName == "Sky")
-				{
-					//Sky
-					//mainCam.backgroundColor = Color.black; Change this later
-				}
-				if (tileSpriteName == "Underworld")
-				{
-					//Underworld
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
-				}
-				if (tileSpriteName == "Space")
-				{
-					//Space
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
-				}
-				if (tileSpriteName == "Crags")
-				{
-					//Brimstone Crags/Azafure
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
-				}
-				if (tileSpriteName == "Abyss2")
-				{
-					//Abyss tier 1
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
-				}
-				if (tileSpriteName == "SunkenSea")
-				{
-					//Sunken Sea
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
-				}
-				if (tileSpriteName == "Obsidian")
-				{
-					//Obsidian Cliffs
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
-				}
-				if (tileSpriteName == "Garden")
-				{
-					//Profaned Garden
-					//mainCam.backgroundColor = new Color(0.5254902f, 1f, 0.8364275f); Change this later
-				}
+				foresttheme.setVolume(forvol - .01f);
+			}
+
+			else
+			{
+				foresttheme.setVolume(0f);
 			}
 		}
+
+		if ((biomeName != prevBiomeName || wasday != day) && !bossAlive) //if the name of the sprite is not equal to the current tile name or it changes day
+		{
+			daybg = Color.black;
+			nightbg = new Color(0.11f, 0.17f, 0.28f);
+			wasday = day; // if it becomes night, check the biome again
+			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			prevBiomeName = biomeName; //set the current tile name to the name of the sprite
+			if (biomeName == "Astral")
+			{
+				// Astral Infection
+				daybg = new Color(0.06666667f, 0.003921569f, 0.07450981f);
+				nightbg = daybg;
+				nosunlight = false;
+			}
+			if (biomeName == "Desert")
+			{
+				// Desert
+				daybg = new Color(1f, 0.9850028f, 0.8264151f);
+				nosunlight = false;
+			}
+			if (biomeName == "Blight")
+			{
+				// Blight
+				daybg = new Color(0.09783139f, 0.1509434f, 0.06778213f);
+				nosunlight = false;
+			}
+			if (biomeName == "Bloody")
+			{
+				// Bloody Meteor
+				daybg = new Color(0.09433961f, 0.005603133f, 0f);
+				nosunlight = false;
+			}
+			if (biomeName == "Ocean")
+			{
+				// Ocean
+				daybg = new Color(0.345283f, 0.8541663f, 1f);
+				nosunlight = false;
+			}
+			if (biomeName == "Sulfur")
+			{
+				// Sulphurous Sea
+				daybg = new Color(0.5457409f, 0.8962264f, 0.3179068f);
+				nosunlight = false;
+			}
+			if (biomeName == "Tundra")
+			{
+				// Tundra
+				daybg = new Color(0.7415094f, 1f, 0.95700063f);
+				biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Tundra);
+				biometheme.start();
+				nosunlight = false;
+			}
+			if (biomeName == "Forest")
+			{
+				// Spawn plains/Forest
+				daybg = new Color(0.701f, 0.9691256f, 1f);
+				if (!day)
+				{
+					biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Night);
+					biometheme.start();
+				}
+				nosunlight = false;
+			}
+			if (biomeName == "Feral")
+			{
+				// Feral Swamplands
+				daybg = new Color(1f, 1f, 1f); // Change this later
+				nosunlight = false;
+			}
+			if (biomeName == "Jungle")
+			{
+				// Jungle
+				daybg = new Color(0.5254902f, 1f, 0.8364275f);
+				nosunlight = false;
+			}
+			if (biomeName == "Planetoids")
+			{
+				// Planetoids
+				daybg = new Color(0.701f, 0.9691256f, 1f);
+				nosunlight = false;
+			}
+			if (biomeName == "Underworld")
+			{
+				// Underworld
+				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
+				nightbg = daybg;
+				nosunlight = true;
+			}
+			if (biomeName == "Space")
+			{
+				// Space
+				nosunlight = true;
+			}
+			if (biomeName == "Crags")
+			{
+				// Brimstone Crags/Azafure
+				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
+				nightbg = daybg;
+				nosunlight = true;
+			}
+			if (biomeName == "Abyss1")
+			{
+				// Sulphuric depths
+				nosunlight = true;
+			}
+			if (biomeName == "SunkenSea")
+			{
+				// Sunken Sea
+				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
+				nightbg = daybg;
+				nosunlight = true;
+			}
+			if (biomeName == "Obsidian")
+			{
+				// Obsidian Cliffs
+				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
+				nosunlight = true;
+			}
+			if (biomeName == "Garden")
+			{
+				// Profaned Garden
+				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
+				nightbg = daybg;
+				nosunlight = true;
+			}
+		}
+
+		if (nosunlight)
+		{
+			SunLight.intensity = 1f;
+		}
+		
+		if (!day && !nosunlight)
+		{
+			mainCam.backgroundColor = nightbg;
+			SunLight.intensity = 0.1f;
+		}
+
+		if (count > 1000 && day && !nosunlight)
+		{
+			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, ((count-1000f)/(19.5f*60f-1000f)));
+			SunLight.intensity = ((count-1000f)/(19.5f*60f-1000f)) + 0.1f;
+		}
+
+		if (count < 472 && day && !nosunlight)
+		{
+			mainCam.backgroundColor = Color.Lerp(nightbg, daybg, ((count-4.5f*60f)/(472f-4.5f*60f)));
+			SunLight.intensity = ((count-4.5f*60f)/(472f-4.5f*60f)) + 0.1f;
+		}
+
+		if (count < 1000 && count > 472 && !nosunlight)
+		{
+			SunLight.intensity = 1f + 0.05f;
+		}
+
+		/*
+		if (!nosunset && day)
+		{
+			var sunsetcolour = new Color(0.84f, 0.3f, 0.36f);
+
+			// formula is (count-start)/(end-start)
+
+			if (count >= 270 && count < 472)
+			{
+				mainCam.backgroundColor = Color.Lerp(nightbg, sunsetcolour, (float)((count-270)/(472-270)));
+			}
+
+			else if (count >= 472 && count < 522)
+			{
+				mainCam.backgroundColor = sunsetcolour;
+			}
+
+			else if (count >= 522 && count < 600)
+			{
+				mainCam.backgroundColor = Color.Lerp(sunsetcolour, daybg, (float)((count-522)/(600-522)));
+			}
+
+			else if (count >= 848 && count < 888)
+			{
+				mainCam.backgroundColor = Color.Lerp(daybg, sunsetcolour, (float)((count-848)/(888-848)));
+			}
+			
+			else if (count >= 888 && count < 976)
+			{
+				mainCam.backgroundColor = sunsetcolour;
+			}
+			
+			else if (count >= 976 && count < 1170)
+			{
+				mainCam.backgroundColor = Color.Lerp(sunsetcolour, nightbg, (float)((count-976)/(1170-976)));
+			}
+
+			else
+			{
+				mainCam.backgroundColor = daybg;
+			}
+		}
+
+		if (nosunset && day)
+		{
+			if (count < 472 && day)
+			{
+				mainCam.backgroundColor = Color.Lerp(nightbg, daybg, (float)((count-270)/(472-270)));
+			}
+
+			else if (count >= 1000 && day)
+			{
+				mainCam.backgroundColor = Color.Lerp(daybg, nightbg, (float)((count-1000)/(1170-1000)));
+			}
+
+			else
+			{
+				mainCam.backgroundColor = daybg;
+			}
+		}
+		
+		/*
+		Notes
+
+		Fade into sunrise at 270
+		Start sunrise at 472, end at 552
+		Fade into day (600)
+
+		Fade into sunset at 848
+		Start sunset at 888, end at 976
+		Fade into night (1170)
+
+		If nosunset
+
+		Fade into "sunrise" (472) at day (270)
+		Fade into night (1170) at "sunset" (1000)
+		*/
 	}
 }
-

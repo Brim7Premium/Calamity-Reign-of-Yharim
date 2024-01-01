@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1269,63 +1274,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Bloodydirt_12: 648479224
-      TEX_Bloodydirt_9: -1569254228
-      TEX_Bloodydirt_19: 142917267
-      TEX_Bloodydirt_39: -955350954
-      TEX_Bloodydirt_28: -966966382
-      TEX_Bloodydirt_7: 1981301772
-      TEX_Bloodydirt_53: -1746845650
-      TEX_Bloodydirt_25: -2126236755
-      TEX_Bloodydirt_14: -56944892
-      TEX_Bloodydirt_51: 1107061783
       TEX_Bloodydirt_0: 1040919175
-      TEX_Bloodydirt_40: 555676666
-      TEX_Bloodydirt_4: 1884189409
-      TEX_Bloodydirt_49: 1454652616
-      TEX_Bloodydirt_6: 1349735404
-      TEX_Bloodydirt_29: -539265229
-      TEX_Bloodydirt_50: 1277567335
-      TEX_Bloodydirt_23: -1811648918
-      TEX_Bloodydirt_43: 1986521742
-      TEX_Bloodydirt_27: -1016001576
-      TEX_Bloodydirt_34: 2110506996
-      TEX_Bloodydirt_15: 1878077173
-      TEX_Bloodydirt_52: -1327556059
-      TEX_Bloodydirt_11: 2122608856
-      TEX_Bloodydirt_32: -396211074
-      TEX_Bloodydirt_37: -822092566
-      TEX_Bloodydirt_45: -712759396
-      TEX_Bloodydirt_5: -1930890219
-      TEX_Bloodydirt_10: -1694168467
-      TEX_Bloodydirt_24: -1747496256
-      TEX_Bloodydirt_26: 1925270373
-      TEX_Bloodydirt_20: 1702042256
-      TEX_Bloodydirt_30: -1820327389
-      TEX_Bloodydirt_41: 1390500460
-      TEX_Bloodydirt_21: 272617506
-      TEX_Bloodydirt_16: -753550189
-      TEX_Bloodydirt_18: -291915572
-      TEX_Bloodydirt_42: 1483148242
-      TEX_Bloodydirt_46: -2001388105
-      TEX_Bloodydirt_44: 257232382
-      TEX_Bloodydirt_38: 583601815
       TEX_Bloodydirt_1: 2132196578
-      TEX_Bloodydirt_33: 1549089201
-      TEX_Bloodydirt_8: -656162207
+      TEX_Bloodydirt_10: -1694168467
+      TEX_Bloodydirt_11: 2122608856
+      TEX_Bloodydirt_12: 648479224
       TEX_Bloodydirt_13: 2005522815
-      TEX_Bloodydirt_31: 325627101
-      TEX_Bloodydirt_2: 385552819
+      TEX_Bloodydirt_14: -56944892
+      TEX_Bloodydirt_15: 1878077173
+      TEX_Bloodydirt_16: -753550189
       TEX_Bloodydirt_17: 895622313
-      TEX_Bloodydirt_3: -72805797
-      TEX_Bloodydirt_35: -34785893
-      TEX_Bloodydirt_48: -871410528
-      TEX_Bloodydirt_36: 221552554
+      TEX_Bloodydirt_18: -291915572
+      TEX_Bloodydirt_19: 142917267
+      TEX_Bloodydirt_2: 385552819
+      TEX_Bloodydirt_20: 1702042256
+      TEX_Bloodydirt_21: 272617506
       TEX_Bloodydirt_22: 2031398285
+      TEX_Bloodydirt_23: -1811648918
+      TEX_Bloodydirt_24: -1747496256
+      TEX_Bloodydirt_25: -2126236755
+      TEX_Bloodydirt_26: 1925270373
+      TEX_Bloodydirt_27: -1016001576
+      TEX_Bloodydirt_28: -966966382
+      TEX_Bloodydirt_29: -539265229
+      TEX_Bloodydirt_3: -72805797
+      TEX_Bloodydirt_30: -1820327389
+      TEX_Bloodydirt_31: 325627101
+      TEX_Bloodydirt_32: -396211074
+      TEX_Bloodydirt_33: 1549089201
+      TEX_Bloodydirt_34: 2110506996
+      TEX_Bloodydirt_35: -34785893
+      TEX_Bloodydirt_36: 221552554
+      TEX_Bloodydirt_37: -822092566
+      TEX_Bloodydirt_38: 583601815
+      TEX_Bloodydirt_39: -955350954
+      TEX_Bloodydirt_4: 1884189409
+      TEX_Bloodydirt_40: 555676666
+      TEX_Bloodydirt_41: 1390500460
+      TEX_Bloodydirt_42: 1483148242
+      TEX_Bloodydirt_43: 1986521742
+      TEX_Bloodydirt_44: 257232382
+      TEX_Bloodydirt_45: -712759396
+      TEX_Bloodydirt_46: -2001388105
       TEX_Bloodydirt_47: 824996773
-  spritePackingTag: 
+      TEX_Bloodydirt_48: -871410528
+      TEX_Bloodydirt_49: 1454652616
+      TEX_Bloodydirt_5: -1930890219
+      TEX_Bloodydirt_50: 1277567335
+      TEX_Bloodydirt_51: 1107061783
+      TEX_Bloodydirt_52: -1327556059
+      TEX_Bloodydirt_53: -1746845650
+      TEX_Bloodydirt_6: 1349735404
+      TEX_Bloodydirt_7: 1981301772
+      TEX_Bloodydirt_8: -656162207
+      TEX_Bloodydirt_9: -1569254228
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

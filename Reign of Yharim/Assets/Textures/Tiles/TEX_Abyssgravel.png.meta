@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1273,63 +1278,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Abyssgravel_2: -300211404
-      TEX_Abyssgravel_25: 1169250116
-      TEX_Abyssgravel_14: 485722574
-      TEX_Abyssgravel_28: -1274877438
-      TEX_Abyssgravel_3: 1394509661
-      TEX_Abyssgravel_10: 1221998928
-      TEX_Abyssgravel_34: 1795738122
-      TEX_Abyssgravel_42: -2122269348
       TEX_Abyssgravel_0: -88823475
+      TEX_Abyssgravel_1: -870825052
+      TEX_Abyssgravel_10: 1221998928
       TEX_Abyssgravel_11: -758197720
-      TEX_Abyssgravel_46: 1929898213
-      TEX_Abyssgravel_31: 456498982
-      TEX_Abyssgravel_7: 1041262440
-      TEX_Abyssgravel_38: 1448029751
-      TEX_Abyssgravel_53: -201951154
-      TEX_Abyssgravel_36: -1900178804
-      TEX_Abyssgravel_40: -739677519
-      TEX_Abyssgravel_19: 1482803983
-      TEX_Abyssgravel_20: 1218976275
-      TEX_Abyssgravel_43: -1695169082
-      TEX_Abyssgravel_15: -782209232
       TEX_Abyssgravel_12: -878039405
-      TEX_Abyssgravel_5: -1009182542
-      TEX_Abyssgravel_22: -944932302
-      TEX_Abyssgravel_41: 926751308
-      TEX_Abyssgravel_49: 744978342
-      TEX_Abyssgravel_4: 1696949488
-      TEX_Abyssgravel_8: 1758776834
-      TEX_Abyssgravel_39: -647579098
-      TEX_Abyssgravel_45: 1541088325
-      TEX_Abyssgravel_52: -316669690
       TEX_Abyssgravel_13: -1798037834
+      TEX_Abyssgravel_14: 485722574
+      TEX_Abyssgravel_15: -782209232
+      TEX_Abyssgravel_16: -381713886
+      TEX_Abyssgravel_17: -2015813882
+      TEX_Abyssgravel_18: -1157797227
+      TEX_Abyssgravel_19: 1482803983
+      TEX_Abyssgravel_2: -300211404
+      TEX_Abyssgravel_20: 1218976275
+      TEX_Abyssgravel_21: 1247662773
+      TEX_Abyssgravel_22: -944932302
+      TEX_Abyssgravel_23: -393564279
+      TEX_Abyssgravel_24: 606909059
+      TEX_Abyssgravel_25: 1169250116
+      TEX_Abyssgravel_26: 424765887
+      TEX_Abyssgravel_27: 51662792
+      TEX_Abyssgravel_28: -1274877438
+      TEX_Abyssgravel_29: -1943247106
+      TEX_Abyssgravel_3: 1394509661
+      TEX_Abyssgravel_30: -1969159421
+      TEX_Abyssgravel_31: 456498982
       TEX_Abyssgravel_32: 1097033763
       TEX_Abyssgravel_33: -1262258964
-      TEX_Abyssgravel_30: -1969159421
-      TEX_Abyssgravel_17: -2015813882
-      TEX_Abyssgravel_51: -114579383
-      TEX_Abyssgravel_16: -381713886
-      TEX_Abyssgravel_44: -41916633
-      TEX_Abyssgravel_50: -1731641327
-      TEX_Abyssgravel_23: -393564279
-      TEX_Abyssgravel_21: 1247662773
-      TEX_Abyssgravel_37: -811419414
-      TEX_Abyssgravel_29: -1943247106
+      TEX_Abyssgravel_34: 1795738122
       TEX_Abyssgravel_35: 119020693
-      TEX_Abyssgravel_27: 51662792
-      TEX_Abyssgravel_1: -870825052
-      TEX_Abyssgravel_9: -779442555
-      TEX_Abyssgravel_26: 424765887
+      TEX_Abyssgravel_36: -1900178804
+      TEX_Abyssgravel_37: -811419414
+      TEX_Abyssgravel_38: 1448029751
+      TEX_Abyssgravel_39: -647579098
+      TEX_Abyssgravel_4: 1696949488
+      TEX_Abyssgravel_40: -739677519
+      TEX_Abyssgravel_41: 926751308
+      TEX_Abyssgravel_42: -2122269348
+      TEX_Abyssgravel_43: -1695169082
+      TEX_Abyssgravel_44: -41916633
+      TEX_Abyssgravel_45: 1541088325
+      TEX_Abyssgravel_46: 1929898213
       TEX_Abyssgravel_47: 2071316181
-      TEX_Abyssgravel_24: 606909059
       TEX_Abyssgravel_48: -1584843477
+      TEX_Abyssgravel_49: 744978342
+      TEX_Abyssgravel_5: -1009182542
+      TEX_Abyssgravel_50: -1731641327
+      TEX_Abyssgravel_51: -114579383
+      TEX_Abyssgravel_52: -316669690
+      TEX_Abyssgravel_53: -201951154
       TEX_Abyssgravel_6: 1588191588
-      TEX_Abyssgravel_18: -1157797227
-  spritePackingTag: 
+      TEX_Abyssgravel_7: 1041262440
+      TEX_Abyssgravel_8: 1758776834
+      TEX_Abyssgravel_9: -779442555
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

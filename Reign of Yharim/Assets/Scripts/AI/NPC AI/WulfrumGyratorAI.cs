@@ -19,7 +19,6 @@ public class WulfrumGyratorAI : NPC
         Damage = 15;
         LifeMax = 28;
         Life = LifeMax;
-        target = GameObject.Find("Player");
 
         spotted = false;
 

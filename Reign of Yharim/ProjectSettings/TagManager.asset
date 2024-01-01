@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hitbox
   - ProjectileHitbox
+  - Liquid
   layers:
   - Default
   - TransparentFX

@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1269,63 +1274,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Blightedgrass_5: -1557714086
+      TEX_Blightedgrass_0: 1682184336
+      TEX_Blightedgrass_1: -2137219974
+      TEX_Blightedgrass_10: 1687829541
       TEX_Blightedgrass_11: 860134397
-      TEX_Blightedgrass_33: -49279233
-      TEX_Blightedgrass_28: -1062691110
-      TEX_Blightedgrass_21: -1523766374
-      TEX_Blightedgrass_8: -819115566
-      TEX_Blightedgrass_25: -356546872
-      TEX_Blightedgrass_24: -747613877
-      TEX_Blightedgrass_31: -1345553755
-      TEX_Blightedgrass_39: 1180978961
-      TEX_Blightedgrass_40: 999185514
-      TEX_Blightedgrass_3: -866307929
-      TEX_Blightedgrass_41: 548271161
-      TEX_Blightedgrass_26: 506046060
-      TEX_Blightedgrass_34: -251157904
-      TEX_Blightedgrass_47: -649631614
-      TEX_Blightedgrass_49: 1183002440
-      TEX_Blightedgrass_30: 1812572530
+      TEX_Blightedgrass_12: 869664698
+      TEX_Blightedgrass_13: 320270691
+      TEX_Blightedgrass_14: -1843416247
+      TEX_Blightedgrass_15: 907433509
+      TEX_Blightedgrass_16: 1867186226
+      TEX_Blightedgrass_17: -866362480
       TEX_Blightedgrass_18: 833942891
       TEX_Blightedgrass_19: 731097683
-      TEX_Blightedgrass_7: -1457440466
-      TEX_Blightedgrass_35: 1836193186
-      TEX_Blightedgrass_12: 869664698
-      TEX_Blightedgrass_6: 2087966536
-      TEX_Blightedgrass_44: -1956748203
       TEX_Blightedgrass_2: -678734496
-      TEX_Blightedgrass_14: -1843416247
+      TEX_Blightedgrass_20: -1989222671
+      TEX_Blightedgrass_21: -1523766374
+      TEX_Blightedgrass_22: 33163118
+      TEX_Blightedgrass_23: -1274174140
+      TEX_Blightedgrass_24: -747613877
+      TEX_Blightedgrass_25: -356546872
+      TEX_Blightedgrass_26: 506046060
+      TEX_Blightedgrass_27: 2007576074
+      TEX_Blightedgrass_28: -1062691110
+      TEX_Blightedgrass_29: -1111253169
+      TEX_Blightedgrass_3: -866307929
+      TEX_Blightedgrass_30: 1812572530
+      TEX_Blightedgrass_31: -1345553755
+      TEX_Blightedgrass_32: -1991201664
+      TEX_Blightedgrass_33: -49279233
+      TEX_Blightedgrass_34: -251157904
+      TEX_Blightedgrass_35: 1836193186
       TEX_Blightedgrass_36: 1227380307
+      TEX_Blightedgrass_37: 1015802176
+      TEX_Blightedgrass_38: -1375408343
+      TEX_Blightedgrass_39: 1180978961
+      TEX_Blightedgrass_4: 988367478
+      TEX_Blightedgrass_40: 999185514
+      TEX_Blightedgrass_41: 548271161
+      TEX_Blightedgrass_42: -932836346
+      TEX_Blightedgrass_43: -1137521374
+      TEX_Blightedgrass_44: -1956748203
+      TEX_Blightedgrass_45: -400420944
+      TEX_Blightedgrass_46: -1935926802
+      TEX_Blightedgrass_47: -649631614
+      TEX_Blightedgrass_48: 1650775798
+      TEX_Blightedgrass_49: 1183002440
+      TEX_Blightedgrass_5: -1557714086
+      TEX_Blightedgrass_50: 606387660
       TEX_Blightedgrass_51: 2112354755
       TEX_Blightedgrass_52: 666185993
-      TEX_Blightedgrass_46: -1935926802
-      TEX_Blightedgrass_15: 907433509
-      TEX_Blightedgrass_42: -932836346
-      TEX_Blightedgrass_17: -866362480
-      TEX_Blightedgrass_23: -1274174140
-      TEX_Blightedgrass_32: -1991201664
-      TEX_Blightedgrass_50: 606387660
-      TEX_Blightedgrass_20: -1989222671
-      TEX_Blightedgrass_13: 320270691
-      TEX_Blightedgrass_27: 2007576074
       TEX_Blightedgrass_53: -2125262604
-      TEX_Blightedgrass_45: -400420944
-      TEX_Blightedgrass_4: 988367478
-      TEX_Blightedgrass_37: 1015802176
-      TEX_Blightedgrass_10: 1687829541
-      TEX_Blightedgrass_22: 33163118
-      TEX_Blightedgrass_48: 1650775798
-      TEX_Blightedgrass_1: -2137219974
-      TEX_Blightedgrass_29: -1111253169
-      TEX_Blightedgrass_0: 1682184336
-      TEX_Blightedgrass_38: -1375408343
+      TEX_Blightedgrass_6: 2087966536
+      TEX_Blightedgrass_7: -1457440466
+      TEX_Blightedgrass_8: -819115566
       TEX_Blightedgrass_9: -1227850408
-      TEX_Blightedgrass_43: -1137521374
-      TEX_Blightedgrass_16: 1867186226
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

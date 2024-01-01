@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1269,63 +1274,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Sand_48: 162039025
-      TEX_Sand_33: 1112382145
-      TEX_Sand_4: -1990872807
-      TEX_Sand_10: -564597942
-      TEX_Sand_8: -1667426986
-      TEX_Sand_30: 650317895
-      TEX_Sand_19: 912812849
-      TEX_Sand_34: 1852498113
-      TEX_Sand_9: -51596067
-      TEX_Sand_20: 451204169
-      TEX_Sand_31: -213164989
-      TEX_Sand_5: 1299397412
-      TEX_Sand_52: -1236315085
-      TEX_Sand_38: -1065563518
-      TEX_Sand_2: 1999442447
-      TEX_Sand_11: 195923699
       TEX_Sand_0: -1857348052
-      TEX_Sand_37: 971616134
-      TEX_Sand_21: 238894696
-      TEX_Sand_24: 292916107
-      TEX_Sand_22: -2114979810
-      TEX_Sand_39: -429583374
-      TEX_Sand_14: 609552780
-      TEX_Sand_16: -602292498
-      TEX_Sand_46: 999518609
-      TEX_Sand_25: -1680619919
-      TEX_Sand_6: -1745606418
-      TEX_Sand_28: -384463101
-      TEX_Sand_17: 1810037722
-      TEX_Sand_36: -1421115326
-      TEX_Sand_32: 723207244
-      TEX_Sand_51: -503520378
-      TEX_Sand_44: -604432231
-      TEX_Sand_29: -209563513
-      TEX_Sand_45: -192586812
-      TEX_Sand_35: -666618044
-      TEX_Sand_50: -1874415581
-      TEX_Sand_41: 371556694
-      TEX_Sand_40: 1561193374
-      TEX_Sand_23: 1517237541
-      TEX_Sand_53: 297665561
-      TEX_Sand_42: -355277064
-      TEX_Sand_49: -640583420
-      TEX_Sand_12: -61598355
-      TEX_Sand_43: 1000226424
-      TEX_Sand_18: 1105471518
-      TEX_Sand_13: -478896303
-      TEX_Sand_26: -1561123286
-      TEX_Sand_47: 1301049532
       TEX_Sand_1: -2061626809
-      TEX_Sand_27: 1267764404
-      TEX_Sand_7: -1338210845
+      TEX_Sand_10: -564597942
+      TEX_Sand_11: 195923699
+      TEX_Sand_12: -61598355
+      TEX_Sand_13: -478896303
+      TEX_Sand_14: 609552780
       TEX_Sand_15: 1092291271
+      TEX_Sand_16: -602292498
+      TEX_Sand_17: 1810037722
+      TEX_Sand_18: 1105471518
+      TEX_Sand_19: 912812849
+      TEX_Sand_2: 1999442447
+      TEX_Sand_20: 451204169
+      TEX_Sand_21: 238894696
+      TEX_Sand_22: -2114979810
+      TEX_Sand_23: 1517237541
+      TEX_Sand_24: 292916107
+      TEX_Sand_25: -1680619919
+      TEX_Sand_26: -1561123286
+      TEX_Sand_27: 1267764404
+      TEX_Sand_28: -384463101
+      TEX_Sand_29: -209563513
       TEX_Sand_3: -1720911628
-  spritePackingTag: 
+      TEX_Sand_30: 650317895
+      TEX_Sand_31: -213164989
+      TEX_Sand_32: 723207244
+      TEX_Sand_33: 1112382145
+      TEX_Sand_34: 1852498113
+      TEX_Sand_35: -666618044
+      TEX_Sand_36: -1421115326
+      TEX_Sand_37: 971616134
+      TEX_Sand_38: -1065563518
+      TEX_Sand_39: -429583374
+      TEX_Sand_4: -1990872807
+      TEX_Sand_40: 1561193374
+      TEX_Sand_41: 371556694
+      TEX_Sand_42: -355277064
+      TEX_Sand_43: 1000226424
+      TEX_Sand_44: -604432231
+      TEX_Sand_45: -192586812
+      TEX_Sand_46: 999518609
+      TEX_Sand_47: 1301049532
+      TEX_Sand_48: 162039025
+      TEX_Sand_49: -640583420
+      TEX_Sand_5: 1299397412
+      TEX_Sand_50: -1874415581
+      TEX_Sand_51: -503520378
+      TEX_Sand_52: -1236315085
+      TEX_Sand_53: 297665561
+      TEX_Sand_6: -1745606418
+      TEX_Sand_7: -1338210845
+      TEX_Sand_8: -1667426986
+      TEX_Sand_9: -51596067
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

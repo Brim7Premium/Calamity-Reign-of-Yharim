@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 using FMODUnity;
 using FMOD.Studio;
@@ -9,10 +11,20 @@ using FMOD.Studio;
 public class MainMenu : MonoBehaviour
 {
 	public MainMenuScreens menuScreens;
+	public string biomeScene;
+
+	private GameObject settingsobj;
 
 	private EventInstance TitleTheme;
 	public void Awake()
 	{
+		settingsobj = GameObject.Find("[Settings]");
+		if (settingsobj == null)
+		{
+			settingsobj = new GameObject { name = "[Settings]" };
+			settingsobj.AddComponent<bracketSettingsbracket>();
+			DontDestroyOnLoad(settingsobj);
+		}
 		TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Title);
 		TitleTheme.start();
 		Debug.Log("Main");
@@ -20,14 +32,18 @@ public class MainMenu : MonoBehaviour
 
 	public void HoverSound()
 	{
-		AudioManager.instance.PlayOneShot(FMODEvents.instance.TwinTargetSelect);
+		AudioManager.instance.PlayOneShot(FMODEvents.instance.TitleHover);
 	}
 
-	public void EnterWorld()
+	void EnterWorld()
 	{
+		TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		SceneManager.LoadScene("TempCam"); // So there isnt a missing camera for a second, also acts as a loading screen
+		SceneManager.LoadSceneAsync(biomeScene, LoadSceneMode.Additive); // biome MUST be loaded before the systems
+		SceneManager.LoadSceneAsync("Systems", LoadSceneMode.Additive);
 		AudioManager.instance.PlayOneShot(FMODEvents.instance._055Roar);
-		SceneManager.LoadScene("Surface");
 	}
+
 	public void LeaveGame()
 	{
 		Debug.Log("The game has been quit");
@@ -36,7 +52,22 @@ public class MainMenu : MonoBehaviour
 
 	public void ClickSound()
 	{
-		AudioManager.instance.PlayOneShot(FMODEvents.instance.ExoTwinsHoverIcon);
+		AudioManager.instance.PlayOneShot(FMODEvents.instance.TitleClick);
+	}
+
+	[SerializeField] private Slider respawntimeSliderObj;
+	public void setrespawntime()
+	{
+		Slider timeSlider = respawntimeSliderObj.GetComponent<Slider>();
+		TextMeshProUGUI indicator = respawntimeSliderObj.GetComponent<TextMeshProUGUI>();
+		indicator.text = ((int)timeSlider.value).ToString();
+		settingsobj.GetComponent<bracketSettingsbracket>().respawnTime = (int)timeSlider.value;
+	}
+
+	[SerializeField] private Toggle militaryTimeToggle;
+	public void setmilitarytime()
+	{
+		settingsobj.GetComponent<bracketSettingsbracket>().militaryTime = militaryTimeToggle.isOn;
 	}
 
 	public void ChangeMenuScreen(float menuID)
@@ -62,8 +93,16 @@ public class MainMenu : MonoBehaviour
 		{
 			menuScreens = MainMenuScreens.OptionsAudio;
 		}
+		if (menuID == 6)
+		{
+			menuScreens = MainMenuScreens.OptionsGeneral;
+		}
+		if (menuID == 7)
+		{
+			menuScreens = MainMenuScreens.OptionsVideo;
+		}
 		Debug.Log(menuScreens);
-	}
+	} 
 	/* Set the variables using unity's built in button system
 	* for each button, assign the id of the next screen/the screen that the button would send you to
 	* for back buttons, assign the id of the previous screen
@@ -76,6 +115,8 @@ public class MainMenu : MonoBehaviour
 		SinglePlayer,
 		SinglePlayerSave,
 		Options,
-		OptionsAudio
+		OptionsAudio,
+		OptionsGeneral,
+		OptionsVideo,
 	}
 }

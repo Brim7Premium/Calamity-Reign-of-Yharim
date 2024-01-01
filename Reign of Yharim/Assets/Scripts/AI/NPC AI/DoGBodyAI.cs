@@ -20,8 +20,6 @@ public class DoGBodyAI : NPC
         Life = LifeMax;
         worm = true;
 
-        target = GameObject.Find("Player");
-
         ResetRNG();
     }
     public override void AI()
