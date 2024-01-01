@@ -6,6 +6,8 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 {
     public string NPCName;
 
+    public bool inWater;
+
     private int _lifeMax; //lifemax property value field
     public int LifeMax //property, which can be called as set or get in the other code. Whatever the other code sets this as will return to the set as value, and get will just directly return _lifeMax
     {
@@ -113,6 +115,10 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     }
     public void Update()
     {
+        if (target == null)
+		{
+			target = GameObject.Find("Player");
+		}
         AI();
         objectRenderer.enabled = IsVisibleFromCamera();
     }
@@ -148,4 +154,20 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         yield return new WaitForSeconds(IFrames);
         immune = false;
     }
+
+	void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.name == "Water")
+		{
+			inWater = false;
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.name == "Water")
+		{
+			inWater = true;
+		}
+	}
 }

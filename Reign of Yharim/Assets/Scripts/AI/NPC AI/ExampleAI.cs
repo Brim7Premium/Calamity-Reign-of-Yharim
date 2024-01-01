@@ -11,8 +11,6 @@ public class ExampleAI : NPC
         Damage = 7;
         LifeMax = 100;
         Life = LifeMax;
-
-        target = GameObject.Find("Player");
     }
     //for this examplenpc, I will make a simple "state machine" for switching between different attacks.
     //ai[] usage:

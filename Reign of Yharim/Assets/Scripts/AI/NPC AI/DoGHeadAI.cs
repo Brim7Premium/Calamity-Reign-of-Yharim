@@ -10,7 +10,7 @@ public class DoGHeadAI : NPC
 
     public Vector2 oldTargetPos;
 
-    private EventInstance DoGMusic;
+    private EventInstance theme;
     public override void SetDefaults()
     {
         base.SetDefaults();
@@ -20,20 +20,17 @@ public class DoGHeadAI : NPC
         LifeMax = 1706400;
         Life = LifeMax;
         worm = true;
-
-        target = GameObject.Find("Player");
-
-        DoGMusic = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoG1);
+        
+        if (!GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive)
+        {
+            theme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.SCal2); // replace this with the boss's event reference
+            theme.start();
+            GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive = true;
+        }
     }
     public override void AI()
     {
         UpdateVelocity();
-        PLAYBACK_STATE playbackState;
-        DoGMusic.getPlaybackState(out playbackState);
-        if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
-        {
-            DoGMusic.start();
-        }
 
         if (target != null)
         {
@@ -103,9 +100,13 @@ public class DoGHeadAI : NPC
             velocity = new Vector2(-1, 1) * 0.5f;
             if (DistanceBetween(transform.position, target.transform.position) > 240f)
             {
-                DoGMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 Destroy(gameObject);
             }
         }
+    }
+    void OnDestroy()
+    {
+        theme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive = false;
     }
 }

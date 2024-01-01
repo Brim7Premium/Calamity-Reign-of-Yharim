@@ -1,5 +1,14 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
+using TMPro;
+using FMODUnity;
+using FMOD.Studio;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -36,6 +45,10 @@ public class EnemySpawner : MonoBehaviour
 
             GameObject newEnemy = Instantiate(enemyToSpawn, SpawnPosition, Quaternion.identity);
             // newEnemy.GetComponent("Script").healthBar = 
+            if (newEnemy.scene != this.gameObject.scene)
+            {
+                SceneManager.MoveGameObjectToScene(newEnemy, this.gameObject.scene);
+            }
             newEnemy.SetActive(true);
         }
     }

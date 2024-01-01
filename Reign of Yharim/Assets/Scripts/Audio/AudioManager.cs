@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using UnityEngine.UI;
+using TMPro;
 
 public class AudioManager : MonoBehaviour
 {
@@ -28,16 +30,43 @@ public class AudioManager : MonoBehaviour
 		}
 		instance = this;
 
+		settingsobj = GameObject.Find("[Settings]");
+		if (settingsobj == null)
+		{
+			settingsobj = new GameObject { name = "[Settings]" };
+			settingsobj.AddComponent<bracketSettingsbracket>();
+			DontDestroyOnLoad(settingsobj);
+		}
+
 		eventInstances = new List<EventInstance>();
 
 		musicBus = RuntimeManager.GetBus("bus:/Music");
 		SFXBus = RuntimeManager.GetBus("bus:/SFX");
 
-		settingsobj = GameObject.Find("[Settings]");
-		if (settingsobj != null) 
+		musicVolume = settingsobj.GetComponent<bracketSettingsbracket>().musicVolume;
+		SFXVolume = settingsobj.GetComponent<bracketSettingsbracket>().SFXVolume;
+	}
+
+	public void SliderValueChange(bool sfx)
+	{
+		if (!sfx)
 		{
-			musicVolume = settingsobj.GetComponent<bracketSettingsbracket>().musicVolume;
-			SFXVolume = settingsobj.GetComponent<bracketSettingsbracket>().SFXVolume;
+			var sliderobj = GameObject.Find("MusicSlider");
+			var volumeSlider = sliderobj.GetComponent<Slider>();
+			musicVolume = volumeSlider.value;
+			settingsobj.GetComponent<bracketSettingsbracket>().musicVolume = volumeSlider.value;
+			var indicator = volumeSlider.GetComponent<TextMeshProUGUI>();
+			indicator.text = ((int)(volumeSlider.value * 100)).ToString();
+		}
+
+		else
+		{
+			var sliderobj = GameObject.Find("SFXSlider");
+			var volumeSlider = sliderobj.GetComponent<Slider>();
+			SFXVolume = volumeSlider.value;
+			settingsobj.GetComponent<bracketSettingsbracket>().SFXVolume = volumeSlider.value;
+			var indicator = volumeSlider.GetComponent<TextMeshProUGUI>();
+			indicator.text = ((int)(volumeSlider.value * 100)).ToString();
 		}
 	}
 
