@@ -64,10 +64,10 @@ public class GUIController : MonoBehaviour
                 ChangeSelectedSlot(number - 1);
             }
         }
-        ItemData heldItem = GetSelectedItem(false);
+        InvItem heldItem = GetSelectedItem(false);
 
         if (GetSelectedItem(false))
-            itemText.text = heldItem.displayName;
+            itemText.text = heldItem.item.displayName;
         else
             itemText.text = ("Empty Slot");
 
@@ -79,8 +79,9 @@ public class GUIController : MonoBehaviour
                 GameObject worldClone = Instantiate(worldItem, player.transform.position, Quaternion.identity);
                 worldClone.GetComponent<WorldItem>().SpawnCooldown(2f);
                 SpriteRenderer spriteRenderer = worldClone.GetComponent<SpriteRenderer>();
-                spriteRenderer.sprite = heldItem.sprite;
-                worldClone.GetComponent<WorldItem>().myDroppedItem = heldItem;
+                spriteRenderer.sprite = heldItem.item.sprite;
+                worldClone.GetComponent<WorldItem>().myDroppedItem = heldItem.item;
+                worldClone.GetComponent<WorldItem>().Amount = heldItem.count;
                 GetSelectedItem(true);
                 worldClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(200f * playerAI.isFacing, 200f));
             }
@@ -95,24 +96,17 @@ public class GUIController : MonoBehaviour
         selectedSlot = value;
     }
 
-    public ItemData GetSelectedItem(bool use) //without bool use, method will get the selected item, with bool use, method will get and remove one of selected item
+    public InvItem GetSelectedItem(bool use) //without bool use, method will get the selected item, with bool use, method will get and remove one of selected item
     {
         InvSlot slot = inventoryManager.slots[selectedSlot].gameObject.GetComponent<InvSlot>();
         InvItem itemInSlot = slot.GetComponentInChildren<InvItem>();
         if (itemInSlot != null)
         {
-            ItemData item = itemInSlot.item;
             if (use == true)
             {
-                itemInSlot.count--;
-                if (itemInSlot.count <= 0)
-                {
-                    Destroy(itemInSlot.gameObject);
-                }
-                else
-                    itemInSlot.ReCount();
+                Destroy(inventoryManager.TakeItem(slot.number).gameObject);
             }
-            return item;
+            return itemInSlot;
         }
         else
             return null;

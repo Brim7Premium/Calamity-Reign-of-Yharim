@@ -18,11 +18,11 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     {
         set
         {
-            if(item.stackable)
+            if(item.stackable || value<=1)
             {
                 _count = value;
                 ReCount();
-                if(_count<=0) Destroy(gameObject);
+                if(count<=0) Destroy(gameObject);
             }
         }
         get => _count;
@@ -40,14 +40,12 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         inventoryManager = _inventoryManager;
         ReCount();
     }
-
     public void ReCount()
     {
         countText.text = count.ToString();
         bool textActive = count > 1;
         countText.gameObject.SetActive(textActive);
     }
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         inventoryManager.TakeItem(transform.parent.gameObject.GetComponent<InvSlot>().number);

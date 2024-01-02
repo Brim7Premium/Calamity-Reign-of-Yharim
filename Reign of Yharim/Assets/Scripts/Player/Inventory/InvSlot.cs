@@ -34,11 +34,14 @@ public class InvSlot : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
-        if (transform.childCount == 0) //if the slot is not already occupied
+        GameObject dropped = eventData.pointerDrag;
+        InvItem draggableItem = dropped.GetComponent<InvItem>();
+        InvItem itemInSlot = transform.GetComponentInChildren<InvItem>();
+        //if the slot is not already occupied or the same item in the slot
+        if (transform.childCount == 0 || (draggableItem.item.stackable && draggableItem.item == itemInSlot.item)) 
         {
-            GameObject dropped = eventData.pointerDrag;
-            InvItem draggableItem = dropped.GetComponent<InvItem>();
             draggableItem.parentAfterDrag = transform;
+            itemInSlot.count += draggableItem.count;
         }
     }
 }

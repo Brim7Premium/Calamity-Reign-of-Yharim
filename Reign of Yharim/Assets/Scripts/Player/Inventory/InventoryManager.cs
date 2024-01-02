@@ -109,7 +109,7 @@ public class InventoryManager : MonoBehaviour
 
         InvItem item = inventory[slot];
 
-        if(_count == -1)
+        if(_count == -1 || (item.count - _count)<=0)
         {
             inventory[slot] = null;
             return item;

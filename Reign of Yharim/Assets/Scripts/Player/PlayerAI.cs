@@ -41,7 +41,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 	[SerializeField] [Range(1, 180)]private int framerate; //create int with range of 1 to 180, used for setting framerate. Why this is in the player's AI  script will remain unknown for eternity
 
     [Header("Item usage")]
-    [SerializeField] private GameObject DefaultAttackPrefab;
+    [SerializeField] private GameObject DefaultItemUsagePrefab;
     public bool IsAttacking;
     public GUIController gUIController;
     //constants can't be changed
@@ -96,32 +96,23 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
 		Debug.DrawRay(transform.position, DirectionTo(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition))); //better version
 		//Debug.Log("IsJumping: " + isJumping + " IsFalling: " + isFalling);
-		/*
+		/* if (isGrounded)
+			isFalling = false;
         if (rb.velocity.y < -3f)
         {
             isFalling = true;
         }
         */
-        ItemData item = gUIController.GetSelectedItem(false);
+        ItemData item = gUIController.GetSelectedItem(false)?.item;
         if(Input.GetKeyDown(KeyCode.Mouse0) && item && !IsAttacking)
         {
             IsAttacking = true;
             transform.localScale = new Vector2(Mathf.Sign(MousePos.x-transform.position.x), 1);
             isFacing = transform.localScale.x;
-            GameObject attack = Instantiate(DefaultAttackPrefab, transform);
-            attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable);
+            GameObject attack = Instantiate(DefaultItemUsagePrefab, transform);
+            attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable).item;
         }
     }
-
-		/* if (isGrounded)
-			isFalling = false;
-
-		if (rb.velocity.y < -3f)
-		{
-			isFalling = true;
-		}
-		*/
-	}
 	public override void Kill()
 	{
 		gameObject.SetActive(false); //deactivate the object
@@ -152,16 +143,20 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 				ChangeAnimationState(PlayerIdle); //set the animation to idle
 			}
 		}
-		if (xAxis > 0)
+		if(!IsAttacking)
 		{
-			transform.localScale = new Vector2(1, 1); //facing right
-			isFacing = 1;
+			if (xAxis > 0)
+			{
+				transform.localScale = new Vector2(1, 1); //facing right
+				isFacing = 1;
+			}
+			if (xAxis < 0)
+			{
+				transform.localScale = new Vector2(-1, 1); //facing left
+				isFacing = -1;
+			}
 		}
-		if (xAxis < 0)
-		{
-			transform.localScale = new Vector2(-1, 1); //facing left
-			isFacing = -1;
-		}
+		
 	}
 	private void Jump()
 	{

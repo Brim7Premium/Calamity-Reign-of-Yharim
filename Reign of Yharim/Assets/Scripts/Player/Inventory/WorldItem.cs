@@ -57,12 +57,11 @@ public class WorldItem : MonoBehaviour
                 if (!isWaiting)
                 {
                     inventoryManager = gUIController.inventoryManager;
-                    if(inventoryManager.AddItem(myDroppedItem, Amount))
+                    if(inventoryManager.AddItem(myDroppedItem, _count:Amount))
                         Destroy(gameObject);
                     else
                     {
-                        inventoryManager = GameObject.Find("Inventory").GetComponent<InventoryManager>();
-                        if(inventoryManager.AddItem(myDroppedItem, Amount))
+                        if(inventoryManager.AddItem(myDroppedItem, _count:Amount))
                             Destroy(gameObject);
                     }
                     StartCoroutine(Wait(0.5f));
