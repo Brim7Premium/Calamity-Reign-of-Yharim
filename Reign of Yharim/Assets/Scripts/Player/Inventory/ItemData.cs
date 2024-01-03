@@ -9,6 +9,7 @@ public class ItemData : ScriptableObject
     [Header("Wepon stats")]
     public ItemType type;
     public ActionType actionType;
+    public InventoryType inventoryType;
     public bool consumable = false;
     public float damage = 1;
     public float knockback = 0;
@@ -27,7 +28,15 @@ public class ItemData : ScriptableObject
     [Header("Both")]
     public Sprite sprite;
     public float ID;
-
+    public enum InventoryType
+    {
+        All,
+        Weapon,
+        Potion,
+        Armor,
+        Accesory,
+        What
+    }
     public enum ItemType
     {
         Tool, 

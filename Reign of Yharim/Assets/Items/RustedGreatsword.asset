@@ -14,8 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 6
   actionType: 0
+  inventoryType: 1
   consumable: 0
+  damage: 1
+  knockback: 0
+  AtkSpeed: 2
+  AtkType: 0
   size: {x: 0, y: 0}
+  Projectile: {fileID: 0}
+  Script: Item
   stackable: 0
   displayName: Rusted Greatsword
   sprite: {fileID: 21300000, guid: 8435e3ff741f28e458d8559850b223a1, type: 3}

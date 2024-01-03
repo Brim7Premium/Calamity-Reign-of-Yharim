@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   actionType: 1
+  inventoryType: 1
   consumable: 0
   damage: 1
   knockback: 0

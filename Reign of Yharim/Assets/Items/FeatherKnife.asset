@@ -14,8 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 5
   actionType: 2
+  inventoryType: 1
   consumable: 1
+  damage: 1
+  knockback: 0
+  AtkSpeed: 2
+  AtkType: 0
   size: {x: 0, y: 0}
+  Projectile: {fileID: 0}
+  Script: Item
   stackable: 1
   displayName: Feather Knife
   sprite: {fileID: 21300000, guid: c244cea5412666742aae7b7fada30393, type: 3}

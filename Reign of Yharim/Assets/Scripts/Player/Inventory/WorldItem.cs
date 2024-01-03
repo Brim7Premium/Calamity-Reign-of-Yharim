@@ -8,7 +8,6 @@ public class WorldItem : MonoBehaviour
     public ItemData myDroppedItem;
     public int Amount;
     public GUIController gUIController;
-    public InventoryManager inventoryManager;
     bool isWaiting = false;
     int stackDistance = 3;
     [SerializeField] private LayerMask itemLayer;
@@ -55,15 +54,9 @@ public class WorldItem : MonoBehaviour
             if (collision.gameObject.tag == "Hitbox")
             {
                 if (!isWaiting)
-                {
-                    inventoryManager = gUIController.inventoryManager;
-                    if(inventoryManager.AddItem(myDroppedItem, _count:Amount))
+                {   
+                    if(gUIController.inventoryManager.AddItem(myDroppedItem, count:Amount))
                         Destroy(gameObject);
-                    else
-                    {
-                        if(inventoryManager.AddItem(myDroppedItem, _count:Amount))
-                            Destroy(gameObject);
-                    }
                     StartCoroutine(Wait(0.5f));
                 }
             }

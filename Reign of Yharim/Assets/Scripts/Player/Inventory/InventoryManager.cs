@@ -8,13 +8,16 @@ using System.Linq;
 public class InventoryManager : MonoBehaviour
 {
     [SerializeField] private InvItem[] inventory;
+    public InventoryManager[] pages;
     public Transform[] slots;
+    public ItemData.InventoryType StoringType;
     public int invSize;
     public Transform GUI;
     [SerializeField] private GameObject InvItem; 
     [SerializeField] private GameObject InvSlot;
     public void Start()
     {
+        //Only referred to this inventory excluding pages
         inventory = new InvItem[invSize];
         slots = new Transform[invSize];
         int i = 0;
@@ -34,40 +37,83 @@ public class InventoryManager : MonoBehaviour
             slots[i] = slot.transform;
         }
     }
-    //Adds in the first availablt slot
-    public bool AddItem(ItemData item, int slot = -1, int _count = 1)
+    //Adds in the first availablt slot or specified slot
+    //First tries all universal inventories, then specific
+    public bool AddItem(ItemData item, int slot = -1, int count = 1)
     {
-        if(slot != -1)
+        bool AddItem()
         {
-            if(inventory[slot] == null)//if no item in slot
+            if(slot != -1)
             {
-                inventory[slot] = Instantiate(InvItem, slots[slot]).GetComponent<InvItem>();
-                inventory[slot].InitItem(item, this, _count);
-                return true;
+                if(inventory[slot] == null)//if no item in slot
+                {
+                    inventory[slot] = Instantiate(InvItem, slots[slot]).GetComponent<InvItem>();
+                    inventory[slot].InitItem(item, this, count);
+                    return true;
+                }
+                else if(inventory[slot].item == item && item.stackable)//if the same item in slot
+                {
+                    inventory[slot].count += count;
+                    return true;
+                }
+                return false;
             }
-            else if(inventory[slot].item == item && item.stackable)//if the same item in slot
+
+
+            for(int i = 0; i<invSize; i++)
             {
-                inventory[slot].count += _count;
-                return true;
+                if(inventory[i] == null)//if no item in slot
+                {
+                    inventory[i] = Instantiate(InvItem, slots[i]).GetComponent<InvItem>();
+                    inventory[i].InitItem(item, this, count);
+                    return true;
+                }
+                else if(inventory[i].item == item && item.stackable)//if the same item in slot
+                {
+                    inventory[i].count += count;
+                    return true;
+                }
             }
+
             return false;
         }
 
-        for(int i = 0; i<invSize; i++)
-        {
-            if(inventory[i] == null)//if no item in slot
-            {
-                inventory[i] = Instantiate(InvItem, slots[i]).GetComponent<InvItem>();
-                inventory[i].InitItem(item, this, _count);
-                return true;
-            }
-            else if(inventory[i].item == item && item.stackable)//if the same item in slot
-            {
-                inventory[i].count += _count;
-                return true;
-            }
-            
+
+
+        if(StoringType == ItemData.InventoryType.All)
+        {   
+
+            if(AddItem()) return true;
         }
+
+        print(StoringType);
+        foreach(InventoryManager page in pages)
+        {   
+            print(page.StoringType);
+            if(page.StoringType == ItemData.InventoryType.All) 
+            {
+                if(page.AddItem(item, slot, count)) return true;
+            }
+        }
+
+
+
+        if(StoringType == item.inventoryType)
+        {
+            if(AddItem()) return true;
+        }
+
+        foreach(InventoryManager page in pages)
+        {
+            if(page.StoringType == item.inventoryType) 
+            {
+                if(page.AddItem(item, slot, count)) return true;
+            }
+        }
+
+
+
+
         return false;
     }
     public bool AddItem(InvItem item, int slot)
@@ -77,15 +123,17 @@ public class InventoryManager : MonoBehaviour
             Debug.LogError(name + " doesn't have slot number " + slot);
             return false;
         }
+        if(!((item.item.inventoryType == StoringType) || (StoringType == ItemData.InventoryType.All))) return false;
+
         if(inventory[slot] == null)
         {
             inventory[slot] = item;
             item.transform.SetParent(slots[slot]);
             return true;
         }
+        
         if((inventory[slot].item == item.item) && item.item.stackable)
         {
-            
             inventory[slot].count += item.count;
             Destroy(item.gameObject);
             return true;
@@ -93,43 +141,43 @@ public class InventoryManager : MonoBehaviour
         
         return false;
     }
-    public InvItem TakeItem(int slot, int _count = -1)
+    public InvItem TakeItem(int slot, int count = -1)
     {
         if(slot>invSize || slot<0) 
         {
             Debug.LogError(name + " doesn't have slot number " + slot);
             return null;
         }
-        if(_count<-1 || _count == 0)
+        if(count<-1 || count == 0)
         {
-            Debug.LogError(name + " : " + _count + " is a wrong count");
+            Debug.LogError(name + " : " + count + " is a wrong count");
             return null;
         }
         if(inventory[slot] == null) return null;
 
         InvItem item = inventory[slot];
 
-        if(_count == -1 || (item.count - _count)<=0)
+        if(count == -1 || (item.count - count)<=0)
         {
             inventory[slot] = null;
             return item;
         }
         else
         {
-            item.count -= _count;
+            item.count -= count;
             InvItem newItem = Instantiate(InvItem, slots[slot]).GetComponent<InvItem>();
             newItem.InitItem(item.item, this);
             return newItem;
         }
     }
-    public InvItem TakeItem(ItemData item, int _count = -1)
+    public InvItem TakeItem(ItemData item, int count = -1)
     {
         for(int i = 0; i<invSize; i++)
         {
             InvItem itemScript = inventory[i].GetComponent<InvItem>();
             if(itemScript.item == item)
             {
-                return TakeItem(i, _count);
+                return TakeItem(i, count);
             }
         }
         return null;

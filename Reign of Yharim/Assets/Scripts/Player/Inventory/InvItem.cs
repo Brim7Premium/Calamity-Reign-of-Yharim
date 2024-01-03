@@ -58,7 +58,7 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("Dragging");
-        Vector3 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
+        Vector2 mousePosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = mousePosition;
     }
     public void OnEndDrag(PointerEventData eventData)
@@ -67,7 +67,6 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         transform.SetParent(parentAfterDrag); //format stuff
         image.raycastTarget = true;
         inventoryManager = transform.parent.gameObject.GetComponent<InvSlot>().inventoryManager;
-        inventoryManager.AddItem(this, transform.parent.gameObject.GetComponent<InvSlot>().number);
     }
 }
 
