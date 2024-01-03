@@ -31,12 +31,12 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     [HideInInspector] public Transform parentAfterDrag;
     private InventoryManager inventoryManager;
 
-    public void InitItem(ItemData newItem, InventoryManager _inventoryManager, int _count = 1)
+    public void InitItem(ItemData _item, InventoryManager _inventoryManager, int _count = 1)
     {
-        item = newItem;
+        item = _item;
         count = _count;
         image = gameObject.GetComponent<Image>();
-        image.sprite = newItem.sprite;
+        image.sprite = _item.sprite;
         inventoryManager = _inventoryManager;
         ReCount();
     }

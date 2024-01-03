@@ -39,27 +39,10 @@ public class InventoryManager : MonoBehaviour
     }
     //Adds in the first availablt slot or specified slot
     //First tries all universal inventories, then specific
-    public bool AddItem(ItemData item, int slot = -1, int count = 1)
+    public bool AddItem(ItemData item, int count = 1)
     {
         bool AddItem()
         {
-            if(slot != -1)
-            {
-                if(inventory[slot] == null)//if no item in slot
-                {
-                    inventory[slot] = Instantiate(InvItem, slots[slot]).GetComponent<InvItem>();
-                    inventory[slot].InitItem(item, this, count);
-                    return true;
-                }
-                else if(inventory[slot].item == item && item.stackable)//if the same item in slot
-                {
-                    inventory[slot].count += count;
-                    return true;
-                }
-                return false;
-            }
-
-
             for(int i = 0; i<invSize; i++)
             {
                 if(inventory[i] == null)//if no item in slot
@@ -86,13 +69,11 @@ public class InventoryManager : MonoBehaviour
             if(AddItem()) return true;
         }
 
-        print(StoringType);
         foreach(InventoryManager page in pages)
         {   
-            print(page.StoringType);
             if(page.StoringType == ItemData.InventoryType.All) 
             {
-                if(page.AddItem(item, slot, count)) return true;
+                if(page.AddItem(item, count)) return true;
             }
         }
 
@@ -107,7 +88,7 @@ public class InventoryManager : MonoBehaviour
         {
             if(page.StoringType == item.inventoryType) 
             {
-                if(page.AddItem(item, slot, count)) return true;
+                if(page.AddItem(item, count)) return true;
             }
         }
 
@@ -172,14 +153,53 @@ public class InventoryManager : MonoBehaviour
     }
     public InvItem TakeItem(ItemData item, int count = -1)
     {
-        for(int i = 0; i<invSize; i++)
-        {
-            InvItem itemScript = inventory[i].GetComponent<InvItem>();
-            if(itemScript.item == item)
+
+        if(StoringType == ItemData.InventoryType.All)
+        {   
+            for(int i = 0; i<invSize; i++)
             {
-                return TakeItem(i, count);
+                InvItem itemScript = inventory[i].GetComponent<InvItem>();
+                if(itemScript.item == item)
+                {
+                    return TakeItem(i, count);
+                }
             }
         }
+
+        foreach(InventoryManager page in pages)
+        {   
+            if(page.StoringType == ItemData.InventoryType.All) 
+            {
+                InvItem itemFromAnotherInventory = page.TakeItem(item, count);
+                if(itemFromAnotherInventory!=null) return itemFromAnotherInventory;
+            }
+        }
+
+
+
+        if(StoringType == item.inventoryType)
+        {
+            for(int i = 0; i<invSize; i++)
+            {
+                InvItem itemScript = inventory[i].GetComponent<InvItem>();
+                if(itemScript.item == item)
+                {
+                    return TakeItem(i, count);
+                }
+            }
+        }
+
+        foreach(InventoryManager page in pages)
+        {
+            if(page.StoringType == item.inventoryType) 
+            {
+                InvItem itemFromAnotherInventory = page.TakeItem(item, count);
+                if(itemFromAnotherInventory!=null) return itemFromAnotherInventory;
+            }
+        }
+
+
+        
         return null;
     }
 }
