@@ -1,5 +1,713 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9005176665818948156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Other/WulfrumArmy
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Other/WulfrumArmy
+  Guid:
+    Data1: -1465020877
+    Data2: 1271326305
+    Data3: 495798192
+    Data4: -1542258567
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7355476501028231985}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 132515
+--- !u!114 &-8777173113778975980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Vessel from the Undergrowth/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-8562521510044352399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DemonshadeEnrage/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-8234874623620532521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/AstralBeaconOrb
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/AstralBeaconOrb
+  Guid:
+    Data1: -1256295763
+    Data2: 1157306181
+    Data3: -972796777
+    Data4: -2113311574
+  Banks:
+  - {fileID: -185105762901684822}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -169779418216624150}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7811368430043432299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/TerroroftheFireySeas
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/TerroroftheFireySeas
+  Guid:
+    Data1: -387589503
+    Data2: 1097833278
+    Data3: -1823140980
+    Data4: 160802050
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2243988688873323589}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 332595
+--- !u!114 &-7559296223185344463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TaleofaCruelWorld/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-6606319684901991429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/AncientAmbush
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/AncientAmbush
+  Guid:
+    Data1: -1751748804
+    Data2: 1083491011
+    Data3: 1032401060
+    Data4: -1697862860
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6181752956551302616}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 160748
+--- !u!114 &-6524480954838667710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LegendStrifeFull/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-6335525292728456428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LegendStrife1/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-6181752956551302616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AncientAmbush/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-6038170073119877457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/ScourgeoftheUniverse
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/ScourgeoftheUniverse
+  Guid:
+    Data1: -1937256212
+    Data2: 1127564151
+    Data3: -389255775
+    Data4: 1059554773
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8509924725246219265}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 229894
+--- !u!114 &-5625019497778615124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LegendStrifeFull
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LegendStrifeFull
+  Guid:
+    Data1: -398687929
+    Data2: 1257171541
+    Data3: 2024989350
+    Data4: 1698125847
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6524480954838667710}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 908661
+--- !u!114 &-5523315975605895498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/TwinTargetSelect
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/TwinTargetSelect
+  Guid:
+    Data1: 149728487
+    Data2: 1079383838
+    Data3: -1873039223
+    Data4: 1323766124
+  Banks:
+  - {fileID: -185105762901684822}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -647503436074106085}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5451684997987810144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/055Roar
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/055Roar
+  Guid:
+    Data1: 76780108
+    Data2: 1231301446
+    Data3: 2049251469
+    Data4: -1564337529
+  Banks:
+  - {fileID: -185105762901684822}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3710422069789045551}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5358367154804055167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LazeoftheSky/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-5033159028650743952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LegendStrife4/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-4197644369716035418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/DefenseHit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/DefenseHit
+  Guid:
+    Data1: 937102872
+    Data2: 1263561464
+    Data3: -366506562
+    Data4: -1189691460
+  Banks:
+  - {fileID: -185105762901684822}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2180310051479688622}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4072803942149823477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LegendStrife2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LegendStrife2
+  Guid:
+    Data1: 1773737711
+    Data2: 1261301897
+    Data3: 2002425774
+    Data4: -110733215
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4062499625415289881}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 269439
+--- !u!114 &-4062499625415289881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LegendStrife2/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-2527366099360690157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/TheFabrication
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/TheFabrication
+  Guid:
+    Data1: -942517861
+    Data2: 1222658169
+    Data3: -95524704
+    Data4: 1515967891
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2540782760627203920}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 166624
+--- !u!114 &-2243988688873323589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TerroroftheFireySeas/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-827505365583578872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menus/DraedonMechSelect/ExoTwinsIconHover
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menus/DraedonMechSelect/ExoTwinsIconHover
+  Guid:
+    Data1: 1506071997
+    Data2: 1123115900
+    Data3: -1383411011
+    Data4: 1523751751
+  Banks:
+  - {fileID: -185105762901684822}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2410422988518735782}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-704325209116947253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bosses/Vessel from the Undergrowth
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bosses/Vessel from the Undergrowth
+  Guid:
+    Data1: -2079045250
+    Data2: 1202591186
+    Data3: -1446176895
+    Data4: -1390242753
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8777173113778975980}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 142745
+--- !u!114 &-647503436074106085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TwinTargetSelect/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-185105762901684822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638397099630919151
+  FileSizes:
+  - Name: Desktop
+    Value: 112832
+  Exists: 1
+--- !u!114 &-169779418216624150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AstralBeaconOrb/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-40635602999696909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: 
+  Guid:
+    Data1: -781007299
+    Data2: 1103923496
+    Data3: 2126583977
+    Data4: -397680669
+  Banks:
+  - {fileID: 9024812986186435565}
+  - {fileID: 9024812986186435565}
+  - {fileID: 9024812986186435565}
+  - {fileID: 9024812986186435565}
+  - {fileID: 9024812986186435565}
+  - {fileID: 9024812986186435565}
+  - {fileID: 9024812986186435565}
+  - {fileID: -185105762901684822}
+  - {fileID: -185105762901684822}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 691753023482809468}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,14 +723,86 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 902356820115119347}
   - {fileID: 3028886396130634377}
-  EditorEvents: []
+  - {fileID: 9024812986186435565}
+  - {fileID: -185105762901684822}
+  EditorEvents:
+  - {fileID: -40635602999696909}
+  - {fileID: 9153566577641182887}
+  - {fileID: 7008949662115760701}
+  - {fileID: -9005176665818948156}
+  - {fileID: -6606319684901991429}
+  - {fileID: -5625019497778615124}
+  - {fileID: -704325209116947253}
+  - {fileID: -7811368430043432299}
+  - {fileID: 3410643310740413550}
+  - {fileID: -2527366099360690157}
+  - {fileID: 8134065479318561814}
+  - {fileID: 7931443974756695529}
+  - {fileID: 4170047323541934852}
+  - {fileID: -6038170073119877457}
+  - {fileID: -4072803942149823477}
+  - {fileID: -4197644369716035418}
+  - {fileID: 6849012305152981408}
+  - {fileID: -5451684997987810144}
+  - {fileID: 9102657910767701822}
+  - {fileID: -8234874623620532521}
+  - {fileID: -827505365583578872}
+  - {fileID: -5523315975605895498}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3028886396130634377}
   StringsBanks:
   - {fileID: 902356820115119347}
-  cacheTime: 638381696559495512
+  cacheTime: 638399099610317856
   cacheVersion: 131609
+--- !u!114 &691753023482809468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter://Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &843146161958353079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Defiled/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &902356820115119347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,10 +818,106 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638381696559495512
+  lastModified: 638399099610317856
   FileSizes:
   - Name: Desktop
     Value: 2008
+  Exists: 1
+--- !u!114 &2180310051479688622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DefenseHit/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2260279662403788066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LegendStrife3/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2410422988518735782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ExoTwinsIconHover/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2540782760627203920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TheFabrication/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &3028886396130634377
 MonoBehaviour:
@@ -58,8 +934,348 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638381696559495512
+  lastModified: 638399099610276506
   FileSizes:
   - Name: Desktop
     Value: 1340
   Exists: 1
+--- !u!114 &3410643310740413550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LegendStrife3
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LegendStrife3
+  Guid:
+    Data1: -1690346599
+    Data2: 1327267307
+    Data3: 1164810390
+    Data4: 376066204
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2260279662403788066}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 273962
+--- !u!114 &3710422069789045551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/055Roar/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &4170047323541934852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LegendStrife1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LegendStrife1
+  Guid:
+    Data1: -2049955358
+    Data2: 1341340651
+    Data3: 447516320
+    Data4: -1521750869
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6335525292728456428}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 180713
+--- !u!114 &6849012305152981408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/AstrumAureusStomp
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/AstrumAureusStomp
+  Guid:
+    Data1: -413663715
+    Data2: 1130816096
+    Data3: -610521666
+    Data4: -1742206654
+  Banks:
+  - {fileID: -185105762901684822}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7002409252522776976}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7002409252522776976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AstrumAureusStomp/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &7008949662115760701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Other/TaleofaCruelWorld
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Other/TaleofaCruelWorld
+  Guid:
+    Data1: 2000118566
+    Data2: 1304468088
+    Data3: 90891170
+    Data4: 1274298878
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7559296223185344463}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 173094
+--- !u!114 &7355476501028231985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WulfrumArmy/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &7931443974756695529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LazeoftheSky
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LazeoftheSky
+  Guid:
+    Data1: 743056841
+    Data2: 1327956284
+    Data3: -2037665389
+    Data4: -1323342609
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5358367154804055167}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 261329
+--- !u!114 &8134065479318561814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/LegendStrife4
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/LegendStrife4
+  Guid:
+    Data1: -579076166
+    Data2: 1202230493
+    Data3: -1062187635
+    Data4: 145595881
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5033159028650743952}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 184545
+--- !u!114 &8509924725246219265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ScourgeoftheUniverse/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &9024812986186435565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638397099628164217
+  FileSizes:
+  - Name: Desktop
+    Value: 55038080
+  Exists: 1
+--- !u!114 &9102657910767701822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/DemonshadeEnrage
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/DemonshadeEnrage
+  Guid:
+    Data1: -974640213
+    Data2: 1268750061
+    Data3: -1599287114
+    Data4: -2051474363
+  Banks:
+  - {fileID: -185105762901684822}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8562521510044352399}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &9153566577641182887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Biomes/Defiled
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Biomes/Defiled
+  Guid:
+    Data1: -1367554278
+    Data2: 1230754682
+    Data3: -1164535392
+    Data4: -1456485207
+  Banks:
+  - {fileID: 9024812986186435565}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 843146161958353079}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 275399

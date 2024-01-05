@@ -17,7 +17,7 @@ public class WulfrumHovercraftAI : NPC
     const string Normal = "WulfrumHovercraft_basic";
     const string ChargedState = "WulfrumHovercraft_charged";
 
-    int SearchLayer = (1 << LayerMask.NameToLayer("Ground")) | (1 << LayerMask.NameToLayer("WalkTroughNPCPlayer"));
+    //int SearchLayer = (1 << LayerMask.NameToLayer("Ground")) | (1 << LayerMask.NameToLayer("WalkTroughNPCPlayer"));
 
     public override void SetDefaults()
     {

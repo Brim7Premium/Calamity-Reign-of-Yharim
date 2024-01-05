@@ -16,7 +16,7 @@ public class WulfrunDroneAI : NPC
     const string ChargedState = "WulfrumDrone_charged";
     string CurrentAIState = "Positioning";
 
-    int SearchLayer = (1 << LayerMask.NameToLayer("Ground")) | (1 << LayerMask.NameToLayer("WalkTroughNPCPlayer"));
+    //int SearchLayer = (1 << LayerMask.NameToLayer("Ground")) | (1 << LayerMask.NameToLayer("WalkTroughNPCPlayer"));
 
     public override void SetDefaults()
     {
