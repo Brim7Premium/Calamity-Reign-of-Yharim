@@ -27,11 +27,6 @@ public class GreenSlimeAI : NPC
 		Life = LifeMax;
 	}
 
-	public override void AI()
-	{
-		if (target != null)
-		{	
-			animator.speed = 0.8f;
 
     public override void AI()
     {
