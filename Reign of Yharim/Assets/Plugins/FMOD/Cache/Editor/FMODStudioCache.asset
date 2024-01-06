@@ -790,7 +790,7 @@ MonoBehaviour:
   - {fileID: 7922514285120898230}
   StringsBanks:
   - {fileID: 7607827413165057428}
-  cacheTime: 638397115337725725
+  cacheTime: 638401297950323047
   cacheVersion: 131616
 --- !u!114 &185198468472118980
 MonoBehaviour:
@@ -1487,7 +1487,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638397115337725725
+  lastModified: 638401297950323047
   FileSizes:
   - Name: Desktop
     Value: 2520
@@ -1559,7 +1559,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638397115337715763
+  lastModified: 638401297950303109
   FileSizes:
   - Name: Desktop
     Value: 1526

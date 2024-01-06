@@ -36,15 +36,18 @@ public class GreenSlimeAI : NPC
 
             ai[1] += Time.deltaTime; //counting
 
+            if (ai[1] >= 1f && ai[1] <= 1.12f && IsGrounded || inWater)
+            {
+                ChangeAnimationState(SlimeIdle);
+                //Jump
+                if (!inWater)
+                    rb.velocity = new Vector2(TargetDirection * 6, 10);
+                else
+                    rb.velocity = new Vector2(TargetDirection * 5, 8);
+            }
+
             if (IsGrounded)
             {
-                if(ai[1] >= 1f && ai[1] <= 1.12f)
-                {
-                    ChangeAnimationState(SlimeIdle);
-                    //Jump
-                    rb.velocity = new Vector2(TargetDirection * 6, 10);
-                }
-
                 rb.velocity *= new Vector2(0.89f, 1); // stops it from sliding too much
 
                 if (Mathf.Abs(rb.velocity.y) <= 0.01f && ai[1] > 1.5f) // Completely vertically stopped, can refresh the cycle

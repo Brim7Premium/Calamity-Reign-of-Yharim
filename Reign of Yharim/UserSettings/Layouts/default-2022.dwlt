@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 56
+  controlID: 123
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 57
+  controlID: 20
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 58
+  controlID: 21
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -272,12 +272,12 @@ MonoBehaviour:
     height: 517.2
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -348,7 +348,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 31038
+  m_LastSelectedObjectID: 37656
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -394,7 +394,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Player/GUI
+    - Assets/Scripts/AI/NPC AI
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Player/GUI
+  - Assets/Scripts/AI/NPC AI
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Brimston Premium\Desktop\Unity\Calamity-Reign-of-Yharim\Reign
     of Yharim
@@ -410,9 +410,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 127}
-    m_SelectedIDs: ec900000
-    m_LastClickedID: 37100
-    m_ExpandedIDs: 000000007a8700007c8700007e87000080870000828700008487000086870000888700008a8700008c8700008e87000090870000e690000000ca9a3b
+    m_SelectedIDs: 68950000
+    m_LastClickedID: 38248
+    m_ExpandedIDs: 000000002e88000030880000328800003488000036880000388800003a8800003c8800003e8800004088000042880000448800007088000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -440,7 +440,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007a8700007c8700007e87000080870000828700008487000086870000888700008a8700008c8700008e87000090870000
+    m_ExpandedIDs: 000000002e88000030880000328800003488000036880000388800003a8800003c8800003e880000408800004288000044880000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -579,10 +579,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 4.799988}
-      m_SelectedIDs: 401a0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: ccd4fefffefaffffa478000018790000407a00004a7a00005c7a0000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 18930000
+      m_LastClickedID: 37656
+      m_ExpandedIDs: 4ee7ffff5ee7ffff0aeaffff38ebffffbaeeffff44f2ffff2af6ffffecfaffff18930000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1014,9 +1014,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -175.97818, y: 81.91201, z: -3.2360942}
+    m_Target: {x: -629.3338, y: 19.471817, z: 5.195955}
     speed: 2
-    m_Value: {x: -175.97818, y: 81.91201, z: -3.2360942}
+    m_Value: {x: -629.3338, y: 19.471817, z: 5.195955}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1066,9 +1066,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 126.11239
+    m_Target: 25.827215
     speed: 2
-    m_Value: 126.11239
+    m_Value: 25.827215
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1160,7 +1160,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
