@@ -8,15 +8,18 @@ using TMPro;
 
 public class GreenSlimeAI : NPC
 {
-	private bool isGrounded = false;
-	private int curTargetPos;
+    const string SlimeBounce = "Slime_bounce";
+    const string SlimeIdle = "Slime_idle";
 
-	const string SlimeBounce = "Slime_bounce";
-	const string SlimeIdle = "Slime_idle";
+    private bool LeftRay = false;
+    private bool RightRay = false;
 
-	public override void SetDefaults()
-	{
-		base.SetDefaults();
+    private float Srotation = 0;
+    private float NeededRotation = 0;
+
+    public override void SetDefaults()
+    {
+        base.SetDefaults();
 
 		NPCName = "GreenSlime";
 		Damage = 5;
@@ -30,45 +33,65 @@ public class GreenSlimeAI : NPC
 		{	
 			animator.speed = 0.8f;
 
-			ai[1]++;
-			if ((ai[1] == 90.0f && isGrounded) || inWater)
-			{
-				ChangeAnimationState(SlimeIdle);
+    public override void AI()
+    {
+        if (target != null)
+        {
+            animator.speed =  0.4f + (2f * ai[1]); // speed of Slime's "preparing to jump" animation
 
-				//Jump
-				rb.velocity = new Vector2(TargetDirection * 5, 5);
-			}
-			else if (ai[1] > 150.0f && isGrounded) 
-			{
-				ChangeAnimationState(SlimeBounce);
-				rb.velocity = Vector2.zero;
-				ai[1] = 0.0f;
-			}
-			if (DistanceBetween(transform.position, target.transform.position) > 60f)
-			{
-				Destroy(gameObject);
-			}
-		}
-	}
+            ai[1] += Time.deltaTime; //counting
 
-	private void FixedUpdate()
-	{
-		float extraHeight = 0.4f; 
-		Color rayColor; 
+            if (IsGrounded)
+            {
+                if(ai[1] >= 1f && ai[1] <= 1.12f)
+                {
+                    ChangeAnimationState(SlimeIdle);
+                    //Jump
+                    rb.velocity = new Vector2(TargetDirection * 6, 10);
+                }
 
-		RaycastHit2D hit = Physics2D.Raycast(c2d.bounds.center, Vector2.down, c2d.bounds.extents.y + extraHeight, groundLayer); 
+                rb.velocity *= new Vector2(0.89f, 1); // stops it from sliding too much
 
-		//Debug.Log(hit.collider);
-		if (hit.collider != null) 
-		{
-			isGrounded = true; 
-			rayColor = Color.green; 
-		}
-		else
-		{
-			isGrounded = false; 
-			rayColor = Color.red; 
-		}
-		Debug.DrawRay(c2d.bounds.center, Vector2.down * (c2d.bounds.extents.y + extraHeight), rayColor); 
-	}
+                if (Mathf.Abs(rb.velocity.y) <= 0.01f && ai[1] > 1.5f) // Completely vertically stopped, can refresh the cycle
+                {
+                    ChangeAnimationState(SlimeBounce);
+                    ai[1] = 0;
+                }
+            }
+            if (DistanceBetween(transform.position, target.transform.position) > 60f)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        // Slime's alligning with ground
+        if (LeftRay && !RightRay) Srotation = 45;
+        else if (!LeftRay && RightRay) Srotation = -45;
+        else Srotation = 0;
+
+        if (Srotation != 0) NeededRotation += (Srotation - transform.rotation.z) * 0.2f;
+        else NeededRotation += (Srotation - transform.rotation.z) * 6;
+        if (NeededRotation > 45) NeededRotation = 45;
+        if (NeededRotation < -45) NeededRotation = -45;
+        transform.rotation = Quaternion.Euler(0, 0, NeededRotation);
+
+    }
+    void OnDestroy()
+    {
+        
+    }
+    void FixedUpdate()
+    {
+        float Height = 0.85f; //new float extraHeight equals 0.1
+        Vector2 LookAt = new Vector2(1, -1);
+        RaycastHit2D hitL = Physics2D.Raycast(c2d.bounds.center, LookAt, Height, groundLayer);
+        RaycastHit2D hitR = Physics2D.Raycast(c2d.bounds.center, LookAt * new Vector2(-1, 1), Height, groundLayer);
+
+        LeftRay = (hitL.collider != null);
+        RightRay = (hitR.collider != null);
+
+        Debug.DrawRay(c2d.bounds.center, LookAt * Height, Color.white);
+        Debug.DrawRay(c2d.bounds.center, (LookAt * new Vector2(-1, 1)) * Height, Color.white);
+    }
 }
+

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: efced7b475111104e91c8ae316b25662
+guid: 627409529ea45d1498aa5170e129bccb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,33 +81,20 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -145,17 +132,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WulfrumGyrator_0
+      name: TEX_WulfrumRoverShield_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 378
-        width: 40
-        height: 42
+        y: 640
+        width: 62
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f66505592d3b5ad449be959898a6aa63
-      internalID: -972892644
+      spriteID: fc0eb5b1ad44f564f84951c12fa2dcaf
+      internalID: 1373706864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_1
+      name: TEX_WulfrumRoverShield_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 336
-        width: 40
-        height: 42
+        y: 576
+        width: 62
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92717c9b9b3a7114fa6da8aa45320a2b
-      internalID: 1695311267
+      spriteID: f4f416a737fe9a649851d2c9e3547b5f
+      internalID: -2111035173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_2
+      name: TEX_WulfrumRoverShield_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 294
-        width: 40
-        height: 42
+        y: 512
+        width: 62
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c482d23d416fae43b7c503e64f929d0
-      internalID: 2129848088
+      spriteID: 416e890561b80ad44828e1cd4e50887c
+      internalID: -1602659214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_3
+      name: TEX_WulfrumRoverShield_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 252
-        width: 40
-        height: 42
+        y: 448
+        width: 62
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaee7ff630aa85b409edb9147d02dc01
-      internalID: 1528533070
+      spriteID: 4c75873bf0090ee4f844552b6debbfd3
+      internalID: -713897690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_4
+      name: TEX_WulfrumRoverShield_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 210
-        width: 40
-        height: 42
+        y: 384
+        width: 62
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffb1023df6aca2a488bf9d5a9dae25f4
-      internalID: 659340109
+      spriteID: 6798261a25bf2894f91bac659233f96c
+      internalID: 1055905390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_5
+      name: TEX_WulfrumRoverShield_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 168
-        width: 40
-        height: 42
+        y: 320
+        width: 62
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +268,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aca683186ca5d247aeb48c9558c3177
-      internalID: -1724640234
+      spriteID: b7162e03a31a130478be47f2cfb34912
+      internalID: 887261682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_6
+      name: TEX_WulfrumRoverShield_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 126
-        width: 40
-        height: 42
+        y: 256
+        width: 62
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,20 +289,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71af4168c5b9efd40ad2a3cc4201e3ed
-      internalID: 1658097931
+      spriteID: cc31a33f43259b6409a7e8f79842d3e2
+      internalID: 1064998513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_7
+      name: TEX_WulfrumRoverShield_7
       rect:
         serializedVersion: 2
         x: 0
-        y: 84
-        width: 40
-        height: 42
+        y: 192
+        width: 62
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,20 +310,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12ee0399069cdee46a89a22f2ecd6d60
-      internalID: -1719420703
+      spriteID: 3e5bbe6fd722a8f42ab9aaef43f707dc
+      internalID: 811015524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_8
+      name: TEX_WulfrumRoverShield_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 42
-        width: 40
-        height: 42
+        y: 128
+        width: 62
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,20 +331,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54a22c2974426c446b177eb214f38858
-      internalID: -278611559
+      spriteID: 562322620cd599a48a5a13ab7007acfb
+      internalID: 376705414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_9
+      name: TEX_WulfrumRoverShield_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8dd268e02c71f4cadee7f9df27ccd8
+      internalID: -277286452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_WulfrumRoverShield_10
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
-        height: 42
+        width: 62
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,8 +373,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 547920441472d4e4ba05277bd95747f2
-      internalID: -2127091214
+      spriteID: 4bd4d5eaa722e92419d8dade1c547219
+      internalID: 1944277290
       vertices: []
       indices: 
       edges: []
@@ -369,16 +390,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WulfrumGyrator_0: -972892644
-      WulfrumGyrator_1: 1695311267
-      WulfrumGyrator_2: 2129848088
-      WulfrumGyrator_3: 1528533070
-      WulfrumGyrator_4: 659340109
-      WulfrumGyrator_5: -1724640234
-      WulfrumGyrator_6: 1658097931
-      WulfrumGyrator_7: -1719420703
-      WulfrumGyrator_8: -278611559
-      WulfrumGyrator_9: -2127091214
+      TEX_WulfrumRoverShield_0: 1373706864
+      TEX_WulfrumRoverShield_1: -2111035173
+      TEX_WulfrumRoverShield_10: 1944277290
+      TEX_WulfrumRoverShield_2: -1602659214
+      TEX_WulfrumRoverShield_3: -713897690
+      TEX_WulfrumRoverShield_4: 1055905390
+      TEX_WulfrumRoverShield_5: 887261682
+      TEX_WulfrumRoverShield_6: 1064998513
+      TEX_WulfrumRoverShield_7: 811015524
+      TEX_WulfrumRoverShield_8: 376705414
+      TEX_WulfrumRoverShield_9: -277286452
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

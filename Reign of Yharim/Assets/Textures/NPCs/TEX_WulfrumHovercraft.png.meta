@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: efced7b475111104e91c8ae316b25662
+guid: 7f2f81c2456b0184ea1fcdbab0d7ace9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,33 +81,20 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -145,17 +132,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WulfrumGyrator_0
+      name: TEX_WulfrumHovercraft_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 378
-        width: 40
-        height: 42
+        y: 484
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f66505592d3b5ad449be959898a6aa63
-      internalID: -972892644
+      spriteID: 2bb24e8aa36ccb547a4d02ecff9a2152
+      internalID: -1798010476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_1
+      name: TEX_WulfrumHovercraft_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 336
-        width: 40
-        height: 42
+        y: 440
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92717c9b9b3a7114fa6da8aa45320a2b
-      internalID: 1695311267
+      spriteID: 780e89c5f5631694f8fe0c62e3f6425a
+      internalID: 204585153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_2
+      name: TEX_WulfrumHovercraft_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 294
-        width: 40
-        height: 42
+        y: 396
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c482d23d416fae43b7c503e64f929d0
-      internalID: 2129848088
+      spriteID: 5129fd85b8c29de46a4d7c9c89a67f0f
+      internalID: -1456554244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_3
+      name: TEX_WulfrumHovercraft_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 252
-        width: 40
-        height: 42
+        y: 352
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaee7ff630aa85b409edb9147d02dc01
-      internalID: 1528533070
+      spriteID: c640b9ad12c7d6a45ac20d844a488f00
+      internalID: 2096785480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_4
+      name: TEX_WulfrumHovercraft_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 210
-        width: 40
-        height: 42
+        y: 308
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffb1023df6aca2a488bf9d5a9dae25f4
-      internalID: 659340109
+      spriteID: 47162d0a42ad9784f9fb22bac7cbc873
+      internalID: -1299375313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_5
+      name: TEX_WulfrumHovercraft_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 168
-        width: 40
-        height: 42
+        y: 264
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +268,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aca683186ca5d247aeb48c9558c3177
-      internalID: -1724640234
+      spriteID: ad9c45d8f9f236344b34d20c93330a27
+      internalID: 904850112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_6
+      name: TEX_WulfrumHovercraft_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 126
-        width: 40
-        height: 42
+        y: 220
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,20 +289,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71af4168c5b9efd40ad2a3cc4201e3ed
-      internalID: 1658097931
+      spriteID: 54e3d373ecf40c248ac30d30373e62c4
+      internalID: 916450140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_7
+      name: TEX_WulfrumHovercraft_7
       rect:
         serializedVersion: 2
         x: 0
-        y: 84
-        width: 40
-        height: 42
+        y: 176
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,20 +310,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12ee0399069cdee46a89a22f2ecd6d60
-      internalID: -1719420703
+      spriteID: bd8050ddcc7bd964a969ece38fcff85e
+      internalID: 1384495921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_8
+      name: TEX_WulfrumHovercraft_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 42
-        width: 40
-        height: 42
+        y: 132
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,20 +331,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54a22c2974426c446b177eb214f38858
-      internalID: -278611559
+      spriteID: 79358dd3c0ea06c4f96325db688352ec
+      internalID: -1181897198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WulfrumGyrator_9
+      name: TEX_WulfrumHovercraft_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0effe48d0a15094f841414565109599
+      internalID: 427848828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_WulfrumHovercraft_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef1afe4ca5e63e468e691befd1ad7bd
+      internalID: 919066462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEX_WulfrumHovercraft_11
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
-        height: 42
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,8 +394,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 547920441472d4e4ba05277bd95747f2
-      internalID: -2127091214
+      spriteID: 59c946a9c16c60d4da7b9ceaa55334b2
+      internalID: -1791851538
       vertices: []
       indices: 
       edges: []
@@ -369,16 +411,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WulfrumGyrator_0: -972892644
-      WulfrumGyrator_1: 1695311267
-      WulfrumGyrator_2: 2129848088
-      WulfrumGyrator_3: 1528533070
-      WulfrumGyrator_4: 659340109
-      WulfrumGyrator_5: -1724640234
-      WulfrumGyrator_6: 1658097931
-      WulfrumGyrator_7: -1719420703
-      WulfrumGyrator_8: -278611559
-      WulfrumGyrator_9: -2127091214
+      TEX_WulfrumHovercraft_0: -1798010476
+      TEX_WulfrumHovercraft_1: 204585153
+      TEX_WulfrumHovercraft_10: 919066462
+      TEX_WulfrumHovercraft_11: -1791851538
+      TEX_WulfrumHovercraft_2: -1456554244
+      TEX_WulfrumHovercraft_3: 2096785480
+      TEX_WulfrumHovercraft_4: -1299375313
+      TEX_WulfrumHovercraft_5: 904850112
+      TEX_WulfrumHovercraft_6: 916450140
+      TEX_WulfrumHovercraft_7: 1384495921
+      TEX_WulfrumHovercraft_8: -1181897198
+      TEX_WulfrumHovercraft_9: 427848828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

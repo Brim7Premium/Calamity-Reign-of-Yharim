@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public abstract class NPC : Entity //Must be inherited, cannot be instanced 
 {
@@ -8,6 +9,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public bool inWater;
 
+    public bool IsGrounded;
     private int _lifeMax; //lifemax property value field
     public int LifeMax //property, which can be called as set or get in the other code. Whatever the other code sets this as will return to the set as value, and get will just directly return _lifeMax
     {
@@ -63,7 +65,13 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         get => transform.position.x < target.transform.position.x ? 1 : -1; 
     }
 
+    //public bool FighterAI = false;
+
+    public Vector3 oldPosition;
+
     public HealthBar healthBar;
+
+    public SpriteRenderer sprite;
 
     public Rigidbody2D rb;
 
@@ -72,7 +80,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     public LayerMask groundLayer;
 
     public float[] ai = new float[4];
-    private const string indulgencesHolders = "WulfrumGyrator, DevourerofGodsBody, DevourerofGodsHead, Dummy, ExampleNPC";//This ones need to be remade at some point
+    private const string indulgencesHolders = "DevourerofGodsBody, DevourerofGodsHead, Dummy, ExampleNPC";//This ones need to be remade at some point
 
     public float IFrames = 1f;
 
@@ -96,6 +104,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         base.SetDefaults(); //first run the base code from entity
 
         groundLayer = 1 << LayerMask.NameToLayer("Ground");
+        sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         c2d = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
@@ -119,8 +128,13 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 		{
 			target = GameObject.Find("Player");
 		}
+        OnGroundDeterminer();
         AI();
         objectRenderer.enabled = IsVisibleFromCamera();
+
+        healthBar.gameObject.transform.parent.parent.parent.rotation = Quaternion.Euler(0, 0, 0); // Fix the HealthBar so it won't rotate if NPC does
+
+        oldPosition = transform.position;
     }
 
     public void TakeDamage(int damage)
@@ -170,4 +184,53 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 			inWater = true;
 		}
 	}
+    public GameObject ClosestNPC() //Function to find Closest NPC to this NPC
+    {
+        GameObject NearestObj = null;
+        float nearestdist = float.MaxValue;
+        foreach (var Obj in SceneManager.GetActiveScene().GetRootGameObjects())
+        {
+            if (Obj != null && LayerMask.LayerToName(Obj.layer) == "NPCs" && gameObject != Obj)
+            {
+                if (Vector2.Distance(transform.position, Obj.transform.position) < nearestdist)
+                {
+                    nearestdist = Vector3.Distance(transform.position, Obj.transform.position);
+                    NearestObj = Obj;
+                }
+            }
+        }
+        return NearestObj;
+    }
+
+    public Vector2 GetDirection(Vector2 TargetPos, Vector2 MyPos) // Direction to shoot projectiles or dash
+    {
+        float distancer = (3f / ((float)System.Math.Sqrt((double)((TargetPos - MyPos).x * (TargetPos - MyPos).x + (TargetPos - MyPos).y * (TargetPos - MyPos).y))));
+        Vector2 Dir = (TargetPos - MyPos) * distancer;
+        return Dir; 
+    }
+
+    public float GroundDeterminerRayLength = 0;
+
+    void OnGroundDeterminer()
+    {
+        float extraHeight = GroundDeterminerRayLength;
+        Color rayColor; //new color variable rayColor 
+
+        RaycastHit2D hit = Physics2D.Raycast(c2d.bounds.center, Vector2.down, c2d.bounds.extents.y + extraHeight, groundLayer); //new raycast2d called hit that starts from the center of the player rigidbody, goes down, and goes the extent of the rigidbody downwards + extraHeight. it only collides with the groundlayer variable
+
+        //Debug.Log(hit.collider);
+        if (hit.collider != null) //if the raycast is hitting something;
+        {
+            IsGrounded = true; //isgrounded is true
+            rayColor = Color.green; //the raycolor is green
+        }
+        else
+        {
+            IsGrounded = false; //isgrounded is false
+            rayColor = Color.red; //the raycolor is red
+        }
+        Debug.DrawRay(c2d.bounds.center, Vector2.down * (c2d.bounds.extents.y + extraHeight), rayColor); //draw the ray 
+    }
+
+    public bool IsWulfrumGuy = false;
 }
