@@ -16,7 +16,6 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 	[SerializeField] private float acceleration;
 	[SerializeField] private float deacceleration;
 	[SerializeField] private float velPower;
-	private float xAxis;
 	private Vector2 axis;
 	public float isFacing;
 
@@ -66,7 +65,6 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
 	public override void AI() //every frame (Update)
 	{
-		xAxis = Input.GetAxis("Horizontal"); //sets horizontal to -1 or 1 based on the player's input
 		axis = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
 		if (Input.GetButtonDown("Jump")) //if the jump button is being pressed...
@@ -109,14 +107,23 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         }
         */
         ItemData item = gUIController.GetSelectedItem(false)?.item;
-        if(Input.GetKeyDown(KeyCode.Mouse0) && item && !IsAttacking)
-        {
-            IsAttacking = true;
-            transform.localScale = new Vector2(Mathf.Sign(MousePos.x-transform.position.x), 1);
-            isFacing = transform.localScale.x;
-            GameObject attack = Instantiate(DefaultItemUsagePrefab, transform);
-            attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable).item;
-        }
+		if (Input.GetKeyDown(KeyCode.Mouse0) && item && !IsAttacking)
+		{
+			if (!inWater)
+			{
+				IsAttacking = true;
+				transform.localScale = new Vector2(Mathf.Sign(MousePos.x - transform.position.x), 1);
+				isFacing = transform.localScale.x;
+				GameObject attack = Instantiate(DefaultItemUsagePrefab, transform);
+				attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable).item;
+			}
+            else
+            {
+				IsAttacking = true;
+				GameObject attack = Instantiate(DefaultItemUsagePrefab, transform);
+				attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable).item;
+			}
+		}
     }
 	public override void Kill()
 	{
@@ -126,7 +133,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 	private void Movement()
 	{
 
-		float targetSpeed = xAxis * moveSpeed;
+		float targetSpeed = axis.x * moveSpeed;
 
 		float speedDif = targetSpeed - rb.velocity.x;
 
@@ -144,7 +151,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
 		if (isGrounded) //if the player is grounded and isn't attacking
 		{
-			if (xAxis != 0) //if the player isn't still
+			if (axis.x != 0) //if the player isn't still
 			{
 				ChangeAnimationState(PlayerWalk); //set the animation to walking
 			}
@@ -155,12 +162,12 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 		}
 		if (!IsAttacking)
 		{
-			if (xAxis > 0)
+			if (axis.x > 0)
 			{
 				transform.localScale = new Vector2(1, 1); //facing right
 				isFacing = 1;
 			}
-			if (xAxis < 0)
+			if (axis.x < 0)
 			{
 				transform.localScale = new Vector2(-1, 1); //facing left
 				isFacing = -1;
