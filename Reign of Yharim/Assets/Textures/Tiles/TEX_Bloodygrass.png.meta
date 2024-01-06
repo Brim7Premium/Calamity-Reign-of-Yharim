@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1269,63 +1274,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Bloodygrass_21: -2106878110
-      TEX_Bloodygrass_15: 181220247
-      TEX_Bloodygrass_53: -511628567
-      TEX_Bloodygrass_18: 1681269518
-      TEX_Bloodygrass_38: 1599434460
-      TEX_Bloodygrass_22: -1109589795
-      TEX_Bloodygrass_6: 456103439
+      TEX_Bloodygrass_0: 1926071245
+      TEX_Bloodygrass_1: -94654554
       TEX_Bloodygrass_10: -1236667700
-      TEX_Bloodygrass_17: -750166766
-      TEX_Bloodygrass_43: 1310822372
-      TEX_Bloodygrass_36: 471009812
-      TEX_Bloodygrass_48: -1327653245
-      TEX_Bloodygrass_29: 1401341269
-      TEX_Bloodygrass_27: -1617296286
       TEX_Bloodygrass_11: 1806235020
-      TEX_Bloodygrass_42: -657719331
+      TEX_Bloodygrass_12: 1066901692
+      TEX_Bloodygrass_13: -2107247803
+      TEX_Bloodygrass_14: -350312740
+      TEX_Bloodygrass_15: 181220247
+      TEX_Bloodygrass_16: 1318060594
+      TEX_Bloodygrass_17: -750166766
+      TEX_Bloodygrass_18: 1681269518
+      TEX_Bloodygrass_19: 113729045
+      TEX_Bloodygrass_2: 1915090887
+      TEX_Bloodygrass_20: 1151181929
+      TEX_Bloodygrass_21: -2106878110
+      TEX_Bloodygrass_22: -1109589795
+      TEX_Bloodygrass_23: 941764431
+      TEX_Bloodygrass_24: -43411123
+      TEX_Bloodygrass_25: 617293631
+      TEX_Bloodygrass_26: -829519383
+      TEX_Bloodygrass_27: -1617296286
+      TEX_Bloodygrass_28: 1813537144
+      TEX_Bloodygrass_29: 1401341269
+      TEX_Bloodygrass_3: 1864025890
+      TEX_Bloodygrass_30: 193134591
+      TEX_Bloodygrass_31: -192367557
+      TEX_Bloodygrass_32: -1699521743
+      TEX_Bloodygrass_33: 228878849
+      TEX_Bloodygrass_34: -2929646
+      TEX_Bloodygrass_35: -1899316348
+      TEX_Bloodygrass_36: 471009812
+      TEX_Bloodygrass_37: -1133755723
+      TEX_Bloodygrass_38: 1599434460
       TEX_Bloodygrass_39: -1087644423
       TEX_Bloodygrass_4: -1877245254
-      TEX_Bloodygrass_26: -829519383
-      TEX_Bloodygrass_44: 109501738
-      TEX_Bloodygrass_19: 113729045
-      TEX_Bloodygrass_31: -192367557
-      TEX_Bloodygrass_25: 617293631
-      TEX_Bloodygrass_46: 82856740
-      TEX_Bloodygrass_9: 959444882
-      TEX_Bloodygrass_24: -43411123
-      TEX_Bloodygrass_8: 370877670
-      TEX_Bloodygrass_32: -1699521743
-      TEX_Bloodygrass_28: 1813537144
-      TEX_Bloodygrass_14: -350312740
-      TEX_Bloodygrass_20: 1151181929
-      TEX_Bloodygrass_37: -1133755723
-      TEX_Bloodygrass_5: 477175295
-      TEX_Bloodygrass_7: 1082807341
-      TEX_Bloodygrass_2: 1915090887
-      TEX_Bloodygrass_23: 941764431
-      TEX_Bloodygrass_30: 193134591
-      TEX_Bloodygrass_45: 501019918
-      TEX_Bloodygrass_47: 306371377
-      TEX_Bloodygrass_52: -564436060
-      TEX_Bloodygrass_3: 1864025890
-      TEX_Bloodygrass_12: 1066901692
-      TEX_Bloodygrass_35: -1899316348
-      TEX_Bloodygrass_34: -2929646
-      TEX_Bloodygrass_1: -94654554
       TEX_Bloodygrass_40: -271834462
-      TEX_Bloodygrass_0: 1926071245
-      TEX_Bloodygrass_13: -2107247803
-      TEX_Bloodygrass_50: -981599815
-      TEX_Bloodygrass_49: 668355001
-      TEX_Bloodygrass_33: 228878849
-      TEX_Bloodygrass_16: 1318060594
       TEX_Bloodygrass_41: 1384823649
+      TEX_Bloodygrass_42: -657719331
+      TEX_Bloodygrass_43: 1310822372
+      TEX_Bloodygrass_44: 109501738
+      TEX_Bloodygrass_45: 501019918
+      TEX_Bloodygrass_46: 82856740
+      TEX_Bloodygrass_47: 306371377
+      TEX_Bloodygrass_48: -1327653245
+      TEX_Bloodygrass_49: 668355001
+      TEX_Bloodygrass_5: 477175295
+      TEX_Bloodygrass_50: -981599815
       TEX_Bloodygrass_51: 615752480
-  spritePackingTag: 
+      TEX_Bloodygrass_52: -564436060
+      TEX_Bloodygrass_53: -511628567
+      TEX_Bloodygrass_6: 456103439
+      TEX_Bloodygrass_7: 1082807341
+      TEX_Bloodygrass_8: 370877670
+      TEX_Bloodygrass_9: 959444882
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

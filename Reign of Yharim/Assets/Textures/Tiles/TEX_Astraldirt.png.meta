@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1269,63 +1274,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Astraldirt_38: 537839369
-      TEX_Astraldirt_27: -552068783
-      TEX_Astraldirt_43: -795606247
-      TEX_Astraldirt_29: -826873183
-      TEX_Astraldirt_16: -1894865712
-      TEX_Astraldirt_18: 401763191
-      TEX_Astraldirt_33: 1634855043
-      TEX_Astraldirt_35: -180455356
-      TEX_Astraldirt_52: 2100896069
-      TEX_Astraldirt_51: 513966588
       TEX_Astraldirt_0: 1354307968
-      TEX_Astraldirt_2: 996907227
-      TEX_Astraldirt_26: 1446582349
-      TEX_Astraldirt_4: 1328877196
       TEX_Astraldirt_1: -311678410
-      TEX_Astraldirt_7: 1296411860
-      TEX_Astraldirt_28: -1981286579
-      TEX_Astraldirt_49: -1765612122
-      TEX_Astraldirt_12: -157888295
-      TEX_Astraldirt_46: 910928216
-      TEX_Astraldirt_44: -1832146600
-      TEX_Astraldirt_24: -76462283
-      TEX_Astraldirt_34: 1807754659
-      TEX_Astraldirt_53: 2102124769
-      TEX_Astraldirt_50: 18633458
-      TEX_Astraldirt_36: 280905946
-      TEX_Astraldirt_40: 1592620190
-      TEX_Astraldirt_11: -1298565309
-      TEX_Astraldirt_3: 1256757466
-      TEX_Astraldirt_9: 1753456573
-      TEX_Astraldirt_19: -2053858305
-      TEX_Astraldirt_48: 1065927050
-      TEX_Astraldirt_22: 736331687
-      TEX_Astraldirt_25: 209799849
-      TEX_Astraldirt_20: -1641592632
-      TEX_Astraldirt_6: -647853236
-      TEX_Astraldirt_23: -1366085757
-      TEX_Astraldirt_21: 1830293119
-      TEX_Astraldirt_39: -148469430
       TEX_Astraldirt_10: 1778644653
-      TEX_Astraldirt_41: -1672354305
-      TEX_Astraldirt_47: 1974978927
-      TEX_Astraldirt_5: -1008139365
-      TEX_Astraldirt_8: -912497907
-      TEX_Astraldirt_30: -519328052
-      TEX_Astraldirt_37: 456188443
-      TEX_Astraldirt_17: 1901153767
+      TEX_Astraldirt_11: -1298565309
+      TEX_Astraldirt_12: -157888295
+      TEX_Astraldirt_13: -371683837
       TEX_Astraldirt_14: -510251813
       TEX_Astraldirt_15: 712909698
-      TEX_Astraldirt_45: -959875320
-      TEX_Astraldirt_13: -371683837
+      TEX_Astraldirt_16: -1894865712
+      TEX_Astraldirt_17: 1901153767
+      TEX_Astraldirt_18: 401763191
+      TEX_Astraldirt_19: -2053858305
+      TEX_Astraldirt_2: 996907227
+      TEX_Astraldirt_20: -1641592632
+      TEX_Astraldirt_21: 1830293119
+      TEX_Astraldirt_22: 736331687
+      TEX_Astraldirt_23: -1366085757
+      TEX_Astraldirt_24: -76462283
+      TEX_Astraldirt_25: 209799849
+      TEX_Astraldirt_26: 1446582349
+      TEX_Astraldirt_27: -552068783
+      TEX_Astraldirt_28: -1981286579
+      TEX_Astraldirt_29: -826873183
+      TEX_Astraldirt_3: 1256757466
+      TEX_Astraldirt_30: -519328052
       TEX_Astraldirt_31: 1548739766
-      TEX_Astraldirt_42: 2119836504
       TEX_Astraldirt_32: -1292593328
-  spritePackingTag: 
+      TEX_Astraldirt_33: 1634855043
+      TEX_Astraldirt_34: 1807754659
+      TEX_Astraldirt_35: -180455356
+      TEX_Astraldirt_36: 280905946
+      TEX_Astraldirt_37: 456188443
+      TEX_Astraldirt_38: 537839369
+      TEX_Astraldirt_39: -148469430
+      TEX_Astraldirt_4: 1328877196
+      TEX_Astraldirt_40: 1592620190
+      TEX_Astraldirt_41: -1672354305
+      TEX_Astraldirt_42: 2119836504
+      TEX_Astraldirt_43: -795606247
+      TEX_Astraldirt_44: -1832146600
+      TEX_Astraldirt_45: -959875320
+      TEX_Astraldirt_46: 910928216
+      TEX_Astraldirt_47: 1974978927
+      TEX_Astraldirt_48: 1065927050
+      TEX_Astraldirt_49: -1765612122
+      TEX_Astraldirt_5: -1008139365
+      TEX_Astraldirt_50: 18633458
+      TEX_Astraldirt_51: 513966588
+      TEX_Astraldirt_52: 2100896069
+      TEX_Astraldirt_53: 2102124769
+      TEX_Astraldirt_6: -647853236
+      TEX_Astraldirt_7: 1296411860
+      TEX_Astraldirt_8: -912497907
+      TEX_Astraldirt_9: 1753456573
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -171,3 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955b4a19168f1864894dc37076457fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myDroppedItem: {fileID: 11400000, guid: 50dd648746c83c4459819cf6fbc39302, type: 2}
+  Amount: 1
+  gUIController: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  itemLayer:
+    serializedVersion: 2
+    m_Bits: 0

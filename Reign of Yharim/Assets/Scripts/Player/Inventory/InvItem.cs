@@ -4,32 +4,51 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Data;
 
 public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Image image;
     public TMP_Text countText;
 
-    [HideInInspector] public Item item;
-    [HideInInspector] public int count = 1;
-    [HideInInspector] public Transform parentAfterDrag;
-
-    public void InitItem(Item newItem)
+    [HideInInspector] public ItemData item;
+    [SerializeField] private int _count = 1;
+    public int count
     {
-        item = newItem;
-        image.sprite = newItem.image;
+        set
+        {
+            if(item.stackable || value<=1)
+            {
+                _count = value;
+                ReCount();
+                if(count<=0) Destroy(gameObject);
+            }
+        }
+        get => _count;
+        
+    }
+    [HideInInspector] public Transform parentAfterDrag;
+    private InventoryManager inventoryManager;
+
+    public void InitItem(ItemData _item, InventoryManager _inventoryManager, int _count = 1)
+    {
+        item = _item;
+        count = _count;
+        image = gameObject.GetComponent<Image>();
+        image.sprite = _item.sprite;
+        inventoryManager = _inventoryManager;
         ReCount();
     }
-
     public void ReCount()
     {
         countText.text = count.ToString();
         bool textActive = count > 1;
         countText.gameObject.SetActive(textActive);
     }
-
     public void OnBeginDrag(PointerEventData eventData)
     {
+        inventoryManager.TakeItem(transform.parent.gameObject.GetComponent<InvSlot>().number);
         Debug.Log("Begin Drag");
         parentAfterDrag = transform.parent; //format stuff
         transform.SetParent(transform.root); //format stuff
@@ -39,7 +58,7 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("Dragging");
-        Vector3 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
+        Vector2 mousePosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = mousePosition;
     }
     public void OnEndDrag(PointerEventData eventData)
@@ -47,6 +66,7 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         Debug.Log("End Drag");
         transform.SetParent(parentAfterDrag); //format stuff
         image.raycastTarget = true;
+        inventoryManager = transform.parent.gameObject.GetComponent<InvSlot>().inventoryManager;
     }
 }
 

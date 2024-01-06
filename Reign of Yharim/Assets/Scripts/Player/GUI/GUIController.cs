@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class GUIController : MonoBehaviour
 {
     public TMP_Text timeText;
     public TMP_Text healthText;
-    public Animator guiHeartAnimator;
     public PlayerAI playerAI;
     public GameObject inventory;
 
@@ -15,41 +15,34 @@ public class GUIController : MonoBehaviour
 
     private bool inventoryOpened;
     public int maxStackedItems = 999;
-    public InvSlot[] slots;
     public GameObject itemPrefab;
     int selectedSlot = -1;
     public GameObject worldItem;
     public GameObject player;
     public GameObject heldItemObject;
     public TMP_Text itemText;
+    public InventoryManager inventoryManager;
 
-    public Item[] itemsToPickup;
+    public ItemData[] itemsToPickup;
 
-    const string HeartNormal = "Heart_normal";
-    const string HeartDeath = "Heart_death";
-    const string HeartFull = "Heart_full";
-
-    private void Start()
+    private IEnumerator Start()
     {
+        //Invetory instantiated in runtime
+        //At least one frame should pass before any actions
+        yield return new WaitForFixedUpdate();
         inventoryOpened = false;
         ChangeSelectedSlot(0);
     }
 
     void Update()
     {
+        float numberOfHotSlots = 5;
         timeText.text = GameTime.displayTime;
 
         if (playerAI.Life >= 0)
             healthText.text = "Health: " + playerAI.Life + "/" + playerAI.LifeMax;
         else
             healthText.text = "Health: 0/" + playerAI.LifeMax;
-
-        if (playerAI.Life == playerAI.LifeMax)
-            ChangeAnimationState(HeartFull);
-        if (playerAI.Life != playerAI.LifeMax && playerAI.Life > 0f)
-            ChangeAnimationState(HeartNormal);
-        if (playerAI.Life <= 0f)
-            ChangeAnimationState(HeartDeath);
 
         if (Input.GetKeyDown(KeyCode.Return) && inventoryOpened == false)
         {
@@ -61,22 +54,20 @@ public class GUIController : MonoBehaviour
             inventoryOpened = false;
         }
 
-        if (inventoryOpened == true)
-            inventory.SetActive(true);
-        else
-            inventory.SetActive(false);
+        inventory.SetActive(inventoryOpened);
+        
         if (Input.inputString != null)
         {
             bool isNumber = int.TryParse(Input.inputString, out int number);
-            if (isNumber && number > 0 && number < 10)
+            if (isNumber && number > 0 && number <= numberOfHotSlots)
             {
                 ChangeSelectedSlot(number - 1);
             }
         }
-        Item heldItem = GetSelectedItem(false);
+        InvItem heldItem = GetSelectedItem(false);
 
         if (GetSelectedItem(false))
-            itemText.text = heldItem.displayName;
+            itemText.text = heldItem.item.displayName;
         else
             itemText.text = ("Empty Slot");
 
@@ -88,83 +79,34 @@ public class GUIController : MonoBehaviour
                 GameObject worldClone = Instantiate(worldItem, player.transform.position, Quaternion.identity);
                 worldClone.GetComponent<WorldItem>().SpawnCooldown(2f);
                 SpriteRenderer spriteRenderer = worldClone.GetComponent<SpriteRenderer>();
-                spriteRenderer.sprite = heldItem.image;
-                worldClone.GetComponent<WorldItem>().myDroppedItem = heldItem;
+                spriteRenderer.sprite = heldItem.item.sprite;
+                worldClone.GetComponent<WorldItem>().myDroppedItem = heldItem.item;
+                worldClone.GetComponent<WorldItem>().Amount = heldItem.count;
                 GetSelectedItem(true);
                 worldClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(200f * playerAI.isFacing, 200f));
             }
         }
     }
 
-    public void ChangeAnimationState(string newAnimationState)
-    {
-        if (currentAnimationState == newAnimationState) return; //if currentAnimationState equals newAnimationState, stop the method (prevents animations from interupting themselves)
-
-        guiHeartAnimator.Play(newAnimationState); //play the newState animation
-
-        currentAnimationState = newAnimationState; //set currentAnimationState to newAnimationState
-    }
-
     void ChangeSelectedSlot(int value)
     {
         if (selectedSlot >= 0)
-            slots[selectedSlot].Deselect();
-        slots[value].Select();
+            inventoryManager.slots[selectedSlot].gameObject.GetComponent<InvSlot>().Deselect();
+        inventoryManager.slots[value].gameObject.GetComponent<InvSlot>().Select();
         selectedSlot = value;
     }
 
-    public bool AddItem(Item item)
+    public InvItem GetSelectedItem(bool use) //without bool use, method will get the selected item, with bool use, method will get and remove one of selected item
     {
-        for (int i = 0; i < slots.Length; i++)
-        {
-            InvSlot slot = slots[i];
-            InvItem itemInSlot = slot.GetComponentInChildren<InvItem>();
-            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < maxStackedItems && itemInSlot.item.stackable == true)
-            {
-                itemInSlot.count++;
-                itemInSlot.ReCount();
-                return true;
-            }
-        }
-
-        for (int i = 0; i < slots.Length; i++)
-        {
-            InvSlot slot = slots[i];
-            InvItem itemInSlot = slot.GetComponentInChildren<InvItem>();
-            if (itemInSlot == null)
-            {
-                SpawnNewItem(item, slot);
-                return true;
-            }
-        }
-
-        return false;
-    }
-    public void SpawnNewItem(Item item, InvSlot slot)
-    {
-        GameObject itemGameObject = Instantiate(itemPrefab, slot.transform);
-        InvItem invItem = itemGameObject.GetComponent<InvItem>();
-        invItem.InitItem(item);
-    }
-
-    public Item GetSelectedItem(bool use) //without bool use, method will get the selected item, with bool use, method will get and remove one of selected item
-    {
-        InvSlot slot = slots[selectedSlot];
+        InvSlot slot = inventoryManager.slots[selectedSlot].gameObject.GetComponent<InvSlot>();
         InvItem itemInSlot = slot.GetComponentInChildren<InvItem>();
         if (itemInSlot != null)
         {
-            Item item = itemInSlot.item;
             if (use == true)
             {
-                itemInSlot.count--;
-                if (itemInSlot.count <= 0)
-                {
-                    Destroy(itemInSlot.gameObject);
-                }
-                else
-                    itemInSlot.ReCount();
+                Destroy(inventoryManager.TakeItem(slot.number).gameObject);
             }
-            return item;
+            return itemInSlot;
         }
         else
             return null;
@@ -172,7 +114,7 @@ public class GUIController : MonoBehaviour
     //demo script
     public void PickUpItem()
     {
-        bool result = AddItem(itemsToPickup[Random.Range(0, itemsToPickup.Length)]);
+        bool result = inventoryManager.AddItem(itemsToPickup[Random.Range(0, itemsToPickup.Length)]);
         if (result == true)
             Debug.Log("Item added");
         else

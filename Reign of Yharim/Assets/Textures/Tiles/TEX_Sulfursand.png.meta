@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1269,63 +1274,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Sulfursand_30: -595879059
-      TEX_Sulfursand_4: -234194758
-      TEX_Sulfursand_35: -1884951011
-      TEX_Sulfursand_37: 1512686240
       TEX_Sulfursand_0: -1478958458
-      TEX_Sulfursand_13: 614382397
-      TEX_Sulfursand_22: -1926900386
-      TEX_Sulfursand_9: -966498417
-      TEX_Sulfursand_11: 93937820
-      TEX_Sulfursand_42: -1189696978
-      TEX_Sulfursand_36: -754106573
-      TEX_Sulfursand_38: 676000358
-      TEX_Sulfursand_50: -547618113
       TEX_Sulfursand_1: -1610994509
-      TEX_Sulfursand_14: 1540073491
-      TEX_Sulfursand_19: -1803049584
-      TEX_Sulfursand_28: -887444741
-      TEX_Sulfursand_8: -667842242
-      TEX_Sulfursand_32: -290103555
-      TEX_Sulfursand_39: 491582414
-      TEX_Sulfursand_7: 113242287
-      TEX_Sulfursand_44: 513542897
-      TEX_Sulfursand_15: 1734150556
-      TEX_Sulfursand_31: -421894489
-      TEX_Sulfursand_18: -816052073
-      TEX_Sulfursand_53: -1463162479
-      TEX_Sulfursand_21: 1646098693
-      TEX_Sulfursand_23: -1590415545
-      TEX_Sulfursand_49: -1523851826
-      TEX_Sulfursand_3: 988102396
-      TEX_Sulfursand_45: 146466489
-      TEX_Sulfursand_12: -1373083001
-      TEX_Sulfursand_17: 1186659284
       TEX_Sulfursand_10: -83949185
+      TEX_Sulfursand_11: 93937820
+      TEX_Sulfursand_12: -1373083001
+      TEX_Sulfursand_13: 614382397
+      TEX_Sulfursand_14: 1540073491
+      TEX_Sulfursand_15: 1734150556
       TEX_Sulfursand_16: -2140152117
+      TEX_Sulfursand_17: 1186659284
+      TEX_Sulfursand_18: -816052073
+      TEX_Sulfursand_19: -1803049584
+      TEX_Sulfursand_2: 860828084
+      TEX_Sulfursand_20: -526085290
+      TEX_Sulfursand_21: 1646098693
+      TEX_Sulfursand_22: -1926900386
+      TEX_Sulfursand_23: -1590415545
+      TEX_Sulfursand_24: -1117678181
       TEX_Sulfursand_25: 132672893
-      TEX_Sulfursand_40: -1002571785
+      TEX_Sulfursand_26: -1892518692
       TEX_Sulfursand_27: -1964043266
+      TEX_Sulfursand_28: -887444741
+      TEX_Sulfursand_29: -880998682
+      TEX_Sulfursand_3: 988102396
+      TEX_Sulfursand_30: -595879059
+      TEX_Sulfursand_31: -421894489
+      TEX_Sulfursand_32: -290103555
       TEX_Sulfursand_33: 1869797034
       TEX_Sulfursand_34: 63570763
-      TEX_Sulfursand_20: -526085290
-      TEX_Sulfursand_6: 275819896
-      TEX_Sulfursand_24: -1117678181
-      TEX_Sulfursand_46: -410588155
-      TEX_Sulfursand_43: -1619330753
-      TEX_Sulfursand_48: -2038017970
-      TEX_Sulfursand_52: -1043230725
+      TEX_Sulfursand_35: -1884951011
+      TEX_Sulfursand_36: -754106573
+      TEX_Sulfursand_37: 1512686240
+      TEX_Sulfursand_38: 676000358
+      TEX_Sulfursand_39: 491582414
+      TEX_Sulfursand_4: -234194758
+      TEX_Sulfursand_40: -1002571785
       TEX_Sulfursand_41: 396398944
-      TEX_Sulfursand_26: -1892518692
-      TEX_Sulfursand_5: -485795893
-      TEX_Sulfursand_29: -880998682
-      TEX_Sulfursand_51: 279853921
+      TEX_Sulfursand_42: -1189696978
+      TEX_Sulfursand_43: -1619330753
+      TEX_Sulfursand_44: 513542897
+      TEX_Sulfursand_45: 146466489
+      TEX_Sulfursand_46: -410588155
       TEX_Sulfursand_47: -363543145
-      TEX_Sulfursand_2: 860828084
-  spritePackingTag: 
+      TEX_Sulfursand_48: -2038017970
+      TEX_Sulfursand_49: -1523851826
+      TEX_Sulfursand_5: -485795893
+      TEX_Sulfursand_50: -547618113
+      TEX_Sulfursand_51: 279853921
+      TEX_Sulfursand_52: -1043230725
+      TEX_Sulfursand_53: -1463162479
+      TEX_Sulfursand_6: 275819896
+      TEX_Sulfursand_7: 113242287
+      TEX_Sulfursand_8: -667842242
+      TEX_Sulfursand_9: -966498417
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

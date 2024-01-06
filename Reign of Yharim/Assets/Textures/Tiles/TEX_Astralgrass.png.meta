@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1269,63 +1274,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Astralgrass_13: 1977890195
-      TEX_Astralgrass_23: -2007996844
-      TEX_Astralgrass_38: -1217738856
-      TEX_Astralgrass_19: -486005695
-      TEX_Astralgrass_31: 1993905861
-      TEX_Astralgrass_22: -1757159043
-      TEX_Astralgrass_9: -1940295438
-      TEX_Astralgrass_11: -367094513
-      TEX_Astralgrass_21: 242575049
-      TEX_Astralgrass_43: -862897898
-      TEX_Astralgrass_15: 1315093445
-      TEX_Astralgrass_45: 2058445045
       TEX_Astralgrass_0: 193737912
-      TEX_Astralgrass_24: 707116741
-      TEX_Astralgrass_29: 1515679421
-      TEX_Astralgrass_30: 1647347947
-      TEX_Astralgrass_10: -1639658631
-      TEX_Astralgrass_6: -633598404
-      TEX_Astralgrass_52: -1132070425
-      TEX_Astralgrass_42: 2028314849
-      TEX_Astralgrass_50: -1439181166
-      TEX_Astralgrass_18: -888529693
-      TEX_Astralgrass_36: -52114875
-      TEX_Astralgrass_27: 365429652
-      TEX_Astralgrass_4: 1773741969
-      TEX_Astralgrass_2: -709824998
-      TEX_Astralgrass_28: 1860195968
-      TEX_Astralgrass_37: -1557075053
-      TEX_Astralgrass_49: 2105542252
-      TEX_Astralgrass_40: -301138707
-      TEX_Astralgrass_7: -2017018498
-      TEX_Astralgrass_44: -575950680
-      TEX_Astralgrass_14: -398456871
-      TEX_Astralgrass_3: 1745762855
-      TEX_Astralgrass_39: 1059244869
-      TEX_Astralgrass_53: 910521268
-      TEX_Astralgrass_34: -1909260161
-      TEX_Astralgrass_33: 1530730131
-      TEX_Astralgrass_51: 1967131753
-      TEX_Astralgrass_8: 48425987
-      TEX_Astralgrass_12: 1838024406
-      TEX_Astralgrass_32: 988295865
-      TEX_Astralgrass_20: 1460482980
-      TEX_Astralgrass_5: -1358848015
-      TEX_Astralgrass_16: -654264828
-      TEX_Astralgrass_46: -1278643965
-      TEX_Astralgrass_48: 564612281
       TEX_Astralgrass_1: 1360856462
+      TEX_Astralgrass_10: -1639658631
+      TEX_Astralgrass_11: -367094513
+      TEX_Astralgrass_12: 1838024406
+      TEX_Astralgrass_13: 1977890195
+      TEX_Astralgrass_14: -398456871
+      TEX_Astralgrass_15: 1315093445
+      TEX_Astralgrass_16: -654264828
       TEX_Astralgrass_17: -2017087643
-      TEX_Astralgrass_26: -1536213441
-      TEX_Astralgrass_47: -826779240
+      TEX_Astralgrass_18: -888529693
+      TEX_Astralgrass_19: -486005695
+      TEX_Astralgrass_2: -709824998
+      TEX_Astralgrass_20: 1460482980
+      TEX_Astralgrass_21: 242575049
+      TEX_Astralgrass_22: -1757159043
+      TEX_Astralgrass_23: -2007996844
+      TEX_Astralgrass_24: 707116741
       TEX_Astralgrass_25: -216314391
+      TEX_Astralgrass_26: -1536213441
+      TEX_Astralgrass_27: 365429652
+      TEX_Astralgrass_28: 1860195968
+      TEX_Astralgrass_29: 1515679421
+      TEX_Astralgrass_3: 1745762855
+      TEX_Astralgrass_30: 1647347947
+      TEX_Astralgrass_31: 1993905861
+      TEX_Astralgrass_32: 988295865
+      TEX_Astralgrass_33: 1530730131
+      TEX_Astralgrass_34: -1909260161
       TEX_Astralgrass_35: 499378579
+      TEX_Astralgrass_36: -52114875
+      TEX_Astralgrass_37: -1557075053
+      TEX_Astralgrass_38: -1217738856
+      TEX_Astralgrass_39: 1059244869
+      TEX_Astralgrass_4: 1773741969
+      TEX_Astralgrass_40: -301138707
       TEX_Astralgrass_41: -1369365013
-  spritePackingTag: 
+      TEX_Astralgrass_42: 2028314849
+      TEX_Astralgrass_43: -862897898
+      TEX_Astralgrass_44: -575950680
+      TEX_Astralgrass_45: 2058445045
+      TEX_Astralgrass_46: -1278643965
+      TEX_Astralgrass_47: -826779240
+      TEX_Astralgrass_48: 564612281
+      TEX_Astralgrass_49: 2105542252
+      TEX_Astralgrass_5: -1358848015
+      TEX_Astralgrass_50: -1439181166
+      TEX_Astralgrass_51: 1967131753
+      TEX_Astralgrass_52: -1132070425
+      TEX_Astralgrass_53: 910521268
+      TEX_Astralgrass_6: -633598404
+      TEX_Astralgrass_7: -2017018498
+      TEX_Astralgrass_8: 48425987
+      TEX_Astralgrass_9: -1940295438
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

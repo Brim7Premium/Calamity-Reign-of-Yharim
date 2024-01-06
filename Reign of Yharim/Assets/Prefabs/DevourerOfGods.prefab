@@ -213,7 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -675,7 +675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -829,7 +829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -1133,7 +1133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -1287,7 +1287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -1441,7 +1441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -1595,7 +1595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -1903,7 +1903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -2057,7 +2057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -2211,7 +2211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -2365,7 +2365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -2519,7 +2519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -2673,7 +2673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -2827,7 +2827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -2981,7 +2981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -3135,7 +3135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -3324,7 +3324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -3478,7 +3478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -3632,7 +3632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -3786,7 +3786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -3940,7 +3940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -4094,7 +4094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -4350,7 +4350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -4617,7 +4617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -4921,7 +4921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -5075,7 +5075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -5229,7 +5229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -5383,7 +5383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -5537,7 +5537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -5691,7 +5691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -5845,7 +5845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -5999,7 +5999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -6153,7 +6153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -6307,7 +6307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -6461,7 +6461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -6615,7 +6615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -6769,7 +6769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -6923,7 +6923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -7227,7 +7227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -7381,7 +7381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -7535,7 +7535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -7689,7 +7689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -7843,7 +7843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -7997,7 +7997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -8151,7 +8151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -8305,7 +8305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -8609,7 +8609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -8763,7 +8763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -8945,7 +8945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -9072,7 +9072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -9271,7 +9271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -9425,7 +9425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -9579,7 +9579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -9733,7 +9733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -9887,7 +9887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -10073,7 +10073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -10227,7 +10227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -10381,7 +10381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -10535,7 +10535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -10689,7 +10689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -10843,7 +10843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -10997,7 +10997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -11151,7 +11151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -11305,7 +11305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -11459,7 +11459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -11613,7 +11613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -11767,7 +11767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -11921,7 +11921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -12075,7 +12075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -12229,7 +12229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -12383,7 +12383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -12537,7 +12537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -12691,7 +12691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -12997,7 +12997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -13148,7 +13148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -13302,7 +13302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -13456,7 +13456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -13610,7 +13610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:
@@ -13764,7 +13764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4427254605366716256}
   rb: {fileID: 0}
   c2d: {fileID: 0}
   groundLayer:

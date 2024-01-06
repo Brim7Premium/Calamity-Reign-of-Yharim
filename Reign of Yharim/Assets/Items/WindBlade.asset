@@ -9,12 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46aa4f8315eae45449ca1b56d1d86e4d, type: 3}
+  m_Script: {fileID: 11500000, guid: df5699c0ae0c7044692146f4afcf138c, type: 3}
   m_Name: WindBlade
   m_EditorClassIdentifier: 
   type: 1
-  actionType: 0
+  actionType: 1
+  inventoryType: 1
+  consumable: 0
+  damage: 1
+  knockback: 0
+  AtkSpeed: 4
+  AtkType: 0
+  size: {x: 0.5, y: 0.5}
+  Projectile: {fileID: 2108025838621159512, guid: 788b9f3007cbf9b4a8173795f87a68de, type: 3}
+  Script: Item
   stackable: 0
-  displayName: Wind Blade
-  image: {fileID: 21300000, guid: 2be3e64873540c64ea2e527b6f0c3bc4, type: 3}
+  displayName: WindBlade
+  sprite: {fileID: 21300000, guid: 2be3e64873540c64ea2e527b6f0c3bc4, type: 3}
   ID: 0

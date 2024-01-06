@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1269,63 +1274,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TEX_Blighteddirt_22: 1036444181
-      TEX_Blighteddirt_27: -1144067410
-      TEX_Blighteddirt_30: -1398384841
-      TEX_Blighteddirt_33: -181524026
-      TEX_Blighteddirt_49: 301367701
-      TEX_Blighteddirt_1: 312161595
       TEX_Blighteddirt_0: 1335897959
+      TEX_Blighteddirt_1: 312161595
+      TEX_Blighteddirt_10: 130420754
+      TEX_Blighteddirt_11: -1117085
+      TEX_Blighteddirt_12: 1621216154
+      TEX_Blighteddirt_13: -474344230
+      TEX_Blighteddirt_14: 852644665
+      TEX_Blighteddirt_15: -537313891
+      TEX_Blighteddirt_16: 17678500
+      TEX_Blighteddirt_17: -132197626
+      TEX_Blighteddirt_18: 928596549
+      TEX_Blighteddirt_19: 1770634564
+      TEX_Blighteddirt_2: 1987478052
+      TEX_Blighteddirt_20: -1934587858
       TEX_Blighteddirt_21: -917018230
-      TEX_Blighteddirt_51: -1570222345
-      TEX_Blighteddirt_5: -498920583
-      TEX_Blighteddirt_26: -1828673019
-      TEX_Blighteddirt_36: 1769296569
-      TEX_Blighteddirt_35: -1184935921
-      TEX_Blighteddirt_6: -748999891
+      TEX_Blighteddirt_22: 1036444181
+      TEX_Blighteddirt_23: -1068475147
+      TEX_Blighteddirt_24: -1091149702
       TEX_Blighteddirt_25: -729984695
-      TEX_Blighteddirt_44: -1304378692
+      TEX_Blighteddirt_26: -1828673019
+      TEX_Blighteddirt_27: -1144067410
+      TEX_Blighteddirt_28: -2017505928
+      TEX_Blighteddirt_29: -764515949
+      TEX_Blighteddirt_3: -473039398
+      TEX_Blighteddirt_30: -1398384841
+      TEX_Blighteddirt_31: -135139257
+      TEX_Blighteddirt_32: 428684856
+      TEX_Blighteddirt_33: -181524026
+      TEX_Blighteddirt_34: 463488522
+      TEX_Blighteddirt_35: -1184935921
+      TEX_Blighteddirt_36: 1769296569
+      TEX_Blighteddirt_37: -1509393765
+      TEX_Blighteddirt_38: 128074644
       TEX_Blighteddirt_39: 304854870
       TEX_Blighteddirt_4: 565485895
-      TEX_Blighteddirt_12: 1621216154
-      TEX_Blighteddirt_28: -2017505928
-      TEX_Blighteddirt_24: -1091149702
-      TEX_Blighteddirt_3: -473039398
-      TEX_Blighteddirt_42: -763939698
-      TEX_Blighteddirt_9: 1718564843
-      TEX_Blighteddirt_14: 852644665
-      TEX_Blighteddirt_11: -1117085
-      TEX_Blighteddirt_15: -537313891
-      TEX_Blighteddirt_23: -1068475147
-      TEX_Blighteddirt_18: 928596549
-      TEX_Blighteddirt_38: 128074644
-      TEX_Blighteddirt_8: -1642665296
-      TEX_Blighteddirt_19: 1770634564
-      TEX_Blighteddirt_29: -764515949
-      TEX_Blighteddirt_34: 463488522
-      TEX_Blighteddirt_37: -1509393765
-      TEX_Blighteddirt_48: 340447369
-      TEX_Blighteddirt_13: -474344230
-      TEX_Blighteddirt_46: -1815277677
-      TEX_Blighteddirt_31: -135139257
-      TEX_Blighteddirt_10: 130420754
-      TEX_Blighteddirt_20: -1934587858
-      TEX_Blighteddirt_2: 1987478052
-      TEX_Blighteddirt_50: 233094156
-      TEX_Blighteddirt_7: -820716550
-      TEX_Blighteddirt_47: 2072255383
       TEX_Blighteddirt_40: -733911850
-      TEX_Blighteddirt_52: -1055512367
-      TEX_Blighteddirt_32: 428684856
-      TEX_Blighteddirt_45: -1725043274
-      TEX_Blighteddirt_53: -376192877
-      TEX_Blighteddirt_17: -132197626
       TEX_Blighteddirt_41: 1057280759
-      TEX_Blighteddirt_16: 17678500
+      TEX_Blighteddirt_42: -763939698
       TEX_Blighteddirt_43: 2010823885
-  spritePackingTag: 
+      TEX_Blighteddirt_44: -1304378692
+      TEX_Blighteddirt_45: -1725043274
+      TEX_Blighteddirt_46: -1815277677
+      TEX_Blighteddirt_47: 2072255383
+      TEX_Blighteddirt_48: 340447369
+      TEX_Blighteddirt_49: 301367701
+      TEX_Blighteddirt_5: -498920583
+      TEX_Blighteddirt_50: 233094156
+      TEX_Blighteddirt_51: -1570222345
+      TEX_Blighteddirt_52: -1055512367
+      TEX_Blighteddirt_53: -376192877
+      TEX_Blighteddirt_6: -748999891
+      TEX_Blighteddirt_7: -820716550
+      TEX_Blighteddirt_8: -1642665296
+      TEX_Blighteddirt_9: 1718564843
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
