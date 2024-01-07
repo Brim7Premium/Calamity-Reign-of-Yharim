@@ -131,7 +131,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 		}
         OnGroundDeterminer();
         AI();
-        InWaterDeterminer(c2d);
+        inWater = InWaterDeterminer(c2d);
         objectRenderer.enabled = IsVisibleFromCamera();
 
         healthBar.gameObject.transform.parent.parent.parent.rotation = Quaternion.Euler(0, 0, 0); // Fix the HealthBar so it won't rotate if NPC does
