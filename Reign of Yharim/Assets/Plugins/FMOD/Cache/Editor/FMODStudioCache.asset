@@ -104,6 +104,34 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-7140622547088140493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/fireinthehole
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/fireinthehole
+  Guid:
+    Data1: -1516879977
+    Data2: 1165458962
+    Data3: -822618235
+    Data4: -1974223429
+  Banks:
+  - {fileID: -4679523449588917092}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -57333315614146038}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7029536133909397647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,10 +299,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638396160897827124
+  lastModified: 638401717774695512
   FileSizes:
   - Name: Desktop
-    Value: 112832
+    Value: 127424
   Exists: 1
 --- !u!114 &-4643477499043221211
 MonoBehaviour:
@@ -736,6 +764,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-57333315614146038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/fireinthehole/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,13 +836,14 @@ MonoBehaviour:
   - {fileID: 9181142709631208914}
   - {fileID: 6482469123018136666}
   - {fileID: 7642177175457304554}
+  - {fileID: -7140622547088140493}
   EditorParameters:
   - {fileID: -2705954182957021726}
   MasterBanks:
   - {fileID: 7922514285120898230}
   StringsBanks:
   - {fileID: 7607827413165057428}
-  cacheTime: 638401588144859094
+  cacheTime: 638401717774695512
   cacheVersion: 131616
 --- !u!114 &185198468472118980
 MonoBehaviour:
@@ -1259,7 +1312,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638396182864245519
+  lastModified: 638401712450289380
   FileSizes:
   - Name: Desktop
     Value: 55038080
@@ -1487,10 +1540,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638401588144859094
+  lastModified: 638401712339614419
   FileSizes:
   - Name: Desktop
-    Value: 2520
+    Value: 2576
   Exists: 1
 --- !u!114 &7642177175457304554
 MonoBehaviour:
@@ -1559,7 +1612,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638401588144803326
+  lastModified: 638401712339584429
   FileSizes:
   - Name: Desktop
     Value: 1526
