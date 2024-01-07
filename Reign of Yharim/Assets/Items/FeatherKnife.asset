@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FeatherKnife
   m_EditorClassIdentifier: 
   type: 5
-  actionType: 2
+  actionType: 1
   inventoryType: 1
   consumable: 1
   damage: 1

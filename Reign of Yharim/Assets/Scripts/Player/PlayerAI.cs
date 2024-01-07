@@ -18,6 +18,8 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 	[SerializeField] private float velPower;
 	private Vector2 axis;
 	public float isFacing;
+	public float tiltPower;
+	private float tiltPowerPoint;
 
 	[Header("Jumping")]
 	[SerializeField] private float jumpingPower = 16f;
@@ -65,6 +67,8 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
 	public override void AI() //every frame (Update)
 	{
+		tiltPower = Mathf.SmoothStep(-0.75f, -15, tiltPowerPoint);
+
 		axis = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
 		if (Input.GetButtonDown("Jump")) //if the jump button is being pressed...
@@ -79,18 +83,19 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 		{
 			OnJumpUp(); //trigger the OnJumpUp method
 		}
-
 		if (inWater)
 		{
 			rb.gravityScale = 0.3f;
 			moveSpeed = 6f;
 			jumpingPower = 8f;
+			tiltPowerPoint = Mathf.MoveTowards(tiltPowerPoint, 1, 0.05f);
 		}
 		else
 		{
 			rb.gravityScale = 2.5f;
 			//moveSpeed = 10f;
 			jumpingPower = 16f;
+			tiltPowerPoint = Mathf.MoveTowards(tiltPowerPoint, 0, 0.05f);
 		}
 
 		bottomPoint = new Vector2(c2d.bounds.center.x, c2d.bounds.min.y); //the bottompoint variable equals the bottommost y point and center x point of the capsule collider
@@ -109,19 +114,13 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         ItemData item = gUIController.GetSelectedItem(false)?.item;
 		if (Input.GetKeyDown(KeyCode.Mouse0) && item && !IsAttacking)
 		{
+			IsAttacking = true;
+			GameObject attack = Instantiate(DefaultItemUsagePrefab, transform);
+			attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable).item;
 			if (!inWater)
 			{
-				IsAttacking = true;
 				transform.localScale = new Vector2(Mathf.Sign(MousePos.x - transform.position.x), 1);
 				isFacing = transform.localScale.x;
-				GameObject attack = Instantiate(DefaultItemUsagePrefab, transform);
-				attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable).item;
-			}
-            else
-            {
-				IsAttacking = true;
-				GameObject attack = Instantiate(DefaultItemUsagePrefab, transform);
-				attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable).item;
 			}
 		}
     }
@@ -145,7 +144,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
 		//transform.rotation = Quaternion.Euler(0, 0, rb.velocity.x * -Mathf.Clamp(Mathf.Abs(targetSpeed/9), 0, 10));
 
-		transform.rotation = Quaternion.Euler(0, 0, rb.velocity.x * -0.75f);
+		transform.rotation = Quaternion.Euler(0, 0, rb.velocity.x * tiltPower);
 
 		animator.speed = Mathf.Abs(targetSpeed / 9);
 
@@ -192,7 +191,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 	}
 	private void Rise()
 	{
-		transform.rotation = Quaternion.Euler(0, 0, rb.velocity.x * -15f);
+		transform.rotation = Quaternion.Euler(0, 0, rb.velocity.x * tiltPower);
 
 		//rb.constraints = RigidbodyConstraints2D.None;
 

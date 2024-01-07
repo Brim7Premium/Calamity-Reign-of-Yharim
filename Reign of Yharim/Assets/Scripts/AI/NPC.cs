@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -130,6 +131,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 		}
         OnGroundDeterminer();
         AI();
+        InWaterDeterminer(c2d);
         objectRenderer.enabled = IsVisibleFromCamera();
 
         healthBar.gameObject.transform.parent.parent.parent.rotation = Quaternion.Euler(0, 0, 0); // Fix the HealthBar so it won't rotate if NPC does
@@ -168,22 +170,6 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         yield return new WaitForSeconds(IFrames);
         immune = false;
     }
-
-	void OnTriggerExit2D(Collider2D collision)
-	{
-		if (collision.name == "Water")
-		{
-			inWater = false;
-		}
-	}
-
-	void OnTriggerEnter2D(Collider2D collision)
-	{
-		if (collision.name == "Water")
-		{
-			inWater = true;
-		}
-	}
     public GameObject ClosestNPC() //Function to find Closest NPC to this NPC
     {
         GameObject NearestObj = null;
@@ -230,6 +216,20 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
             rayColor = Color.red; //the raycolor is red
         }
         Debug.DrawRay(c2d.bounds.center, Vector2.down * (c2d.bounds.extents.y + extraHeight), rayColor); //draw the ray 
+    }
+    public static bool InWaterDeterminer(Collider2D c2d)
+    {
+        List<Collider2D> colliders = new();
+        ContactFilter2D contactFilter = new();
+        contactFilter.layerMask = 1 << LayerMask.NameToLayer("Liquid");
+        contactFilter.useTriggers = true;
+        c2d.GetContacts(contactFilter, colliders);
+
+        foreach(Collider2D i in colliders)
+        {
+            if(i.name == "Water") return true;
+        }
+        return false;
     }
 
     public bool IsWulfrumGuy = false;

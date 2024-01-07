@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RustedGreatsword
   m_EditorClassIdentifier: 
   type: 6
-  actionType: 0
+  actionType: 1
   inventoryType: 1
   consumable: 0
   damage: 1

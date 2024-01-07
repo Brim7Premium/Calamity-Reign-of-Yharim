@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Turbulance
   m_EditorClassIdentifier: 
   type: 5
-  actionType: 2
+  actionType: 1
   inventoryType: 1
   consumable: 0
   damage: 1
