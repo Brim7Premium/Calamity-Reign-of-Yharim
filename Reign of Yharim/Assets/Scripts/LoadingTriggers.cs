@@ -10,9 +10,9 @@ using FMOD.Studio;
 
 public class LoadingTriggers : MonoBehaviour
 {
-	[SerializeField] private List<string> scenesToLoad = new List<string>();
-	[SerializeField] private List<string> scenesToUnload = new List<string>();
-	[SerializeField] private List<string> bossConditions = new List<string>(); // impliment later
+	public List<string> scenesToLoad = new List<string>();
+	public List<string> scenesToUnload = new List<string>();
+	public List<string> bossConditions = new List<string>(); // impliment later
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
@@ -24,7 +24,7 @@ public class LoadingTriggers : MonoBehaviour
 		}
 	}
 
-	private void LoadScenes()
+	public void LoadScenes()
 	{
 		for (int i = 0; i < scenesToLoad.Count; i++)
 		{
@@ -46,7 +46,7 @@ public class LoadingTriggers : MonoBehaviour
 		}
 	}
 
-	private void UnloadScenes()
+	public void UnloadScenes()
 	{
 		for (int i = 0; i < scenesToUnload.Count; i++)
 		{

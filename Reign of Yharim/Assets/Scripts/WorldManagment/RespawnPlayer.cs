@@ -10,19 +10,19 @@ using FMOD.Studio;
 
 public class RespawnPlayer : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject timerobj;
+	[SerializeField] private GameObject player;
+	[SerializeField] private GameObject timerobj;
 
-    private PlayerAI playerAI;
+	private PlayerAI playerAI;
 
-    private void Start()
-    {
-        playerAI = player.GetComponent<PlayerAI>();
-        timerobj.SetActive(false);
-    }
+	private void Start()
+	{
+		playerAI = player.GetComponent<PlayerAI>();
+		timerobj.SetActive(false);
+	}
 
-    IEnumerator Respawn()
-    {
+	IEnumerator Respawn()
+	{
 		var settingsobj = GameObject.Find("[Settings]");
 		if (settingsobj == null)
 		{
@@ -30,22 +30,32 @@ public class RespawnPlayer : MonoBehaviour
 			settingsobj.AddComponent<bracketSettingsbracket>();
 			DontDestroyOnLoad(settingsobj);
 		}
-        var respawnSeconds = settingsobj.GetComponent<bracketSettingsbracket>().respawnTime;
-        var seconds = respawnSeconds;
-        timerobj.SetActive(true);
-        while (0 != seconds)
-        {
-            timerobj.GetComponent<TextMeshProUGUI>().text = $"{seconds}";
-            yield return new WaitForSeconds(1);
-            seconds -= 1;
-        }
-        seconds = respawnSeconds;
-        SceneManager.LoadScene("MainMenu");
-        /*
-        player.SetActive(true);
-        timerobj.SetActive(false);
-        playerAI.SetDefaults();
-        playerAI.StartCoroutine(playerAI.Immunity());
-        */
-    }
+		var respawnSeconds = settingsobj.GetComponent<bracketSettingsbracket>().respawnTime;
+		var seconds = respawnSeconds;
+		timerobj.SetActive(true);
+		while (0 < seconds)
+		{
+			timerobj.GetComponent<TextMeshProUGUI>().text = $"{seconds}";
+			yield return new WaitForSeconds(1);
+			seconds -= 1;
+		}
+		seconds = respawnSeconds;
+		var loadingtriggerssobj = GameObject.Find("LoadingTrigger");
+		timerobj.SetActive(false);
+		if (loadingtriggerssobj != null)
+		{
+			var loadingtriggerss = loadingtriggerssobj.GetComponent<LoadingTriggers>();
+			loadingtriggerss.scenesToLoad.Add("Forest_Spawn");
+			loadingtriggerss.LoadScenes();
+			loadingtriggerss.scenesToLoad.Remove("Forest_Spawn");
+			player.SetActive(true);
+			player.transform.position = new Vector3(0f, 0f, 0.35f);
+		}
+		else
+		{
+			player.SetActive(true);
+			playerAI.SetDefaults();
+			playerAI.StartCoroutine(playerAI.Immunity());
+		}
+	}
 }
