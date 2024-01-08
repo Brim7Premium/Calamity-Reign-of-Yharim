@@ -851,10 +851,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638401717774695512
+  lastModified: 638403040237117186
   FileSizes:
   - Name: Desktop
-    Value: 127424
+    Value: 173024
   Exists: 1
 --- !u!114 &-4643477499043221211
 MonoBehaviour:
@@ -1248,6 +1248,34 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-2391596315293050781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerHit3
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerHit3
+  Guid:
+    Data1: 480632379
+    Data2: 1139174722
+    Data3: -1279157596
+    Data4: 722518617
+  Banks:
+  - {fileID: -4679523449588917092}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8500862547166646359}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2291892036970285450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1805,13 +1833,16 @@ MonoBehaviour:
   - {fileID: 6482469123018136666}
   - {fileID: 7642177175457304554}
   - {fileID: -7140622547088140493}
+  - {fileID: 5874609827541637866}
+  - {fileID: -2391596315293050781}
+  - {fileID: 5038776909724189226}
   EditorParameters:
   - {fileID: -2705954182957021726}
   MasterBanks:
   - {fileID: 7922514285120898230}
   StringsBanks:
   - {fileID: 7607827413165057428}
-  cacheTime: 638402392697777816
+  cacheTime: 638403040237117186
   cacheVersion: 131616
 --- !u!114 &185198468472118980
 MonoBehaviour:
@@ -2345,6 +2376,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 132515
+--- !u!114 &3153611837008756198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerHit1/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &3279659752069959210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2581,6 +2636,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 332595
+--- !u!114 &5038776909724189226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerHit2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerHit2
+  Guid:
+    Data1: -1587935301
+    Data2: 1269782090
+    Data3: 901712546
+    Data4: -641304180
+  Banks:
+  - {fileID: -4679523449588917092}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6890403920992865355}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5202417624110941876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2801,6 +2884,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5874609827541637866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerHit1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerHit1
+  Guid:
+    Data1: -97338569
+    Data2: 1222012589
+    Data3: -1652499271
+    Data4: -349325108
+  Banks:
+  - {fileID: -4679523449588917092}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3153611837008756198}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5953866321434491512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2989,6 +3100,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 654640
+--- !u!114 &6890403920992865355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerHit2/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &6920571442649689858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3052,10 +3187,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638402392697777816
+  lastModified: 638403025893566408
   FileSizes:
   - Name: Desktop
-    Value: 2576
+    Value: 2694
   Exists: 1
 --- !u!114 &7642177175457304554
 MonoBehaviour:
@@ -3176,7 +3311,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638401712339584429
+  lastModified: 638403025893531777
   FileSizes:
   - Name: Desktop
     Value: 1526
@@ -3296,6 +3431,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/DemonshadeEnrage/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &8500862547166646359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerHit3/Equalizer
   m_EditorClassIdentifier: 
   Name: Equalizer
   StudioPath: 

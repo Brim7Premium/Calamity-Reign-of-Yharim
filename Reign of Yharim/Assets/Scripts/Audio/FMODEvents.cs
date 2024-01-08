@@ -7,8 +7,11 @@ public class FMODEvents : MonoBehaviour
 { 
 	[field: Header("Player SFX")]
 	[field: SerializeField] public EventReference DemonshadeEnrage { get; private set; }
-	[field: SerializeField] public EventReference Playerhit { get; private set; }
+	[field: SerializeField] public EventReference DefenseHit { get; private set; }
 	[field: SerializeField] public EventReference fireinthehole { get; private set; }
+	[field: SerializeField] public EventReference PlayerHit1 { get; private set; }
+	[field: SerializeField] public EventReference PlayerHit2 { get; private set; }
+	[field: SerializeField] public EventReference PlayerHit3 { get; private set; }
 
 	[field: Header("Enemy SFX")]
 	[field: SerializeField] public EventReference AureusStomp { get; private set; }

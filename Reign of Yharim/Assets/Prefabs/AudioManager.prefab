@@ -98,7 +98,7 @@ MonoBehaviour:
       Data3: -1599287114
       Data4: -2051474363
     Path: event:/SFX/Player/DemonshadeEnrage
-  <Playerhit>k__BackingField:
+  <DefenseHit>k__BackingField:
     Guid:
       Data1: 937102872
       Data2: 1263561464
@@ -112,6 +112,27 @@ MonoBehaviour:
       Data3: -822618235
       Data4: -1974223429
     Path: event:/SFX/Player/fireinthehole
+  <PlayerHit1>k__BackingField:
+    Guid:
+      Data1: -97338569
+      Data2: 1222012589
+      Data3: -1652499271
+      Data4: -349325108
+    Path: event:/SFX/Player/PlayerHit1
+  <PlayerHit2>k__BackingField:
+    Guid:
+      Data1: -1587935301
+      Data2: 1269782090
+      Data3: 901712546
+      Data4: -641304180
+    Path: event:/SFX/Player/PlayerHit2
+  <PlayerHit3>k__BackingField:
+    Guid:
+      Data1: 480632379
+      Data2: 1139174722
+      Data3: -1279157596
+      Data4: 722518617
+    Path: event:/SFX/Player/PlayerHit3
   <AureusStomp>k__BackingField:
     Guid:
       Data1: -413663715
