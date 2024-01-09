@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4075834575328949700}
   - component: {fileID: 4075834575328949755}
   - component: {fileID: 4075834575328949701}
-  - component: {fileID: 4075834575328949754}
   - component: {fileID: 4075834575328949752}
   - component: {fileID: 7931671408226638637}
+  - component: {fileID: 3893844547872575990}
   m_Layer: 3
   m_Name: GreenSlime
   m_TagString: Untagged
@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4075834576525862457}
   - {fileID: 4075834576480744360}
@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 34f271e526474e74483e628b545ecc5d, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -869334570, guid: 056dfb8831bbac14f86184a2b361b26f, type: 3}
   m_Color: {r: 0.042452812, g: 1, b: 0.04512252, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.32, y: 0.52}
@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -117,8 +117,66 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &4075834575328949754
-BoxCollider2D:
+--- !u!114 &4075834575328949752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075834575328949753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c4513ae11bb5d47ba7d57fec365132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectRenderer: {fileID: 0}
+  NPCName: 
+  IsGrounded: 0
+  oldPosition: {x: 0, y: 0, z: 0}
+  healthBar: {fileID: 1798507309908875635}
+  sprite: {fileID: 0}
+  rb: {fileID: 0}
+  c2d: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  ai:
+  - 0
+  - 0
+  - 0
+  - 0
+  IFrames: 1
+  projectiles: []
+  target: {fileID: 0}
+  currentAnimationState: 
+  immune: 0
+  animator: {fileID: 0}
+  worm: 0
+  velocity: {x: 0, y: 0}
+  GroundDeterminerRayLength: 0.6
+--- !u!95 &7931671408226638637
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075834575328949753}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26ec64ad71168c04fb0ba1c46e7d7464, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &3893844547872575990
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -150,73 +208,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.6666667, y: 2.1666667}
-    newSize: {x: 0.32, y: 0.52}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.6, y: 1.8}
-  m_EdgeRadius: 0
---- !u!114 &4075834575328949752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4075834575328949753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5c4513ae11bb5d47ba7d57fec365132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectRenderer: {fileID: 0}
-  NPCName: 
-  inWater: 0
-  healthBar: {fileID: 1798507309908875635}
-  rb: {fileID: 0}
-  c2d: {fileID: 0}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  ai:
-  - 0
-  - 0
-  - 0
-  - 0
-  IFrames: 1
-  projectiles: []
-  target: {fileID: 0}
-  currentAnimationState: 
-  immune: 0
-  animator: {fileID: 0}
-  worm: 0
-  velocity: {x: 0, y: 0}
---- !u!95 &7931671408226638637
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4075834575328949753}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 26ec64ad71168c04fb0ba1c46e7d7464, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_Size: {x: 1.45, y: 0.9}
+  m_Direction: 1
 --- !u!1 &4075834575991077626
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +420,7 @@ RectTransform:
   m_GameObject: {fileID: 4075834576525862462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.002192184, y: 0.002192184, z: 0.002192184}
+  m_LocalScale: {x: 0.0015, y: 0.0015, z: 0.0020904546}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4049209795865979253}
@@ -435,7 +428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.06}
   m_SizeDelta: {x: 1200, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4075834576525862458

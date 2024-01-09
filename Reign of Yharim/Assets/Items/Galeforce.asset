@@ -9,12 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46aa4f8315eae45449ca1b56d1d86e4d, type: 3}
+  m_Script: {fileID: 11500000, guid: df5699c0ae0c7044692146f4afcf138c, type: 3}
   m_Name: Galeforce
   m_EditorClassIdentifier: 
   type: 2
-  actionType: 3
+  actionType: 1
+  inventoryType: 1
+  consumable: 0
+  damage: 1
+  knockback: 0
+  AtkSpeed: 2
+  AtkType: 0
+  size: {x: 0, y: 0}
+  Projectile: {fileID: 0}
+  Script: Item
   stackable: 0
   displayName: Galeforce
-  image: {fileID: 21300000, guid: 1aa1379f4b7a7e04fbd34cd77a82de2b, type: 3}
-  ID: 1
+  sprite: {fileID: 21300000, guid: 1aa1379f4b7a7e04fbd34cd77a82de2b, type: 3}
+  ID: 0

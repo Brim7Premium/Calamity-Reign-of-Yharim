@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
@@ -16,9 +17,9 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 	[SerializeField] private float deacceleration;
 	[SerializeField] private float velPower;
 	private Vector2 axis;
-	private float xAxis;
-	private float yAxis;
 	public float isFacing;
+	public float tiltPower;
+	private float tiltPowerPoint;
 
 	[Header("Jumping")]
 	[SerializeField] private float jumpingPower = 16f;
@@ -40,12 +41,16 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
 	[SerializeField] [Range(1, 180)] private int framerate; //create int with range of 1 to 180, used for setting framerate. Why this is in the player's AI  script will remain unknown for eternity
 
-	//constants can't be changed
-	const string PlayerIdle = "Player_idle";
-	const string PlayerWalk = "Player_walk";
-	const string PlayerJump = "Player_jump";
-	const string PlayerRun = "Player_run";
-	const string PlayerAttack = "Player_attack";
+    [Header("Item usage")]
+    [SerializeField] private GameObject DefaultItemUsagePrefab;
+    public bool IsAttacking;
+    public GUIController gUIController;
+    //constants can't be changed
+    const string PlayerIdle = "Player_idle";
+    const string PlayerWalk = "Player_walk";
+    const string PlayerJump = "Player_jump";
+    const string PlayerRun = "Player_run";
+    const string PlayerAttack = "Player_attack";
 
 
 	public override void SetDefaults() //awake
@@ -55,20 +60,20 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 		NPCName = "Player";
 		Damage = 0; //Note to future developers/self, this can be used for times when the player does deal contact damage to enemies. armor sets are an example. right now, it's useless.
 		LifeMax = 100;
-		Life = LifeMax;
+		Life = LifeMax;        
 
 		rb.velocity = new Vector2(rb.velocity.x, Vector2.zero.y);
 	}
 
 	public override void AI() //every frame (Update)
 	{
-		//xAxis = Input.GetAxis("Horizontal"); //sets xaxis to -1 or 1 based on the player's input
-		//yAxis = Input.GetAxis("Vertical");
+		tiltPower = Mathf.SmoothStep(-0.75f, -15, tiltPowerPoint);
+
 		axis = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
 		if (Input.GetButtonDown("Jump")) //if the jump button is being pressed...
 		{
-			if (isGrounded) //and the player is grounded (or underwater for now)...
+			if (isGrounded && !inWater) //and the player is grounded (or underwater for now)...
 			{
 				StartCoroutine(JumpWithDelay()); //start the JumpWithDelay coroutine
 			}
@@ -78,18 +83,19 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 		{
 			OnJumpUp(); //trigger the OnJumpUp method
 		}
-
 		if (inWater)
 		{
 			rb.gravityScale = 0.3f;
 			moveSpeed = 6f;
 			jumpingPower = 8f;
+			tiltPowerPoint = Mathf.MoveTowards(tiltPowerPoint, 1, 0.05f);
 		}
 		else
 		{
 			rb.gravityScale = 2.5f;
-			moveSpeed = 8f;
+			//moveSpeed = 10f;
 			jumpingPower = 16f;
+			tiltPowerPoint = Mathf.MoveTowards(tiltPowerPoint, 0, 0.05f);
 		}
 
 		bottomPoint = new Vector2(c2d.bounds.center.x, c2d.bounds.min.y); //the bottompoint variable equals the bottommost y point and center x point of the capsule collider
@@ -97,19 +103,27 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 		//Debug.DrawRay(transform.position, ToRotationVector2(AngleTo(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition))), Color.cyan); //gets the angle to the mouse position by using AngleTo from the player's position to the mouse position converted to a world point. The output is then converted to a Vector2 so a ray can be drawn at said angle
 
 		Debug.DrawRay(transform.position, DirectionTo(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition))); //better version
-																																 //Debug.Log("IsJumping: " + isJumping + " IsFalling: " + isFalling);
-
-		//Debug.Log(rb.velocity.y);
-
+		//Debug.Log("IsJumping: " + isJumping + " IsFalling: " + isFalling);
 		/* if (isGrounded)
 			isFalling = false;
-
-		if (rb.velocity.y < -3f)
+        if (rb.velocity.y < -3f)
+        {
+            isFalling = true;
+        }
+        */
+        ItemData item = gUIController.GetSelectedItem(false)?.item;
+		if (Input.GetKeyDown(KeyCode.Mouse0) && item && !IsAttacking)
 		{
-			isFalling = true;
+			IsAttacking = true;
+			GameObject attack = Instantiate(DefaultItemUsagePrefab, transform);
+			attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable).item;
+			if (!inWater)
+			{
+				transform.localScale = new Vector2(Mathf.Sign(MousePos.x - transform.position.x), 1);
+				isFacing = transform.localScale.x;
+			}
 		}
-		*/
-	}
+    }
 	public override void Kill()
 	{
 		gameObject.SetActive(false); //deactivate the object
@@ -117,9 +131,6 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 	}
 	private void Movement()
 	{
-		transform.rotation = Quaternion.Euler(0, 0, 0);
-
-		rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
 		float targetSpeed = axis.x * moveSpeed;
 
@@ -130,6 +141,10 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 		float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
 
 		rb.AddForce(movement * Vector2.right);
+
+		//transform.rotation = Quaternion.Euler(0, 0, rb.velocity.x * -Mathf.Clamp(Mathf.Abs(targetSpeed/9), 0, 10));
+
+		transform.rotation = Quaternion.Euler(0, 0, rb.velocity.x * tiltPower);
 
 		animator.speed = Mathf.Abs(targetSpeed / 9);
 
@@ -144,22 +159,26 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 				ChangeAnimationState(PlayerIdle); //set the animation to idle
 			}
 		}
-		if (axis.x > 0)
+		if (!IsAttacking)
 		{
-			transform.localScale = new Vector2(1, 1); //facing right
-			isFacing = 1;
+			if (axis.x > 0)
+			{
+				transform.localScale = new Vector2(1, 1); //facing right
+				isFacing = 1;
+			}
+			if (axis.x < 0)
+			{
+				transform.localScale = new Vector2(-1, 1); //facing left
+				isFacing = -1;
+			}
 		}
-		if (axis.x < 0)
-		{
-			transform.localScale = new Vector2(-1, 1); //facing left
-			isFacing = -1;
-		}
+		
 	}
 	private void Jump()
 	{
 		isJumping = true; //set isjumping to true
 
-		rb.velocity = new Vector2(rb.velocity.x, Vector2.zero.y);
+		rb.velocity = new Vector2 (rb.velocity.x, Vector2.zero.y);
 
 		rb.AddForce(Vector2.up * jumpingPower, ForceMode2D.Impulse); //the jumping script
 	}
@@ -172,7 +191,9 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 	}
 	private void Rise()
 	{
-		rb.constraints = RigidbodyConstraints2D.None;
+		transform.rotation = Quaternion.Euler(0, 0, rb.velocity.x * tiltPower);
+
+		//rb.constraints = RigidbodyConstraints2D.None;
 
 		float targetSpeedy = axis.y * jumpingPower;
 
@@ -218,21 +239,20 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 	}
 	private void FixedUpdate() //for physics
 	{
-
+		
 		Application.targetFrameRate = framerate; //target framerate equals the set number
 		#region GroundDetection
-
 		if (!inWater)
 		{
 			Color rayCol;
-			RaycastHit2D hit = Physics2D.Raycast(bottomPoint, transform.TransformDirection(Vector2.down), rayHeight, groundLayer);
+			RaycastHit2D hit = Physics2D.Raycast(bottomPoint, Vector2.down, rayHeight, groundLayer);
 
 			if (hit)
 			{
 				if (!isJumping)
 				{
-					float rayDirVel = Vector2.Dot(transform.TransformDirection(Vector2.down), rb.velocity); //math stuff
-					float otherDirVel = Vector2.Dot(transform.TransformDirection(Vector2.down), Vector2.zero);
+					float rayDirVel = Vector2.Dot(Vector2.down, rb.velocity); //math stuff
+					float otherDirVel = Vector2.Dot(Vector2.down, Vector2.zero);
 					float relVel = rayDirVel - otherDirVel;
 					float x = hit.distance - rideHeight;
 					float force = (x * rideSpringStrength) - (relVel * rideSpringDamper);

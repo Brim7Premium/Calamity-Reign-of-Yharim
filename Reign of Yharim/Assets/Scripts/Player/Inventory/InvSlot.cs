@@ -8,6 +8,8 @@ public class InvSlot : MonoBehaviour, IDropHandler
 {
     public Image image;
     public Sprite selectedSprite, notSelectedSprite;
+    public int number;
+    public InventoryManager inventoryManager;
 
     private void Awake()
     {
@@ -32,11 +34,8 @@ public class InvSlot : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
-        if (transform.childCount == 0) //if the slot is not already occupied
-        {
-            GameObject dropped = eventData.pointerDrag;
-            InvItem draggableItem = dropped.GetComponent<InvItem>();
-            draggableItem.parentAfterDrag = transform;
-        }
+        GameObject dropped = eventData.pointerDrag;
+        InvItem draggableItem = dropped.GetComponent<InvItem>();
+        if(inventoryManager.AddItem(draggableItem, number)) draggableItem.parentAfterDrag = transform;
     }
 }

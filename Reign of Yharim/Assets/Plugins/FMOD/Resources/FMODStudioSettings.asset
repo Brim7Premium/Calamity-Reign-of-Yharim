@@ -25,12 +25,6 @@ MonoBehaviour:
     Overlay:
       Value: 0
       HasValue: 0
-    OverlayPosition:
-      Value: 0
-      HasValue: 0
-    OverlayFontSize:
-      Value: 0
-      HasValue: 0
     Logging:
       Value: 0
       HasValue: 0
@@ -98,12 +92,6 @@ MonoBehaviour:
     Overlay:
       Value: 0
       HasValue: 1
-    OverlayPosition:
-      Value: 0
-      HasValue: 0
-    OverlayFontSize:
-      Value: 0
-      HasValue: 0
     Logging:
       Value: 0
       HasValue: 0
@@ -169,12 +157,6 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Overlay:
-      Value: 0
-      HasValue: 0
-    OverlayPosition:
-      Value: 0
-      HasValue: 0
-    OverlayFontSize:
       Value: 0
       HasValue: 0
     Logging:
@@ -244,12 +226,6 @@ MonoBehaviour:
     Overlay:
       Value: 0
       HasValue: 0
-    OverlayPosition:
-      Value: 0
-      HasValue: 0
-    OverlayFontSize:
-      Value: 0
-      HasValue: 0
     Logging:
       Value: 0
       HasValue: 0
@@ -315,12 +291,6 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Overlay:
-      Value: 0
-      HasValue: 0
-    OverlayPosition:
-      Value: 0
-      HasValue: 0
-    OverlayFontSize:
       Value: 0
       HasValue: 0
     Logging:
@@ -390,12 +360,6 @@ MonoBehaviour:
     Overlay:
       Value: 0
       HasValue: 0
-    OverlayPosition:
-      Value: 0
-      HasValue: 0
-    OverlayFontSize:
-      Value: 0
-      HasValue: 0
     Logging:
       Value: 0
       HasValue: 0
@@ -461,12 +425,6 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Overlay:
-      Value: 0
-      HasValue: 0
-    OverlayPosition:
-      Value: 0
-      HasValue: 0
-    OverlayFontSize:
       Value: 0
       HasValue: 0
     Logging:
@@ -536,12 +494,6 @@ MonoBehaviour:
     Overlay:
       Value: 0
       HasValue: 0
-    OverlayPosition:
-      Value: 0
-      HasValue: 0
-    OverlayFontSize:
-      Value: 0
-      HasValue: 0
     Logging:
       Value: 0
       HasValue: 0
@@ -607,12 +559,6 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Overlay:
-      Value: 0
-      HasValue: 0
-    OverlayPosition:
-      Value: 0
-      HasValue: 0
-    OverlayFontSize:
       Value: 0
       HasValue: 0
     Logging:
@@ -710,7 +656,7 @@ MonoBehaviour:
   EnableErrorCallback: 0
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
-  CurrentVersion: 131616
+  CurrentVersion: 131609
   HideSetupWizard: 1
   LastEventReferenceScanVersion: 131609
   Platforms:
@@ -749,12 +695,6 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Overlay:
-      Value: 0
-      HasValue: 0
-    OverlayPosition:
-      Value: 0
-      HasValue: 0
-    OverlayFontSize:
       Value: 0
       HasValue: 0
     Logging:
@@ -822,12 +762,6 @@ MonoBehaviour:
       Value: 9264
       HasValue: 1
     Overlay:
-      Value: 0
-      HasValue: 0
-    OverlayPosition:
-      Value: 0
-      HasValue: 0
-    OverlayFontSize:
       Value: 0
       HasValue: 0
     Logging:

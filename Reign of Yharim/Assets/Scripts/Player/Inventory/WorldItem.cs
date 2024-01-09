@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WorldItem : MonoBehaviour
 {
-    public Item myDroppedItem;
+    public ItemData myDroppedItem;
+    public int Amount;
     public GUIController gUIController;
-    bool wait = true;
+    bool isWaiting = false;
+    int stackDistance = 3;
+    [SerializeField] private LayerMask itemLayer;
 
     // Update is called once per frame
 
@@ -16,10 +20,31 @@ public class WorldItem : MonoBehaviour
             gUIController = GameObject.Find("GUIManager").GetComponent<GUIController>();
         else
             Debug.LogError("No GUI Manager");
+        itemLayer = 1 << LayerMask.NameToLayer("Item");
+        gameObject.GetComponent<SpriteRenderer>().sprite = myDroppedItem.sprite;
     }
     public void SpawnCooldown(float seconds)
     {
         StartCoroutine(Wait(seconds));
+    }
+    void FixedUpdate()
+    {
+        TryStack();
+    }
+    public void TryStack()
+    {
+        Collider2D[] nearbyItems = Physics2D.OverlapBoxAll(transform.position, Vector2.one * stackDistance, 0, itemLayer);
+        
+        foreach(Collider2D item in nearbyItems)
+        {
+            WorldItem script = item.gameObject.GetComponent<WorldItem>();
+
+            if(script.myDroppedItem == myDroppedItem && !(item.gameObject == gameObject) && myDroppedItem.stackable)
+            {
+                Amount += script.Amount;
+                Destroy(item.gameObject);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,10 +53,10 @@ public class WorldItem : MonoBehaviour
         {
             if (collision.gameObject.tag == "Hitbox")
             {
-                if (wait)
-                {
-                    gUIController.AddItem(myDroppedItem);
-                    Destroy(gameObject);
+                if (!isWaiting)
+                {   
+                    if(gUIController.inventoryManager.AddItem(myDroppedItem, count:Amount))
+                        Destroy(gameObject);
                     StartCoroutine(Wait(0.5f));
                 }
             }
@@ -39,8 +64,8 @@ public class WorldItem : MonoBehaviour
     }
     public IEnumerator Wait(float seconds)
     {
-        wait = false;
+        isWaiting = true;
         yield return new WaitForSeconds(seconds);
-        wait = true;
+        isWaiting = false;
     }
 }

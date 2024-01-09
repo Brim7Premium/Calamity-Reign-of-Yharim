@@ -639,7 +639,10 @@ MonoBehaviour:
   objectRenderer: {fileID: 0}
   NPCName: 
   inWater: 0
+  IsGrounded: 0
+  oldPosition: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 0}
+  sprite: {fileID: 0}
   rb: {fileID: 2160703249615966321}
   c2d: {fileID: 0}
   groundLayer:
@@ -658,6 +661,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   worm: 0
   velocity: {x: 0, y: 0}
+  GroundDeterminerRayLength: 0
+  IsWulfrumGuy: 0
   moveSpeed: 10
   acceleration: 12
   deacceleration: 12
@@ -672,6 +677,9 @@ MonoBehaviour:
   targetTestObject: {fileID: 2160703249615966320}
   worldManager: {fileID: 0}
   framerate: 60
+  DefaultItemUsagePrefab: {fileID: 0}
+  IsAttacking: 0
+  gUIController: {fileID: 0}
 --- !u!70 &6691831411640443563
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -935,8 +943,8 @@ GameObject:
   - component: {fileID: 2160703249888247164}
   - component: {fileID: 2160703249888247165}
   - component: {fileID: 368119006123789490}
-  - component: {fileID: 2488928895049305179}
-  - component: {fileID: 2540371494289732364}
+  - component: {fileID: 4774705833977635299}
+  - component: {fileID: 5457158362429197686}
   m_Layer: 6
   m_Name: Head
   m_TagString: Hitbox
@@ -1089,7 +1097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAI: {fileID: 0}
---- !u!114 &2488928895049305179
+--- !u!114 &4774705833977635299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1105,7 +1113,7 @@ MonoBehaviour:
   Parameter: Equalizer
   TriggerEvent: 5
   Value: 1
---- !u!114 &2540371494289732364
+--- !u!114 &5457158362429197686
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
