@@ -47,4 +47,4 @@ MonoBehaviour:
   player: {fileID: 0}
   enemiesToSpawn: []
   parentBiome: 
-  EnemySpawnRate: 45
+  worldManager: {fileID: 0}

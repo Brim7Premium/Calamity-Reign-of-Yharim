@@ -65,28 +65,31 @@ public class EnemySpawner : MonoBehaviour
 		}
 	}
 
-	public IEnumerator SpawnEnemy(GameObject enemyPrefab)
+	public IEnumerator SpawnEnemy(GameObject enemyPrefab, Vector2 SpawnPosition = new Vector2())
 	{
-		int ground = 1 << LayerMask.NameToLayer("Ground");
-
-		Vector2 SpawnPosition = new Vector2(UnityEngine.Random.Range(player.transform.position.x - 24f, player.transform.position.x + 24f), UnityEngine.Random.Range(player.transform.position.y - 12f, player.transform.position.y + 12f));          
-
-		SpawnPosition = Physics2D.Raycast(SpawnPosition, Vector2.down, Mathf.Infinity, ground).point;
-		
-		// I can't make enemies not to spawn in blocks in general, but this will reduce chances of this happening by a lot
-		while (Physics2D.Raycast(SpawnPosition, Vector2.down, 0, ground))
+		if (SpawnPosition == new Vector2())
 		{
-			for(int i = 0; i<10; i++) // The game will not stop working when there is no space to spawn an enemy
-			{
-				if (Physics2D.Raycast(SpawnPosition, Vector2.down, 0, ground))
-				{
-					SpawnPosition = new Vector2(UnityEngine.Random.Range(player.transform.position.x - 24f, player.transform.position.x + 24f), UnityEngine.Random.Range(player.transform.position.y - 12f, player.transform.position.y + 12f));
-					SpawnPosition = Physics2D.Raycast(SpawnPosition, Vector2.down, Mathf.Infinity, ground).point;
-				}
-				else break;
-			}
+			int ground = 1 << LayerMask.NameToLayer("Ground");
 
-			yield return new WaitForFixedUpdate();
+			SpawnPosition = new Vector2(UnityEngine.Random.Range(player.transform.position.x - 24f, player.transform.position.x + 24f), UnityEngine.Random.Range(player.transform.position.y - 12f, player.transform.position.y + 12f));          
+
+			SpawnPosition = Physics2D.Raycast(SpawnPosition, Vector2.down, Mathf.Infinity, ground).point;
+			
+			// I can't make enemies not to spawn in blocks in general, but this will reduce chances of this happening by a lot
+			while (Physics2D.Raycast(SpawnPosition, Vector2.down, 0, ground))
+			{
+				for(int i = 0; i<10; i++) // The game will not stop working when there is no space to spawn an enemy
+				{
+					if (Physics2D.Raycast(SpawnPosition, Vector2.down, 0, ground))
+					{
+						SpawnPosition = new Vector2(UnityEngine.Random.Range(player.transform.position.x - 24f, player.transform.position.x + 24f), UnityEngine.Random.Range(player.transform.position.y - 12f, player.transform.position.y + 12f));
+						SpawnPosition = Physics2D.Raycast(SpawnPosition, Vector2.down, Mathf.Infinity, ground).point;
+					}
+					else break;
+				}
+
+				yield return new WaitForFixedUpdate();
+			}
 		}
 
 		if (enemyPrefab != null)

@@ -36,10 +36,10 @@ public class WulfrumAmplifierAI : NPC
                 if(Vector2.Distance(target.transform.position, transform.position) <= 7 && !WokeUp)
                 {
                     WokeUp = true;
+                    var enemyspawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
                     for(int i = 0; i < 2; i++)
                     {
-                        GameObject NewDrone = Instantiate(GuardDrone);
-                        NewDrone.transform.position = transform.position + new Vector3(-20 + (i * 40), -17, 0);
+                        enemyspawner.SpawnEnemy(GuardDrone, transform.position + new Vector3(-20 + (i * 40), -17, 0));
                     }
                 }
                 if (WokeUp)

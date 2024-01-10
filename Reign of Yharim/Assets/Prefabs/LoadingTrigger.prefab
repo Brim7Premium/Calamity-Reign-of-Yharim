@@ -45,11 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cefc8326daf0214e8bec83fca6bba76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenesToLoad:
-  - Tundra
-  scenesToUnload:
-  - Bloody
-  player: {fileID: 0}
+  scenesToLoad: []
+  scenesToUnload: []
+  bossConditions: []
 --- !u!61 &4929732635000072072
 BoxCollider2D:
   m_ObjectHideFlags: 0

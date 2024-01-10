@@ -12,11 +12,11 @@ public class LoadingTriggers : MonoBehaviour
 {
 	public List<string> scenesToLoad = new List<string>();
 	public List<string> scenesToUnload = new List<string>();
-	public List<string> bossConditions = new List<string>(); // impliment later
+	public string bossCondition;
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.gameObject.name == "Player")
+		if (collision.gameObject.name == "Player" && collision.gameObject.GetComponent<PlayerAI>().defeatedBosses.Contains(bossCondition))
 		{
 			scenesToUnload.Add("TempCam");
 			LoadScenes();
