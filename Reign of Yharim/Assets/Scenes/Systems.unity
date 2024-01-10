@@ -12280,10 +12280,6 @@ PrefabInstance:
       propertyPath: gUIController
       value: 
       objectReference: {fileID: 136122357}
-    - target: {fileID: 2160703249615966330, guid: 11a9cd47724de354c997feb04775b786, type: 3}
-      propertyPath: DefaultItemUsagePrefab
-      value: 
-      objectReference: {fileID: 6250302611736326467, guid: 7e52d538bb24e37479a934cd849a1c77, type: 3}
     - target: {fileID: 2160703249668494349, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
@@ -12299,6 +12295,10 @@ PrefabInstance:
     - target: {fileID: 2160703250161703672, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -17.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820805036228977180, guid: 11a9cd47724de354c997feb04775b786, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4971110993629575645, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_Size.x

@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 34f271e526474e74483e628b545ecc5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -174,7 +174,6 @@ MonoBehaviour:
   myDroppedItem: {fileID: 11400000, guid: 50dd648746c83c4459819cf6fbc39302, type: 2}
   Amount: 1
   gUIController: {fileID: 0}
-  inventoryManager: {fileID: 0}
   itemLayer:
     serializedVersion: 2
     m_Bits: 0

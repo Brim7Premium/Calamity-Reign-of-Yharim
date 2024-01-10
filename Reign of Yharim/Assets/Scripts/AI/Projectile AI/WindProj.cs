@@ -12,7 +12,6 @@ public class WindProj : Projectile
         damage = 5;
         velocity = 4;
         rb.velocity = (MousePos - (Vector2)transform.position).normalized * velocity;
-        transform.localScale = Vector2.one*0.5f;
     }
     public override void AI()
     {

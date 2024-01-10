@@ -486,7 +486,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 33334
+  Length: 31500
 --- !u!114 &-6089269796900508116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -902,7 +902,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638404251539723205
+  lastModified: 638404258520752356
   FileSizes:
   - Name: Desktop
     Value: 579616
@@ -1896,7 +1896,7 @@ MonoBehaviour:
   - {fileID: 7922514285120898230}
   StringsBanks:
   - {fileID: 7607827413165057428}
-  cacheTime: 638404251539723205
+  cacheTime: 638404258520752356
   cacheVersion: 131616
 --- !u!114 &185198468472118980
 MonoBehaviour:

@@ -18,6 +18,7 @@ public class EnemySpawner : MonoBehaviour
 	public List<SpawnableEnemy> enemiesToSpawn = new List<SpawnableEnemy>();
 
 	public string parentBiome;
+	public GameObject worldManager;
 
 	public IEnumerator SpawnEnemies()
 	{
@@ -52,6 +53,7 @@ public class EnemySpawner : MonoBehaviour
 		while (player == null)
 		{
 			player = GameObject.Find("Player");
+			worldManager = player.GetComponent<PlayerAI>().worldManager;
 		}
 		while (true)
 		{
@@ -89,12 +91,15 @@ public class EnemySpawner : MonoBehaviour
 
 		if (enemyPrefab != null)
 		{
-			GameObject newEnemy = Instantiate(enemyPrefab, SpawnPosition, Quaternion.identity);
-			if (newEnemy.scene != player.scene)
+			if (this.gameObject.scene.name == "Systems" || worldManager.GetComponent<BiomeDetection>().biomeName == parentBiome)
 			{
-				SceneManager.MoveGameObjectToScene(newEnemy, player.scene);
+				GameObject newEnemy = Instantiate(enemyPrefab, SpawnPosition, Quaternion.identity);
+				if (newEnemy.scene != player.scene)
+				{
+					SceneManager.MoveGameObjectToScene(newEnemy, player.scene);
+				}
+				newEnemy.SetActive(true);
 			}
-			newEnemy.SetActive(true);
 		}
 	}
 }

@@ -639,6 +639,7 @@ MonoBehaviour:
   objectRenderer: {fileID: 0}
   NPCName: 
   inWater: 0
+  wasInWater: 0
   IsGrounded: 0
   oldPosition: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 0}
@@ -668,6 +669,7 @@ MonoBehaviour:
   deacceleration: 12
   velPower: 0.9
   isFacing: 0
+  tiltPower: 0
   jumpingPower: 16
   jumpReleaseMod: 0.5
   rayHeight: 2
@@ -675,9 +677,10 @@ MonoBehaviour:
   rideSpringStrength: 2000
   rideSpringDamper: 40
   targetTestObject: {fileID: 2160703249615966320}
+  defeatedBosses: []
   worldManager: {fileID: 0}
   framerate: 60
-  DefaultItemUsagePrefab: {fileID: 0}
+  DefaultItemUsagePrefab: {fileID: 6250302611736326467, guid: 7e52d538bb24e37479a934cd849a1c77, type: 3}
   IsAttacking: 0
   gUIController: {fileID: 0}
 --- !u!70 &6691831411640443563
@@ -1782,7 +1785,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2be3e64873540c64ea2e527b6f0c3bc4, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1790,6 +1793,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
