@@ -736,6 +736,7 @@ GameObject:
   - component: {fileID: 3285652338515312443}
   - component: {fileID: 3877769248803572075}
   - component: {fileID: 5329822896581189773}
+  - component: {fileID: -5356782600559552144}
   m_Layer: 3
   m_Name: WulfrumRover
   m_TagString: Untagged
@@ -827,6 +828,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
+  inWater: 0
+  wasInWater: 0
   IsGrounded: 0
   oldPosition: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 0}
@@ -850,7 +853,7 @@ MonoBehaviour:
   worm: 0
   velocity: {x: 0, y: 0}
   GroundDeterminerRayLength: 0.11
-  Charged: 0
+  IsWulfrumGuy: 0
   Shield: {fileID: 4112934847300748699}
 --- !u!50 &3285652338515312443
 Rigidbody2D:
@@ -935,3 +938,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.35}
   m_Size: {x: 1.6, y: 0.85}
   m_Direction: 1
+--- !u!114 &-5356782600559552144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164165129471260153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde63d9d4a2da8a4fb9fac0d2b2145c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  condition: 
+  spawnChance: 75

@@ -5180,6 +5180,7 @@ GameObject:
   - component: {fileID: 622834412239014320}
   - component: {fileID: 8189818195780222328}
   - component: {fileID: 4615072763300409665}
+  - component: {fileID: -6364993854978831764}
   m_Layer: 3
   m_Name: WulfrumAmplifier
   m_TagString: Untagged
@@ -5271,6 +5272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
+  inWater: 0
+  wasInWater: 0
   IsGrounded: 0
   oldPosition: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 0}
@@ -5390,6 +5393,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-6364993854978831764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635877712478505163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde63d9d4a2da8a4fb9fac0d2b2145c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  condition: 
+  spawnChance: 100
 --- !u!1 &5670037964841833370
 GameObject:
   m_ObjectHideFlags: 0

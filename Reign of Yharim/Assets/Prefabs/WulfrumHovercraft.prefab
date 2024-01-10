@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 2851537446534793559}
   - component: {fileID: 6036478395791497132}
   - component: {fileID: 8739789068084915541}
+  - component: {fileID: 3698244732011329695}
   m_Layer: 3
   m_Name: WulfrumHovercraft
   m_TagString: Untagged
@@ -412,6 +413,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
+  inWater: 0
+  wasInWater: 0
   IsGrounded: 0
   oldPosition: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 0}
@@ -519,6 +522,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.32}
   m_Size: {x: 1.5, y: 1}
   m_Direction: 1
+--- !u!114 &3698244732011329695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2330809288916496741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde63d9d4a2da8a4fb9fac0d2b2145c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  condition: 
+  spawnChance: 75
 --- !u!1 &5343706160880210715
 GameObject:
   m_ObjectHideFlags: 0

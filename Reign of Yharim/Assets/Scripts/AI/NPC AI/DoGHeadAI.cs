@@ -23,7 +23,7 @@ public class DoGHeadAI : NPC
         
         if (!GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive)
         {
-            theme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.SCal2); // replace this with the boss's event reference
+            theme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoG1);
             theme.start();
             GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive = true;
         }

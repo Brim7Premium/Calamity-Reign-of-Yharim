@@ -460,6 +460,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6281687262831029512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/Underwater
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/Underwater
+  Guid:
+    Data1: 873056432
+    Data2: 1094511078
+    Data3: 1114249150
+    Data4: 1963203578
+  Banks:
+  - {fileID: -4679523449588917092}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 33334
 --- !u!114 &-6089269796900508116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,6 +707,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-5063039798782228281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WaterEnter/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-5058078179145262703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,10 +902,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638403040237117186
+  lastModified: 638404251539723205
   FileSizes:
   - Name: Desktop
-    Value: 173024
+    Value: 579616
   Exists: 1
 --- !u!114 &-4643477499043221211
 MonoBehaviour:
@@ -1836,13 +1887,16 @@ MonoBehaviour:
   - {fileID: 5874609827541637866}
   - {fileID: -2391596315293050781}
   - {fileID: 5038776909724189226}
+  - {fileID: 924096474373419696}
+  - {fileID: -6281687262831029512}
+  - {fileID: 4078255458858391133}
   EditorParameters:
   - {fileID: -2705954182957021726}
   MasterBanks:
   - {fileID: 7922514285120898230}
   StringsBanks:
   - {fileID: 7607827413165057428}
-  cacheTime: 638403040237117186
+  cacheTime: 638404251539723205
   cacheVersion: 131616
 --- !u!114 &185198468472118980
 MonoBehaviour:
@@ -1869,6 +1923,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 4452988680137755392}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &924096474373419696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/WaterExit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/WaterExit
+  Guid:
+    Data1: 1912501817
+    Data2: 1275358002
+    Data3: -2000750195
+    Data4: -499965056
+  Banks:
+  - {fileID: -4679523449588917092}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4451465929385892092}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -2484,6 +2566,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 173094
+--- !u!114 &4078255458858391133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/WaterEnter
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/WaterEnter
+  Guid:
+    Data1: 1445033912
+    Data2: 1247880177
+    Data3: -652630645
+    Data4: -344261149
+  Banks:
+  - {fileID: -4679523449588917092}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5063039798782228281}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4160882302832994215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2547,6 +2657,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/LegendStrife4/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &4451465929385892092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WaterExit/Equalizer
   m_EditorClassIdentifier: 
   Name: Equalizer
   StudioPath: 
@@ -2755,7 +2889,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638401712450289380
+  lastModified: 638404192419355072
   FileSizes:
   - Name: Desktop
     Value: 55038080
@@ -3187,10 +3321,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638403025893566408
+  lastModified: 638404192415679156
   FileSizes:
   - Name: Desktop
-    Value: 2694
+    Value: 2830
   Exists: 1
 --- !u!114 &7642177175457304554
 MonoBehaviour:
@@ -3311,7 +3445,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638403025893531777
+  lastModified: 638404192415653968
   FileSizes:
   - Name: Desktop
     Value: 1526

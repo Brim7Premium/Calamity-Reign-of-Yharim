@@ -12,6 +12,7 @@ public class FMODEvents : MonoBehaviour
 	[field: SerializeField] public EventReference PlayerHit1 { get; private set; }
 	[field: SerializeField] public EventReference PlayerHit2 { get; private set; }
 	[field: SerializeField] public EventReference PlayerHit3 { get; private set; }
+	[field: SerializeField] public EventReference WaterAmbience { get; private set; }
 
 	[field: Header("Enemy SFX")]
 	[field: SerializeField] public EventReference AureusStomp { get; private set; }
@@ -23,6 +24,10 @@ public class FMODEvents : MonoBehaviour
 	[field: SerializeField] public EventReference ExoTwinsHoverIcon { get; private set; }
 	[field: SerializeField] public EventReference TitleClick { get; private set; }
 	[field: SerializeField] public EventReference TitleHover { get; private set; }
+
+	[field: Header("Other SFX")]
+	[field: SerializeField] public EventReference WaterEnter { get; private set; }
+	[field: SerializeField] public EventReference WaterExit { get; private set; }
 
 	[field: Header ("Boss Music")]
 	[field: SerializeField] public EventReference AncientHorror { get; private set; }

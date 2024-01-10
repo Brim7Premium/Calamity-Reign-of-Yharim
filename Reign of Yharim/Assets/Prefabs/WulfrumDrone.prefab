@@ -555,6 +555,7 @@ GameObject:
   - component: {fileID: 7777794812485775533}
   - component: {fileID: 6333907347402383470}
   - component: {fileID: 7171735159225108900}
+  - component: {fileID: -2196729638660277954}
   m_Layer: 3
   m_Name: WulfrumDrone
   m_TagString: Untagged
@@ -646,6 +647,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
+  inWater: 0
+  wasInWater: 0
   IsGrounded: 0
   oldPosition: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 0}
@@ -753,6 +756,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.05}
   m_Size: {x: 1.1, y: 1.2}
   m_Direction: 0
+--- !u!114 &-2196729638660277954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7422683224136182091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde63d9d4a2da8a4fb9fac0d2b2145c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  condition: 
+  spawnChance: 75
 --- !u!1 &7589789663559759092
 GameObject:
   m_ObjectHideFlags: 0

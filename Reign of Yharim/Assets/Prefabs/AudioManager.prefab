@@ -133,6 +133,13 @@ MonoBehaviour:
       Data3: -1279157596
       Data4: 722518617
     Path: event:/SFX/Player/PlayerHit3
+  <WaterAmbience>k__BackingField:
+    Guid:
+      Data1: 873056432
+      Data2: 1094511078
+      Data3: 1114249150
+      Data4: 1963203578
+    Path: event:/SFX/Ambience/Underwater
   <AureusStomp>k__BackingField:
     Guid:
       Data1: -413663715
@@ -182,6 +189,20 @@ MonoBehaviour:
       Data3: 1583251902
       Data4: -1788466678
     Path: event:/SFX/Menus/TitleHover
+  <WaterEnter>k__BackingField:
+    Guid:
+      Data1: 1445033912
+      Data2: 1247880177
+      Data3: -652630645
+      Data4: -344261149
+    Path: event:/SFX/WaterEnter
+  <WaterExit>k__BackingField:
+    Guid:
+      Data1: 1912501817
+      Data2: 1275358002
+      Data3: -2000750195
+      Data4: -499965056
+    Path: event:/SFX/WaterExit
   <AncientHorror>k__BackingField:
     Guid:
       Data1: -1751748804

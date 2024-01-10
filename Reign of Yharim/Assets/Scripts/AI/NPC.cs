@@ -9,6 +9,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     public string NPCName;
 
     public bool inWater;
+    public bool wasInWater;
 
     public bool IsGrounded;
     private int _lifeMax; //lifemax property value field
@@ -130,8 +131,20 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 			target = GameObject.Find("Player");
 		}
         OnGroundDeterminer();
-        AI();
         inWater = InWaterDeterminer(c2d);
+        if (!worm && inWater != wasInWater)
+        {
+            wasInWater = inWater;
+            if (inWater)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.WaterEnter, gameObject.transform.position);
+            }
+            else
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.WaterExit, gameObject.transform.position);
+            }
+        }
+        AI();
         objectRenderer.enabled = IsVisibleFromCamera();
 
         healthBar.gameObject.transform.parent.parent.parent.rotation = Quaternion.Euler(0, 0, 0); // Fix the HealthBar so it won't rotate if NPC does

@@ -37,21 +37,23 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
 	[Header("Misc")]
 	[SerializeField] private GameObject targetTestObject;
+	public List<string> defeatedBosses = new List<string>();
 	public GameObject worldManager;
 
 	[SerializeField] [Range(1, 180)] private int framerate; //create int with range of 1 to 180, used for setting framerate. Why this is in the player's AI  script will remain unknown for eternity
 
-    [Header("Item usage")]
-    [SerializeField] private GameObject DefaultItemUsagePrefab;
-    public bool IsAttacking;
-    public GUIController gUIController;
-    //constants can't be changed
-    const string PlayerIdle = "Player_idle";
-    const string PlayerWalk = "Player_walk";
-    const string PlayerJump = "Player_jump";
-    const string PlayerRun = "Player_run";
-    const string PlayerAttack = "Player_attack";
-
+	[Header("Item usage")]
+	[SerializeField] private GameObject DefaultItemUsagePrefab;
+	public bool IsAttacking;
+	public GUIController gUIController;
+	//constants can't be changed
+	const string PlayerIdle = "Player_idle";
+	const string PlayerWalk = "Player_walk";
+	const string PlayerJump = "Player_jump";
+	const string PlayerRun = "Player_run";
+	const string PlayerAttack = "Player_attack";
+	
+	private EventInstance waterAmbience;
 
 	public override void SetDefaults() //awake
 	{
@@ -60,20 +62,30 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 		NPCName = "Player";
 		Damage = 0; //Note to future developers/self, this can be used for times when the player does deal contact damage to enemies. armor sets are an example. right now, it's useless.
 		LifeMax = 100;
-		Life = LifeMax;        
+		Life = LifeMax;  
 
 		rb.velocity = new Vector2(rb.velocity.x, Vector2.zero.y);
+		waterAmbience = AudioManager.instance.CreateEventInstance(FMODEvents.instance.WaterAmbience);
+		waterAmbience.start();
 	}
 
 	public override void AI() //every frame (Update)
 	{
+		if (inWater)
+		{
+			waterAmbience.setVolume(1f);
+		}
+		else
+		{
+			waterAmbience.setVolume(0f);
+		}
 		tiltPower = Mathf.SmoothStep(-0.75f, -15, tiltPowerPoint);
 
 		axis = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
 		if (Input.GetButtonDown("Jump")) //if the jump button is being pressed...
 		{
-			if (isGrounded && !inWater) //and the player is grounded (or underwater for now)...
+			if (isGrounded && !inWater) //and the player is grounded (and not underwater)...
 			{
 				StartCoroutine(JumpWithDelay()); //start the JumpWithDelay coroutine
 			}
@@ -106,12 +118,12 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 		//Debug.Log("IsJumping: " + isJumping + " IsFalling: " + isFalling);
 		/* if (isGrounded)
 			isFalling = false;
-        if (rb.velocity.y < -3f)
-        {
-            isFalling = true;
-        }
-        */
-        ItemData item = gUIController.GetSelectedItem(false)?.item;
+		if (rb.velocity.y < -3f)
+		{
+			isFalling = true;
+		}
+		*/
+		ItemData item = gUIController.GetSelectedItem(false)?.item;
 		if (Input.GetKeyDown(KeyCode.Mouse0) && item && !IsAttacking)
 		{
 			IsAttacking = true;
@@ -123,7 +135,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 				isFacing = transform.localScale.x;
 			}
 		}
-    }
+	}
 	public override void Kill()
 	{
 		gameObject.SetActive(false); //deactivate the object

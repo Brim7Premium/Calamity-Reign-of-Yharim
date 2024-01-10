@@ -630,6 +630,7 @@ GameObject:
   - component: {fileID: 9158711808411248914}
   - component: {fileID: 1565449191842842386}
   - component: {fileID: 5207166068899515669}
+  - component: {fileID: -7148382588293604102}
   m_Layer: 3
   m_Name: WulfrumGyrator
   m_TagString: Untagged
@@ -720,6 +721,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
+  inWater: 0
+  wasInWater: 0
   IsGrounded: 0
   oldPosition: {x: 0, y: 0, z: 0}
   healthBar: {fileID: 0}
@@ -743,7 +746,7 @@ MonoBehaviour:
   worm: 0
   velocity: {x: 0, y: 0}
   GroundDeterminerRayLength: 0.6
-  Charged: 0
+  IsWulfrumGuy: 0
 --- !u!50 &9158711808411248914
 Rigidbody2D:
   serializedVersion: 4
@@ -827,3 +830,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.785
+--- !u!114 &-7148382588293604102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158711808411248915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde63d9d4a2da8a4fb9fac0d2b2145c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  condition: 
+  spawnChance: 75
