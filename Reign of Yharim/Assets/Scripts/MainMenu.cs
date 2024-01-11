@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
 
 	private GameObject settingsobj;
 
-	private EventInstance TitleTheme;
+	public EventInstance TitleTheme;
 	public void Awake()
 	{
 		settingsobj = GameObject.Find("[Settings]");
@@ -101,6 +101,10 @@ public class MainMenu : MonoBehaviour
 		{
 			menuScreens = MainMenuScreens.OptionsVideo;
 		}
+		if (menuID == 8)
+		{
+			menuScreens = MainMenuScreens.Credits;
+		}
 		Debug.Log(menuScreens);
 	} 
 	/* Set the variables using unity's built in button system
@@ -118,5 +122,6 @@ public class MainMenu : MonoBehaviour
 		OptionsAudio,
 		OptionsGeneral,
 		OptionsVideo,
+		Credits,
 	}
 }

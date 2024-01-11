@@ -53,6 +53,7 @@ public class FMODEvents : MonoBehaviour
 	[field: Header("Other Music")]
 	[field: SerializeField] public EventReference Title { get; private set; }
 	[field: SerializeField] public EventReference WulfrumArmy { get; private set; }
+	[field: SerializeField] public EventReference Memory { get; private set; }
 	[field: SerializeField] public EventReference FullDay { get; private set; }
 	[field: SerializeField] public EventReference SCalFull { get; private set; }
 	public static FMODEvents instance { get; private set; }

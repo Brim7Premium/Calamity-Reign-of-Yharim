@@ -336,6 +336,13 @@ MonoBehaviour:
       Data3: 495798192
       Data4: -1542258567
     Path: event:/Music/Other/WulfrumArmy
+  <Memory>k__BackingField:
+    Guid:
+      Data1: 1351435452
+      Data2: 1327565831
+      Data3: -697934159
+      Data4: -1562450359
+    Path: event:/Music/Other/MemoryofaCruelWorld
   <FullDay>k__BackingField:
     Guid:
       Data1: -398687929
