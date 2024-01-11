@@ -11,36 +11,31 @@ using FMOD.Studio;
 public class TextWall : MonoBehaviour
 {
 	public float bottomY;
-	public GameObject worldManager;
-	public MainMenu mainmenuscr;
-	void Start()
+	public GameObject mainmenu;
+	void OnEnable()
 	{
-		if (gameObject.scene.name != "MainMenu")
-		{
-			// add later ig
-		}
-		else
-		{
-			mainmenuscr = GameObject.Find("MenuManager").GetComponent<MainMenu>();
-			mainmenuscr.TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-			mainmenuscr.TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Memory);
-			mainmenuscr.TitleTheme.start();
-		}
+		mainmenu.GetComponent<MainMenu>().TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		mainmenu.GetComponent<MainMenu>().TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Memory);
+		mainmenu.GetComponent<MainMenu>().TitleTheme.start();
 	}
 
 	void OnDisable()
 	{
 		gameObject.transform.position = new Vector3(0f, 0f, 0f);
-		mainmenuscr.TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-		mainmenuscr.TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Title);
-		mainmenuscr.TitleTheme.start();
+		mainmenu.GetComponent<MainMenu>().TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		mainmenu.GetComponent<MainMenu>().TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Title);
+		mainmenu.GetComponent<MainMenu>().TitleTheme.start();
 	}
 
 	void FixedUpdate()
 	{
 		if (gameObject.transform.position.y < bottomY)
 		{
-			gameObject.transform.position += new Vector3(0f, .01f, 0f);
+			gameObject.transform.position += new Vector3(0f, .005f, 0f);
+		}
+		else
+		{
+			gameObject.transform.parent.gameObject.SetActive(false);
 		}
 	}
 }
