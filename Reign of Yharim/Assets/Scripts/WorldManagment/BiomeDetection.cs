@@ -113,7 +113,7 @@ public class BiomeDetection : MonoBehaviour
 			}
 		}
 
-		if (biomeName != "Forest" && day && !bossAlive) // makes the forest themes not stop, and instead only mute
+		if ((biomeName != "Forest" || !day) && !bossAlive) // makes the forest themes not stop, and instead only mute
 		{
 			foresttheme.getVolume(out forvol);
 			if (forvol > .01f)
@@ -265,10 +265,10 @@ public class BiomeDetection : MonoBehaviour
 			SunLight.intensity = 0.1f;
 		}
 
-		if (count > 1000 && day && !nosunlight)
+		if (count >= 1000 && day && !nosunlight)
 		{
 			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, ((count-1000f)/(19.5f*60f-1000f)));
-			SunLight.intensity = ((count-1000f)/(19.5f*60f-1000f)) + 0.1f;
+			SunLight.intensity = 1.1f - ((count-1000f)/(19.5f*60f-1000f)); // fix later
 		}
 
 		if (count < 472 && day && !nosunlight)

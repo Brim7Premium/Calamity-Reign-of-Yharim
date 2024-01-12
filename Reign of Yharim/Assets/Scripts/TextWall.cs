@@ -10,32 +10,32 @@ using FMOD.Studio;
 
 public class TextWall : MonoBehaviour
 {
-	public float bottomY;
+	public float bottomY; // when it'll stop scrolling
 	public GameObject mainmenu;
 	void OnEnable()
 	{
-		mainmenu.GetComponent<MainMenu>().TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-		mainmenu.GetComponent<MainMenu>().TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Memory);
-		mainmenu.GetComponent<MainMenu>().TitleTheme.start();
+		mainmenu.GetComponent<MainMenu>().TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); // stop toacw
+		mainmenu.GetComponent<MainMenu>().TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Memory); // change it to moacw
+		mainmenu.GetComponent<MainMenu>().TitleTheme.start(); // start moacw
 	}
 
 	void OnDisable()
 	{
-		gameObject.transform.position = new Vector3(0f, 0f, 0f);
-		mainmenu.GetComponent<MainMenu>().TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-		mainmenu.GetComponent<MainMenu>().TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Title);
-		mainmenu.GetComponent<MainMenu>().TitleTheme.start();
+		gameObject.transform.position = new Vector3(0f, 0f, 0f); // reset position
+		mainmenu.GetComponent<MainMenu>().TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); // stop moacw
+		mainmenu.GetComponent<MainMenu>().TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Title); // change it to toacw
+		mainmenu.GetComponent<MainMenu>().TitleTheme.start(); // start toacw
 	}
 
 	void FixedUpdate()
 	{
-		if (gameObject.transform.position.y < bottomY)
+		if (gameObject.transform.position.y < bottomY) // if its not at the bottom of the credits...
 		{
-			gameObject.transform.position += new Vector3(0f, .005f, 0f);
+			gameObject.transform.position += new Vector3(0f, .005f, 0f); // ...scroll down by moving the object upwards
 		}
 		else
 		{
-			gameObject.transform.parent.gameObject.SetActive(false);
+			GameObject.Find("/Canvas/CreditsMenu/BackButton").GetComponent<Button>().onClick.Invoke(); // go back to the main menu
 		}
 	}
 }

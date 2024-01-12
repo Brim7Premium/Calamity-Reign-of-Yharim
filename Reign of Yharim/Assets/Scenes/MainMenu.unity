@@ -14036,7 +14036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5a7dd5a963923488ac43161d3f750c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottomY: 3884
+  bottomY: 36
   mainmenu: {fileID: 2086259026}
 --- !u!114 &1687175056
 MonoBehaviour:
@@ -14132,7 +14132,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -86.88164, y: 0, z: -86.09326, w: 0}
+  m_margin: {x: -86.09326, y: 0, z: -86.09326, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0

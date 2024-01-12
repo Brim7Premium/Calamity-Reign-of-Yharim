@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3613184643395153518}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 305.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,5 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemiesToSpawn: []
+  spawnRate: 5
   parentBiome: 
   worldManager: {fileID: 0}

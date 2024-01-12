@@ -73,11 +73,8 @@ public class GameTime : MonoBehaviour
 		}
 	}
 
-	void Update()
+	void FixedUpdate()
 	{ 
-		orbitPoint.rotation = Quaternion.Euler(0, 0, count/-4f);/*
-		try{orbitPoint.position = GameObject.Find("Player").transform.position;
-		orbitPoint.position -= new Vector3(0, 20, 0);}catch{}
-		*/
+		orbitPoint.rotation = Quaternion.Euler(0, 0, count/-4f);
 	}
 }

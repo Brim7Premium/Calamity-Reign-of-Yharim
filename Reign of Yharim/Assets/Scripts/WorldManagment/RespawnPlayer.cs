@@ -49,6 +49,8 @@ public class RespawnPlayer : MonoBehaviour
 			loadingtriggerss.LoadScenes();
 			loadingtriggerss.scenesToLoad.Remove("Forest_Spawn");
 			player.SetActive(true);
+			playerAI.SetDefaults();
+			playerAI.StartCoroutine(playerAI.Immunity());
 			player.transform.position = new Vector3(0f, 0f, 0.35f);
 		}
 		else
