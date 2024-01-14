@@ -39,7 +39,7 @@ public class ParallaxBackground : MonoBehaviour
 
 		if (dontcheck)
 		{
-			if (worldmanager.GetComponent<BiomeDetection>().biomeName == scenename)
+			if (worldmanager.GetComponent<BiomeManager>().biomeName == scenename)
 			{
 				this.transform.GetChild(0).gameObject.SetActive(true);
 				float parallaxX = (previousCameraPosition.x - cameraTransform.position.x) * parallaxEffectX; //parallax variable is the x of previousCameraPosition subtracted by the transform of the main camera. this is then multiplied by the paralaxEffect variable.

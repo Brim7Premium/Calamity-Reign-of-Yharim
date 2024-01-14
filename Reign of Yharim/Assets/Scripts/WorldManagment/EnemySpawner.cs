@@ -15,7 +15,7 @@ using FMOD.Studio;
 public class EnemySpawner : MonoBehaviour
 {
 	public GameObject player;
-	public List<SpawnableEnemy> enemiesToSpawn = new List<SpawnableEnemy>();
+	public List<SpawnableEnemy> enemiesToSpawn = new List<SpawnableEnemy>(); // this script must be added to the prefab for enemies you want to naturally spawn, as it sets their spawn chance and condition
 	public int spawnRate = 5;
 
 	public string parentBiome;
@@ -95,7 +95,7 @@ public class EnemySpawner : MonoBehaviour
 
 		if (enemyPrefab != null) // if the prefab is actually valid
 		{
-			if (this.gameObject.scene.name == "Systems" || worldManager.GetComponent<BiomeDetection>().biomeName == parentBiome) // if youre in the spawner's biome
+			if (this.gameObject.scene.name == "Systems" || worldManager.GetComponent<BiomeManager>().biomeName == parentBiome) // if youre in the spawner's biome
 			{
 				GameObject newEnemy = Instantiate(enemyPrefab, SpawnPosition, Quaternion.identity); // spawn the enemy
 				if (newEnemy.scene != player.scene)

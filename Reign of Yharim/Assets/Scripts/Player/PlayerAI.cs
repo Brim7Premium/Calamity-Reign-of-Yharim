@@ -310,7 +310,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 				biomename = biomename.Substring(0, index);
 			}
 			Debug.Log($"In {collision.gameObject.scene.name}");
-			worldManager.GetComponent<BiomeDetection>().biomeName = biomename;
+			worldManager.GetComponent<BiomeManager>().biomeName = biomename;
 		}
 	}
 }

@@ -11,7 +11,7 @@ using FMOD.Studio;
 public class TextWall : MonoBehaviour
 {
 	public float bottomY; // when it'll stop scrolling
-	public GameObject mainmenu;
+	public GameObject mainmenu; // the component must be got every time you want to use it, else the music breaks
 	void OnEnable()
 	{
 		mainmenu.GetComponent<MainMenu>().TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); // stop toacw

@@ -10,7 +10,7 @@ using TMPro;
 using FMODUnity;
 using FMOD.Studio;
 
-public class BiomeDetection : MonoBehaviour
+public class BiomeManager : MonoBehaviour
 {
 	[SerializeField] private GameObject player;
 	public string biomeName = "Forest";
@@ -49,7 +49,7 @@ public class BiomeDetection : MonoBehaviour
   			prevBiomeName = prevBiomeName.Substring(0, index);
 		}
 
-		GetTile();
+		ManageBiome();
 		
 		if (bossAlive)
 		{
@@ -68,23 +68,22 @@ public class BiomeDetection : MonoBehaviour
 		}
 	}
 
-	void GetTile()
+	void ManageBiome()
 	{
-		var forvol = 1f;
-		//var nosunset = false;
-		count = this.GetComponent<GameTime>().count;
-		day = (count >= 4.5*60 && count < 19.5*60);
+		var forvol = 1f; // this is the volume of the forest theme
+		count = gameObject.GetComponent<GameTime>().count; // get the time of the world
+		day = (count >= 4.5*60 && count < 19.5*60); // calculates if it's day or night
 
 		if (biomeName == "Forest" && day && !bossAlive) // dedicated forest day time system
 		{	
-			foresttheme.getVolume(out forvol);
-			if (forvol < 1f)
+			foresttheme.getVolume(out forvol); // get forest volume
+			if (forvol < 1f) // if its not at full volume...
 			{
-				foresttheme.setVolume(forvol + .01f);
+				foresttheme.setVolume(forvol + .01f); // ...increase it slowly
 			}
-			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); // stop the normal biome music so the forest music can play
 			var newdaythemenum = daythemenum;
-			var eventref = FMODEvents.instance.FullDay;
+			var eventref = FMODEvents.instance.FullDay; // the eventref to use
 			if (count >= 4.5*60 && count < 7.5*60)
 			{
 				daythemenum = 1;
@@ -105,41 +104,41 @@ public class BiomeDetection : MonoBehaviour
 				daythemenum = 4;
 				eventref = FMODEvents.instance.Day4;
 			}
-			if (daythemenum != newdaythemenum)
+			if (daythemenum != newdaythemenum) // if the previous day theme isnt the same
 			{
-				foresttheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-				foresttheme = AudioManager.instance.CreateEventInstance(eventref);
-				foresttheme.start();
+				foresttheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); // stop the day theme
+				foresttheme = AudioManager.instance.CreateEventInstance(eventref); // change to the next one
+				foresttheme.start(); // start the new one
 			}
 		}
 
 		if ((biomeName != "Forest" || !day) && !bossAlive) // makes the forest themes not stop, and instead only mute
 		{
-			foresttheme.getVolume(out forvol);
-			if (forvol > .01f)
+			foresttheme.getVolume(out forvol); // get the volume
+			if (forvol >= .01f) // if its not almost muted...
 			{
-				foresttheme.setVolume(forvol - .01f);
+				foresttheme.setVolume(forvol - .01f); // ...decrease the volume slowly
 			}
 
 			else
 			{
-				foresttheme.setVolume(0f);
+				foresttheme.setVolume(0f); // if it is almost muted, then just set it to 0; this avoids a previous error caused by it going below zero volume
 			}
 		}
 
-		if ((biomeName != prevBiomeName || wasday != day) && !bossAlive) //if the name of the sprite is not equal to the current tile name or it changes day
+		if ((biomeName != prevBiomeName || wasday != day) && !bossAlive) // if it changes day or you leave the biome
 		{
-			daybg = Color.black;
-			nightbg = new Color(0.11f, 0.17f, 0.28f);
+			daybg = Color.black; // if the day sky colour isnt set, its just black
+			nightbg = new Color(0.11f, 0.17f, 0.28f); // if the day sky colour isnt set, its just a really dark blue
 			wasday = day; // if it becomes night, check the biome again
-			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-			prevBiomeName = biomeName; //set the current tile name to the name of the sprite
-			if (biomeName == "Astral")
+			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); // stop the biome theme, the forest theme is handled seperately
+			prevBiomeName = biomeName;
+			if (biomeName == "Astral") // only going to comment on three of these
 			{
 				// Astral Infection
-				daybg = new Color(0.06666667f, 0.003921569f, 0.07450981f);
-				nightbg = daybg;
-				nosunlight = false;
+				daybg = new Color(0.06666667f, 0.003921569f, 0.07450981f); // sets the day background to almost black
+				nightbg = daybg; // the sky is always dark here
+				nosunlight = false; // the sun should be visible here, even if it doesnt do much to the sky
 			}
 			if (biomeName == "Desert")
 			{
@@ -174,10 +173,10 @@ public class BiomeDetection : MonoBehaviour
 			if (biomeName == "Tundra")
 			{
 				// Tundra
-				daybg = new Color(0.7415094f, 1f, 0.95700063f);
-				biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Tundra);
-				biometheme.start();
-				nosunlight = false;
+				daybg = new Color(0.7415094f, 1f, 0.95700063f); // day colour is the same as the forest
+				biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Tundra); // sets the biome theme to the tundra theme
+				biometheme.start(); // start the tundra theme
+				nosunlight = false; // the sun is visible here
 			}
 			if (biomeName == "Forest")
 			{
@@ -204,7 +203,7 @@ public class BiomeDetection : MonoBehaviour
 			}
 			if (biomeName == "Planetoids")
 			{
-				// Planetoids
+				// Planetoids/Sky (different from space)
 				daybg = new Color(0.701f, 0.9691256f, 1f);
 				nosunlight = false;
 			}
@@ -214,11 +213,14 @@ public class BiomeDetection : MonoBehaviour
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nightbg = daybg;
 				nosunlight = true;
+				SunLight.intensity = 0.5f;
 			}
 			if (biomeName == "Space")
 			{
 				// Space
-				nosunlight = true;
+				nightbg = daybg; // makes both night and day black
+				nosunlight = true; // theres no sun once youre in space, but there is in the planetoids layer
+				SunLight.intensity = 0.5f; // since theres no sun, the lighting must be changed manually
 			}
 			if (biomeName == "Crags")
 			{
@@ -226,11 +228,13 @@ public class BiomeDetection : MonoBehaviour
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nightbg = daybg;
 				nosunlight = true;
+				SunLight.intensity = 0.5f;
 			}
 			if (biomeName == "Abyss1")
 			{
 				// Sulphuric depths
 				nosunlight = true;
+				SunLight.intensity = 0.5f;
 			}
 			if (biomeName == "SunkenSea")
 			{
@@ -238,12 +242,14 @@ public class BiomeDetection : MonoBehaviour
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nightbg = daybg;
 				nosunlight = true;
+				SunLight.intensity = 0.5f;
 			}
 			if (biomeName == "Obsidian")
 			{
 				// Obsidian Cliffs
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nosunlight = true;
+				SunLight.intensity = 0.5f;
 			}
 			if (biomeName == "Garden")
 			{
@@ -251,13 +257,11 @@ public class BiomeDetection : MonoBehaviour
 				daybg = new Color(0.5254902f, 1f, 0.8364275f); // Change this later
 				nightbg = daybg;
 				nosunlight = true;
+				SunLight.intensity = 0.5f;
 			}
 		}
 
-		if (nosunlight)
-		{
-			SunLight.intensity = 1f;
-		}
+		gameObject.GetComponent<GameTime>().orbitPoint.gameObject.SetActive(!nosunlight); // makes the sun (and moon) disappear if nosunlight is true 
 		
 		if (!day && !nosunlight)
 		{
@@ -268,7 +272,7 @@ public class BiomeDetection : MonoBehaviour
 		if (count >= 1000 && day && !nosunlight)
 		{
 			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, ((count-1000f)/(19.5f*60f-1000f)));
-			SunLight.intensity = 1.1f - ((count-1000f)/(19.5f*60f-1000f)); // fix later
+			SunLight.intensity = 1.1f - ((count-1000f)/(19.5f*60f-1000f));
 		}
 
 		if (count < 472 && day && !nosunlight)

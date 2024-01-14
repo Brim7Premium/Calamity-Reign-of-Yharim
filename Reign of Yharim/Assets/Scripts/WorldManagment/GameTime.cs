@@ -13,9 +13,9 @@ public class GameTime : MonoBehaviour
 	public int count;
 	public static string displayTime;
 
-	[SerializeField] private Transform orbitPoint;
+	public Transform orbitPoint;
 	[SerializeField] private Vector3 rotation;
-	[SerializeField] private GameObject player;
+	public GameObject player;
 
 	private GameObject settingsobj;
 	private GameObject detection;
@@ -74,7 +74,8 @@ public class GameTime : MonoBehaviour
 	}
 
 	void FixedUpdate()
-	{ 
-		orbitPoint.rotation = Quaternion.Euler(0, 0, count/-4f);
+	{
+		if (orbitPoint.gameObject.activeSelf)
+			orbitPoint.rotation = Quaternion.Euler(0, 0, count/-4f);
 	}
 }

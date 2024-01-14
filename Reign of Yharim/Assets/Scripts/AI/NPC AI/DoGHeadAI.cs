@@ -21,11 +21,11 @@ public class DoGHeadAI : NPC
         Life = LifeMax;
         worm = true;
         
-        if (!GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive)
+        if (!GameObject.Find("WorldManager").GetComponent<BiomeManager>().bossAlive)
         {
             theme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoG1);
             theme.start();
-            GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive = true;
+            GameObject.Find("WorldManager").GetComponent<BiomeManager>().bossAlive = true;
         }
     }
     public override void AI()
@@ -107,6 +107,6 @@ public class DoGHeadAI : NPC
     void OnDestroy()
     {
         theme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        GameObject.Find("WorldManager").GetComponent<BiomeDetection>().bossAlive = false;
+        GameObject.Find("WorldManager").GetComponent<BiomeManager>().bossAlive = false;
     }
 }
