@@ -9,23 +9,18 @@ public class ParallaxBackground : MonoBehaviour
 
 	private GameObject worldmanager;
 	private GameObject player;
-
 	private Transform cameraTransform; //the transform of the main camera
 	private Vector3 previousCameraPosition; //the previous camera position
-
-
-	private bool dontcheck = false;
-	private bool dontcheckagain;
 	private string scenename;
+
 	private void FixedUpdate()
 	{
-		if (!dontcheck)
+		if (worldmanager == null && player == null)
 		{
 			worldmanager = GameObject.Find("WorldManager");
 			player = GameObject.Find("Player");
 			if (worldmanager != null && player != null)
 			{
-				dontcheck = true;
 				cameraTransform = Camera.main.transform;
 				previousCameraPosition = cameraTransform.position;
 				scenename = this.gameObject.scene.name;
@@ -37,11 +32,14 @@ public class ParallaxBackground : MonoBehaviour
 			}
 		}
 
-		if (dontcheck)
+		if (worldmanager != null && player != null)
 		{
 			if (worldmanager.GetComponent<BiomeManager>().biomeName == scenename)
 			{
-				this.transform.GetChild(0).gameObject.SetActive(true);
+				if (this.transform.GetChild(0).GetChild(0).gameObject.GetComponent<SpriteRenderer>().color.a < 1f)
+				{
+					this.transform.GetChild(0).GetChild(0).gameObject.GetComponent<SpriteRenderer>().color += new Color(0f, 0f, 0f, .01f);
+				}
 				float parallaxX = (previousCameraPosition.x - cameraTransform.position.x) * parallaxEffectX; //parallax variable is the x of previousCameraPosition subtracted by the transform of the main camera. this is then multiplied by the paralaxEffect variable.
 				float backgroundTargetPosX = background.position.x - parallaxX; //backgroundtargetPosX is the x position of the background object, subtracted by the parallax variable.
         		float parallaxY = (previousCameraPosition.y - cameraTransform.position.y) * parallaxEffectY;
@@ -65,7 +63,10 @@ public class ParallaxBackground : MonoBehaviour
 
 			else
 			{
-				this.transform.GetChild(0).gameObject.SetActive(false);
+				if (this.transform.GetChild(0).GetChild(0).gameObject.GetComponent<SpriteRenderer>().color.a > 0f)
+				{
+					this.transform.GetChild(0).GetChild(0).gameObject.GetComponent<SpriteRenderer>().color -= new Color(0f, 0f, 0f, .01f);
+				}
 			}
 		}
 	}

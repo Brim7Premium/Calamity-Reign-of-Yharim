@@ -35,7 +35,7 @@ public class TextWall : MonoBehaviour
 		}
 		else
 		{
-			GameObject.Find("/Canvas/CreditsMenu/BackButton").GetComponent<Button>().onClick.Invoke(); // go back to the main menu
+			GameObject.Find("/Canvas/CreditsMenu/BackButton").GetComponent<Button>().onClick.Invoke(); // go back to the main menu using the back button (jumpscare warning)
 		}
 	}
 }
