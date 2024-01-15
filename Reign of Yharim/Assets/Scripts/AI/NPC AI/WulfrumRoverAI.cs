@@ -8,12 +8,10 @@ public class WulfrumRoverAI : NPC
     private Color color;
     [SerializeField] private Animator Shield;
 
-    private bool LeftRay = false;
-    private bool RightRay = false;
+    private bool LeftRay = false, RightRay = false;
     private float MaxSpeed = 12;
 
-    const string Normal = "WulfrumRover_slide";
-    const string ChargedState = "WulfrumRover_charged";
+    const string Normal = "WulfrumRover_slide", ChargedState = "WulfrumRover_charged";
     public override void SetDefaults()
     {
         base.SetDefaults();

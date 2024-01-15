@@ -14,8 +14,7 @@ public class WulfrumHovercraftAI : NPC
     private Vector2 Diver = new Vector2(0, 0);
     float OffsetterSpecialY = 7;
 
-    const string Normal = "WulfrumHovercraft_basic";
-    const string ChargedState = "WulfrumHovercraft_charged";
+    const string Normal = "WulfrumHovercraft_basic", ChargedState = "WulfrumHovercraft_charged";
 
     //int SearchLayer = (1 << LayerMask.NameToLayer("Ground")) | (1 << LayerMask.NameToLayer("WalkTroughNPCPlayer"));
 

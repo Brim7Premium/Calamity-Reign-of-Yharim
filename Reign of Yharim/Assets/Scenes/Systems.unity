@@ -571,6 +571,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion8
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -634,7 +642,7 @@ Transform:
   m_GameObject: {fileID: 136122356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.609522, y: 10.976776, z: 270.55762}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -741,6 +749,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon10
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -847,6 +863,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -953,6 +977,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion1
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1054,6 +1086,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1178,6 +1218,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1375,6 +1423,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion7
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1711,6 +1767,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon8
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1956,6 +2020,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon9
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2217,6 +2289,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2393,7 +2473,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 17.90625
+  orthographic size: 15
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2526,6 +2606,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion3
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2627,6 +2715,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HotSlot (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     - target: {fileID: 6679034260385204604, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -2740,6 +2836,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion4
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2846,6 +2950,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3027,6 +3139,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3430,6 +3550,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3544,6 +3672,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3653,6 +3789,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3762,6 +3906,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3863,6 +4015,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon6
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4310,6 +4470,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HotSlot (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     - target: {fileID: 6679034260385204604, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -4504,6 +4672,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion6
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4556,7 +4732,14 @@ MonoBehaviour:
   prevBiomeName: 
   mainCam: {fileID: 392279462}
   bossAlive: 0
+  bossWasAlive: 0
+  day: 1
+  wasday: 0
+  nosunlight: 0
+  daythemenum: 0
   SunLight: {fileID: 1478193882}
+  daybg: {r: 0.701, g: 0.9691256, b: 1, a: 1}
+  nightbg: {r: 0.11, g: 0.17, b: 0.28, a: 1}
 --- !u!114 &819527062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4608,7 +4791,7 @@ Transform:
   m_GameObject: {fileID: 819527060}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.84, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4657,7 +4840,7 @@ Transform:
   m_GameObject: {fileID: 829445513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.4302, y: 7.87, z: 252.03058}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4772,6 +4955,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4886,6 +5077,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4987,6 +5186,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon3
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5096,6 +5303,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5205,6 +5420,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5311,6 +5534,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HotSlot
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5412,6 +5643,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5729,6 +5968,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5913,6 +6160,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6014,6 +6269,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HotSlot (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     - target: {fileID: 6679034260385204604, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -6384,6 +6647,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6513,6 +6784,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6614,6 +6893,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6715,6 +7002,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion5
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6906,6 +7201,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7015,6 +7318,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7147,6 +7458,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7347,6 +7666,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon7
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7456,6 +7783,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7565,6 +7900,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7674,6 +8017,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7783,6 +8134,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7889,6 +8248,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8070,6 +8437,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8156,7 +8531,7 @@ Transform:
   m_GameObject: {fileID: 1478193881}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -705.00305, y: 22.465658, z: 1.4573514}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8266,6 +8641,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8367,6 +8750,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9225,6 +9616,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9528,6 +9927,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9712,6 +10119,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9818,6 +10233,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon4
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10003,6 +10426,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HotSlot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     - target: {fileID: 6679034260385204604, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -10172,6 +10603,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10273,6 +10712,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon1
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10340,7 +10787,7 @@ Transform:
   m_GameObject: {fileID: 1862677285}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10447,6 +10894,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion11
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10612,6 +11067,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotArmor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10963,6 +11426,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11064,6 +11535,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion2
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11250,6 +11729,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon2
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11351,6 +11838,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon5
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11596,6 +12091,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotWeapon11
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11697,6 +12200,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion9
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11798,6 +12309,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPotion10
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12119,6 +12638,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotAcc (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playerobj
+      value: 
+      objectReference: {fileID: 1250109776}
+    - target: {fileID: 4441112475655322149, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
+      propertyPath: playeritem
+      value: 
+      objectReference: {fileID: 2160703248383047969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12343,6 +12870,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11a9cd47724de354c997feb04775b786, type: 3}
+--- !u!212 &2160703248383047969 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4820805036228977180, guid: 11a9cd47724de354c997feb04775b786, type: 3}
+  m_PrefabInstance: {fileID: 2160703248383047968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8572080974810142770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12353,15 +12885,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1642568107872549086, guid: 1e6ea0b3d47700c44a9cbfa5f4816230, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.85209
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1642568107872549086, guid: 1e6ea0b3d47700c44a9cbfa5f4816230, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.9087133
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1642568107872549086, guid: 1e6ea0b3d47700c44a9cbfa5f4816230, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 327.1147
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1642568107872549086, guid: 1e6ea0b3d47700c44a9cbfa5f4816230, type: 3}
       propertyPath: m_LocalRotation.w

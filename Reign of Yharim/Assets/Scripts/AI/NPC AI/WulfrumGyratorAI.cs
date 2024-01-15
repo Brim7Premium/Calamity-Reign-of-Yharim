@@ -6,11 +6,9 @@ public class WulfrumGyratorAI : NPC
 {
     private bool spotted;
     private Color color;
-    private float AFKtimer = 0;
-    private float JumpCooldown = 0;
+    private float AFKtimer = 0, JumpCooldown = 0;
 
-    const string GyratorSpin = "WulfrumGyrator_spin";
-    const string ChargeGyratorSpin = "WulfrumGyrator_chargespin";
+    const string GyratorSpin = "WulfrumGyrator_spin", ChargeGyratorSpin = "WulfrumGyrator_chargespin";
     public override void SetDefaults()
     {
         base.SetDefaults();

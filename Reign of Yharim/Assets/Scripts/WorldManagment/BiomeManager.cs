@@ -13,57 +13,45 @@ using FMOD.Studio;
 public class BiomeManager : MonoBehaviour
 {
 	[SerializeField] private GameObject player;
-	public string biomeName = "Forest";
-	public string prevBiomeName;
+	public string biomeName = "Forest", prevBiomeName;
 
 	public Camera mainCam;
 
-	public bool bossAlive;
-	private bool bossWasAlive = false;
+	public bool bossAlive, bossWasAlive = false;
 
-	public EventInstance biometheme;
-	public EventInstance foresttheme;
-	private bool day = true;
-	private bool wasday = false;
-	private int daythemenum = 0;
-	private bool nosunlight;
+	public EventInstance biometheme, foresttheme;
+	public bool day = true, wasday = false, nosunlight;
+	[SerializeField] private int daythemenum = 0;
 
 	public Light2D SunLight;
 
 	private int count;
 
-	private Color daybg = Color.black;
-	private Color nightbg = new Color(0.11f, 0.17f, 0.28f);
+	[SerializeField] private Color daybg = new Color(0.701f, 0.9691256f, 1f), nightbg = new Color(0.11f, 0.17f, 0.28f);
 
 	void Update()
 	{
 		int index = biomeName.IndexOf("_");
 		if (index >= 0)
 		{
-  			biomeName = biomeName.Substring(0, index);
-		}
-		
-		index = prevBiomeName.IndexOf("_");
-		if (index >= 0)
-		{
-  			prevBiomeName = prevBiomeName.Substring(0, index);
+  			biomeName = biomeName.Substring(0, index); // cuts everything past the _ from the scene name to become the biome name
 		}
 
-		ManageBiome();
+		ManageBiome(); // manage the biome
 		
-		if (bossAlive)
+		if (bossAlive) // if theres a boss alive...
 		{
-			biometheme.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-			foresttheme.setVolume(0f);
+			biometheme.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); // ...stop the music...
+			foresttheme.setVolume(0f); // ... and mute the biome music
 		}
 
-		if (bossAlive != bossWasAlive)
+		if (bossAlive != bossWasAlive) // if there was/wasnt a boss alive before
 		{
 			bossWasAlive = bossAlive;
 
-			if (!bossAlive)
+			if (!bossAlive) // if there isnt a boss alive...
 			{
-				wasday = !day;
+				wasday = !day; // ...make the biome theme play after a boss is gone by making the game think it just became day
 			}
 		}
 	}
@@ -131,7 +119,7 @@ public class BiomeManager : MonoBehaviour
 			daybg = Color.black; // if the day sky colour isnt set, its just black
 			nightbg = new Color(0.11f, 0.17f, 0.28f); // if the day sky colour isnt set, its just a really dark blue
 			wasday = day; // if it becomes night, check the biome again
-			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); // stop the biome theme, the forest theme is handled seperately
+			biometheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); // stop the biome theme so a new one can play, the forest theme is handled seperately
 			prevBiomeName = biomeName;
 			if (biomeName == "Astral") // only going to comment on three of these
 			{
@@ -263,105 +251,29 @@ public class BiomeManager : MonoBehaviour
 
 		gameObject.GetComponent<GameTime>().orbitPoint.gameObject.SetActive(!nosunlight); // makes the sun (and moon) disappear if nosunlight is true 
 		
-		if (!day && !nosunlight)
+		if (!day && !nosunlight) // if it's night
 		{
-			mainCam.backgroundColor = nightbg;
-			SunLight.intensity = 0.1f;
+			mainCam.backgroundColor = nightbg; // the background is it's night version
+			SunLight.intensity = 0.1f; //
 		}
 
-		if (count >= 1000 && day && !nosunlight)
+		// formula for fading is (count-start)/(end-start)
+
+		if (count >= 1000 && day && !nosunlight) // if its almost night
 		{
-			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, ((count-1000f)/(19.5f*60f-1000f)));
-			SunLight.intensity = 1.1f - ((count-1000f)/(19.5f*60f-1000f));
+			mainCam.backgroundColor = Color.Lerp(daybg, nightbg, ((count-1000f)/(19.5f*60f-1000f))); // make the background fade into night slowly
+			SunLight.intensity = 1.1f - ((count-1000f)/(19.5f*60f-1000f)); // and the lighting fade into darkness
 		}
 
-		if (count < 472 && day && !nosunlight)
+		if (count < 472 && day && !nosunlight) // if its morning
 		{
-			mainCam.backgroundColor = Color.Lerp(nightbg, daybg, ((count-4.5f*60f)/(472f-4.5f*60f)));
-			SunLight.intensity = ((count-4.5f*60f)/(472f-4.5f*60f)) + 0.1f;
+			mainCam.backgroundColor = Color.Lerp(nightbg, daybg, ((count-4.5f*60f)/(472f-4.5f*60f))); // make the background fade into day slowly
+			SunLight.intensity = ((count-4.5f*60f)/(472f-4.5f*60f)) + 0.1f; // and the lighting fade in
 		}
 
 		if (count < 1000 && count > 472 && !nosunlight)
 		{
 			SunLight.intensity = 1f + 0.05f;
 		}
-
-		/*
-		if (!nosunset && day)
-		{
-			var sunsetcolour = new Color(0.84f, 0.3f, 0.36f);
-
-			// formula is (count-start)/(end-start)
-
-			if (count >= 270 && count < 472)
-			{
-				mainCam.backgroundColor = Color.Lerp(nightbg, sunsetcolour, (float)((count-270)/(472-270)));
-			}
-
-			else if (count >= 472 && count < 522)
-			{
-				mainCam.backgroundColor = sunsetcolour;
-			}
-
-			else if (count >= 522 && count < 600)
-			{
-				mainCam.backgroundColor = Color.Lerp(sunsetcolour, daybg, (float)((count-522)/(600-522)));
-			}
-
-			else if (count >= 848 && count < 888)
-			{
-				mainCam.backgroundColor = Color.Lerp(daybg, sunsetcolour, (float)((count-848)/(888-848)));
-			}
-			
-			else if (count >= 888 && count < 976)
-			{
-				mainCam.backgroundColor = sunsetcolour;
-			}
-			
-			else if (count >= 976 && count < 1170)
-			{
-				mainCam.backgroundColor = Color.Lerp(sunsetcolour, nightbg, (float)((count-976)/(1170-976)));
-			}
-
-			else
-			{
-				mainCam.backgroundColor = daybg;
-			}
-		}
-
-		if (nosunset && day)
-		{
-			if (count < 472 && day)
-			{
-				mainCam.backgroundColor = Color.Lerp(nightbg, daybg, (float)((count-270)/(472-270)));
-			}
-
-			else if (count >= 1000 && day)
-			{
-				mainCam.backgroundColor = Color.Lerp(daybg, nightbg, (float)((count-1000)/(1170-1000)));
-			}
-
-			else
-			{
-				mainCam.backgroundColor = daybg;
-			}
-		}
-		
-		/*
-		Notes
-
-		Fade into sunrise at 270
-		Start sunrise at 472, end at 552
-		Fade into day (600)
-
-		Fade into sunset at 848
-		Start sunset at 888, end at 976
-		Fade into night (1170)
-
-		If nosunset
-
-		Fade into "sunrise" (472) at day (270)
-		Fade into night (1170) at "sunset" (1000)
-		*/
 	}
 }

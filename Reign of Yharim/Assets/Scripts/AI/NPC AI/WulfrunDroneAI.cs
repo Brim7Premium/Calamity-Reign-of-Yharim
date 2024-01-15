@@ -12,8 +12,7 @@ public class WulfrunDroneAI : NPC
 
     const float SightDistance = 13;
 
-    const string Normal = "WulfrumDrone_basic";
-    const string ChargedState = "WulfrumDrone_charged";
+    const string Normal = "WulfrumDrone_basic", ChargedState = "WulfrumDrone_charged";
     string CurrentAIState = "Positioning";
 
     //int SearchLayer = (1 << LayerMask.NameToLayer("Ground")) | (1 << LayerMask.NameToLayer("WalkTroughNPCPlayer"));

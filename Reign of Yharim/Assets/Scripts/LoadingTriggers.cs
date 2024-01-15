@@ -10,8 +10,7 @@ using FMOD.Studio;
 
 public class LoadingTriggers : MonoBehaviour
 {
-	public List<string> scenesToLoad = new List<string>();
-	public List<string> scenesToUnload = new List<string>();
+	public List<string> scenesToLoad = new List<string>(), scenesToUnload = new List<string>();
 	public string bossCondition;
 
 	void OnTriggerEnter2D(Collider2D collision)

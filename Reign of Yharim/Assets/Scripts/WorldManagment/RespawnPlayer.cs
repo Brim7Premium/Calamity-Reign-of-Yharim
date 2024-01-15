@@ -10,8 +10,7 @@ using FMOD.Studio;
 
 public class RespawnPlayer : MonoBehaviour
 {
-	[SerializeField] private GameObject player;
-	[SerializeField] private GameObject timerobj;
+	[SerializeField] private GameObject player, timerobj;
 
 	private PlayerAI playerAI;
 

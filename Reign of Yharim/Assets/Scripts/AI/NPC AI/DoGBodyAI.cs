@@ -3,11 +3,8 @@ using UnityEngine;
 public class DoGBodyAI : NPC
 {
     public int SegmentIndex;
-    public GameObject Head;
-    public GameObject AheadSegment;
-    public float SegmentSize = 2f;
-    public float VelocitySmoothing;
-    private float rng;
+    public GameObject Head, AheadSegment;
+    public float SegmentSize = 2f, VelocitySmoothing, rng;
 
     public Vector2 oldTargetPos;
     public override void SetDefaults()

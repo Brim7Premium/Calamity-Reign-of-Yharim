@@ -18,16 +18,7 @@ public class InvSlot : MonoBehaviour, IDropHandler
     public void Select()
     {
         image.sprite = selectedSprite;
-        GameObject playerobj = GameObject.Find("Player");
-        if (this.gameObject.transform.childCount > 0 && playerobj != null && !playerobj.GetComponent<PlayerAI>().IsAttacking)
-        {
-            GameObject.Find("/Player/Item").transform.GetComponent<SpriteRenderer>().sprite = this.gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-        }
 
-        else if (playerobj != null)
-        {
-            GameObject.Find("/Player/Item").transform.GetComponent<SpriteRenderer>().sprite = null;
-        }
     }
     public void Deselect()
     {
@@ -38,5 +29,21 @@ public class InvSlot : MonoBehaviour, IDropHandler
         GameObject dropped = eventData.pointerDrag;
         InvItem draggableItem = dropped.GetComponent<InvItem>();
         if(inventoryManager.AddItem(draggableItem, number)) draggableItem.parentAfterDrag = transform;
+    }
+
+    public GameObject playerobj;
+    public SpriteRenderer playeritem;
+
+    void Update()
+    {
+        if (playerobj.GetComponent<PlayerAI>().IsAttacking)
+        {
+            playeritem.transform.GetComponent<SpriteRenderer>().sprite = null;
+        }
+
+        else if (this.gameObject.transform.childCount > 0)
+        {
+            playeritem.transform.GetComponent<SpriteRenderer>().sprite = this.gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+        }
     }
 }

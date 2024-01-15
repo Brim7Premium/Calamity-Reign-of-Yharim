@@ -17,7 +17,7 @@ public class WindProj : Projectile
     {
         Collider2D target = Physics2D.OverlapBox(transform.position, Vector2.one*16.875f*4, 0, 1 << LayerMask.NameToLayer("NPCs"));
         
-        if(target)
+        if (target)
         {
             Vector2 direction = target.transform.position - transform.position;
             rb.velocity = direction.normalized * velocity;

@@ -8,14 +8,11 @@ using TMPro;
 
 public class GreenSlimeAI : NPC
 {
-    const string SlimeBounce = "Slime_bounce";
-    const string SlimeIdle = "Slime_idle";
+    const string SlimeBounce = "Slime_bounce", SlimeIdle = "Slime_idle";
 
-    private bool LeftRay = false;
-    private bool RightRay = false;
+    private bool LeftRay = false, RightRay = false;
 
-    private float Srotation = 0;
-    private float NeededRotation = 0;
+    private float Srotation = 0, NeededRotation = 0;
 
     public override void SetDefaults()
     {

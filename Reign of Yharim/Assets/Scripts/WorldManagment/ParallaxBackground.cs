@@ -3,12 +3,9 @@ using UnityEngine;
 public class ParallaxBackground : MonoBehaviour
 {
 	[SerializeField] private Transform background; //the transform of the attached background object
-	[SerializeField] private float parallaxEffectX;
-    [SerializeField] private float parallaxEffectY;
-	[SerializeField] private float smoothing = 1f;
+	[SerializeField] private float parallaxEffectX, parallaxEffectY, smoothing = 1f;
 
-	private GameObject worldmanager;
-	private GameObject player;
+	private GameObject worldmanager, player;
 	private Transform cameraTransform; //the transform of the main camera
 	private Vector3 previousCameraPosition; //the previous camera position
 	private string scenename;

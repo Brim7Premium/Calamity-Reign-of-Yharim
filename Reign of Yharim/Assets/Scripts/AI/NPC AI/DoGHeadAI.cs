@@ -5,8 +5,7 @@ using FMOD.Studio;
 
 public class DoGHeadAI : NPC
 {
-    public float MoveSpeed;
-    public float RotationSpeed;
+    public float MoveSpeed, RotationSpeed;
 
     public Vector2 oldTargetPos;
 
