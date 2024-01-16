@@ -843,4 +843,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   condition: 
-  spawnChance: 75
+  lowerSpawnChance: 1
+  upperSpawnChance: 75

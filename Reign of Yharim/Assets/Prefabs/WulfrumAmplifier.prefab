@@ -5406,7 +5406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   condition: 
-  spawnChance: 100
+  lowerSpawnChance: 1
+  upperSpawnChance: 100
 --- !u!1 &5670037964841833370
 GameObject:
   m_ObjectHideFlags: 0

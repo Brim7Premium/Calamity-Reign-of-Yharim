@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 21882bcc222c07844aebb57967745152
   - enabled: 1
-    path: Assets/Scenes/Systems.unity
+    path: Assets/Scenes/_Systems.unity
     guid: a1c449e8bd65d934dbdf89df91fc62ef
   - enabled: 1
     path: Assets/Scenes/TempCam.unity
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tundra_Mountain.unity
     guid: 290ee1c3bb0f4dd49bba8bb59a87d924
+  - enabled: 1
+    path: Assets/Scenes/_Rain.unity
+    guid: cb8584a7b0947584e99674e86822632b
   m_configObjects: {}
