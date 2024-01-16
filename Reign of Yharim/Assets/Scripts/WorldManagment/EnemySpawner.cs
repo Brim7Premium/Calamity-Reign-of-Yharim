@@ -23,22 +23,25 @@ public class EnemySpawner : MonoBehaviour
 
 	public IEnumerator SpawnEnemies()
 	{
-		for (int i = 0; i < enemiesToSpawn.Count; ++i) // iterate through the list of enemies this object can spawn
+		if (!worldManager.GetComponent<BiomeManager>().bossAlive)
 		{
-			float randomNum = UnityEngine.Random.Range(1, enemiesToSpawn[i].spawnChance); // choose a random number for chance
-			if (randomNum == 1 && player != null) // if that number is 1 and the player is valid
+			for (int i = 0; i < enemiesToSpawn.Count; ++i) // iterate through the list of enemies this object can spawn
 			{
-				if (string.IsNullOrEmpty(enemiesToSpawn[i].condition)) // if theres no condition for the enemy
+				float randomNum = UnityEngine.Random.Range(1, enemiesToSpawn[i].spawnChance); // choose a random number for chance
+				if (randomNum == 1 && player != null) // if that number is 1 and the player is valid
 				{
-					yield return SpawnEnemy(enemiesToSpawn[i].gameObject); // spawn the enemy
-				}
-				else if (player.GetComponent<PlayerAI>().defeatedBosses.Contains(enemiesToSpawn[i].condition)) // or if youve met its condition
-				{
-					yield return SpawnEnemy(enemiesToSpawn[i].gameObject); // spawn the enemy
-				}
-				else
-				{
-					Debug.Log($"Failed to spawn {enemiesToSpawn[i].gameObject.name}");
+					if (string.IsNullOrEmpty(enemiesToSpawn[i].condition)) // if theres no condition for the enemy
+					{
+						yield return SpawnEnemy(enemiesToSpawn[i].gameObject); // spawn the enemy
+					}
+					else if (player.GetComponent<PlayerAI>().defeatedBosses.Contains(enemiesToSpawn[i].condition)) // or if youve met its condition
+					{
+						yield return SpawnEnemy(enemiesToSpawn[i].gameObject); // spawn the enemy
+					}
+					else
+					{
+						Debug.Log($"Failed to spawn {enemiesToSpawn[i].gameObject.name}");
+					}
 				}
 			}
 		}

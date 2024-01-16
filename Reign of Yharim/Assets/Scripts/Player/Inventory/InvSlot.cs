@@ -41,7 +41,7 @@ public class InvSlot : MonoBehaviour, IDropHandler
             playeritem.transform.GetComponent<SpriteRenderer>().sprite = null;
         }
 
-        else if (this.gameObject.transform.childCount > 0)
+        else if (this.gameObject.transform.childCount > 0 && image.sprite == selectedSprite)
         {
             playeritem.transform.GetComponent<SpriteRenderer>().sprite = this.gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
         }
