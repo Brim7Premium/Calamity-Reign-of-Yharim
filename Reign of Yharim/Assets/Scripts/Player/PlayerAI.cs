@@ -17,7 +17,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 	[SerializeField] private float deacceleration;
 	[SerializeField] private float velPower;
 	private Vector2 axis;
-	public float isFacing;
+	public int isFacing;
 	public float tiltPower;
 	private float tiltPowerPoint;
 
@@ -45,6 +45,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
     [SerializeField] private GameObject DefaultItemUsagePrefab;
     public bool IsAttacking;
     public GUIController gUIController;
+	public GameObject worldItem;
     //constants can't be changed
     const string PlayerIdle = "Player_idle";
     const string PlayerWalk = "Player_walk";
@@ -67,6 +68,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
 	public override void AI() //every frame (Update)
 	{
+
 		tiltPower = Mathf.SmoothStep(-0.75f, -15, tiltPowerPoint);
 
 		axis = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
@@ -111,18 +113,38 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             isFalling = true;
         }
         */
-        ItemData item = gUIController.GetSelectedItem(false)?.item;
-		if (Input.GetKeyDown(KeyCode.Mouse0) && item && !IsAttacking)
+
+        InvItem item = gUIController.GetSelectedItem();
+		if (Input.GetAxis("Fire1")>0 && item && !IsAttacking)
 		{
 			IsAttacking = true;
 			GameObject attack = Instantiate(DefaultItemUsagePrefab, transform);
-			attack.AddComponent(Type.GetType(item.Script)).GetComponent<Item>().item = gUIController.GetSelectedItem(item.consumable).item;
+			attack.AddComponent(Type.GetType(item.item.Script)).GetComponent<Item>().item = item.item;
+			if(item.item.consumable)
+			{
+				Destroy(gUIController.inventoryManager.TakeItem(item.slot.number, 1).gameObject);
+			}
 			if (!inWater)
 			{
 				transform.localScale = new Vector2(Mathf.Sign(MousePos.x - transform.position.x), 1);
-				isFacing = transform.localScale.x;
+				isFacing = (int)transform.localScale.x;
 			}
 		}
+
+		if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            if (item)
+            {
+                GameObject worldClone = Instantiate(worldItem, transform.position, Quaternion.identity);
+        		worldClone.GetComponent<WorldItem>().SpawnCooldown(2f);
+        		worldClone.GetComponent<SpriteRenderer>().sprite = item.item.sprite;
+        		worldClone.GetComponent<WorldItem>().myDroppedItem = item.item;
+        		worldClone.GetComponent<WorldItem>().Amount = 1;
+
+				Destroy(item.inventoryManager.TakeItem(item.slot.number, 1).gameObject);
+        		worldClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(200f * isFacing, 200f));
+            }
+        }
     }
 	public override void Kill()
 	{
@@ -237,6 +259,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
 		//rb.AddForce(Vector2.up * jumpingPower, ForceMode2D.Impulse);
 	}
+
 	private void FixedUpdate() //for physics
 	{
 		

@@ -29,8 +29,8 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         
     }
     [HideInInspector] public Transform parentAfterDrag;
-    private InventoryManager inventoryManager;
-
+    public InventoryManager inventoryManager;
+    public InvSlot slot;
     public void InitItem(ItemData _item, InventoryManager _inventoryManager, int _count = 1)
     {
         item = _item;
@@ -65,8 +65,7 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     {
         Debug.Log("End Drag");
         transform.SetParent(parentAfterDrag); //format stuff
-        image.raycastTarget = true;
-        inventoryManager = transform.parent.gameObject.GetComponent<InvSlot>().inventoryManager;
+        image.raycastTarget = true;        
     }
 }
 

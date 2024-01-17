@@ -17,7 +17,6 @@ public class GUIController : MonoBehaviour
     public int maxStackedItems = 999;
     public GameObject itemPrefab;
     int selectedSlot = -1;
-    public GameObject worldItem;
     public GameObject player;
     public GameObject heldItemObject;
     public TMP_Text itemText;
@@ -64,28 +63,14 @@ public class GUIController : MonoBehaviour
                 ChangeSelectedSlot(number - 1);
             }
         }
-        InvItem heldItem = GetSelectedItem(false);
+        InvItem heldItem = GetSelectedItem();
 
-        if (GetSelectedItem(false))
+        if (GetSelectedItem())
             itemText.text = heldItem.item.displayName;
         else
             itemText.text = ("Empty Slot");
 
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-
-            if (GetSelectedItem(false))
-            {
-                GameObject worldClone = Instantiate(worldItem, player.transform.position, Quaternion.identity);
-                worldClone.GetComponent<WorldItem>().SpawnCooldown(2f);
-                SpriteRenderer spriteRenderer = worldClone.GetComponent<SpriteRenderer>();
-                spriteRenderer.sprite = heldItem.item.sprite;
-                worldClone.GetComponent<WorldItem>().myDroppedItem = heldItem.item;
-                worldClone.GetComponent<WorldItem>().Amount = heldItem.count;
-                GetSelectedItem(true);
-                worldClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(200f * playerAI.isFacing, 200f));
-            }
-        }
+        
     }
 
     void ChangeSelectedSlot(int value)
@@ -96,20 +81,11 @@ public class GUIController : MonoBehaviour
         selectedSlot = value;
     }
 
-    public InvItem GetSelectedItem(bool use) //without bool use, method will get the selected item, with bool use, method will get and remove one of selected item
+    public InvItem GetSelectedItem() 
     {
         InvSlot slot = inventoryManager.slots[selectedSlot].gameObject.GetComponent<InvSlot>();
         InvItem itemInSlot = slot.GetComponentInChildren<InvItem>();
-        if (itemInSlot != null)
-        {
-            if (use == true)
-            {
-                Destroy(inventoryManager.TakeItem(slot.number).gameObject);
-            }
-            return itemInSlot;
-        }
-        else
-            return null;
+        return itemInSlot;
     }
     //demo script
     public void PickUpItem()

@@ -37,8 +37,9 @@ public class InventoryManager : MonoBehaviour
             slots[i] = slot.transform;
         }
     }
-    //Adds in the first availablt slot or specified slot
-    //First tries all universal inventories, then specific
+    //Adds in the first availablt slot
+    //Universal slots are checked first
+    //Slot parameter removed because I couldn't make sense out of it
     public bool AddItem(ItemData item, int count = 1)
     {
         bool AddItem()
@@ -47,8 +48,10 @@ public class InventoryManager : MonoBehaviour
             {
                 if(inventory[i] == null)//if no item in slot
                 {
-                    inventory[i] = Instantiate(InvItem, slots[i]).GetComponent<InvItem>();
+                    GameObject invItem = Instantiate(InvItem, slots[i]);
+                    inventory[i] = invItem.GetComponent<InvItem>();
                     inventory[i].InitItem(item, this, count);
+                    inventory[i].slot = slots[i].GetComponent<InvSlot>();
                     return true;
                 }
                 else if(inventory[i].item == item && item.stackable)//if the same item in slot
@@ -96,60 +99,6 @@ public class InventoryManager : MonoBehaviour
 
 
         return false;
-    }
-    public bool AddItem(InvItem item, int slot)
-    {
-        if(slot>invSize || slot<0) 
-        {
-            Debug.LogError(name + " doesn't have slot number " + slot);
-            return false;
-        }
-        if(!((item.item.inventoryType == StoringType) || (StoringType == ItemData.InventoryType.All))) return false;
-
-        if(inventory[slot] == null)
-        {
-            inventory[slot] = item;
-            item.transform.SetParent(slots[slot]);
-            return true;
-        }
-        
-        if((inventory[slot].item == item.item) && item.item.stackable)
-        {
-            inventory[slot].count += item.count;
-            Destroy(item.gameObject);
-            return true;
-        }
-        
-        return false;
-    }
-    public InvItem TakeItem(int slot, int count = -1)
-    {
-        if(slot>invSize || slot<0) 
-        {
-            Debug.LogError(name + " doesn't have slot number " + slot);
-            return null;
-        }
-        if(count<-1 || count == 0)
-        {
-            Debug.LogError(name + " : " + count + " is a wrong count");
-            return null;
-        }
-        if(inventory[slot] == null) return null;
-
-        InvItem item = inventory[slot];
-
-        if(count == -1 || (item.count - count)<=0)
-        {
-            inventory[slot] = null;
-            return item;
-        }
-        else
-        {
-            item.count -= count;
-            InvItem newItem = Instantiate(InvItem, slots[slot]).GetComponent<InvItem>();
-            newItem.InitItem(item.item, this);
-            return newItem;
-        }
     }
     public InvItem TakeItem(ItemData item, int count = -1)
     {
@@ -202,4 +151,60 @@ public class InventoryManager : MonoBehaviour
         
         return null;
     }
+    //Other overloads used mainly by drag handlers and operate only in this inventory
+    public bool AddItem(InvItem item, int slot)
+    {
+        if(slot>invSize || slot<0) 
+        {
+            Debug.LogError(name + " doesn't have slot number " + slot);
+            return false;
+        }
+        if(!((item.item.inventoryType == StoringType) || (StoringType == ItemData.InventoryType.All))) return false;
+
+        if(inventory[slot] == null)
+        {
+            inventory[slot] = item;
+            item.transform.SetParent(slots[slot]);
+            return true;
+        }
+        
+        if((inventory[slot].item == item.item) && item.item.stackable)
+        {
+            inventory[slot].count += item.count;
+            Destroy(item.gameObject);
+            return true;
+        }
+        
+        return false;
+    }
+    public InvItem TakeItem(int slot, int count = -1)
+    {
+        if(slot>invSize || slot<0) 
+        {
+            Debug.LogError(name + " doesn't have slot number " + slot);
+            return null;
+        }
+        if(count<-1 || count == 0)
+        {
+            Debug.LogError(name + " : " + count + " is a wrong count");
+            return null;
+        }
+        if(inventory[slot] == null) return null;
+
+        InvItem item = inventory[slot];
+
+        if(count == -1 || (item.count - count)<=0)
+        {
+            inventory[slot] = null;
+            return item;
+        }
+        else
+        {
+            item.count -= count;
+            InvItem newItem = Instantiate(InvItem, slots[slot]).GetComponent<InvItem>();
+            newItem.InitItem(item.item, this, count);
+            return newItem;
+        }
+    }
+    
 }

@@ -36,6 +36,11 @@ public class InvSlot : MonoBehaviour, IDropHandler
     {
         GameObject dropped = eventData.pointerDrag;
         InvItem draggableItem = dropped.GetComponent<InvItem>();
-        if(inventoryManager.AddItem(draggableItem, number)) draggableItem.parentAfterDrag = transform;
+        if(inventoryManager.AddItem(draggableItem, number)) 
+        {
+            draggableItem.parentAfterDrag = transform;
+            draggableItem.slot = this;
+            draggableItem.inventoryManager = inventoryManager;
+        }
     }
 }

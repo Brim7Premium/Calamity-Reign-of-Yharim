@@ -612,7 +612,6 @@ MonoBehaviour:
   currentAnimationState: 
   maxStackedItems: 999
   itemPrefab: {fileID: 2464146626582972577, guid: f4e60d5c22ef8e646af3613f8f59df94, type: 3}
-  worldItem: {fileID: 1442382997344500816, guid: 056f084edc550b847b29c2d0ecbaf44d, type: 3}
   player: {fileID: 1250109776}
   heldItemObject: {fileID: 0}
   itemText: {fileID: 2044739365}
@@ -12337,6 +12336,10 @@ PrefabInstance:
       propertyPath: rigidbody
       value: 
       objectReference: {fileID: 1250109784}
+    - target: {fileID: 2160703249615966330, guid: 11a9cd47724de354c997feb04775b786, type: 3}
+      propertyPath: worldItem
+      value: 
+      objectReference: {fileID: 1442382997344500816, guid: 056f084edc550b847b29c2d0ecbaf44d, type: 3}
     - target: {fileID: 2160703249615966330, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: maxVelocity
       value: 1
