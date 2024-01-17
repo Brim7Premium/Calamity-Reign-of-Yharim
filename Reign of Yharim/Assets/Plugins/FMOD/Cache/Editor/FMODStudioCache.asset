@@ -934,30 +934,6 @@ MonoBehaviour:
   - Name: Desktop
     Value: 579616
   Exists: 1
---- !u!114 &-4643477499043221211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/WulfrumArmy/Equalizer
-  m_EditorClassIdentifier: 
-  Name: Equalizer
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 973155390
-    data2: 966299783
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
 --- !u!114 &-4615554068745817254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1758,34 +1734,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-163949627031182966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Other/WulfrumArmy
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Other/WulfrumArmy
-  Guid:
-    Data1: -1465020877
-    Data2: 1271326305
-    Data3: 495798192
-    Data4: -1542258567
-  Banks:
-  - {fileID: 5402814827843651135}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -4643477499043221211}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 132515
 --- !u!114 &-67615769787588924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,7 +1830,6 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 5203133490103899468}
   - {fileID: 3906102389379007193}
-  - {fileID: -163949627031182966}
   - {fileID: -3635206378234891381}
   - {fileID: -3146359653748575253}
   - {fileID: 3279659752069959210}
@@ -1918,13 +1865,15 @@ MonoBehaviour:
   - {fileID: -6281687262831029512}
   - {fileID: 4078255458858391133}
   - {fileID: -8342216175145771761}
+  - {fileID: 1925163534953682409}
+  - {fileID: 8608167459822141207}
   EditorParameters:
   - {fileID: -2705954182957021726}
   MasterBanks:
   - {fileID: 7922514285120898230}
   StringsBanks:
   - {fileID: 7607827413165057428}
-  cacheTime: 638405686670421921
+  cacheTime: 638410196638686701
   cacheVersion: 131616
 --- !u!114 &185198468472118980
 MonoBehaviour:
@@ -2254,6 +2203,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1925163534953682409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Events/SystematicDefiance
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Events/SystematicDefiance
+  Guid:
+    Data1: -1465020877
+    Data2: 1271326305
+    Data3: 495798192
+    Data4: -1542258567
+  Banks:
+  - {fileID: 5402814827843651135}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 9106348952005314298}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 132515
 --- !u!114 &1974780804532356367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2369,6 +2346,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/AstralBeaconOrb/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2573287368980224228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Downpour/Equalizer
   m_EditorClassIdentifier: 
   Name: Equalizer
   StudioPath: 
@@ -2917,10 +2918,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638405686670421921
+  lastModified: 638410196638686701
   FileSizes:
   - Name: Desktop
-    Value: 57347264
+    Value: 59171936
   Exists: 1
 --- !u!114 &5414037802927865691
 MonoBehaviour:
@@ -3349,10 +3350,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638405685225039252
+  lastModified: 638410097815732656
   FileSizes:
   - Name: Desktop
-    Value: 2880
+    Value: 2946
   Exists: 1
 --- !u!114 &7642177175457304554
 MonoBehaviour:
@@ -3473,7 +3474,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638405685225004155
+  lastModified: 638410097815690917
   FileSizes:
   - Name: Desktop
     Value: 1526
@@ -3630,6 +3631,34 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &8608167459822141207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Events/Downpour
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Events/Downpour
+  Guid:
+    Data1: 706912966
+    Data2: 1330811503
+    Data3: 1516222611
+    Data4: 1007956078
+  Banks:
+  - {fileID: 5402814827843651135}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2573287368980224228}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 272074
 --- !u!114 &8677159290053108987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3730,6 +3759,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &9106348952005314298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SystematicDefiance/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &9181142709631208914
 MonoBehaviour:
   m_ObjectHideFlags: 0

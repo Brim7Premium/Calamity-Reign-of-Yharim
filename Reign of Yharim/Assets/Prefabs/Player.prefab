@@ -677,7 +677,7 @@ MonoBehaviour:
   rideSpringStrength: 2000
   rideSpringDamper: 40
   targetTestObject: {fileID: 2160703249615966320}
-  defeatedBosses: []
+  Plundered: []
   worldManager: {fileID: 0}
   framerate: 60
   DefaultItemUsagePrefab: {fileID: 6250302611736326467, guid: 7e52d538bb24e37479a934cd849a1c77, type: 3}

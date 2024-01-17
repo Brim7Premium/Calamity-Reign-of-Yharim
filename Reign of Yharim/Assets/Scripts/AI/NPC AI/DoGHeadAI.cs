@@ -9,6 +9,8 @@ public class DoGHeadAI : NPC
 
     public Vector2 oldTargetPos;
 
+    public GameObject worldManager;
+
     private EventInstance theme;
     public override void SetDefaults()
     {
@@ -19,12 +21,13 @@ public class DoGHeadAI : NPC
         LifeMax = 1706400;
         Life = LifeMax;
         worm = true;
-        
-        if (!GameObject.Find("WorldManager").GetComponent<BiomeManager>().bossAlive)
+
+        worldManager = GameObject.Find("WorldManager");
+        if (!worldManager.GetComponent<BiomeManager>().bossAlive)
         {
             theme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DoG1);
             theme.start();
-            GameObject.Find("WorldManager").GetComponent<BiomeManager>().bossAlive = true;
+            worldManager.GetComponent<BiomeManager>().bossAlive = true;
         }
     }
     public override void AI()

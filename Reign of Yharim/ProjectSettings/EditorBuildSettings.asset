@@ -15,18 +15,21 @@ EditorBuildSettings:
     path: Assets/Scenes/TempCam.unity
     guid: 9649033b618eb124791a4e7c450dbea0
   - enabled: 1
-    path: Assets/Scenes/Bloody.unity
+    path: Assets/Scenes/Biomes/Bloody.unity
     guid: 02d994495282b0f479901bb5fc37af10
   - enabled: 1
-    path: Assets/Scenes/Tundra_Flats.unity
+    path: Assets/Scenes/Biomes/Tundra_Flats.unity
     guid: 14a079614cae4b946b9fd1d87dac252f
   - enabled: 1
-    path: Assets/Scenes/Forest_Spawn.unity
+    path: Assets/Scenes/Biomes/Forest_Spawn.unity
     guid: d4fbee58896e21d419f3640b7256731d
   - enabled: 1
-    path: Assets/Scenes/Tundra_Mountain.unity
+    path: Assets/Scenes/Biomes/Tundra_Mountain.unity
     guid: 290ee1c3bb0f4dd49bba8bb59a87d924
   - enabled: 1
-    path: Assets/Scenes/_Rain.unity
+    path: Assets/Scenes/Events/_Rain.unity
     guid: cb8584a7b0947584e99674e86822632b
+  - enabled: 1
+    path: Assets/Scenes/Events/_WulfrumArmy.unity
+    guid: 8f6f0dc21b898f245bf467bfbb958489
   m_configObjects: {}

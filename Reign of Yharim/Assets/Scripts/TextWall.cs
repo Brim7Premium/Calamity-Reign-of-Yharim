@@ -15,7 +15,7 @@ public class TextWall : MonoBehaviour
 	void OnEnable()
 	{
 		mainmenu.GetComponent<MainMenu>().TitleTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); // stop toacw
-		mainmenu.GetComponent<MainMenu>().TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Memory); // change it to moacw
+		mainmenu.GetComponent<MainMenu>().TitleTheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Credits); // change it to moacw
 		mainmenu.GetComponent<MainMenu>().TitleTheme.start(); // start moacw
 	}
 

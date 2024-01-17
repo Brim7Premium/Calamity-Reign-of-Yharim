@@ -17,17 +17,19 @@ public class BiomeManager : MonoBehaviour
 
 	public Camera mainCam;
 
-	public bool bossAlive, bossWasAlive = false;
+	public bool bossAlive, eventActive;
+	private bool bossWasAlive, eventWasActive;
 
 	public EventInstance biometheme, foresttheme;
-	public bool day = true, wasday = false, nosunlight;
+	public bool day = true, nosunlight;
+	private bool wasday;
 	[SerializeField] private int daythemenum = 0;
 
 	public Light2D SunLight;
 
 	private int count;
 
-	[SerializeField] private Color daybg = new Color(0.701f, 0.9691256f, 1f), nightbg = new Color(0.11f, 0.17f, 0.28f);
+	public Color daybg = new Color(0.701f, 0.9691256f, 1f), nightbg = new Color(0.11f, 0.17f, 0.28f);
 
 	void Update()
 	{
@@ -39,17 +41,18 @@ public class BiomeManager : MonoBehaviour
 
 		ManageBiome(); // manage the biome
 		
-		if (bossAlive) // if theres a boss alive...
+		if (bossAlive || eventActive) // if theres a boss alive...
 		{
 			biometheme.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); // ...stop the music...
 			foresttheme.setVolume(0f); // ... and mute the biome music
 		}
 
-		if (bossAlive != bossWasAlive) // if there was/wasnt a boss alive before
+		if (bossAlive != bossWasAlive || eventActive != eventWasActive) // if there was/wasnt a boss alive before
 		{
 			bossWasAlive = bossAlive;
+			eventWasActive = eventActive;
 
-			if (!bossAlive) // if there isnt a boss alive...
+			if (!bossAlive && !eventActive) // if there isnt a boss alive...
 			{
 				wasday = !day; // ...make the biome theme play after a boss is gone by making the game think it just became day
 			}
@@ -62,7 +65,7 @@ public class BiomeManager : MonoBehaviour
 		count = gameObject.GetComponent<GameTime>().count; // get the time of the world
 		day = (count >= 4.5*60 && count < 19.5*60); // calculates if it's day or night
 
-		if (biomeName == "Forest" && day && !bossAlive) // dedicated forest day time system
+		if (biomeName == "Forest" && day && !bossAlive && !eventActive) // dedicated forest day time system
 		{	
 			foresttheme.getVolume(out forvol); // get forest volume
 			if (forvol < 1f) // if its not at full volume...
@@ -100,7 +103,7 @@ public class BiomeManager : MonoBehaviour
 			}
 		}
 
-		if ((biomeName != "Forest" || !day) && !bossAlive) // makes the forest themes not stop, and instead only mute
+		if ((biomeName != "Forest" || !day) && !bossAlive && !eventActive) // makes the forest themes not stop, and instead only mute
 		{
 			foresttheme.getVolume(out forvol); // get the volume
 			if (forvol >= .01f) // if its not almost muted...
@@ -114,7 +117,7 @@ public class BiomeManager : MonoBehaviour
 			}
 		}
 
-		if ((biomeName != prevBiomeName || wasday != day) && !bossAlive) // if it changes day or you leave the biome
+		if ((biomeName != prevBiomeName || wasday != day) && !bossAlive && !eventActive) // if it changes day or you leave the biome
 		{
 			daybg = Color.black; // if the day sky colour isnt set, its just black
 			nightbg = new Color(0.11f, 0.17f, 0.28f); // if the day sky colour isnt set, its just a really dark blue
@@ -163,7 +166,6 @@ public class BiomeManager : MonoBehaviour
 				// Tundra
 				daybg = new Color(0.7415094f, 1f, 0.95700063f); // day colour is the same as the forest
 				biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Tundra); // sets the biome theme to the tundra theme
-				biometheme.start(); // start the tundra theme
 				nosunlight = false; // the sun is visible here
 			}
 			if (biomeName == "Forest")
@@ -173,7 +175,6 @@ public class BiomeManager : MonoBehaviour
 				if (!day)
 				{
 					biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Night);
-					biometheme.start();
 				}
 				nosunlight = false;
 			}
@@ -247,6 +248,14 @@ public class BiomeManager : MonoBehaviour
 				nosunlight = true;
 				SunLight.intensity = 0.5f;
 			}
+			if (biomeName == "WulfrumArena")
+			{
+				// WMS Arena
+				daybg = new Color(0.701f, 0.9691256f, 1f);
+				nosunlight = false;
+				biometheme = AudioManager.instance.CreateEventInstance(FMODEvents.instance.WulfrumArmy);
+			}
+			biometheme.start(); // start the biome music
 		}
 
 		gameObject.GetComponent<GameTime>().orbitPoint.gameObject.SetActive(!nosunlight); // makes the sun (and moon) disappear if nosunlight is true 

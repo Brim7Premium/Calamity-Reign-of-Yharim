@@ -322,6 +322,20 @@ MonoBehaviour:
       Data3: 1533122746
       Data4: -657483296
     Path: event:/Music/Biomes/InsidetheGlaciers
+  <WulfrumArmy>k__BackingField:
+    Guid:
+      Data1: -1465020877
+      Data2: 1271326305
+      Data3: 495798192
+      Data4: -1542258567
+    Path: event:/Music/Events/SystematicDefiance
+  <Rain>k__BackingField:
+    Guid:
+      Data1: 706912966
+      Data2: 1330811503
+      Data3: 1516222611
+      Data4: 1007956078
+    Path: event:/Music/Events/Downpour
   <Title>k__BackingField:
     Guid:
       Data1: 2000118566
@@ -329,14 +343,7 @@ MonoBehaviour:
       Data3: 90891170
       Data4: 1274298878
     Path: event:/Music/Other/TaleofaCruelWorld
-  <WulfrumArmy>k__BackingField:
-    Guid:
-      Data1: -1465020877
-      Data2: 1271326305
-      Data3: 495798192
-      Data4: -1542258567
-    Path: event:/Music/Other/WulfrumArmy
-  <Memory>k__BackingField:
+  <Credits>k__BackingField:
     Guid:
       Data1: 1351435452
       Data2: 1327565831

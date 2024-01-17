@@ -16,23 +16,21 @@ public class EnemySpawner : MonoBehaviour
 {
 	public GameObject player;
 	public List<SpawnableEnemy> enemiesToSpawn = new List<SpawnableEnemy>(); // this script must be added to the prefab for enemies you want to naturally spawn, as it sets their spawn chance and condition
-	public int spawnRate = 5;
+	public float spawnRate = 5;
 
 	public string parentBiome;
 	public GameObject worldManager;
 
-	public bool ignoreBosses;
-
 	public IEnumerator SpawnEnemies()
 	{
-		if ((ignoreBosses || !worldManager.GetComponent<BiomeManager>().bossAlive) && (string.IsNullOrEmpty(parentBiome) || worldManager.GetComponent<BiomeManager>().biomeName == parentBiome))
+		if (!worldManager.GetComponent<BiomeManager>().bossAlive && (string.IsNullOrEmpty(parentBiome) || worldManager.GetComponent<BiomeManager>().biomeName == parentBiome))
 		{
 			for (int i = 0; i < enemiesToSpawn.Count; ++i) // iterate through the list of enemies this object can spawn
 			{
 				float randomNum = UnityEngine.Random.Range(enemiesToSpawn[i].lowerSpawnChance, enemiesToSpawn[i].upperSpawnChance); // choose a random number for chance
 				if (randomNum == enemiesToSpawn[i].lowerSpawnChance && player != null) // if that number is 1 and the player is valid
 				{
-					if (string.IsNullOrEmpty(enemiesToSpawn[i].condition) || player.GetComponent<PlayerAI>().defeatedBosses.Contains(enemiesToSpawn[i].condition)) // if theres no condition for the enemy or if youve met its condition
+					if (string.IsNullOrEmpty(enemiesToSpawn[i].condition) || player.GetComponent<PlayerAI>().Plundered.Contains(enemiesToSpawn[i].condition)) // if theres no condition for the enemy or if youve met its condition
 					{
 						yield return SpawnEnemy(enemiesToSpawn[i].gameObject); // spawn the enemy
 					}
@@ -47,10 +45,13 @@ public class EnemySpawner : MonoBehaviour
 
 	IEnumerator Start()
 	{	
-		int index = this.gameObject.scene.name.IndexOf("_");
-		if (index >= 0)
+		if (string.IsNullOrEmpty(parentBiome))
 		{
-  			parentBiome = this.gameObject.scene.name.Substring(0, index); // gets the biome from the scene
+			int index = this.gameObject.scene.name.IndexOf("_");
+			if (index >= 0)
+			{
+				parentBiome = this.gameObject.scene.name.Substring(0, index); // gets the biome from the scene
+			}
 		}
 		while (player == null) // used to get the player and worldmanager
 		{
@@ -96,7 +97,7 @@ public class EnemySpawner : MonoBehaviour
 
 		if (enemyPrefab != null) // if the prefab is actually valid
 		{
-			if (this.gameObject.scene.name == "_Systems" || worldManager.GetComponent<BiomeManager>().biomeName == parentBiome) // if youre in the spawner's biome
+			if (string.IsNullOrEmpty(parentBiome) || worldManager.GetComponent<BiomeManager>().biomeName == parentBiome) // if youre in the spawner's biome
 			{
 				GameObject newEnemy = Instantiate(enemyPrefab, SpawnPosition, Quaternion.identity); // spawn the enemy
 				if (newEnemy.scene != player.scene)

@@ -44,9 +44,15 @@ public class RespawnPlayer : MonoBehaviour
 		if (loadingtriggerssobj != null)
 		{
 			var loadingtriggerss = loadingtriggerssobj.GetComponent<LoadingTriggers>();
-			loadingtriggerss.scenesToLoad.Add("Forest_Spawn");
-			loadingtriggerss.LoadScenes();
-			loadingtriggerss.scenesToLoad.Remove("Forest_Spawn");
+			for (int j = 0; j < SceneManager.sceneCount; j++)
+			{
+				Scene loadedScene = SceneManager.GetSceneAt(j);
+				if (loadedScene.name.StartsWith(playerAI.worldManager.GetComponent<BiomeManager>().biomeName))
+				{
+					loadingtriggerss.UnloadScene(playerAI.worldManager.GetComponent<BiomeManager>().biomeName);
+				}
+			}
+			loadingtriggerss.LoadScene("Forest_Spawn");
 			player.SetActive(true);
 			playerAI.SetDefaults();
 			playerAI.StartCoroutine(playerAI.Immunity());

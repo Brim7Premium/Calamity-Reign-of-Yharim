@@ -15,9 +15,9 @@ public class LoadingTriggers : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.gameObject.name == "Player" && collision.gameObject.GetComponent<PlayerAI>().defeatedBosses.Contains(bossCondition))
+		UnloadScene("TempCam");
+		if (collision.gameObject.name == "Player" && collision.gameObject.GetComponent<PlayerAI>().Plundered.Contains(bossCondition))
 		{
-			scenesToUnload.Add("TempCam");
 			LoadScenes();
 			UnloadScenes();
 		}
@@ -27,21 +27,25 @@ public class LoadingTriggers : MonoBehaviour
 	{
 		for (int i = 0; i < scenesToLoad.Count; i++)
 		{
-			bool sceneloaded = false;
-			for (int j = 0; j < SceneManager.sceneCount; j++)
+			LoadScene(scenesToLoad[i]);
+		}
+	}
+
+	public void LoadScene(string scenetoload)
+	{
+		bool sceneloaded = false;
+		for (int j = 0; j < SceneManager.sceneCount; j++)
+		{
+			Scene loadedScene = SceneManager.GetSceneAt(j);
+			if (loadedScene.name == scenetoload)
 			{
-				Scene loadedScene = SceneManager.GetSceneAt(j);
-				Debug.Log($"Loading {loadedScene.name}");
-				if (loadedScene.name == scenesToLoad[i])
-				{
-					sceneloaded = true;
-					break;
-				}
+				sceneloaded = true;
+				break;
 			}
-			if (!sceneloaded)
-			{
-				SceneManager.LoadSceneAsync(scenesToLoad[i], LoadSceneMode.Additive);
-			}
+		}
+		if (!sceneloaded)
+		{
+			SceneManager.LoadSceneAsync(scenetoload, LoadSceneMode.Additive);
 		}
 	}
 
@@ -49,14 +53,19 @@ public class LoadingTriggers : MonoBehaviour
 	{
 		for (int i = 0; i < scenesToUnload.Count; i++)
 		{
-			for (int j = 0; j < SceneManager.sceneCount; j++)
+			UnloadScene(scenesToUnload[i]);
+		}
+	}
+
+	public void UnloadScene(string scenetounload)
+	{
+		for (int j = 0; j < SceneManager.sceneCount; j++)
+		{
+			Scene loadedScene = SceneManager.GetSceneAt(j);
+			if (loadedScene.name == scenetounload)
 			{
-				Scene loadedScene = SceneManager.GetSceneAt(j);
-				if (loadedScene.name == scenesToUnload[i])
-				{
-					SceneManager.UnloadSceneAsync(scenesToUnload[i]);
-					break;
-				}
+				SceneManager.UnloadSceneAsync(scenetounload);
+				break;
 			}
 		}
 	}
