@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Events/_WulfrumArmy.unity
     guid: 8f6f0dc21b898f245bf467bfbb958489
+  - enabled: 1
+    path: Assets/Scenes/Arenas/WulfrumArena.unity
+    guid: 9696bee1d5706c347a933e78e8b4eaec
   m_configObjects: {}

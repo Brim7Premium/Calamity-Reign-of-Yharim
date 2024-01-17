@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3613184643395153518, guid: 48f5bcc745d8e7d4aafa58779dd13d2b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6490132153671094614, guid: 48f5bcc745d8e7d4aafa58779dd13d2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

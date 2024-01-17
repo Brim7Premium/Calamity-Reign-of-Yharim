@@ -117,7 +117,7 @@ public class BiomeManager : MonoBehaviour
 			}
 		}
 
-		if ((biomeName != prevBiomeName || wasday != day) && !bossAlive && !eventActive) // if it changes day or you leave the biome
+			if ((biomeName != prevBiomeName || wasday != day) && !bossAlive && !eventActive) // if it changes day or you leave the biome
 		{
 			daybg = Color.black; // if the day sky colour isnt set, its just black
 			nightbg = new Color(0.11f, 0.17f, 0.28f); // if the day sky colour isnt set, its just a really dark blue
