@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
-public class InvSlot : MonoBehaviour, IDropHandler
+public class InvSlot : MonoBehaviour
 {
     public Image image;
     public Sprite selectedSprite, notSelectedSprite;
@@ -18,12 +19,13 @@ public class InvSlot : MonoBehaviour, IDropHandler
     public void Select()
     {
         image.sprite = selectedSprite;
-        if (this.gameObject.transform.childCount > 0 && GameObject.Find("Player") != null)
+        //shows this item on the back
+        if (gameObject.transform.childCount > 0 && GameObject.Find("Player") != null)
         {
-            GameObject.Find("/Player/Item").transform.GetComponent<SpriteRenderer>().sprite = this.gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            GameObject.Find("/Player/Item").transform.GetComponent<SpriteRenderer>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
         }
 
-        else if (this.gameObject.transform.childCount == 0 && GameObject.Find("Player") != null)
+        else if (gameObject.transform.childCount == 0 && GameObject.Find("Player") != null)
         {
             GameObject.Find("/Player/Item").transform.GetComponent<SpriteRenderer>().sprite = null;
         }
@@ -31,16 +33,5 @@ public class InvSlot : MonoBehaviour, IDropHandler
     public void Deselect()
     {
         image.sprite = notSelectedSprite;
-    }
-    public void OnDrop(PointerEventData eventData)
-    {
-        GameObject dropped = eventData.pointerDrag;
-        InvItem draggableItem = dropped.GetComponent<InvItem>();
-        if(inventoryManager.AddItem(draggableItem, number)) 
-        {
-            draggableItem.parentAfterDrag = transform;
-            draggableItem.slot = this;
-            draggableItem.inventoryManager = inventoryManager;
-        }
     }
 }

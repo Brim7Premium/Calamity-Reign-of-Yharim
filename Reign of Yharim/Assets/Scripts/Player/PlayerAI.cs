@@ -114,25 +114,30 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
         }
         */
 
-        InvItem item = gUIController.GetSelectedItem();
-		if (Input.GetAxis("Fire1")>0 && item && !IsAttacking)
+        
+		if (Input.GetAxis("Fire1")>0 && !IsAttacking)
 		{
-			IsAttacking = true;
-			GameObject attack = Instantiate(DefaultItemUsagePrefab, transform);
-			attack.AddComponent(Type.GetType(item.item.Script)).GetComponent<Item>().item = item.item;
-			if(item.item.consumable)
+			InvItem item = gUIController.GetSelectedItem();
+			if(item)
 			{
-				Destroy(gUIController.inventoryManager.TakeItem(item.slot.number, 1).gameObject);
-			}
-			if (!inWater)
-			{
-				transform.localScale = new Vector2(Mathf.Sign(MousePos.x - transform.position.x), 1);
-				isFacing = (int)transform.localScale.x;
+				IsAttacking = true;
+				GameObject attack = Instantiate(DefaultItemUsagePrefab, transform);
+				attack.AddComponent(Type.GetType(item.item.Script)).GetComponent<Item>().item = item.item;
+				if(item.item.consumable)
+				{
+					Destroy(gUIController.inventoryManager.TakeItem(item.slot.number, 1).gameObject);
+				}
+				if (!inWater)
+				{
+					transform.localScale = new Vector2(Mathf.Sign(MousePos.x - transform.position.x), 1);
+					isFacing = (int)transform.localScale.x;
+				}
 			}
 		}
 
 		if (Input.GetKeyDown(KeyCode.Backspace))
         {
+			InvItem item = gUIController.GetSelectedItem();
             if (item)
             {
                 GameObject worldClone = Instantiate(worldItem, transform.position, Quaternion.identity);

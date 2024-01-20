@@ -91,10 +91,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 2464146626582972580}
   countText: {fileID: 4064266072831380648}
-  slotObject: {fileID: 2497231672552255610, guid: 4735dcf8432a0294faf898946f30c8a6, type: 3}
   item: {fileID: 11400000, guid: 50dd648746c83c4459819cf6fbc39302, type: 2}
-  count: 1
+  _count: 1
   parentAfterDrag: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  slot: {fileID: 0}
 --- !u!1 &7934023544376935891
 GameObject:
   m_ObjectHideFlags: 0

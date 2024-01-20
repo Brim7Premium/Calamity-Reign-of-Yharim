@@ -6,8 +6,9 @@ using UnityEngine.EventSystems;
 using TMPro;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Data;
+using System;
 
-public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class InvItem : MonoBehaviour, IPointerClickHandler
 {
     public Image image;
     public TMP_Text countText;
@@ -29,6 +30,7 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         
     }
     [HideInInspector] public Transform parentAfterDrag;
+    [HideInInspector] public bool dragging;
     public InventoryManager inventoryManager;
     public InvSlot slot;
     public void InitItem(ItemData _item, InventoryManager _inventoryManager, int _count = 1)
@@ -46,26 +48,48 @@ public class InvItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         bool textActive = count > 1;
         countText.gameObject.SetActive(textActive);
     }
-    public void OnBeginDrag(PointerEventData eventData)
+    void Update()
     {
-        inventoryManager.TakeItem(transform.parent.gameObject.GetComponent<InvSlot>().number);
-        Debug.Log("Begin Drag");
-        parentAfterDrag = transform.parent; //format stuff
-        transform.SetParent(transform.root); //format stuff
-        transform.SetAsLastSibling(); //format stuff
-        image.raycastTarget = false; //allows for us to check if there is a slot underneath
+        if(dragging)
+        {
+            Debug.Log("Dragging");
+            Vector2 mousePosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = mousePosition;
+        }
     }
-    public void OnDrag(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Dragging");
-        Vector2 mousePosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = mousePosition;
-    }
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        Debug.Log("End Drag");
-        transform.SetParent(parentAfterDrag); //format stuff
-        image.raycastTarget = true;        
+        if(!dragging)
+        {
+            inventoryManager.TakeItem(transform.parent.gameObject.GetComponent<InvSlot>().number);
+            Debug.Log("Begin Drag");
+            
+            //Item won't be covered up by other UI elements
+            transform.SetParent(transform.root); 
+            transform.SetAsLastSibling(); 
+            dragging = true;
+        }
+        else
+        {
+            //gets slot underneath the cursor if such exists
+            InvSlot newSlot = null;
+            List<RaycastResult> posSlot = new();
+            transform.root.GetComponent<GraphicRaycaster>().Raycast(eventData, posSlot);
+            //posSlot.Reverse();
+            foreach (var i in posSlot)
+            {
+                if (i.gameObject.TryGetComponent<InvSlot>(out newSlot)) break;
+            }
+
+            if(newSlot && newSlot.inventoryManager.AddItem(this, newSlot.number)) 
+            {
+                transform.SetParent(newSlot.transform);
+                slot = newSlot;
+                inventoryManager = newSlot.inventoryManager;
+                dragging = false;
+                image.raycastTarget = true;
+            }
+        }
     }
 }
 
