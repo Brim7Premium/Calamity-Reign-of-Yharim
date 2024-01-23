@@ -22,7 +22,9 @@ public class InvasionScene : MonoBehaviour
 	public float currentProgress = 0f;
 	public GameObject eventBoss; // leave blank to not spawn anything
 	public EnemySpawner enemySpawner;
-	
+	public bool useBiomeTheme = false;
+	public EventReference eventTheme;
+	private EventInstance eventMusic;
 
 	void Update()
 	{
@@ -31,14 +33,21 @@ public class InvasionScene : MonoBehaviour
 			worldManager = GameObject.Find("WorldManager");
 			enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
 			player = GameObject.Find("Player");
+			if (!useBiomeTheme)
+			{
+				eventMusic = AudioManager.instance.CreateEventInstance(eventTheme);
+				eventMusic.start();
+			}
 		}
 
 		else
 		{
+			worldManager.GetComponent<BiomeManager>().eventUsesBiome = useBiomeTheme;
 			worldManager.GetComponent<BiomeManager>().daybg = daybg;
 			worldManager.GetComponent<BiomeManager>().nightbg = nightbg;
 			worldManager.GetComponent<BiomeManager>().nosunlight = showSun;
 			loadingTrigger = worldManager.GetComponent<Invasions>().loadingTrigger;
+
 			if (timed)
 			{
 				StartCoroutine(EventTimer());
@@ -46,7 +55,9 @@ public class InvasionScene : MonoBehaviour
 
 			if (currentProgress >= totalProgress)
 			{
-				if (player.GetComponent<PlayerAI>().Plundered.Contains(gameObject.scene.name.Trim('_')))
+				StartCoroutine(enemySpawner.SpawnEnemy(eventBoss));
+
+				if (!player.GetComponent<PlayerAI>().Plundered.Contains(gameObject.scene.name.Trim('_')))
 				{
 					player.GetComponent<PlayerAI>().Plundered.Add(gameObject.scene.name.Trim('_'));
 					StopThisEvent();
@@ -63,6 +74,15 @@ public class InvasionScene : MonoBehaviour
 
 	public void StopThisEvent()
 	{
+		gameObject.Destroy(gameObject);
+	}
+
+	public void OnDestroy()
+	{
+		if (!useBiomeTheme)
+		{
+			eventMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		}
 		worldManager.GetComponent<BiomeManager>().eventActive = false;
 		loadingTrigger.UnloadScene(gameObject.scene.name);
 	}

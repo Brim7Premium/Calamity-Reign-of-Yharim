@@ -2473,7 +2473,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 16.875
+  orthographic size: 15
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -4803,6 +4803,7 @@ MonoBehaviour:
   mainCam: {fileID: 392279462}
   bossAlive: 0
   eventActive: 0
+  eventUsesBiome: 0
   day: 1
   nosunlight: 0
   daythemenum: 0
@@ -11492,6 +11493,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1949504729
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4075834575328949700, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -675
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075834575328949700, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075834575328949700, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075834575328949700, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075834575328949700, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075834575328949700, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075834575328949700, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075834575328949700, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075834575328949700, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075834575328949700, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075834575328949753, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
+      propertyPath: m_Name
+      value: GreenSlime
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a6f6413438f8ef446953dadef9716e3b, type: 3}
 --- !u!1001 &1987209639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13110,3 +13168,4 @@ SceneRoots:
   - {fileID: 1478193883}
   - {fileID: 1623743593}
   - {fileID: 518936574}
+  - {fileID: 1949504729}

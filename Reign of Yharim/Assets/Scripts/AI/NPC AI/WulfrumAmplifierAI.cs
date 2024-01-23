@@ -10,7 +10,7 @@ public class WulfrumAmplifierAI : NPC
     private GameObject[] AllGameObj;
     private bool WokeUp = false;
     [SerializeField] private Transform EnergyField;
-    [SerializeField] private GameObject GuardDrone;
+    [SerializeField] private GameObject GuardDrone; // guard boi reference?????
 
     public override void SetDefaults()
     {
@@ -39,7 +39,7 @@ public class WulfrumAmplifierAI : NPC
                     var enemyspawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
                     for(int i = 0; i < 2; i++)
                     {
-                        enemyspawner.SpawnEnemy(GuardDrone, transform.position + new Vector3(-20 + (i * 40), -17, 0));
+                        StartCoroutine(enemyspawner.SpawnEnemy(GuardDrone, transform.position + new Vector3(-20 + (i * 40), -17, 0)));
                     }
                 }
                 if (WokeUp)

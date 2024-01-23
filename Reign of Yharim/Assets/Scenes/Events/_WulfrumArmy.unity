@@ -136,6 +136,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3078223873181979370, guid: 48f5bcc745d8e7d4aafa58779dd13d2b, type: 3}
+      propertyPath: parentBiome
+      value: WulfrumArena
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078223873181979370, guid: 48f5bcc745d8e7d4aafa58779dd13d2b, type: 3}
       propertyPath: eventSpawner
       value: 1
       objectReference: {fileID: 0}
@@ -177,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3613184643395153518, guid: 48f5bcc745d8e7d4aafa58779dd13d2b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6490132153671094614, guid: 48f5bcc745d8e7d4aafa58779dd13d2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -251,6 +255,10 @@ PrefabInstance:
     - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
       propertyPath: theme.Path
       value: event:/Music/Events/SystematicDefiance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
+      propertyPath: useBiomeTheme
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
       propertyPath: theme.Guid.Data1

@@ -155,8 +155,8 @@ TextureImporter:
       name: TEX_Fluids_2
       rect:
         serializedVersion: 2
-        x: 27
-        y: 79
+        x: 1
+        y: 66
         width: 12
         height: 12
       alignment: 0
@@ -176,8 +176,8 @@ TextureImporter:
       name: TEX_Fluids_3
       rect:
         serializedVersion: 2
-        x: 40
-        y: 79
+        x: 14
+        y: 66
         width: 12
         height: 12
       alignment: 0
@@ -187,7 +187,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd0f23ed4be0aa74981093ae84b7c206
+      spriteID: 270dbffdf5b10844e8067f08fa2e4042
       internalID: -288819262
       vertices: []
       indices: 

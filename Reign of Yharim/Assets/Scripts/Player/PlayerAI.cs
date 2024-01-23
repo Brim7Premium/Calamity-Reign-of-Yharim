@@ -94,9 +94,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 
 		foreach (PlatformEffector2D gc in FindObjectsByType<PlatformEffector2D>(FindObjectsInactive.Include, FindObjectsSortMode.None))
 		{
-			Debug.Log("Working");
 			gc.gameObject.GetComponent<TilemapCollider2D>().enabled = !Input.GetButton("Vertical");
-			Debug.Log(!Input.GetButton("Vertical"));
 		}
 
 

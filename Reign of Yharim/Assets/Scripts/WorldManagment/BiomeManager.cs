@@ -18,6 +18,7 @@ public class BiomeManager : MonoBehaviour
 	public Camera mainCam;
 
 	public bool bossAlive, eventActive;
+	public bool eventUsesBiome;
 	private bool bossWasAlive, eventWasActive;
 
 	public EventInstance biometheme, foresttheme;
@@ -65,7 +66,7 @@ public class BiomeManager : MonoBehaviour
 		count = gameObject.GetComponent<GameTime>().count; // get the time of the world
 		day = (count >= 4.5*60 && count < 19.5*60); // calculates if it's day or night
 
-		if (biomeName == "Forest" && day && !bossAlive && !eventActive) // dedicated forest day time system
+		if (biomeName == "Forest" && day && !bossAlive && (!eventActive || eventUsesBiome)) // dedicated forest day time system
 		{	
 			foresttheme.getVolume(out forvol); // get forest volume
 			if (forvol < 1f) // if its not at full volume...
@@ -103,7 +104,7 @@ public class BiomeManager : MonoBehaviour
 			}
 		}
 
-		if ((biomeName != "Forest" || !day) && !bossAlive && !eventActive) // makes the forest themes not stop, and instead only mute
+		if ((biomeName != "Forest" || !day) && !bossAlive && (!eventActive || eventUsesBiome)) // makes the forest themes not stop, and instead only mute
 		{
 			foresttheme.getVolume(out forvol); // get the volume
 			if (forvol >= .01f) // if its not almost muted...
@@ -117,7 +118,7 @@ public class BiomeManager : MonoBehaviour
 			}
 		}
 
-			if ((biomeName != prevBiomeName || wasday != day) && !bossAlive && !eventActive) // if it changes day or you leave the biome
+		if ((biomeName != prevBiomeName || wasday != day) && !bossAlive && (!eventActive || eventUsesBiome)) // if it changes day or you leave the biome
 		{
 			daybg = Color.black; // if the day sky colour isnt set, its just black
 			nightbg = new Color(0.11f, 0.17f, 0.28f); // if the day sky colour isnt set, its just a really dark blue
