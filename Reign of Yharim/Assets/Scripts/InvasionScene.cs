@@ -77,7 +77,7 @@ public class InvasionScene : MonoBehaviour
 		gameObject.Destroy(gameObject);
 	}
 
-	public void OnDestroy()
+	void OnDestroy()
 	{
 		if (!useBiomeTheme)
 		{

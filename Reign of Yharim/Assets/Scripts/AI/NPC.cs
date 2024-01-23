@@ -168,8 +168,10 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 	{
 		if (gameObject.TryGetComponent<SpawnableEnemy>(out SpawnableEnemy idk) && GameObject.Find("Invasion") != null && !GameObject.Find("Invasion").GetComponent<InvasionScene>().timed)
 		{
-			if (idk.eventName == )
-			GameObject.Find("Invasion").GetComponent<InvasionScene>().currentProgress += idk.eventValue;
+			if (idk.eventName == GameObject.Find("Invasion").scene.name.Trim('_'))
+			{
+				GameObject.Find("Invasion").GetComponent<InvasionScene>().currentProgress += idk.eventValue;
+			}
 		}
 		Destroy(gameObject); //specific NPCs can still override
 	}
