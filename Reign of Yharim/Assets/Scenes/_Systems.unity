@@ -2498,7 +2498,7 @@ Transform:
   m_GameObject: {fileID: 392279457}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.7400002, z: -9.65}
+  m_LocalPosition: {x: -28.85, y: 16.96, z: -9.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10075,6 +10075,10 @@ PrefabInstance:
       propertyPath: worldManager
       value: 
       objectReference: {fileID: 819527060}
+    - target: {fileID: 2923608240217537300, guid: 95217208dad42ed4b97f6be8c9721cdf, type: 3}
+      propertyPath: scenesToLoad.Array.data[0]
+      value: WulfrumArmy
+      objectReference: {fileID: 0}
     - target: {fileID: 3450025171314201686, guid: 95217208dad42ed4b97f6be8c9721cdf, type: 3}
       propertyPath: m_Name
       value: LoadingTrigger
@@ -11769,7 +11773,7 @@ Transform:
   m_GameObject: {fileID: 2005344489}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.7400002, z: -9.65}
+  m_LocalPosition: {x: -28.85, y: 16.96, z: -9.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12868,11 +12872,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2160703249615966324, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -28.85
       objectReference: {fileID: 0}
     - target: {fileID: 2160703249615966324, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.84
+      value: 13.86
       objectReference: {fileID: 0}
     - target: {fileID: 2160703249615966324, guid: 11a9cd47724de354c997feb04775b786, type: 3}
       propertyPath: m_LocalPosition.z
