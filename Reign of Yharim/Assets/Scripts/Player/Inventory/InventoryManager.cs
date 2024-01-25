@@ -7,6 +7,7 @@ using System.Linq;
 
 public class InventoryManager : MonoBehaviour
 {
+    //god forgive me for crimes I've commited
     [SerializeField] private InvItem[] inventory;
     public InvItem this[int i] 
     {
@@ -45,56 +46,42 @@ public class InventoryManager : MonoBehaviour
     //Adds in the first availablt slot
     //Universal slots are checked first
     //Slot means anything only in this inventory
-    public bool AddItem(ItemData item, int count = 1, int slot = -1)
+
+    public bool AddItem(ItemData item, int count, int slot)
     {
-        bool AddItem()
+        if(inventory[slot] == null)//if no item in slot
         {
-            if(slot == -1)
-            {
-                for(int i = 0; i<invSize; i++)
-                {
-                    if(inventory[i] == null)//if no item in slot
-                    {
-                        inventory[i] = InvItem.InitItem(item, this, count, i);
-                        return true;
-                    }
-                    else if(inventory[i].item == item && item.stackable)//if the same item in slot
-                    {
-                        inventory[i].count += count;
-                        return true;
-                    }
-                }
-            }
-            else 
-            {
-                if(inventory[slot] == null)//if no item in slot
-                {
-                    inventory[slot] = InvItem.InitItem(item, this, count, slot);
-                    return true;
-                }
-                else if(inventory[slot].item == item && item.stackable)//if the same item in slot
-                {
-                    inventory[slot].count += count;
-                    return true;
-                }
-            }
-
-            return false;
+            inventory[slot] = InvItem.InitItem(item, this, count, slot);
+            return true;
         }
+        else if(inventory[slot].item == item && item.stackable)//if the same item in slot
+        {
+            inventory[slot].count += count;
+            return true;
+        }
+        return false;
+    }
 
-
-
+    
+    public bool AddItem(ItemData item, int count = 1)
+    {
         if(StoringType == ItemData.InventoryType.All)
         {   
 
-            if(AddItem()) return true;
+            for(int i = 0; i<invSize; i++)
+            {
+                if (AddItem(item, count, i)) return true;
+            }
         }
 
         foreach(InventoryManager page in pages)
         {   
             if(page.StoringType == ItemData.InventoryType.All) 
             {
-                if(page.AddItem(item, count)) return true;
+                for(int i = 0; i<invSize; i++)
+                {
+                    if (AddItem(item, count, i)) return true;
+                }
             }
         }
 
@@ -102,20 +89,19 @@ public class InventoryManager : MonoBehaviour
 
         if(StoringType == item.inventoryType)
         {
-            if(AddItem()) return true;
+            for(int i = 0; i<invSize; i++)
+            {
+                if (AddItem(item, count, i)) return true;
+            }
         }
 
         foreach(InventoryManager page in pages)
         {
-            if(page.StoringType == item.inventoryType) 
+            for(int i = 0; i<invSize; i++)
             {
-                if(page.AddItem(item, count)) return true;
+                if (AddItem(item, count, i)) return true;
             }
         }
-
-
-
-
         return false;
     }
     public InvItem TakeItem(ItemData item, int count = -1)

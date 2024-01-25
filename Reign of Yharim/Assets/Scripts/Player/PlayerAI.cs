@@ -140,14 +140,8 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 			InvItem item = gUIController.GetSelectedItem();
             if (item)
             {
-                GameObject worldClone = Instantiate(worldItem, transform.position, Quaternion.identity);
-        		worldClone.GetComponent<WorldItem>().SpawnCooldown(2f);
-        		worldClone.GetComponent<SpriteRenderer>().sprite = item.item.sprite;
-        		worldClone.GetComponent<WorldItem>().myDroppedItem = item.item;
-        		worldClone.GetComponent<WorldItem>().Amount = 1;
-
 				Destroy(item.inventoryManager.TakeItem(item.slot.number, 1).gameObject);
-        		worldClone.GetComponent<Rigidbody2D>().AddForce(new Vector2(200f * isFacing, 200f));
+                WorldItem.InitItem(transform.position, item.item, 1).rb.AddForce(new Vector2(200f * isFacing, 200f));
             }
         }
     }

@@ -9,7 +9,7 @@ using UnityEngine;
 public class WorldItem : MonoBehaviour
 {
     public ItemData myDroppedItem;
-    public int Amount;
+    public int Count;
     public GUIController gUIController;
     public bool isWaiting = false;
     float stackDistance = 3f;
@@ -25,10 +25,23 @@ public class WorldItem : MonoBehaviour
             gUIController = GameObject.Find("GUIManager").GetComponent<GUIController>();
         else
             Debug.LogError("No GUI Manager");
+
+
         layerMask = (1 << LayerMask.NameToLayer("Item")) | (1 << LayerMask.NameToLayer("WalkThroughNPCPlayer"));
 
         gameObject.GetComponent<SpriteRenderer>().sprite = myDroppedItem.sprite;
         rb = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    public static WorldItem InitItem(Vector2 _pos, ItemData _item, int _count, float _spawnCooldown = 2f)
+    {
+        GameObject prefab = Resources.Load<GameObject>("WorldItem");
+        WorldItem script = Instantiate(prefab, _pos, Quaternion.identity).GetComponent<WorldItem>();
+        script.myDroppedItem = _item;
+        script.Count = _count;
+        script.SpawnCooldown(_spawnCooldown);
+        script.Start();
+        return script;
     }
     public void SpawnCooldown(float seconds)
     {
@@ -49,7 +62,7 @@ public class WorldItem : MonoBehaviour
 
         //Items fill move towards the stack with max items in it
         Transform target = null;
-        int maxAmount = Amount;
+        int maxAmount = Count;
 
         foreach(Collider2D item in nearbyItems)
         {
@@ -60,16 +73,16 @@ public class WorldItem : MonoBehaviour
             }
             WorldItem script = item.gameObject.GetComponent<WorldItem>();
 
-            if((script.myDroppedItem == myDroppedItem) && !(item.gameObject == gameObject) && myDroppedItem.stackable && !script.isWaiting && script.Amount>=maxAmount)
+            if((script.myDroppedItem == myDroppedItem) && !(item.gameObject == gameObject) && myDroppedItem.stackable && !script.isWaiting && script.Count>=maxAmount)
             {
                 target = script.transform;
-                maxAmount = script.Amount;
+                maxAmount = script.Count;
             }
         }
 
         if(target)
         {
-            float speed = 50/Amount;
+            float speed = 50/Count;
             rb.velocity = Mathf.Clamp(speed, 3, 10) * (target.position - transform.position).normalized;
         }
 
@@ -77,7 +90,7 @@ public class WorldItem : MonoBehaviour
         {
             if(target.CompareTag("WorldItem"))
             {
-                Amount += target.gameObject.GetComponent<WorldItem>().Amount;
+                Count += target.gameObject.GetComponent<WorldItem>().Count;
                 transform.position = (transform.position+target.position)/2;
                 rb.velocity = Vector2.zero;
                 Destroy(target.gameObject);
@@ -85,7 +98,7 @@ public class WorldItem : MonoBehaviour
             
             else if(target.root.CompareTag("Player"))
             {
-                gUIController.inventoryManager.AddItem(myDroppedItem, Amount);
+                gUIController.inventoryManager.AddItem(myDroppedItem, Count);
                 Destroy(gameObject);
             }
         }

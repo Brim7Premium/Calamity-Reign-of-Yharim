@@ -116,11 +116,24 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
                     inventoryManager = newSlot.inventoryManager;
                     InHand = false;
                 }
+                else if(!newSlot)
+                {
+                    PlayerAI player = GameObject.Find("Player").GetComponent<PlayerAI>();
+                    WorldItem.InitItem(player.transform.position, item, count).rb.AddForce(new Vector2(200f*player.isFacing, 200f));
+                    Destroy(gameObject);
+                }
             }
             else if(eventData.button == PointerEventData.InputButton.Right)
             {
-                newSlot.inventoryManager.AddItem(item, 1, newSlot.number);
-                count -= 1;
+                if(newSlot)
+                {   if(newSlot.inventoryManager.AddItem(item, 1, newSlot.number)) count -= 1;
+                }
+                else
+                {
+                    PlayerAI player = GameObject.Find("Player").GetComponent<PlayerAI>();
+                    WorldItem.InitItem(player.transform.position, item, 1).rb.AddForce(new Vector2(200f*player.isFacing, 200f));
+                    count -= 1;
+                }
             }
         }
     }
