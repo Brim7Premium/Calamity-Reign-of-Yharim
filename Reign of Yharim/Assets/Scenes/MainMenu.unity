@@ -14036,6 +14036,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5a7dd5a963923488ac43161d3f750c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  credits: "THE REIGN OF YHARIM DEVELOPMENT TEAM\r\n\nBrimston Premium\r\nDirector
+    and Creator of Reign of Yharim, Main musician, Game Designer, Programmer, Spriter,
+    and Lore Writer.\r\n\nJello Beanz\r\nAssistant Director and Lead concept artist,
+    Spriter, Game Designer, and Programmer\r\n\nAxolote\r\nLead spriter and concept
+    artist\r\n\nCiggyPlant\r\nConcept Artist\r\n\nAstraGel\r\nMusician and Former
+    spriter\r\n\nLemi Saavedra\r\nLore Writer\r\n\n115101120\r\nProgrammer\r\n\nDestructogabe8\r\nEditor\r\n\nAcsazf
+    Play\r\nProgrammer\r\n\nGuard Boi\r\nProgrammer\r\n\nAbendrot\r\nConcept artist\r\n\nPolusary\r\nConcept
+    artist and Game Designer\r\n\nSalandit\r\nConcept Artist\r\n\nTrester\r\nMusician\r\n\nMAIN
+    CONTRIBUTORS\r\n\nThe Calamity Mod Development team\r\nAll Calamity Mod assets
+    and concepts\r\n\nDM DOKURO\r\nMusic\r\n\nHeart Plus Up!\r\nMusic\r\n\nOTHER
+    CONTRIBUTORS\r\n\nFazin\r\nFormer Programmer\r\n\nDragoncraft9\r\nFormer Concept
+    Artist\r"
   bottomY: 36
   mainmenu: {fileID: 2086259026}
 --- !u!114 &1687175056
@@ -14058,18 +14070,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "THE REIGN OF YHARIM DEVELOPMENT TEAM\r\n\nBrimston Premium\r\nDirector
-    and Creator of Reign of Yharim, Main musician, Game Designer, Programmer, Spriter,
-    and Lore Writer.\r\n\nJello Beanz\r\nAssistant Director and Lead concept artist,
-    Spriter, Game Designer, and Programmer\r\n\nAxolote\r\nLead spriter and concept
-    artist\r\n\nCiggyPlant\r\nConcept Artist\r\n\nAstraGel\r\nMusician and Former
-    spriter\r\n\nLemi Saavedra\r\nLore Writer\r\n\n115101120\r\nProgrammer\r\n\nDestructogabe8\r\nEditor\r\n\nAcsazf
-    Play\r\nProgrammer\r\n\nGuard Boi\r\nProgrammer\r\n\nAbendrot\r\nConcept artist\r\n\nPolusary\r\nConcept
-    artist and Game Designer\r\n\nSalandit\r\nConcept Artist\r\n\nTrester\r\nMusician\r\n\nMAIN
-    CONTRIBUTORS\r\n\nThe Calamity Mod Development team\r\nAll Calamity Mod assets
-    and concepts\r\n\nDM DOKURO\r\nMusic\r\n\nHeart Plus Up!\r\nMusic\r\n\nOTHER
-    CONTRIBUTORS\r\n\nFazin\r\nFormer Programmer\r\n\nDragoncraft9\r\nFormer Concept
-    Artist\r"
+  m_text: 'Tick-tock
+
+    Heavy like a Brinks truck
+
+    Looking like I''m tip-top
+
+    Shining
+    like a wristwatch
+
+    Time will grab your wrist
+
+    Lock it down ''til the
+    thing pop
+
+    Can you stick around for a minute ''til the ring stop?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78e16c922cac74949a165fa232ac0146, type: 2}
   m_sharedMaterial: {fileID: 4239282597463750592, guid: 78e16c922cac74949a165fa232ac0146, type: 2}

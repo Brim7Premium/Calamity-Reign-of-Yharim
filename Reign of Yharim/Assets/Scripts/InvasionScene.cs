@@ -74,7 +74,7 @@ public class InvasionScene : MonoBehaviour
 
 	public void StopThisEvent()
 	{
-		gameObject.Destroy(gameObject);
+		GameObject.Destroy(gameObject);
 	}
 
 	void OnDestroy()
