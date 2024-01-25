@@ -12,14 +12,17 @@ public class LoadingTriggers : MonoBehaviour
 {
 	public List<string> scenesToLoad = new List<string>(), scenesToUnload = new List<string>();
 	public string bossCondition;
+	public Vector2 playerPosition;
 	public bool loadsEvent = false;
 	public GameObject worldManager;
+	public GameObject player;
 
 	void Update()
 	{
 		if (worldManager == null)
 		{
 			worldManager = GameObject.Find("WorldManager");
+			player = GameObject.Find("Player");
 		}
 	}
 
@@ -30,6 +33,10 @@ public class LoadingTriggers : MonoBehaviour
 		{
 			if (!loadsEvent)
 			{
+				if (playerPosition != new Vector2(0, 0) && player != null)
+				{
+					player.transform.position = new Vector3(playerPosition.x, playerPosition.y, 0.35f);
+				}
 				LoadScenes();
 				UnloadScenes();
 			}
