@@ -12,14 +12,31 @@ public class LoadingTriggers : MonoBehaviour
 {
 	public List<string> scenesToLoad = new List<string>(), scenesToUnload = new List<string>();
 	public string bossCondition;
+	public bool loadsEvent = false;
+	public GameObject worldManager;
+
+	void Update()
+	{
+		if (worldManager == null)
+		{
+			worldManager = GameObject.Find("WorldManager");
+		}
+	}
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		UnloadScene("TempCam");
-		if (collision.gameObject.name == "Player" && collision.gameObject.GetComponent<PlayerAI>().Plundered.Contains(bossCondition))
+		if (collision.gameObject.name == "Player" && (string.IsNullOrEmpty(bossCondition) || collision.gameObject.GetComponent<PlayerAI>().Plundered.Contains(bossCondition)))
 		{
-			LoadScenes();
-			UnloadScenes();
+			if (!loadsEvent)
+			{
+				LoadScenes();
+				UnloadScenes();
+			}
+			else if (worldManager != null)
+			{
+				worldManager.GetComponent<Invasions>().StartEvent(scenesToLoad[0]);
+			}
 		}
 	}
 
@@ -33,6 +50,7 @@ public class LoadingTriggers : MonoBehaviour
 
 	public void LoadScene(string scenetoload)
 	{
+		Debug.Log($"Loading {scenetoload}");
 		bool sceneloaded = false;
 		for (int j = 0; j < SceneManager.sceneCount; j++)
 		{
@@ -59,6 +77,7 @@ public class LoadingTriggers : MonoBehaviour
 
 	public void UnloadScene(string scenetounload)
 	{
+		Debug.Log($"Unloading {scenetounload}");
 		for (int j = 0; j < SceneManager.sceneCount; j++)
 		{
 			Scene loadedScene = SceneManager.GetSceneAt(j);

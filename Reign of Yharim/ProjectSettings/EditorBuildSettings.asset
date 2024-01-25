@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Arenas/WulfrumArena.unity
     guid: 9696bee1d5706c347a933e78e8b4eaec
+  - enabled: 1
+    path: Assets/Scenes/Surface 2.unity
+    guid: 0a2c106b0278640468c77d225a69b379
   m_configObjects: {}
