@@ -8,13 +8,18 @@ using System.Linq;
 public class InventoryManager : MonoBehaviour
 {
     [SerializeField] private InvItem[] inventory;
+    public InvItem this[int i] 
+    {
+        get => inventory[i];
+        private set => inventory[i] = value;
+    }
     public InventoryManager[] pages;
     public Transform[] slots;
     public ItemData.InventoryType StoringType;
     public int invSize;
     public Transform GUI;
-    [SerializeField] private GameObject InvItem; 
-    [SerializeField] private GameObject InvSlot;
+    [SerializeField] private GameObject InvItemPrefab; 
+    [SerializeField] private GameObject InvSlotPrefab;
     public void Start()
     {
         //Only referred to this inventory excluding pages
@@ -31,7 +36,7 @@ public class InventoryManager : MonoBehaviour
         }
         for(;i<invSize; i++)
         {
-            InvSlot slot = Instantiate(InvSlot, GUI).GetComponent<InvSlot>();
+            InvSlot slot = Instantiate(InvSlotPrefab, GUI).GetComponent<InvSlot>();
             slot.number = i;
             slot.inventoryManager = this;
             slots[i] = slot.transform;
@@ -39,24 +44,37 @@ public class InventoryManager : MonoBehaviour
     }
     //Adds in the first availablt slot
     //Universal slots are checked first
-    //Slot parameter removed because I couldn't make sense out of it
-    public bool AddItem(ItemData item, int count = 1)
+    //Slot means anything only in this inventory
+    public bool AddItem(ItemData item, int count = 1, int slot = -1)
     {
         bool AddItem()
         {
-            for(int i = 0; i<invSize; i++)
+            if(slot == -1)
             {
-                if(inventory[i] == null)//if no item in slot
+                for(int i = 0; i<invSize; i++)
                 {
-                    GameObject invItem = Instantiate(InvItem, slots[i]);
-                    inventory[i] = invItem.GetComponent<InvItem>();
-                    inventory[i].InitItem(item, this, count);
-                    inventory[i].slot = slots[i].GetComponent<InvSlot>();
+                    if(inventory[i] == null)//if no item in slot
+                    {
+                        inventory[i] = InvItem.InitItem(item, this, count, i);
+                        return true;
+                    }
+                    else if(inventory[i].item == item && item.stackable)//if the same item in slot
+                    {
+                        inventory[i].count += count;
+                        return true;
+                    }
+                }
+            }
+            else 
+            {
+                if(inventory[slot] == null)//if no item in slot
+                {
+                    inventory[slot] = InvItem.InitItem(item, this, count, slot);
                     return true;
                 }
-                else if(inventory[i].item == item && item.stackable)//if the same item in slot
+                else if(inventory[slot].item == item && item.stackable)//if the same item in slot
                 {
-                    inventory[i].count += count;
+                    inventory[slot].count += count;
                     return true;
                 }
             }
@@ -201,9 +219,8 @@ public class InventoryManager : MonoBehaviour
         else
         {
             item.count -= count;
-            InvItem newItem = Instantiate(InvItem, slots[slot]).GetComponent<InvItem>();
-            newItem.InitItem(item.item, this, count);
-            return newItem;
+            
+            return InvItem.InitItem(item.item, this, count);
         }
     }
     

@@ -30,17 +30,31 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
         
     }
     [HideInInspector] public Transform parentAfterDrag;
-    [HideInInspector] public bool dragging;
+    [HideInInspector] public bool InHand;
     public InventoryManager inventoryManager;
     public InvSlot slot;
-    public void InitItem(ItemData _item, InventoryManager _inventoryManager, int _count = 1)
+    //Defaults to hand
+    public static InvItem InitItem(ItemData _item, InventoryManager _inventoryManager, int _count = 1, int _slot = -1)
     {
-        item = _item;
-        count = _count;
-        image = gameObject.GetComponent<Image>();
-        image.sprite = _item.sprite;
-        inventoryManager = _inventoryManager;
-        ReCount();
+        GameObject prefab = Resources.Load<GameObject>("InvItem");
+        InvItem script;
+        if(_slot != -1){
+            script = Instantiate(prefab, _inventoryManager.slots[_slot]).GetComponent<InvItem>();
+            script.slot = _inventoryManager.slots[_slot].gameObject.GetComponent<InvSlot>();
+        }
+        else
+        {
+            script = Instantiate(prefab, _inventoryManager.slots[0].root).GetComponent<InvItem>();
+            script.slot = null;
+        }
+        
+        script.item = _item;
+        script.count = _count;
+        script.image = script.gameObject.GetComponent<Image>();
+        script.image.sprite = _item.sprite;
+        script.inventoryManager = _inventoryManager;
+        script.ReCount();
+        return script;
     }
     public void ReCount()
     {
@@ -50,25 +64,38 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
     }
     void Update()
     {
-        if(dragging)
+        if(InHand)
         {
             Debug.Log("Dragging");
             Vector2 mousePosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = mousePosition;
         }
     }
+    public void PutInHand()
+    {
+        Debug.Log("Begin Drag");
+        slot = null;
+        //Item won't be covered up by other UI elements
+        transform.SetParent(transform.root); 
+        transform.SetAsLastSibling(); 
+        InHand = true;
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(!dragging)
+        if(!InHand)
         {
-            inventoryManager.TakeItem(transform.parent.gameObject.GetComponent<InvSlot>().number);
-            Debug.Log("Begin Drag");
-            
-            //Item won't be covered up by other UI elements
-            transform.SetParent(transform.root); 
-            transform.SetAsLastSibling(); 
-            dragging = true;
+            if(eventData.button == PointerEventData.InputButton.Left)
+            {
+                inventoryManager.TakeItem(transform.parent.gameObject.GetComponent<InvSlot>().number);
+                PutInHand();
+            }
+
+            else if(eventData.button == PointerEventData.InputButton.Right)
+            {
+                inventoryManager.TakeItem(transform.parent.gameObject.GetComponent<InvSlot>().number, 1).PutInHand();
+            }
         }
+
         else
         {
             //gets slot underneath the cursor if such exists
@@ -81,13 +108,19 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
                 if (i.gameObject.TryGetComponent<InvSlot>(out newSlot)) break;
             }
 
-            if(newSlot && newSlot.inventoryManager.AddItem(this, newSlot.number)) 
+            if(eventData.button == PointerEventData.InputButton.Left)
             {
-                transform.SetParent(newSlot.transform);
-                slot = newSlot;
-                inventoryManager = newSlot.inventoryManager;
-                dragging = false;
-                image.raycastTarget = true;
+                if(newSlot && newSlot.inventoryManager.AddItem(this, newSlot.number)) 
+                {
+                    slot = newSlot;
+                    inventoryManager = newSlot.inventoryManager;
+                    InHand = false;
+                }
+            }
+            else if(eventData.button == PointerEventData.InputButton.Right)
+            {
+                newSlot.inventoryManager.AddItem(item, 1, newSlot.number);
+                count -= 1;
             }
         }
     }
