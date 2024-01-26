@@ -38,7 +38,6 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 	[Header("Misc")]
 	[SerializeField] private GameObject targetTestObject;
 	public List<string> Plundered = new List<string>();
-	public GameObject worldManager;
 
 	[SerializeField] [Range(1, 180)] private int framerate; //create int with range of 1 to 180, used for setting framerate. Why this is in the player's AI  script will remain unknown for eternity
 
@@ -317,7 +316,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
 				biomename = biomename.Substring(0, index);
 			}
 			Debug.Log($"In {collision.gameObject.scene.name}");
-			worldManager.GetComponent<BiomeManager>().biomeName = biomename;
+			BiomeManager.instance.biomeName = biomename;
 		}
 	}
 }

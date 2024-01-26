@@ -71,10 +71,6 @@ public class GreenSlimeAI : NPC
         transform.rotation = Quaternion.Euler(0, 0, NeededRotation);
 
     }
-    void OnDestroy()
-    {
-        
-    }
     void FixedUpdate()
     {
         float Height = 0.85f; //new float extraHeight equals 0.1

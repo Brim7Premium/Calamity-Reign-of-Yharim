@@ -33,7 +33,7 @@ public class LoadingTriggers : MonoBehaviour
 		{
 			if (!loadsEvent)
 			{
-				if (playerPosition != new Vector2(0, 0) && player != null)
+				if (playerPosition != new Vector2(0f, 0f) && player != null)
 				{
 					player.transform.position = new Vector3(playerPosition.x, playerPosition.y, 0.35f);
 				}

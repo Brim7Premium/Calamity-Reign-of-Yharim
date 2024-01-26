@@ -10,7 +10,7 @@ using FMOD.Studio;
 
 public class GameTime : MonoBehaviour
 {
-	public int count;
+	public static int count = 270;
 	public static string displayTime;
 
 	public Transform orbitPoint;
@@ -29,15 +29,19 @@ public class GameTime : MonoBehaviour
 			settingsobj.AddComponent<bracketSettingsbracket>();
 			DontDestroyOnLoad(settingsobj);
 		}
-		var miltime = settingsobj.GetComponent<bracketSettingsbracket>().militaryTime;
+		var miltime = bracketSettingsbracket.instance.militaryTime;
 		while (true)
 		{
-			if(count >= 24*60){count = 0;}
+			if (count >= 24*60)
+			{
+				count = 0;
+			}
 
 			if (miltime)
 			{
 				displayTime = $"{count/60:d2} : {count%60:d2}";
 			}
+
 			else
 			{
 				var min = $"{count%60:d2}";

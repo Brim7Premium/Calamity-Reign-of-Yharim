@@ -5,33 +5,29 @@ public class ParallaxBackground : MonoBehaviour
 	[SerializeField] private Transform background; //the transform of the attached background object
 	[SerializeField] private float parallaxEffectX, parallaxEffectY, smoothing = 1f;
 
-	private GameObject worldmanager, player;
+	private GameObject player;
 	private Transform cameraTransform; //the transform of the main camera
 	private Vector3 previousCameraPosition; //the previous camera position
 	private string scenename;
 
 	private void FixedUpdate()
 	{
-		if (worldmanager == null && player == null)
+		if (player == null)
 		{
-			worldmanager = GameObject.Find("WorldManager");
 			player = GameObject.Find("Player");
-			if (worldmanager != null && player != null)
-			{
-				cameraTransform = Camera.main.transform;
-				previousCameraPosition = cameraTransform.position;
-				scenename = this.gameObject.scene.name;
-				int index = scenename.IndexOf("_");
-				if (index >= 0)
-				{
-					scenename = scenename.Substring(0, index);
-				}
-			}
 		}
 
-		if (worldmanager != null && player != null)
+		else
 		{
-			if (worldmanager.GetComponent<BiomeManager>().biomeName == scenename)
+			cameraTransform = Camera.main.transform;
+			previousCameraPosition = cameraTransform.position;
+			scenename = this.gameObject.scene.name;
+			int index = scenename.IndexOf("_");
+			if (index >= 0)
+			{
+				scenename = scenename.Substring(0, index);
+			}
+			if (BiomeManager.instance.biomeName == scenename)
 			{
 				if (this.transform.GetChild(0).GetChild(0).gameObject.GetComponent<SpriteRenderer>().color.a < 1f)
 				{

@@ -12,6 +12,7 @@ using FMOD.Studio;
 
 public class BiomeManager : MonoBehaviour
 {
+	public static BiomeManager instance;
 	[SerializeField] private GameObject player;
 	public string biomeName = "Forest", prevBiomeName;
 
@@ -22,7 +23,8 @@ public class BiomeManager : MonoBehaviour
 	private bool bossWasAlive, eventWasActive;
 
 	public EventInstance biometheme, foresttheme;
-	public bool day = true, nosunlight;
+	public bool day = true;
+	public bool nosunlight;
 	private bool wasday;
 	[SerializeField] private int daythemenum = 0;
 
@@ -63,7 +65,7 @@ public class BiomeManager : MonoBehaviour
 	void ManageBiome()
 	{
 		var forvol = 1f; // this is the volume of the forest theme
-		count = gameObject.GetComponent<GameTime>().count; // get the time of the world
+		count = GameTime.count; // get the time of the world
 		day = (count >= 4.5*60 && count < 19.5*60); // calculates if it's day or night
 
 		if (biomeName == "Forest" && day && !bossAlive && (!eventActive || eventUsesBiome)) // dedicated forest day time system
@@ -285,5 +287,13 @@ public class BiomeManager : MonoBehaviour
 		{
 			SunLight.intensity = 1f + 0.05f;
 		}
+	}
+	private void Awake()
+	{
+		if (instance != null)
+		{
+			Debug.LogError("Found more than one [Settings] in the scene");
+		}
+		instance = this;
 	}
 }

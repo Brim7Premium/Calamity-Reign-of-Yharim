@@ -13,12 +13,12 @@ public class AudioManager : MonoBehaviour
 
 	[Header("Volume")]
 	[Range(0, 1)]
-	public float musicVolume = 1;
+	public float musicVolume = 1; // the volume of music
 	[Range(0, 1)]
-	public float SFXVolume = 1;
+	public float SFXVolume = 1; // the volume of ambience and sfx
 
-	private Bus musicBus;
-	private Bus SFXBus;
+	private Bus musicBus; // the music group set in the mixer
+	private Bus SFXBus; // the sfx group set in the mixer
 
 	private GameObject settingsobj;
 
@@ -43,8 +43,8 @@ public class AudioManager : MonoBehaviour
 		musicBus = RuntimeManager.GetBus("bus:/Music");
 		SFXBus = RuntimeManager.GetBus("bus:/SFX");
 
-		musicVolume = settingsobj.GetComponent<bracketSettingsbracket>().musicVolume;
-		SFXVolume = settingsobj.GetComponent<bracketSettingsbracket>().SFXVolume;
+		musicVolume = bracketSettingsbracket.instance.musicVolume;
+		SFXVolume = bracketSettingsbracket.instance.SFXVolume;
 	}
 
 	public void SliderValueChange(bool sfx)
@@ -54,7 +54,7 @@ public class AudioManager : MonoBehaviour
 			var sliderobj = GameObject.Find("MusicSlider");
 			var volumeSlider = sliderobj.GetComponent<Slider>();
 			musicVolume = volumeSlider.value;
-			settingsobj.GetComponent<bracketSettingsbracket>().musicVolume = volumeSlider.value;
+			bracketSettingsbracket.instance.musicVolume = volumeSlider.value;
 			var indicator = volumeSlider.GetComponent<TextMeshProUGUI>();
 			indicator.text = ((int)(volumeSlider.value * 100)).ToString();
 		}
@@ -64,7 +64,7 @@ public class AudioManager : MonoBehaviour
 			var sliderobj = GameObject.Find("SFXSlider");
 			var volumeSlider = sliderobj.GetComponent<Slider>();
 			SFXVolume = volumeSlider.value;
-			settingsobj.GetComponent<bracketSettingsbracket>().SFXVolume = volumeSlider.value;
+			bracketSettingsbracket.instance.SFXVolume = volumeSlider.value;
 			var indicator = volumeSlider.GetComponent<TextMeshProUGUI>();
 			indicator.text = ((int)(volumeSlider.value * 100)).ToString();
 		}

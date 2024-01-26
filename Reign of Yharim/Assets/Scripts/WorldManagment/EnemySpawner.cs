@@ -15,15 +15,14 @@ using FMOD.Studio;
 public class EnemySpawner : MonoBehaviour
 {
 	public GameObject player;
-	public List<SpawnableEnemy> enemiesToSpawn = new List<SpawnableEnemy>(); // this script must be added to the prefab for enemies you want to naturally spawn, as it sets their spawn chance and condition
-	public float spawnRate = 5;
+	public List<SpawnableEnemy> enemiesToSpawn = new List<SpawnableEnemy>(); // this script must be added to the prefab for enemies you want to naturally spawn, as it sets their spawn chance and condition ect
+	public float spawnRate = 5; // how often you want to try to spawn enemies
 
-	public string parentBiome;
-	public GameObject worldManager;
+	public string parentBiome; // the biome this spawner uses, can be set manually for whatever reason
 
 	public IEnumerator SpawnEnemies()
 	{
-		if (!worldManager.GetComponent<BiomeManager>().bossAlive && (string.IsNullOrEmpty(parentBiome) || worldManager.GetComponent<BiomeManager>().biomeName == parentBiome))
+		if (!BiomeManager.instance.bossAlive && (string.IsNullOrEmpty(parentBiome) || BiomeManager.instance.biomeName == parentBiome))
 		{
 			for (int i = 0; i < enemiesToSpawn.Count; ++i) // iterate through the list of enemies this object can spawn
 			{
@@ -47,16 +46,15 @@ public class EnemySpawner : MonoBehaviour
 	{	
 		if (string.IsNullOrEmpty(parentBiome))
 		{
-			int index = this.gameObject.scene.name.IndexOf("_");
+			int index = gameObject.scene.name.IndexOf("_");
 			if (index >= 0)
 			{
-				parentBiome = this.gameObject.scene.name.Substring(0, index); // gets the biome from the scene
+				parentBiome = gameObject.scene.name.Substring(0, index); // gets the biome from the scene
 			}
 		}
-		while (player == null) // used to get the player and worldmanager
+		while (player == null)
 		{
 			player = GameObject.Find("Player");
-			worldManager = player.GetComponent<PlayerAI>().worldManager;
 		}
 		while (true)
 		{
@@ -97,7 +95,7 @@ public class EnemySpawner : MonoBehaviour
 
 		if (enemyPrefab != null) // if the prefab is actually valid
 		{
-			if (string.IsNullOrEmpty(parentBiome) || worldManager.GetComponent<BiomeManager>().biomeName == parentBiome) // if youre in the spawner's biome
+			if (string.IsNullOrEmpty(parentBiome) || BiomeManager.instance.biomeName == parentBiome) // if youre in the spawner's biome
 			{
 				GameObject newEnemy = Instantiate(enemyPrefab, SpawnPosition, Quaternion.identity); // spawn the enemy
 				if (newEnemy.scene != player.scene)

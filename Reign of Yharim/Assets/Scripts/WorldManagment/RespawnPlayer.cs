@@ -29,7 +29,7 @@ public class RespawnPlayer : MonoBehaviour
 			settingsobj.AddComponent<bracketSettingsbracket>();
 			DontDestroyOnLoad(settingsobj);
 		}
-		var respawnSeconds = settingsobj.GetComponent<bracketSettingsbracket>().respawnTime;
+		var respawnSeconds = bracketSettingsbracket.instance.respawnTime;
 		var seconds = respawnSeconds;
 		timerobj.SetActive(true);
 		while (0 < seconds)
@@ -47,9 +47,9 @@ public class RespawnPlayer : MonoBehaviour
 			for (int j = 0; j < SceneManager.sceneCount; j++)
 			{
 				Scene loadedScene = SceneManager.GetSceneAt(j);
-				if (loadedScene.name.StartsWith(playerAI.worldManager.GetComponent<BiomeManager>().biomeName))
+				if (loadedScene.name.StartsWith(BiomeManager.instance.biomeName))
 				{
-					loadingtriggerss.UnloadScene(playerAI.worldManager.GetComponent<BiomeManager>().biomeName);
+					loadingtriggerss.UnloadScene(BiomeManager.instance.biomeName);
 				}
 			}
 			loadingtriggerss.LoadScene("Forest_Spawn");

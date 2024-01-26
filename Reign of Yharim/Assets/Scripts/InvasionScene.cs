@@ -42,10 +42,10 @@ public class InvasionScene : MonoBehaviour
 
 		else
 		{
-			worldManager.GetComponent<BiomeManager>().eventUsesBiome = useBiomeTheme;
-			worldManager.GetComponent<BiomeManager>().daybg = daybg;
-			worldManager.GetComponent<BiomeManager>().nightbg = nightbg;
-			worldManager.GetComponent<BiomeManager>().nosunlight = showSun;
+			BiomeManager.instance.eventUsesBiome = useBiomeTheme;
+			BiomeManager.instance.daybg = daybg;
+			BiomeManager.instance.nightbg = nightbg;
+			BiomeManager.instance.nosunlight = showSun;
 			loadingTrigger = worldManager.GetComponent<Invasions>().loadingTrigger;
 
 			if (timed)
@@ -83,7 +83,7 @@ public class InvasionScene : MonoBehaviour
 		{
 			eventMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 		}
-		worldManager.GetComponent<BiomeManager>().eventActive = false;
+		BiomeManager.instance.eventActive = false;
 		loadingTrigger.UnloadScene(gameObject.scene.name);
 	}
 }

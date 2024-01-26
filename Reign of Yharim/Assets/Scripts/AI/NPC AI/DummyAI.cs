@@ -27,7 +27,7 @@ public class DummyAI : NPC
         }
         if (randomNumber == 50)
         {
-            dialogueStuff.SetDialogue("Keep yourself safe tonight Jacob Bryson", gameObject.GetComponent<SpriteRenderer>(), 2f);
+            dialogueStuff.SetDialogue("Keep yourself safe tonight Jacob Bryson", gameObject.GetComponent<SpriteRenderer>(), 2f); // holy shit its real
         }
     }
 }

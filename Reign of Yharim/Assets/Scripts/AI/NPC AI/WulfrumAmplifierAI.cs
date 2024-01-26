@@ -29,7 +29,7 @@ public class WulfrumAmplifierAI : NPC
     {
         if (target != null)
         {
-            AllGameObj = SceneManager.GetActiveScene().GetRootGameObjects();
+            AllGameObj = gameObject.scene.GetRootGameObjects();
 
             if(EnergyField.localScale.x < 1)
             {

@@ -61,13 +61,13 @@ public class MainMenu : MonoBehaviour
 		Slider timeSlider = respawntimeSliderObj.GetComponent<Slider>();
 		TextMeshProUGUI indicator = respawntimeSliderObj.GetComponent<TextMeshProUGUI>();
 		indicator.text = ((int)timeSlider.value).ToString();
-		settingsobj.GetComponent<bracketSettingsbracket>().respawnTime = (int)timeSlider.value;
+		bracketSettingsbracket.instance.respawnTime = (int)timeSlider.value;
 	}
 
 	[SerializeField] private Toggle militaryTimeToggle;
 	public void setmilitarytime()
 	{
-		settingsobj.GetComponent<bracketSettingsbracket>().militaryTime = militaryTimeToggle.isOn;
+		bracketSettingsbracket.instance.militaryTime = militaryTimeToggle.isOn;
 	}
 
 	public void ChangeMenuScreen(float menuID)

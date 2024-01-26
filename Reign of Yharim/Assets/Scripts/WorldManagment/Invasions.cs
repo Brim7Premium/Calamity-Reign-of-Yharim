@@ -19,7 +19,7 @@ public class Invasions : MonoBehaviour
 
 	public void StartEvent(string EventName)
 	{
-		if (!this.gameObject.GetComponent<BiomeManager>().eventActive)
+		if (!BiomeManager.instance.eventActive)
 		{
 			loadingTrigger.LoadScene("_" + EventName);
 		}
@@ -27,7 +27,7 @@ public class Invasions : MonoBehaviour
 
 	void Update()
 	{
-		if (gameObject.GetComponent<BiomeManager>().bossAlive)
+		if (BiomeManager.instance.bossAlive)
 		{
 			StopEvent();
 		}
@@ -35,7 +35,7 @@ public class Invasions : MonoBehaviour
 
 	public void StopEvent()
 	{
-		if (gameObject.GetComponent<BiomeManager>().eventActive)
+		if (BiomeManager.instance.eventActive)
 		{
 			GameObject invasionobj = GameObject.Find("Invasion");
 			if (invasionobj != null)
