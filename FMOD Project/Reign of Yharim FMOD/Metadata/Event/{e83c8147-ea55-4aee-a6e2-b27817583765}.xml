@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{e83c8147-ea55-4aee-a6e2-b27817583765}">
 		<property name="name">
-			<value>LegendStrifeFull</value>
+			<value>LegendStrife</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

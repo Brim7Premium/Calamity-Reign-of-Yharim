@@ -435,6 +435,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2576
   Exists: 1
+--- !u!114 &-6403539535283393727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/Lava
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/Lava
+  Guid:
+    Data1: 1088057244
+    Data2: 1193497821
+    Data3: -252216143
+    Data4: -1713050625
+  Banks:
+  - {fileID: -4679523449588917092}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7859
 --- !u!114 &-6376159231413778433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,10 +956,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638405685274293187
+  lastModified: 638418175289216676
   FileSizes:
   - Name: Desktop
-    Value: 579616
+    Value: 580608
   Exists: 1
 --- !u!114 &-4615554068745817254
 MonoBehaviour:
@@ -986,6 +1013,34 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-4536295763681158084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Other/Extras/LegendStrife
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Other/Extras/LegendStrife
+  Guid:
+    Data1: -398687929
+    Data2: 1257171541
+    Data3: 2024989350
+    Data4: 1698125847
+  Banks:
+  - {fileID: 5402814827843651135}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8291574909383279299}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 908661
 --- !u!114 &-4521318678269260709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1222,34 +1277,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-3146359653748575253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Other/Extras/LegendStrifeFull
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Other/Extras/LegendStrifeFull
-  Guid:
-    Data1: -398687929
-    Data2: 1257171541
-    Data3: 2024989350
-    Data4: 1698125847
-  Banks:
-  - {fileID: 5402814827843651135}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -2084109684716778382}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 908661
 --- !u!114 &-3137018336829898222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1410,30 +1437,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 143992
---- !u!114 &-2084109684716778382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/LegendStrifeFull/Equalizer
-  m_EditorClassIdentifier: 
-  Name: Equalizer
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 973155390
-    data2: 966299783
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
 --- !u!114 &-1895497813090959310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1831,7 +1834,6 @@ MonoBehaviour:
   - {fileID: 5203133490103899468}
   - {fileID: 3906102389379007193}
   - {fileID: -3635206378234891381}
-  - {fileID: -3146359653748575253}
   - {fileID: 3279659752069959210}
   - {fileID: 937893429970968826}
   - {fileID: 7940676542211197141}
@@ -1867,13 +1869,15 @@ MonoBehaviour:
   - {fileID: -8342216175145771761}
   - {fileID: 1925163534953682409}
   - {fileID: 8608167459822141207}
+  - {fileID: -4536295763681158084}
+  - {fileID: -6403539535283393727}
   EditorParameters:
   - {fileID: -2705954182957021726}
   MasterBanks:
   - {fileID: 7922514285120898230}
   StringsBanks:
   - {fileID: 7607827413165057428}
-  cacheTime: 638414542735330231
+  cacheTime: 638418175289216676
   cacheVersion: 131616
 --- !u!114 &185198468472118980
 MonoBehaviour:
@@ -2918,10 +2922,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638414542735330231
+  lastModified: 638418175287146420
   FileSizes:
   - Name: Desktop
-    Value: 59171936
+    Value: 59171488
   Exists: 1
 --- !u!114 &5414037802927865691
 MonoBehaviour:
@@ -3350,10 +3354,10 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638410097815732656
+  lastModified: 638418175246430434
   FileSizes:
   - Name: Desktop
-    Value: 2946
+    Value: 2988
   Exists: 1
 --- !u!114 &7642177175457304554
 MonoBehaviour:
@@ -3474,7 +3478,7 @@ MonoBehaviour:
   Path: ../FMOD Project/Reign of Yharim FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638410097815690917
+  lastModified: 638418175246390732
   FileSizes:
   - Name: Desktop
     Value: 1526
@@ -3542,6 +3546,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/StainedBrutalLament/Equalizer
+  m_EditorClassIdentifier: 
+  Name: Equalizer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 973155390
+    data2: 966299783
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &8291574909383279299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LegendStrife/Equalizer
   m_EditorClassIdentifier: 
   Name: Equalizer
   StudioPath: 

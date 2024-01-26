@@ -5,81 +5,84 @@ using UnityEngine.SceneManagement;
 
 public class WulfrumAmplifierAI : NPC
 {
-    private bool spotted;
-    private Color color;
-    private GameObject[] AllGameObj;
-    private bool WokeUp = false;
-    [SerializeField] private Transform EnergyField;
-    [SerializeField] private GameObject GuardDrone; // guard boi reference?????
+	private bool spotted;
+	private Color color;
+	private GameObject[] AllGameObj;
+	private bool WokeUp = false;
+	[SerializeField] private Transform EnergyField;
+	[SerializeField] private GameObject GuardDrone; // guard boi reference?????
 
-    public override void SetDefaults()
-    {
-        base.SetDefaults();
+	private EnemySpawner enemyspawner;
 
-        NPCName = "WulfrumAmplifier";
-        Damage = 0;
-        LifeMax = 92;
-        Life = LifeMax;
-        target = GameObject.Find("Player");
+	public override void SetDefaults()
+	{
+		base.SetDefaults();
 
-        spotted = false;
+		NPCName = "WulfrumAmplifier";
+		Damage = 0;
+		LifeMax = 92;
+		Life = LifeMax;
+		target = GameObject.Find("Player");
 
-    }
-    public override void AI()
-    {
-        if (target != null)
-        {
-            AllGameObj = gameObject.scene.GetRootGameObjects();
+		spotted = false;
+		
+		enemyspawner = GameObject.Find("DefEnemySpawner").GetComponent<EnemySpawner>();
 
-            if(EnergyField.localScale.x < 1)
-            {
-                if(Vector2.Distance(target.transform.position, transform.position) <= 7 && !WokeUp)
-                {
-                    WokeUp = true;
-                    var enemyspawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
-                    for(int i = 0; i < 2; i++)
-                    {
-                        StartCoroutine(enemyspawner.SpawnEnemy(GuardDrone, transform.position + new Vector3(-20 + (i * 40), -17, 0)));
-                    }
-                }
-                if (WokeUp)
-                {
-                    EnergyField.localScale += new Vector3(Time.deltaTime, Time.deltaTime, 0);
-                    EnergyField.transform.GetChild(0).localScale += new Vector3(Time.deltaTime, Time.deltaTime, 0);
-                }
-                if (EnergyField.localScale.x > 1)
-                {
-                    EnergyField.localScale = new Vector3(1, 1, 0);
-                    EnergyField.transform.GetChild(0).localScale = new Vector3(1, 1, 0);
-                }
-            }
+	}
+	public override void AI()
+	{
+		if (target != null)
+		{
+			AllGameObj = gameObject.scene.GetRootGameObjects();
 
-            foreach (var Obj in AllGameObj)
-            {
-                if (Obj != null)
-                {
-                    if (Obj.GetComponent<NPC>() != null)
-                    {
-                        if (Vector2.Distance(transform.position, Obj.transform.position) <= 15.2f && Obj.GetComponent<NPC>().ai[1] < 1 && Obj.GetComponent<NPC>().IsWulfrumGuy)
-                        {
-                            Obj.GetComponent<NPC>().ai[1] = 1; // ai 1 is amount of seconds the Wulfrum enemy will be charged
-                        }
-                    }
-                }
-            }
+			if(EnergyField.localScale.x < 1)
+			{
+				if(Vector2.Distance(target.transform.position, transform.position) <= 7 && !WokeUp)
+				{
+					WokeUp = true;
+					for(int i = 0; i < UnityEngine.Random.Range(2, 4); i++)
+					{
+						StartCoroutine(enemyspawner.SpawnEnemy(GuardDrone, transform.position + new Vector3(-20 + (i * 40), -17, 0)));
+					}
+				}
+				if (WokeUp)
+				{
+					EnergyField.localScale += new Vector3(Time.deltaTime, Time.deltaTime, 0);
+					EnergyField.transform.GetChild(0).localScale += new Vector3(Time.deltaTime, Time.deltaTime, 0);
+				}
+				if (EnergyField.localScale.x > 1)
+				{
+					EnergyField.localScale = new Vector3(1, 1, 0);
+					EnergyField.transform.GetChild(0).localScale = new Vector3(1, 1, 0);
+				}
+			}
 
-            if (!IsVisibleFromCamera())
-            {
-                spotted = false;
-                ai[0] = 0.0f;
-            }
+			foreach (var Obj in AllGameObj)
+			{
+				if (Obj != null)
+				{
+					if (Obj.GetComponent<NPC>() != null)
+					{
+						if (Vector2.Distance(transform.position, Obj.transform.position) <= 15.2f && Obj.GetComponent<NPC>().ai[1] < 1 && Obj.GetComponent<NPC>().IsWulfrumGuy)
+						{
+							Obj.GetComponent<NPC>().ai[1] = 1; // ai 1 is amount of seconds the Wulfrum enemy will be charged
+						}
+					}
+				}
+			}
 
-            DrawDistance(transform.position, target.transform.position, color);
+			if (!IsVisibleFromCamera())
+			{
+				spotted = false;
+				ai[0] = 0.0f;
+			}
 
-            if (DistanceBetween(transform.position, target.transform.position) > 60f && spotted == false)
-            {
-                Destroy(gameObject); //despawn the object
-            }
-        }
-    }
+			DrawDistance(transform.position, target.transform.position, color);
+
+			if (DistanceBetween(transform.position, target.transform.position) > 60f && spotted == false)
+			{
+				Destroy(gameObject); //despawn the object
+			}
+		}
+	}
 }

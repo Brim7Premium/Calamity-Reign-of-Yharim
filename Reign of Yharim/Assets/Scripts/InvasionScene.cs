@@ -31,7 +31,7 @@ public class InvasionScene : MonoBehaviour
 		if (worldManager == null)
 		{
 			worldManager = GameObject.Find("WorldManager");
-			enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
+			enemySpawner = GameObject.Find("DefEnemySpawner").GetComponent<EnemySpawner>();
 			player = GameObject.Find("Player");
 			if (!useBiomeTheme)
 			{

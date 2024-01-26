@@ -39,20 +39,20 @@ public class RespawnPlayer : MonoBehaviour
 			seconds -= 1;
 		}
 		seconds = respawnSeconds;
-		var loadingtriggerssobj = GameObject.Find("LoadingTrigger");
+		var loadingtriggerobj = GameObject.Find("DefLoadingTrigger");
 		timerobj.SetActive(false);
-		if (loadingtriggerssobj != null)
+		if (loadingtriggerobj != null)
 		{
-			var loadingtriggerss = loadingtriggerssobj.GetComponent<LoadingTriggers>();
+			var loadingtrigger = loadingtriggerobj.GetComponent<LoadingTriggers>();
 			for (int j = 0; j < SceneManager.sceneCount; j++)
 			{
 				Scene loadedScene = SceneManager.GetSceneAt(j);
 				if (loadedScene.name.StartsWith(BiomeManager.instance.biomeName))
 				{
-					loadingtriggerss.UnloadScene(BiomeManager.instance.biomeName);
+					loadingtrigger.UnloadScene(BiomeManager.instance.biomeName);
 				}
 			}
-			loadingtriggerss.LoadScene("Forest_Spawn");
+			loadingtrigger.LoadScene("Forest_Spawn");
 			player.SetActive(true);
 			playerAI.SetDefaults();
 			playerAI.StartCoroutine(playerAI.Immunity());

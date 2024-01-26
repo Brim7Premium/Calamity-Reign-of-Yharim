@@ -3463,7 +3463,7 @@ PrefabInstance:
       objectReference: {fileID: 819527060}
     - target: {fileID: 3613184643395153518, guid: 48f5bcc745d8e7d4aafa58779dd13d2b, type: 3}
       propertyPath: m_Name
-      value: EnemySpawner
+      value: DefEnemySpawner
       objectReference: {fileID: 0}
     - target: {fileID: 6490132153671094614, guid: 48f5bcc745d8e7d4aafa58779dd13d2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4836,7 +4836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86889b753d6906418cfa58a66d202d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 270
   orbitPoint: {fileID: 1545188729}
   rotation: {x: 0, y: 0, z: 0}
   player: {fileID: 1250109776}
@@ -10085,7 +10084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3450025171314201686, guid: 95217208dad42ed4b97f6be8c9721cdf, type: 3}
       propertyPath: m_Name
-      value: LoadingTrigger
+      value: DefLoadingTrigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

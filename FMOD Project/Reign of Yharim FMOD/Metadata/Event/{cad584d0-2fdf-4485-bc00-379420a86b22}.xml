@@ -167,12 +167,6 @@
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
 		</property>
-		<property name="initialValue">
-			<value>10</value>
-		</property>
-		<property name="peakValue">
-			<value>-1</value>
-		</property>
 		<property name="holdTime">
 			<value>960</value>
 		</property>

@@ -140,6 +140,13 @@ MonoBehaviour:
       Data3: 1114249150
       Data4: 1963203578
     Path: event:/SFX/Ambience/Underwater
+  <LavaAmbience>k__BackingField:
+    Guid:
+      Data1: 1088057244
+      Data2: 1193497821
+      Data3: -252216143
+      Data4: -1713050625
+    Path: event:/SFX/Ambience/Lava
   <AureusStomp>k__BackingField:
     Guid:
       Data1: -413663715
@@ -356,7 +363,7 @@ MonoBehaviour:
       Data2: 1257171541
       Data3: 2024989350
       Data4: 1698125847
-    Path: event:/Music/Other/Extras/LegendStrifeFull
+    Path: event:/Music/Other/Extras/LegendStrife
   <SCalFull>k__BackingField:
     Guid:
       Data1: -1493975308

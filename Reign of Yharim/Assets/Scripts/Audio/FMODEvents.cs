@@ -13,6 +13,7 @@ public class FMODEvents : MonoBehaviour
 	[field: SerializeField] public EventReference PlayerHit2 { get; private set; }
 	[field: SerializeField] public EventReference PlayerHit3 { get; private set; }
 	[field: SerializeField] public EventReference WaterAmbience { get; private set; }
+	[field: SerializeField] public EventReference LavaAmbience { get; private set; }
 
 	[field: Header("Enemy SFX")]
 	[field: SerializeField] public EventReference AureusStomp { get; private set; }
