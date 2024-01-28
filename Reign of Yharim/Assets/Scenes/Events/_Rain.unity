@@ -5075,7 +5075,27 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
+      propertyPath: timed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
+      propertyPath: daybg.b
+      value: 0.3886792
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
+      propertyPath: daybg.g
+      value: 0.37733147
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
+      propertyPath: daybg.r
+      value: 0.2808757
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
       propertyPath: theme.Path
+      value: event:/Music/Events/Downpour
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
+      propertyPath: eventTheme.Path
       value: event:/Music/Events/Downpour
       objectReference: {fileID: 0}
     - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
@@ -5092,6 +5112,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
       propertyPath: theme.Guid.Data4
+      value: 1007956078
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
+      propertyPath: eventTheme.Guid.Data1
+      value: 706912966
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
+      propertyPath: eventTheme.Guid.Data2
+      value: 1330811503
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
+      propertyPath: eventTheme.Guid.Data3
+      value: 1516222611
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501927978353580944, guid: 750f61f76aa12c346bffe1f6f3d331ed, type: 3}
+      propertyPath: eventTheme.Guid.Data4
       value: 1007956078
       objectReference: {fileID: 0}
     m_RemovedComponents: []

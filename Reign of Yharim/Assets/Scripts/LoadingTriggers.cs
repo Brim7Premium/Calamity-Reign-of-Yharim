@@ -16,6 +16,8 @@ public class LoadingTriggers : MonoBehaviour
 	public bool loadsEvent = false;
 	public GameObject worldManager;
 	public GameObject player;
+	public bool usesY;
+	public float leftX, rightX;
 
 	void Update()
 	{
@@ -24,25 +26,44 @@ public class LoadingTriggers : MonoBehaviour
 			worldManager = GameObject.Find("WorldManager");
 			player = GameObject.Find("Player");
 		}
-	}
-
-	void OnTriggerEnter2D(Collider2D collision)
-	{
-		UnloadScene("TempCam");
-		if (collision.gameObject.name == "Player" && (string.IsNullOrEmpty(bossCondition) || collision.gameObject.GetComponent<PlayerAI>().Plundered.Contains(bossCondition)))
+		else if (!usesY && player.transform.position.x > gameObject.transform.position.x-10f && player.transform.position.x < gameObject.transform.position.x+10f)
 		{
-			if (!loadsEvent)
+			UnloadScene("TempCam");
+			if (string.IsNullOrEmpty(bossCondition) || player.GetComponent<PlayerAI>().Plundered.Contains(bossCondition))
 			{
-				if (playerPosition != new Vector2(0f, 0f) && player != null)
+				if (!loadsEvent)
 				{
-					player.transform.position = new Vector3(playerPosition.x, playerPosition.y, 0.35f);
+					if (playerPosition != new Vector2(0f, 0f) && player != null)
+					{
+						player.transform.position = new Vector3(playerPosition.x, playerPosition.y, 0.35f);
+					}
+					LoadScenes();
+					UnloadScenes();
 				}
-				LoadScenes();
-				UnloadScenes();
+				else if (worldManager != null)
+				{
+					worldManager.GetComponent<Invasions>().StartEvent(scenesToLoad[0]);
+				}
 			}
-			else if (worldManager != null)
+		}
+		else if (usesY && player.transform.position.x > leftX && player.transform.position.x < rightX && player.transform.position.y > gameObject.transform.position.y-10f && player.transform.position.y < gameObject.transform.position.y+10f)
+		{
+			UnloadScene("TempCam");
+			if (string.IsNullOrEmpty(bossCondition) || player.GetComponent<PlayerAI>().Plundered.Contains(bossCondition))
 			{
-				worldManager.GetComponent<Invasions>().StartEvent(scenesToLoad[0]);
+				if (!loadsEvent)
+				{
+					if (playerPosition != new Vector2(0f, 0f) && player != null)
+					{
+						player.transform.position = new Vector3(playerPosition.x, playerPosition.y, 0.35f);
+					}
+					LoadScenes();
+					UnloadScenes();
+				}
+				else if (worldManager != null)
+				{
+					worldManager.GetComponent<Invasions>().StartEvent(scenesToLoad[0]);
+				}
 			}
 		}
 	}
