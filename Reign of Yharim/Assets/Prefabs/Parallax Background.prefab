@@ -217,4 +217,4 @@ MonoBehaviour:
   background: {fileID: 0}
   parallaxEffectX: 0
   parallaxEffectY: 0
-  smoothing: 0
+  smoothing: 1
