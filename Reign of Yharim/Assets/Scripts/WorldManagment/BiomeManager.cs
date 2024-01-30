@@ -12,7 +12,6 @@ using FMOD.Studio;
 
 public class BiomeManager : MonoBehaviour
 {
-	public static BiomeManager instance;
 	[SerializeField] private GameObject player;
 	public string biomeName = "Forest", prevBiomeName;
 
@@ -288,6 +287,7 @@ public class BiomeManager : MonoBehaviour
 			SunLight.intensity = 1f + 0.05f;
 		}
 	}
+	public static BiomeManager instance;
 	private void Awake()
 	{
 		if (instance != null)

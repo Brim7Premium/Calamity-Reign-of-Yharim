@@ -47,24 +47,29 @@ public class AudioManager : MonoBehaviour
 		SFXVolume = bracketSettingsbracket.instance.SFXVolume;
 	}
 
+	public GameObject musSlider, sfxSlider;
 	public void SliderValueChange(bool sfx)
 	{
-		if (!sfx)
+		if (musSlider == null)
 		{
-			var sliderobj = GameObject.Find("MusicSlider");
-			var volumeSlider = sliderobj.GetComponent<Slider>();
-			musicVolume = volumeSlider.value;
+			musSlider = GameObject.Find("MusicSlider");
+			sfxSlider = GameObject.Find("SFXSlider");
+		}
+
+		else if (!sfx)
+		{
+			var volumeSlider = sfxSlider.GetComponent<Slider>();
 			bracketSettingsbracket.instance.musicVolume = volumeSlider.value;
+			musicVolume = volumeSlider.value;
 			var indicator = volumeSlider.GetComponent<TextMeshProUGUI>();
 			indicator.text = ((int)(volumeSlider.value * 100)).ToString();
 		}
 
 		else
 		{
-			var sliderobj = GameObject.Find("SFXSlider");
-			var volumeSlider = sliderobj.GetComponent<Slider>();
-			SFXVolume = volumeSlider.value;
+			var volumeSlider = musSlider.GetComponent<Slider>();
 			bracketSettingsbracket.instance.SFXVolume = volumeSlider.value;
+			SFXVolume = volumeSlider.value;
 			var indicator = volumeSlider.GetComponent<TextMeshProUGUI>();
 			indicator.text = ((int)(volumeSlider.value * 100)).ToString();
 		}
@@ -72,6 +77,8 @@ public class AudioManager : MonoBehaviour
 
 	private void Update()
 	{
+		musicVolume = bracketSettingsbracket.instance.musicVolume;
+		SFXVolume = bracketSettingsbracket.instance.SFXVolume;
 		musicBus.setVolume(musicVolume);
 		SFXBus.setVolume(SFXVolume);
 	}

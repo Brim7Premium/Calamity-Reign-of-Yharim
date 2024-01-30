@@ -16,19 +16,10 @@ public class GameTime : MonoBehaviour
 	public Transform orbitPoint;
 	[SerializeField] private Vector3 rotation;
 	public GameObject player;
-
-	private GameObject settingsobj;
 	private GameObject detection;
 
 	IEnumerator Start()
 	{
-		settingsobj = GameObject.Find("[Settings]");
-		if (settingsobj == null)
-		{
-			settingsobj = new GameObject { name = "[Settings]" };
-			settingsobj.AddComponent<bracketSettingsbracket>();
-			DontDestroyOnLoad(settingsobj);
-		}
 		var miltime = bracketSettingsbracket.instance.militaryTime;
 		while (true)
 		{

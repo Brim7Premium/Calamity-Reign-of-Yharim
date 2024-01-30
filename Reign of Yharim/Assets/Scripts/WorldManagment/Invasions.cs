@@ -19,7 +19,7 @@ public class Invasions : MonoBehaviour
 
 	public void StartEvent(string EventName)
 	{
-		if (!BiomeManager.instance.eventActive)
+		if (!BiomeManager.instance.eventActive && !BiomeManager.instance.bossAlive)
 		{
 			loadingTrigger.LoadScene("_" + EventName);
 		}
