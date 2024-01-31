@@ -33,7 +33,7 @@ public class WorldItem : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    public static WorldItem InitItem(Vector2 _pos, ItemData _item, int _count, float _spawnCooldown = 2f)
+    public static WorldItem InitItem(ItemData _item, int _count, Vector2 _pos, float _spawnCooldown = 2f, float _despawnTime = 300f)
     {
         GameObject prefab = Resources.Load<GameObject>("WorldItem");
         WorldItem script = Instantiate(prefab, _pos, Quaternion.identity).GetComponent<WorldItem>();
@@ -41,6 +41,7 @@ public class WorldItem : MonoBehaviour
         script.Count = _count;
         script.SpawnCooldown(_spawnCooldown);
         script.Start();
+        if(_despawnTime>=0) Destroy(script.gameObject, _despawnTime);
         return script;
     }
     public void SpawnCooldown(float seconds)

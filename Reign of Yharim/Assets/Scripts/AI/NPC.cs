@@ -3,9 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
+
+// Custom serializable class
+[Serializable]
+public class Loot
+{
+    public ItemData item;
+    public string condition;
+    public int amountLower;
+    public int amountUpper;
+    public int chanceLower;
+    public int chanceUpper;
+    [Range(1, 4)] public int difficulty;
+}
 public abstract class NPC : Entity //Must be inherited, cannot be instanced 
 {
+    public Loot[] lootTable;
     public string NPCName;
 
     public bool inWater;
@@ -151,7 +166,20 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 
     public virtual void AI(){}
     public virtual void OnHit(){}
-    public override void Kill() => Destroy(gameObject); //specific NPCs can still override 
+    public override void Kill()
+    {
+        DropItems();
+        Destroy(gameObject); //specific NPCs can still override 
+    }
+    public void DropItems()
+    {
+        foreach(Loot i in lootTable)
+        {
+            if(Random.value>i.chanceLower) continue;
+
+            WorldItem.InitItem(i.item, Random.Range(i.amountLower, i.amountUpper), transform.position).rb.AddForce(200 * Random.Range(-1f, 1f) * Vector2.one);
+        }
+    }
 
     public Vector2 ToRotationVector2(float f) => new((float)Math.Cos(f), (float)Math.Sin(f)); //converts the float rotation that is output by methods like AngleTo into a vector2 rotation
 
@@ -188,12 +216,7 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
         return NearestObj;
     }
 
-    public Vector2 GetDirection(Vector2 TargetPos, Vector2 MyPos) // Direction to shoot projectiles or dash
-    {
-        float distancer = (3f / ((float)System.Math.Sqrt((double)((TargetPos - MyPos).x * (TargetPos - MyPos).x + (TargetPos - MyPos).y * (TargetPos - MyPos).y))));
-        Vector2 Dir = (TargetPos - MyPos) * distancer;
-        return Dir; 
-    }
+    public Vector2 GetDirection(Vector2 TargetPos, Vector2 MyPos) => (TargetPos - MyPos).normalized;
 
     public float GroundDeterminerRayLength = 0;
 

@@ -119,7 +119,7 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
                 else if(!newSlot)
                 {
                     PlayerAI player = GameObject.Find("Player").GetComponent<PlayerAI>();
-                    WorldItem.InitItem(player.transform.position, item, count).rb.AddForce(new Vector2(200f*player.isFacing, 200f));
+                    WorldItem.InitItem(item, count, player.transform.position).rb.AddForce(new Vector2(200f*player.isFacing, 200f));
                     Destroy(gameObject);
                 }
             }
@@ -131,7 +131,7 @@ public class InvItem : MonoBehaviour, IPointerClickHandler
                 else
                 {
                     PlayerAI player = GameObject.Find("Player").GetComponent<PlayerAI>();
-                    WorldItem.InitItem(player.transform.position, item, 1).rb.AddForce(new Vector2(200f*player.isFacing, 200f));
+                    WorldItem.InitItem(item, 1, player.transform.position).rb.AddForce(new Vector2(200f*player.isFacing, 200f));
                     count -= 1;
                 }
             }

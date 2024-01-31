@@ -141,7 +141,7 @@ public class PlayerAI : NPC //basically, this script is a copy of the npc script
             if (item)
             {
 				Destroy(item.inventoryManager.TakeItem(item.slot.number, 1).gameObject);
-                WorldItem.InitItem(transform.position, item.item, 1).rb.AddForce(new Vector2(200f * isFacing, 200f));
+                WorldItem.InitItem(item.item, 1, transform.position).rb.AddForce(new Vector2(200f * isFacing, 200f));
             }
         }
     }
