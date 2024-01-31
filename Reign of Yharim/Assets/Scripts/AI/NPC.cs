@@ -14,8 +14,7 @@ public class Loot
     public string condition;
     public int amountLower;
     public int amountUpper;
-    public int chanceLower;
-    public int chanceUpper;
+    public float chance;
     [Range(1, 4)] public int difficulty;
 }
 public abstract class NPC : Entity //Must be inherited, cannot be instanced 
@@ -175,9 +174,9 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
     {
         foreach(Loot i in lootTable)
         {
-            if(Random.value>i.chanceLower) continue;
-
-            WorldItem.InitItem(i.item, Random.Range(i.amountLower, i.amountUpper), transform.position).rb.AddForce(200 * Random.Range(-1f, 1f) * Vector2.one);
+            if(Random.value>i.chance) continue;
+            print(((Vector2)Random.onUnitSphere).magnitude);
+            WorldItem.InitItem(i.item, Random.Range(i.amountLower, i.amountUpper), transform.position, 0).rb.AddForce(200 * Random.insideUnitCircle.normalized);
         }
     }
 
