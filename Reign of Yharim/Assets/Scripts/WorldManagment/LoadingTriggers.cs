@@ -14,16 +14,14 @@ public class LoadingTriggers : MonoBehaviour
 	public string bossCondition;
 	public Vector2 playerPosition;
 	public bool loadsEvent = false;
-	public GameObject worldManager;
 	public GameObject player;
 	public bool usesY;
 	public float leftX, rightX;
 
 	void Update()
 	{
-		if (worldManager == null)
+		if (player == null)
 		{
-			worldManager = GameObject.Find("WorldManager");
 			player = GameObject.Find("Player");
 		}
 		else if (!usesY && player.transform.position.x > gameObject.transform.position.x-10f && player.transform.position.x < gameObject.transform.position.x+10f)
@@ -40,9 +38,9 @@ public class LoadingTriggers : MonoBehaviour
 					LoadScenes();
 					UnloadScenes();
 				}
-				else if (worldManager != null)
+				else
 				{
-					worldManager.GetComponent<Invasions>().StartEvent(scenesToLoad[0]);
+					Invasions.instance.StartEvent(scenesToLoad[0]);
 				}
 			}
 		}
@@ -60,9 +58,9 @@ public class LoadingTriggers : MonoBehaviour
 					LoadScenes();
 					UnloadScenes();
 				}
-				else if (worldManager != null)
+				else
 				{
-					worldManager.GetComponent<Invasions>().StartEvent(scenesToLoad[0]);
+					Invasions.instance.StartEvent(scenesToLoad[0]);
 				}
 			}
 		}

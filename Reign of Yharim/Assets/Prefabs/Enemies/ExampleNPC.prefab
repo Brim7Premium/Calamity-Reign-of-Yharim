@@ -144,7 +144,6 @@ GameObject:
   - component: {fileID: 4194869669336731091}
   - component: {fileID: 4194869669336731090}
   - component: {fileID: 4194869669336731089}
-  - component: {fileID: 6276600560613166030}
   m_Layer: 3
   m_Name: ExampleNPC
   m_TagString: Untagged
@@ -307,6 +306,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
+  spawningParams:
+    condition: 
+    spawnChance: 0
+    eventName: 
+    eventValue: 0
   inWater: 0
   wasInWater: 0
   IsGrounded: 0
@@ -334,21 +338,6 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
   GroundDeterminerRayLength: 0
   IsWulfrumGuy: 0
---- !u!114 &6276600560613166030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4194869669336731085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde63d9d4a2da8a4fb9fac0d2b2145c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  condition: WulfrumArmy
-  lowerSpawnChance: 1
-  upperSpawnChance: 1000
 --- !u!1 &4194869669434105444
 GameObject:
   m_ObjectHideFlags: 0

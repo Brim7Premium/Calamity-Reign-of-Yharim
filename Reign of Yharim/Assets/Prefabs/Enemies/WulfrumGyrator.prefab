@@ -630,7 +630,6 @@ GameObject:
   - component: {fileID: 9158711808411248914}
   - component: {fileID: 1565449191842842386}
   - component: {fileID: 5207166068899515669}
-  - component: {fileID: -7148382588293604102}
   - component: {fileID: 7436320055345964585}
   m_Layer: 3
   m_Name: WulfrumGyrator
@@ -722,6 +721,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectRenderer: {fileID: 0}
   NPCName: 
+  spawningParams:
+    condition: 
+    spawnChance: 0.25
+    eventName: WulfrumArmy
+    eventValue: 1
   inWater: 0
   wasInWater: 0
   IsGrounded: 0
@@ -831,23 +835,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.785
---- !u!114 &-7148382588293604102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9158711808411248915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde63d9d4a2da8a4fb9fac0d2b2145c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  condition: 
-  lowerSpawnChance: 1
-  upperSpawnChance: 75
-  eventName: WulfrumArmy
-  eventValue: 1
 --- !u!114 &7436320055345964585
 MonoBehaviour:
   m_ObjectHideFlags: 0

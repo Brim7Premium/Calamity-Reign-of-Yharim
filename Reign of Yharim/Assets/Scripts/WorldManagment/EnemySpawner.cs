@@ -15,7 +15,7 @@ using FMOD.Studio;
 public class EnemySpawner : MonoBehaviour
 {
 	public GameObject player;
-	public List<SpawnableEnemy> enemiesToSpawn = new List<SpawnableEnemy>(); // this script must be added to the prefab for enemies you want to naturally spawn, as it sets their spawn chance and condition ect
+	public List<NPC> enemiesToSpawn = new List<NPC>(); // this script must be added to the prefab for enemies you want to naturally spawn, as it sets their spawn chance and condition ect
 	public float spawnRate = 5; // how often you want to try to spawn enemies
 
 	public string parentBiome; // the biome this spawner uses, can be set manually for whatever reason
@@ -26,10 +26,9 @@ public class EnemySpawner : MonoBehaviour
 		{
 			for (int i = 0; i < enemiesToSpawn.Count; ++i) // iterate through the list of enemies this object can spawn
 			{
-				float randomNum = UnityEngine.Random.Range(enemiesToSpawn[i].lowerSpawnChance, enemiesToSpawn[i].upperSpawnChance); // choose a random number for chance
-				if (randomNum == enemiesToSpawn[i].lowerSpawnChance && player != null) // if that number is 1 and the player is valid
+				if (UnityEngine.Random.value <= enemiesToSpawn[i].spawningParams.spawnChance && player != null) // if the spawn chance is met and the player is valid
 				{
-					if (string.IsNullOrEmpty(enemiesToSpawn[i].condition) || player.GetComponent<PlayerAI>().Plundered.Contains(enemiesToSpawn[i].condition)) // if theres no condition for the enemy or if youve met its condition
+					if (string.IsNullOrEmpty(enemiesToSpawn[i].spawningParams.condition) || player.GetComponent<PlayerAI>().Plundered.Contains(enemiesToSpawn[i].spawningParams.condition)) // if theres no condition for the enemy or if youve met its condition
 					{
 						yield return SpawnEnemy(enemiesToSpawn[i].gameObject); // spawn the enemy
 					}

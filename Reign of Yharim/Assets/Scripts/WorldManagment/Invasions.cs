@@ -45,5 +45,14 @@ public class Invasions : MonoBehaviour
 		}
 	}
 
+	public static Invasions instance;
+	private void Awake()
+	{
+		if (instance != null)
+		{
+			Debug.LogError("Found more than one Invasions in the scene");
+		}
+		instance = this;
+	}
 
 }

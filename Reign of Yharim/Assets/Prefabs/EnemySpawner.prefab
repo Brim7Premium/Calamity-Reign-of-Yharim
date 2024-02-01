@@ -46,6 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemiesToSpawn: []
-  spawnRate: 5
+  spawnRate: 10
   parentBiome: 
-  worldManager: {fileID: 0}

@@ -4,9 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
+public class SpawningConditions
+{
+	public string condition; // boss requirement
+	public float spawnChance; // this enemy will have a {spawnChance}% chance to spawn 
+	public string eventName; // the event this enemy belongs to (if any)
+	public float eventValue = 0.0f; // every time you kill an enemy during an event, this is how much it counts towards completion
+}
+
 public abstract class NPC : Entity //Must be inherited, cannot be instanced 
 {
 	public string NPCName;
+	public SpawningConditions spawningParams;
 
 	public bool inWater;
 	public bool wasInWater;
@@ -39,8 +49,11 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 				_life = LifeMax; 
 				Debug.LogWarning(NPCName + " can't have more hp than max hp"); 
 			}
-			if (_life <=0) 
+			if (_life <=0)
+			{
+				Progress();
 				Kill();
+			}
 
 			try {healthBar.SetHealth(_life);}
 			catch (NullReferenceException) { Debug.LogWarning(NPCName + " couldn't change health of the healthbar. Maybe it doesn't exist or isn't set?"); }
@@ -166,14 +179,17 @@ public abstract class NPC : Entity //Must be inherited, cannot be instanced
 	public virtual void OnHit(){}
 	public override void Kill()
 	{
-		if (gameObject.TryGetComponent<SpawnableEnemy>(out SpawnableEnemy idk) && GameObject.Find("Invasion") != null && !GameObject.Find("Invasion").GetComponent<InvasionScene>().timed)
+		Destroy(gameObject); //specific NPCs can still override
+	}
+	public void Progress()
+	{
+		if (gameObject.TryGetComponent<NPC>(out NPC idk) && GameObject.Find("Invasion") != null && !GameObject.Find("Invasion").GetComponent<InvasionScene>().timed)
 		{
-			if (idk.eventName == GameObject.Find("Invasion").scene.name.Trim('_'))
+			if (idk.spawningParams.eventName == GameObject.Find("Invasion").scene.name.Trim('_'))
 			{
-				GameObject.Find("Invasion").GetComponent<InvasionScene>().currentProgress += idk.eventValue;
+				GameObject.Find("Invasion").GetComponent<InvasionScene>().currentProgress += idk.spawningParams.eventValue;
 			}
 		}
-		Destroy(gameObject); //specific NPCs can still override
 	}
 
 	public Vector2 ToRotationVector2(float f) => new((float)Math.Cos(f), (float)Math.Sin(f)); //converts the float rotation that is output by methods like AngleTo into a vector2 rotation
