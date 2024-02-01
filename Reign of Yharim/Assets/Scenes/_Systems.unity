@@ -2473,7 +2473,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 16.875
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -11113,6 +11113,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talker: {fileID: 1560480818}
   dialogue: {fileID: 221809956}
+  isTalking: 0
+  queue:
+  - text: I'm a fool
+    talkerSprite: {fileID: 21300000, guid: db54e7553c8efa6429af9f1806af3bd1, type: 3}
+    duration: 5
+  - text: Indeed
+    talkerSprite: {fileID: 21300000, guid: b254583c72f36d94eb93c4ce76c940bd, type: 3}
+    duration: 5
 --- !u!1001 &1920781802
 PrefabInstance:
   m_ObjectHideFlags: 0
